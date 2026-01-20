@@ -165,14 +165,24 @@ const fallbackServicesData = [
 ];
 
 const fallbackBrandsData = [
-  { id: "1", name: "Elite Constructions", logo: "/assets/client-logo-elite-constructions.png" },
-  { id: "2", name: "Global Exports Ltd", logo: "/assets/client-logo-global-exports.png" },
-  { id: "3", name: "Sunrise Builders", logo: "/assets/client-logo-sunrise-builders.png" },
-  { id: "4", name: "Prime Education", logo: "/assets/client-logo-prime-education.png" },
-  { id: "5", name: "Interior Solutions", logo: "/assets/client-logo-interior-solutions.png" },
-  { id: "6", name: "Gulf Traders LLC", logo: "/assets/client-logo-gulf-traders.png" },
-  { id: "7", name: "Metro Developers", logo: "/assets/client-logo-metro-developers.png" },
-  { id: "8", name: "Kenya Imports Co", logo: "/assets/client-logo-kenya-imports.png" },
+  { id: "1", name: "IndianOil", logo: "/assets/brand-logos/indiaoil%20png.jpg" },
+  { id: "2", name: "Ramoji Film City", logo: "/assets/brand-logos/Ramoji%20Film%20City%20logo.png" },
+  { id: "3", name: "Prestige Group", logo: "/assets/brand-logos/prestige%20logo.webp" },
+  { id: "4", name: "Tech Mahindra", logo: "/assets/brand-logos/Tech%20Mahindra%20logo.jpg" },
+  { id: "5", name: "GMR", logo: "/assets/brand-logos/GMR-Group-Logo-Pngsource-RK4JM0FN.png" },
+  { id: "6", name: "Tom Tailor", logo: "/assets/brand-logos/tom-tailor-sportswear%20logo.png" },
+  { id: "7", name: "NCC Limited", logo: "/assets/brand-logos/ncc%20logo.png" },
+  { id: "8", name: "NSL Group", logo: "/assets/brand-logos/NSL%20logo.png" },
+  { id: "9", name: "HCL", logo: "/assets/brand-logos/hcl%20logo.png" },
+  { id: "10", name: "Alekhya Homes", logo: "/assets/brand-logos/alekhya-homes-2023-logo.png" },
+  { id: "11", name: "GVK EMRI", logo: "/assets/brand-logos/gvk-logo.png" },
+  { id: "12", name: "NTPC", logo: "/assets/brand-logos/ntpc%20logo.png" },
+  { id: "13", name: "Power Grid", logo: "/assets/brand-logos/POWERGRID%20logo.png" },
+  { id: "14", name: "Hyundai Glovis", logo: "/assets/brand-logos/Hyundai_Glovis_logo.png" },
+  { id: "15", name: "NPCI International", logo: "/assets/brand-logos/NPCI_logo.png" },
+  { id: "16", name: "BSCPL Infrastructure", logo: "/assets/brand-logos/bscpl-logo.png" },
+  { id: "17", name: "AT&T", logo: "/assets/brand-logos/att-logo-transparent.png" },
+  { id: "18", name: "Aparna Constructions", logo: "/assets/brand-logos/aparna%20constructions.png" },
 ];
 
 const fallbackTestimonialsData = [
