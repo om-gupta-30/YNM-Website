@@ -128,7 +128,7 @@ The website is built using **Next.js 15** with React 19, featuring server-side r
 ## 🛠 Tech Stack
 
 ### Frontend Technologies
-- **Next.js 15.0.4** - React framework with SSR/SSG capabilities
+- **Next.js 15.0.7** - React framework with SSR/SSG capabilities
 - **React 19.0.0** - Modern UI library with hooks
 - **Tailwind CSS 3.4.1** - Utility-first CSS framework
 - **Next/Image** - Optimized image component
@@ -619,6 +619,8 @@ All assets are organized in `site/public/assets/` with consistent, descriptive n
 - Automatic deployments from Git
 - Environment variables configuration
 - Free tier available
+
+**Important:** The app lives in the `site/` subfolder. In Vercel: **Project Settings → General → Root Directory** set to `site`. Otherwise the build will fail (no `package.json` at repo root).
 
 #### Netlify
 - Static site hosting

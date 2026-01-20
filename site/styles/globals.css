@@ -3350,12 +3350,12 @@ section {
   border-radius: 2px;
 }
 
-/* Brands Grid */
+/* Brands Grid - 6 per row, smaller tiles */
 .brands-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  max-width: 1300px;
   margin: 0 auto;
   position: relative;
   z-index: 5;
@@ -3367,7 +3367,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -3378,7 +3378,7 @@ section {
   position: relative;
   width: 100%;
   aspect-ratio: 1;
-  max-width: 220px;
+  max-width: 160px;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   cursor: pointer;
@@ -3395,7 +3395,7 @@ section {
   inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 16px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3445,7 +3445,7 @@ section {
 .brand-logo-wrap {
   position: relative;
   z-index: 5;
-  padding: 25px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3458,8 +3458,8 @@ section {
 
 /* Logo Styles */
 .brand-logo {
-  max-width: 140px;
-  max-height: 70px;
+  max-width: 90px;
+  max-height: 50px;
   width: auto !important;
   height: auto !important;
   filter: brightness(1) contrast(1);
@@ -3474,7 +3474,7 @@ section {
 .brand-tile-border {
   position: absolute;
   inset: 0;
-  border-radius: 16px;
+  border-radius: 12px;
   border: 1px solid rgba(201, 162, 77, 0.25);
   pointer-events: none;
   transition: border-color 0.4s ease;
@@ -3534,16 +3534,16 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 12px;
   text-align: center;
 }
 
 .brand-name-text {
-  font-size: clamp(18px, 3vw, 26px);
+  font-size: clamp(11px, 1.8vw, 14px);
   font-weight: 800;
   color: #9A1B2E;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-shadow: 0 2px 15px rgba(154, 27, 46, 0.5),
                0 0 30px rgba(154, 27, 46, 0.3);
   line-height: 1.2;
@@ -3590,14 +3590,24 @@ section {
    BRANDS RESPONSIVE
    ======================================== */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .brands-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
   }
   
   .brand-tile-inner {
-    max-width: 200px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .brands-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .brand-tile-inner {
+    max-width: 140px;
   }
 }
 
@@ -3607,12 +3617,12 @@ section {
   }
   
   .brands-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
   
   .brand-tile-inner {
-    max-width: 180px;
+    max-width: 130px;
   }
   
   .brands-corner-accent {
@@ -3625,25 +3635,36 @@ section {
   }
 }
 
+@media (max-width: 550px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  
+  .brand-tile-inner {
+    max-width: 120px;
+  }
+  
+  .brand-logo {
+    max-width: 75px;
+    max-height: 40px;
+  }
+}
+
 @media (max-width: 500px) {
   .brands-header h2 {
     font-size: clamp(26px, 7vw, 36px);
   }
   
   .brands-grid {
-    gap: 16px;
+    gap: 12px;
   }
   
   .brand-tile-inner {
-    max-width: 150px;
+    max-width: 110px;
   }
   
-  .brand-logo {
-    max-width: 100px;
-    max-height: 50px;
-  }
-  
-  .brand-name {
+  .brand-name-text {
     font-size: 10px;
   }
 }

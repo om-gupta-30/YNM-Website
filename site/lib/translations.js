@@ -120,16 +120,16 @@ export const translations = {
       missionLabel: "Our Mission",
       visionLabel: "Our Vision"
     },
-    // USP Section
+    // USP Section (About section)
     usp: {
       tag: "About Us",
-      title: "About YNM Mega Industries",
-      subtitle: "Trusted by clients across 15+ countries worldwide",
+      title: "About section",
+      subtitle: "",
       benefits: [
-        { title: "Advanced Manufacturing", description: "Our state-of-the-art manufacturing facility is equipped with modern machinery and automated processes. We maintain strict quality control at every stage to ensure consistent, premium-quality products." },
-        { title: "Quality Certified", description: "All our products meet international quality standards with ISO 9001:2015 certification. We undergo regular quality audits and use only premium raw materials to ensure product excellence." },
-        { title: "Global Export Network", description: "We export to 15+ countries across Asia, Africa, and the Middle East. Our experienced export team handles documentation, logistics, and customs clearance for seamless international delivery." },
-        { title: "Custom Solutions", description: "We offer customization across all product categories - from custom paint formulations to bespoke fabrication designs and made-to-order school furniture. Your specifications, our expertise." }
+        { title: "Advanced Manufacturing..", description: "YNM Mega Industries operates advanced manufacturing facilities delivering high-quality industrial paints, precision metal fabrication, and engineered school furniture. As a trusted global manufacturer, we combine modern machinery, skilled expertise, and efficient processes to serve worldwide industrial and infrastructure projects." },
+        { title: "Quality Certified..", description: "At YNM Mega Industries, quality is our foundation. All our products including industrial paints, fabrication components, and school furniture are manufactured under ISO 9001:2015 certified quality systems, ensuring durability, safety, and consistent performance for global markets." },
+        { title: "Global Export Network", description: "YNM Mega Industries is a reliable global exporter of industrial paints, metal fabrication products, safety solutions, and school furniture. We supply to clients across Asia, Africa, the Middle East, and international markets with efficient logistics, compliance, and timely delivery." },
+        { title: "Custom Solutions", description: "We specialize in customized manufacturing solutions including bespoke paint formulations, custom metal fabrication, and made-to-order school furniture. YNM Mega Industries supports global clients with flexible production, technical expertise, and project-specific solutions." }
       ]
     },
     // Testimonials Section

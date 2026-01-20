@@ -103,8 +103,8 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
                   <Image
                     src={brand.logo}
                     alt={brand.name}
-                    width={160}
-                    height={80}
+                    width={100}
+                    height={50}
                     className="brand-logo"
                     style={{ objectFit: "contain" }}
                   />
