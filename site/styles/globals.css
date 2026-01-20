@@ -265,12 +265,13 @@ body {
 
 html {
   scroll-behavior: auto; /* Using fast JS scroll instead */
-  scroll-padding-top: 80px;
+  scroll-padding-top: 110px; /* clear fixed navbar (100px) on anchor jump */
   overflow-x: hidden; /* prevent horizontal page scroll (reinforce) */
 }
 
 html, body {
-  overscroll-behavior: none;
+  overscroll-behavior-y: auto; /* allow normal trackpad/wheel scroll on Windows */
+  overscroll-behavior-x: none;
 }
 
 /* Scroll Performance Optimizations */
@@ -285,12 +286,16 @@ section, .ps, .srv, .brands, #why-choose-ynm, .testimonials-section, #testimonia
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  will-change: scroll-position;
   contain: layout style paint;
 }
 
-/* Reduce paint during fast scroll */
-.is-scrolling * {
+/* Reduce paint during fast scroll (only section contents, so wheel still reaches document) */
+.is-scrolling section *,
+.is-scrolling .ps *,
+.is-scrolling .srv *,
+.is-scrolling .brands *,
+.is-scrolling .footer-section *,
+.is-scrolling .ft * {
   pointer-events: none !important;
   animation-play-state: paused !important;
 }
@@ -355,6 +360,7 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  touch-action: pan-y; /* improve trackpad/wheel scroll on Windows */
 }
 
 body::after {
@@ -1227,10 +1233,10 @@ section {
 .hero-particle:nth-child(11) { top: 40%; left: 3%; width: 8px; height: 8px; animation-delay: 5s; animation-duration: 16s; }
 .hero-particle:nth-child(12) { top: 92%; left: 50%; width: 10px; height: 10px; animation-delay: 5.5s; animation-duration: 15s; background: var(--rich-wine); }
 
-/* HERO TEXT - Centered */
+/* HERO TEXT - Centered (offset down so fixed navbar doesn't cover title) */
 #hero-text {
   position: absolute;
-  top: 50%;
+  top: calc(50% + 80px);
   left: 50%;
   transform: translate(-50%, -50%) translateZ(0);
   text-align: center;
