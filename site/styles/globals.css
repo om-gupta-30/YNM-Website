@@ -4366,33 +4366,16 @@ section {
   height: 16px;
 }
 
-.ft-email-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  background: linear-gradient(135deg, #C9A24D, #D4AF37);
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 700;
+.ft-email-link {
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 12px rgba(201, 162, 77, 0.35);
-  width: fit-content;
+  transition: color 0.25s ease, text-decoration 0.25s ease;
 }
 
-.ft-email-button:hover {
-  background: linear-gradient(135deg, #D4AF37, #C9A24D);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 18px rgba(201, 162, 77, 0.45);
-}
-
-.ft-email-button svg {
-  width: 16px;
-  height: 16px;
+.ft-email-link:hover {
+  color: #C9A24D;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* Footer responsive */
@@ -8547,6 +8530,28 @@ img {
   to {
     transform: rotate(360deg) translateZ(0);
   }
+}
+
+/* Director Card - Visually distinct (Managing Director, home page only), same 3-per-row grid */
+.employee-card--director {
+  border: 2px solid var(--antique-gold);
+  box-shadow: 0 12px 40px rgba(116, 6, 13, 0.18), 0 0 0 1px rgba(201, 162, 77, 0.25);
+  background: linear-gradient(180deg, rgba(201, 162, 77, 0.08) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 100%);
+}
+.employee-card--director .employee-card-accent {
+  opacity: 0.3;
+}
+.employee-card--director .employee-photo {
+  border-width: 4px;
+  border-color: var(--antique-gold);
+  box-shadow: 0 0 20px rgba(201, 162, 77, 0.35);
+}
+.employee-card--director .employee-department {
+  background: var(--antique-gold);
+  color: var(--deep-maroon);
+}
+.employee-card--director .employee-info {
+  border-top-color: rgba(201, 162, 77, 0.4);
 }
 
 /* Employees Section - Top Border */

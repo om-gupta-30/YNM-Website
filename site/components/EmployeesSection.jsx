@@ -7,7 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const employeeNames = ["Rajesh Kumar", "Priya Sharma", "Amit Patel", "Sneha Reddy", "Vikram Singh", "Ananya Gupta"];
 const employeePhotos = ["/assets/team-member-01.png", "/assets/team-member-02.png", "/assets/team-member-03.png", "/assets/team-member-04.png", "/assets/team-member-05.png", "/assets/team-member-06.png"];
 
-export default function EmployeesSection({ employeesData: propEmployeesData }) {
+export default function EmployeesSection({ employeesData: propEmployeesData, highlightDirector = false }) {
   const { t } = useLanguage();
   const [employeesData, setEmployeesData] = useState(propEmployeesData || []);
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -50,11 +50,12 @@ export default function EmployeesSection({ employeesData: propEmployeesData }) {
         {displayData.map((employee, index) => {
           const photoSrc = employee.photo || "/assets/gallery-quality-control.jpg";
           const isHovered = hoveredCard === employee.id;
+          const isDirector = highlightDirector && employee.role === "Managing Director";
           
           return (
             <div
               key={employee.id}
-              className={`employee-card ${isHovered ? 'hovered' : ''}`}
+              className={`employee-card ${isHovered ? 'hovered' : ''} ${isDirector ? 'employee-card--director' : ''}`}
               onMouseEnter={() => setHoveredCard(employee.id)}
               onMouseLeave={() => setHoveredCard(null)}
               style={{ animationDelay: `${index * 0.1}s` }}

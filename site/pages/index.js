@@ -6,6 +6,7 @@ import USPSection from "@/components/USPSection";
 import EmployeesSection from "@/components/EmployeesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
+import employeesData from "@/lib/employeesData";
 
 // Fallback data (used when database is not available)
 const fallbackProductData = [
@@ -332,7 +333,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
       <USPSection uspData={uspData} />
       <ProductsSection productData={productData} />
       <BrandsSection brandsData={brandsData} />
-      <EmployeesSection employeesData={null} />
+      <EmployeesSection employeesData={employeesData} highlightDirector />
       <TestimonialsSection testimonialsData={testimonialsData} />
       <Footer footerData={footerData} />
     </>
