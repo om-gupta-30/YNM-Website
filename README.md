@@ -193,10 +193,25 @@ npm run lint
 | Contact form | `/contact` | Saves to Google Sheets |
 | India map | `/contact` | `IndiaPresenceMap`, `indiaContacts`, `indiaMapPaths` |
 | Careers form | `/careers` | Resume upload, email to HR, optional reCAPTCHA |
-| Employee section | `/`, `/our-team` | `EmployeesSection` + `employeesData.js`; Managing Director card has distinct styling on the home page |
+| Employee section | `/`, `/our-team` | `EmployeesSection` + `employeesData.js`; Managing Director card has distinct styling on home; hover pop-up (lift + shadow); neon particles, shimmer, photo glow/border, and accents kept but reduced for performance on lower-end devices |
 | Client logos & testimonials | `/`, `/clients` | `BrandsSection`, `BrandsSection`-style data on Clients page |
 | Product catalog | `/`, `/products`, `/products/[id]` | Categories and detail pages |
 | Foreign collaborations | `/foreign-collaborations` | Region-based partnership blocks |
+
+---
+
+## Recent implementations
+
+### “What our employees say” (EmployeesSection) — UI and performance
+
+- **Hover pop-up:** Cards lift (`translateY(-10px)`) with a clear shadow on hover so the active card stands out.
+- **Effects retained, toned down:** Neon particles, card shimmer, card background pulse, photo gradient border, photo glow, quote icon motion, and corner accent stay, but are lighter and slower to improve performance (e.g. on Windows laptops):
+  - Neon: `neonFloat` only (no `neonPulse`), 14s, opacity 0.5, smaller box-shadows.
+  - Shimmer: runs once on hover (2s), lower opacity.
+  - Photo: `photoBreath` / `photoSectionFloat` / `photoWrapperPulse` slowed (5–8s), smaller movement and scale (e.g. 1.01–1.02).
+  - Glow and border: reduced opacity and scale; `photoBorderRotate` and `accentRotate` slowed (4–5s).
+  - Line under header: `lineShimmer` at 6s with a lighter shadow.
+- **Card entrance:** Simple fade-in; staggered `animationDelay` per card kept.
 
 ---
 
