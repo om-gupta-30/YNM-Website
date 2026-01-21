@@ -9,7 +9,7 @@ const employeesData = [
     role: "Managing Director",
     department: "Executive Management",
     text: "Leading YNM Mega Industries has been an inspiring and fulfilling journey. What truly sets our organization apart is the dedication of our people and the strong values we practice every day. I am proud of our team's commitment to quality, innovation, and collaboration, which continues to drive our success in fabrication, paint manufacturing, and school furniture while strengthening our global presence.",
-    photo: "/assets/employeephotos/Rishuu%20N%20Jain.png",
+    photo: "/directorphoto.png",
   },
   {
     id: 2,

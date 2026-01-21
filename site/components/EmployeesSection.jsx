@@ -67,10 +67,13 @@ export default function EmployeesSection({ employeesData: propEmployeesData, hig
                   <div className="employee-photo-border" />
                   <div className="employee-photo">
                     <Image
-                      src={photoSrc}
+                      src={isDirector ? "/directorphoto2.png" : photoSrc}
                       alt={employee.name}
                       fill
-                      style={{ objectFit: "cover" }}
+                      style={{
+                        objectFit: "cover",
+                        ...(isDirector && { objectPosition: "center 18%" }),
+                      }}
                       loading="lazy"
                       onError={(e) => { e.target.style.display = "none"; }}
                     />
