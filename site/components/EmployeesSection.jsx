@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -60,9 +60,7 @@ export default function EmployeesSection({ employeesData: propEmployeesData, hig
               onMouseLeave={() => setHoveredCard(null)}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Card Background Pattern */}
               <div className="employee-card-bg" />
-              
               {/* Photo Section */}
               <div className="employee-photo-section">
                 <div className="employee-photo-wrapper">
@@ -92,8 +90,6 @@ export default function EmployeesSection({ employeesData: propEmployeesData, hig
                   <span className="employee-department">{employee.department}</span>
                 </div>
               </div>
-
-              {/* Decorative Elements */}
               <div className="employee-card-accent" />
             </div>
           );
