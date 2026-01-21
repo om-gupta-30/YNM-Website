@@ -8445,10 +8445,69 @@ img {
 }
 
 /* Director Card - Visually distinct (Managing Director, home page only), same 3-per-row grid */
+/* Uses directorphoto.png: full image as card background, face in circle, text on top with overlay */
 .employee-card--director {
   border: 2px solid var(--antique-gold);
   box-shadow: 0 12px 40px rgba(116, 6, 13, 0.18), 0 0 0 1px rgba(201, 162, 77, 0.25);
-  background: linear-gradient(180deg, rgba(201, 162, 77, 0.08) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 100%);
+  background: transparent;
+}
+.employee-card--director .employee-card-bg {
+  opacity: 1;
+  background: none;
+  animation: none;
+}
+.employee-card--director .employee-card-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(/directorphoto.png) center/cover no-repeat;
+  filter: blur(6px);
+  transform: scale(1.05);
+}
+.employee-card--director .employee-card-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.82) 100%);
+}
+.employee-card--director:hover .employee-card-bg {
+  opacity: 1;
+  animation: none;
+}
+.employee-card--director .employee-photo-section {
+  background: transparent;
+}
+/* Circle: top of head down to pocket (head + upper chest) */
+.employee-card--director .employee-photo {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.employee-card--director .employee-photo img {
+  object-position: center 18%;
+  border-radius: 50%;
+  display: block;
+  transform: scale(1.02);
+}
+.employee-card--director .employee-quote-icon {
+  color: rgba(250, 248, 245, 0.9);
+}
+.employee-card--director .employee-text,
+.employee-card--director .employee-name,
+.employee-card--director .employee-role {
+  color: #faf8f5;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+/* Hover: keep text light, don't turn red */
+.employee-card--director:hover .employee-text,
+.employee-card--director:hover .employee-name,
+.employee-card--director:hover .employee-role {
+  color: #faf8f5 !important;
+}
+.employee-card--director:hover .employee-quote-icon {
+  color: rgba(250, 248, 245, 0.9) !important;
+}
+.employee-card--director .employee-info {
+  border-top-color: rgba(255, 255, 255, 0.35);
 }
 .employee-card--director .employee-card-accent {
   opacity: 0.3;
@@ -8461,9 +8520,6 @@ img {
 .employee-card--director .employee-department {
   background: var(--antique-gold);
   color: var(--deep-maroon);
-}
-.employee-card--director .employee-info {
-  border-top-color: rgba(201, 162, 77, 0.4);
 }
 
 /* Employees Section - Top Border */
