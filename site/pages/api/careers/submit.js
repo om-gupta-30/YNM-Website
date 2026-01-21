@@ -278,169 +278,79 @@ function getEmailTransporter() {
   return null;
 }
 
-// Send confirmation email to applicant
+// No-reply address for automated career emails (set CAREERS_NOREPLY_FROM if your SMTP requires a different sender)
+const getNoReplyFrom = () =>
+  `"YNM Careers (Do Not Reply)" <${process.env.CAREERS_NOREPLY_FROM || 'noreply@ynmsafety.com'}>`;
+
+const hrEmail = () => process.env.HR_EMAIL || 'hr@ynmsafety.com';
+
+// Send confirmation email to applicant (no-reply)
 async function sendConfirmationEmail(formData) {
   const transporter = getEmailTransporter();
-  
   if (!transporter) {
     console.warn('Email not configured. Skipping confirmation email.');
     return;
   }
 
+  const expLabel = formData.experience ? (formData.experience.includes('-') || formData.experience.includes('+') ? formData.experience : formData.experience) : '—';
+  const expSuffix = /^\d+$/.test(formData.experience) ? ' years' : '';
+
   const emailHtml = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Application Received - YNM Mega Industries</title>
-    </head>
-    <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
-      <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 40px 20px;">
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Application Received - YNM Mega Industries</title></head>
+<body style="margin:0;padding:0;font-family:Arial,sans-serif;background:#f4f4f4;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:40px 20px;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
         <tr>
-          <td align="center">
-            <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-              <!-- Header -->
-              <tr>
-                <td style="background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%); padding: 30px; text-align: center;">
-                  <h1 style="color: #F7F3EA; margin: 0; font-size: 28px; font-weight: 800;">YNM Mega Industries</h1>
-                  <p style="color: #E6D3A3; margin: 10px 0 0; font-size: 14px;">Application Received</p>
-                </td>
-              </tr>
-              
-              <!-- Content -->
-              <tr>
-                <td style="padding: 40px 30px;">
-                  <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
-                    Dear <strong>${formData.name}</strong>,
-                  </p>
-                  
-                  <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
-                    Thank you for your interest in joining <strong>YNM Mega Industries Pvt Ltd</strong>. 
-                    We have successfully received your application for the position of <strong>${formData.position}</strong>.
-                  </p>
-                  
-                  <div style="background-color: #F7F3EA; border-left: 4px solid #C9A24D; padding: 20px; margin: 30px 0; border-radius: 4px;">
-                    <p style="color: #74060D; font-size: 14px; font-weight: 600; margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.5px;">
-                      Application Details
-                    </p>
-                    <table width="100%" cellpadding="5" cellspacing="0">
-                      <tr>
-                        <td style="color: #666666; font-size: 14px; padding: 5px 0;"><strong>Name:</strong></td>
-                        <td style="color: #333333; font-size: 14px; padding: 5px 0;">${formData.name}</td>
-                      </tr>
-                      <tr>
-                        <td style="color: #666666; font-size: 14px; padding: 5px 0;"><strong>Position:</strong></td>
-                        <td style="color: #333333; font-size: 14px; padding: 5px 0;">${formData.position}</td>
-                      </tr>
-                      <tr>
-                        <td style="color: #666666; font-size: 14px; padding: 5px 0;"><strong>Experience:</strong></td>
-                        <td style="color: #333333; font-size: 14px; padding: 5px 0;">${formData.experience} years</td>
-                      </tr>
-                      <tr>
-                        <td style="color: #666666; font-size: 14px; padding: 5px 0;"><strong>Email:</strong></td>
-                        <td style="color: #333333; font-size: 14px; padding: 5px 0;">${formData.email}</td>
-                      </tr>
-                      <tr>
-                        <td style="color: #666666; font-size: 14px; padding: 5px 0;"><strong>Phone:</strong></td>
-                        <td style="color: #333333; font-size: 14px; padding: 5px 0;">${formData.phone}</td>
-                      </tr>
-                    </table>
-                  </div>
-                  
-                  <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 20px 0;">
-                    Our HR team will review your application and resume. We will get back to you within 
-                    <strong style="color: #74060D;">10 working days</strong> regarding the next steps in our hiring process.
-                  </p>
-                  
-                  <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 20px 0;">
-                    If you have any questions or need to update your application, please feel free to contact us at 
-                    <a href="mailto:hr@ynmsafety.com" style="color: #74060D; text-decoration: none;">hr@ynmsafety.com</a> 
-                    or call us at <strong>+91 96765 75770</strong>.
-                  </p>
-                  
-                  <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 30px 0 20px;">
-                    We appreciate your interest in joining our team and look forward to the possibility of working together.
-                  </p>
-                  
-                  <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 20px 0 0;">
-                    Best regards,<br>
-                    <strong style="color: #74060D;">HR Team</strong><br>
-                    YNM Mega Industries Pvt Ltd
-                  </p>
-                </td>
-              </tr>
-              
-              <!-- Footer -->
-              <tr>
-                <td style="background-color: #F7F3EA; padding: 20px 30px; text-align: center; border-top: 2px solid #E6D3A3;">
-                  <p style="color: #666666; font-size: 12px; margin: 0 0 10px;">
-                    <strong>YNM Mega Industries Pvt Ltd</strong><br>
-                    Survey, 84P, Gowra Fountain Head, 4th Floor, Suite 401 A<br>
-                    Patrika Nagar, Madhapur, Hyderabad, Telangana 500081
-                  </p>
-                  <p style="color: #999999; font-size: 11px; margin: 10px 0 0;">
-                    Phone: +91 96765 75770 / +91 90002 62013 | Email: hr@ynmsafety.com<br>
-                    <a href="https://www.ynmsafety.com" style="color: #74060D; text-decoration: none;">www.ynmsafety.com</a>
-                  </p>
-                  <p style="color: #999999; font-size: 10px; margin: 15px 0 0; font-style: italic;">
-                    This is an automated email. Please do not reply to this message.
-                  </p>
-                </td>
-              </tr>
+          <td style="background:linear-gradient(135deg,#74060D 0%,#9A1B2E 100%);padding:32px;text-align:center;">
+            <h1 style="color:#F7F3EA;margin:0;font-size:26px;font-weight:800;">YNM Mega Industries</h1>
+            <p style="color:#E6D3A3;margin:10px 0 0;font-size:13px;">Application Received</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:36px 32px;">
+            <p style="color:#333;font-size:16px;line-height:1.6;margin:0 0 20px;">Dear <strong>${formData.name}</strong>,</p>
+            <p style="color:#333;font-size:16px;line-height:1.6;margin:0 0 24px;">Thank you for applying to <strong>YNM Mega Industries Pvt Ltd</strong>. We have received your application for <strong>${formData.position}</strong>.</p>
+            <table width="100%" cellpadding="0" cellspacing="0" style="background:#F7F3EA;border:1px solid #E6D3A3;border-radius:8px;">
+              <tr><td style="padding:16px 20px;border-bottom:1px solid #E6D3A3;color:#74060D;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">Application Summary</td></tr>
+              <tr><td style="padding:16px 20px;">
+                <table width="100%" cellpadding="6" cellspacing="0">
+                  <tr><td style="color:#666;font-size:14px;width:120px;">Name</td><td style="color:#333;font-size:14px;">${formData.name}</td></tr>
+                  <tr><td style="color:#666;font-size:14px;">Position</td><td style="color:#333;font-size:14px;">${formData.position}</td></tr>
+                  <tr><td style="color:#666;font-size:14px;">Experience</td><td style="color:#333;font-size:14px;">${expLabel}${expSuffix}</td></tr>
+                  <tr><td style="color:#666;font-size:14px;">Email</td><td style="color:#333;font-size:14px;">${formData.email}</td></tr>
+                  <tr><td style="color:#666;font-size:14px;">Phone</td><td style="color:#333;font-size:14px;">${formData.phone}</td></tr>
+                </table>
+              </td></tr>
             </table>
+            <p style="color:#333;font-size:15px;line-height:1.6;margin:24px 0 16px;">Our HR team will review your application and resume and contact you within <strong style="color:#74060D;">10 working days</strong>.</p>
+            <p style="color:#333;font-size:15px;line-height:1.6;margin:0 0 24px;">For queries, please contact <a href="mailto:hr@ynmsafety.com" style="color:#74060D;">hr@ynmsafety.com</a> or <strong>+91 96765 75770</strong>. Do not reply to this email.</p>
+            <p style="color:#333;font-size:15px;line-height:1.6;margin:0;">Best regards,<br><strong style="color:#74060D;">HR Team</strong><br>YNM Mega Industries Pvt Ltd</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="background:#F7F3EA;padding:20px 32px;text-align:center;border-top:2px solid #E6D3A3;">
+            <p style="color:#666;font-size:12px;margin:0 0 8px;"><strong>YNM Mega Industries Pvt Ltd</strong><br>Survey, 84P, Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081</p>
+            <p style="color:#999;font-size:11px;margin:12px 0 0;"><strong style="color:#74060D;">No-reply.</strong> This is an automated message. Do not reply to this email.</p>
           </td>
         </tr>
       </table>
-    </body>
-    </html>
-  `;
+    </td></tr>
+  </table>
+</body>
+</html>`;
 
-  const emailText = `
-Dear ${formData.name},
-
-Thank you for your interest in joining YNM Mega Industries Pvt Ltd. 
-We have successfully received your application for the position of ${formData.position}.
-
-Application Details:
-- Name: ${formData.name}
-- Position: ${formData.position}
-- Experience: ${formData.experience} years
-- Email: ${formData.email}
-- Phone: ${formData.phone}
-
-Our HR team will review your application and resume. We will get back to you within 10 working days regarding the next steps in our hiring process.
-
-If you have any questions or need to update your application, please feel free to contact us at hr@ynmsafety.com or call us at +91 96765 75770.
-
-We appreciate your interest in joining our team and look forward to the possibility of working together.
-
-Best regards,
-HR Team
-YNM Mega Industries Pvt Ltd
-
----
-YNM Mega Industries Pvt Ltd
-Survey, 84P, Gowra Fountain Head, 4th Floor, Suite 401 A
-Patrika Nagar, Madhapur, Hyderabad, Telangana 500081
-Phone: +91 96765 75770 / +91 90002 62013
-Email: hr@ynmsafety.com
-Website: www.ynmsafety.com
-
-This is an automated email. Please do not reply to this message.
-  `;
-
-  // Determine sender address: use CAREER_EMAIL_FROM if set, otherwise fall back to GMAIL_USER if using Gmail, or default
-  const senderEmail = process.env.CAREER_EMAIL_FROM || 
-                      (process.env.GMAIL_USER && !process.env.SMTP_HOST ? process.env.GMAIL_USER : null) ||
-                      'ynm.hr@ynmsafety.com';
+  const emailText = `Dear ${formData.name},\n\nThank you for applying to YNM Mega Industries Pvt Ltd. We have received your application for ${formData.position}.\n\nApplication: ${formData.name} | ${formData.position} | ${expLabel}${expSuffix} | ${formData.email} | ${formData.phone}\n\nOur HR team will review and contact you within 10 working days. For queries: hr@ynmsafety.com or +91 96765 75770. Do not reply to this email.\n\nBest regards,\nHR Team\nYNM Mega Industries Pvt Ltd\n\n---\nNo-reply. This is an automated message.`;
 
   const mailOptions = {
-    from: senderEmail,
+    from: getNoReplyFrom(),
     to: formData.email,
     subject: 'Application Received - YNM Mega Industries',
     text: emailText,
     html: emailHtml,
+    headers: { 'Auto-Submitted': 'auto-generated' },
   };
 
   try {
@@ -449,7 +359,102 @@ This is an automated email. Please do not reply to this message.
     return { success: true, messageId: info.messageId };
   } catch (error) {
     console.error('Error sending confirmation email:', error);
-    // Don't throw error - email failure shouldn't block form submission
+    return { success: false, error: error.message };
+  }
+}
+
+// Send HR notification with PDF attached (no-reply, do not reply)
+async function sendHRNotificationEmail(formData, resumeFile) {
+  const transporter = getEmailTransporter();
+  if (!transporter) {
+    console.warn('Email not configured. Skipping HR notification.');
+    return;
+  }
+
+  const expLabel = formData.experience ? (formData.experience.includes('-') || formData.experience.includes('+') ? formData.experience : formData.experience) : '—';
+  const expSuffix = /^\d+$/.test(formData.experience) ? ' years' : '';
+  const resumeName = resumeFile?.originalFilename || resumeFile?.newFilename || 'resume.pdf';
+  const hasCover = formData.coverLetter && String(formData.coverLetter).trim().length > 0;
+
+  const emailHtml = `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>New Job Application - ${formData.position}</title></head>
+<body style="margin:0;padding:0;font-family:Arial,sans-serif;background:#f4f4f4;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:40px 20px;">
+    <tr><td align="center">
+      <table width="640" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+        <tr>
+          <td style="background:linear-gradient(135deg,#74060D 0%,#9A1B2E 100%);padding:28px 32px;text-align:left;">
+            <h1 style="color:#F7F3EA;margin:0;font-size:22px;font-weight:800;">New Job Application</h1>
+            <p style="color:#E6D3A3;margin:8px 0 0;font-size:13px;">Careers – YNM Mega Industries</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:28px 32px;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+              <tr>
+                <td style="padding:12px 16px;background:#F7F3EA;border:1px solid #E6D3A3;border-radius:8px;color:#74060D;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">Applicant</td>
+              </tr>
+              <tr><td style="padding:16px;border:1px solid #E6D3A3;border-top:none;border-radius:0 0 8px 8px;">
+                <table width="100%" cellpadding="8" cellspacing="0">
+                  <tr><td style="color:#666;font-size:13px;width:140px;">Full name</td><td style="color:#333;font-size:14px;font-weight:600;">${formData.name}</td></tr>
+                  <tr><td style="color:#666;font-size:13px;">Position</td><td style="color:#333;font-size:14px;">${formData.position}</td></tr>
+                  <tr><td style="color:#666;font-size:13px;">Experience</td><td style="color:#333;font-size:14px;">${expLabel}${expSuffix}</td></tr>
+                  <tr><td style="color:#666;font-size:13px;">Email</td><td style="color:#333;font-size:14px;"><a href="mailto:${formData.email}" style="color:#74060D;">${formData.email}</a></td></tr>
+                  <tr><td style="color:#666;font-size:13px;">Phone</td><td style="color:#333;font-size:14px;">${formData.phone}</td></tr>
+                </table>
+              </td></tr>
+            </table>
+            ${hasCover ? `
+            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
+              <tr><td style="padding:12px 16px;background:#F7F3EA;border:1px solid #E6D3A3;border-radius:8px;color:#74060D;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">Cover letter</td></tr>
+              <tr><td style="padding:16px;border:1px solid #E6D3A3;border-top:none;border-radius:0 0 8px 8px;color:#444;font-size:14px;line-height:1.6;white-space:pre-wrap;">${String(formData.coverLetter).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')}</td></tr>
+            </table>
+            ` : ''}
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr><td style="padding:12px 16px;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;color:#2e7d32;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">Resume (PDF)</td></tr>
+              <tr><td style="padding:16px;border:1px solid #E6D3A3;border-top:none;border-radius:0 0 8px 8px;color:#333;font-size:14px;">Attached: <strong>${resumeName}</strong></td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="background:#F7F3EA;padding:16px 32px;text-align:center;border-top:2px solid #E6D3A3;">
+            <p style="color:#666;font-size:11px;margin:0;"><strong>No-reply.</strong> This is an automated notification. Do not reply to this email. Contact the candidate at the email above.</p>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+
+  const emailText = `New Job Application – YNM Mega Industries\n\nApplicant: ${formData.name}\nPosition: ${formData.position}\nExperience: ${expLabel}${expSuffix}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\n${hasCover ? `Cover letter:\n${formData.coverLetter}\n\n` : ''}Resume: Attached (${resumeName})\n\n---\nNo-reply. Do not reply to this email.`;
+
+  let attachment = null;
+  if (resumeFile?.filepath && fs.existsSync(resumeFile.filepath)) {
+    attachment = {
+      filename: resumeFile.originalFilename || resumeFile.newFilename || 'resume.pdf',
+      content: fs.readFileSync(resumeFile.filepath),
+    };
+  }
+
+  const mailOptions = {
+    from: getNoReplyFrom(),
+    to: hrEmail(),
+    subject: `New Job Application: ${formData.position} – ${formData.name}`,
+    text: emailText,
+    html: emailHtml,
+    headers: { 'Auto-Submitted': 'auto-generated' },
+    ...(attachment ? { attachments: [attachment] } : {}),
+  };
+
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log('HR notification sent:', info.messageId);
+    return { success: true, messageId: info.messageId };
+  } catch (error) {
+    console.error('Error sending HR notification:', error);
     return { success: false, error: error.message };
   }
 }
@@ -563,8 +568,11 @@ export default async function handler(req, res) {
       });
     }
 
-    // Send confirmation email to applicant
+    // Send confirmation email to applicant (no-reply)
     await sendConfirmationEmail(formData);
+
+    // Send HR notification with PDF attached (no-reply)
+    await sendHRNotificationEmail(formData, resumeFile);
 
     // Clean up uploaded file (in production, this would be handled by cloud storage)
     if (fs.existsSync(resumeFile.filepath)) {

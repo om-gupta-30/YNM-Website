@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmployeesSection from "@/components/EmployeesSection";
+import employeesData from "@/lib/employeesData";
 
 export default function OurTeamPage() {
   return (
@@ -26,7 +27,7 @@ export default function OurTeamPage() {
         </section>
 
         {/* Employees Section */}
-        <EmployeesSection employeesData={null} />
+        <EmployeesSection employeesData={employeesData} />
 
         {/* CTA Section */}
         <section className="our-team-cta">
