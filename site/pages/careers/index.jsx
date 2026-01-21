@@ -330,7 +330,7 @@ export default function CareersPage() {
           <div className="careers-hero-content">
             <span className="careers-tag">JOIN OUR TEAM</span>
             <h1>Careers at YNM</h1>
-            <p>Be part of a growing team that's manufacturing excellence and exporting quality products worldwide</p>
+            <p>Be part of a growing team that&apos;s manufacturing excellence and exporting quality products worldwide</p>
           </div>
         </section>
 
@@ -384,7 +384,7 @@ export default function CareersPage() {
                 <div className="application-success">
                   <div className="success-icon">✓</div>
                   <h3>Application Submitted!</h3>
-                  <p>Thank you for your interest. We'll review your application and get back to you soon.</p>
+                  <p>Thank you for your interest. We&apos;ll review your application and get back to you soon.</p>
                   <button onClick={() => setSubmitted(false)} className="careers-btn">
                     Submit Another Application
                   </button>
@@ -509,7 +509,7 @@ export default function CareersPage() {
                   <div className="form-group recaptcha-group">
                     <label>Security Verification *</label>
                     <div ref={recaptchaRef} className="recaptcha-container"></div>
-                    <small>Please complete the "I'm not a robot" verification.</small>
+                    <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
                   </div>
 
                   {/* CAPTCHA */}
@@ -539,7 +539,7 @@ export default function CareersPage() {
                         max="100"
                       />
                     </div>
-                    <small>Please solve this simple math problem to verify you're human.</small>
+                    <small>Please solve this simple math problem to verify you&apos;re human.</small>
                   </div>
 
                   <button type="submit" className="careers-btn" disabled={isSubmitting}>

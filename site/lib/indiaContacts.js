@@ -1,4 +1,4 @@
-export default {
+const indiaContacts = {
   MH: {
     stateName: "Maharashtra",
     contacts: [
@@ -153,3 +153,5 @@ export default {
     ],
   },
 };
+
+export default indiaContacts;

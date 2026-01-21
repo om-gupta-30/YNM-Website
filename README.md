@@ -49,6 +49,7 @@ YNM website/
 │   ├── pages/                 # Next.js pages and API routes
 │   ├── public/                # Static assets (images, fonts, favicon, etc.)
 │   ├── styles/                # globals.css
+│   ├── .eslintrc.json
 │   ├── next.config.mjs
 │   ├── package.json
 │   ├── tailwind.config.js
@@ -193,7 +194,7 @@ npm run lint
 | Contact form | `/contact` | Saves to Google Sheets |
 | India map | `/contact` | `IndiaPresenceMap`, `indiaContacts`, `indiaMapPaths` |
 | Careers form | `/careers` | Resume upload, email to HR, optional reCAPTCHA |
-| Employee section | `/`, `/our-team` | `EmployeesSection` + `employeesData.js`; Managing Director card has distinct styling on home; hover pop-up (lift + shadow); neon particles, shimmer, photo glow/border, and accents kept but reduced for performance on lower-end devices |
+| Employee section | `/`, `/our-team` | `EmployeesSection` + `employeesData.js`; Managing Director card has distinct styling on home; **hover pop-out** (lift `-20px`, scale `1.04`, stronger shadow, `z-index: 20`); neon particles, shimmer, photo glow/border, and accents kept but reduced for performance on lower-end devices |
 | Client logos & testimonials | `/`, `/clients` | `BrandsSection`, `BrandsSection`-style data on Clients page |
 | Product catalog | `/`, `/products`, `/products/[id]` | Categories and detail pages |
 | Foreign collaborations | `/foreign-collaborations` | Region-based partnership blocks |
@@ -204,7 +205,11 @@ npm run lint
 
 ### “What our employees say” (EmployeesSection) — UI and performance
 
-- **Hover pop-up:** Cards lift (`translateY(-10px)`) with a clear shadow on hover so the active card stands out.
+- **Hover pop-out:** On hover, cards **pop out** with:
+  - **Lift:** `translateY(-20px)` (increased from -10px).
+  - **Scale:** `scale(1.04)` so the card grows toward the viewer.
+  - **Shadow:** Layered box-shadow (`0 28px 60px`, `0 0 40px` gold glow, `0 12px 24px`) so the card reads clearly above the grid.
+  - **Motion:** `0.35s cubic-bezier(0.34, 1.56, 0.64, 1)` for a slight overshoot; `z-index: 20` so the hovered card stays on top when it overlaps neighbors.
 - **Effects retained, toned down:** Neon particles, card shimmer, card background pulse, photo gradient border, photo glow, quote icon motion, and corner accent stay, but are lighter and slower to improve performance (e.g. on Windows laptops):
   - Neon: `neonFloat` only (no `neonPulse`), 14s, opacity 0.5, smaller box-shadows.
   - Shimmer: runs once on hover (2s), lower opacity.
@@ -212,6 +217,13 @@ npm run lint
   - Glow and border: reduced opacity and scale; `photoBorderRotate` and `accentRotate` slowed (4–5s).
   - Line under header: `lineShimmer` at 6s with a lighter shadow.
 - **Card entrance:** Simple fade-in; staggered `animationDelay` per card kept.
+
+### ESLint, `next/link`, and React best practices
+
+- **ESLint:** `site/.eslintrc.json` extends `next/core-web-vitals` so `npm run lint` runs without prompts. The build runs lint and type checks; both must pass.
+- **`next/link`:** Internal links use `<Link href="...">` instead of `<a href="...">` (404, `_error`, our-team CTA) for client-side navigation.
+- **Unescaped entities:** Apostrophes and quotes in JSX text are escaped (`&apos;`, `&quot;`) where required by `react/no-unescaped-entities` (careers, contact, foreign-collaborations, our-team, privacy, terms, products, EmployeesSection, IndiaPresenceMap, TestimonialsSection).
+- **`lib/indiaContacts.js`:** Default export changed from an anonymous object to a named constant (`indiaContacts`) to satisfy `import/no-anonymous-default-export`.
 
 ---
 

@@ -81,7 +81,7 @@ export default function EmployeesSection({ employeesData: propEmployeesData, hig
 
               {/* Content Section */}
               <div className="employee-content">
-                <div className="employee-quote-icon">"</div>
+                <div className="employee-quote-icon">&quot;</div>
                 <p className="employee-text">{employee.text}</p>
                 
                 <div className="employee-info">

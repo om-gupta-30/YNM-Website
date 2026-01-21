@@ -149,7 +149,7 @@ export default function IndiaPresenceMap() {
         </div>
 
         <p style={{ margin: "8px 0 0", fontSize: 11, color: "#777", lineHeight: 1.5, maxWidth: "100%" }}>
-          This map shows YNM Mega Industries' operational presence across India. Click on a state to view the respective regional contacts.
+          This map shows YNM Mega Industries&apos; operational presence across India. Click on a state to view the respective regional contacts.
         </p>
 
         {selectedState && (

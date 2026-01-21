@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Custom404() {
   return (
     <div style={{
@@ -12,7 +14,7 @@ export default function Custom404() {
     }}>
       <h1 style={{ fontSize: '120px', margin: 0, color: '#1a2744' }}>404</h1>
       <p style={{ fontSize: '24px', marginTop: '16px' }}>Page Not Found</p>
-      <a 
+      <Link
         href="/"
         style={{
           marginTop: '24px',
@@ -25,7 +27,7 @@ export default function Custom404() {
         }}
       >
         Go Home
-      </a>
+      </Link>
     </div>
   );
 }

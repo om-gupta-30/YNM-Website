@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmployeesSection from "@/components/EmployeesSection";
@@ -33,13 +34,13 @@ export default function OurTeamPage() {
         <section className="our-team-cta">
           <div className="our-team-cta-content">
             <h2>Join Our Team</h2>
-            <p>We're always looking for talented individuals to join our growing team.</p>
-            <a href="/careers" className="our-team-cta-btn">
+            <p>We&apos;re always looking for talented individuals to join our growing team.</p>
+            <Link href="/careers" className="our-team-cta-btn">
               View Careers
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
         </section>
       </main>
