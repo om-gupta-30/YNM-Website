@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Error({ statusCode }) {
   return (
     <div style={{
@@ -18,7 +20,7 @@ function Error({ statusCode }) {
           ? `An error ${statusCode} occurred on server`
           : 'An error occurred on client'}
       </p>
-      <a 
+      <Link
         href="/"
         style={{
           marginTop: '24px',
@@ -31,7 +33,7 @@ function Error({ statusCode }) {
         }}
       >
         Go Home
-      </a>
+      </Link>
     </div>
   );
 }

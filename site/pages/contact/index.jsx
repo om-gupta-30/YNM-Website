@@ -152,7 +152,7 @@ export default function ContactPage() {
           <div className="contact-hero-content">
             <span className="contact-tag">GET IN TOUCH</span>
             <h1>Contact Us</h1>
-            <p>We'd love to hear from you. Reach out for product inquiries, export quotes, or business partnerships.</p>
+            <p>We&apos;d love to hear from you. Reach out for product inquiries, export quotes, or business partnerships.</p>
           </div>
         </section>
 
@@ -163,14 +163,14 @@ export default function ContactPage() {
             <div className="contact-form-wrapper">
               <div className="contact-form-header">
                 <h2>Send Us a Message</h2>
-                <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                <p>Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
               </div>
 
               {submitted ? (
                 <div className="contact-success">
                   <div className="success-icon">✓</div>
                   <h3>Thank You!</h3>
-                  <p>Your message has been submitted successfully. We'll get back to you soon.</p>
+                  <p>Your message has been submitted successfully. We&apos;ll get back to you soon.</p>
                   <button onClick={() => setSubmitted(false)} className="contact-btn">
                     Send Another Message
                   </button>

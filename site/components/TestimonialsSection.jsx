@@ -85,7 +85,7 @@ export default function TestimonialsSection({ testimonialsData: propTestimonials
                     </div>
 
                     {/* Text */}
-                    <p className="testimonial-text">"{testimonial.text}"</p>
+                    <p className="testimonial-text">&quot;{testimonial.text}&quot;</p>
 
                     {/* Author */}
                     <div className="testimonial-author">

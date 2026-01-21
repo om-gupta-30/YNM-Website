@@ -8077,7 +8077,7 @@ img {
   padding: 0;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(116, 6, 13, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -8092,9 +8092,9 @@ img {
 
 .employee-card:hover,
 .employee-card.hovered {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(116, 6, 13, 0.22), 0 0 28px rgba(201, 162, 77, 0.12);
-  z-index: 10;
+  transform: translateY(-20px) scale(1.04);
+  box-shadow: 0 28px 60px rgba(116, 6, 13, 0.28), 0 0 40px rgba(201, 162, 77, 0.18), 0 12px 24px rgba(0, 0, 0, 0.08);
+  z-index: 20;
 }
 
 /* Card shimmer - subtle */

@@ -23,7 +23,7 @@ export default function TermsPage() {
           <section className="legal-section">
             <h2>1. Acceptance of Terms</h2>
             <p>
-              By accessing and using the services of YNM Mega Industries Pvt Ltd ("Company", "we", "us", or "our"), 
+              By accessing and using the services of YNM Mega Industries Pvt Ltd (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), 
               you accept and agree to be bound by the terms and conditions outlined in this agreement. If you do not agree 
               to these terms, please do not use our services.
             </p>

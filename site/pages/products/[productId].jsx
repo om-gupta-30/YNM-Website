@@ -40,7 +40,7 @@ export default function ProductDetailPage() {
         <main className="product-detail-page">
           <div className="product-not-found">
             <h1>Product Not Found</h1>
-            <p>The product you're looking for doesn't exist.</p>
+            <p>The product you&apos;re looking for doesn&apos;t exist.</p>
             <Link href="/products" className="back-btn">
               ← Back to Products
             </Link>

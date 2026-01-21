@@ -23,7 +23,7 @@ export default function PrivacyPage() {
           <section className="legal-section">
             <h2>1. Introduction</h2>
             <p>
-              YNM Mega Industries Pvt Ltd ("Company", "we", "us", or "our") is committed to protecting your privacy. 
+              YNM Mega Industries Pvt Ltd (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is committed to protecting your privacy. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
               our website or use our services.
             </p>
