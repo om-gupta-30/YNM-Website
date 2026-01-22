@@ -2,13 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const employeeNames = ["Rajesh Kumar", "Priya Sharma", "Amit Patel", "Sneha Reddy", "Vikram Singh", "Ananya Gupta"];
 const employeePhotos = ["/assets/team-member-01.png", "/assets/team-member-02.png", "/assets/team-member-03.png", "/assets/team-member-04.png", "/assets/team-member-05.png", "/assets/team-member-06.png"];
 
 export default function EmployeesSection({ employeesData: propEmployeesData, highlightDirector = false }) {
-  const { t } = useLanguage();
   const [employeesData, setEmployeesData] = useState(propEmployeesData || []);
   const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -16,17 +14,9 @@ export default function EmployeesSection({ employeesData: propEmployeesData, hig
     if (propEmployeesData) setEmployeesData(propEmployeesData);
   }, [propEmployeesData]);
 
-  const fallbackFromT = (t?.employees?.fallback || []).slice(0, 6).map((fb, i) => ({
-    id: i + 1,
-    name: employeeNames[i] || "Team Member",
-    role: fb.role,
-    department: fb.department,
-    text: fb.text,
-    photo: employeePhotos[i] || "/assets/gallery-quality-control.jpg",
-  }));
   const displayData = employeesData && employeesData.length > 0
     ? employeesData
-    : fallbackFromT.length >= 6 ? fallbackFromT : [{ id: 1, name: "Rajesh Kumar", role: "Chief Executive Officer (CEO)", department: "Executive Leadership", text: "At YNM Mega Industries, we're committed to manufacturing excellence and global expansion.", photo: "/assets/team-member-01.png" }];
+    : [{ id: 1, name: "Rajesh Kumar", role: "Chief Executive Officer (CEO)", department: "Executive Leadership", text: "At YNM Mega Industries, we're committed to manufacturing excellence and global expansion.", photo: "/assets/team-member-01.png" }];
 
   return (
     <section id="our-team" className="employees-section">
@@ -39,9 +29,9 @@ export default function EmployeesSection({ employeesData: propEmployeesData, hig
 
       {/* Header */}
       <div className="employees-header">
-        <span className="employees-tag">{t?.employees?.tag || "Our Team"}</span>
-        <h2>{t?.employees?.title || "What Our Employees Say"}</h2>
-        <p>{t?.employees?.subtitle || "Hear from our leadership team and key employees about our mission, values, and commitment to excellence"}</p>
+        <span className="employees-tag">Our Team</span>
+        <h2>What Our Employees Say</h2>
+        <p>Hear from our leadership team and key employees about our mission, values, and commitment to excellence</p>
         <div className="employees-line" />
       </div>
 

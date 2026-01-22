@@ -2,10 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function BrandsSection({ brandsData: propBrandsData }) {
-  const { t } = useLanguage();
   const [brandsData, setBrandsData] = useState(propBrandsData || []);
   const sectionRef = useRef(null);
   const [inView, setInView] = useState(false);
@@ -38,7 +36,7 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
     return (
       <section id="brands-section" className="brands" style={{ minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ textAlign: 'center', color: '#c9a227' }}>
-          <div style={{ fontSize: '18px' }}>{t?.common?.noBrands || "No brands available"}</div>
+          <div style={{ fontSize: '18px' }}>No brands available</div>
         </div>
       </section>
     );
@@ -75,9 +73,9 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
       
       {/* Section Header */}
       <div className="brands-header">
-        <span className="brands-tag">{t?.brands?.tag || "Our Partners"}</span>
-        <h2>{t?.brands?.title || "Brands We Work With"}</h2>
-        <p>{t?.brands?.description || "Trusted by leading companies and institutions across India and globally"}</p>
+        <span className="brands-tag">Our Partners</span>
+        <h2>Brands We Work With</h2>
+        <p>Trusted by leading companies and institutions across India and globally</p>
         <div className="brands-header-bar" />
       </div>
 

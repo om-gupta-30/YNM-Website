@@ -4,8 +4,6 @@ import { useEffect, useRef, useState, Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import heroImage from "@/public/assets/hero-image.png";
-import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageSelector from "@/components/LanguageSelector";
 
 const heroNavConfig = [
   { key: "products", href: "/products" },
@@ -26,7 +24,6 @@ const statsData = [
 ];
 
 export default function Hero({ heroData: propHeroData, navLinks: propNavLinks }) {
-  const { t } = useLanguage();
   const [heroData, setHeroData] = useState(propHeroData || null);
   const [navLinks, setNavLinks] = useState(propNavLinks || null);
   const heroRef = useRef(null);
@@ -38,12 +35,18 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
 
   const taglines = heroData?.taglines && Array.isArray(heroData.taglines) && heroData.taglines.length > 0
     ? heroData.taglines
-    : [t?.hero?.tagline1, t?.hero?.tagline2, t?.hero?.tagline3, t?.hero?.tagline4].filter(Boolean) ||
-      ["Manufacturing Excellence, Global Reach", "Road Marking Paints, Fabrications & Furniture", "Trusted by Clients Across 15+ Countries", "Quality Manufacturing Since 2013"];
+    : ["Manufacturing Excellence, Global Reach", "Road Marking Paints, Fabrications & Furniture", "Trusted by Clients Across 15+ Countries", "Quality Manufacturing Since 2013"];
   
   const stats = heroData?.stats && Array.isArray(heroData.stats) && heroData.stats.length > 0
     ? heroData.stats
-    : statsData.map(({ value, suffix, key }) => ({ value, suffix, label: t?.hero?.[key] || key }));
+    : statsData.map(({ value, suffix, key }) => ({ 
+        value, 
+        suffix, 
+        label: key === "yearsExperience" ? "Years Experience" :
+               key === "projectsDelivered" ? "Projects Delivered" :
+               key === "exportCountries" ? "Export Countries" :
+               key === "happyClients" ? "Happy Clients" : key
+      }));
   
   // Ensure heroImageUrl is a valid string or fallback to default
   // Fix: Remove /public prefix if present (Next.js public folder files don't need /public)
@@ -61,7 +64,18 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
 
   const navigationLinks = navLinks && Array.isArray(navLinks) && navLinks.length > 0
     ? navLinks
-    : heroNavConfig.map(({ key, href }) => ({ label: t?.nav?.[key] || key, href }));
+    : heroNavConfig.map(({ key, href }) => ({ 
+        label: key === "home" ? "Home" :
+               key === "products" ? "Products" :
+               key === "clients" ? "Clients" :
+               key === "about" ? "About Us" :
+               key === "team" ? "Our Team" :
+               key === "foreignCollaborations" ? "Foreign Collaborations" :
+               key === "investor" ? "Investor Relations" :
+               key === "careers" ? "Careers" :
+               key === "contact" ? "Contact Us" : key, 
+        href 
+      }));
 
   // Coming soon handler
   const handleComingSoon = (e) => {
@@ -318,8 +332,8 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
               />
             </div>
             <div className="nav-brand-text-wrapper">
-              <span className="nav-brand-text">{t?.hero?.title || "YNM MEGA INDUSTRIES"}</span>
-              <span id="nav-since">{t?.hero?.since?.split("•")[0]?.trim() || "Since 2013"}</span>
+              <span className="nav-brand-text">YNM MEGA INDUSTRIES</span>
+              <span id="nav-since">Since 2013</span>
             </div>
           </Link>
 
@@ -396,8 +410,6 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
             })}
           </div>
 
-          <span className="nav-sep" aria-hidden="true" />
-          <LanguageSelector />
           <div id="scroll-progress" />
         </nav>
 
@@ -433,11 +445,11 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
         {/* HERO TEXT */}
         <div id="hero-text" ref={heroTextRef} className="hero-text-float">
           <h1 className="hero-title">
-            {t?.hero?.title || "YNM MEGA INDUSTRIES"}
+            YNM MEGA INDUSTRIES
             <span className="hero-gold-sweep" />
           </h1>
 
-          <div id="hero-since">{t?.hero?.since || "Since 2013 • Manufacturing & Export Excellence"}</div>
+          <div id="hero-since">Since 2013 • Manufacturing & Export Excellence</div>
 
           <p ref={subtitleRef} id="hero-subtitle" className="hero-subtitle">
             {taglines[currentTagline]}
@@ -467,10 +479,10 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
             ) : (
               <>
                 <a href="#products-section" className="hero-btn primary">
-                  {t?.hero?.exploreProducts || "Explore Products"}
+                  Explore Products
                 </a>
                 <Link href="/contact" className="hero-btn secondary">
-                  {t?.common?.contactUs || "Contact Us"}
+                  Contact Us
                 </Link>
               </>
             )}
