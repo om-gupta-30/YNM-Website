@@ -635,11 +635,11 @@ section {
   flex-wrap: nowrap;
 }
 
-/* Stack nav items vertically in standalone navbar to avoid stretched single-line layout */
+/* Nav items horizontal in standalone navbar */
 .standalone-navbar .nav-links {
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
   flex-wrap: nowrap;
 }
 
@@ -653,7 +653,7 @@ section {
   pointer-events: none;
 }
 .standalone-navbar .nav-sep {
-  display: none;
+  display: block;
 }
 
 .nav-link {
@@ -763,7 +763,7 @@ section {
   border-bottom: 2px solid rgba(201, 162, 77, 0.5);
   padding: 12px 30px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   min-height: 70px;
   overflow-x: hidden;
