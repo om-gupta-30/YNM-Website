@@ -41,7 +41,7 @@ const employeesData = [
     role: "Software Engineer",
     department: "IT",
     text: "YNM Mega Industries offers a stable and technology-driven environment. I appreciate the trust given to the IT team and the opportunity to work on systems that support efficient operations.",
-    photo: "/assets/employeephotos/Om%20Gupta%20img.jpeg",
+    photo: "/omemployeesay.png",
   },
   {
     id: 6,

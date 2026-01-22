@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const productConfig = [
   { id: "paints", image: "/assets/product-industrial-paint.png", link: "/products?type=manufacturing&category=paints", titleKey: "paintsTitle", descKey: "paintsDesc" },
@@ -12,13 +11,18 @@ const productConfig = [
 ];
 
 export default function ProductsSection() {
-  const { t } = useLanguage();
   const allProducts = productConfig.map(({ id, image, link, titleKey, descKey }) => ({
     id,
     image,
     link,
-    title: t?.products?.[titleKey] || id,
-    shortDesc: t?.products?.[descKey] || "",
+    title: titleKey === "paintsTitle" ? "Premium Paints" :
+           titleKey === "fabricationTitle" ? "Metal Fabrication" :
+           titleKey === "furnitureTitle" ? "School Furniture" :
+           titleKey === "safetyTitle" ? "Safety Equipment" : id,
+    shortDesc: descKey === "paintsDesc" ? "High-quality industrial and decorative paints for every surface. Durable, vibrant, and eco-friendly formulations." :
+               descKey === "fabricationDesc" ? "Custom steel and metal fabrication solutions. From structural components to precision-engineered parts." :
+               descKey === "furnitureDesc" ? "Ergonomic and durable furniture for educational institutions. Desks, chairs, and complete classroom solutions." :
+               descKey === "safetyDesc" ? "Premium safety gear and equipment for industrial use. Helmets, gloves, protective wear and more." : "",
   }));
   return (
     <section id="products-section" className="ps">
@@ -31,9 +35,9 @@ export default function ProductsSection() {
 
       {/* Header */}
       <div className="ps-header">
-        <span className="ps-tag">{t?.products?.tag || "Our Products"}</span>
-        <h2>{t?.products?.title || "What We Manufacture"}</h2>
-        <p>{t?.products?.description || "Premium quality products manufactured in-house and exported to clients across 15+ countries worldwide"}</p>
+        <span className="ps-tag">Our Products</span>
+        <h2>What We Manufacture</h2>
+        <p>Premium quality products manufactured in-house and exported to clients across 15+ countries worldwide</p>
         <div className="ps-bar" />
       </div>
 
@@ -58,7 +62,7 @@ export default function ProductsSection() {
                   <h3>{product.title}</h3>
                   <p>{product.shortDesc}</p>
                   <Link href={product.link} className="ps-product-cta">
-                    {t?.products?.explore || "Explore"}
+                    Explore
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
@@ -88,7 +92,7 @@ export default function ProductsSection() {
                   <h3>{product.title}</h3>
                   <p>{product.shortDesc}</p>
                   <Link href={product.link} className="ps-product-cta">
-                    {t?.products?.explore || "Explore"}
+                    Explore
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
@@ -103,7 +107,7 @@ export default function ProductsSection() {
       {/* View All Products Button */}
       <div className="ps-view-all">
         <Link href="/products" className="ps-view-all-btn">
-          {t?.products?.viewAll || "View All Products"}
+          View All Products
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>

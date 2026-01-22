@@ -2,10 +2,8 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function TestimonialsSection({ testimonialsData: propTestimonialsData }) {
-  const { t } = useLanguage();
   const [testimonialsData, setTestimonialsData] = useState(propTestimonialsData || []);
   const sectionRef = useRef(null);
 
@@ -36,8 +34,8 @@ export default function TestimonialsSection({ testimonialsData: propTestimonials
 
       {/* Header */}
       <div className="testimonials-header">
-        <h2>{t?.testimonials?.title || "Testimonials"}</h2>
-        <p>{t?.testimonials?.subtitle || "What our clients say about YNM Mega Industries"}</p>
+        <h2>Testimonials</h2>
+        <p>What our clients say about YNM Mega Industries</p>
         <div className="testimonials-line" />
       </div>
 

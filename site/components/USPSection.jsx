@@ -1,22 +1,14 @@
 "use client";
 
 import { useEffect, useCallback, useRef, memo } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const benefitIcons = ["🏭", "✓", "🌍", "🎨"];
 const benefitIds = ["manufacturing", "certified", "export", "customization"];
 
 function USPSection({ uspData: propUspData }) {
-  const { t } = useLanguage();
   const uspData = propUspData || null;
   const activeCardRef = useRef(null);
 
-  const benefitsFromT = (t?.usp?.benefits || []).map((b, i) => ({
-    id: benefitIds[i] || `usp-${i}`,
-    title: b.title,
-    icon: benefitIcons[i] || "",
-    description: b.description,
-  }));
   const benefitsData = uspData && Array.isArray(uspData) && uspData.length > 0
     ? uspData.map((benefit) => ({
         id: benefit.id?.toString() || `usp-${benefit.id}`,
@@ -24,7 +16,7 @@ function USPSection({ uspData: propUspData }) {
         icon: benefit.icon || "",
         description: benefit.description,
       }))
-    : benefitsFromT.length > 0 ? benefitsFromT : [{
+    : [{
         id: "manufacturing", title: "Advanced Manufacturing", icon: "🏭",
         description: "YNM Mega Industries operates advanced manufacturing facilities delivering high-quality industrial paints, precision metal fabrication, and engineered school furniture. As a trusted global manufacturer, we combine modern machinery, skilled expertise, and efficient processes to serve worldwide industrial and infrastructure projects."
       }, { id: "certified", title: "Quality Certified", icon: "✓", description: "At YNM Mega Industries, quality is our foundation. All our products including industrial paints, fabrication components, and school furniture are manufactured under ISO 9001:2015 certified quality systems, ensuring durability, safety, and consistent performance for global markets." },
@@ -153,9 +145,8 @@ function USPSection({ uspData: propUspData }) {
       <div className="why-deco why-deco-2"></div>
       
       <div className="why-header">
-        <span className="why-tag">{t?.usp?.tag || "About Us"}</span>
-        <h2>{t?.usp?.title || "About section"}</h2>
-        {t?.usp?.subtitle ? <p className="why-subtitle">{t.usp.subtitle}</p> : null}
+        <span className="why-tag">About Us</span>
+        <h2>About section</h2>
         <div className="why-bar"></div>
       </div>
 

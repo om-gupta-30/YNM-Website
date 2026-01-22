@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { memo, useState } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const quickLinksConfig = [
   { key: "home", href: "/" },
@@ -77,16 +76,26 @@ const socialLinks = [
 ];
 
 function Footer({ footerData: propFooterData }) {
-  const { t } = useLanguage();
   const footerData = propFooterData || null;
   const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
 
-  const quickLinksFromT = quickLinksConfig.map(({ key, href }) => ({ label: t?.nav?.[key] || key, href }));
-  const aboutText = footerData?.footerAboutText || t?.footer?.aboutText || "Leading manufacturer and exporter of premium paints, metal fabrications, and school furniture. Delivering quality products to global markets since 2013.";
+  const quickLinksFromT = quickLinksConfig.map(({ key, href }) => ({ 
+    label: key === "home" ? "Home" :
+           key === "products" ? "Products" :
+           key === "clients" ? "Clients" :
+           key === "about" ? "About Us" :
+           key === "team" ? "Our Team" :
+           key === "foreignCollaborations" ? "Foreign Collaborations" :
+           key === "investor" ? "Investor Relations" :
+           key === "careers" ? "Careers" :
+           key === "contact" ? "Contact Us" : key, 
+    href 
+  }));
+  const aboutText = footerData?.footerAboutText || "Leading manufacturer and exporter of premium paints, metal fabrications, and school furniture. Delivering quality products to global markets since 2013.";
   const phone = footerData?.footerPhone || "+91 96765 75770 / +91 90002 62013";
   const email = footerData?.footerEmail || "sales@ynmsafety.com";
   const address = footerData?.footerAddress || "Survey, 84P, Gowra Fountain Head, 4th Floor, Suite, 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081";
-  const copyright = footerData?.footerCopyright || `© ${new Date().getFullYear()} YNM Mega Industries Pvt Ltd. ${t?.footer?.copyright || "All rights reserved."}`;
+  const copyright = footerData?.footerCopyright || `© ${new Date().getFullYear()} YNM Mega Industries Pvt Ltd. All rights reserved.`;
   const quickLinks = footerData?.quickLinks && Array.isArray(footerData.quickLinks) && footerData.quickLinks.length > 0
     ? footerData.quickLinks
     : quickLinksFromT;
@@ -109,7 +118,7 @@ function Footer({ footerData: propFooterData }) {
         <div className="whatsapp-popup">
           <div className="whatsapp-popup-content">
             <span className="whatsapp-popup-icon">📱</span>
-            <p>{t?.footer?.whatsAppComingSoon || "WhatsApp coming soon!"}</p>
+            <p>WhatsApp coming soon!</p>
           </div>
         </div>
       )}
@@ -155,7 +164,7 @@ function Footer({ footerData: propFooterData }) {
             {copyright}
           </p>
           <p className="ft-credit">
-            {t?.footer?.createdBy || "Created by"} <span className="ft-creator">Om Gupta</span>
+            Created by <span className="ft-creator">Om Gupta</span>
           </p>
         </div>
 
@@ -170,13 +179,13 @@ function Footer({ footerData: propFooterData }) {
               className="ft-mascot-image-nobg"
             />
           </div>
-          <p className="ft-mascot-text">{t?.footer?.yourSafetyPartner || "Your Safety Partner!"}</p>
+          <p className="ft-mascot-text">Your Safety Partner!</p>
         </div>
 
         {/* Quick Links Column */}
         <div className="ft-col">
           <h4 className="ft-heading">
-            {t?.footer?.quickLinks || "Quick Links"}
+            Quick Links
             <span className="ft-heading-line"></span>
           </h4>
           <ul className="ft-links">
@@ -193,7 +202,7 @@ function Footer({ footerData: propFooterData }) {
         {/* Contact Column */}
         <div id="contact" className="ft-col">
           <h4 className="ft-heading">
-            {t?.footer?.contact || "Contact"}
+            Contact
             <span className="ft-heading-line"></span>
           </h4>
           <div className="ft-contact">
@@ -228,9 +237,9 @@ function Footer({ footerData: propFooterData }) {
           
           {/* Legal Links */}
           <div className="ft-legal">
-            <Link href="/terms" className="ft-legal-link">{t?.footer?.terms || "Terms & Conditions"}</Link>
+            <Link href="/terms" className="ft-legal-link">Terms & Conditions</Link>
             <span className="ft-legal-divider">|</span>
-            <Link href="/privacy" className="ft-legal-link">{t?.footer?.privacy || "Privacy Policy"}</Link>
+            <Link href="/privacy" className="ft-legal-link">Privacy Policy</Link>
           </div>
         </div>
       </div>

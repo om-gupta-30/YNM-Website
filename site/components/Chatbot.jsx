@@ -4,10 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import { faqData, productCatalog, contactLinks } from "@/lib/chatbotData";
 import Image from "next/image";
 import Link from "next/link";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Chatbot() {
-  const { language, t } = useLanguage();
+  const language = 'en';
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -577,15 +576,15 @@ export default function Chatbot() {
             <div className="chatbot-header-content">
               <div className="chatbot-avatar">🤖</div>
               <div>
-                <h3>{t?.chatbot?.title || "YNM AI Assistant"}</h3>
-                <p>{t?.chatbot?.subtitle || "Powered by Google Gemini"}</p>
+                <h3>YNM AI Assistant</h3>
+                <p>Powered by Google Gemini</p>
               </div>
             </div>
             <div className="chatbot-header-actions">
               <button 
                 className="chatbot-header-btn" 
                 onClick={startNewChat}
-                title={t?.chatbot?.newChat || "New Chat"}
+                title="New Chat"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                   <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
@@ -594,7 +593,7 @@ export default function Chatbot() {
               <button 
                 className="chatbot-header-btn" 
                 onClick={exportChat}
-                title={t?.chatbot?.exportChat || "Export Chat"}
+                title="Export Chat"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                   <path d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2z"/>
@@ -765,7 +764,7 @@ export default function Chatbot() {
             {/* Quick Action Buttons */}
             {showQuickActions && !isTyping && messages.length > 0 && (
               <div className="chatbot-quick-actions">
-                <p className="chatbot-quick-actions-label">{t?.chatbot?.quickQuestions || "Quick questions:"}</p>
+                <p className="chatbot-quick-actions-label">Quick questions:</p>
                 <div className="chatbot-quick-actions-grid">
                   {quickActions.map((action, index) => (
                     <button
@@ -857,7 +856,7 @@ export default function Chatbot() {
               ref={inputRef}
               type="text"
               className="chatbot-input"
-              placeholder={t?.chatbot?.placeholder || "Type your question..."}
+              placeholder="Type your question..."
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               disabled={isTyping}

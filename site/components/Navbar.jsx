@@ -2,8 +2,6 @@ import { useMemo, useState, Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageSelector from "@/components/LanguageSelector";
 
 const navConfig = [
   { key: "home", href: "/" },
@@ -19,8 +17,18 @@ const navConfig = [
 
 export default function Navbar() {
   const router = useRouter();
-  const { t } = useLanguage();
-  const navLinks = useMemo(() => navConfig.map(({ key, href }) => ({ label: t?.nav?.[key] || key, href })), [t]);
+  const navLinks = useMemo(() => navConfig.map(({ key, href }) => ({ 
+    label: key === "home" ? "Home" :
+           key === "products" ? "Products" :
+           key === "clients" ? "Clients" :
+           key === "about" ? "About Us" :
+           key === "team" ? "Our Team" :
+           key === "foreignCollaborations" ? "Foreign Collaborations" :
+           key === "investor" ? "Investor Relations" :
+           key === "careers" ? "Careers" :
+           key === "contact" ? "Contact Us" : key, 
+    href 
+  })), []);
   const [logoError, setLogoError] = useState(false);
 
   return (
@@ -121,8 +129,6 @@ export default function Navbar() {
             </Fragment>
           );
         })}
-        <span className="nav-sep" aria-hidden="true" />
-        <LanguageSelector />
       </div>
     </nav>
   );

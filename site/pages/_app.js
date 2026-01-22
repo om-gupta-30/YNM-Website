@@ -1,7 +1,5 @@
 import "@/styles/globals.css";
 import { useEffect } from "react";
-import { LanguageProvider } from "@/contexts/LanguageContext";
-import FirstTimeLanguageModal from "@/components/FirstTimeLanguageModal";
 import Mascot from "@/components/Mascot";
 import FloatingSocialMedia from "@/components/FloatingSocialMedia";
 import Chatbot from "@/components/Chatbot";
@@ -86,12 +84,11 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <LanguageProvider>
-      <FirstTimeLanguageModal />
+    <>
       <Component {...pageProps} />
       <Mascot />
       <FloatingSocialMedia />
       <Chatbot />
-    </LanguageProvider>
+    </>
   );
 }
