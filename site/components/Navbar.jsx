@@ -22,7 +22,7 @@ export default function Navbar() {
            key === "products" ? "Products" :
            key === "clients" ? "Clients" :
            key === "about" ? "About Us" :
-           key === "team" ? "Our Team" :
+           key === "team" ? "Our Director" :
            key === "foreignCollaborations" ? "Foreign Collaborations" :
            key === "investor" ? "Investor Relations" :
            key === "careers" ? "Careers" :

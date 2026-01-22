@@ -29,7 +29,7 @@ export const translations = {
       products: "Products",
       clients: "Clients",
       about: "About Us",
-      team: "Our Team",
+      team: "Our Director",
       foreignCollaborations: "Foreign Collaborations",
       investor: "Investor Relations",
       careers: "Careers",
@@ -146,8 +146,8 @@ export const translations = {
     },
     // Employees Section
     employees: {
-      tag: "Our Team",
-      title: "What Our Employees Say",
+      tag: "Our Director",
+      title: "What Our Director Says",
       subtitle: "Hear from our leadership team and key employees about our mission, values, and commitment to excellence",
       fallback: [
         { role: "Chief Executive Officer (CEO)", department: "Executive Leadership", text: "At YNM Mega Industries, we're committed to manufacturing excellence and global expansion. Our vision is to be the leading manufacturer and exporter, delivering quality products that exceed expectations across 15+ countries." },

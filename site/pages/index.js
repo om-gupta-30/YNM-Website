@@ -3,10 +3,10 @@ import Hero from "@/components/Hero";
 import ProductsSection from "@/components/ProductsSection";
 import BrandsSection from "@/components/BrandsSection";
 import USPSection from "@/components/USPSection";
-import EmployeesSection from "@/components/EmployeesSection";
+import DirectorSection from "@/components/DirectorSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
-import employeesData from "@/lib/employeesData";
+import directorData from "@/lib/directorData";
 
 // Fallback data (used when database is not available)
 const fallbackProductData = [
@@ -333,7 +333,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
       <USPSection uspData={uspData} />
       <ProductsSection productData={productData} />
       <BrandsSection brandsData={brandsData} />
-      <EmployeesSection employeesData={employeesData} highlightDirector />
+      <DirectorSection directorData={directorData} />
       <TestimonialsSection testimonialsData={testimonialsData} />
       <Footer footerData={footerData} />
     </>
