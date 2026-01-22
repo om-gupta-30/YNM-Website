@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { getAllProducts as getEnhancedProducts } from "@/lib/productsData";
 
 // All products organized under Manufacturing (all products are manufactured and exported)
 const productsData = {
@@ -16,6 +17,7 @@ const productsData = {
       paints: {
         title: "Premium Paints",
         description: "High-quality industrial and decorative paints for every surface",
+        icon: "🎨",
         products: [
           {
             id: "p1",
@@ -50,6 +52,7 @@ const productsData = {
       fabrication: {
         title: "Metal Fabrication",
         description: "Custom steel and metal fabrication solutions for all industries",
+        icon: "⚙️",
         products: [
           {
             id: "f1",
@@ -77,6 +80,7 @@ const productsData = {
       furniture: {
         title: "School Furniture",
         description: "Ergonomic and durable furniture for educational institutions",
+        icon: "🪑",
         products: [
           {
             id: "s1",
@@ -104,6 +108,7 @@ const productsData = {
       safety: {
         title: "Safety Equipment",
         description: "Premium safety gear and equipment for industrial use",
+        icon: "🛡️",
         products: [
           {
             id: "se1",
@@ -142,23 +147,36 @@ export function getProductById(id) {
   return allProducts.find((p) => p.id === id);
 }
 
+// Get all products (enhanced + legacy)
+export function getAllProductsCombined() {
+  const enhanced = getEnhancedProducts();
+  const legacy = getAllProducts();
+  // Merge and deduplicate by ID
+  const combined = [...enhanced];
+  legacy.forEach(legacyProduct => {
+    if (!combined.find(p => p.id === legacyProduct.id)) {
+      combined.push(legacyProduct);
+    }
+  });
+  return combined;
+}
+
 export default function ProductsPage() {
   const router = useRouter();
   const { category } = router.query;
-  const [expandedCategory, setExpandedCategory] = useState(category || null);
+  const [activeCategory, setActiveCategory] = useState(category || "all");
 
   useEffect(() => {
     if (category) {
-      setExpandedCategory(category);
+      setActiveCategory(category);
     }
   }, [category]);
 
-  const handleCategoryClick = (categoryKey) => {
-    if (expandedCategory === categoryKey) {
-      setExpandedCategory(null);
+  const handleCategoryChange = (categoryKey) => {
+    setActiveCategory(categoryKey);
+    if (categoryKey === "all") {
       router.push('/products', undefined, { shallow: true });
     } else {
-      setExpandedCategory(categoryKey);
       router.push(`/products?category=${categoryKey}`, undefined, { shallow: true });
     }
   };
@@ -166,6 +184,17 @@ export default function ProductsPage() {
   const handleProductClick = (product) => {
     router.push(`/products/${product.id}`);
   };
+
+  // Get all categories
+  const categories = Object.entries(productsData.manufacturing.categories);
+  
+  // Get all products
+  const allProducts = getAllProducts();
+  
+  // Filter products by category
+  const filteredProducts = activeCategory === "all" 
+    ? allProducts 
+    : categories.find(([key]) => key === activeCategory)?.[1]?.products || [];
 
   return (
     <>
@@ -180,6 +209,7 @@ export default function ProductsPage() {
         {/* Hero Section */}
         <section className="products-hero">
           <div className="products-hero-bg" />
+          <div className="products-hero-overlay" />
           <div className="products-hero-content">
             <span className="products-hero-tag">Our Products</span>
             <h1>Quality Products for Every Need</h1>
@@ -187,101 +217,145 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        {/* Main Section: Manufacturing */}
-        <section className="products-content">
-          {Object.entries(productsData).map(([sectionKey, section]) => {
-            const categories = Object.entries(section.categories);
-            
-            return (
-              <div key={sectionKey} className="product-section">
-                <div className="product-section-header">
-                  <div className="product-section-title">
-                    <span className="product-section-icon">{section.icon}</span>
-                    <div>
-                      <h2>{section.title}</h2>
-                      <p>{section.description}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="product-section-content">
-                  {categories.map(([categoryKey, category]) => {
-                    const isCategoryExpanded = expandedCategory === categoryKey;
-                    
-                    return (
-                      <div key={categoryKey} className="product-category">
-                        <div 
-                          className="product-category-header"
-                          onClick={() => handleCategoryClick(categoryKey)}
-                        >
-                          <div>
-                            <h3>{category.title}</h3>
-                            <p>{category.description}</p>
-                          </div>
-                          <svg 
-                            className={`expand-icon ${isCategoryExpanded ? 'expanded' : ''}`}
-                            width="20" 
-                            height="20" 
-                            viewBox="0 0 24 24" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            strokeWidth="2"
-                          >
-                            <path d="M6 9l6 6 6-6" />
-                          </svg>
-                        </div>
-
-                        {isCategoryExpanded && (
-                          <div className="products-grid">
-                            {category.products.map((product) => (
-                              <div
-                                key={product.id}
-                                className="product-card"
-                                onClick={() => handleProductClick(product)}
-                              >
-                                <div className="product-card-image">
-                                  <Image
-                                    src={product.image}
-                                    alt={product.name}
-                                    fill
-                                    style={{ objectFit: "cover" }}
-                                  />
-                                  <div className="product-card-overlay" />
-                                </div>
-                                <div className="product-card-content">
-                                  <h4>{product.name}</h4>
-                                  <p>{product.desc}</p>
-                                  <span className="product-card-cta">
-                                    View Details
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                      <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                  </span>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
+        {/* Category Filter Tabs */}
+        <section className="products-categories-section">
+          <div className="products-categories-container">
+            <button
+              className={`category-tab ${activeCategory === "all" ? "active" : ""}`}
+              onClick={() => handleCategoryChange("all")}
+            >
+              <span className="tab-icon">🌟</span>
+              <span>All Products</span>
+              <span className="tab-count">({allProducts.length})</span>
+            </button>
+            {categories.map(([categoryKey, category]) => (
+              <button
+                key={categoryKey}
+                className={`category-tab ${activeCategory === categoryKey ? "active" : ""}`}
+                onClick={() => handleCategoryChange(categoryKey)}
+              >
+                <span className="tab-icon">{category.icon}</span>
+                <span>{category.title}</span>
+                <span className="tab-count">({category.products.length})</span>
+              </button>
+            ))}
+          </div>
         </section>
 
+        {/* Products Grid Section */}
+        <section className="products-grid-section">
+          <div className="products-grid-container">
+            {activeCategory === "all" ? (
+              // Show products grouped by category
+              categories.map(([categoryKey, category]) => (
+                <div key={categoryKey} className="category-group">
+                  <div className="category-group-header">
+                    <div className="category-group-icon">{category.icon}</div>
+                    <div>
+                      <h2>{category.title}</h2>
+                      <p>{category.description}</p>
+                    </div>
+                  </div>
+                  <div className="products-grid">
+                    {category.products.map((product) => (
+                      <div
+                        key={product.id}
+                        className="product-card"
+                        onClick={() => handleProductClick(product)}
+                      >
+                        <div className="product-card-image">
+                          <Image
+                            src={product.image}
+                            alt={product.name}
+                            fill
+                            style={{ objectFit: "cover" }}
+                          />
+                          <div className="product-card-overlay" />
+                          <div className="product-card-badge">{category.title}</div>
+                        </div>
+                        <div className="product-card-content">
+                          <h3>{product.name}</h3>
+                          <p>{product.desc}</p>
+                          <div className="product-card-specs">
+                            {product.specs.slice(0, 2).map((spec, i) => (
+                              <span key={i} className="spec-tag">{spec}</span>
+                            ))}
+                          </div>
+                          <div className="product-card-footer">
+                            <span className="product-card-cta">
+                              View Details
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))
+            ) : (
+              // Show filtered products
+              <div className="products-grid">
+                {filteredProducts.map((product) => {
+                  const category = categories.find(([_, cat]) => 
+                    cat.products.some(p => p.id === product.id)
+                  )?.[1];
+                  
+                  return (
+                    <div
+                      key={product.id}
+                      className="product-card"
+                      onClick={() => handleProductClick(product)}
+                    >
+                      <div className="product-card-image">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          fill
+                          style={{ objectFit: "cover" }}
+                        />
+                        <div className="product-card-overlay" />
+                        <div className="product-card-badge">{category?.title}</div>
+                      </div>
+                      <div className="product-card-content">
+                        <h3>{product.name}</h3>
+                        <p>{product.desc}</p>
+                        <div className="product-card-specs">
+                          {product.specs.slice(0, 2).map((spec, i) => (
+                            <span key={i} className="spec-tag">{spec}</span>
+                          ))}
+                        </div>
+                        <div className="product-card-footer">
+                          <span className="product-card-cta">
+                            View Details
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="products-cta">
-          <h2>Need Custom Products?</h2>
-          <p>We offer customization across all product categories. Contact us with your requirements.</p>
-          <Link href="/contact" className="products-cta-btn">
-            Contact Us
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </Link>
+          <div className="products-cta-content">
+            <h2>Need Custom Products?</h2>
+            <p>We offer customization across all product categories. Contact us with your requirements.</p>
+            <Link href="/contact" className="products-cta-btn">
+              Contact Us
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </section>
       </main>
 
@@ -293,6 +367,7 @@ export default function ProductsPage() {
           background: linear-gradient(180deg, #F7F3EA 0%, #E6D3A3 100%);
         }
 
+        /* Hero Section */
         .products-hero {
           position: relative;
           height: 50vh;
@@ -309,8 +384,7 @@ export default function ProductsPage() {
           background: linear-gradient(135deg, #74060D 0%, #9A1B2E 50%, #5a0509 100%);
         }
 
-        .products-hero-bg::after {
-          content: '';
+        .products-hero-overlay {
           position: absolute;
           inset: 0;
           background: radial-gradient(ellipse at center, rgba(201, 162, 77, 0.2) 0%, transparent 70%);
@@ -352,201 +426,260 @@ export default function ProductsPage() {
           font-weight: 500;
         }
 
-        .products-content {
+        /* Category Tabs Section */
+        .products-categories-section {
+          padding: 40px 20px;
+          background: white;
+          border-bottom: 2px solid #E6D3A3;
+          position: sticky;
+          top: 100px;
+          z-index: 10;
+          box-shadow: 0 4px 20px rgba(116, 6, 13, 0.05);
+        }
+
+        .products-categories-container {
+          max-width: 1400px;
+          margin: 0 auto;
+          display: flex;
+          gap: 16px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .category-tab {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 14px 28px;
+          font-size: 15px;
+          font-weight: 600;
+          color: #9A1B2E;
+          background: #F7F3EA;
+          border: 2px solid #E6D3A3;
+          border-radius: 30px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+        }
+
+        .category-tab:hover {
+          background: #E6D3A3;
+          border-color: #C9A24D;
+          transform: translateY(-2px);
+        }
+
+        .category-tab.active {
+          background: linear-gradient(135deg, #74060D, #9A1B2E);
+          color: #F7F3EA;
+          border-color: #C9A24D;
+          box-shadow: 0 8px 25px rgba(116, 6, 13, 0.3);
+        }
+
+        .tab-icon {
+          font-size: 20px;
+        }
+
+        .tab-count {
+          font-size: 12px;
+          opacity: 0.8;
+          font-weight: 500;
+        }
+
+        /* Products Grid Section */
+        .products-grid-section {
           padding: 60px 20px;
+        }
+
+        .products-grid-container {
           max-width: 1400px;
           margin: 0 auto;
         }
 
-        .product-section {
-          margin-bottom: 40px;
-          background: white;
-          border-radius: 24px;
-          overflow: hidden;
-          box-shadow: 0 10px 40px rgba(116, 6, 13, 0.1);
-          border: 2px solid #E6D3A3;
+        .category-group {
+          margin-bottom: 80px;
         }
 
-        .product-section-header {
-          padding: 32px 40px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
-        }
-
-        .product-section-title {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-        }
-
-        .product-section-icon {
-          font-size: 48px;
-        }
-
-        .product-section-title h2 {
-          font-size: 32px;
-          font-weight: 800;
-          color: #F7F3EA;
-          margin: 0 0 8px;
-        }
-
-        .product-section-title p {
-          font-size: 15px;
-          color: #E6D3A3;
-          margin: 0;
-          font-weight: 500;
-        }
-
-        .expand-icon {
-          color: #C9A24D;
-          transition: transform 0.3s ease;
-        }
-
-        .expand-icon.expanded {
-          transform: rotate(180deg);
-        }
-
-        .product-section-content {
-          padding: 40px;
-          background: white;
-        }
-
-        .product-category {
-          margin-bottom: 30px;
-          border: 2px solid #E6D3A3;
-          border-radius: 16px;
-          overflow: hidden;
-        }
-
-        .product-category:last-child {
+        .category-group:last-child {
           margin-bottom: 0;
         }
 
-        .product-category-header {
-          padding: 24px 28px;
-          cursor: pointer;
+        .category-group-header {
           display: flex;
-          justify-content: space-between;
           align-items: center;
-          background: #F7F3EA;
-          transition: all 0.3s ease;
+          gap: 20px;
+          margin-bottom: 40px;
+          padding-bottom: 20px;
+          border-bottom: 3px solid #C9A24D;
         }
 
-        .product-category-header:hover {
-          background: #E6D3A3;
+        .category-group-icon {
+          font-size: 48px;
+          width: 80px;
+          height: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, rgba(116, 6, 13, 0.1), rgba(201, 162, 77, 0.1));
+          border-radius: 20px;
+          border: 2px solid #C9A24D;
         }
 
-        .product-category-header h3 {
-          font-size: 24px;
-          font-weight: 700;
+        .category-group-header h2 {
+          font-size: 32px;
+          font-weight: 800;
           color: #74060D;
-          margin: 0 0 6px;
+          margin: 0 0 8px;
         }
 
-        .product-category-header p {
-          font-size: 14px;
-          color: #9A1B2E;
+        .category-group-header p {
+          font-size: 16px;
+          color: #5a4a4a;
           margin: 0;
-        }
-
-        .product-category-header .expand-icon {
-          color: #74060D;
         }
 
         .products-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-          gap: 24px;
-          padding: 24px;
-          background: white;
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          gap: 30px;
         }
 
         .product-card {
-          position: relative;
           background: white;
-          border: 2px solid #E6D3A3;
-          border-radius: 16px;
+          border-radius: 20px;
           overflow: hidden;
           cursor: pointer;
-          transition: all 0.4s ease;
-          box-shadow: 0 5px 20px rgba(116, 6, 13, 0.08);
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 8px 30px rgba(116, 6, 13, 0.1);
+          border: 2px solid transparent;
+          display: flex;
+          flex-direction: column;
         }
 
         .product-card:hover {
-          transform: translateY(-8px);
+          transform: translateY(-12px) scale(1.02);
           border-color: #C9A24D;
-          box-shadow: 0 20px 50px rgba(116, 6, 13, 0.15), 0 0 30px rgba(201, 162, 77, 0.1);
+          box-shadow: 0 25px 60px rgba(116, 6, 13, 0.25), 0 0 40px rgba(201, 162, 77, 0.15);
         }
 
         .product-card-image {
           position: relative;
-          height: 200px;
+          height: 280px;
+          overflow: hidden;
         }
 
         .product-card-overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(180deg, transparent 0%, rgba(247, 243, 234, 0.95) 100%);
+          background: linear-gradient(180deg, transparent 0%, rgba(116, 6, 13, 0.4) 100%);
+          transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover .product-card-overlay {
+          opacity: 0.6;
+        }
+
+        .product-card-badge {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          background: rgba(201, 162, 77, 0.95);
+          color: #74060D;
+          padding: 6px 14px;
+          border-radius: 20px;
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          backdrop-filter: blur(10px);
+          z-index: 2;
         }
 
         .product-card-content {
-          padding: 20px;
-          background: white;
+          padding: 28px;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
         }
 
-        .product-card-content h4 {
-          font-size: 18px;
+        .product-card-content h3 {
+          font-size: 22px;
           font-weight: 700;
           color: #74060D;
-          margin: 0 0 10px;
+          margin: 0 0 12px;
+          line-height: 1.3;
         }
 
-        .product-card-content p {
-          font-size: 13px;
+        .product-card-content > p {
+          font-size: 14px;
           color: #5a4a4a;
           line-height: 1.6;
           margin: 0 0 16px;
+          flex-grow: 1;
+        }
+
+        .product-card-specs {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 20px;
+        }
+
+        .spec-tag {
+          font-size: 11px;
+          font-weight: 600;
+          color: #9A1B2E;
+          background: rgba(201, 162, 77, 0.15);
+          padding: 4px 12px;
+          border-radius: 12px;
+          border: 1px solid rgba(201, 162, 77, 0.3);
+        }
+
+        .product-card-footer {
+          margin-top: auto;
+          padding-top: 16px;
+          border-top: 1px solid #E6D3A3;
         }
 
         .product-card-cta {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          font-size: 12px;
+          font-size: 14px;
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.1em;
           color: #9A1B2E;
-          transition: gap 0.3s ease;
+          transition: all 0.3s ease;
         }
 
         .product-card:hover .product-card-cta {
-          gap: 12px;
           color: #C9A24D;
+          gap: 12px;
         }
-
 
         /* CTA Section */
         .products-cta {
-          text-align: center;
           padding: 80px 20px;
           background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
-          border-top: 4px solid #C9A24D;
+          text-align: center;
+        }
+
+        .products-cta-content {
+          max-width: 800px;
+          margin: 0 auto;
         }
 
         .products-cta h2 {
-          font-size: 32px;
+          font-size: 36px;
           font-weight: 800;
           color: #F7F3EA;
-          margin: 0 0 12px;
+          margin: 0 0 16px;
         }
 
         .products-cta p {
-          font-size: 16px;
+          font-size: 18px;
           color: #E6D3A3;
-          margin: 0 0 30px;
+          margin: 0 0 40px;
           font-weight: 500;
         }
 
@@ -554,8 +687,8 @@ export default function ProductsPage() {
           display: inline-flex;
           align-items: center;
           gap: 10px;
-          padding: 16px 36px;
-          font-size: 14px;
+          padding: 18px 40px;
+          font-size: 16px;
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.05em;
@@ -571,44 +704,60 @@ export default function ProductsPage() {
           background: #E6D3A3;
           color: #9A1B2E;
           transform: translateY(-3px);
-          box-shadow: 0 10px 30px rgba(201, 162, 77, 0.4);
+          box-shadow: 0 15px 40px rgba(201, 162, 77, 0.4);
+        }
+
+        @media (max-width: 968px) {
+          .products-categories-section {
+            top: 80px;
+          }
+
+          .category-tab {
+            padding: 12px 20px;
+            font-size: 14px;
+          }
+
+          .products-grid {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+          }
+
+          .category-group-header {
+            flex-direction: column;
+            text-align: center;
+            gap: 16px;
+          }
+
+          .category-group-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 36px;
+          }
         }
 
         @media (max-width: 768px) {
-          .product-section-header {
-            padding: 24px 20px;
+          .products-hero {
+            height: 40vh;
+            min-height: 300px;
+          }
+
+          .products-categories-container {
             flex-direction: column;
-            gap: 16px;
-            align-items: flex-start;
+            align-items: stretch;
           }
 
-          .product-section-title {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 12px;
-          }
-
-          .product-section-title h2 {
-            font-size: 24px;
-          }
-
-          .product-section-content {
-            padding: 24px;
-          }
-
-          .product-category-header {
-            padding: 20px;
-          }
-
-          .product-category-header h3 {
-            font-size: 20px;
+          .category-tab {
+            width: 100%;
+            justify-content: center;
           }
 
           .products-grid {
             grid-template-columns: 1fr;
-            padding: 16px;
           }
 
+          .category-group-header h2 {
+            font-size: 24px;
+          }
         }
       `}</style>
     </>

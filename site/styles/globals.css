@@ -8812,6 +8812,444 @@ img {
   opacity: 0.5;
 }
 
+/* ========================================
+   DIRECTOR SECTION - WHAT OUR DIRECTOR SAYS
+   ======================================== */
+
+.director-section {
+  position: relative;
+  width: 100%;
+  padding: 120px 40px;
+  background: linear-gradient(180deg, var(--warm-champagne) 0%, var(--soft-ivory) 100%);
+  overflow: hidden;
+}
+
+/* Header */
+.director-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: headerFadeIn 1s ease forwards;
+}
+
+.director-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--soft-ivory);
+  margin-bottom: 12px;
+  padding: 8px 20px;
+  background: var(--deep-maroon);
+  border: 2px solid var(--rich-wine);
+  border-radius: 25px;
+}
+
+.director-header h2 {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 800;
+  color: var(--deep-maroon);
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+
+.director-header p {
+  font-size: 16px;
+  color: var(--rich-wine);
+  margin: 0;
+  font-weight: 500;
+}
+
+.director-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--deep-maroon), var(--antique-gold), var(--deep-maroon));
+  background-size: 200% 100%;
+  margin: 28px auto 0;
+  border-radius: 2px;
+  animation: lineShimmer 6s ease-in-out infinite;
+  box-shadow: 0 0 6px rgba(201, 162, 77, 0.3);
+}
+
+/* Director Card Wrapper - Centered */
+.director-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Director Card - Single centered card */
+.director-card {
+  position: relative;
+  background: white;
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(116, 6, 13, 0.12);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  opacity: 0;
+  animation: employeeCardFadeIn 0.5s ease forwards;
+  border: 2px solid var(--antique-gold);
+  box-shadow: 0 12px 40px rgba(116, 6, 13, 0.18), 0 0 0 1px rgba(201, 162, 77, 0.25);
+  background: transparent;
+}
+
+.director-card:hover {
+  transform: translateY(-20px) scale(1.04);
+  box-shadow: 0 28px 60px rgba(116, 6, 13, 0.28), 0 0 40px rgba(201, 162, 77, 0.18), 0 12px 24px rgba(0, 0, 0, 0.08);
+  z-index: 20;
+}
+
+.director-card-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  background: none;
+  animation: none;
+}
+
+.director-card-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(/directorphoto.png) center/cover no-repeat;
+  filter: blur(6px);
+  transform: scale(1.05);
+}
+
+.director-card-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.82) 100%);
+}
+
+.director-card:hover .director-card-bg {
+  opacity: 1;
+  animation: none;
+}
+
+/* Photo Section */
+.director-photo-section {
+  position: relative;
+  padding: 40px 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  animation: photoSectionFloat 8s ease-in-out infinite;
+}
+
+.director-photo-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  animation: photoWrapperPulse 5s ease-in-out infinite;
+}
+
+.director-photo-border {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--deep-maroon), var(--antique-gold), var(--deep-maroon), var(--rich-wine), var(--antique-gold));
+  background-size: 300% 300%;
+  opacity: 0.9;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  animation: photoBorderRotate 5s linear infinite, borderGradientShift 6s ease infinite;
+}
+
+.director-card:hover .director-photo-border {
+  opacity: 1;
+  animation: photoBorderRotate 5s linear infinite, borderGradientShift 6s ease infinite;
+}
+
+.director-photo {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--antique-gold);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  animation: photoBreath 6s ease-in-out infinite;
+  box-shadow: 0 0 14px rgba(201, 162, 77, 0.22);
+}
+
+.director-card:hover .director-photo {
+  border-color: var(--antique-gold);
+  transform: scale(1.04) rotate(1deg);
+  animation: photoHoverPulse 2.5s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(201, 162, 77, 0.25);
+}
+
+.director-photo-glow {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 162, 77, 0.25), rgba(201, 162, 77, 0.1) 40%, transparent 70%);
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  animation: glowPulseActive 2.5s ease-in-out infinite;
+}
+
+.director-card:hover .director-photo-glow {
+  opacity: 1;
+  animation: glowPulseActive 2.5s ease-in-out infinite;
+}
+
+/* Content Section */
+.director-content {
+  padding: 30px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.director-quote-icon {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 80px;
+  font-family: serif;
+  color: rgba(250, 248, 245, 0.9);
+  opacity: 0.9;
+  line-height: 1;
+  font-weight: 700;
+  animation: quoteIconFloat 4s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.director-card:hover .director-quote-icon {
+  opacity: 1;
+  transform: translateY(-5px) rotate(-3deg) scale(1.05);
+  color: rgba(250, 248, 245, 0.95);
+  animation: quoteIconHover 1.5s ease-in-out infinite;
+}
+
+.director-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #faf8f5;
+  margin: 0;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: textReveal 0.8s ease forwards;
+  animation-delay: 0.3s;
+  transition: all 0.4s ease;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
+.director-card:hover .director-text {
+  color: #faf8f5;
+  transform: translateY(-2px);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+}
+
+.director-info {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.35);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: infoReveal 0.8s ease forwards;
+  animation-delay: 0.5s;
+  transition: all 0.4s ease;
+}
+
+.director-card:hover .director-info {
+  border-top-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+.director-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #faf8f5;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+  transition: all 0.4s ease;
+  display: inline-block;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
+.director-card:hover .director-name {
+  color: #faf8f5;
+  transform: scale(1.02);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+}
+
+.director-role {
+  font-size: 15px;
+  color: #faf8f5;
+  margin: 0 0 8px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
+.director-card:hover .director-role {
+  color: #faf8f5;
+  transform: translateX(2px);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+}
+
+.director-department {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--deep-maroon);
+  background: var(--antique-gold);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.director-department::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.director-card:hover .director-department {
+  background: var(--antique-gold);
+  color: var(--deep-maroon);
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(201, 162, 77, 0.25);
+}
+
+.director-card:hover .director-department::before {
+  left: 100%;
+}
+
+/* Card Accent */
+.director-card-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, transparent 0%, rgba(201, 162, 77, 0.1) 50%, rgba(116, 6, 13, 0.06) 100%);
+  border-radius: 0 0 0 100%;
+  opacity: 0.3;
+  transition: all 0.4s ease;
+  animation: accentPulse 5s ease-in-out infinite;
+}
+
+.director-card:hover .director-card-accent {
+  opacity: 0.7;
+  width: 120px;
+  height: 120px;
+  animation: accentRotate 4s linear infinite;
+}
+
+/* Director Section - Top Border */
+.director-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent 5%,
+    var(--deep-maroon) 20%,
+    var(--antique-gold) 35%,
+    var(--deep-maroon) 50%,
+    var(--antique-gold) 65%,
+    var(--deep-maroon) 80%,
+    transparent 95%
+  );
+  box-shadow: 0 0 10px rgba(116, 6, 13, 0.25), 0 0 20px rgba(201, 162, 77, 0.12);
+  z-index: 10;
+}
+
+.director-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(180deg, transparent 0%, rgba(116, 6, 13, 0.05) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.director-section .neon-particle {
+  background: var(--antique-gold);
+  box-shadow: 0 0 10px rgba(201, 162, 77, 0.5), 0 0 18px rgba(201, 162, 77, 0.25);
+  animation: neonFloat 14s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .director-section {
+    padding: 80px 20px;
+  }
+
+  .director-header {
+    margin-bottom: 50px;
+  }
+
+  .director-header h2 {
+    font-size: 32px;
+  }
+
+  .director-card-wrapper {
+    max-width: 100%;
+  }
+
+  .director-photo-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .director-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .director-content {
+    padding: 25px 30px 35px;
+  }
+
+  .director-quote-icon {
+    left: 30px;
+    top: 15px;
+    font-size: 60px;
+  }
+}
+
 /* Mission Section - Antique Gold particles */
 #mission .neon-particle {
   background: var(--antique-gold);
