@@ -35,22 +35,17 @@ function checkRateLimit(ip) {
 
 // Validate reCAPTCHA
 async function validateRecaptcha(token) {
-  if (!token) {
-    return false;
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+
+  // When no secret key is set (e.g. local dev), skip verification entirely.
+  // Use .env.local with Google's reCAPTCHA test keys for local testing.
+  if (!secretKey) {
+    console.log('RECAPTCHA_SECRET_KEY not set; skipping verification');
+    return true;
   }
 
-  // Use test keys for localhost development
-  // Google's test keys always pass validation and work on localhost
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY || '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'; // Default test secret key
-  
-  // Check if we're using test keys
-  const isTestKey = secretKey === '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe' || 
-                    !process.env.RECAPTCHA_SECRET_KEY;
-
-  if (isTestKey) {
-    console.log('Using reCAPTCHA test keys for development (localhost)');
-    // Test keys always pass - just verify token exists
-    return token.length > 0;
+  if (!token) {
+    return false;
   }
 
   try {

@@ -87,8 +87,9 @@ export default function CareersPage() {
     }
   }, [captchaInitialized]);
 
-  // Load reCAPTCHA script
+  // Load reCAPTCHA script (only when site key is configured)
   useEffect(() => {
+    if (!process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) return;
     // Wait for recaptchaRef to be available
     if (!recaptchaRef.current) return;
 
@@ -99,7 +100,7 @@ export default function CareersPage() {
       if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && !recaptchaWidgetId.current) {
         try {
           recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-            sitekey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', // Default test key
+            sitekey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
             callback: (token) => {
               setRecaptchaToken(token);
             },
@@ -225,8 +226,8 @@ export default function CareersPage() {
     setIsSubmitting(true);
     setError(null);
     
-    // Validate reCAPTCHA
-    if (!recaptchaToken) {
+    // Validate reCAPTCHA (only when configured)
+    if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && !recaptchaToken) {
       setError('Please complete the "I\'m not a robot" verification.');
       setIsSubmitting(false);
       return;
@@ -268,7 +269,7 @@ export default function CareersPage() {
       formDataToSend.append('resume', formData.resume);
       formDataToSend.append('captchaAnswer', formData.captchaAnswer);
       formDataToSend.append('captchaQuestion', captcha.question);
-      formDataToSend.append('recaptchaToken', recaptchaToken);
+      formDataToSend.append('recaptchaToken', recaptchaToken || '');
 
       const response = await fetch('/api/careers/submit', {
         method: 'POST',
@@ -505,12 +506,14 @@ export default function CareersPage() {
                     />
                   </div>
 
-                  {/* reCAPTCHA */}
-                  <div className="form-group recaptcha-group">
-                    <label>Security Verification *</label>
-                    <div ref={recaptchaRef} className="recaptcha-container"></div>
-                    <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
-                  </div>
+                  {/* reCAPTCHA (only when NEXT_PUBLIC_RECAPTCHA_SITE_KEY is set) */}
+                  {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+                    <div className="form-group recaptcha-group">
+                      <label>Security Verification *</label>
+                      <div ref={recaptchaRef} className="recaptcha-container"></div>
+                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
+                    </div>
+                  )}
 
                   {/* CAPTCHA */}
                   <div className="form-group captcha-group">
