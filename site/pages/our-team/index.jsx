@@ -10,7 +10,7 @@ export default function OurDirectorPage() {
     <>
       <Head>
         <title>Our Director - YNM Mega Industries Pvt Ltd</title>
-        <meta name="description" content="Meet Rishuu N Jain, Managing Director of YNM Mega Industries - leading manufacturer and exporter with a vision for excellence and global expansion." />
+        <meta name="description" content="Meet Rishuu N Jaiin, Managing Director of YNM Mega Industries - leading manufacturer and exporter with a vision for excellence and global expansion." />
       </Head>
 
       <Navbar />

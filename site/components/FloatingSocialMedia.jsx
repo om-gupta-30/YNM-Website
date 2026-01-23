@@ -60,6 +60,25 @@ const socialLinks = [
     color: "#25D366",
   },
   {
+    name: "Email",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=sales@ynmsafety.com",
+    icon: (
+      <svg viewBox="0 0 24 24" width="24" height="24" className="gmail-icon">
+        <defs>
+          <linearGradient id="gmail-gradient-floating" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#EA4335" />
+            <stop offset="25%" stopColor="#FBBC04" />
+            <stop offset="50%" stopColor="#34A853" />
+            <stop offset="75%" stopColor="#4285F4" />
+          </linearGradient>
+        </defs>
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="url(#gmail-gradient-floating)"/>
+      </svg>
+    ),
+    color: "#EA4335",
+    isGmail: true,
+  },
+  {
     name: "Google Maps",
     href: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29",
     icon: (

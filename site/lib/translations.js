@@ -124,7 +124,7 @@ export const translations = {
     // USP Section (About section)
     usp: {
       tag: "About Us",
-      title: "About section",
+      title: "Why Choose Us",
       subtitle: "",
       benefits: [
         { title: "Advanced Manufacturing..", description: "YNM Mega Industries operates advanced manufacturing facilities delivering high-quality industrial paints, precision metal fabrication, and engineered school furniture. As a trusted global manufacturer, we combine modern machinery, skilled expertise, and efficient processes to serve worldwide industrial and infrastructure projects." },
@@ -140,9 +140,9 @@ export const translations = {
     },
     // Brands Section
     brands: {
-      tag: "Our Partners",
+      tag: "Our Clients",
       title: "Brands We Work With",
-      description: "Trusted by leading companies and institutions across India and globally"
+      description: ""
     },
     // Employees Section
     employees: {

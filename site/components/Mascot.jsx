@@ -5,24 +5,11 @@ import Image from "next/image";
 
 // Company facts and prompts the mascot will share
 const mascotPrompts = [
-  "🏭 YNM has been manufacturing quality products since 2013!",
-  "🌍 We export to 15+ countries across Asia, Africa & Middle East!",
-  "🎨 Our premium paints come with a 10+ year warranty!",
-  "🔧 Custom fabrication? We've got precision engineering!",
-  "📚 We've furnished 500+ schools with ergonomic furniture!",
-  "✅ All products are ISO 9001:2015 certified!",
-  "🚀 We offer competitive FOB & CIF pricing!",
-  "💼 From design to delivery - we handle everything!",
-  "🛡️ Quality is our priority - stringent QC at every stage!",
-  "🤝 Trusted by leading companies across India!",
-  "🏗️ Our structural steel is load-certified!",
-  "🎯 Custom color matching available!",
-  "📦 Reliable shipping with documentation support!",
-  "⭐ 100% customer satisfaction is our mission!",
-  "🔬 We use only premium raw materials!",
-  "💪 YNM Safety - Your trusted partner!",
-  "🌟 Excellence in manufacturing since 2013!",
-  "🎖️ Award-winning quality standards!",
+  "🌍 Leading manufacturer & exporter of road marking paints to 15+ countries across Asia, Africa & the Middle East!",
+  "🛣️ We manufacture hot thermoplastic paints, cold plastic paints & water-based road marking paints for highways!",
+  "🛡️ Trusted road safety products manufacturer - crash barriers, retro reflective signages & gantry systems!",
+  "🏗️ In-house metal fabrication for W beam, double W beam, thrie beam & roller crash barriers!",
+  "⭐ Premium raw materials used in manufacturing road marking paints & highway safety products!",
 ];
 
 export default function Mascot() {
