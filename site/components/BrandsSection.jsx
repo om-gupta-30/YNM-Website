@@ -2,11 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BrandsSection({ brandsData: propBrandsData }) {
   const [brandsData, setBrandsData] = useState(propBrandsData || []);
   const sectionRef = useRef(null);
   const [inView, setInView] = useState(false);
+  const [selectedBrand, setSelectedBrand] = useState(null);
 
   useEffect(() => {
     if (propBrandsData) setBrandsData(propBrandsData);
@@ -73,9 +75,8 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
       
       {/* Section Header */}
       <div className="brands-header">
-        <span className="brands-tag">Our Partners</span>
+        <Link href="/clients" className="brands-tag">Our Clients</Link>
         <h2>Brands We Work With</h2>
-        <p>Trusted by leading companies and institutions across India and globally</p>
         <div className="brands-header-bar" />
       </div>
 
@@ -85,6 +86,8 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
           <div
             key={brand.id}
             className="brand-tile"
+            onClick={() => setSelectedBrand(brand)}
+            style={{ cursor: "pointer" }}
           >
             <div
               className="brand-tile-inner"
@@ -130,6 +133,39 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
       <div className="brands-corner-accent tr" />
       <div className="brands-corner-accent bl" />
       <div className="brands-corner-accent br" />
+
+      {/* Brand Popup Modal */}
+      {selectedBrand && (
+        <div 
+          className="brand-popup-overlay"
+          onClick={() => setSelectedBrand(null)}
+        >
+          <div 
+            className="brand-popup"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              className="brand-popup-close"
+              onClick={() => setSelectedBrand(null)}
+              aria-label="Close"
+            >
+              ×
+            </button>
+            <div className="brand-popup-content">
+              <div className="brand-popup-logo">
+                <Image
+                  src={selectedBrand.logo}
+                  alt={selectedBrand.name}
+                  width={200}
+                  height={100}
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
+              <h3 className="brand-popup-name">{selectedBrand.name}</h3>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

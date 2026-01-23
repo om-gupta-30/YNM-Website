@@ -35,7 +35,13 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
 
   const taglines = heroData?.taglines && Array.isArray(heroData.taglines) && heroData.taglines.length > 0
     ? heroData.taglines
-    : ["Manufacturing Excellence, Global Reach", "Road Marking Paints, Fabrications & Furniture", "Trusted by Clients Across 15+ Countries", "Quality Manufacturing Since 2013"];
+    : [
+        "Road marking paint manufacturer & industrial exporter",
+        "Thermoplastic, cold plastic & water-based paint manufacturing",
+        "Road safety products, signages & fabrication solutions",
+        "Industrial fabrication & school furniture manufacturer",
+        "Global exporter of paints, signages & road safety systems"
+      ];
   
   const stats = heroData?.stats && Array.isArray(heroData.stats) && heroData.stats.length > 0
     ? heroData.stats
@@ -478,9 +484,9 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
               ))
             ) : (
               <>
-                <a href="#products-section" className="hero-btn primary">
+                <Link href="/products" className="hero-btn primary">
                   Explore Products
-                </a>
+                </Link>
                 <Link href="/contact" className="hero-btn secondary">
                   Contact Us
                 </Link>

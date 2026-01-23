@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function DirectorSection({ directorData: propDirectorData }) {
   const [directorData, setDirectorData] = useState(propDirectorData || null);
@@ -28,9 +29,8 @@ export default function DirectorSection({ directorData: propDirectorData }) {
 
       {/* Header */}
       <div className="director-header">
-        <span className="director-tag">Our Director</span>
+        <Link href="/our-team" className="director-tag">Our Director</Link>
         <h2>What Our Director Says</h2>
-        <p>Hear from our Managing Director about our mission, values, and commitment to excellence</p>
         <div className="director-line" />
       </div>
 
@@ -50,10 +50,15 @@ export default function DirectorSection({ directorData: propDirectorData }) {
                   fill
                   style={{
                     objectFit: "cover",
-                    objectPosition: "center 18%",
+                    objectPosition: "center 15%",
+                    transform: "scale(1.1)",
                   }}
                   loading="lazy"
-                  onError={(e) => { e.target.style.display = "none"; }}
+                  unoptimized
+                  onError={(e) => { 
+                    console.error("Image failed to load:", photoSrc);
+                    e.target.style.display = "none"; 
+                  }}
                 />
               </div>
               <div className="director-photo-glow" />
@@ -68,7 +73,6 @@ export default function DirectorSection({ directorData: propDirectorData }) {
             <div className="director-info">
               <h4 className="director-name">{directorData.name}</h4>
               <p className="director-role">{directorData.role}</p>
-              <span className="director-department">{directorData.department}</span>
             </div>
           </div>
           <div className="director-card-accent" />

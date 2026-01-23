@@ -35,7 +35,6 @@ export default function TestimonialsSection({ testimonialsData: propTestimonials
       {/* Header */}
       <div className="testimonials-header">
         <h2>Testimonials</h2>
-        <p>What our clients say about YNM Mega Industries</p>
         <div className="testimonials-line" />
       </div>
 

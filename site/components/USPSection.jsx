@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useCallback, useRef, memo } from "react";
+import Link from "next/link";
 
 const benefitIcons = ["🏭", "✓", "🌍", "🎨"];
 const benefitIds = ["manufacturing", "certified", "export", "customization"];
@@ -18,10 +19,10 @@ function USPSection({ uspData: propUspData }) {
       }))
     : [{
         id: "manufacturing", title: "Advanced Manufacturing", icon: "🏭",
-        description: "YNM Mega Industries operates advanced manufacturing facilities delivering high-quality industrial paints, precision metal fabrication, and engineered school furniture. As a trusted global manufacturer, we combine modern machinery, skilled expertise, and efficient processes to serve worldwide industrial and infrastructure projects."
-      }, { id: "certified", title: "Quality Certified", icon: "✓", description: "At YNM Mega Industries, quality is our foundation. All our products including industrial paints, fabrication components, and school furniture are manufactured under ISO 9001:2015 certified quality systems, ensuring durability, safety, and consistent performance for global markets." },
-      { id: "export", title: "Global Export Network", icon: "🌍", description: "YNM Mega Industries is a reliable global exporter of industrial paints, metal fabrication products, safety solutions, and school furniture. We supply to clients across Asia, Africa, the Middle East, and international markets with efficient logistics, compliance, and timely delivery." },
-      { id: "customization", title: "Custom Solutions", icon: "🎨", description: "We specialize in customized manufacturing solutions including bespoke paint formulations, custom metal fabrication, and made-to-order school furniture. YNM Mega Industries supports global clients with flexible production, technical expertise, and project-specific solutions." }];
+        description: "YNM Mega Industries is a leading manufacturer of hot thermoplastic road marking paints, cold plastic paints, and water-based paints, supported by advanced metal fabrication facilities. Our manufacturing capabilities also include retro reflective signages, crash barriers, and engineered infrastructure products for highway and urban road projects."
+      }, { id: "certified", title: "Quality Certified", icon: "✓", description: "All products at YNM Mega Industries are manufactured under strict quality standards to ensure durability, visibility, and safety performance. As a trusted road safety products manufacturer, we deliver ISO-compliant paints, signages, and crash barrier systems designed for long-term infrastructure use." },
+      { id: "export", title: "Global Export Network", icon: "🌍", description: "YNM Mega Industries is a reliable global exporter of road marking paints, metal beam crash barriers, and road safety solutions. We supply W beam crash barriers, double W beam, thrie beam, roller crash barriers, and signages to clients across international markets." },
+      { id: "customization", title: "Custom Solutions", icon: "🎨", description: "We provide customized manufacturing solutions including bespoke paint formulations, custom metal fabrication, gantry and cantilever structures, and informative signage systems. YNM Mega Industries supports infrastructure projects with flexible production, technical expertise, and end-to-end road safety manufacturing solutions." }];
 
   const closePopup = useCallback(() => {
     const popup = document.getElementById('why-popup');
@@ -145,8 +146,8 @@ function USPSection({ uspData: propUspData }) {
       <div className="why-deco why-deco-2"></div>
       
       <div className="why-header">
-        <span className="why-tag">About Us</span>
-        <h2>About section</h2>
+        <Link href="/about" className="why-tag">About Us</Link>
+        <h2>Why Choose Us</h2>
         <div className="why-bar"></div>
       </div>
 

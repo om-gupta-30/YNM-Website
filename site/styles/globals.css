@@ -300,6 +300,14 @@ section, .ps, .srv, .brands, #why-choose-ynm, .testimonials-section, #testimonia
   animation-play-state: paused !important;
 }
 
+/* Exclude brands and testimonials animations from pause during scroll - must be more specific */
+.is-scrolling .brands .brand-tile-inner,
+.is-scrolling .brands.brands-inview .brand-tile-inner,
+.is-scrolling .testimonials-section .marquee-content,
+.is-scrolling #testimonials .marquee-content {
+  animation-play-state: running !important;
+}
+
 /* Optimize scrolling performance */
 * {
   -webkit-tap-highlight-color: transparent;
@@ -578,7 +586,7 @@ section {
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #f1f5f9;
+  color: #ffffff;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   animation: navBrandTextColorShift 15s ease-in-out infinite;
   position: relative;
@@ -587,15 +595,15 @@ section {
 
 @keyframes navBrandTextColorShift {
   0%, 40% {
-    color: #f1f5f9;
+    color: #ffffff;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
   50%, 90% {
-    color: var(--deep-maroon);
+    color: #ff0000;
     text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
   }
   100% {
-    color: #f1f5f9;
+    color: #ffffff;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
 }
@@ -603,7 +611,7 @@ section {
 /* Since 2013 in navbar */
 #nav-since {
   font-size: 11px;
-  color: #c9a227;
+  color: #ffffff;
   letter-spacing: 0.15em;
   font-weight: 700;
   text-transform: uppercase;
@@ -615,13 +623,13 @@ section {
 
 @keyframes navSinceColorShift {
   0%, 40% {
-    color: #c9a227;
+    color: #ffffff;
   }
   50%, 90% {
-    color: var(--deep-maroon);
+    color: #ff0000;
   }
   100% {
-    color: #c9a227;
+    color: #ffffff;
   }
 }
 
@@ -658,7 +666,7 @@ section {
 
 .nav-link {
   position: relative;
-  color: #f8f9fa;
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -674,15 +682,15 @@ section {
 
 @keyframes navLinkColorShift {
   0%, 40% {
-    color: #f8f9fa;
+    color: #ffffff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   }
   50%, 90% {
-    color: var(--deep-maroon);
+    color: #ff0000;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
   }
   100% {
-    color: #f8f9fa;
+    color: #ffffff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   }
 }
@@ -722,19 +730,11 @@ section {
 }
 
 .nav-link:hover {
-  animation: none;
-  color: #fff;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-#navbar:has(.nav-link:hover),
-#navbar:has(.nav-link-dropdown:hover) {
-  animation-play-state: paused;
-}
 
 .nav-link-dropdown:hover {
-  animation: none;
-  color: #fff;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
@@ -1823,6 +1823,16 @@ section {
   background: var(--deep-maroon);
   border: 2px solid var(--rich-wine);
   border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ps-tag:hover {
+  background: var(--warm-champagne);
+  border-color: var(--antique-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 162, 77, 0.3);
 }
 
 .ps-header h2 {
@@ -3332,6 +3342,16 @@ section {
   background: var(--soft-ivory);
   border: 2px solid var(--warm-champagne);
   border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.brands-tag:hover {
+  background: var(--warm-champagne);
+  border-color: var(--antique-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 162, 77, 0.3);
 }
 
 .brands-header h2 {
@@ -3668,13 +3688,121 @@ section {
   .brands-grid {
     gap: 12px;
   }
-  
-  .brand-tile-inner {
-    max-width: 110px;
+}
+
+/* Brand Popup Modal */
+.brand-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.brand-popup {
+  position: relative;
+  background: linear-gradient(135deg, var(--soft-ivory) 0%, var(--warm-champagne) 100%);
+  border-radius: 24px;
+  padding: 60px 50px 50px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(201, 162, 77, 0.3);
+  border: 2px solid var(--antique-gold);
+  animation: slideUp 0.3s ease;
+  text-align: center;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.brand-popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--deep-maroon);
+  color: var(--soft-ivory);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.brand-popup-close:hover {
+  background: var(--rich-wine);
+  transform: rotate(90deg) scale(1.1);
+}
+
+.brand-popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.brand-popup-logo {
+  width: 100%;
+  max-width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--warm-champagne);
+}
+
+.brand-popup-name {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--deep-maroon);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 600px) {
+  .brand-popup {
+    padding: 50px 30px 40px;
+    max-width: 90%;
   }
   
-  .brand-name-text {
-    font-size: 10px;
+  .brand-popup-logo {
+    max-width: 250px;
+    height: 120px;
+  }
+  
+  .brand-popup-name {
+    font-size: 24px;
   }
 }
 
@@ -5475,6 +5603,22 @@ section::after {
   opacity: 0;
   transform: translateY(-20px);
   animation: tagEntrance 0.8s ease forwards;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.why-tag:hover {
+  background: var(--warm-champagne);
+  border-color: var(--antique-gold);
+  color: var(--deep-maroon);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 162, 77, 0.3);
+}
+
+.why-tag:active {
+  transform: translateY(0);
 }
 
 @keyframes tagEntrance {
@@ -5747,6 +5891,14 @@ section::after {
   .is-scrolling [class*="animate"],
   .is-scrolling [class*="animation"] {
     animation-play-state: paused !important;
+  }
+  
+  /* Keep brands and testimonials animations running during scroll - must be more specific */
+  .is-scrolling .brands .brand-tile-inner,
+  .is-scrolling .brands.brands-inview .brand-tile-inner,
+  .is-scrolling .testimonials-section .marquee-content,
+  .is-scrolling #testimonials .marquee-content {
+    animation-play-state: running !important;
   }
 }
 
@@ -8847,6 +8999,16 @@ img {
   background: var(--deep-maroon);
   border: 2px solid var(--rich-wine);
   border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.director-tag:hover {
+  background: var(--rich-wine);
+  border-color: var(--antique-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 162, 77, 0.3);
 }
 
 .director-header h2 {
@@ -9908,6 +10070,16 @@ img {
 .floating-social-link[data-social-color="#34C759"]:hover {
   background: #34C759;
   border-color: #34C759;
+}
+
+/* Gmail/Email icon styling - Gmail gradient colors */
+.floating-social-link[data-social-color="#EA4335"]:hover {
+  background: linear-gradient(135deg, #EA4335 0%, #FBBC04 25%, #34A853 50%, #4285F4 100%);
+  border-color: #EA4335;
+}
+
+.floating-social-link[data-social-color="#EA4335"]:hover .gmail-icon path {
+  fill: #ffffff;
 }
 
 .floating-social-icon-wrapper {
