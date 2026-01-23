@@ -2073,6 +2073,18 @@ section {
   margin: 0 0 16px;
 }
 
+.ps-product-count {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--rich-wine);
+  background: rgba(201, 162, 77, 0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(201, 162, 77, 0.3);
+}
+
 .ps-product-cta {
   display: inline-flex;
   align-items: center;
