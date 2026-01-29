@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -50,6 +50,149 @@ const productCategories = [
   }
 ];
 
+// Predefined technical specifications for each product
+const productSpecifications = {
+  // Road Safety Products
+  "W Beam Crash Barrier": [
+    "3mm thickness, Hot-dip galvanized, MoRTH 803 compliant",
+    "2.7mm thickness, Galvanized coating 600g/m², IS 5986 certified",
+    "3mm thickness with C-post, 4m standard length",
+    "Double-sided installation, EN 1317 certified, 85 micron zinc coating"
+  ],
+  "Thrie Beam Crash Barrier": [
+    "3mm thickness, Hot-dip galvanized, Heavy-duty for bridges",
+    "4mm thickness, Extra strength for high-speed zones",
+    "Standard length 4m, Sigma post configuration",
+    "Double-sided median installation, EN 1317 H2 containment"
+  ],
+  "Guard Rails": [
+    "Standard height 750mm, Galvanized steel, Post spacing 2m",
+    "Height 850mm, Heavy-duty posts, Spacing 1.33m",
+    "W-profile rail, 3mm thickness, Zinc coating 610g/m²",
+    "Box beam style, Powder coated finish, Custom colors available"
+  ],
+  "End Terminals": [
+    "Energy absorbing type, MASH TL-3 compliant",
+    "Flared end terminal, Non-gating design",
+    "Tangent end terminal, Redirective type",
+    "Crash cushion compatible, Sequential kinking design"
+  ],
+  "Road Studs & Delineators": [
+    "Solar-powered LED studs, 360° visibility, IP68 rated",
+    "Reflective ceramic studs, White/Yellow, 100mm diameter",
+    "Flexible delineators, 750mm height, High-intensity reflective",
+    "Cast aluminum studs, Dual-color reflectors, Heavy traffic rated"
+  ],
+  "Signage & Markers": [
+    "Retro-reflective Type III, Aluminum substrate, 2mm thickness",
+    "High-intensity prismatic (HIP) Grade, UV resistant",
+    "Diamond grade reflective, 10-year warranty",
+    "Engineer grade reflective, Standard sizes as per IRC"
+  ],
+  
+  // Industrial Paints
+  "Industrial Enamel Paint": [
+    "High gloss finish, Temperature resistant up to 200°C",
+    "Semi-gloss finish, Chemical resistant, Quick drying",
+    "Alkyd-based, Coverage 10-12 sqm/L, VOC compliant",
+    "Machinery grade, Rust inhibiting, 5-year durability"
+  ],
+  "Exterior Weather Coat": [
+    "Acrylic emulsion, UV resistant, 7-year color retention",
+    "Textured finish, Anti-fungal, Crack-bridging up to 0.5mm",
+    "Smooth finish, Self-cleaning properties, Low VOC",
+    "Premium sheen, Waterproof, Coverage 12-14 sqm/L"
+  ],
+  "Epoxy Floor Coating": [
+    "Self-leveling, 2-part system, Thickness 2-3mm",
+    "Anti-slip finish, Chemical resistant, Industrial grade",
+    "High-build epoxy, 500 micron DFT, Seamless finish",
+    "Solvent-free, Food-grade certified, Easy to clean"
+  ],
+  "Wood Finish Lacquer": [
+    "Clear gloss, NC lacquer, Fast drying",
+    "Satin finish, PU-based, Scratch resistant",
+    "Matt finish, Water-based, Low odor",
+    "Tinted finish, UV protective, Furniture grade"
+  ],
+  "Anti-Corrosive Paint": [
+    "Zinc-rich primer, 85% zinc content, Heavy-duty protection",
+    "Epoxy-based, Salt spray resistant 1000+ hours",
+    "Red oxide primer, Quick drying, Steel structures",
+    "Two-pack system, Marine grade, 10-year protection"
+  ],
+  "Heat Resistant Paint": [
+    "Silicone-based, Resistant up to 600°C, Matt black",
+    "Aluminum finish, Up to 400°C, Industrial equipment",
+    "High-temp silver, Up to 800°C, Exhaust systems",
+    "Ceramic-based, Up to 1000°C, Furnace applications"
+  ],
+  
+  // Metal Fabrication
+  "Structural Steel Fabrication": [
+    "IS 2062 Grade E250, Hot-dip galvanized, Welded joints",
+    "Grade E350, Bolted connections, Fire-rated coating",
+    "Heavy-duty I-beams, Structural calculations included",
+    "Custom design, Powder coated, Installation support"
+  ],
+  "Industrial Racking Systems": [
+    "Heavy-duty, Load capacity 1000kg/level, 5 levels",
+    "Selective pallet racking, 3000kg UDL, Powder coated",
+    "Drive-in racking, High-density storage, FIFO/LIFO",
+    "Cantilever racking, Long items storage, Adjustable arms"
+  ],
+  "Custom Metal Enclosures": [
+    "SS 304 grade, IP65 rated, Powder coated",
+    "MS fabrication, IP55 rated, RAL color options",
+    "SS 316 grade, IP66 rated, Food industry compliant",
+    "Aluminum enclosure, IP54 rated, Lightweight design"
+  ],
+  "Storage Solutions": [
+    "Modular shelving, Adjustable heights, Bolt-free assembly",
+    "Heavy-duty cabinets, Lock & key, Powder coated",
+    "Mobile compactor storage, Space-saving, Track mounted",
+    "Bin storage system, Parts organization, Label holders"
+  ],
+  "Metal Frameworks": [
+    "Tubular steel, Welded construction, Epoxy coated",
+    "Angle iron framework, Bolted assembly, Galvanized",
+    "Square tube construction, Custom dimensions, Powder coated",
+    "Channel frame, Heavy-duty, Pre-engineered design"
+  ],
+  
+  // School & Office Furniture
+  "Student Desks & Chairs": [
+    "Single seater, MS frame, Plywood top, Age 6-10 years",
+    "Dual seater bench, Heavy-duty frame, Laminated top",
+    "Adjustable height desk, Ergonomic design, Age 10-16 years",
+    "Classroom set (30 students), Powder coated, 5-year warranty"
+  ],
+  "Laboratory Tables": [
+    "Chemical resistant top, Sink provision, Gas outlets",
+    "Granite top, Anti-vibration, Precision instruments",
+    "Phenolic resin top, Acid resistant, Drainage system",
+    "Stainless steel top, Clean room compatible, Mobile base"
+  ],
+  "Library Shelving": [
+    "Double-sided, 6 shelves, Adjustable, 2100mm height",
+    "Single-sided wall unit, 5 shelves, 1800mm height",
+    "Mobile library shelving, Compact storage, Track system",
+    "Display shelving, Slanted shelves, End panels included"
+  ],
+  "Office Workstations": [
+    "L-shaped desk, 1500x1500mm, Cable management",
+    "Linear workstation, 1200mm width, Partition panels",
+    "Executive desk, 1800x900mm, Modesty panel, Drawers",
+    "Cluster of 4, Shared workspace, Privacy screens"
+  ],
+  "Storage Cabinets": [
+    "4-drawer filing cabinet, Centralized locking, A4/Legal size",
+    "Cupboard with shelves, 1800mm height, Steel construction",
+    "Locker cabinet, 12 compartments, Individual locks",
+    "Wardrobe style, Hanging rail + shelves, Full height"
+  ]
+};
+
 // Quantity units
 const quantityUnits = [
   "Meters",
@@ -83,7 +226,7 @@ export default function GetQuotePage() {
     deliveryTimeline: "",
     
     // Additional Info
-    specifications: "",
+    selectedSpecs: [], // Array of selected predefined specifications
     message: "",
     
     // Preferences
@@ -96,6 +239,10 @@ export default function GetQuotePage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
   const [availableProducts, setAvailableProducts] = useState([]);
+  const [availableSpecs, setAvailableSpecs] = useState([]);
+  const [pdfFile, setPdfFile] = useState(null);
+  const [pdfError, setPdfError] = useState(null);
+  const fileInputRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -103,10 +250,20 @@ export default function GetQuotePage() {
     if (name === "productCategory") {
       const category = productCategories.find(cat => cat.name === value);
       setAvailableProducts(category ? category.products : []);
+      setAvailableSpecs([]);
       setFormData({ 
         ...formData, 
         [name]: value,
-        product: "" // Reset product when category changes
+        product: "", // Reset product when category changes
+        selectedSpecs: [] // Reset selected specs
+      });
+    } else if (name === "product") {
+      const specs = productSpecifications[value] || [];
+      setAvailableSpecs(specs);
+      setFormData({ 
+        ...formData, 
+        [name]: value,
+        selectedSpecs: [] // Reset selected specs when product changes
       });
     } else {
       setFormData({ 
@@ -118,12 +275,83 @@ export default function GetQuotePage() {
     if (error) setError(null);
   };
 
+  const handleSpecToggle = (spec) => {
+    setFormData(prev => {
+      const isSelected = prev.selectedSpecs.includes(spec);
+      if (isSelected) {
+        return {
+          ...prev,
+          selectedSpecs: prev.selectedSpecs.filter(s => s !== spec)
+        };
+      } else {
+        return {
+          ...prev,
+          selectedSpecs: [...prev.selectedSpecs, spec]
+        };
+      }
+    });
+  };
+
+  const handlePdfUpload = (e) => {
+    const file = e.target.files[0];
+    setPdfError(null);
+    
+    if (!file) {
+      setPdfFile(null);
+      return;
+    }
+    
+    // Check file extension
+    const fileExtension = file.name.split('.').pop().toLowerCase();
+    if (fileExtension !== 'pdf') {
+      setPdfError("Only PDF files are allowed. Please upload a PDF document.");
+      setPdfFile(null);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
+    // Check file type
+    if (file.type !== 'application/pdf') {
+      setPdfError("Invalid file type. Please upload a valid PDF document.");
+      setPdfFile(null);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
+    // Check file size (5MB = 5 * 1024 * 1024 bytes)
+    const maxSize = 5 * 1024 * 1024;
+    if (file.size > maxSize) {
+      setPdfError(`File size exceeds 5MB limit. Your file is ${(file.size / (1024 * 1024)).toFixed(2)}MB.`);
+      setPdfFile(null);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
+    setPdfFile(file);
+  };
+
+  const removePdf = () => {
+    setPdfFile(null);
+    setPdfError(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
 
     try {
+      // Format selected specifications
+      const selectedSpecsText = formData.selectedSpecs.length > 0 
+        ? formData.selectedSpecs.map((spec, i) => `  ${i + 1}. ${spec}`).join('\n')
+        : "None selected";
+      
+      // PDF info
+      const pdfInfo = pdfFile 
+        ? `PDF Attached: ${pdfFile.name} (${(pdfFile.size / (1024 * 1024)).toFixed(2)}MB)`
+        : "No PDF attached";
+
       const response = await fetch('/api/contact/submit', {
         method: 'POST',
         headers: {
@@ -165,12 +393,16 @@ Installation Support: ${formData.needInstallation ? "Yes" : "No"}
 Site Visit Required: ${formData.needSiteVisit ? "Yes" : "No"}
 Urgent Requirement: ${formData.urgentRequirement ? "Yes" : "No"}
 
-SPECIFICATIONS & NOTES
-----------------------
-${formData.specifications || "None"}
+SELECTED SPECIFICATIONS
+-----------------------
+${selectedSpecsText}
 
-ADDITIONAL MESSAGE
-------------------
+CUSTOMISED SPECIFICATIONS (PDF)
+-------------------------------
+${pdfInfo}
+
+NOTES
+-----
 ${formData.message || "None"}
           `.trim()
         }),
@@ -187,10 +419,14 @@ ${formData.message || "None"}
         name: "", email: "", phone: "", company: "", designation: "",
         productCategory: "", product: "", quantity: "", quantityUnit: "Meters",
         projectName: "", projectLocation: "", deliveryTimeline: "",
-        specifications: "", message: "",
+        selectedSpecs: [], message: "",
         needInstallation: false, needSiteVisit: false, urgentRequirement: false
       });
       setAvailableProducts([]);
+      setAvailableSpecs([]);
+      setPdfFile(null);
+      setPdfError(null);
+      if (fileInputRef.current) fileInputRef.current.value = '';
 
     } catch (err) {
       console.error('Quote submission error:', err);
@@ -599,25 +835,140 @@ ${formData.message || "None"}
                     </div>
                   </div>
 
-                  {/* Specifications & Notes */}
+                  {/* Specifications - Selectable Options Only */}
                   <div className="form-section">
                     <h3 className="section-title">
                       <span className="section-number">5</span>
-                      Specifications & Notes
+                      Specifications
                     </h3>
                     
                     <div className="form-group full-width">
-                      <label htmlFor="specifications">Technical Specifications</label>
-                      <textarea
-                        id="specifications"
-                        name="specifications"
-                        value={formData.specifications}
-                        onChange={handleChange}
-                        placeholder="Enter any specific technical requirements, dimensions, coating specifications, etc."
-                        rows={3}
-                      />
+                      <label>Technical Specifications {formData.product && <span className="spec-hint">(Select applicable options)</span>}</label>
+                      
+                      {!formData.product ? (
+                        <div className="spec-placeholder">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                          </svg>
+                          <span>Please select a product to see available specifications</span>
+                        </div>
+                      ) : availableSpecs.length === 0 ? (
+                        <div className="spec-placeholder">
+                          <span>No predefined specifications available for this product</span>
+                        </div>
+                      ) : (
+                        <div className="spec-options">
+                          {availableSpecs.map((spec, index) => (
+                            <label key={index} className={`spec-option ${formData.selectedSpecs.includes(spec) ? 'selected' : ''}`}>
+                              <input
+                                type="checkbox"
+                                checked={formData.selectedSpecs.includes(spec)}
+                                onChange={() => handleSpecToggle(spec)}
+                              />
+                              <span className="spec-checkbox">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                                  <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                              </span>
+                              <span className="spec-text">{spec}</span>
+                            </label>
+                          ))}
+                        </div>
+                      )}
                     </div>
+                  </div>
 
+                  {/* Customised Specifications - PDF Upload (Optional) */}
+                  <div className="form-section">
+                    <h3 className="section-title">
+                      <span className="section-number">6</span>
+                      Customised Specifications
+                      <span className="optional-badge">Optional</span>
+                    </h3>
+                    
+                    <div className="form-group full-width">
+                      <label>Upload Specification Document</label>
+                      <p className="upload-hint">Have detailed specifications? Upload a PDF document. Max file size: 5MB. Only PDF files are accepted.</p>
+                      
+                      <div className={`pdf-upload-area ${pdfFile ? 'has-file' : ''} ${pdfError ? 'has-error' : ''}`}>
+                        {!pdfFile ? (
+                          <>
+                            <input
+                              type="file"
+                              ref={fileInputRef}
+                              onChange={handlePdfUpload}
+                              accept=".pdf,application/pdf"
+                              className="pdf-input"
+                              id="pdfUpload"
+                            />
+                            <label htmlFor="pdfUpload" className="pdf-upload-label">
+                              <div className="upload-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                  <polyline points="14 2 14 8 20 8"></polyline>
+                                  <line x1="12" y1="18" x2="12" y2="12"></line>
+                                  <line x1="9" y1="15" x2="15" y2="15"></line>
+                                </svg>
+                              </div>
+                              <div className="upload-text">
+                                <span className="upload-main">Click to upload PDF</span>
+                                <span className="upload-sub">or drag and drop</span>
+                              </div>
+                              <div className="upload-requirements">
+                                <span>PDF only</span>
+                                <span className="separator">•</span>
+                                <span>Max 5MB</span>
+                                <span className="separator">•</span>
+                                <span>No password protection</span>
+                              </div>
+                            </label>
+                          </>
+                        ) : (
+                          <div className="pdf-preview">
+                            <div className="pdf-icon">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                              </svg>
+                            </div>
+                            <div className="pdf-info">
+                              <span className="pdf-name">{pdfFile.name}</span>
+                              <span className="pdf-size">{(pdfFile.size / (1024 * 1024)).toFixed(2)} MB</span>
+                            </div>
+                            <button type="button" className="pdf-remove" onClick={removePdf}>
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                              </svg>
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                      
+                      {pdfError && (
+                        <div className="pdf-error">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          {pdfError}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Notes - Additional Message */}
+                  <div className="form-section">
+                    <h3 className="section-title">
+                      <span className="section-number">7</span>
+                      Notes
+                    </h3>
+                    
                     <div className="form-group full-width">
                       <label htmlFor="message">Additional Message</label>
                       <textarea
@@ -625,8 +976,8 @@ ${formData.message || "None"}
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Any other information you'd like us to know..."
-                        rows={3}
+                        placeholder="Any other information, special requirements, or questions you'd like us to know..."
+                        rows={4}
                       />
                     </div>
                   </div>
@@ -932,6 +1283,18 @@ ${formData.message || "None"}
           font-weight: 800;
         }
 
+        .optional-badge {
+          margin-left: auto;
+          padding: 4px 12px;
+          background: rgba(201, 162, 77, 0.15);
+          color: #9A7B2D;
+          font-size: 11px;
+          font-weight: 600;
+          border-radius: 20px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
         /* Form Grid */
         .form-grid {
           display: grid;
@@ -1232,6 +1595,289 @@ ${formData.message || "None"}
           color: white;
         }
 
+        /* Predefined Specifications */
+        .spec-hint {
+          font-size: 12px;
+          font-weight: 400;
+          color: #888;
+          margin-left: 8px;
+        }
+
+        .spec-placeholder {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 16px 20px;
+          background: #F7F5F0;
+          border: 2px dashed #E6D3A3;
+          border-radius: 10px;
+          color: #888;
+          font-size: 14px;
+        }
+
+        .spec-placeholder svg {
+          width: 20px;
+          height: 20px;
+          stroke: #C9A24D;
+        }
+
+        .spec-options {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .spec-option {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+          padding: 14px 16px;
+          background: #FDFBF7;
+          border: 2px solid #E6D3A3;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .spec-option:hover {
+          border-color: #C9A24D;
+          background: #FBF9F4;
+        }
+
+        .spec-option.selected {
+          border-color: #74060D;
+          background: rgba(116, 6, 13, 0.03);
+        }
+
+        .spec-option input {
+          display: none;
+        }
+
+        .spec-checkbox {
+          width: 22px;
+          height: 22px;
+          min-width: 22px;
+          border: 2px solid #C9A24D;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          margin-top: 1px;
+        }
+
+        .spec-checkbox svg {
+          width: 14px;
+          height: 14px;
+          stroke: white;
+          opacity: 0;
+          transition: opacity 0.2s ease;
+        }
+
+        .spec-option.selected .spec-checkbox {
+          background: #74060D;
+          border-color: #74060D;
+        }
+
+        .spec-option.selected .spec-checkbox svg {
+          opacity: 1;
+        }
+
+        .spec-text {
+          font-size: 14px;
+          color: #333;
+          line-height: 1.5;
+        }
+
+        /* PDF Upload Section */
+        .upload-hint {
+          font-size: 13px;
+          color: #666;
+          margin: 4px 0 12px;
+          line-height: 1.5;
+        }
+
+        .pdf-upload-area {
+          position: relative;
+          border-radius: 12px;
+          transition: all 0.3s ease;
+        }
+
+        .pdf-input {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          cursor: pointer;
+          z-index: 2;
+        }
+
+        .pdf-upload-label {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          padding: 32px 24px;
+          background: #FDFBF7;
+          border: 2px dashed #E6D3A3;
+          border-radius: 12px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .pdf-upload-label:hover {
+          border-color: #C9A24D;
+          background: #FBF9F4;
+        }
+
+        .upload-icon {
+          width: 56px;
+          height: 56px;
+          background: linear-gradient(135deg, rgba(116, 6, 13, 0.1), rgba(201, 162, 77, 0.1));
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .upload-icon svg {
+          width: 28px;
+          height: 28px;
+          stroke: #74060D;
+        }
+
+        .upload-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+        }
+
+        .upload-main {
+          font-size: 16px;
+          font-weight: 600;
+          color: #74060D;
+        }
+
+        .upload-sub {
+          font-size: 13px;
+          color: #888;
+        }
+
+        .upload-requirements {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 12px;
+          color: #888;
+          padding: 8px 16px;
+          background: rgba(201, 162, 77, 0.1);
+          border-radius: 20px;
+        }
+
+        .upload-requirements .separator {
+          color: #C9A24D;
+        }
+
+        /* PDF Preview */
+        .pdf-preview {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          padding: 16px 20px;
+          background: linear-gradient(135deg, rgba(116, 6, 13, 0.05), rgba(201, 162, 77, 0.05));
+          border: 2px solid #C9A24D;
+          border-radius: 12px;
+        }
+
+        .pdf-icon {
+          width: 48px;
+          height: 48px;
+          min-width: 48px;
+          background: linear-gradient(135deg, #74060D, #9A1B2E);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .pdf-icon svg {
+          width: 24px;
+          height: 24px;
+          stroke: white;
+        }
+
+        .pdf-info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          min-width: 0;
+        }
+
+        .pdf-name {
+          font-size: 14px;
+          font-weight: 600;
+          color: #333;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .pdf-size {
+          font-size: 12px;
+          color: #666;
+        }
+
+        .pdf-remove {
+          width: 36px;
+          height: 36px;
+          min-width: 36px;
+          background: rgba(116, 6, 13, 0.1);
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+        }
+
+        .pdf-remove:hover {
+          background: #74060D;
+        }
+
+        .pdf-remove svg {
+          width: 18px;
+          height: 18px;
+          stroke: #74060D;
+          transition: stroke 0.3s ease;
+        }
+
+        .pdf-remove:hover svg {
+          stroke: white;
+        }
+
+        .pdf-error {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 10px;
+          padding: 10px 14px;
+          background: #FED7D7;
+          border: 1px solid #FC8181;
+          border-radius: 8px;
+          color: #C53030;
+          font-size: 13px;
+        }
+
+        .pdf-error svg {
+          width: 18px;
+          height: 18px;
+          min-width: 18px;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
           .quote-container {
@@ -1313,6 +1959,33 @@ ${formData.message || "None"}
           .btn-browse-products {
             width: 100%;
             text-align: center;
+          }
+
+          .spec-option {
+            padding: 12px 14px;
+          }
+
+          .spec-text {
+            font-size: 13px;
+          }
+
+          .pdf-upload-label {
+            padding: 24px 16px;
+          }
+
+          .upload-requirements {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+          }
+
+          .pdf-preview {
+            flex-wrap: wrap;
+            gap: 12px;
+          }
+
+          .pdf-info {
+            width: calc(100% - 100px);
           }
         }
       `}</style>
