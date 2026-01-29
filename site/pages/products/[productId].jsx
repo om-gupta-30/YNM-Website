@@ -912,43 +912,6 @@ export default function ProductDetailPage() {
           </section>
         )}
 
-        {/* Our Projects Section */}
-        {product.projects && product.projects.length > 0 && (
-          <section className="product-projects-section">
-            <div className="product-section-container">
-              <h2 className="product-section-title">Our Projects</h2>
-              <p className="product-section-subtitle">
-                See where our {product.name} has been successfully implemented in real-world projects
-              </p>
-              
-              <div className="projects-grid">
-                {product.projects.map((project) => (
-                  <div key={project.id} className="project-card">
-                    <div className="project-header">
-                      <h3>{project.title}</h3>
-                      <span className="project-year">{project.year}</span>
-                    </div>
-                    <div className="project-info">
-                      <div className="project-client">
-                        <strong>Client:</strong> {project.client}
-                      </div>
-                      <div className="project-location">
-                        <strong>Location:</strong> {project.location}
-                      </div>
-                      {project.quantity && (
-                        <div className="project-quantity">
-                          <strong>Quantity:</strong> {project.quantity}
-                        </div>
-                      )}
-                    </div>
-                    <p className="project-description">{project.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
         {/* Market Growth Section */}
         {product.marketGrowth && (
           <section className="product-market-section">
@@ -1592,42 +1555,43 @@ export default function ProductDetailPage() {
             <div className="success-stories-grid">
               <div className="success-story-card">
                 <div className="story-header">
-                  <div className="story-company-logo">
+                  <div className="story-logo">
                     <Image
-                      src="/assets/brand-logos/ntpc%20logo.png"
-                      alt="NTPC"
-                      width={60}
-                      height={60}
+                      src="/assets/success-story-1.png"
+                      alt="Vriddhi Infratech"
+                      width={70}
+                      height={70}
                       style={{ objectFit: "contain" }}
                     />
                   </div>
                   <div className="story-meta">
-                    <h3>NTPC Power Plant Project</h3>
-                    <p className="story-location">Bongaigaon, Assam</p>
+                    <h3>VRIDDHI INFRATECH INDIA PVT LTD</h3>
+                    <p className="story-location">Hyderabad Infrastructure Project</p>
                   </div>
                 </div>
                 <div className="story-content">
                   <div className="story-stats">
                     <div className="story-stat">
-                      <div className="story-stat-value">15,000L</div>
-                      <div className="story-stat-label">Quantity Supplied</div>
+                      <div className="story-stat-value">28,500</div>
+                      <div className="story-stat-label">Meters Supplied</div>
                     </div>
                     <div className="story-stat">
-                      <div className="story-stat-value">5+</div>
-                      <div className="story-stat-label">Years Protection</div>
+                      <div className="story-stat-value">2024</div>
+                      <div className="story-stat-label">Project Year</div>
                     </div>
                     <div className="story-stat">
                       <div className="story-stat-value">100%</div>
-                      <div className="story-stat-label">Satisfaction</div>
+                      <div className="story-stat-label">On-Time Delivery</div>
                     </div>
                   </div>
                   <p className="story-quote">
-                    &quot;YNM&apos;s Industrial Enamel Paint provided exceptional protection for our power generation equipment. 
-                    The paint has withstood extreme temperatures and harsh industrial conditions for over 5 years with minimal maintenance.&quot;
+                    &quot;Supplied 28,500 meters of W-Beam Crash Barriers for comprehensive highway safety 
+                    infrastructure project in Hyderabad. Our metal beam crash barriers were installed across 
+                    bridges, curves, and high-risk zones, ensuring maximum protection for road users.&quot;
                   </p>
                   <div className="story-rating">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#C9A24D">
+                      <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#C9A24D">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     ))}
@@ -1637,42 +1601,43 @@ export default function ProductDetailPage() {
 
               <div className="success-story-card">
                 <div className="story-header">
-                  <div className="story-company-logo">
+                  <div className="story-logo">
                     <Image
-                      src="/assets/brand-logos/prestige%20logo.webp"
-                      alt="Prestige Group"
-                      width={60}
-                      height={60}
+                      src="/assets/success-story-2.png"
+                      alt="Bekem Infra Projects"
+                      width={70}
+                      height={70}
                       style={{ objectFit: "contain" }}
                     />
                   </div>
                   <div className="story-meta">
-                    <h3>Prestige Group Residential</h3>
-                    <p className="story-location">Bangalore, Karnataka</p>
+                    <h3>BEKEM INFRA PROJECTS PVT LTD</h3>
+                    <p className="story-location">Hyderabad Highway Project</p>
                   </div>
                 </div>
                 <div className="story-content">
                   <div className="story-stats">
                     <div className="story-stat">
-                      <div className="story-stat-value">30,000L</div>
-                      <div className="story-stat-label">Quantity Supplied</div>
+                      <div className="story-stat-value">20,000</div>
+                      <div className="story-stat-label">Meters Supplied</div>
                     </div>
                     <div className="story-stat">
-                      <div className="story-stat-value">10+</div>
-                      <div className="story-stat-label">Years Warranty</div>
+                      <div className="story-stat-value">2024</div>
+                      <div className="story-stat-label">Project Year</div>
                     </div>
                     <div className="story-stat">
-                      <div className="story-stat-value">500+</div>
-                      <div className="story-stat-label">Units Protected</div>
+                      <div className="story-stat-value">Premium</div>
+                      <div className="story-stat-label">Quality Grade</div>
                     </div>
                   </div>
                   <p className="story-quote">
-                    &quot;The Exterior Weather Coat has maintained its beautiful finish and protective properties for over 5 years. 
-                    Our residents are extremely satisfied with the quality and appearance.&quot;
+                    &quot;Supplied 20,000 meters of W-Beam Crash Barriers for highway safety infrastructure 
+                    development project in Hyderabad. Our high-quality galvanized steel barriers provided 
+                    excellent impact resistance and long-term durability for this critical road safety installation.&quot;
                   </p>
                   <div className="story-rating">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#C9A24D">
+                      <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#C9A24D">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     ))}
@@ -1682,42 +1647,43 @@ export default function ProductDetailPage() {
 
               <div className="success-story-card">
                 <div className="story-header">
-                  <div className="story-company-logo">
+                  <div className="story-logo">
                     <Image
-                      src="/assets/brand-logos/Tech%20Mahindra%20logo.jpg"
-                      alt="Tech Mahindra"
-                      width={60}
-                      height={60}
+                      src="/assets/success-story-3.png"
+                      alt="Anusha Projects"
+                      width={70}
+                      height={70}
                       style={{ objectFit: "contain" }}
                     />
                   </div>
                   <div className="story-meta">
-                    <h3>Tech Mahindra Campus</h3>
-                    <p className="story-location">Hyderabad, Telangana</p>
+                    <h3>ANUSHA PROJECTS PVT LTD</h3>
+                    <p className="story-location">Hyderabad Expressway Project</p>
                   </div>
                 </div>
                 <div className="story-content">
                   <div className="story-stats">
                     <div className="story-stat">
-                      <div className="story-stat-value">8,000L</div>
-                      <div className="story-stat-label">Quantity Supplied</div>
+                      <div className="story-stat-value">15,360</div>
+                      <div className="story-stat-label">Meters Supplied</div>
                     </div>
                     <div className="story-stat">
-                      <div className="story-stat-value">ISO</div>
-                      <div className="story-stat-label">Certified</div>
+                      <div className="story-stat-value">2024</div>
+                      <div className="story-stat-label">Project Year</div>
                     </div>
                     <div className="story-stat">
-                      <div className="story-stat-value">24/7</div>
-                      <div className="story-stat-label">Protection</div>
+                      <div className="story-stat-value">Zero</div>
+                      <div className="story-stat-label">Defects</div>
                     </div>
                   </div>
                   <p className="story-quote">
-                    &quot;YNM&apos;s paint solutions provided excellent protection for our IT infrastructure. 
-                    The quality and service exceeded our expectations, and the paint continues to perform excellently.&quot;
+                    &quot;Delivered 15,360 meters of W-Beam Crash Barriers for expressway median and roadside 
+                    protection in Hyderabad. The installation enhanced road safety standards and reduced 
+                    accident severity on this busy expressway corridor.&quot;
                   </p>
                   <div className="story-rating">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#C9A24D">
+                      <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#C9A24D">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     ))}
@@ -3046,78 +3012,6 @@ export default function ProductDetailPage() {
           }
         }
 
-        /* Projects Section */
-        .product-projects-section {
-          padding: 80px 0;
-          background: linear-gradient(180deg, rgba(116, 6, 13, 0.05) 0%, transparent 100%);
-        }
-
-        .projects-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-          gap: 30px;
-        }
-
-        .project-card {
-          background: white;
-          border-radius: 20px;
-          padding: 30px;
-          box-shadow: 0 8px 30px rgba(116, 6, 13, 0.1);
-          transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 40px rgba(116, 6, 13, 0.15);
-        }
-
-        .project-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 20px;
-          padding-bottom: 16px;
-          border-bottom: 2px solid #E6D3A3;
-        }
-
-        .project-header h3 {
-          font-size: 22px;
-          font-weight: 700;
-          color: #74060D;
-          margin: 0;
-        }
-
-        .project-year {
-          font-size: 14px;
-          font-weight: 600;
-          color: #C9A24D;
-          background: rgba(201, 162, 77, 0.1);
-          padding: 6px 14px;
-          border-radius: 20px;
-        }
-
-        .project-info {
-          margin-bottom: 16px;
-        }
-
-        .project-info div {
-          font-size: 14px;
-          color: #5a4a4a;
-          margin-bottom: 8px;
-        }
-
-        .project-info strong {
-          color: #9A1B2E;
-          font-weight: 600;
-        }
-
-        .project-description {
-          font-size: 15px;
-          line-height: 1.7;
-          color: #1a2744;
-          margin: 0;
-        }
-
         /* Market Growth Section */
         .product-market-section {
           padding: 80px 0;
@@ -4426,110 +4320,156 @@ export default function ProductDetailPage() {
 
         /* Customer Success Stories Section */
         .product-success-stories-section {
-          padding: 80px 0;
-          background: white;
+          padding: 100px 0;
+          background: linear-gradient(180deg, #FDFBF7 0%, #F7F3EA 100%);
+          position: relative;
+        }
+
+        .product-success-stories-section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, #C9A24D, transparent);
         }
 
         .success-stories-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-          gap: 30px;
+          grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+          gap: 32px;
         }
 
         .success-story-card {
-          background: linear-gradient(135deg, rgba(116, 6, 13, 0.05), rgba(201, 162, 77, 0.05));
-          border-radius: 20px;
-          padding: 30px;
-          border: 2px solid #E6D3A3;
-          transition: all 0.4s ease;
+          background: white;
+          border-radius: 16px;
+          padding: 28px;
+          border: 1px solid rgba(201, 162, 77, 0.3);
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .success-story-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, #74060D, #C9A24D);
+          opacity: 0;
+          transition: opacity 0.3s ease;
         }
 
         .success-story-card:hover {
-          transform: translateY(-8px);
+          transform: translateY(-6px);
           border-color: #C9A24D;
-          box-shadow: 0 20px 50px rgba(116, 6, 13, 0.2);
+          box-shadow: 0 16px 40px rgba(116, 6, 13, 0.12), 0 8px 16px rgba(201, 162, 77, 0.08);
+        }
+
+        .success-story-card:hover::before {
+          opacity: 1;
         }
 
         .story-header {
           display: flex;
           align-items: center;
-          gap: 20px;
-          margin-bottom: 24px;
+          gap: 16px;
+          margin-bottom: 20px;
           padding-bottom: 20px;
-          border-bottom: 2px solid #E6D3A3;
+          border-bottom: 1px solid rgba(201, 162, 77, 0.2);
         }
 
-        .story-company-logo {
-          width: 60px;
-          height: 60px;
-          background: white;
+        .story-logo {
+          width: 70px;
+          height: 70px;
+          min-width: 70px;
+          background: #FDFBF7;
           border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 8px;
-          box-shadow: 0 4px 15px rgba(116, 6, 13, 0.1);
+          border: 1px solid rgba(201, 162, 77, 0.2);
+          overflow: hidden;
+        }
+
+        .story-meta {
+          flex: 1;
         }
 
         .story-meta h3 {
-          font-size: 20px;
+          font-size: 15px;
           font-weight: 700;
           color: #74060D;
-          margin: 0 0 4px;
+          margin: 0 0 6px;
+          line-height: 1.3;
+          letter-spacing: -0.01em;
         }
 
         .story-location {
-          font-size: 14px;
+          font-size: 13px;
           color: #9A1B2E;
-          font-weight: 600;
+          font-weight: 500;
+          margin: 0;
         }
 
         .story-content {
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          gap: 18px;
         }
 
         .story-stats {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 16px;
+          gap: 12px;
         }
 
         .story-stat {
           text-align: center;
-          padding: 16px;
-          background: white;
-          border-radius: 12px;
-          border: 1px solid #E6D3A3;
+          padding: 14px 8px;
+          background: linear-gradient(135deg, rgba(116, 6, 13, 0.03), rgba(201, 162, 77, 0.05));
+          border-radius: 10px;
+          border: 1px solid rgba(201, 162, 77, 0.15);
         }
 
         .story-stat-value {
-          font-size: 24px;
+          font-size: 18px;
           font-weight: 800;
-          color: #C9A24D;
+          color: #74060D;
           margin-bottom: 4px;
         }
 
         .story-stat-label {
-          font-size: 11px;
+          font-size: 10px;
           color: #9A1B2E;
           font-weight: 600;
           text-transform: uppercase;
-          letter-spacing: 0.05em;
+          letter-spacing: 0.03em;
+          line-height: 1.3;
         }
 
         .story-quote {
-          font-size: 15px;
-          line-height: 1.8;
-          color: #1a2744;
-          font-style: italic;
+          font-size: 13px;
+          line-height: 1.7;
+          color: #4a5568;
           margin: 0;
+          position: relative;
+          padding-left: 16px;
+          border-left: 3px solid #C9A24D;
         }
 
         .story-rating {
           display: flex;
-          gap: 4px;
+          gap: 3px;
+          padding-top: 4px;
+        }
+
+        .story-rating svg {
+          filter: drop-shadow(0 1px 2px rgba(201, 162, 77, 0.3));
         }
 
         /* CTA Section */
@@ -4848,8 +4788,7 @@ export default function ProductDetailPage() {
             font-size: 28px;
           }
 
-          .applications-grid,
-          .projects-grid {
+          .applications-grid {
             grid-template-columns: 1fr;
           }
 
@@ -4987,9 +4926,48 @@ export default function ProductDetailPage() {
             gap: 24px;
           }
 
+          .success-story-card {
+            padding: 20px;
+          }
+
+          .story-header {
+            gap: 12px;
+          }
+
+          .story-logo {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+          }
+
+          .story-meta h3 {
+            font-size: 14px;
+          }
+
+          .story-location {
+            font-size: 12px;
+          }
+
           .story-stats {
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
+            gap: 8px;
+          }
+
+          .story-stat {
+            padding: 10px 6px;
+          }
+
+          .story-stat-value {
+            font-size: 14px;
+          }
+
+          .story-stat-label {
+            font-size: 9px;
+          }
+
+          .story-quote {
+            font-size: 12px;
+            padding-left: 12px;
           }
 
           .pricing-packages-grid {
