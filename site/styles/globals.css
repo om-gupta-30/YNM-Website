@@ -116,15 +116,21 @@ body {
   }
 
   .brands.brands-inview .brand-tile-inner {
-    animation: brandFlipCycle var(--flip-cycle, 14s) ease-in-out infinite;
+    animation: brandFlipCycle var(--flip-cycle, 10s) ease-in-out infinite;
+    animation-delay: var(--flip-delay, 0s);
+  }
+  
+  /* Marquee tiles flip even when row is hovered */
+  .brands-marquee.brands-inview .brands-marquee-row:hover .brand-tile-inner {
+    animation: brandFlipCycle var(--flip-cycle, 10s) ease-in-out infinite;
     animation-delay: var(--flip-delay, 0s);
   }
 }
 
 @keyframes brandFlipCycle {
-  0%, 14% { transform: rotateY(0deg); }
-  24%, 52% { transform: rotateY(180deg); }
-  62%, 100% { transform: rotateY(0deg); }
+  0%, 20% { transform: rotateY(0deg); }
+  30%, 55% { transform: rotateY(180deg); }
+  65%, 100% { transform: rotateY(0deg); }
 }
 
 /* Respect accessibility */
@@ -3402,7 +3408,7 @@ section {
 .brands {
   position: relative;
   width: 100%;
-  padding: 100px 40px 120px;
+  padding: 70px 0 80px;
   background: var(--bg-brands);
   overflow: hidden;
   z-index: 1;
@@ -3446,6 +3452,114 @@ section {
   contain: paint;
 }
 
+/* ========================================
+   BRANDS MARQUEE STYLES
+   ======================================== */
+
+.brands-marquee-container {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.brands-marquee-row {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.brands-marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Left to Right animation */
+.brands-marquee-track-ltr {
+  animation: marqueeScrollLTR 20s linear infinite;
+}
+
+/* Right to Left animation */
+.brands-marquee-track-rtl {
+  animation: marqueeScrollRTL 20s linear infinite;
+}
+
+@keyframes marqueeScrollLTR {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marqueeScrollRTL {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+/* Pause on row hover only */
+.brands-marquee-row:hover .brands-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Gradient fade overlays */
+.brands-marquee-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.brands-marquee-fade-left {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg-brands) 0%, transparent 100%);
+}
+
+.brands-marquee-fade-right {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg-brands) 0%, transparent 100%);
+}
+
+/* Marquee brand tiles - smaller for more per row */
+.brands-marquee .brand-tile {
+  flex-shrink: 0;
+}
+
+.brands-marquee .brand-tile-inner {
+  width: 120px;
+  height: 120px;
+  max-width: 120px;
+  aspect-ratio: 1;
+}
+
+.brands-marquee .brand-logo {
+  max-width: 80px;
+  max-height: 45px;
+}
+
+.brands-marquee .brand-name-text {
+  font-size: clamp(9px, 1.5vw, 12px);
+}
+
+.brands-marquee .brand-logo-wrap {
+  padding: 8px;
+}
+
+.brands-marquee .brand-name-wrap {
+  padding: 8px;
+}
+
 .brands-bg-texture {
   position: absolute;
   inset: 0;
@@ -3457,7 +3571,8 @@ section {
 /* Section Header */
 .brands-header {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
+  padding: 0 40px;
   position: relative;
   z-index: 5;
 }
@@ -3760,6 +3875,12 @@ section {
   .brand-tile-inner {
     max-width: 150px;
   }
+  
+  .brands-marquee .brand-tile-inner {
+    width: 110px;
+    height: 110px;
+    max-width: 110px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -3770,11 +3891,26 @@ section {
   .brand-tile-inner {
     max-width: 140px;
   }
+  
+  .brands-marquee .brand-tile-inner {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+  }
+  
+  .brands-marquee-track {
+    gap: 16px;
+  }
 }
 
 @media (max-width: 800px) {
   .brands {
-    padding: 80px 25px 100px;
+    padding: 50px 0 60px;
+  }
+  
+  .brands-header {
+    padding: 0 20px;
+    margin-bottom: 30px;
   }
   
   .brands-grid {
@@ -3790,9 +3926,32 @@ section {
     display: none;
   }
   
-  /* Disable flip on mobile - use fade instead */
-  .brand-tile:hover .brand-tile-inner {
-    transform: translateY(-6px);
+  /* Marquee adjustments for tablet/mobile */
+  .brands-marquee .brand-tile-inner {
+    width: 90px;
+    height: 90px;
+    max-width: 90px;
+  }
+  
+  .brands-marquee-track {
+    gap: 14px;
+  }
+  
+  .brands-marquee-fade {
+    width: 60px;
+  }
+  
+  .brands-marquee-container {
+    gap: 14px;
+  }
+  
+  /* Faster animation on mobile */
+  .brands-marquee-track-ltr {
+    animation-duration: 15s;
+  }
+  
+  .brands-marquee-track-rtl {
+    animation-duration: 15s;
   }
 }
 
@@ -3804,6 +3963,20 @@ section {
   
   .brand-tile-inner {
     max-width: 120px;
+  }
+  
+  .brands-marquee .brand-tile-inner {
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+  }
+  
+  .brands-marquee-track {
+    gap: 12px;
+  }
+  
+  .brands-marquee-fade {
+    width: 40px;
   }
   
   .brand-logo {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +14,16 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
     if (propBrandsData) setBrandsData(propBrandsData);
   }, [propBrandsData]);
 
-  // Enable auto-flip only when the section is in view (smooth + battery-friendly)
+  // Split brands into 2 rows
+  const { row1Brands, row2Brands } = useMemo(() => {
+    const halfLength = Math.ceil(brandsData.length / 2);
+    return {
+      row1Brands: brandsData.slice(0, halfLength),
+      row2Brands: brandsData.slice(halfLength),
+    };
+  }, [brandsData]);
+
+  // Enable animation only when the section is in view
   useEffect(() => {
     if (typeof window === "undefined") return;
     const el = sectionRef.current;
@@ -44,30 +53,65 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
     );
   }
 
+  // Create duplicate arrays for seamless infinite scroll (triple for smoother loop)
+  const row1Items = [...row1Brands, ...row1Brands, ...row1Brands];
+  const row2Items = [...row2Brands, ...row2Brands, ...row2Brands];
+
+  const renderBrandTile = (brand, idx, rowIdx) => (
+    <div
+      key={`${brand.id}-${idx}`}
+      className="brand-tile"
+      onClick={() => setSelectedBrand(brand)}
+      style={{ cursor: "pointer" }}
+    >
+      <div
+        className="brand-tile-inner"
+        style={{
+          "--flip-delay": `${((idx + rowIdx * 5) % 9) * 0.8}s`,
+          "--flip-cycle": `${8 + (idx % 4) * 1.2}s`,
+        }}
+      >
+        {/* Front Face - Logo Only */}
+        <div className="brand-tile-front">
+          <div className="brand-tile-texture" />
+          <div className="brand-logo-wrap">
+            <Image
+              src={brand.logo}
+              alt={brand.name}
+              width={100}
+              height={50}
+              className="brand-logo"
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+          <div className="brand-tile-border" />
+          <div className="brand-tile-shine" />
+        </div>
+
+        {/* Back Face - Brand Name */}
+        <div className="brand-tile-back">
+          <div className="brand-tile-texture dark" />
+          <div className="brand-name-wrap">
+            <span className="brand-name-text">{brand.name}</span>
+          </div>
+          <div className="brand-tile-vignette" />
+          <div className="brand-tile-glow" />
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <section
       id="brands-section"
-      className={`brands ${inView ? "brands-inview" : ""}`}
+      className={`brands brands-marquee ${inView ? "brands-inview" : ""}`}
       ref={sectionRef}
     >
       {/* Neon Particles */}
       <div className="neon-particles">
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
-        <div className="neon-particle" />
+        {[...Array(16)].map((_, i) => (
+          <div key={i} className="neon-particle" />
+        ))}
       </div>
 
       {/* Background Texture */}
@@ -80,53 +124,26 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
         <div className="brands-header-bar" />
       </div>
 
-      {/* Brands Grid */}
-      <div className="brands-grid">
-        {brandsData.map((brand, idx) => (
-          <div
-            key={brand.id}
-            className="brand-tile"
-            onClick={() => setSelectedBrand(brand)}
-            style={{ cursor: "pointer" }}
-          >
-            <div
-              className="brand-tile-inner"
-              style={{
-                // stagger the subtle auto-flip, so they don’t sync up
-                "--flip-delay": `${(idx % 8) * 0.45}s`,
-                "--flip-cycle": `${12 + (idx % 5) * 1.5}s`,
-              }}
-            >
-              {/* Front Face - Logo Only */}
-              <div className="brand-tile-front">
-                <div className="brand-tile-texture" />
-                <div className="brand-logo-wrap">
-                  <Image
-                    src={brand.logo}
-                    alt={brand.name}
-                    width={100}
-                    height={50}
-                    className="brand-logo"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="brand-tile-border" />
-                <div className="brand-tile-shine" />
-              </div>
-
-              {/* Back Face - Brand Name */}
-              <div className="brand-tile-back">
-                <div className="brand-tile-texture dark" />
-                <div className="brand-name-wrap">
-                  <span className="brand-name-text">{brand.name}</span>
-                </div>
-                <div className="brand-tile-vignette" />
-                <div className="brand-tile-glow" />
-              </div>
-            </div>
+      {/* Marquee Rows */}
+      <div className="brands-marquee-container">
+        {/* Row 1: Left to Right */}
+        <div className="brands-marquee-row">
+          <div className="brands-marquee-track brands-marquee-track-ltr">
+            {row1Items.map((brand, idx) => renderBrandTile(brand, idx, 0))}
           </div>
-        ))}
+        </div>
+
+        {/* Row 2: Right to Left */}
+        <div className="brands-marquee-row">
+          <div className="brands-marquee-track brands-marquee-track-rtl">
+            {row2Items.map((brand, idx) => renderBrandTile(brand, idx, 1))}
+          </div>
+        </div>
       </div>
+
+      {/* Gradient Overlays for smooth fade edges */}
+      <div className="brands-marquee-fade brands-marquee-fade-left" />
+      <div className="brands-marquee-fade brands-marquee-fade-right" />
 
       {/* Decorative Elements */}
       <div className="brands-corner-accent tl" />
