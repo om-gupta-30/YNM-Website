@@ -11223,6 +11223,10 @@ img {
   .mascot-container {
     left: max(20px, env(safe-area-inset-left));
   }
+  
+  .floating-quote-container {
+    right: max(20px, env(safe-area-inset-right));
+  }
 }
 
 /* Ensure smooth animations on all platforms */
@@ -11232,7 +11236,10 @@ img {
   .brand-tile-inner,
   .marquee-content,
   .neon-particle,
-  .hero-particle {
+  .hero-particle,
+  .floating-quote-container,
+  .quote-button,
+  .quote-bubble {
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -11265,6 +11272,7 @@ img {
   .neon-particles,
   .mascot-container,
   .floating-social-container,
+  .floating-quote-container,
   .chatbot-toggle,
   .chatbot-window,
   #scroll-mouse,
@@ -11290,6 +11298,13 @@ img {
   }
   
   .hero-text-float {
+    animation: none !important;
+  }
+  
+  .floating-quote-container,
+  .quote-button,
+  .quote-bubble,
+  .quote-button-glow {
     animation: none !important;
   }
 }

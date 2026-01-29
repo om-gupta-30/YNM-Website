@@ -3,6 +3,7 @@ import { useEffect, useCallback, useRef } from "react";
 import Mascot from "@/components/Mascot";
 import FloatingSocialMedia from "@/components/FloatingSocialMedia";
 import Chatbot from "@/components/Chatbot";
+import FloatingQuoteButton from "@/components/FloatingQuoteButton";
 
 // Fast smooth scroll function (500ms with easeOutQuart)
 const smoothScrollTo = (targetY, duration = 500) => {
@@ -126,6 +127,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Component {...pageProps} />
       <Mascot />
+      <FloatingQuoteButton />
       <FloatingSocialMedia />
       <Chatbot />
     </>
