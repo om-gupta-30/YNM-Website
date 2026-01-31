@@ -1,21 +1,47 @@
+# ==============================================
+# YNM MEGA INDUSTRIES - GITIGNORE
+# ==============================================
+
 # Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Environment variables
+# ==============================================
+# ENVIRONMENT & SECRETS (CRITICAL - Never commit!)
+# ==============================================
 .env
 .env.local
-.env*.local
+.env.*.local
+.env.development
+.env.production
+.env.development.local
+.env.production.local
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+*-credentials.json
+secrets/
+private/
 
-# Build outputs
+# ==============================================
+# BUILD OUTPUTS
+# ==============================================
 dist/
 build/
 .next/
 out/
+.vercel/
+.netlify/
 
-# System files
+# ==============================================
+# SYSTEM FILES
+# ==============================================
 .DS_Store
 .DS_Store?
 ._*
@@ -23,8 +49,11 @@ out/
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
 
-# IDE files
+# ==============================================
+# IDE & EDITOR FILES
+# ==============================================
 .vscode/
 .idea/
 *.swp
@@ -32,7 +61,31 @@ Thumbs.db
 *~
 *.sublime-project
 *.sublime-workspace
+.project
+.classpath
+.settings/
+*.code-workspace
 
-# Logs
+# ==============================================
+# LOGS & TEMPORARY FILES
+# ==============================================
 logs/
 *.log
+tmp/
+temp/
+*.tmp
+*.temp
+.cache/
+
+# ==============================================
+# TESTING & COVERAGE
+# ==============================================
+coverage/
+.nyc_output/
+*.lcov
+
+# ==============================================
+# MISC
+# ==============================================
+*.bak
+*.backup
