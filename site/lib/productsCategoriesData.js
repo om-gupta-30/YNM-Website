@@ -72,7 +72,7 @@ export const productsData = {
               },
               {
                 label: "Minimum Order Quantity (MOQ)",
-                value: "500 kg / Project-based",
+                value: "Project based only",
                 icon: "package"
               },
               {
@@ -224,7 +224,7 @@ export const productsData = {
                 client: "Navayuga Udupi Toll way Pvt. Ltd",
                 location: "Udupi, Karnataka",
                 description: "Supplied hot thermoplastic road marking paint for highway road marking project. Our thermoplastic paints provided excellent durability and visibility for this major infrastructure project.",
-                quantity: "1,500 sqms",
+                quantity: "45,000 sq mtrs",
                 year: "2024",
                 highlight: "100%",
                 highlightLabel: "On-Time Delivery",
@@ -236,7 +236,7 @@ export const productsData = {
                 client: "GVPR Engineers Ltd",
                 location: "Hyderabad, Telangana",
                 description: "Delivered hot thermoplastic paint for road marking applications. YNM Safety's thermoplastic paints ensured long-lasting and high-visibility markings for urban road infrastructure.",
-                quantity: "20,000 sqms",
+                quantity: "20,000 sq mtrs",
                 year: "2024",
                 highlight: "Premium",
                 highlightLabel: "Quality Grade",
@@ -248,7 +248,7 @@ export const productsData = {
                 client: "GMR Highway Ltd",
                 location: "Hyderabad, Telangana",
                 description: "Supplied premium hot thermoplastic road marking paint for highway project. The paint provided superior adhesion, fast setting, and excellent night-time reflectivity.",
-                quantity: "12,000 sqms",
+                quantity: "69,903 sq mtrs",
                 year: "2024",
                 highlight: "Zero",
                 highlightLabel: "Defects",
@@ -399,8 +399,8 @@ export const productsData = {
             
             // Statistics
             statistics: {
-              annualCapacity: "10,800 MT",
-              productionSpeed: "900 MT/month",
+              annualCapacity: "96,000 MT",
+              productionSpeed: "8,000 MT",
               qualityStandards: "ISO 9001:2015",
               exportCountries: "40+"
             },

@@ -1,7 +1,9 @@
-# robots.txt
+# robots.txt - YNM Mega Industries
 User-agent: *
 Allow: /
 
-# Sitemap location (update with your actual domain)
-Sitemap: https://example.com/sitemap.xml
+# Disallow sensitive paths
+Disallow: /api/
 
+# Sitemap location
+Sitemap: https://ynmsafety.com/sitemap.xml

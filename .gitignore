@@ -8,6 +8,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+.pnpm-store/
 
 # ==============================================
 # ENVIRONMENT & SECRETS (CRITICAL - Never commit!)
@@ -19,15 +20,25 @@ pnpm-debug.log*
 .env.production
 .env.development.local
 .env.production.local
+!.env.example
+
+# Keys & Certificates (NEVER commit!)
 *.pem
 *.key
 *.p12
 *.pfx
+*.crt
+*.cert
+
+# Credentials (NEVER commit!)
 credentials.json
 service-account*.json
 *-credentials.json
+*-key.json
+*.credentials
 secrets/
 private/
+.secrets/
 
 # ==============================================
 # BUILD OUTPUTS
@@ -38,6 +49,8 @@ build/
 out/
 .vercel/
 .netlify/
+.turbo/
+.output/
 
 # ==============================================
 # SYSTEM FILES
@@ -50,6 +63,7 @@ out/
 ehthumbs.db
 Thumbs.db
 desktop.ini
+*.lnk
 
 # ==============================================
 # IDE & EDITOR FILES
@@ -65,6 +79,7 @@ desktop.ini
 .classpath
 .settings/
 *.code-workspace
+.history/
 
 # ==============================================
 # LOGS & TEMPORARY FILES
@@ -76,6 +91,7 @@ temp/
 *.tmp
 *.temp
 .cache/
+.parcel-cache/
 
 # ==============================================
 # TESTING & COVERAGE
@@ -83,9 +99,25 @@ temp/
 coverage/
 .nyc_output/
 *.lcov
+.jest/
 
 # ==============================================
 # MISC
 # ==============================================
 *.bak
 *.backup
+*.orig
+*.rej
+
+# ==============================================
+# VERCEL / DEPLOYMENT
+# ==============================================
+.vercel
+.env*.local
+
+# ==============================================
+# GCP / CLOUD
+# ==============================================
+.gcloudignore
+app.yaml.bak
+*.json.enc
