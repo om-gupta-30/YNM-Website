@@ -12,31 +12,35 @@ A modern, responsive corporate website for **YNM Mega Industries Pvt Ltd**, a le
 - **Frontend:** React 19
 - **Styling:** Tailwind CSS + Custom CSS
 - **Language:** JavaScript (JSX)
-- **Email:** Nodemailer (Gmail SMTP)
+- **Email:** Nodemailer (Gmail SMTP / Custom SMTP / SendGrid)
 - **AI Chatbot:** Google Gemini API
+- **Data Storage:** Google Sheets API
 
 ## Features
 
 ### Core Pages
+
 - **Home** - Hero section, USPs, products overview, testimonials, brand partners
 - **Products** - Category-based product catalog with detailed product pages
 - **About Us** - Company history, vision, mission
 - **Our Team** - Leadership and employee directory
 - **Clients** - Partner companies and success stories
-- **Contact** - Contact form with email integration
+- **Contact** - Contact form with Google Sheets integration
 - **Get Quote** - Multi-step quote request form with PDF upload
-- **Careers** - Job listings and application form
+- **Careers** - Job listings and application form with resume upload
 - **Foreign Collaborations** - International partnerships
 - **Investor Relations** - Investor information
 
 ### Key Features
+
 - 🌐 **Multi-language Support** - English, Hindi, Telugu, Tamil, Kannada
 - 🤖 **AI Chatbot** - Powered by Google Gemini for customer queries
 - 📱 **Fully Responsive** - Optimized for all devices
-- 📧 **Email Integration** - Contact and quote forms send emails via Gmail
+- 📧 **Email Integration** - Contact and career forms send automated emails
 - 🎨 **Modern UI** - Professional design with smooth animations
-- 📄 **PDF Upload** - Quote form supports specification document uploads
+- 📄 **PDF Upload** - Career and quote forms support document uploads
 - 🗺️ **Interactive Map** - India presence with regional contacts
+- 🔒 **Spam Protection** - reCAPTCHA and rate limiting
 
 ## Project Structure
 
@@ -62,6 +66,7 @@ YNM website/
 │   │       └── chat/gemini.js
 │   ├── lib/                    # Data and utilities
 │   │   ├── productsData.js
+│   │   ├── productsCategoriesData.js
 │   │   ├── translations.js
 │   │   ├── employeesData.js
 │   │   └── ...
@@ -69,72 +74,141 @@ YNM website/
 │   │   └── LanguageContext.jsx
 │   ├── styles/
 │   │   └── globals.css
-│   └── public/                 # Static assets
-│       ├── assets/
-│       │   ├── brand-logos/
-│       │   └── employeephotos/
-│       └── fonts/
+│   ├── public/                 # Static assets
+│   │   ├── assets/
+│   │   │   ├── brand-logos/
+│   │   │   └── employeephotos/
+│   │   ├── certificates/
+│   │   └── fonts/
+│   ├── .env.example            # Environment variables template
+│   └── package.json
+├── .gitignore
 └── README.md
 ```
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js 20.x
-- npm or yarn
+
+- Node.js 18.x or higher
+- npm, yarn, or pnpm
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/ynm-website.git
    cd ynm-website
    ```
 
 2. **Navigate to the site folder**
+
    ```bash
    cd site
    ```
 
 3. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 4. **Set up environment variables**
-   
-   Create a `.env.local` file in the `site` folder:
-   ```env
-   # Gmail SMTP for contact forms
-   GMAIL_USER=your-email@gmail.com
-   GMAIL_APP_PASSWORD=your-app-password
-   
-   # Google Gemini API for chatbot
-   GEMINI_API_KEY=your-gemini-api-key
+
+   Copy the example file and fill in your values:
+
+   ```bash
+   cp .env.example .env.local
    ```
 
+   Then edit `.env.local` with your actual credentials.
+
 5. **Run the development server**
+
    ```bash
    npm run dev
    ```
 
 6. **Open in browser**
-   
+
    Visit [http://localhost:3000](http://localhost:3000)
 
 ### Build for Production
 
 ```bash
 npm run build
+npm start
 ```
 
 ## Environment Variables
 
+Copy `site/.env.example` to `site/.env.local` and configure:
+
+### Required Variables
+
+| Variable | Description |
+|----------|-------------|
+| `GOOGLE_SHEET_ID` | Google Sheet ID for contact form submissions |
+| `GOOGLE_SERVICE_ACCOUNT_EMAIL` | Service account email for Google Sheets API |
+| `GOOGLE_PRIVATE_KEY` | Service account private key (keep the quotes and \n) |
+| `GOOGLE_GEMINI_API_KEY` | Google Gemini API key for AI chatbot |
+
+### Email Configuration (Choose ONE)
+
+**Option 1: Gmail (simplest)**
+
 | Variable | Description |
 |----------|-------------|
 | `GMAIL_USER` | Gmail address for sending emails |
-| `GMAIL_APP_PASSWORD` | Gmail App Password (not regular password) |
-| `GEMINI_API_KEY` | Google Gemini API key for chatbot |
+| `GMAIL_APP_PASSWORD` | Gmail App Password ([How to create](https://support.google.com/accounts/answer/185833)) |
+
+**Option 2: Custom SMTP**
+
+| Variable | Description |
+|----------|-------------|
+| `SMTP_HOST` | SMTP server hostname |
+| `SMTP_PORT` | SMTP port (usually 587 or 465) |
+| `SMTP_USER` | SMTP username |
+| `SMTP_PASS` | SMTP password |
+| `SMTP_SECURE` | `true` for port 465, `false` for others |
+
+**Option 3: SendGrid**
+
+| Variable | Description |
+|----------|-------------|
+| `SENDGRID_API_KEY` | SendGrid API key |
+
+### Optional Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `HR_EMAIL` | Email for career applications | `hr@ynmsafety.com` |
+| `CAREERS_NOREPLY_FROM` | From address for career emails | `noreply@ynmsafety.com` |
+| `RECAPTCHA_SECRET_KEY` | Google reCAPTCHA secret key | _(skipped if not set)_ |
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import the project in [Vercel](https://vercel.com)
+3. Set the root directory to `site`
+4. Add environment variables in Vercel dashboard
+5. Deploy
+
+### Google Cloud Platform
+
+1. Build the project: `npm run build`
+2. Deploy to Cloud Run or App Engine
+3. Set environment variables in GCP Console
+
+### Important Security Notes
+
+- **NEVER** commit `.env.local` or any file containing real API keys
+- The `.gitignore` is configured to exclude sensitive files
+- Use environment variables in your hosting platform (Vercel/GCP/etc.)
+- Rotate API keys if you suspect they've been exposed
 
 ## Product Categories
 
@@ -171,6 +245,7 @@ Proprietary - All rights reserved by YNM Mega Industries Pvt Ltd.
 ## Contact
 
 **YNM Mega Industries Pvt Ltd**
+
 - 📧 Email: sales@ynmsafety.com
 - 📞 Phone: +91 96765 75770
 - 🌐 Website: [ynmsafety.com](https://ynmsafety.com)

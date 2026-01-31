@@ -12,10 +12,439 @@ export const productsData = {
         products: [
           {
             id: "p1",
-            name: "Hot Thermoplastic Paint",
+            slug: "hot-thermoplastic-road-marking-paint-manufactures",
+            name: "Hot Thermoplastic Road Marking Paint",
+            shortDesc: "High-performance thermoplastic road marking paint manufactures for highways, expressways & urban road safety.",
             desc: "Premium hot thermoplastic road marking paint for highways and roads. Excellent durability and retro-reflective properties.",
-            image: "/assets/product-industrial-paint.png",
-            specs: ["High durability", "Retro-reflective", "Weather resistant", "Long service life"]
+            image: "/assets/hot thermoplastci ynm safety.png",
+            heroImage: "/assets/hot thermoplastci ynm safety.png",
+            specs: ["High durability", "Retro-reflective", "Weather resistant", "Long service life"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Hot Thermoplastic Road Marking Paint Manufactures | YNM Safety",
+              description: "Hot thermoplastic road marking paint manufactures offering durable and high-visibility solutions. YNM Safety manufactures thermoplastic paint for highways, expressways & city roads.",
+              slug: "/hot-thermoplastic-road-marking-paint-manufactures"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is among the reliable hot thermoplastic road marking paint manufactures, delivering premium-quality thermoplastic paints designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity.\n\nAs one of the trusted thermoplastic paint manufactures, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects.",
+            detailedDescription: "YNM Safety is among the reliable hot thermoplastic road marking paint manufactures, delivering premium-quality thermoplastic paints designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity.\n\nAs one of the trusted thermoplastic paint manufactures, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Hot Thermoplastic Road Marking Paint" },
+              { label: "Application Method", value: "Hot-applied" },
+              { label: "Softening Point", value: "≥ 102°C" },
+              { label: "Glass Beads Content", value: "20–30%" },
+              { label: "Available Colors", value: "White / Yellow" },
+              { label: "Drying Time", value: "2–5 minutes" },
+              { label: "Application Surface", value: "Asphalt & Concrete" },
+              { label: "Compliance", value: "MoRTH, IRC, IS Standards" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Packing Type",
+                value: "25 kg bag / export-standard packing",
+                icon: "package"
+              },
+              {
+                label: "Shelf Life",
+                value: "12 months",
+                icon: "warranty"
+              },
+              {
+                label: "Quality Standards",
+                value: "IS 164, MoRTH 803, BS 3262, AASHTO M249, ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "500 kg / Project-based",
+                icon: "package"
+              },
+              {
+                label: "HS Code",
+                value: "32089090",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Hot Thermoplastic Road Marking Paint",
+                "Application Method: Hot-applied",
+                "Softening Point: ≥ 102°C",
+                "Glass Beads Content: 20–30%",
+                "Available Colors: White / Yellow",
+                "Drying Time: 2–5 minutes",
+                "Application Surface: Asphalt & Concrete",
+                "Compliance: MoRTH, IRC, IS Standards",
+                "HS Code: 32089090"
+              ],
+              keyFeatures: [
+                "High-visibility thermoplastic road marking paint",
+                "Fast-setting hot applied formulation",
+                "Strong adhesion on asphalt & concrete",
+                "Reflective glass beads for night safety",
+                "Weather and traffic resistant performance",
+                "Long-lasting & low maintenance solution"
+              ],
+              advantages: [
+                "Improves road visibility and lane discipline",
+                "Enhances night-time and wet-weather driving safety",
+                "Cost-effective road marking solution",
+                "Trusted thermoplastic paint manufactures – YNM Safety",
+                "Suitable for bulk supply and export requirements",
+                "Manufactures as per government road safety standards"
+              ]
+            },
+            
+            features: [
+              "High-visibility thermoplastic road marking paint",
+              "Fast-setting hot applied formulation",
+              "Strong adhesion on asphalt & concrete",
+              "Reflective glass beads for night safety",
+              "Weather and traffic resistant performance",
+              "Long-lasting & low maintenance solution"
+            ],
+            
+            advantages: [
+              "Improves road visibility and lane discipline",
+              "Enhances night-time and wet-weather driving safety",
+              "Cost-effective road marking solution",
+              "Trusted thermoplastic paint manufactures – YNM Safety",
+              "Suitable for bulk supply and export requirements",
+              "Manufactures as per government road safety standards"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Highways & Expressways",
+                description: "YNM Hot Thermoplastic Paints deliver durable and high-visibility road markings for highways and expressways.",
+                image: "/assets/ynm safety hot thermoplastic highway and expressways marking paints.png",
+                details: "YNM Safety is a trusted name among hot thermoplastic paints manufactures for long-lasting highway road markings. YNM thermoplastic paints provide excellent adhesion, skid resistance, and night-time visibility under heavy traffic."
+              },
+              {
+                id: "app2",
+                title: "City Roads & Streets",
+                description: "YNM thermoplastic paints ensure clear and long-lasting markings for city roads and streets.",
+                image: "/assets/YNM Safety hot thermoplastic street and city roads marking paints.jpeg",
+                details: "YNM Safety manufactures high-quality YNM hot thermoplastic paints for urban road applications. These thermoplastic paints improve lane discipline, traffic flow, and visibility in busy city environments."
+              },
+              {
+                id: "app3",
+                title: "Pedestrian Crossings",
+                description: "YNM hot thermoplastic paints enhance visibility and safety at pedestrian crossings.",
+                image: "/assets/ynm safety hot thermoplastic pedestian crossings marking paints.jpeg",
+                details: "YNM Safety, one of the leading hot thermoplastic paints manufactures, supplies durable road marking solutions for pedestrian crossings. YNM thermoplastic paints offer reflective and anti-skid surfaces for safer pedestrian movement."
+              },
+              {
+                id: "app4",
+                title: "Parking Areas",
+                description: "YNM thermoplastic paints provide durable and organized parking area markings.",
+                image: "/assets/ynm safety hot thermoplastic parking areas marking .jpeg",
+                details: "YNM hot thermoplastic paints are widely used for parking bay lines, arrows, and symbols. Manufactured by YNM Safety, these thermoplastic paints resist abrasion and maintain long-term visibility."
+              },
+              {
+                id: "app5",
+                title: "Industrial Roads & Runways",
+                description: "YNM thermoplastic paints deliver heavy-duty performance for industrial roads and runways.",
+                image: "/assets/ynm safety hot thermoplastic runway marking paints.jpeg",
+                details: "YNM Safety is among the reliable hot thermoplastic paints manufactures for industrial and runway applications. YNM hot thermoplastic paints offer superior durability, chemical resistance, and performance under heavy vehicle loads."
+              },
+              {
+                id: "app6",
+                title: "Zebra Crossings & Junctions",
+                description: "YNM thermoplastic paints ensure bold and highly visible markings at junctions and zebra crossings.",
+                image: "/assets/ynm safety hot thermoplastic zebra crossing & junctions marking paints.jpeg",
+                details: "YNM Safety manufactures YNM hot thermoplastic paints designed for critical traffic control areas. These thermoplastic paints improve road safety with thick, reflective markings and long service life."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Highways & Expressways",
+                short: "YNM Hot Thermoplastic Paints deliver durable and high-visibility road markings for highways and expressways.",
+                hover: "YNM Safety is a trusted name among hot thermoplastic paints manufactures for long-lasting highway road markings. YNM thermoplastic paints provide excellent adhesion, skid resistance, and night-time visibility under heavy traffic.",
+                image: "/assets/ynm safety hot thermoplastic highway and expressways marking paints.png"
+              },
+              {
+                title: "City Roads & Streets",
+                short: "YNM thermoplastic paints ensure clear and long-lasting markings for city roads and streets.",
+                hover: "YNM Safety manufactures high-quality YNM hot thermoplastic paints for urban road applications. These thermoplastic paints improve lane discipline, traffic flow, and visibility in busy city environments.",
+                image: "/assets/YNM Safety hot thermoplastic street and city roads marking paints.jpeg"
+              },
+              {
+                title: "Pedestrian Crossings",
+                short: "YNM hot thermoplastic paints enhance visibility and safety at pedestrian crossings.",
+                hover: "YNM Safety, one of the leading hot thermoplastic paints manufactures, supplies durable road marking solutions for pedestrian crossings. YNM thermoplastic paints offer reflective and anti-skid surfaces for safer pedestrian movement.",
+                image: "/assets/ynm safety hot thermoplastic pedestian crossings marking paints.jpeg"
+              },
+              {
+                title: "Parking Areas",
+                short: "YNM thermoplastic paints provide durable and organized parking area markings.",
+                hover: "YNM hot thermoplastic paints are widely used for parking bay lines, arrows, and symbols. Manufactured by YNM Safety, these thermoplastic paints resist abrasion and maintain long-term visibility.",
+                image: "/assets/ynm safety hot thermoplastic parking areas marking .jpeg"
+              },
+              {
+                title: "Industrial Roads & Runways",
+                short: "YNM thermoplastic paints deliver heavy-duty performance for industrial roads and runways.",
+                hover: "YNM Safety is among the reliable hot thermoplastic paints manufactures for industrial and runway applications. YNM hot thermoplastic paints offer superior durability, chemical resistance, and performance under heavy vehicle loads.",
+                image: "/assets/ynm safety hot thermoplastic runway marking paints.jpeg"
+              },
+              {
+                title: "Zebra Crossings & Junctions",
+                short: "YNM thermoplastic paints ensure bold and highly visible markings at junctions and zebra crossings.",
+                hover: "YNM Safety manufactures YNM hot thermoplastic paints designed for critical traffic control areas. These thermoplastic paints improve road safety with thick, reflective markings and long service life.",
+                image: "/assets/ynm safety hot thermoplastic zebra crossing & junctions marking paints.jpeg"
+              }
+            ],
+            
+            // Customer Success Stories / Projects
+            projects: [
+              {
+                id: "proj1",
+                title: "Navayuga Udupi Toll way Pvt. Ltd",
+                client: "Navayuga Udupi Toll way Pvt. Ltd",
+                location: "Udupi, Karnataka",
+                description: "Supplied hot thermoplastic road marking paint for highway road marking project. Our thermoplastic paints provided excellent durability and visibility for this major infrastructure project.",
+                quantity: "1,500 sqms",
+                year: "2024",
+                highlight: "100%",
+                highlightLabel: "On-Time Delivery",
+                logo: "/assets/ynm safety manufactures of gantry signages.png"
+              },
+              {
+                id: "proj2",
+                title: "GVPR Engineers Ltd",
+                client: "GVPR Engineers Ltd",
+                location: "Hyderabad, Telangana",
+                description: "Delivered hot thermoplastic paint for road marking applications. YNM Safety's thermoplastic paints ensured long-lasting and high-visibility markings for urban road infrastructure.",
+                quantity: "20,000 sqms",
+                year: "2024",
+                highlight: "Premium",
+                highlightLabel: "Quality Grade",
+                logo: "/assets/gvp.jpg"
+              },
+              {
+                id: "proj3",
+                title: "GMR Highway Ltd",
+                client: "GMR Highway Ltd",
+                location: "Hyderabad, Telangana",
+                description: "Supplied premium hot thermoplastic road marking paint for highway project. The paint provided superior adhesion, fast setting, and excellent night-time reflectivity.",
+                quantity: "12,000 sqms",
+                year: "2024",
+                highlight: "Zero",
+                highlightLabel: "Defects",
+                logo: "/assets/gmr logoo.jpg"
+              }
+            ],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Hot Thermoplastic Road Marking Paint Market Growth | YNM Safety",
+              description: "The hot thermoplastic road marking paint market is expanding due to growing investments in road infrastructure and traffic safety management. Contractors increasingly prefer thermoplastic paints for their durability and reflectivity.\n\nYNM Safety manufactures thermoplastic road marking paints that support long-term performance and modern road safety requirements across various traffic environments.",
+              cagr: "5-7%",
+              growthFactors: [
+                "Durability and Resistance",
+                "Eco-Friendly and Sustainability",
+                "Industrial and Automotive Applications",
+                "Cost-Effectiveness",
+                "Advances in Coating Technologies",
+                "Increased Demand for Road Marking"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.2B",
+                projectedMarketSize: "$1.8B",
+                currentYear: "2024",
+                projectedYear: "2030",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 0.9 },
+                { year: "2022", value: 1.0 },
+                { year: "2023", value: 1.1 },
+                { year: "2024", value: 1.2 },
+                { year: "2025", value: 1.35 },
+                { year: "2026", value: 1.5 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Netherlands", "Sweden", "Poland", "Russia", "Belgium"]
+                },
+                {
+                  name: "Asia-Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Australia", "Singapore", "Thailand", "Indonesia", "Malaysia", "Vietnam"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina", "Chile", "Colombia", "Peru"]
+                },
+                {
+                  name: "Middle East",
+                  countries: ["United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Oman", "Egypt"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa", "Nigeria", "Kenya", "Egypt", "Algeria", "Ghana", "Tanzania"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 9 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures hot thermoplastic paints through a controlled, quality-driven process to ensure excellent durability, adhesion, reflectivity, and compliance with road safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Procurement & Inspection",
+                description: "High-quality raw materials such as thermoplastic resin, pigments, fillers, glass beads, and additives are sourced from certified suppliers. Each batch is inspected and tested to meet required quality and performance standards."
+              },
+              {
+                step: "02",
+                title: "Weighing & Batch Formulation",
+                description: "All raw materials are accurately weighed as per approved formulation to ensure consistent quality. Proper formulation is critical for durability, flow properties, and reflectivity of YNM hot thermoplastic paints."
+              },
+              {
+                step: "03",
+                title: "High-Temperature Mixing",
+                description: "The measured materials are fed into high-temperature mixers where they are uniformly blended. Controlled heating ensures proper melting and bonding of resins, pigments, and fillers."
+              },
+              {
+                step: "04",
+                title: "Homogeneous Compound Preparation",
+                description: "The molten mixture is processed until a uniform and lump-free compound is achieved. This step ensures smooth application, consistent color, and strong adhesion to road surfaces."
+              },
+              {
+                step: "05",
+                title: "Cooling & Solidification",
+                description: "The hot thermoplastic compound is cooled under controlled conditions to solidify into stable material. Proper cooling prevents cracks, segregation, and quality variations."
+              },
+              {
+                step: "06",
+                title: "Crushing & Granulation",
+                description: "The solidified material is crushed and granulated into uniform-sized thermoplastic paint granules. This form allows easy melting during on-site road marking application."
+              },
+              {
+                step: "07",
+                title: "Quality Testing & Inspection",
+                description: "YNM Safety conducts rigorous quality tests including softening point, flow resistance, color stability, glass bead content, and adhesion performance to ensure compliance with standards."
+              },
+              {
+                step: "08",
+                title: "Packaging & Labeling",
+                description: "Approved thermoplastic paint granules are packed in moisture-resistant bags with proper labeling. Packaging includes product name, batch number, manufacturing date, and application guidelines."
+              },
+              {
+                step: "09",
+                title: "Storage & Dispatch",
+                description: "Finished products are stored in a clean and dry warehouse before dispatch. YNM thermoplastic paints are dispatched with proper documentation to ensure safe delivery to customers."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 80,
+              currency: "INR",
+              unit: "per kg",
+              displayPrice: "₹80 per kg",
+              packageSizes: [
+                { size: "25 kg bag", priceINR: 80, moq: 500 },
+                { size: "500 kg", priceINR: 78, moq: 500 },
+                { size: "1000 kg", priceINR: 75, moq: 1000 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 1000, discount: 3 },
+                { minQuantity: 5000, discount: 5 },
+                { minQuantity: 10000, discount: 8 },
+                { minQuantity: 25000, discount: 10 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "10,800 MT",
+              productionSpeed: "900 MT/month",
+              qualityStandards: "ISO 9001:2015",
+              exportCountries: "40+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "is-164",
+                title: "IS 164",
+                description: "Indian Standard for Road Marking Materials",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "morth-803",
+                title: "MoRTH 803",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "bs-3262",
+                title: "BS 3262",
+                description: "British Standard for Thermoplastic Road Marking Materials",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "layers"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/hot thermoplastci ynm safety.png",
+              "/assets/ynm safety hot themoplastic paints manufacture.png",
+              "/assets/ynm safety hot thermo plastic paints manufactures.png",
+              "/assets/ynm safety thermoplastic paints.png",
+              "/assets/Bag Design Mockup.jpg"
+            ]
           },
           {
             id: "p2",
@@ -547,9 +976,13 @@ export const productsData = {
 // Helper function to get all products with their IDs for routing
 export function getAllProducts() {
   const allProducts = [];
-  Object.values(productsData.manufacturing.categories).forEach((category) => {
+  Object.entries(productsData.manufacturing.categories).forEach(([categoryKey, category]) => {
     category.products.forEach((product) => {
-      allProducts.push(product);
+      allProducts.push({
+        ...product,
+        category: categoryKey,
+        categoryTitle: category.title
+      });
     });
   });
   return allProducts;

@@ -588,17 +588,13 @@ export default function ProductDetailPage() {
           <section className="product-pricing-section">
             <div className="product-section-container">
               <h2 className="product-section-title">Pricing</h2>
-              <p className="product-section-subtitle">
-                {product.pricing.basePriceINR 
-                  ? `Price per running meter for ${product.pricing.thickness || 't=3mm'} thickness`
-                  : 'Competitive pricing in multiple currencies'}
-              </p>
 
               {/* Multi-Currency Pricing Grid - 7x2 layout */}
               <div className="multi-currency-pricing-grid">
                 {(() => {
-                  // Base price in INR (₹1,900 per running meter)
+                  // Base price in INR
                   const basePriceINR = product.pricing.basePriceINR || 1900;
+                  const priceUnit = product.pricing.unit || 'per kg';
                   
                   // 14 currencies with flags (7 per row)
                   const currencyData = [
@@ -642,7 +638,7 @@ export default function ProductDetailPage() {
                                 : convertedPrice.toFixed(2)}
                           </span>
                         </div>
-                        <div className="currency-unit">per running meter</div>
+                        <div className="currency-unit">{priceUnit}</div>
                         <div className="currency-name">{currency.name}</div>
                       </div>
                     );
@@ -650,9 +646,6 @@ export default function ProductDetailPage() {
                 })()}
               </div>
 
-              <div className="pricing-note">
-                <p><strong>Note:</strong> Prices are for {product.pricing.thickness || 't=3mm'} thickness. Currency conversions are approximate and may vary.</p>
-              </div>
             </div>
           </section>
         )}
@@ -1454,245 +1447,197 @@ export default function ProductDetailPage() {
                 <p>Compliance with national and international road safety standards</p>
               </div>
               <div className="certificates-grid">
-                <div className="certificate-card">
-                  <div className="certificate-icon">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg>
-                  </div>
-                  <h4>MoRTH 803</h4>
-                  <p>Ministry of Road Transport & Highways Section 803 Specifications</p>
-                  <button
-                    className="certificate-view-btn"
-                    onClick={() => window.open('/certificates/morth-803.pdf', '_blank')}
-                  >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                    View Certificate
-                  </button>
-                </div>
-                <div className="certificate-card">
-                  <div className="certificate-icon">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                      <path d="M9 12l2 2 4-4" />
-                    </svg>
-                  </div>
-                  <h4>ISO 9001:2015</h4>
-                  <p>Quality Management System Certification</p>
-                  <button
-                    className="certificate-view-btn"
-                    onClick={() => window.open('/certificates/iso-9001-2015.pdf', '_blank')}
-                  >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                    View Certificate
-                  </button>
-                </div>
-                <div className="certificate-card">
-                  <div className="certificate-icon">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                      <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
-                    </svg>
-                  </div>
-                  <h4>EN 1317</h4>
-                  <p>European Standard for Road Restraint Systems</p>
-                  <button
-                    className="certificate-view-btn"
-                    onClick={() => window.open('/certificates/en-1317.pdf', '_blank')}
-                  >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                    View Certificate
-                  </button>
-                </div>
-                <div className="certificate-card">
-                  <div className="certificate-icon">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                      <line x1="3" y1="9" x2="21" y2="9" />
-                      <line x1="9" y1="21" x2="9" y2="9" />
-                    </svg>
-                  </div>
-                  <h4>IRC 119</h4>
-                  <p>Indian Roads Congress Guidelines for Traffic Safety Barriers</p>
-                  <button
-                    className="certificate-view-btn"
-                    onClick={() => window.open('/certificates/irc-119.pdf', '_blank')}
-                  >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                    View Certificate
-                  </button>
-                </div>
+                {product.certificates && product.certificates.length > 0 ? (
+                  // Use dynamic certificates from product data
+                  product.certificates.map((cert, index) => (
+                    <div key={cert.id || index} className="certificate-card">
+                      <div className="certificate-icon">
+                        {cert.icon === 'shield' ? (
+                          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M9 12l2 2 4-4" />
+                          </svg>
+                        ) : cert.icon === 'layers' ? (
+                          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                          </svg>
+                        ) : (
+                          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                          </svg>
+                        )}
+                      </div>
+                      <h4>{cert.title}</h4>
+                      <p>{cert.description}</p>
+                      <button
+                        className="certificate-view-btn"
+                        onClick={() => window.open(cert.pdfPath, '_blank')}
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        View Certificate
+                      </button>
+                    </div>
+                  ))
+                ) : (
+                  // Default certificates for products without specific certificate data
+                  <>
+                    <div className="certificate-card">
+                      <div className="certificate-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                          <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                      </div>
+                      <h4>MoRTH 803</h4>
+                      <p>Ministry of Road Transport & Highways Section 803 Specifications</p>
+                      <button
+                        className="certificate-view-btn"
+                        onClick={() => window.open('/certificates/ynm-safety-iso-9001-2015.pdf', '_blank')}
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        View Certificate
+                      </button>
+                    </div>
+                    <div className="certificate-card">
+                      <div className="certificate-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                          <path d="M9 12l2 2 4-4" />
+                        </svg>
+                      </div>
+                      <h4>ISO 9001:2015</h4>
+                      <p>Quality Management System Certification</p>
+                      <button
+                        className="certificate-view-btn"
+                        onClick={() => window.open('/certificates/ynm-safety-iso-9001-2015.pdf', '_blank')}
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        View Certificate
+                      </button>
+                    </div>
+                    <div className="certificate-card">
+                      <div className="certificate-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                          <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                      </div>
+                      <h4>EN 1317</h4>
+                      <p>European Standard for Road Restraint Systems</p>
+                      <button
+                        className="certificate-view-btn"
+                        onClick={() => window.open('/certificates/ynm-safety-iso-9001-2015.pdf', '_blank')}
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        View Certificate
+                      </button>
+                    </div>
+                    <div className="certificate-card">
+                      <div className="certificate-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                          <line x1="3" y1="9" x2="21" y2="9" />
+                          <line x1="9" y1="21" x2="9" y2="9" />
+                        </svg>
+                      </div>
+                      <h4>IRC 119</h4>
+                      <p>Indian Roads Congress Guidelines for Traffic Safety Barriers</p>
+                      <button
+                        className="certificate-view-btn"
+                        onClick={() => window.open('/certificates/ynm-safety-iso-9001-2015.pdf', '_blank')}
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        View Certificate
+                      </button>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
         </section>
 
         {/* Customer Success Stories Section */}
-        <section className="product-success-stories-section">
-          <div className="product-section-container">
-            <h2 className="product-section-title">Customer Success Stories</h2>
-            <p className="product-section-subtitle">
-              Real results from satisfied customers who chose {product.name}
-            </p>
-            
-            <div className="success-stories-grid">
-              <div className="success-story-card">
-                <div className="story-header">
-                  <div className="story-logo">
-                    <Image
-                      src="/assets/success-story-1.png"
-                      alt="Vriddhi Infratech"
-                      width={70}
-                      height={70}
-                      style={{ objectFit: "contain" }}
-                    />
-                  </div>
-                  <div className="story-meta">
-                    <h3>VRIDDHI INFRATECH INDIA PVT LTD</h3>
-                    <p className="story-location">Hyderabad Infrastructure Project</p>
-                  </div>
-                </div>
-                <div className="story-content">
-                  <div className="story-stats">
-                    <div className="story-stat">
-                      <div className="story-stat-value">28,500</div>
-                      <div className="story-stat-label">Meters Supplied</div>
+        {product.projects && product.projects.length > 0 && (
+          <section className="product-success-stories-section">
+            <div className="product-section-container">
+              <h2 className="product-section-title">Customer Success Stories</h2>
+              <p className="product-section-subtitle">
+                Real results from satisfied customers who chose {product.name}
+              </p>
+              
+              <div className="success-stories-grid">
+                {product.projects.map((project, index) => (
+                  <div key={project.id || index} className="success-story-card">
+                    <div className="story-header">
+                      <div className="story-logo">
+                        <Image
+                          src={project.logo || `/assets/success-story-${index + 1}.png`}
+                          alt={project.client}
+                          width={70}
+                          height={70}
+                          style={{ objectFit: "contain" }}
+                        />
+                      </div>
+                      <div className="story-meta">
+                        <h3>{project.client}</h3>
+                        <p className="story-location">{project.location}</p>
+                      </div>
                     </div>
-                    <div className="story-stat">
-                      <div className="story-stat-value">2024</div>
-                      <div className="story-stat-label">Project Year</div>
-                    </div>
-                    <div className="story-stat">
-                      <div className="story-stat-value">100%</div>
-                      <div className="story-stat-label">On-Time Delivery</div>
-                    </div>
-                  </div>
-                  <p className="story-quote">
-                    &quot;Supplied 28,500 meters of W-Beam Crash Barriers for comprehensive highway safety 
-                    infrastructure project in Hyderabad. Our metal beam crash barriers were installed across 
-                    bridges, curves, and high-risk zones, ensuring maximum protection for road users.&quot;
-                  </p>
-                  <div className="story-rating">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#C9A24D">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="success-story-card">
-                <div className="story-header">
-                  <div className="story-logo">
-                    <Image
-                      src="/assets/success-story-2.png"
-                      alt="Bekem Infra Projects"
-                      width={70}
-                      height={70}
-                      style={{ objectFit: "contain" }}
-                    />
-                  </div>
-                  <div className="story-meta">
-                    <h3>BEKEM INFRA PROJECTS PVT LTD</h3>
-                    <p className="story-location">Hyderabad Highway Project</p>
-                  </div>
-                </div>
-                <div className="story-content">
-                  <div className="story-stats">
-                    <div className="story-stat">
-                      <div className="story-stat-value">20,000</div>
-                      <div className="story-stat-label">Meters Supplied</div>
-                    </div>
-                    <div className="story-stat">
-                      <div className="story-stat-value">2024</div>
-                      <div className="story-stat-label">Project Year</div>
-                    </div>
-                    <div className="story-stat">
-                      <div className="story-stat-value">Premium</div>
-                      <div className="story-stat-label">Quality Grade</div>
+                    <div className="story-content">
+                      <div className="story-stats">
+                        <div className="story-stat">
+                          <div className="story-stat-value">{project.quantity}</div>
+                          <div className="story-stat-label">Quantity Supplied</div>
+                        </div>
+                        <div className="story-stat">
+                          <div className="story-stat-value">{project.year}</div>
+                          <div className="story-stat-label">Project Year</div>
+                        </div>
+                        <div className="story-stat">
+                          <div className="story-stat-value">{project.highlight || '100%'}</div>
+                          <div className="story-stat-label">{project.highlightLabel || 'On-Time Delivery'}</div>
+                        </div>
+                      </div>
+                      <p className="story-quote">
+                        &quot;{project.description}&quot;
+                      </p>
+                      <div className="story-rating">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#C9A24D">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                          </svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  <p className="story-quote">
-                    &quot;Supplied 20,000 meters of W-Beam Crash Barriers for highway safety infrastructure 
-                    development project in Hyderabad. Our high-quality galvanized steel barriers provided 
-                    excellent impact resistance and long-term durability for this critical road safety installation.&quot;
-                  </p>
-                  <div className="story-rating">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#C9A24D">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="success-story-card">
-                <div className="story-header">
-                  <div className="story-logo">
-                    <Image
-                      src="/assets/success-story-3.png"
-                      alt="Anusha Projects"
-                      width={70}
-                      height={70}
-                      style={{ objectFit: "contain" }}
-                    />
-                  </div>
-                  <div className="story-meta">
-                    <h3>ANUSHA PROJECTS PVT LTD</h3>
-                    <p className="story-location">Hyderabad Expressway Project</p>
-                  </div>
-                </div>
-                <div className="story-content">
-                  <div className="story-stats">
-                    <div className="story-stat">
-                      <div className="story-stat-value">15,360</div>
-                      <div className="story-stat-label">Meters Supplied</div>
-                    </div>
-                    <div className="story-stat">
-                      <div className="story-stat-value">2024</div>
-                      <div className="story-stat-label">Project Year</div>
-                    </div>
-                    <div className="story-stat">
-                      <div className="story-stat-value">Zero</div>
-                      <div className="story-stat-label">Defects</div>
-                    </div>
-                  </div>
-                  <p className="story-quote">
-                    &quot;Delivered 15,360 meters of W-Beam Crash Barriers for expressway median and roadside 
-                    protection in Hyderabad. The installation enhanced road safety standards and reduced 
-                    accident severity on this busy expressway corridor.&quot;
-                  </p>
-                  <div className="story-rating">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#C9A24D">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    ))}
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
