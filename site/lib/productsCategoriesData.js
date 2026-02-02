@@ -954,6 +954,423 @@ export const productsData = {
             desc: "Informatory signages providing directions, distances, and important information to road users.",
             image: "/assets/product-exterior-weather-coat.png",
             specs: ["Informational", "Retro-reflective", "Weatherproof", "IS certified"]
+          },
+          {
+            id: "sg5",
+            slug: "retro-reflective-gantry-signage-manufactures",
+            name: "Retro Reflective Gantry Signage",
+            shortDesc: "High-visibility retro reflective gantry signage manufactures for highways, expressways & advanced traffic guidance systems.",
+            desc: "Premium retro reflective gantry signage for highways and expressways. Excellent long-distance visibility and weather-resistant overhead signboard solutions.",
+            image: "/assets/Ynm safety signages.png",
+            heroImage: "/assets/Ynm safety signages.png",
+            specs: ["Long-distance visibility", "Overhead gantry", "Weather resistant", "MoRTH compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Retro Reflective Gantry Signage Manufactures | YNM Safety",
+              description: "Retro reflective gantry signage manufactures delivering high-visibility overhead road sign solutions. YNM Safety manufactures gantry signboards for highways, expressways & urban traffic safety.",
+              slug: "/retro-reflective-gantry-signage-manufactures"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the trusted retro reflective gantry signage manufactures, offering premium-quality overhead signboard solutions for modern road infrastructure. We manufacture retro reflective gantry signages designed for long-distance visibility, lane guidance, and effective traffic communication on highways, expressways, flyovers, and major junctions.\n\nOur retro reflective gantry signboards are manufactured using high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures. YNM Safety manufactures gantry signages that provide excellent day and night visibility, weather resistance, and long service life.\n\nAs experienced gantry signage manufactures, YNM Safety follows strict quality control processes and manufactures products compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
+            detailedDescription: "YNM Safety is one of the trusted retro reflective gantry signage manufactures, offering premium-quality overhead signboard solutions for modern road infrastructure. We manufacture retro reflective gantry signages designed for long-distance visibility, lane guidance, and effective traffic communication on highways, expressways, flyovers, and major junctions.\n\nOur retro reflective gantry signboards are manufactured using high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures. YNM Safety manufactures gantry signages that provide excellent day and night visibility, weather resistance, and long service life.\n\nAs experienced gantry signage manufactures, YNM Safety follows strict quality control processes and manufactures products compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Retro Reflective Gantry Signage" },
+              { label: "Sign Type", value: "Overhead / Cantilever / Portal Gantry" },
+              { label: "Reflective Sheeting", value: "Engineer Grade / High Intensity / Diamond Grade" },
+              { label: "Base Material", value: "Aluminium Sheet" },
+              { label: "Visibility Range", value: "Long-distance visibility" },
+              { label: "Mounting", value: "Gantry Structure" },
+              { label: "Application Area", value: "Highways & Expressways" },
+              { label: "Compliance", value: "MoRTH, IRC, IS Standards" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Wrapped with bubble wrap",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "IRC 67, MoRTH, ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Based",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Retro Reflective Gantry Signage",
+                "Sign Type: Overhead / Cantilever / Portal Gantry",
+                "Reflective Sheeting: Engineer Grade / High Intensity / Diamond Grade",
+                "Base Material: Aluminium Sheet",
+                "Visibility Range: Long-distance visibility",
+                "Mounting: Gantry Structure",
+                "Application Area: Highways & Expressways",
+                "Compliance: MoRTH, IRC, IS Standards",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "Certified gantry signage manufacturing quality",
+                "Long-distance day & night visibility",
+                "Corrosion-resistant aluminium panels",
+                "Heavy-duty overhead gantry design",
+                "Built for extreme weather conditions",
+                "Quick installation and low upkeep"
+              ],
+              advantages: [
+                "Improves road safety with clear overhead guidance",
+                "Reduces driver confusion on high-speed roads",
+                "Cost-effective solution for large highway projects",
+                "Trusted gantry signage manufacturer – YNM Safety",
+                "Consistent quality for bulk supply and exports",
+                "Meets government and international road safety standards"
+              ]
+            },
+            
+            features: [
+              "Certified gantry signage manufacturing quality",
+              "Long-distance day & night visibility",
+              "Corrosion-resistant aluminium panels",
+              "Heavy-duty overhead gantry design",
+              "Built for extreme weather conditions",
+              "Quick installation and low upkeep"
+            ],
+            
+            advantages: [
+              "Improves road safety with clear overhead guidance",
+              "Reduces driver confusion on high-speed roads",
+              "Cost-effective solution for large highway projects",
+              "Trusted gantry signage manufacturer – YNM Safety",
+              "Consistent quality for bulk supply and exports",
+              "Meets government and international road safety standards"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Highways & Expressways",
+                description: "Retro reflective gantry signages provide clear overhead guidance on highways and expressways.",
+                image: "/assets/Ynm safety Highways & Expressways.png",
+                details: "YNM Safety manufactures retro reflective gantry signages for highways and expressways to ensure long-distance visibility at high speeds. As trusted gantry signage manufacturers, we deliver durable overhead signboards that improve lane discipline and road safety."
+              },
+              {
+                id: "app2",
+                title: "Urban Roads & City Streets",
+                description: "Gantry signages support organized traffic movement on urban roads and city streets.",
+                image: "/assets/Ynm safety Urban Roads & City streets.png",
+                details: "YNM Safety manufactures gantry signboards for urban roads and city streets with high retro reflectivity. These overhead gantry signages help reduce driver confusion and improve traffic flow in busy city environments."
+              },
+              {
+                id: "app3",
+                title: "Toll Plazas & Bridges",
+                description: "Gantry signages improve lane identification at toll plazas and bridge approaches.",
+                image: "/assets/Ynm safety Toll ways & Bridges.png",
+                details: "YNM Safety manufactures retro reflective gantry signages for toll plazas and bridges to ensure clear lane guidance and visibility. Our overhead gantry signboards are designed for durability and continuous operation in high-traffic zones."
+              },
+              {
+                id: "app4",
+                title: "Airports & Railway Stations",
+                description: "Gantry signages provide effective traffic guidance in transport hubs.",
+                image: "/assets/ynm safety Airports & Railway Stations.png",
+                details: "YNM Safety manufactures overhead gantry signages for airports and railway stations to manage vehicle movement efficiently. These retro reflective gantry signboards enhance navigation and safety in high-traffic transport areas."
+              },
+              {
+                id: "app5",
+                title: "Industrial Sites & Ports",
+                description: "Gantry signages ensure controlled traffic movement in industrial areas.",
+                image: "/assets/Ynm safety Industrial sites & port areas.png",
+                details: "YNM Safety manufactures heavy-duty gantry signboards for industrial sites and ports. These retro reflective overhead signages support safe vehicle routing and operational efficiency."
+              },
+              {
+                id: "app6",
+                title: "Commercial & Advertising",
+                description: "Gantry structures support commercial signage and advertising displays.",
+                image: "/assets/Ynm safety Commercial &  Advertising.png",
+                details: "YNM Safety manufactures gantry structures suitable for commercial signage and advertising applications. Our overhead gantry signboards offer high visibility and long-term performance."
+              },
+              {
+                id: "app7",
+                title: "Smart / Intelligent Transportation Systems (ITS)",
+                description: "Gantry signages integrate seamlessly with smart traffic systems.",
+                image: "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png",
+                details: "YNM Safety manufactures gantry signages compatible with Intelligent Transportation Systems (ITS). These retro reflective gantry signboards support real-time traffic information and modern road management solutions."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Highways & Expressways",
+                short: "Retro reflective gantry signages provide clear overhead guidance on highways and expressways.",
+                hover: "YNM Safety manufactures retro reflective gantry signages for highways and expressways to ensure long-distance visibility at high speeds. As trusted gantry signage manufacturers, we deliver durable overhead signboards that improve lane discipline and road safety.",
+                image: "/assets/Ynm safety Highways & Expressways.png"
+              },
+              {
+                title: "Urban Roads & City Streets",
+                short: "Gantry signages support organized traffic movement on urban roads and city streets.",
+                hover: "YNM Safety manufactures gantry signboards for urban roads and city streets with high retro reflectivity. These overhead gantry signages help reduce driver confusion and improve traffic flow in busy city environments.",
+                image: "/assets/Ynm safety Urban Roads & City streets.png"
+              },
+              {
+                title: "Toll Plazas & Bridges",
+                short: "Gantry signages improve lane identification at toll plazas and bridge approaches.",
+                hover: "YNM Safety manufactures retro reflective gantry signages for toll plazas and bridges to ensure clear lane guidance and visibility. Our overhead gantry signboards are designed for durability and continuous operation in high-traffic zones.",
+                image: "/assets/Ynm safety Toll ways & Bridges.png"
+              },
+              {
+                title: "Airports & Railway Stations",
+                short: "Gantry signages provide effective traffic guidance in transport hubs.",
+                hover: "YNM Safety manufactures overhead gantry signages for airports and railway stations to manage vehicle movement efficiently. These retro reflective gantry signboards enhance navigation and safety in high-traffic transport areas.",
+                image: "/assets/ynm safety Airports & Railway Stations.png"
+              },
+              {
+                title: "Industrial Sites & Ports",
+                short: "Gantry signages ensure controlled traffic movement in industrial areas.",
+                hover: "YNM Safety manufactures heavy-duty gantry signboards for industrial sites and ports. These retro reflective overhead signages support safe vehicle routing and operational efficiency.",
+                image: "/assets/Ynm safety Industrial sites & port areas.png"
+              },
+              {
+                title: "Commercial & Advertising",
+                short: "Gantry structures support commercial signage and advertising displays.",
+                hover: "YNM Safety manufactures gantry structures suitable for commercial signage and advertising applications. Our overhead gantry signboards offer high visibility and long-term performance.",
+                image: "/assets/Ynm safety Commercial &  Advertising.png"
+              },
+              {
+                title: "Smart / Intelligent Transportation Systems (ITS)",
+                short: "Gantry signages integrate seamlessly with smart traffic systems.",
+                hover: "YNM Safety manufactures gantry signages compatible with Intelligent Transportation Systems (ITS). These retro reflective gantry signboards support real-time traffic information and modern road management solutions.",
+                image: "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder - can be updated later)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Retro Reflective Gantry Signage Market Growth | YNM Safety",
+              description: "The global gantry signage market is experiencing steady growth, valued at around USD 2–3 billion in 2024 and expected to grow at a 5–7% CAGR through 2030. Growth is driven by infrastructure expansion, smart city initiatives, and adoption of digital/LED signage.\n\nYNM Safety manufactures retro reflective gantry signages that support long-term performance and modern road safety requirements across various traffic environments.",
+              cagr: "5-7%",
+              growthFactors: [
+                "Rapid expansion of highways and expressways",
+                "Implementation of smart traffic management systems",
+                "Growing emphasis on road safety and accident prevention",
+                "Increasing demand for long-distance visible overhead signages",
+                "Government investments in national and urban road infrastructure"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$2.5B",
+                projectedMarketSize: "$3.8B",
+                currentYear: "2024",
+                projectedYear: "2030",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 2.0 },
+                { year: "2022", value: 2.2 },
+                { year: "2023", value: 2.4 },
+                { year: "2024", value: 2.5 },
+                { year: "2025", value: 2.8 },
+                { year: "2026", value: 3.1 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "France", "United Kingdom", "Italy", "Spain"]
+                },
+                {
+                  name: "Asia-Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Indonesia"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates", "Saudi Arabia", "South Africa", "Nigeria", "Egypt"]
+                },
+                {
+                  name: "South America",
+                  countries: ["Brazil", "Argentina", "Chile", "Ecuador", "Venezuela"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 9 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures retro reflective gantry signages through a controlled, quality-driven process to ensure high visibility, structural strength, durability, and compliance with national and international road safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Procurement & Inspection",
+                description: "High-quality raw materials such as aluminium sheets, retro reflective sheeting, structural steel sections, fasteners, and protective coatings are sourced from certified suppliers. Each material is inspected to meet required quality, thickness, and performance standards before manufacturing."
+              },
+              {
+                step: "02",
+                title: "Aluminium Sheet Cutting & Panel Preparation",
+                description: "Aluminium sheets are accurately cut to required gantry signage dimensions using precision cutting machines. Proper panel preparation ensures uniform size, smooth edges, and structural stability for overhead signboards."
+              },
+              {
+                step: "03",
+                title: "Surface Cleaning & Pre-Treatment",
+                description: "The aluminium panels undergo surface cleaning and chemical pre-treatment to remove oil, dust, and impurities. This step improves adhesion of retro reflective sheeting and enhances long-term durability."
+              },
+              {
+                step: "04",
+                title: "Application of Retro Reflective Sheeting",
+                description: "Certified retro reflective sheeting (Engineer Grade, High Intensity, or Diamond Grade) is carefully applied to the prepared aluminium panels. Controlled application ensures wrinkle-free bonding, uniform reflectivity, and long-distance visibility."
+              },
+              {
+                step: "05",
+                title: "Graphic Printing & Message Overlay",
+                description: "Traffic symbols, route information, and directional text are applied using high-quality digital printing or cut vinyl overlays. UV-resistant inks and protective overlays ensure clear readability and color stability in all weather conditions."
+              },
+              {
+                step: "06",
+                title: "Gantry Structure Fabrication",
+                description: "Structural steel sections for gantry frames are fabricated, welded, and assembled as per approved engineering drawings. YNM Safety manufactures gantry structures with high load-bearing capacity to support large overhead signboards safely."
+              },
+              {
+                step: "07",
+                title: "Quality Testing & Reflectivity Inspection",
+                description: "Finished gantry signages undergo strict quality checks, including reflectivity testing, adhesion strength, dimensional accuracy, and structural inspection. All products are tested to comply with MoRTH, IRC, IS, and ASTM standards."
+              },
+              {
+                step: "08",
+                title: "Packing & Labeling",
+                description: "Approved gantry signage panels and structures are packed using protective materials to prevent transit damage. Each package is properly labeled with product details, project information, and handling instructions."
+              },
+              {
+                step: "09",
+                title: "Storage & Dispatch",
+                description: "The finished retro reflective gantry signages are stored in a clean and secure facility before dispatch. Products are dispatched with proper documentation to ensure safe delivery to project sites across India and global markets."
+              }
+            ],
+            
+            // Pricing Information - Toggle between Reflective Part and MS Part
+            pricing: {
+              hasToggle: true,
+              pricingTypes: [
+                {
+                  id: "reflective",
+                  name: "Reflective Part",
+                  description: "Retro reflective sheeting on aluminium panels",
+                  basePriceINR: 420,
+                  unit: "per sq. ft",
+                  icon: "✨"
+                },
+                {
+                  id: "ms-part",
+                  name: "MS Part (Mild Steel)",
+                  description: "Gantry structure and steel components",
+                  basePriceINR: 110,
+                  unit: "per kg",
+                  icon: "🔩"
+                }
+              ],
+              // Default pricing for backwards compatibility
+              basePriceINR: 420,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹420 per sq. ft (Reflective Part)",
+              bulkDiscounts: [
+                { minQuantity: 5, discount: 3 },
+                { minQuantity: 10, discount: 5 },
+                { minQuantity: 20, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "180 gantries",
+              productionSpeed: "15 gantries",
+              qualityStandards: "ISO 9001:2015",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "morth",
+                title: "MoRTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/Ynm safety signages.png",
+              "/assets/Ynm safety Highways & Expressways.png",
+              "/assets/Ynm safety Urban Roads & City streets.png",
+              "/assets/Ynm safety Toll ways & Bridges.png",
+              "/assets/ynm safety Airports & Railway Stations.png",
+              "/assets/Ynm safety Industrial sites & port areas.png",
+              "/assets/Ynm safety Commercial &  Advertising.png",
+              "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
+            ]
           }
         ]
       },
