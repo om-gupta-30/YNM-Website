@@ -19,6 +19,7 @@ export default function ProductDetailPage() {
   const [comparisonProducts, setComparisonProducts] = useState([]);
   const [animatedStats, setAnimatedStats] = useState({});
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
+  const [activePricingType, setActivePricingType] = useState(0);
   const [exchangeRates, setExchangeRates] = useState({
     USD: 1,
     EUR: 0.92,
@@ -128,10 +129,10 @@ export default function ProductDetailPage() {
     if (!product) return [];
     const images = [];
     
-    // If product has a gallery array, use it (prioritize for crash barriers)
+    // If product has a gallery array, use it
     if (product.gallery && product.gallery.length > 0) {
-      // Use up to 6 images from the gallery for a richer carousel
-      return product.gallery.slice(0, 6);
+      // Use up to 8 images from the gallery for a richer carousel
+      return product.gallery.slice(0, 8);
     }
     
     // Add hero image if available
@@ -589,12 +590,39 @@ export default function ProductDetailPage() {
             <div className="product-section-container">
               <h2 className="product-section-title">Pricing</h2>
 
+              {/* Pricing Toggle for products with multiple pricing types */}
+              {product.pricing.hasToggle && product.pricing.pricingTypes && (
+                <div className="pricing-toggle-wrapper">
+                  <div className="pricing-toggle-container">
+                    {product.pricing.pricingTypes.map((pricingType, index) => (
+                      <button
+                        key={pricingType.id}
+                        className={`pricing-toggle-btn ${activePricingType === index ? 'active' : ''}`}
+                        onClick={() => setActivePricingType(index)}
+                      >
+                        <span className="pricing-toggle-icon">{pricingType.icon}</span>
+                        <span className="pricing-toggle-name">{pricingType.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                  {product.pricing.pricingTypes[activePricingType] && (
+                    <p className="pricing-toggle-description">
+                      {product.pricing.pricingTypes[activePricingType].description}
+                    </p>
+                  )}
+                </div>
+              )}
+
               {/* Multi-Currency Pricing Grid - 7x2 layout */}
               <div className="multi-currency-pricing-grid">
                 {(() => {
-                  // Base price in INR
-                  const basePriceINR = product.pricing.basePriceINR || 1900;
-                  const priceUnit = product.pricing.unit || 'per kg';
+                  // Base price in INR - use toggle price if available
+                  const basePriceINR = product.pricing.hasToggle && product.pricing.pricingTypes 
+                    ? product.pricing.pricingTypes[activePricingType]?.basePriceINR || product.pricing.basePriceINR || 1900
+                    : product.pricing.basePriceINR || 1900;
+                  const priceUnit = product.pricing.hasToggle && product.pricing.pricingTypes 
+                    ? product.pricing.pricingTypes[activePricingType]?.unit || product.pricing.unit || 'per kg'
+                    : product.pricing.unit || 'per kg';
                   
                   // 14 currencies with flags (7 per row)
                   const currencyData = [
@@ -1965,6 +1993,84 @@ export default function ProductDetailPage() {
         .product-pricing-section {
           padding: 80px 0;
           background: white;
+        }
+
+        /* Pricing Toggle Styles */
+        .pricing-toggle-wrapper {
+          max-width: 800px;
+          margin: 0 auto 40px;
+        }
+
+        .pricing-toggle-container {
+          display: flex;
+          gap: 16px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-bottom: 16px;
+        }
+
+        .pricing-toggle-btn {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+          padding: 16px 28px;
+          background: white;
+          border: 2px solid #E6D3A3;
+          border-radius: 12px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          min-width: 180px;
+        }
+
+        .pricing-toggle-btn:hover {
+          border-color: #C9A24D;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(116, 6, 13, 0.1);
+        }
+
+        .pricing-toggle-btn.active {
+          background: linear-gradient(135deg, #74060D, #9A1B2E);
+          border-color: #74060D;
+          box-shadow: 0 8px 25px rgba(116, 6, 13, 0.3);
+        }
+
+        .pricing-toggle-btn.active .pricing-toggle-icon,
+        .pricing-toggle-btn.active .pricing-toggle-name {
+          color: white;
+        }
+
+        .pricing-toggle-icon {
+          font-size: 20px;
+        }
+
+        .pricing-toggle-name {
+          font-size: 15px;
+          font-weight: 700;
+          color: #74060D;
+          transition: color 0.3s ease;
+        }
+
+        .pricing-toggle-description {
+          text-align: center;
+          font-size: 14px;
+          color: #5a4a4a;
+          margin: 0;
+          padding: 12px 20px;
+          background: linear-gradient(135deg, rgba(116, 6, 13, 0.05), rgba(201, 162, 77, 0.05));
+          border-radius: 8px;
+          border: 1px solid #E6D3A3;
+        }
+
+        @media (max-width: 480px) {
+          .pricing-toggle-btn {
+            min-width: 150px;
+            padding: 14px 20px;
+          }
+
+          .pricing-toggle-name {
+            font-size: 14px;
+          }
         }
 
         .currency-selector-wrapper {
