@@ -1,27 +1,104 @@
-node_modules
-# Keep environment variables out of version control
+# ==============================================
+# YNM MEGA INDUSTRIES - SITE GITIGNORE
+# ==============================================
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# ==============================================
+# ENVIRONMENT & SECRETS (CRITICAL)
+# ==============================================
 .env
 .env.local
-.env*.local
-# Allow .env.example to be tracked (it's a template without secrets)
+.env.*.local
+.env.development
+.env.production
+.env.development.local
+.env.production.local
+# Allow .env.example (template without secrets)
 !.env.example
 
-/lib/generated/prisma
+# Keys & Certificates (NEVER commit!)
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cert
 
-# Build outputs
-.next
-out
-dist
-build
+# Credentials (NEVER commit!)
+credentials.json
+service-account*.json
+*-credentials.json
+*-key.json
+*.credentials
+secrets/
+private/
+.secrets/
 
-# System files
+# ==============================================
+# BUILD OUTPUTS
+# ==============================================
+.next/
+out/
+dist/
+build/
+.vercel/
+.turbo/
+.output/
+
+# Generated files
+/lib/generated/
+
+# ==============================================
+# SYSTEM FILES
+# ==============================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ==============================================
+# IDE & EDITOR FILES
+# ==============================================
+.vscode/
+.idea/
 *.swp
 *.swo
 *~
-
-# IDE files
-.vscode
-.idea
 *.sublime-project
 *.sublime-workspace
+
+# ==============================================
+# LOGS & TEMPORARY FILES
+# ==============================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+tmp/
+temp/
+*.tmp
+*.temp
+.cache/
+
+# ==============================================
+# TESTING & COVERAGE
+# ==============================================
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+
+# ==============================================
+# MISC
+# ==============================================
+*.bak
+*.backup
+*.orig

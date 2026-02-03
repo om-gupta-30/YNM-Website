@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Output as standalone for Docker deployment
+  output: 'standalone',
   images: {
     remotePatterns: [],
     // Static export can't use the Image Optimization API.
