@@ -9,18 +9,18 @@ A modern, responsive corporate website for **YNM Mega Industries Pvt Ltd**, a le
 
 ## Live Website
 
-🌐 [ynmsafety.com](https://ynmsafety.com)
+[ynmsafety.com](https://ynmsafety.com)
 
 ## Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
-| Next.js 15 | React Framework with App Router |
+| Next.js 15 | React Framework with Pages Router |
 | React 19 | UI Library |
 | Tailwind CSS 3.4 | Utility-first Styling |
 | Nodemailer | Email Services |
 | Google Gemini API | AI-powered Chatbot |
-| Google Sheets API | Form Data Storage |
+| Google Sheets API | Contact Form Data Storage |
 
 ## Features
 
@@ -28,9 +28,9 @@ A modern, responsive corporate website for **YNM Mega Industries Pvt Ltd**, a le
 - **AI Chatbot** - Powered by Google Gemini for instant customer queries
 - **Responsive Design** - Mobile-first, optimized for all devices
 - **Contact & Quote Forms** - Integrated with Google Sheets
-- **Career Portal** - Job listings with PDF resume upload & validation
+- **Career Portal** - Job applications with PDF resume upload & validation
 - **Interactive India Map** - Regional contact information
-- **Product Catalog** - Detailed product pages with specifications, pricing & manufacturing processes
+- **Product Catalog** - Detailed product pages with specifications
 
 ## Project Structure
 
@@ -45,24 +45,19 @@ ynm-website/
 │   │   └── ...
 │   ├── pages/                     # Routes & API endpoints
 │   │   ├── api/
-│   │   │   ├── contact/submit.js  # Contact form handler
-│   │   │   ├── careers/submit.js  # Career form with PDF validation
+│   │   │   ├── contact/submit.js  # Contact form → Google Sheets
+│   │   │   ├── careers/submit.js  # Career form with email & PDF
 │   │   │   └── chat/gemini.js     # AI chatbot API
 │   │   ├── products/
 │   │   │   ├── index.jsx          # Product catalog
 │   │   │   └── [productId].jsx    # Dynamic product pages
 │   │   └── ...
 │   ├── lib/                       # Data & utilities
-│   │   ├── productsCategoriesData.js
-│   │   ├── translations.js
-│   │   └── ...
 │   ├── contexts/                  # React context providers
 │   ├── styles/                    # Global CSS
 │   ├── public/                    # Static assets
-│   │   ├── assets/                # Images & logos
-│   │   ├── certificates/          # PDF certificates
-│   │   └── fonts/                 # Custom fonts
 │   ├── .env.example               # Environment template
+│   ├── Dockerfile                 # Docker build config
 │   └── package.json
 ├── .gitignore                     # Git ignore rules
 └── README.md
@@ -72,8 +67,8 @@ ynm-website/
 
 ### Prerequisites
 
-- Node.js 20.x
-- npm or yarn
+- Node.js 20.x or higher
+- npm, yarn, or pnpm
 
 ### Installation
 
@@ -102,6 +97,14 @@ npm run build
 npm start
 ```
 
+### Docker
+
+```bash
+cd site
+docker build -t ynm-website .
+docker run -p 3000:3000 --env-file .env.local ynm-website
+```
+
 ## Environment Variables
 
 Create `site/.env.local` from the template:
@@ -110,37 +113,45 @@ Create `site/.env.local` from the template:
 cp site/.env.example site/.env.local
 ```
 
-### Required
+### Required Variables
 
-| Variable | Description |
-|----------|-------------|
-| `GOOGLE_SHEET_ID` | Google Sheet ID for form submissions |
-| `GOOGLE_SERVICE_ACCOUNT_EMAIL` | Service account email |
-| `GOOGLE_PRIVATE_KEY` | Service account private key |
-| `GOOGLE_GEMINI_API_KEY` | Gemini API key for chatbot |
+| Variable | Description | Where to Get |
+|----------|-------------|--------------|
+| `GOOGLE_SHEET_ID` | Google Sheet ID for contact form | Google Sheets URL |
+| `GOOGLE_SERVICE_ACCOUNT_EMAIL` | Service account email | GCP Console → IAM |
+| `GOOGLE_PRIVATE_KEY` | Service account private key | GCP Console → Service Account Keys |
+| `GOOGLE_GEMINI_API_KEY` | Gemini API key for chatbot | [Google AI Studio](https://aistudio.google.com/) |
 
-### Email (Choose ONE)
+### Email Configuration (Choose ONE)
 
-**Gmail:**
+**Option 1: Gmail (Simplest)**
 | Variable | Description |
 |----------|-------------|
 | `GMAIL_USER` | Gmail address |
 | `GMAIL_APP_PASSWORD` | [App Password](https://support.google.com/accounts/answer/185833) |
 
-**Custom SMTP:**
+**Option 2: Custom SMTP**
 | Variable | Description |
 |----------|-------------|
-| `SMTP_HOST` | SMTP server |
-| `SMTP_PORT` | Port (587/465) |
-| `SMTP_USER` | Username |
-| `SMTP_PASS` | Password |
+| `SMTP_HOST` | SMTP server hostname |
+| `SMTP_PORT` | Port (587 or 465) |
+| `SMTP_USER` | SMTP username |
+| `SMTP_PASS` | SMTP password |
+| `SMTP_SECURE` | `true` for port 465 |
 
-### Optional
+**Option 3: SendGrid**
+| Variable | Description |
+|----------|-------------|
+| `SENDGRID_API_KEY` | SendGrid API key |
+
+### Optional Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `HR_EMAIL` | Career form recipient | `hr@ynmsafety.com` |
-| `RECAPTCHA_SECRET_KEY` | Spam protection | _(skipped if not set)_ |
+| `CAREERS_NOREPLY_FROM` | No-reply sender address | `noreply@ynmsafety.com` |
+| `RECAPTCHA_SECRET_KEY` | reCAPTCHA v2 secret | _(skipped if not set)_ |
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA v2 site key | _(skipped if not set)_ |
 
 ## Deployment
 
@@ -149,31 +160,37 @@ cp site/.env.example site/.env.local
 1. Push to GitHub
 2. Import in [Vercel](https://vercel.com)
 3. Set **Root Directory** to `site`
-4. Add environment variables
+4. Add environment variables in Vercel dashboard
 5. Deploy
 
 ### Google Cloud Platform
 
-1. Build: `npm run build`
-2. Deploy to Cloud Run or App Engine
-3. Configure environment variables in GCP Console
+```bash
+# Build the application
+cd site
+npm run build
+
+# Deploy to Cloud Run
+gcloud run deploy ynm-website \
+  --source . \
+  --platform managed \
+  --region asia-south1 \
+  --allow-unauthenticated
+
+# Set environment variables in GCP Console
+```
 
 ## Security
 
 ### Pre-configured Protections
 
-- [x] `.env.local` and all `.env.*` files are gitignored
-- [x] No hardcoded API keys in source code
-- [x] Service account files (`.json`, `.pem`, `.key`) are gitignored
-- [x] All secrets accessed via `process.env`
+- `.env.local` and all `.env.*` files are gitignored
+- No hardcoded API keys in source code
+- Service account files (`.json`, `.pem`, `.key`) are gitignored
+- All secrets accessed via `process.env`
+- API keys are only used server-side (never exposed to browser)
 
-### Before Deploying
-
-- [ ] Set environment variables in your hosting platform (Vercel/GCP)
-- [ ] Enable HTTPS on production domain
-- [ ] Review Google Cloud IAM permissions
-
-### Never Commit These Files
+### Files That Are NEVER Committed
 
 ```
 .env.local              # Local environment variables
@@ -183,62 +200,55 @@ credentials.json        # Service account files
 service-account*.json   # GCP service accounts
 ```
 
-### Secrets Required for Deployment
+### Before Deploying Checklist
 
-When deploying to Vercel, GCP, or any hosting platform, add these as environment variables (not in code):
+- [ ] All environment variables set in hosting platform
+- [ ] HTTPS enabled on production domain
+- [ ] Google Cloud IAM permissions reviewed
+- [ ] reCAPTCHA configured for production (optional but recommended)
 
-| Secret | Where to Get |
-|--------|--------------|
-| `GOOGLE_SHEET_ID` | Google Sheets URL |
-| `GOOGLE_SERVICE_ACCOUNT_EMAIL` | GCP Console > IAM |
-| `GOOGLE_PRIVATE_KEY` | GCP Console > Service Account Keys |
-| `GOOGLE_GEMINI_API_KEY` | [Google AI Studio](https://aistudio.google.com/) |
-| `GMAIL_APP_PASSWORD` | [Google App Passwords](https://myaccount.google.com/apppasswords) |
+### Verifying Nothing Will Leak
 
-## Product Categories
+Run this command before pushing:
 
-### 1. Industrial Paints
-- Hot Thermoplastic Road Marking Paint *(detailed page)*
-- Cold Plastic Paint
-- Water Base Paint
+```bash
+# Check what files will be committed
+git status
 
-### 2. Metal Beam Crash Barriers
-- W Beam Crash Barrier *(detailed page)*
-- Thrie Beam
-- Double W Beam
-- Roller Crash Barrier
-- Attenuator
+# Verify .env files are NOT listed
+# Verify no .json credential files are listed
+# Verify no .pem or .key files are listed
+```
 
-### 3. Signages
-- **Retro Reflective Gantry Signage** *(detailed page)* - NEW
-- Gantry Signages
-- Cantilever Signages
-- Canopy Signages
-- Informatory Signages
+## API Endpoints
 
-### 4. Fabrication & Furniture
-- Metal Fabrication
-- School Furniture
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/contact/submit` | POST | Contact form → Google Sheets |
+| `/api/careers/submit` | POST | Career application with PDF resume |
+| `/api/chat/gemini` | POST | AI chatbot responses |
 
 ## Scripts
 
 ```bash
-# Development
-npm run dev          # Start dev server at localhost:3000
-
-# Production
+npm run dev          # Start development server
 npm run build        # Create production build
 npm run start        # Start production server
-
-# Linting
 npm run lint         # Run ESLint
 ```
+
+## Product Categories
+
+1. **Industrial Paints** - Hot Thermoplastic, Cold Plastic, Water Base
+2. **Metal Beam Crash Barriers** - W Beam, Thrie Beam, Roller Barrier
+3. **Signages** - Gantry, Cantilever, Canopy, Informatory
+4. **Fabrication & Furniture** - Metal Fabrication, School Furniture
 
 ## License
 
 **Proprietary** - All rights reserved by YNM Mega Industries Pvt Ltd.
 
-This codebase is proprietary software. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited.
+This codebase is proprietary software. Unauthorized copying, modification, distribution, or use is strictly prohibited.
 
 ## Contact
 
@@ -246,11 +256,11 @@ This codebase is proprietary software. Unauthorized copying, modification, distr
 
 | | |
 |---|---|
-| 🌐 Website | [ynmsafety.com](https://ynmsafety.com) |
-| 📧 Sales | sales@ynmsafety.com |
-| 📧 HR | hr@ynmsafety.com |
-| 📞 Phone | +91 96765 75770 |
-| 📍 Location | Hyderabad, Telangana, India |
+| Website | [ynmsafety.com](https://ynmsafety.com) |
+| Sales | sales@ynmsafety.com |
+| HR | hr@ynmsafety.com |
+| Phone | +91 96765 75770 |
+| Location | Hyderabad, Telangana, India |
 
 ---
 
