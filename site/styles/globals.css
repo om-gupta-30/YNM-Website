@@ -400,104 +400,55 @@ section, .ps, .srv, .brands, #why-choose-ynm, .testimonials-section, #testimonia
   animation-play-state: running !important;
 }
 
-/* ========================================
-   PERFORMANCE OPTIMIZATIONS
-   ======================================== */
-
-/* Disable tap highlight */
+/* Optimize scrolling performance */
 * {
   -webkit-tap-highlight-color: transparent;
-  box-sizing: border-box;
 }
 
-/* Optimize scrolling */
-html {
-  scroll-behavior: auto; /* Prefer JS smooth scroll for better control */
-}
-
+/* Smooth scrolling container */
 .scroll-container {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
 }
 
-/* Heavy scroll performance optimizations */
-.is-scrolling * {
-  scroll-behavior: auto !important;
+/* (Mascot removed) */
+
+/* GPU acceleration for all transforms */
+* {
+  box-sizing: border-box;
 }
 
-/* Pause non-essential animations during scroll */
-.is-scrolling .mascot-container,
-.is-scrolling .chatbot-toggle,
-.is-scrolling .floating-social-container,
-.is-scrolling .floating-quote-btn {
-  animation: none !important;
-  transition: none !important;
-}
-
-/* GPU layer promotion for fixed/animated elements - use sparingly */
-.standalone-navbar,
-#navbar,
-.chatbot-toggle,
-.chatbot-window,
-.floating-quote-btn,
-.mascot-container {
+/* Only apply will-change to elements that animate - optimize performance */
+[class*="card"]:hover,
+[class*="inner"]:hover,
+[class*="marquee"],
+.why-showcase-item,
+.employee-card,
+.why-showcase-icon,
+.why-showcase-item:hover {
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-/* Content visibility optimization - render off-screen content lazily */
-section {
-  contain: layout style;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 500px;
+/* Remove will-change when not animating to save resources */
+[class*="card"]:not(:hover),
+[class*="inner"]:not(:hover) {
+  will-change: auto;
 }
 
-/* Don't apply content-visibility to visible above-fold content */
-section:first-of-type,
-.hero-section,
-#hero,
-.contact-hero,
-.product-hero-section {
-  content-visibility: visible;
-  contain-intrinsic-size: none;
+/* Containment for layout stability */
+section {
+  contain: layout style;
 }
 
 /* Reduce paint complexity on fixed elements */
 [style*="position: fixed"],
 .fixed {
   contain: layout paint;
-}
-
-/* Optimize hover transitions - only apply will-change on interaction */
-[class*="card"],
-[class*="btn"],
-a {
-  will-change: auto;
-}
-
-[class*="card"]:hover,
-[class*="btn"]:hover,
-a:hover {
-  will-change: transform, opacity;
-}
-
-/* Optimize images */
-img {
-  content-visibility: auto;
-}
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 body {
@@ -599,7 +550,6 @@ section {
   border-bottom: 2px solid rgba(201, 162, 77, 0.5);
   overflow-x: hidden; /* clip ::before/::after so they don't cause horizontal page overflow */
   max-width: 100%;
-  pointer-events: auto;
 }
 
 #navbar::before {
@@ -686,8 +636,6 @@ section {
   display: flex;
   align-items: center;
   gap: 16px;
-  cursor: pointer;
-  pointer-events: auto;
   text-decoration: none;
   color: #fff;
   position: relative;
@@ -782,10 +730,9 @@ section {
   align-items: center;
   gap: 18px;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   overflow: visible;
   flex-wrap: nowrap;
-  pointer-events: auto;
 }
 
 /* Nav items horizontal in standalone navbar */
@@ -815,8 +762,6 @@ section {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  cursor: pointer;
-  pointer-events: auto;
   letter-spacing: 0.08em;
   white-space: nowrap;
   text-decoration: none;
@@ -909,7 +854,6 @@ section {
   box-shadow: 0 4px 30px rgba(116, 6, 13, 0.2);
   border-bottom: 2px solid rgba(201, 162, 77, 0.5);
   padding: 12px 30px;
-  pointer-events: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10685,10 +10629,9 @@ img {
   justify-content: center;
   transition: background 0.3s ease, border-color 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  z-index: 99998;
+  z-index: 9997;
   padding: 0;
   outline: none;
-  pointer-events: auto;
 }
 
 .chatbot-toggle:hover {
@@ -10740,12 +10683,11 @@ img {
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   border: 2px solid rgba(201, 162, 77, 0.5);
-  z-index: 99997;
+  z-index: 9996;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   animation: chatbotSlideUp 0.3s ease-out;
-  pointer-events: auto;
 }
 
 @keyframes chatbotSlideUp {
@@ -11625,664 +11567,4 @@ img {
   max-width: 100%;
   height: auto;
   image-rendering: -webkit-optimize-contrast;
-}
-
-/* ========================================
-   FABRICATION PRODUCTS - SIMPLE GRID DISPLAY
-   ======================================== */
-
-.fabrication-simple-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-  padding: 20px 0;
-}
-
-.fabrication-simple-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f5f0 100%);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(116, 6, 13, 0.08);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(201, 162, 77, 0.15);
-}
-
-.fabrication-simple-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(116, 6, 13, 0.12);
-  border-color: rgba(201, 162, 77, 0.3);
-}
-
-.fabrication-simple-image {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  background: linear-gradient(135deg, #f5efe9 0%, #e8dfd4 100%);
-}
-
-.fabrication-simple-image img {
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.fabrication-simple-card:hover .fabrication-simple-image img {
-  transform: scale(1.05);
-}
-
-.fabrication-simple-name {
-  padding: 16px 14px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #74060D;
-  text-align: center;
-  margin: 0;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(248,245,240,1) 100%);
-  line-height: 1.3;
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Responsive adjustments for fabrication grid */
-@media (max-width: 1200px) {
-  .fabrication-simple-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-}
-
-@media (max-width: 992px) {
-  .fabrication-simple-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .fabrication-simple-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  
-  .fabrication-simple-name {
-    font-size: 13px;
-    padding: 12px 10px;
-    min-height: 48px;
-  }
-}
-
-@media (max-width: 480px) {
-  .fabrication-simple-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-  
-  .fabrication-simple-card {
-    border-radius: 12px;
-  }
-  
-  .fabrication-simple-name {
-    font-size: 12px;
-    padding: 10px 8px;
-    min-height: 44px;
-  }
-}
-
-/* ========================================
-   COMPREHENSIVE LAPTOP RESPONSIVE STYLES
-   Covers: MacBook 13"/14"/16", Windows laptops
-   Screen widths: 1024px - 1920px
-   ======================================== */
-
-/* Extra Large Laptops (1680px - 1920px) - MacBook Pro 16", large monitors */
-@media (max-width: 1920px) and (min-width: 1680px) {
-  :root {
-    --container-max-width: 1600px;
-    --section-padding: 100px 60px;
-  }
-}
-
-/* Large Laptops (1536px - 1680px) - MacBook Pro 16" default */
-@media (max-width: 1680px) and (min-width: 1536px) {
-  :root {
-    --container-max-width: 1440px;
-    --section-padding: 80px 50px;
-  }
-  
-  /* Navbar adjustments */
-  #navbar, .standalone-navbar {
-    padding: 0 40px;
-  }
-  
-  .nav-link {
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-  }
-  
-  /* Hero section */
-  #hero-text h1 {
-    font-size: clamp(2.5rem, 4.5vw, 4rem);
-  }
-  
-  /* Section headings */
-  .section-title, h2 {
-    font-size: clamp(2rem, 3.5vw, 3rem);
-  }
-}
-
-/* Medium-Large Laptops (1440px - 1536px) - Common Windows resolution */
-@media (max-width: 1536px) and (min-width: 1440px) {
-  :root {
-    --container-max-width: 1320px;
-    --section-padding: 70px 40px;
-  }
-  
-  /* Navbar */
-  #navbar, .standalone-navbar {
-    padding: 0 32px;
-    height: 90px;
-  }
-  
-  .nav-link {
-    font-size: 0.7rem;
-    letter-spacing: 0.07em;
-  }
-  
-  .nav-links {
-    gap: 14px;
-  }
-  
-  /* Floating elements */
-  .floating-quote-btn {
-    top: 100px;
-    right: 20px;
-    padding: 14px 24px;
-    font-size: 14px;
-  }
-  
-  .chatbot-toggle {
-    width: 56px;
-    height: 56px;
-    bottom: 25px;
-    right: 25px;
-  }
-  
-  .chatbot-window {
-    width: 360px;
-    height: 550px;
-    bottom: 95px;
-    right: 25px;
-  }
-}
-
-/* Medium Laptops (1366px - 1440px) - MacBook Pro 14", common Windows */
-@media (max-width: 1440px) and (min-width: 1366px) {
-  :root {
-    --container-max-width: 1240px;
-    --section-padding: 60px 35px;
-  }
-  
-  /* Navbar compact */
-  #navbar, .standalone-navbar {
-    padding: 0 28px;
-    height: 85px;
-  }
-  
-  .nav-link {
-    font-size: 0.68rem;
-    letter-spacing: 0.06em;
-  }
-  
-  .nav-links {
-    gap: 12px;
-  }
-  
-  .nav-sep {
-    margin: 0 1px;
-  }
-  
-  /* Content adjustments */
-  .hero-btn {
-    padding: 14px 28px;
-    font-size: 13px;
-  }
-  
-  /* Grids */
-  .brands-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 14px;
-  }
-  
-  .usp-grid.why-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  
-  /* Cards */
-  .testimonial-card {
-    width: 320px;
-    padding: 28px;
-  }
-  
-  /* Floating elements */
-  .floating-quote-btn {
-    top: 95px;
-    right: 18px;
-    padding: 12px 20px;
-    font-size: 13px;
-  }
-  
-  .mascot-container {
-    transform: scale(0.9);
-    top: 110px;
-  }
-}
-
-/* Small-Medium Laptops (1280px - 1366px) - MacBook Air, 13" laptops */
-@media (max-width: 1366px) and (min-width: 1280px) {
-  :root {
-    --container-max-width: 1160px;
-    --section-padding: 55px 30px;
-  }
-  
-  /* Navbar more compact */
-  #navbar, .standalone-navbar {
-    padding: 0 24px;
-    height: 80px;
-  }
-  
-  .nav-link {
-    font-size: 0.65rem;
-    letter-spacing: 0.05em;
-  }
-  
-  .nav-links {
-    gap: 10px;
-  }
-  
-  .nav-logo-wrapper {
-    width: 48px;
-    height: 42px;
-  }
-  
-  /* Typography scaling */
-  #hero-text h1 {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-  }
-  
-  .section-title, h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-  }
-  
-  /* Grids */
-  .brands-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-  }
-  
-  .usp-grid.why-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .employees-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-  
-  /* Cards */
-  .testimonial-card {
-    width: 300px;
-    min-height: 280px;
-    padding: 24px;
-  }
-  
-  .employee-card {
-    padding: 24px;
-  }
-  
-  /* Floating elements */
-  .floating-quote-btn {
-    top: 90px;
-    right: 15px;
-    padding: 10px 18px;
-    font-size: 12px;
-    gap: 6px;
-  }
-  
-  .floating-quote-btn svg {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .chatbot-toggle {
-    width: 52px;
-    height: 52px;
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .chatbot-window {
-    width: 340px;
-    height: 500px;
-    bottom: 85px;
-    right: 20px;
-  }
-  
-  .mascot-container {
-    transform: scale(0.85);
-    top: 100px;
-    left: -160px;
-  }
-  
-  .mascot-bubble {
-    max-width: 260px;
-    font-size: 13px;
-  }
-}
-
-/* Small Laptops (1024px - 1280px) - Small Windows laptops, MacBook 12" */
-@media (max-width: 1280px) and (min-width: 1024px) {
-  :root {
-    --container-max-width: 960px;
-    --section-padding: 50px 25px;
-  }
-  
-  /* Navbar extra compact */
-  #navbar, .standalone-navbar {
-    padding: 0 20px;
-    height: 75px;
-  }
-  
-  .nav-link {
-    font-size: 0.6rem;
-    letter-spacing: 0.04em;
-  }
-  
-  .nav-links {
-    gap: 8px;
-  }
-  
-  .nav-sep {
-    display: none;
-  }
-  
-  .nav-logo-wrapper {
-    width: 44px;
-    height: 38px;
-  }
-  
-  /* Typography */
-  #hero-text h1 {
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  }
-  
-  .section-title, h2 {
-    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
-  }
-  
-  p, .text-body {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  
-  /* Hero */
-  .hero-btn {
-    padding: 12px 24px;
-    font-size: 12px;
-  }
-  
-  /* Grids - more compact */
-  .brands-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  .brand-tile {
-    padding: 15px;
-  }
-  
-  .usp-grid.why-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
-  
-  .employees-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  /* Cards */
-  .testimonial-card {
-    width: 280px;
-    min-height: 260px;
-    padding: 20px;
-  }
-  
-  .employee-card {
-    padding: 20px;
-  }
-  
-  /* Floating elements - smaller */
-  .floating-quote-btn {
-    top: 85px;
-    right: 12px;
-    padding: 8px 14px;
-    font-size: 11px;
-    gap: 5px;
-    border-radius: 10px;
-  }
-  
-  .floating-quote-btn svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .chatbot-toggle {
-    width: 48px;
-    height: 48px;
-    bottom: 15px;
-    right: 15px;
-  }
-  
-  .chatbot-window {
-    width: 320px;
-    height: 450px;
-    bottom: 75px;
-    right: 15px;
-    border-radius: 16px;
-  }
-  
-  .mascot-container {
-    transform: scale(0.75);
-    top: 90px;
-    left: -170px;
-  }
-  
-  .mascot-bubble {
-    max-width: 240px;
-    font-size: 12px;
-    padding: 14px;
-  }
-  
-  /* Footer */
-  .ft {
-    padding: 50px 25px;
-  }
-}
-
-/* ========================================
-   WINDOWS-SPECIFIC FIXES
-   ======================================== */
-
-/* Windows font rendering improvements */
-.platform-windows {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-.platform-windows body {
-  font-weight: 400;
-  letter-spacing: 0.01em;
-}
-
-/* Windows scrollbar - make it less obtrusive */
-.platform-windows ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.platform-windows ::-webkit-scrollbar-track {
-  background: rgba(116, 6, 13, 0.05);
-}
-
-.platform-windows ::-webkit-scrollbar-thumb {
-  background: rgba(201, 162, 77, 0.5);
-  border-radius: 4px;
-}
-
-/* Windows button and input fixes */
-.platform-windows button,
-.platform-windows input,
-.platform-windows textarea,
-.platform-windows select {
-  font-family: inherit;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Windows hover state fix (some Windows browsers have sticky hover) */
-@media (hover: hover) and (pointer: fine) {
-  .platform-windows [class*="card"]:hover,
-  .platform-windows [class*="btn"]:hover,
-  .platform-windows a:hover {
-    transition-duration: 0.2s;
-  }
-}
-
-/* Windows touch device hover fix */
-@media (hover: none) {
-  .platform-windows [class*="card"]:hover,
-  .platform-windows [class*="btn"]:hover {
-    transform: none;
-  }
-}
-
-/* Fix for Windows high contrast mode */
-@media (forced-colors: active) {
-  .hero-btn,
-  .nav-link,
-  .brand-tile,
-  .contact-btn,
-  .floating-quote-btn,
-  .chatbot-toggle {
-    border: 2px solid currentColor;
-    forced-color-adjust: none;
-  }
-}
-
-/* ========================================
-   VIEWPORT HEIGHT FIXES
-   For laptops with different aspect ratios
-   ======================================== */
-
-/* Short viewport (e.g., laptop with browser toolbars visible) */
-@media (max-height: 700px) {
-  #hero, .hero-section {
-    min-height: 100vh;
-    padding-top: 80px;
-  }
-  
-  #hero-text {
-    top: calc(50% + 40px);
-  }
-  
-  #hero-text h1 {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-  }
-  
-  .contact-hero {
-    height: 35vh;
-    min-height: 280px;
-  }
-  
-  .mascot-container {
-    display: none;
-  }
-  
-  .floating-quote-btn {
-    top: auto;
-    bottom: 80px;
-    right: 15px;
-  }
-}
-
-/* Very short viewport */
-@media (max-height: 600px) {
-  #hero, .hero-section {
-    min-height: 100vh;
-    padding-top: 70px;
-  }
-  
-  #hero-text h1 {
-    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-  }
-  
-  .hero-btn {
-    padding: 10px 20px;
-    font-size: 11px;
-  }
-  
-  /* Hide mascot on very short screens */
-  .mascot-container,
-  .floating-social-container {
-    display: none;
-  }
-}
-
-/* ========================================
-   COMBINED WIDTH + HEIGHT QUERIES
-   For specific laptop configurations
-   ======================================== */
-
-/* 13" MacBook (2560x1600 scaled, typically shows as ~1440x900) */
-@media (max-width: 1440px) and (max-height: 900px) {
-  .mascot-container {
-    transform: scale(0.8);
-    top: 95px;
-  }
-  
-  .chatbot-window {
-    max-height: calc(100vh - 160px);
-  }
-}
-
-/* 14" MacBook Pro (3024x1964 scaled, typically shows as ~1512x982) */
-@media (max-width: 1536px) and (max-height: 1000px) {
-  .chatbot-window {
-    max-height: calc(100vh - 150px);
-  }
-}
-
-/* Common Windows laptop (1366x768) */
-@media (max-width: 1366px) and (max-height: 768px) {
-  .mascot-container {
-    display: none;
-  }
-  
-  .floating-quote-btn {
-    padding: 8px 14px;
-    font-size: 11px;
-  }
-  
-  .chatbot-window {
-    height: calc(100vh - 140px);
-    max-height: 500px;
-  }
-  
-  #hero-text h1 {
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-  }
 }
