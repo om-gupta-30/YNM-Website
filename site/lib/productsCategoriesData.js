@@ -468,6 +468,423 @@ export const productsData = {
         icon: "🛣️",
         products: []
       },
+      bitumen: {
+        title: "Bitumen",
+        description: "High-performance paving grade bitumen for highways, expressways, and heavy traffic roads. Premium quality bitumen compliant with IS and ASTM standards.",
+        icon: "🛢️",
+        products: [
+          {
+            id: "bit1",
+            slug: "bitumen-vg-40-manufacturers",
+            name: "Bitumen VG 40",
+            shortDesc: "High-viscosity paving grade bitumen manufacturers for heavy traffic roads, highways & expressways.",
+            desc: "Premium paving grade bitumen VG 40 designed for high-temperature regions and heavy traffic load conditions.",
+            image: "/assets/Ynm safety bitumen manufactures.png",
+            heroImage: "/assets/Ynm safety bitumen manufactures.png",
+            specs: ["VG 40 Grade", "IS 73 Compliant", "ASTM Standards", "High Viscosity", "Heavy Traffic Roads"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Bitumen VG 40 Manufacturers & Suppliers | YNM Safety",
+              description: "Bitumen VG 40 manufacturers delivering high-performance paving grade bitumen for highways, expressways, and heavy traffic roads. YNM Safety supplies VG 40 bitumen compliant with ASTM & IS standards.",
+              slug: "/bitumen-vg-40-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the trusted Bitumen VG 40 manufacturers and suppliers, offering premium paving grade bitumen designed for high-temperature regions and heavy traffic load conditions. Bitumen VG 40 is widely used in the construction of national highways, expressways, airport runways, industrial roads, and high-stress pavements.\n\nOur VG 40 bitumen is manufactured and supplied with strict quality control to ensure superior viscosity, rutting resistance, and long service life. YNM Safety supplies bitumen VG 40 that delivers excellent performance in extreme climatic conditions and heavy axle loads.\n\nAs an experienced bitumen manufacturer and exporter, YNM Safety ensures compliance with IS 73, ASTM, and international standards, making our VG 40 bitumen suitable for both domestic and global infrastructure projects.",
+            detailedDescription: "YNM Safety is one of the trusted Bitumen VG 40 manufacturers and suppliers, offering premium paving grade bitumen designed for high-temperature regions and heavy traffic load conditions. Bitumen VG 40 is widely used in the construction of national highways, expressways, airport runways, industrial roads, and high-stress pavements.\n\nOur VG 40 bitumen is manufactured and supplied with strict quality control to ensure superior viscosity, rutting resistance, and long service life. YNM Safety supplies bitumen VG 40 that delivers excellent performance in extreme climatic conditions and heavy axle loads.\n\nAs an experienced bitumen manufacturer and exporter, YNM Safety ensures compliance with IS 73, ASTM, and international standards, making our VG 40 bitumen suitable for both domestic and global infrastructure projects.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Paving Grade Bitumen" },
+              { label: "Grade", value: "VG 40" },
+              { label: "Penetration", value: "40–60" },
+              { label: "Softening Point", value: "≥ 60°C" },
+              { label: "Flash Point", value: "≥ 220°C" },
+              { label: "Viscosity @ 60°C", value: "≥ 3200 Poise" },
+              { label: "Ductility @ 27°C", value: "≥ 25 cm" },
+              { label: "Compliance", value: "IS 73, ASTM" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing / Supply Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Packing Options",
+                value: "Bulk, Bitumen Drums",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "IS 73, MoRTH, ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "Project Based",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "27132000",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "Steel Drums / Bulk Tankers",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Paving Grade Bitumen",
+                "Grade: VG 40",
+                "Penetration: 40–60",
+                "Softening Point: ≥ 60°C",
+                "Flash Point: ≥ 220°C",
+                "Viscosity @ 60°C: ≥ 3200 Poise",
+                "Ductility @ 27°C: ≥ 25 cm",
+                "Application: Heavy traffic roads",
+                "Compliance: IS 73, ASTM",
+                "HSN Code: 27132000"
+              ],
+              keyFeatures: [
+                "High viscosity for heavy traffic conditions",
+                "Excellent resistance to rutting and deformation",
+                "Superior performance in high-temperature regions",
+                "Consistent quality and reliable supply",
+                "Complies with MoRTH & IS standards"
+              ],
+              advantages: [
+                "Enhances pavement durability",
+                "Reduces maintenance frequency",
+                "Improves road lifespan",
+                "Ideal for expressways & industrial roads",
+                "Trusted Bitumen VG 40 Manufacturer – YNM Safety"
+              ]
+            },
+            
+            features: [
+              "High viscosity for heavy traffic conditions",
+              "Excellent resistance to rutting and deformation",
+              "Superior performance in high-temperature regions",
+              "Consistent quality and reliable supply",
+              "Complies with MoRTH & IS standards"
+            ],
+            
+            advantages: [
+              "Enhances pavement durability",
+              "Reduces maintenance frequency",
+              "Improves road lifespan",
+              "Ideal for expressways & industrial roads",
+              "Trusted Bitumen VG 40 Manufacturer – YNM Safety"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "National Highways & Expressways",
+                description: "Bitumen VG 40 is widely used for national highways and expressways due to its high load-bearing capacity and durability.",
+                image: "/assets/YNM Safety National Highways & Expressways.png",
+                details: "VG 40 bitumen is specially designed for high-traffic highways exposed to heavy axle loads and varying climatic conditions. It provides excellent resistance to rutting, deformation, and moisture damage. This makes it ideal for long-life highway pavements and expressway construction."
+              },
+              {
+                id: "app2",
+                title: "Heavy-Traffic Corridors & Freight Routes",
+                description: "Bitumen VG 40 is ideal for heavy-traffic corridors and freight routes carrying continuous commercial vehicle movement.",
+                image: "/assets/YNM saftey Heavy-traffic corridors & freight routes.png",
+                details: "VG 40 bitumen offers superior stiffness and stability required for roads with high truck and container traffic. It minimizes cracking and permanent deformation under repetitive loads. This ensures longer pavement life and reduced maintenance costs on freight corridors."
+              },
+              {
+                id: "app3",
+                title: "Toll Plazas & Intersections",
+                description: "Bitumen VG 40 is preferred for toll plazas and intersections where roads face extreme braking and turning stress.",
+                image: "/assets/YNM Safety Toll Plazas & Intersections.png",
+                details: "High-stress zones demand a bitumen grade with excellent resistance to shear forces and surface wear. VG 40 bitumen maintains structural integrity under frequent stop-and-go traffic conditions. It helps prevent rutting, shoving, and surface failures at critical junctions."
+              },
+              {
+                id: "app4",
+                title: "Industrial Roads & Corridors",
+                description: "Bitumen VG 40 is extensively used in industrial roads designed for heavy machinery and loaded vehicles.",
+                image: "/assets/YNM safety Industrial roads & Corridors.png",
+                details: "Industrial corridors require pavements that can withstand heavy axle loads and slow-moving traffic. VG 40 bitumen provides strong binding and high temperature stability. It ensures reliable performance in industrial zones and manufacturing hubs."
+              },
+              {
+                id: "app5",
+                title: "Port Roads & Container Yards",
+                description: "Bitumen VG 40 is suitable for port roads and container yards handling constant heavy container movement.",
+                image: "/assets/YNM Safety Port roads & Container yards.png",
+                details: "Port infrastructure demands high-performance bitumen capable of resisting deformation under extreme loads. VG 40 bitumen delivers excellent strength and durability for container terminals. It supports long-term pavement performance in coastal and high-load environments."
+              },
+              {
+                id: "app6",
+                title: "Airport Runways, Taxiways & Aprons",
+                description: "Bitumen VG 40 is used in airport runways, taxiways, and aprons requiring high structural strength.",
+                image: "/assets/YNM safety Airport runways , taxiways & aprons.png",
+                details: "Airport pavements are subjected to very high static and dynamic loads from aircraft operations. VG 40 bitumen offers superior stability, adhesion, and temperature resistance. It ensures safe, durable, and long-lasting airside pavement performance."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "National Highways & Expressways",
+                short: "Bitumen VG 40 is widely used for national highways and expressways due to its high load-bearing capacity and durability.",
+                hover: "VG 40 bitumen is specially designed for high-traffic highways exposed to heavy axle loads and varying climatic conditions. It provides excellent resistance to rutting, deformation, and moisture damage. This makes it ideal for long-life highway pavements and expressway construction.",
+                image: "/assets/YNM Safety National Highways & Expressways.png"
+              },
+              {
+                title: "Heavy-Traffic Corridors & Freight Routes",
+                short: "Bitumen VG 40 is ideal for heavy-traffic corridors and freight routes carrying continuous commercial vehicle movement.",
+                hover: "VG 40 bitumen offers superior stiffness and stability required for roads with high truck and container traffic. It minimizes cracking and permanent deformation under repetitive loads. This ensures longer pavement life and reduced maintenance costs on freight corridors.",
+                image: "/assets/YNM saftey Heavy-traffic corridors & freight routes.png"
+              },
+              {
+                title: "Toll Plazas & Intersections",
+                short: "Bitumen VG 40 is preferred for toll plazas and intersections where roads face extreme braking and turning stress.",
+                hover: "High-stress zones demand a bitumen grade with excellent resistance to shear forces and surface wear. VG 40 bitumen maintains structural integrity under frequent stop-and-go traffic conditions. It helps prevent rutting, shoving, and surface failures at critical junctions.",
+                image: "/assets/YNM Safety Toll Plazas & Intersections.png"
+              },
+              {
+                title: "Industrial Roads & Corridors",
+                short: "Bitumen VG 40 is extensively used in industrial roads designed for heavy machinery and loaded vehicles.",
+                hover: "Industrial corridors require pavements that can withstand heavy axle loads and slow-moving traffic. VG 40 bitumen provides strong binding and high temperature stability. It ensures reliable performance in industrial zones and manufacturing hubs.",
+                image: "/assets/YNM safety Industrial roads & Corridors.png"
+              },
+              {
+                title: "Port Roads & Container Yards",
+                short: "Bitumen VG 40 is suitable for port roads and container yards handling constant heavy container movement.",
+                hover: "Port infrastructure demands high-performance bitumen capable of resisting deformation under extreme loads. VG 40 bitumen delivers excellent strength and durability for container terminals. It supports long-term pavement performance in coastal and high-load environments.",
+                image: "/assets/YNM Safety Port roads & Container yards.png"
+              },
+              {
+                title: "Airport Runways, Taxiways & Aprons",
+                short: "Bitumen VG 40 is used in airport runways, taxiways, and aprons requiring high structural strength.",
+                hover: "Airport pavements are subjected to very high static and dynamic loads from aircraft operations. VG 40 bitumen offers superior stability, adhesion, and temperature resistance. It ensures safe, durable, and long-lasting airside pavement performance.",
+                image: "/assets/YNM safety Airport runways , taxiways & aprons.png"
+              }
+            ],
+            
+            // Customer Success Stories / Projects
+            projects: [
+              {
+                id: "proj1",
+                title: "GMR Pochanpalli Expressways Limited",
+                client: "GMR Pochanpalli Expressways Limited",
+                location: "Telangana",
+                description: "Supplied premium Bitumen VG 40 for expressway construction project. Our high-quality bitumen provided excellent durability and performance for this major infrastructure project.",
+                quantity: "2 tons",
+                year: "2024",
+                highlight: "100%",
+                highlightLabel: "Quality Compliance",
+                logo: "/assets/grm.jpg"
+              }
+            ],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Bitumen VG 40 Market Growth | YNM Safety",
+              description: "The global bitumen market is valued at approximately USD 80–90 billion and is projected to grow at a 4–6% CAGR through 2030. Growth is driven by large-scale highway development, airport expansion, urban road projects, and increased government infrastructure investments.",
+              cagr: "4-6%",
+              growthFactors: [
+                "Rapid expansion of highways, expressways, and national road corridors",
+                "Increasing heavy commercial vehicle and freight traffic",
+                "Demand for high-viscosity bitumen suitable for high-temperature regions",
+                "Government investment in long-lasting and low-maintenance road infrastructure",
+                "Preference for VG 40 in heavy axle load and industrial road applications",
+                "Growth of airport, port, and logistics infrastructure projects"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$85B",
+                projectedMarketSize: "$120B",
+                currentYear: "2024",
+                projectedYear: "2030",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 40, color: "#74060D" },
+                { region: "North America", value: 20, color: "#9A1B2E" },
+                { region: "Europe", value: 18, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 14, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 72 },
+                { year: "2022", value: 76 },
+                { year: "2023", value: 80 },
+                { year: "2024", value: 85 },
+                { year: "2025", value: 95 },
+                { year: "2026", value: 105 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "France", "United Kingdom", "Italy", "Spain"]
+                },
+                {
+                  name: "Asia-Pacific",
+                  countries: ["India", "China", "Japan", "South Korea", "Indonesia"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates (UAE)", "Saudi Arabia", "South Africa", "Nigeria", "Egypt"]
+                },
+                {
+                  name: "South America",
+                  countries: ["Brazil", "Argentina", "Chile", "Ecuador", "Venezuela"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures and supplies Bitumen VG 40 through a controlled, quality-driven process to ensure excellent viscosity, durability, and compliance with IS 73 and ASTM standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Selection",
+                description: "The manufacturing of Bitumen VG 40 begins with the selection of high-quality crude oil sourced from approved refineries. Crude oil with suitable hydrocarbon composition is chosen to ensure optimal viscosity, durability, and performance in heavy-traffic applications."
+              },
+              {
+                step: "02",
+                title: "Crude Oil Distillation",
+                description: "The selected crude oil is processed in a refinery through atmospheric distillation. During this process, lighter fractions such as petrol, diesel, and kerosene are separated, leaving behind heavy residue known as vacuum residue, which forms the base material for bitumen production."
+              },
+              {
+                step: "03",
+                title: "Vacuum Distillation & Refining",
+                description: "The vacuum residue undergoes further vacuum distillation to remove remaining lighter components at controlled temperatures. This step helps achieve the desired penetration and viscosity characteristics required for VG 40 grade bitumen."
+              },
+              {
+                step: "04",
+                title: "Air Blowing / Oxidation Process",
+                description: "The refined residue is subjected to a controlled air blowing (oxidation) process. Hot air is passed through the material to improve stiffness, elasticity, and temperature resistance. This process enhances the rheological properties of bitumen, making it suitable for heavy-duty pavements."
+              },
+              {
+                step: "05",
+                title: "Viscosity Grade Adjustment (VG 40)",
+                description: "The bitumen is carefully monitored and tested to meet VG 40 specifications as per IS:73 standards. Parameters such as viscosity at 60°C, penetration value, softening point, and ductility are adjusted to ensure consistent quality and performance."
+              },
+              {
+                step: "06",
+                title: "Quality Testing & Laboratory Analysis",
+                description: "Each batch of Bitumen VG 40 undergoes stringent quality control tests, including viscosity test, penetration test, softening point test, ductility test, and flash & fire point test. Only material that meets standard specifications is approved for dispatch."
+              },
+              {
+                step: "07",
+                title: "Storage in Heated Tanks",
+                description: "Finished Bitumen VG 40 is stored in insulated, temperature-controlled storage tanks. Continuous heating ensures proper flow characteristics and prevents solidification before loading."
+              },
+              {
+                step: "08",
+                title: "Packaging & Loading",
+                description: "Bitumen VG 40 is packed and dispatched in various forms based on customer requirements: Bulk supply through heated bitumen tankers, Steel drums, and Bitumen bags (as per project needs). All packaging is handled under strict safety and handling procedures."
+              },
+              {
+                step: "09",
+                title: "Dispatch & Transportation",
+                description: "The final product is dispatched with proper documentation, including test certificates and batch details. Transportation is carried out using approved tankers to ensure temperature maintenance and product integrity until delivery at the project site."
+              },
+              {
+                step: "10",
+                title: "End-Use Application",
+                description: "Once delivered, Bitumen VG 40 is used for road construction in national highways, expressways, industrial roads, toll plazas, ports, and airport pavements where high load-bearing capacity is required."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 51,
+              currency: "INR",
+              unit: "per kg",
+              displayPrice: "₹51 per kg (Market Linked)",
+              packageSizes: [
+                { size: "Bulk Tanker", priceINR: 51, moq: 1000 },
+                { size: "Steel Drums", priceINR: 53, moq: 500 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 5000, discount: 2 },
+                { minQuantity: 10000, discount: 4 },
+                { minQuantity: 25000, discount: 6 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "60,000 MT",
+              productionSpeed: "5,000 MT",
+              qualityStandards: "IS 73, ASTM",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "is-73",
+                title: "IS 73",
+                description: "Indian Standard for Paving Bitumen Specification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "morth",
+                title: "MoRTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "astm",
+                title: "ASTM",
+                description: "American Society for Testing and Materials Standards",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "layers"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/Ynm safety bitumen manufactures.png",
+              "/assets/YNM Safety National Highways & Expressways.png",
+              "/assets/YNM saftey Heavy-traffic corridors & freight routes.png",
+              "/assets/YNM Safety Toll Plazas & Intersections.png",
+              "/assets/YNM safety Industrial roads & Corridors.png",
+              "/assets/YNM Safety Port roads & Container yards.png",
+              "/assets/YNM safety Airport runways , taxiways & aprons.png"
+            ]
+          }
+        ]
+      },
       "crash-barriers": {
         title: "Metal Beam Crash Barriers",
         description: "High-strength metal beam crash barriers and W-beam guardrails for highways and expressways. Engineered for maximum impact resistance.",
@@ -1378,7 +1795,247 @@ export const productsData = {
         title: "Fabrication",
         description: "Custom steel and metal fabrication solutions. From structural components to precision-engineered parts for all industrial needs.",
         icon: "⚙️",
-        products: []
+        simpleDisplay: true, // Flag for simplified display (only name and photo)
+        products: [
+          {
+            id: "fab1",
+            name: "Sign Board Structures",
+            desc: "Custom fabricated sign board structures for highways and roads.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Steel Structure", "Custom Design", "Durable"]
+          },
+          {
+            id: "fab2",
+            name: "Cantilever Structures",
+            desc: "Heavy-duty cantilever structures for road signage applications.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Cantilever Design", "High Strength", "Weather Resistant"]
+          },
+          {
+            id: "fab3",
+            name: "Gantry Structures",
+            desc: "Overhead gantry structures for highway signage systems.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Overhead Design", "Large Span", "Heavy Duty"]
+          },
+          {
+            id: "fab4",
+            name: "VMS Structures",
+            desc: "Variable Message Sign structures for intelligent transportation.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["VMS Compatible", "Modular", "Sturdy Construction"]
+          },
+          {
+            id: "fab5",
+            name: "ITMS Structures",
+            desc: "Intelligent Traffic Management System structures.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["ITMS Ready", "Smart Integration", "Durable"]
+          },
+          {
+            id: "fab6",
+            name: "Street Light Poles",
+            desc: "Galvanized street light poles for urban lighting.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Galvanized", "Multiple Heights", "Corrosion Resistant"]
+          },
+          {
+            id: "fab7",
+            name: "Solar Light Poles",
+            desc: "Solar-ready light poles for eco-friendly lighting solutions.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Solar Compatible", "Energy Efficient", "Sustainable"]
+          },
+          {
+            id: "fab8",
+            name: "High Mast",
+            desc: "High mast lighting poles for large area illumination.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["High Rise", "Wide Coverage", "Stadium Grade"]
+          },
+          {
+            id: "fab9",
+            name: "Scaffolding Parts",
+            desc: "Quality scaffolding components for construction sites.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Safety Certified", "Modular", "Easy Assembly"]
+          },
+          {
+            id: "fab10",
+            name: "Shuttering Materials",
+            desc: "Concrete shuttering materials for construction projects.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Heavy Duty", "Reusable", "Precision Made"]
+          },
+          {
+            id: "fab11",
+            name: "Cup Lock",
+            desc: "Cup lock scaffolding system components.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Quick Lock", "Versatile", "Strong Connection"]
+          },
+          {
+            id: "fab12",
+            name: "Ledger",
+            desc: "Scaffolding ledgers for horizontal bracing.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Standard Sizes", "Galvanized", "High Load Capacity"]
+          },
+          {
+            id: "fab13",
+            name: "Base Jack",
+            desc: "Adjustable base jacks for scaffolding leveling.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Adjustable Height", "Heavy Load", "Threaded Rod"]
+          },
+          {
+            id: "fab14",
+            name: "I-Girders",
+            desc: "Steel I-Girders for bridge and infrastructure construction.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["High Strength", "Bridge Grade", "Custom Lengths"]
+          },
+          {
+            id: "fab15",
+            name: "RE Panel Moulds",
+            desc: "Reinforced Earth panel moulds for retaining walls.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Precision Cast", "Durable", "Multiple Sizes"]
+          },
+          {
+            id: "fab16",
+            name: "Foot Over Bridges",
+            desc: "Prefabricated foot over bridge structures.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Pedestrian Safe", "Modular Design", "Quick Assembly"]
+          },
+          {
+            id: "fab17",
+            name: "Gabion Wire Mesh",
+            desc: "Gabion wire mesh for erosion control and retaining walls.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Galvanized Wire", "Corrosion Resistant", "Flexible"]
+          },
+          {
+            id: "fab18",
+            name: "Bridge Bearings",
+            desc: "Elastomeric and metallic bridge bearings.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Load Distribution", "Movement Absorption", "Long Life"]
+          },
+          {
+            id: "fab19",
+            name: "Anchor Cones",
+            desc: "Precast concrete anchor cones for construction.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Precise Dimensions", "Easy Installation", "Reusable"]
+          },
+          {
+            id: "fab20",
+            name: "Open Web Bridge Girders",
+            desc: "Open web steel girders for bridge construction.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Lightweight", "High Span", "Cost Effective"]
+          },
+          {
+            id: "fab21",
+            name: "Modular Pontoon",
+            desc: "Modular floating pontoon systems.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Floating Platform", "Interlocking", "Marine Grade"]
+          },
+          {
+            id: "fab22",
+            name: "Expansion Joints",
+            desc: "Bridge and road expansion joints.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Thermal Movement", "Waterproof", "Durable"]
+          },
+          {
+            id: "fab23",
+            name: "Pedestrian Guardrails",
+            desc: "Safety guardrails for pedestrian pathways.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Safety Barrier", "Aesthetic Design", "Galvanized"]
+          },
+          {
+            id: "fab24",
+            name: "Noise Barriers",
+            desc: "Sound barrier panels for highways and railways.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Noise Reduction", "Weather Proof", "Easy Install"]
+          },
+          {
+            id: "fab25",
+            name: "Adjustable Prop Jack",
+            desc: "Adjustable prop jacks for slab support.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Height Adjustable", "Heavy Load", "Easy Operation"]
+          },
+          {
+            id: "fab26",
+            name: "Barricading Boards",
+            desc: "Traffic barricading boards for road safety.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["High Visibility", "Reflective", "Portable"]
+          },
+          {
+            id: "fab27",
+            name: "Heavy Duty Racks",
+            desc: "Industrial heavy duty storage racks.",
+            image: "/assets/product-industrial-racking.png",
+            specs: ["High Capacity", "Warehouse Grade", "Adjustable"]
+          },
+          {
+            id: "fab28",
+            name: "Slotted Angle Racks",
+            desc: "Versatile slotted angle storage racks.",
+            image: "/assets/product-industrial-racking.png",
+            specs: ["Modular Design", "Easy Assembly", "Cost Effective"]
+          },
+          {
+            id: "fab29",
+            name: "Camera Poles",
+            desc: "CCTV and surveillance camera mounting poles.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Multiple Heights", "Galvanized", "Sturdy Base"]
+          },
+          {
+            id: "fab30",
+            name: "Parking Signages",
+            desc: "Parking lot signage structures and boards.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Reflective", "Weather Resistant", "Clear Marking"]
+          },
+          {
+            id: "fab31",
+            name: "Solar Panel Structures / Frames",
+            desc: "Mounting structures and frames for solar panels.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Solar Mounting", "Tilt Adjustable", "Corrosion Resistant"]
+          },
+          {
+            id: "fab32",
+            name: "Railway Structures",
+            desc: "Steel structures for railway infrastructure.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Railway Grade", "Heavy Duty", "Safety Certified"]
+          },
+          {
+            id: "fab33",
+            name: "GI Dustbins",
+            desc: "Galvanized iron dustbins for public spaces.",
+            image: "/assets/product-structural-steel.png",
+            specs: ["Galvanized", "Durable", "Easy Clean"]
+          },
+          {
+            id: "fab34",
+            name: "Rickshaw",
+            desc: "Custom fabricated rickshaw frames and parts.",
+            image: "/assets/product-custom-metal-enclosure.png",
+            specs: ["Custom Design", "Lightweight", "Sturdy Frame"]
+          }
+        ]
       },
       furniture: {
         title: "School Furniture",

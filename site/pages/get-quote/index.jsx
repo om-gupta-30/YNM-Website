@@ -1878,7 +1878,33 @@ ${formData.message || "None"}
           min-width: 18px;
         }
 
-        /* Responsive */
+        /* Responsive - Laptop breakpoints */
+        @media (max-width: 1440px) and (min-width: 1200px) {
+          .quote-container {
+            max-width: 1100px;
+            gap: 50px;
+          }
+          
+          .quote-form-wrapper {
+            padding: 40px;
+          }
+        }
+        
+        @media (max-width: 1200px) and (min-width: 1024px) {
+          .quote-container {
+            max-width: 960px;
+            gap: 40px;
+          }
+          
+          .quote-form-wrapper {
+            padding: 35px;
+          }
+          
+          .quote-benefits {
+            padding: 30px;
+          }
+        }
+
         @media (max-width: 1024px) {
           .quote-container {
             grid-template-columns: 1fr;

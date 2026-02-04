@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, memo } from "react";
 import Image from "next/image";
 
 // Company facts and prompts the mascot will share
@@ -12,47 +12,19 @@ const mascotPrompts = [
   "⭐ Premium raw materials used in manufacturing road marking paints & highway safety products!",
 ];
 
-export default function Mascot() {
+function Mascot() {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPrompt, setCurrentPrompt] = useState("");
   const [showBubble, setShowBubble] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const scrollYRef = useRef(0);
-  const rafIdRef = useRef(null);
   const containerRef = useRef(null);
+  const promptIndexRef = useRef(0);
 
-  // Get random prompt
-  const getRandomPrompt = useCallback(() => {
-    const randomIndex = Math.floor(Math.random() * mascotPrompts.length);
-    return mascotPrompts[randomIndex];
-  }, []);
-
-  // Optimized scroll tracking using RAF - updates transform directly without state
-  useEffect(() => {
-    let ticking = false;
-    
-    const updatePosition = () => {
-      if (containerRef.current) {
-        const bounceOffset = Math.sin(scrollYRef.current * 0.01) * 3;
-        containerRef.current.style.transform = `translateY(${bounceOffset}px)`;
-      }
-      ticking = false;
-    };
-
-    const handleScroll = () => {
-      scrollYRef.current = window.scrollY;
-      
-      if (!ticking) {
-        rafIdRef.current = requestAnimationFrame(updatePosition);
-        ticking = true;
-      }
-    };
-    
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
-    };
+  // Get next prompt (sequential instead of random for better UX)
+  const getNextPrompt = useCallback(() => {
+    const prompt = mascotPrompts[promptIndexRef.current];
+    promptIndexRef.current = (promptIndexRef.current + 1) % mascotPrompts.length;
+    return prompt;
   }, []);
 
   // Show mascot after page loads with pop-in animation
@@ -61,28 +33,28 @@ export default function Mascot() {
       setIsVisible(true);
       // Show first prompt after mascot appears
       setTimeout(() => {
-        setCurrentPrompt(getRandomPrompt());
+        setCurrentPrompt(getNextPrompt());
         setShowBubble(true);
-      }, 600); // Delay bubble to appear after mascot pops in
-    }, 1500);
+      }, 600);
+    }, 2000); // Increased delay for better initial page load
 
     return () => clearTimeout(timer);
-  }, [getRandomPrompt]);
+  }, [getNextPrompt]);
 
-  // Auto-rotate prompts every 5 seconds
+  // Auto-rotate prompts every 8 seconds (increased from 5 for less distraction)
   useEffect(() => {
     if (!isVisible || isMinimized) return;
 
     const interval = setInterval(() => {
       setShowBubble(false);
       setTimeout(() => {
-        setCurrentPrompt(getRandomPrompt());
+        setCurrentPrompt(getNextPrompt());
         setShowBubble(true);
       }, 300);
-    }, 5000); // 5 seconds
+    }, 8000);
 
     return () => clearInterval(interval);
-  }, [isVisible, isMinimized, getRandomPrompt]);
+  }, [isVisible, isMinimized, getNextPrompt]);
 
   // Handle mascot click - show new prompt
   const handleMascotClick = () => {
@@ -145,3 +117,5 @@ export default function Mascot() {
     </div>
   );
 }
+
+export default memo(Mascot);

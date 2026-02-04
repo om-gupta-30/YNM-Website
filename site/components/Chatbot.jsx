@@ -1,9 +1,32 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { faqData, productCatalog, contactLinks } from "@/lib/chatbotData";
 import Image from "next/image";
 import Link from "next/link";
+
+// Simple response cache to prevent duplicate API calls
+const responseCache = new Map();
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+// Rate limiting
+const RATE_LIMIT_WINDOW = 60000; // 1 minute
+const MAX_REQUESTS_PER_WINDOW = 10;
+let requestCount = 0;
+let windowStart = Date.now();
+
+const checkRateLimit = () => {
+  const now = Date.now();
+  if (now - windowStart > RATE_LIMIT_WINDOW) {
+    windowStart = now;
+    requestCount = 0;
+  }
+  if (requestCount >= MAX_REQUESTS_PER_WINDOW) {
+    return false;
+  }
+  requestCount++;
+  return true;
+};
 
 export default function Chatbot() {
   const language = 'en';
@@ -21,6 +44,7 @@ export default function Chatbot() {
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
   const chatSessionId = useRef(`chat_${Date.now()}`);
+  const abortControllerRef = useRef(null);
 
   // Quick action options
   const quickActions = [
@@ -32,7 +56,16 @@ export default function Chatbot() {
     { label: "Location", query: "Where is your office located?", action: null },
   ];
 
-  // Load conversation history from localStorage
+  // Cleanup abort controller on unmount
+  useEffect(() => {
+    return () => {
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
+    };
+  }, []);
+
+  // Load conversation history from localStorage - only on mount
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const savedMessages = localStorage.getItem(`chatbot_messages_${chatSessionId.current}`);
@@ -59,7 +92,8 @@ export default function Chatbot() {
         setMessages([initialMessage]);
       }
     }
-  }, [language]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Save conversation history to localStorage
   useEffect(() => {
@@ -300,7 +334,7 @@ export default function Chatbot() {
   };
 
   // Handle quick action click
-  const handleQuickAction = async (query, action = null) => {
+  const handleQuickAction = useCallback(async (query, action = null) => {
     setShowQuickActions(false);
     
     // Handle special actions
@@ -317,30 +351,48 @@ export default function Chatbot() {
     };
     setMessages(prev => [...prev, userMessage]);
     
+    // Check rate limit
+    if (!checkRateLimit()) {
+      const rateLimitMessage = {
+        id: Date.now() + 1,
+        text: "You're sending messages too quickly. Please wait a moment before trying again.",
+        sender: "bot",
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, rateLimitMessage]);
+      setShowQuickActions(true);
+      return;
+    }
+    
+    // Check cache first
+    const cacheKey = query.toLowerCase().trim();
+    const cachedResponse = responseCache.get(cacheKey);
+    if (cachedResponse && (Date.now() - cachedResponse.timestamp < CACHE_TTL)) {
+      const botMessage = {
+        id: Date.now() + 1,
+        text: cachedResponse.response,
+        sender: "bot",
+        timestamp: new Date(),
+        followUpQuestions: generateFollowUpQuestions(cachedResponse.response)
+      };
+      setMessages(prev => [...prev, botMessage]);
+      setShowQuickActions(true);
+      return;
+    }
+    
     setIsTyping(true);
     setError(null);
     
+    // Cancel any pending request
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+    abortControllerRef.current = new AbortController();
+    
     try {
-      // Skip FAQ check - let AI handle all responses for better answers
-      // const faqAnswer = checkFAQ(query);
-      // if (faqAnswer) {
-      //   setTimeout(() => {
-      //     const botMessage = {
-      //       id: Date.now() + 1,
-      //       text: faqAnswer,
-      //       sender: "bot",
-      //       timestamp: new Date()
-      //     };
-      //     setMessages(prev => [...prev, botMessage]);
-      //     setShowQuickActions(true);
-      //     setIsTyping(false);
-      //   }, 500);
-      //   return;
-      // }
-
       const conversationHistory = messages
         .filter(msg => msg && msg.id !== 1 && msg.text && msg.sender)
-        .slice(-10)
+        .slice(-6) // Reduced from 10 to 6 for faster responses
         .map(msg => ({
           sender: msg.sender,
           text: String(msg.text).trim()
@@ -357,6 +409,7 @@ export default function Chatbot() {
           conversationHistory: conversationHistory,
           language: language || 'en'
         }),
+        signal: abortControllerRef.current.signal
       });
 
       if (!response.ok) {
@@ -381,6 +434,12 @@ export default function Chatbot() {
         throw new Error('Invalid response from AI');
       }
 
+      // Cache the response
+      responseCache.set(cacheKey, {
+        response: data.response,
+        timestamp: Date.now()
+      });
+
       const botMessage = {
         id: Date.now() + 1,
         text: data.response,
@@ -392,6 +451,8 @@ export default function Chatbot() {
       setMessages(prev => [...prev, botMessage]);
       setShowQuickActions(true);
     } catch (err) {
+      if (err.name === 'AbortError') return; // Ignore abort errors
+      
       console.error('Error getting AI response:', err);
       setError(err.message || 'Failed to get response. Please try again.');
       
@@ -406,10 +467,10 @@ export default function Chatbot() {
     } finally {
       setIsTyping(false);
     }
-  };
+  }, [messages, language]);
 
   // Handle sending message with Gemini API
-  const handleSend = async (e) => {
+  const handleSend = useCallback(async (e) => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
     
@@ -426,31 +487,33 @@ export default function Chatbot() {
     const currentInput = messageToSend;
     setInputValue("");
     setShowQuickActions(false);
+    
+    // Check rate limit
+    if (!checkRateLimit()) {
+      const rateLimitMessage = {
+        id: Date.now() + 1,
+        text: "You're sending messages too quickly. Please wait a moment before trying again.",
+        sender: "bot",
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, rateLimitMessage]);
+      setShowQuickActions(true);
+      return;
+    }
+    
     setIsTyping(true);
     setError(null);
+    
+    // Cancel any pending request
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+    abortControllerRef.current = new AbortController();
 
     try {
-      // Skip FAQ check - let AI handle all responses for better answers
-      // const faqAnswer = checkFAQ(currentInput);
-      // if (faqAnswer) {
-      //   setTimeout(() => {
-      //     const botMessage = {
-      //       id: Date.now() + 1,
-      //       text: faqAnswer,
-      //       sender: "bot",
-      //       timestamp: new Date(),
-      //       followUpQuestions: generateFollowUpQuestions(faqAnswer)
-      //     };
-      //     setMessages(prev => [...prev, botMessage]);
-      //     setShowQuickActions(true);
-      //     setIsTyping(false);
-      //   }, 500);
-      //   return;
-      // }
-
       const conversationHistory = messages
         .filter(msg => msg && msg.id !== 1 && msg.text && msg.sender)
-        .slice(-10)
+        .slice(-6) // Reduced from 10 to 6 for faster responses
         .map(msg => ({
           sender: msg.sender,
           text: String(msg.text).trim()
@@ -467,6 +530,7 @@ export default function Chatbot() {
           conversationHistory: conversationHistory,
           language: language || 'en'
         }),
+        signal: abortControllerRef.current.signal
       });
 
       if (!response.ok) {
@@ -513,6 +577,8 @@ export default function Chatbot() {
       
       setShowQuickActions(true);
     } catch (err) {
+      if (err.name === 'AbortError') return; // Ignore abort errors
+      
       console.error('Error getting AI response:', err);
       setError(err.message || 'Failed to get response. Please try again.');
       
@@ -527,7 +593,7 @@ export default function Chatbot() {
     } finally {
       setIsTyping(false);
     }
-  };
+  }, [inputValue, isTyping, messages, language]);
 
   // Toggle chat
   const toggleChat = () => {

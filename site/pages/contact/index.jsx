@@ -360,9 +360,18 @@ export default function ContactPage() {
                   ))}
                 </div>
               </div>
-
-              <IndiaPresenceMap />
             </div>
+          </div>
+        </section>
+
+        {/* India Presence Map Section - Full Width */}
+        <section className="india-map-section">
+          <div className="india-map-wrapper">
+            <div className="india-map-header">
+              <h2>Our Presence Across India</h2>
+              <p>Click on any state to view our regional contacts and representatives</p>
+            </div>
+            <IndiaPresenceMap />
           </div>
         </section>
       </main>
@@ -448,6 +457,7 @@ export default function ContactPage() {
           display: grid;
           grid-template-columns: 1.2fr 1fr;
           gap: 60px;
+          align-items: start;
         }
 
         /* Form Wrapper */
@@ -809,7 +819,87 @@ export default function ContactPage() {
           border-color: var(--social-color);
         }
 
-        /* Responsive */
+        /* India Map Section */
+        .india-map-section {
+          padding: 60px 24px 80px;
+          background: linear-gradient(180deg, #E6D3A3 0%, #F7F3EA 100%);
+        }
+
+        .india-map-wrapper {
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+
+        .india-map-header {
+          text-align: center;
+          margin-bottom: 32px;
+        }
+
+        .india-map-header h2 {
+          font-size: 32px;
+          font-weight: 700;
+          color: #74060D;
+          margin-bottom: 10px;
+        }
+
+        .india-map-header p {
+          font-size: 16px;
+          color: #666;
+        }
+
+        /* Responsive - Laptop Breakpoints */
+        
+        /* Medium laptops (1366px - 1440px) */
+        @media (max-width: 1440px) and (min-width: 1200px) {
+          .contact-container {
+            max-width: 1100px;
+            gap: 50px;
+          }
+          
+          .contact-form-wrapper {
+            padding: 40px;
+          }
+          
+          .contact-form-header h2 {
+            font-size: 26px;
+          }
+        }
+        
+        /* Small laptops (1024px - 1200px) */
+        @media (max-width: 1200px) and (min-width: 1024px) {
+          .contact-container {
+            max-width: 960px;
+            gap: 40px;
+            grid-template-columns: 1.1fr 1fr;
+          }
+          
+          .contact-form-wrapper {
+            padding: 35px;
+          }
+          
+          .contact-form-header h2 {
+            font-size: 24px;
+          }
+          
+          .detail-item {
+            padding: 14px 0;
+          }
+          
+          .detail-icon {
+            width: 44px;
+            height: 44px;
+          }
+        }
+        
+        /* Tablet/Small laptop transition */
+        @media (max-width: 1024px) and (min-width: 900px) {
+          .contact-container {
+            grid-template-columns: 1fr;
+            gap: 35px;
+            max-width: 700px;
+          }
+        }
+
         @media (max-width: 900px) {
           .contact-container {
             grid-template-columns: 1fr;
@@ -841,6 +931,18 @@ export default function ContactPage() {
 
           .company-card {
             padding: 28px;
+          }
+          
+          .india-map-section {
+            padding: 40px 16px 60px;
+          }
+          
+          .india-map-header h2 {
+            font-size: 24px;
+          }
+          
+          .india-map-header p {
+            font-size: 14px;
           }
         }
       `}</style>
