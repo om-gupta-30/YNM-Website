@@ -170,7 +170,8 @@ export default function ProductDetailPage() {
     }
     
     return images.slice(0, 4); // Limit to 4 images
-  }, [product]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productId]);
 
   // Auto-rotate carousel images every 1.5 seconds
   useEffect(() => {
@@ -188,7 +189,8 @@ export default function ProductDetailPage() {
         clearInterval(carouselIntervalRef.current);
       }
     };
-  }, [productImages]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productImages.length, productId]);
 
   // Set animated stats directly from product data (no JS animation to avoid issues)
   useEffect(() => {
@@ -199,7 +201,8 @@ export default function ProductDetailPage() {
       annualCapacity: product.statistics.annualCapacity || '',
       exportCountries: product.statistics.exportCountries || ''
     });
-  }, [product]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productId]);
 
   // Scroll animation for manufacturing steps - must be called before any returns
   useEffect(() => {
@@ -238,7 +241,7 @@ export default function ProductDetailPage() {
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [product?.manufacturingProcess]);
+  }, [productId]);
   
   if (!router.isReady) {
     return (
@@ -800,7 +803,7 @@ export default function ProductDetailPage() {
             <div className="product-section-container">
               <h2 className="product-section-title">Product Specification</h2>
               <p className="product-section-subtitle">
-                Key features and product advantages of our W Beam Crash Barriers
+                Key features and product advantages of our {product.name}
               </p>
               
               {/* Tabs - Key Features and Product Advantages only */}
@@ -1062,7 +1065,7 @@ export default function ProductDetailPage() {
               {/* Growth Factors */}
               {product.marketGrowth.growthFactors && Array.isArray(product.marketGrowth.growthFactors) && (
                 <div className="growth-factors">
-                  <h3>Key Growth Factors of W-Beam Crash Barriers</h3>
+                  <h3>Key Growth Factors of {product.name}</h3>
                   <div className="factors-grid">
                     {product.marketGrowth.growthFactors.map((factor, i) => (
                       <div key={i} className="factor-item">
@@ -1362,7 +1365,7 @@ export default function ProductDetailPage() {
         {product.manufacturingProcess && product.manufacturingProcess.length > 0 && (
           <section className="product-manufacturing-section">
             <div className="product-section-container">
-              <h2 className="product-section-title">Manufacturing Process of MBCB</h2>
+              <h2 className="product-section-title">Manufacturing Process of {product.name}</h2>
               <p className="product-section-subtitle">
                 {product.manufacturingProcessIntro || `Our ${product.name} undergoes a meticulous manufacturing process, ensuring precision, durability, and adherence to stringent quality standards.`}
               </p>
@@ -1741,11 +1744,13 @@ export default function ProductDetailPage() {
           color: #9A1B2E;
           text-decoration: none;
           font-weight: 600;
-          transition: color 0.3s ease;
+          transition: color 0.3s ease, text-decoration 0.3s ease;
+          cursor: pointer;
         }
 
         .product-breadcrumb-content a:hover {
           color: #74060D;
+          text-decoration: underline;
         }
 
         .product-breadcrumb-content span {
@@ -4703,7 +4708,136 @@ export default function ProductDetailPage() {
           color: #74060D;
         }
 
-        /* Responsive */
+        /* Responsive - Laptop Breakpoints */
+        
+        /* Large laptops (1440px - 1536px) */
+        @media (max-width: 1536px) and (min-width: 1440px) {
+          .product-section-container {
+            max-width: 1320px;
+            padding: 0 30px;
+          }
+          
+          .product-hero-container {
+            gap: 50px;
+          }
+          
+          .product-section-title {
+            font-size: 36px;
+          }
+        }
+        
+        /* Medium laptops (1366px - 1440px) */
+        @media (max-width: 1440px) and (min-width: 1366px) {
+          .product-section-container {
+            max-width: 1240px;
+            padding: 0 25px;
+          }
+          
+          .product-hero-container {
+            gap: 45px;
+          }
+          
+          .product-hero-image {
+            height: 450px;
+          }
+          
+          .product-section-title {
+            font-size: 34px;
+          }
+          
+          .detailed-specs-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          }
+        }
+        
+        /* Small-medium laptops (1280px - 1366px) */
+        @media (max-width: 1366px) and (min-width: 1280px) {
+          .product-section-container {
+            max-width: 1160px;
+            padding: 0 22px;
+          }
+          
+          .product-hero-container {
+            gap: 40px;
+          }
+          
+          .product-hero-image {
+            height: 420px;
+          }
+          
+          .product-section-title {
+            font-size: 32px;
+          }
+          
+          .product-hero-content h1 {
+            font-size: 42px;
+          }
+          
+          .specs-tabs-wrapper {
+            max-width: 500px;
+          }
+          
+          .detailed-specs-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+          }
+          
+          .application-card {
+            width: 320px;
+            min-height: 340px;
+          }
+        }
+        
+        /* Small laptops (1024px - 1280px) */
+        @media (max-width: 1280px) and (min-width: 1024px) {
+          .product-section-container {
+            max-width: 960px;
+            padding: 0 20px;
+          }
+          
+          .product-hero-container {
+            gap: 35px;
+          }
+          
+          .product-hero-image {
+            height: 380px;
+          }
+          
+          .product-section-title {
+            font-size: 28px;
+          }
+          
+          .product-hero-content h1 {
+            font-size: 36px;
+          }
+          
+          .product-hero-content p {
+            font-size: 14px;
+          }
+          
+          .specs-tabs-wrapper {
+            max-width: 450px;
+          }
+          
+          .detailed-specs-grid {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+          }
+          
+          .application-card {
+            width: 300px;
+            min-height: 320px;
+          }
+          
+          .market-visualizations-grid {
+            grid-template-columns: 1fr;
+          }
+          
+          .chart-wrapper {
+            height: 320px;
+          }
+        }
+
         @media (max-width: 1200px) {
           .product-hero-container {
             grid-template-columns: 1fr;

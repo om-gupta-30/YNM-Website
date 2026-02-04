@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, memo, useCallback } from "react";
 
 // Phone number for call feature
 const phoneNumber = "+919676575770";
@@ -90,47 +90,17 @@ const socialLinks = [
   },
 ];
 
-export default function FloatingSocialMedia() {
+function FloatingSocialMedia() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
-  const scrollYRef = useRef(0);
-  const rafIdRef = useRef(null);
   const containerRef = useRef(null);
 
-  // Optimized scroll tracking using RAF - updates transform directly without state
-  useEffect(() => {
-    let ticking = false;
-    
-    const updatePosition = () => {
-      if (containerRef.current) {
-        const bounceOffset = Math.sin(scrollYRef.current * 0.01) * 5;
-        containerRef.current.style.transform = `translateY(${bounceOffset}px)`;
-      }
-      ticking = false;
-    };
-
-    const handleScroll = () => {
-      scrollYRef.current = window.scrollY;
-      
-      if (!ticking) {
-        rafIdRef.current = requestAnimationFrame(updatePosition);
-        ticking = true;
-      }
-    };
-    
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
-    };
-  }, []);
-
-  // Show social icons after page loads
+  // Show social icons after page loads - increased delay for better initial load
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1500);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -218,3 +188,5 @@ export default function FloatingSocialMedia() {
     </>
   );
 }
+
+export default memo(FloatingSocialMedia);

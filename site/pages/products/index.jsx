@@ -49,6 +49,12 @@ export default function ProductsPage() {
   }, [category]);
 
   const handleCategoryChange = (categoryKey) => {
+    // Redirect to dedicated fabrication page
+    if (categoryKey === "fabrication") {
+      router.push('/products/fabrication');
+      return;
+    }
+    
     setActiveCategory(categoryKey);
     if (categoryKey === "all") {
       router.push('/products', undefined, { shallow: true });
@@ -124,55 +130,85 @@ export default function ProductsPage() {
         <section className="products-grid-section">
           <div className="products-grid-container">
             {activeCategory === "all" ? (
-              // Show products grouped by category
-              categories.map(([categoryKey, category]) => (
-                <div key={categoryKey} className="category-group">
-                  <div className="category-group-header">
-                    <div className="category-group-icon">{category.icon}</div>
-                    <div>
-                      <h2>{category.title}</h2>
-                      <p>{category.description}</p>
+              <>
+                {/* Show products grouped by category (skip fabrication - has its own page) */}
+                {categories.filter(([categoryKey]) => categoryKey !== "fabrication").map(([categoryKey, category]) => (
+                  <div key={categoryKey} className="category-group">
+                    <div className="category-group-header">
+                      <div className="category-group-icon">{category.icon}</div>
+                      <div>
+                        <h2>{category.title}</h2>
+                        <p>{category.description}</p>
+                      </div>
+                    </div>
+                    <div className="products-grid">
+                      {category.products.map((product) => (
+                        <div
+                          key={product.id}
+                          className="product-card"
+                          onClick={() => handleProductClick(product)}
+                        >
+                          <div className="product-card-image">
+                            <Image
+                              src={product.image}
+                              alt={product.name}
+                              fill
+                              style={{ objectFit: "cover" }}
+                            />
+                            <div className="product-card-overlay" />
+                            <div className="product-card-badge">{category.title}</div>
+                          </div>
+                          <div className="product-card-content">
+                            <h3>{product.name}</h3>
+                            <p>{product.desc}</p>
+                            <div className="product-card-specs">
+                              {product.specs.slice(0, 2).map((spec, i) => (
+                                <span key={i} className="spec-tag">{spec}</span>
+                              ))}
+                            </div>
+                            <div className="product-card-footer">
+                              <span className="product-card-cta">
+                                View Details
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  <div className="products-grid">
-                    {category.products.map((product) => (
-                      <div
-                        key={product.id}
-                        className="product-card"
-                        onClick={() => handleProductClick(product)}
-                      >
-                        <div className="product-card-image">
-                          <Image
-                            src={product.image}
-                            alt={product.name}
-                            fill
-                            style={{ objectFit: "cover" }}
-                          />
-                          <div className="product-card-overlay" />
-                          <div className="product-card-badge">{category.title}</div>
-                        </div>
-                        <div className="product-card-content">
-                          <h3>{product.name}</h3>
-                          <p>{product.desc}</p>
-                          <div className="product-card-specs">
-                            {product.specs.slice(0, 2).map((spec, i) => (
-                              <span key={i} className="spec-tag">{spec}</span>
-                            ))}
-                          </div>
-                          <div className="product-card-footer">
-                            <span className="product-card-cta">
-                              View Details
-                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                              </svg>
-                            </span>
-                          </div>
-                        </div>
+                ))}
+                
+                {/* Fabrication category card linking to dedicated page */}
+                <div className="category-group">
+                  <div className="category-group-header">
+                    <div className="category-group-icon">⚙️</div>
+                    <div>
+                      <h2>Fabrication</h2>
+                      <p>Custom steel and metal fabrication solutions. From structural components to precision-engineered parts for all industrial needs.</p>
+                    </div>
+                  </div>
+                  <div className="fabrication-link-card" onClick={() => router.push('/products/fabrication')}>
+                    <div className="fabrication-link-content">
+                      <div className="fabrication-link-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
                       </div>
-                    ))}
+                      <h3>34+ Fabrication Products</h3>
+                      <p>Sign Board Structures, Gantry Structures, High Mast, Bridge Bearings, and more...</p>
+                      <span className="fabrication-link-btn">
+                        View All Fabrication Products
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
                   </div>
                 </div>
-              ))
+              </>
             ) : (
               // Show filtered products
               <div className="products-grid">
@@ -535,6 +571,76 @@ export default function ProductsPage() {
           gap: 12px;
         }
 
+        /* Fabrication Link Card */
+        .fabrication-link-card {
+          background: linear-gradient(145deg, #ffffff 0%, #f8f5f0 100%);
+          border-radius: 20px;
+          padding: 40px;
+          cursor: pointer;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 8px 30px rgba(116, 6, 13, 0.1);
+          border: 2px solid rgba(201, 162, 77, 0.2);
+          text-align: center;
+        }
+
+        .fabrication-link-card:hover {
+          transform: translateY(-8px);
+          border-color: #C9A24D;
+          box-shadow: 0 20px 50px rgba(116, 6, 13, 0.2);
+        }
+
+        .fabrication-link-content {
+          max-width: 500px;
+          margin: 0 auto;
+        }
+
+        .fabrication-link-icon {
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(135deg, rgba(201, 162, 77, 0.15) 0%, rgba(116, 6, 13, 0.1) 100%);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 24px;
+          color: #74060D;
+        }
+
+        .fabrication-link-content h3 {
+          font-size: 28px;
+          font-weight: 700;
+          color: #74060D;
+          margin: 0 0 12px;
+        }
+
+        .fabrication-link-content p {
+          font-size: 16px;
+          color: #5a4a4a;
+          margin: 0 0 24px;
+          line-height: 1.6;
+        }
+
+        .fabrication-link-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 14px 28px;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #fff;
+          background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
+          border-radius: 30px;
+          transition: all 0.3s ease;
+        }
+
+        .fabrication-link-card:hover .fabrication-link-btn {
+          background: linear-gradient(135deg, #C9A24D 0%, #D4AF37 100%);
+          color: #74060D;
+          gap: 14px;
+        }
+
         /* CTA Section */
         .products-cta {
           padding: 80px 20px;
@@ -583,6 +689,34 @@ export default function ProductsPage() {
           color: #9A1B2E;
           transform: translateY(-3px);
           box-shadow: 0 15px 40px rgba(201, 162, 77, 0.4);
+        }
+
+        /* Laptop responsive breakpoints */
+        @media (max-width: 1440px) and (min-width: 1200px) {
+          .products-main {
+            padding: 50px 35px;
+          }
+          
+          .products-grid {
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 28px;
+          }
+        }
+        
+        @media (max-width: 1200px) and (min-width: 968px) {
+          .products-main {
+            padding: 45px 30px;
+          }
+          
+          .products-grid {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+          }
+          
+          .category-tab {
+            padding: 14px 24px;
+            font-size: 15px;
+          }
         }
 
         @media (max-width: 968px) {
