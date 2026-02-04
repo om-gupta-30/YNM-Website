@@ -97,8 +97,8 @@ ynm-website/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ynm-website.git
-cd ynm-website/site
+git clone https://github.com/om-gupta-30/website-name-.git
+cd website-name-/site
 
 # Install dependencies
 npm install

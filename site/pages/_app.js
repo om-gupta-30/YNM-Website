@@ -1,15 +1,11 @@
 import "@/styles/globals.css";
-import { useEffect, useCallback, useRef, memo } from "react";
-import dynamic from "next/dynamic";
+import { useEffect } from "react";
+import Mascot from "@/components/Mascot";
+import FloatingSocialMedia from "@/components/FloatingSocialMedia";
+import Chatbot from "@/components/Chatbot";
 
-// Lazy load heavy components for better initial page load
-const Mascot = dynamic(() => import("@/components/Mascot"), { ssr: false });
-const FloatingSocialMedia = dynamic(() => import("@/components/FloatingSocialMedia"), { ssr: false });
-const Chatbot = dynamic(() => import("@/components/Chatbot"), { ssr: false });
-const FloatingQuoteButton = dynamic(() => import("@/components/FloatingQuoteButton"), { ssr: false });
-
-// Fast smooth scroll function (400ms with easeOutQuart - reduced for snappier feel)
-const smoothScrollTo = (targetY, duration = 400) => {
+// Fast smooth scroll function (500ms with easeOutQuart)
+const smoothScrollTo = (targetY, duration = 500) => {
   const startY = window.scrollY;
   const diff = targetY - startY;
   let startTime = null;
@@ -33,29 +29,26 @@ const smoothScrollTo = (targetY, duration = 400) => {
 };
 
 export default function App({ Component, pageProps }) {
-  const scrollTimeoutRef = useRef(null);
-  const isScrollingRef = useRef(false);
-
-  // Optimized scroll handler - minimal work
-  const handleScroll = useCallback(() => {
-    if (!isScrollingRef.current) {
-      document.body.classList.add("is-scrolling");
-      isScrollingRef.current = true;
-    }
-
-    if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current);
-    }
-
-    scrollTimeoutRef.current = setTimeout(() => {
-      document.body.classList.remove("is-scrolling");
-      isScrollingRef.current = false;
-    }, 80); // Reduced timeout for snappier response
-  }, []);
-
   // Scroll performance optimization + Global anchor handler
   useEffect(() => {
     if (typeof window === "undefined") return;
+
+    let scrollTimeout = null;
+    let ticking = false;
+
+    // Scroll class for performance
+    const onScroll = () => {
+      if (!ticking) {
+        document.body.classList.add("is-scrolling");
+        ticking = true;
+      }
+
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        document.body.classList.remove("is-scrolling");
+        ticking = false;
+      }, 150);
+    };
 
     // Global anchor click handler for fast smooth scroll
     const onAnchorClick = (e) => {
@@ -72,44 +65,28 @@ export default function App({ Component, pageProps }) {
           if (el) {
             e.preventDefault();
             const targetY = el.getBoundingClientRect().top + window.scrollY - 80;
-            smoothScrollTo(targetY, 400);
+            smoothScrollTo(targetY, 500);
           }
-        } catch {
+        } catch (err) {
           // Invalid selector, ignore
         }
       }
     };
 
-    // Add scroll listener with passive flag for better scroll performance
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     document.addEventListener("click", onAnchorClick);
 
-    // Detect platform for specific optimizations - only once
-    if (!document.documentElement.classList.contains('platform-detected')) {
-      const isWindows = navigator.platform.indexOf('Win') > -1;
-      const isMac = navigator.platform.indexOf('Mac') > -1;
-      
-      if (isWindows) {
-        document.documentElement.classList.add('platform-windows');
-      } else if (isMac) {
-        document.documentElement.classList.add('platform-mac');
-      }
-      document.documentElement.classList.add('platform-detected');
-    }
-
-    // Cleanup
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", onScroll);
       document.removeEventListener("click", onAnchorClick);
-      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+      if (scrollTimeout) clearTimeout(scrollTimeout);
     };
-  }, [handleScroll]);
+  }, []);
 
   return (
     <>
       <Component {...pageProps} />
       <Mascot />
-      <FloatingQuoteButton />
       <FloatingSocialMedia />
       <Chatbot />
     </>

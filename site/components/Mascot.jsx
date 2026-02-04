@@ -61,13 +61,13 @@ function Mascot() {
     if (isMinimized) {
       setIsMinimized(false);
       setTimeout(() => {
-        setCurrentPrompt(getRandomPrompt());
+        setCurrentPrompt(getNextPrompt());
         setShowBubble(true);
       }, 200);
     } else {
       setShowBubble(false);
       setTimeout(() => {
-        setCurrentPrompt(getRandomPrompt());
+        setCurrentPrompt(getNextPrompt());
         setShowBubble(true);
       }, 200);
     }

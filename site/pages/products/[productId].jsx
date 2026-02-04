@@ -173,7 +173,7 @@ export default function ProductDetailPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productId]);
 
-  // Auto-rotate carousel images every 1.5 seconds
+  // Auto-rotate carousel images every 4 seconds
   useEffect(() => {
     if (productImages.length <= 1) {
       setCurrentImageIndex(0);
@@ -182,7 +182,7 @@ export default function ProductDetailPage() {
 
     carouselIntervalRef.current = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productImages.length);
-    }, 1500);
+    }, 4000);
 
     return () => {
       if (carouselIntervalRef.current) {
@@ -335,7 +335,7 @@ export default function ProductDetailPage() {
                 if (productImages.length > 1) {
                   carouselIntervalRef.current = setInterval(() => {
                     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productImages.length);
-                  }, 1500);
+                  }, 4000);
                 }
               }}
             >
@@ -369,7 +369,7 @@ export default function ProductDetailPage() {
                             }
                             carouselIntervalRef.current = setInterval(() => {
                               setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productImages.length);
-                            }, 1500);
+                            }, 4000);
                           }}
                           aria-label={`Go to image ${index + 1}`}
                         />
