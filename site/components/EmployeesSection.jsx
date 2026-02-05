@@ -57,7 +57,7 @@ export default function EmployeesSection({ employeesData: propEmployeesData, hig
                   <div className="employee-photo-border" />
                   <div className="employee-photo">
                     <Image
-                      src={isDirector ? "/directorphoto2.png" : photoSrc}
+                      src={isDirector ? "/assets/team/directorphoto2.png" : photoSrc}
                       alt={employee.name}
                       fill
                       style={{

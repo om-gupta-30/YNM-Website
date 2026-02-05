@@ -9,7 +9,7 @@ const employeesData = [
     role: "Managing Director",
     department: "Executive Management",
     text: "Leading YNM Mega Industries has been an inspiring and fulfilling journey. What truly sets our organization apart is the dedication of our people and the strong values we practice every day. I am proud of our team's commitment to quality, innovation, and collaboration, which continues to drive our success in fabrication, paint manufacturing, and school furniture while strengthening our global presence.",
-    photo: "/directorphoto.png",
+    photo: "/assets/team/directorphoto.png",
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const employeesData = [
     role: "Software Engineer",
     department: "IT",
     text: "YNM Mega Industries offers a stable and technology-driven environment. I appreciate the trust given to the IT team and the opportunity to work on systems that support efficient operations.",
-    photo: "/omemployeesay.png",
+    photo: "/assets/team/omemployeesay.png",
   },
   {
     id: 6,

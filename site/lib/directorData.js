@@ -6,8 +6,8 @@ const directorData = {
   name: "Rishuu N Jaiin",
   role: "Managing Director",
   department: "Executive Management",
-  photo: "/rishu sir 3.png",
-  photo2: "/directorphoto2.png", // Alternative photo for detailed page
+  photo: "/assets/team/rishu-sir-3.png",
+  photo2: "/assets/team/directorphoto2.png", // Alternative photo for detailed page
   quote: "Leading YNM Mega Industries has been an inspiring and fulfilling journey. What truly sets our organization apart is the dedication of our people and the strong values we practice every day. I am proud of our team's commitment to quality, innovation, and collaboration, which continues to drive our success in fabrication, paint manufacturing, and school furniture while strengthening our global presence.",
   about: "Rishuu N Jaiin is the Managing Director of YNM Mega Industries Pvt Ltd, a leading manufacturer and exporter of premium paints, metal fabrications, and school furniture. With a vision for excellence and global expansion, he has been instrumental in establishing YNM as a trusted name in manufacturing and export since 2013. Under his leadership, the company has expanded its reach to over 15 countries and built strong relationships with clients across Asia, Africa, and the Middle East.",
   ventures: [
