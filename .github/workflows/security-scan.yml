@@ -1,0 +1,40 @@
+# ==============================================
+# YNM MEGA INDUSTRIES - SECURITY SCAN WORKFLOW
+# Runs on every push/PR to detect leaked secrets
+# ==============================================
+
+name: Security Scan
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  gitleaks:
+    name: Scan for Secrets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for thorough scan
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}  # Optional for enterprise features
+
+      - name: Security Check Passed
+        if: success()
+        run: echo "✅ No secrets detected in codebase"
+
+      - name: Security Check Failed
+        if: failure()
+        run: |
+          echo "❌ SECRETS DETECTED!"
+          echo "Review the gitleaks report above and remove any exposed secrets."
+          echo "Remember to rotate any credentials that were exposed."
+          exit 1
