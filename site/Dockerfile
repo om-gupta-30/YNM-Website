@@ -26,6 +26,11 @@ COPY . .
 # Disable telemetry during build
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# Build argument for Under Construction mode
+# Set to 'true' to show only the Under Construction page
+ARG NEXT_PUBLIC_UNDER_CONSTRUCTION=true
+ENV NEXT_PUBLIC_UNDER_CONSTRUCTION=$NEXT_PUBLIC_UNDER_CONSTRUCTION
+
 # Build the Next.js application
 RUN npm run build
 

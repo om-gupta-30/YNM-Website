@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Flag from "@/components/Flag";
 
 // Fabrication products data - 34 products with names, images, and detailed info
 const fabricationProducts = [
@@ -455,6 +456,7 @@ export default function FabricationPage() {
                   <li>Aluminum</li>
                   <li>Copper Alloys</li>
                   <li>Custom Alloys</li>
+                  <li>Cast Iron</li>
                 </ul>
               </div>
 
@@ -485,7 +487,14 @@ export default function FabricationPage() {
                   <p>Exporting to 40+ countries across Asia, Europe, Middle East, Africa, and the Americas</p>
                 </div>
                 <div className="export-flags">
-                  🇮🇳 🇦🇪 🇸🇦 🇬🇧 🇺🇸 🇦🇺 🇿🇦 🇸🇬
+                  <Flag country="in" size={24} />
+                  <Flag country="ae" size={24} />
+                  <Flag country="sa" size={24} />
+                  <Flag country="gb" size={24} />
+                  <Flag country="us" size={24} />
+                  <Flag country="au" size={24} />
+                  <Flag country="za" size={24} />
+                  <Flag country="sg" size={24} />
                 </div>
               </div>
 
@@ -497,7 +506,7 @@ export default function FabricationPage() {
                   <div className="capacity-bar">
                     <div className="capacity-fill" style={{ width: '85%' }} />
                   </div>
-                  <span>5000+ MT/Year</span>
+                  <span>100000 MT+/Year</span>
                 </div>
                 <p>High-volume production capability with flexible batch sizes from prototypes to mass production</p>
               </div>
@@ -701,7 +710,7 @@ export default function FabricationPage() {
                     <div className="spec-label">Max Thickness</div>
                   </div>
                   <div className="spec-card">
-                    <div className="spec-value">5T</div>
+                    <div className="spec-value">25T</div>
                     <div className="spec-label">Crane Capacity</div>
                   </div>
                 </div>

@@ -24,22 +24,22 @@ const aboutSectionContent = [
   {
     icon: "🏭",
     title: "Advanced Manufacturing",
-    description: "YNM Mega Industries operates advanced manufacturing facilities delivering high-quality industrial paints, precision metal fabrication, and engineered school furniture. As a trusted global manufacturer, we combine modern machinery, skilled expertise, and efficient processes to serve worldwide industrial and infrastructure projects."
+    description: "YNM Safety operates advanced manufacturing facilities delivering high-quality industrial paints, precision metal fabrication, and engineered school furniture. As a trusted global manufacturer, we combine modern machinery, skilled expertise, and efficient processes to serve worldwide industrial and infrastructure projects."
   },
   {
     icon: "✅",
     title: "Quality Certified",
-    description: "At YNM Mega Industries, quality is our foundation. All our products including industrial paints, fabrication components, and school furniture are manufactured under ISO 9001:2015 certified quality systems, ensuring durability, safety, and consistent performance for global markets."
+    description: "At YNM Safety, quality is our foundation. All our products including industrial paints, fabrication components, and school furniture are manufactured under ISO 9001:2015 certified quality systems, ensuring durability, safety, and consistent performance for global markets."
   },
   {
     icon: "🌍",
     title: "Global Export Network",
-    description: "YNM Mega Industries is a reliable global exporter of industrial paints, metal fabrication products, safety solutions, and school furniture. We supply to clients across Asia, Africa, the Middle East, and international markets with efficient logistics, compliance, and timely delivery."
+    description: "YNM Safety is a reliable global exporter of industrial paints, metal fabrication products, safety solutions, and school furniture. We supply to clients across Asia, Africa, the Middle East, and international markets with efficient logistics, compliance, and timely delivery."
   },
   {
     icon: "🎨",
     title: "Custom Solutions",
-    description: "We specialize in customized manufacturing solutions including bespoke paint formulations, custom metal fabrication, and made-to-order school furniture. YNM Mega Industries supports global clients with flexible production, technical expertise, and project-specific solutions."
+    description: "We specialize in customized manufacturing solutions including bespoke paint formulations, custom metal fabrication, and made-to-order school furniture. YNM Safety supports global clients with flexible production, technical expertise, and project-specific solutions."
   }
 ];
 
@@ -48,7 +48,7 @@ const timeline = [
   {
     year: "2013",
     title: "Foundation",
-    description: "YNM Mega Industries was established with a vision to deliver quality manufacturing and export services."
+    description: "YNM Safety was established with a vision to deliver quality manufacturing and export services."
   },
   {
     year: "2015",
@@ -64,6 +64,11 @@ const timeline = [
     year: "2023",
     title: "10 Years of Excellence",
     description: "Celebrated a decade of manufacturing excellence with 500+ projects and 100+ satisfied clients."
+  },
+  {
+    year: "2026",
+    title: "PAN India Expansion",
+    description: "Opening manufacturing units across India, strengthening our nationwide presence and production capabilities."
   }
 ];
 
@@ -79,8 +84,8 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Us - YNM Mega Industries Pvt Ltd</title>
-        <meta name="description" content="Learn about YNM Mega Industries - Leading manufacturer and exporter of premium paints, metal fabrications, and school furniture since 2013." />
+        <title>About Us - YNM Safety Pan Global Trade Pvt Ltd</title>
+        <meta name="description" content="Learn about YNM Safety - Leading manufacturer and exporter of premium paints, metal fabrications, and school furniture since 2013." />
       </Head>
 
       <Navbar />
@@ -104,7 +109,7 @@ export default function AboutPage() {
               <h2>Our Story</h2>
               <div className="story-divider" />
               <p>
-                YNM Mega Industries Pvt Ltd was founded in 2013 with a vision to become a leading 
+                YNM Safety Pan Global Trade Pvt Ltd was founded in 2013 with a vision to become a leading 
                 manufacturer and exporter of premium industrial products. What started as a small operation 
                 has grown into a trusted partner for businesses across India and 15+ countries worldwide.
               </p>
@@ -228,11 +233,11 @@ export default function AboutPage() {
               <div className="about-stat-label">Projects Delivered</div>
             </div>
             <div className="about-stat">
-              <div className="about-stat-value">15+</div>
+              <div className="about-stat-value">50+</div>
               <div className="about-stat-label">Export Countries</div>
             </div>
             <div className="about-stat">
-              <div className="about-stat-value">100+</div>
+              <div className="about-stat-value">1000+</div>
               <div className="about-stat-label">Happy Clients</div>
             </div>
           </div>
@@ -260,19 +265,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="about-cta">
-          <div className="about-cta-content">
-            <h2>Ready to Work With Us?</h2>
-            <p>Get in touch to discuss your manufacturing and export requirements.</p>
-            <Link href="/contact" className="about-cta-btn">
-              Contact Us
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </section>
       </main>
 
       {/* Image Modal */}
@@ -433,12 +425,15 @@ export default function AboutPage() {
         }
 
         .timeline-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 40px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 30px;
         }
 
         .timeline-item {
+          flex: 0 1 280px;
+          max-width: 300px;
           background: #FFFFFF;
           border-radius: 16px;
           padding: 30px;
@@ -719,56 +714,6 @@ export default function AboutPage() {
           margin: 0;
         }
 
-        /* CTA Section */
-        .about-cta {
-          padding: 100px 20px;
-          text-align: center;
-          background: linear-gradient(180deg, #F7F3EA 0%, #E6D3A3 100%);
-        }
-
-        .about-cta-content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        .about-cta h2 {
-          font-size: 42px;
-          font-weight: 800;
-          color: #74060D;
-          margin: 0 0 16px;
-        }
-
-        .about-cta p {
-          font-size: 18px;
-          color: #9A1B2E;
-          margin: 0 0 40px;
-          font-weight: 500;
-        }
-
-        .about-cta-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          padding: 18px 40px;
-          font-size: 16px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          color: #74060D;
-          background: #C9A24D;
-          border: 2px solid #E6D3A3;
-          border-radius: 30px;
-          text-decoration: none;
-          transition: all 0.3s ease;
-        }
-
-        .about-cta-btn:hover {
-          background: #E6D3A3;
-          color: #9A1B2E;
-          transform: translateY(-3px);
-          box-shadow: 0 10px 30px rgba(201, 162, 77, 0.4);
-        }
-
         /* Image Modal */
         .image-modal-overlay {
           position: fixed;
@@ -842,8 +787,7 @@ export default function AboutPage() {
           .about-timeline,
           .about-values,
           .about-gallery,
-          .about-mission,
-          .about-cta {
+          .about-mission {
             padding: 60px 16px;
           }
 
@@ -854,7 +798,17 @@ export default function AboutPage() {
             font-size: 32px;
           }
 
-          .timeline-grid,
+          .timeline-grid {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .timeline-item {
+            flex: 0 1 auto;
+            max-width: 100%;
+            width: 100%;
+          }
+
           .values-grid {
             grid-template-columns: 1fr;
           }

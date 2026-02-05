@@ -361,7 +361,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
             <div className="nav-logo-wrapper hero-logo-heartbeat">
               <Image 
                 src="/assets/logo-navbar.jpg" 
-                alt="YNM Mega Industries logo" 
+                alt="YNM Safety logo" 
                 width={50}
                 height={50}
                 className="nav-logo-new"
@@ -369,7 +369,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
               />
             </div>
             <div className="nav-brand-text-wrapper">
-              <span className="nav-brand-text">YNM MEGA INDUSTRIES</span>
+              <span className="nav-brand-text">YNM SAFETY</span>
               <span id="nav-since">Since 2013</span>
             </div>
           </Link>
@@ -455,7 +455,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
           <div id="hero-image-safe">
             <Image 
               src={heroImageUrl || heroImage} 
-              alt="YNM Mega Industries - Global Logistics & Manufacturing Excellence" 
+              alt="YNM Safety - Global Logistics & Manufacturing Excellence" 
               fill 
               id="hero-image" 
               priority 
@@ -482,7 +482,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
         {/* HERO TEXT */}
         <div id="hero-text" ref={heroTextRef} className="hero-text-float">
           <h1 className="hero-title">
-            YNM MEGA INDUSTRIES
+            YNM SAFETY
             <span className="hero-gold-sweep" />
           </h1>
 

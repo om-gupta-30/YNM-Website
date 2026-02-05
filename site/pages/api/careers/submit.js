@@ -293,21 +293,21 @@ async function sendConfirmationEmail(formData) {
   const emailHtml = `
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Application Received - YNM Mega Industries</title></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Application Received - YNM Safety</title></head>
 <body style="margin:0;padding:0;font-family:Arial,sans-serif;background:#f4f4f4;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:40px 20px;">
     <tr><td align="center">
       <table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
         <tr>
           <td style="background:linear-gradient(135deg,#74060D 0%,#9A1B2E 100%);padding:32px;text-align:center;">
-            <h1 style="color:#F7F3EA;margin:0;font-size:26px;font-weight:800;">YNM Mega Industries</h1>
+            <h1 style="color:#F7F3EA;margin:0;font-size:26px;font-weight:800;">YNM Safety</h1>
             <p style="color:#E6D3A3;margin:10px 0 0;font-size:13px;">Application Received</p>
           </td>
         </tr>
         <tr>
           <td style="padding:36px 32px;">
             <p style="color:#333;font-size:16px;line-height:1.6;margin:0 0 20px;">Dear <strong>${formData.name}</strong>,</p>
-            <p style="color:#333;font-size:16px;line-height:1.6;margin:0 0 24px;">Thank you for applying to <strong>YNM Mega Industries Pvt Ltd</strong>. We have received your application for <strong>${formData.position}</strong>.</p>
+            <p style="color:#333;font-size:16px;line-height:1.6;margin:0 0 24px;">Thank you for applying to <strong>YNM Safety Pan Global Trade Pvt Ltd</strong>. We have received your application for <strong>${formData.position}</strong>.</p>
             <table width="100%" cellpadding="0" cellspacing="0" style="background:#F7F3EA;border:1px solid #E6D3A3;border-radius:8px;">
               <tr><td style="padding:16px 20px;border-bottom:1px solid #E6D3A3;color:#74060D;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">Application Summary</td></tr>
               <tr><td style="padding:16px 20px;">
@@ -322,12 +322,12 @@ async function sendConfirmationEmail(formData) {
             </table>
             <p style="color:#333;font-size:15px;line-height:1.6;margin:24px 0 16px;">Our HR team will review your application and resume and contact you within <strong style="color:#74060D;">10 working days</strong>.</p>
             <p style="color:#333;font-size:15px;line-height:1.6;margin:0 0 24px;">For queries, please contact <a href="mailto:hr@ynmsafety.com" style="color:#74060D;">hr@ynmsafety.com</a> or <strong>+91 96765 75770</strong>. Do not reply to this email.</p>
-            <p style="color:#333;font-size:15px;line-height:1.6;margin:0;">Best regards,<br><strong style="color:#74060D;">HR Team</strong><br>YNM Mega Industries Pvt Ltd</p>
+            <p style="color:#333;font-size:15px;line-height:1.6;margin:0;">Best regards,<br><strong style="color:#74060D;">HR Team</strong><br>YNM Safety Pan Global Trade Pvt Ltd</p>
           </td>
         </tr>
         <tr>
           <td style="background:#F7F3EA;padding:20px 32px;text-align:center;border-top:2px solid #E6D3A3;">
-            <p style="color:#666;font-size:12px;margin:0 0 8px;"><strong>YNM Mega Industries Pvt Ltd</strong><br>Survey, 84P, Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081</p>
+            <p style="color:#666;font-size:12px;margin:0 0 8px;"><strong>YNM Safety Pan Global Trade Pvt Ltd</strong><br>Survey, 84P, Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081</p>
             <p style="color:#999;font-size:11px;margin:12px 0 0;"><strong style="color:#74060D;">No-reply.</strong> This is an automated message. Do not reply to this email.</p>
           </td>
         </tr>
@@ -337,12 +337,12 @@ async function sendConfirmationEmail(formData) {
 </body>
 </html>`;
 
-  const emailText = `Dear ${formData.name},\n\nThank you for applying to YNM Mega Industries Pvt Ltd. We have received your application for ${formData.position}.\n\nApplication: ${formData.name} | ${formData.position} | ${expLabel}${expSuffix} | ${formData.email} | ${formData.phone}\n\nOur HR team will review and contact you within 10 working days. For queries: hr@ynmsafety.com or +91 96765 75770. Do not reply to this email.\n\nBest regards,\nHR Team\nYNM Mega Industries Pvt Ltd\n\n---\nNo-reply. This is an automated message.`;
+  const emailText = `Dear ${formData.name},\n\nThank you for applying to YNM Safety Pan Global Trade Pvt Ltd. We have received your application for ${formData.position}.\n\nApplication: ${formData.name} | ${formData.position} | ${expLabel}${expSuffix} | ${formData.email} | ${formData.phone}\n\nOur HR team will review and contact you within 10 working days. For queries: hr@ynmsafety.com or +91 96765 75770. Do not reply to this email.\n\nBest regards,\nHR Team\nYNM Safety Pan Global Trade Pvt Ltd\n\n---\nNo-reply. This is an automated message.`;
 
   const mailOptions = {
     from: getNoReplyFrom(),
     to: formData.email,
-    subject: 'Application Received - YNM Mega Industries',
+    subject: 'Application Received - YNM Safety',
     text: emailText,
     html: emailHtml,
     headers: { 'Auto-Submitted': 'auto-generated' },
@@ -382,7 +382,7 @@ async function sendHRNotificationEmail(formData, resumeFile) {
         <tr>
           <td style="background:linear-gradient(135deg,#74060D 0%,#9A1B2E 100%);padding:28px 32px;text-align:left;">
             <h1 style="color:#F7F3EA;margin:0;font-size:22px;font-weight:800;">New Job Application</h1>
-            <p style="color:#E6D3A3;margin:8px 0 0;font-size:13px;">Careers – YNM Mega Industries</p>
+            <p style="color:#E6D3A3;margin:8px 0 0;font-size:13px;">Careers – YNM Safety</p>
           </td>
         </tr>
         <tr>
@@ -424,7 +424,7 @@ async function sendHRNotificationEmail(formData, resumeFile) {
 </body>
 </html>`;
 
-  const emailText = `New Job Application – YNM Mega Industries\n\nApplicant: ${formData.name}\nPosition: ${formData.position}\nExperience: ${expLabel}${expSuffix}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\n${hasCover ? `Cover letter:\n${formData.coverLetter}\n\n` : ''}Resume: Attached (${resumeName})\n\n---\nNo-reply. Do not reply to this email.`;
+  const emailText = `New Job Application – YNM Safety\n\nApplicant: ${formData.name}\nPosition: ${formData.position}\nExperience: ${expLabel}${expSuffix}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\n${hasCover ? `Cover letter:\n${formData.coverLetter}\n\n` : ''}Resume: Attached (${resumeName})\n\n---\nNo-reply. Do not reply to this email.`;
 
   let attachment = null;
   if (resumeFile?.filepath && fs.existsSync(resumeFile.filepath)) {

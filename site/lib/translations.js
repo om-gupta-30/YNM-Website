@@ -37,7 +37,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: "YNM MEGA INDUSTRIES",
+      title: "YNM SAFETY",
       since: "Since 2013 • Manufacturing & Export Excellence",
       tagline1: "Manufacturing Excellence, Global Reach",
       tagline2: "Road Marking Paints, Fabrications & Furniture",
@@ -127,16 +127,16 @@ export const translations = {
       title: "Why Choose Us",
       subtitle: "",
       benefits: [
-        { title: "Advanced Manufacturing..", description: "YNM Mega Industries operates advanced manufacturing facilities delivering high-quality industrial paints, precision metal fabrication, and engineered school furniture. As a trusted global manufacturer, we combine modern machinery, skilled expertise, and efficient processes to serve worldwide industrial and infrastructure projects." },
-        { title: "Quality Certified..", description: "At YNM Mega Industries, quality is our foundation. All our products including industrial paints, fabrication components, and school furniture are manufactured under ISO 9001:2015 certified quality systems, ensuring durability, safety, and consistent performance for global markets." },
-        { title: "Global Export Network", description: "YNM Mega Industries is a reliable global exporter of industrial paints, metal fabrication products, safety solutions, and school furniture. We supply to clients across Asia, Africa, the Middle East, and international markets with efficient logistics, compliance, and timely delivery." },
-        { title: "Custom Solutions", description: "We specialize in customized manufacturing solutions including bespoke paint formulations, custom metal fabrication, and made-to-order school furniture. YNM Mega Industries supports global clients with flexible production, technical expertise, and project-specific solutions." }
+        { title: "Advanced Manufacturing..", description: "YNM Safety operates advanced manufacturing facilities delivering high-quality industrial paints, precision metal fabrication, and engineered school furniture. As a trusted global manufacturer, we combine modern machinery, skilled expertise, and efficient processes to serve worldwide industrial and infrastructure projects." },
+        { title: "Quality Certified..", description: "At YNM Safety, quality is our foundation. All our products including industrial paints, fabrication components, and school furniture are manufactured under ISO 9001:2015 certified quality systems, ensuring durability, safety, and consistent performance for global markets." },
+        { title: "Global Export Network", description: "YNM Safety is a reliable global exporter of industrial paints, metal fabrication products, safety solutions, and school furniture. We supply to clients across Asia, Africa, the Middle East, and international markets with efficient logistics, compliance, and timely delivery." },
+        { title: "Custom Solutions", description: "We specialize in customized manufacturing solutions including bespoke paint formulations, custom metal fabrication, and made-to-order school furniture. YNM Safety supports global clients with flexible production, technical expertise, and project-specific solutions." }
       ]
     },
     // Testimonials Section
     testimonials: {
       title: "Testimonials",
-      subtitle: "What our clients say about YNM Mega Industries"
+      subtitle: "What our clients say about YNM Safety"
     },
     // Brands Section
     brands: {
@@ -150,7 +150,7 @@ export const translations = {
       title: "What Our Director Says",
       subtitle: "Hear from our leadership team and key employees about our mission, values, and commitment to excellence",
       fallback: [
-        { role: "Chief Executive Officer (CEO)", department: "Executive Leadership", text: "At YNM Mega Industries, we're committed to manufacturing excellence and global expansion. Our vision is to be the leading manufacturer and exporter, delivering quality products that exceed expectations across 15+ countries." },
+        { role: "Chief Executive Officer (CEO)", department: "Executive Leadership", text: "At YNM Safety, we're committed to manufacturing excellence and global expansion. Our vision is to be the leading manufacturer and exporter, delivering quality products that exceed expectations across 15+ countries." },
         { role: "Director of Operations", department: "Operations", text: "Our state-of-the-art manufacturing facility ensures every product meets international quality standards. We take pride in our precision engineering and commitment to delivering on time, every time." },
         { role: "Head of Manufacturing", department: "Production", text: "Quality is at the heart of everything we manufacture. From paints to fabrications to furniture, we maintain strict quality control at every stage to ensure our products stand the test of time." },
         { role: "Export Director", department: "International Trade", text: "We've built strong relationships with partners across Asia, Africa, and the Middle East. Our export team ensures seamless logistics and documentation for hassle-free global delivery." },

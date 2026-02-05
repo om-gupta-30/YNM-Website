@@ -12,7 +12,7 @@ export const enhancedProductsData = {
     heroImage: "/assets/gallery-manufacturing-facility.jpg",
     
     // Detailed Description
-    detailedDescription: `YNM Mega Industries is a premier manufacturer and supplier of high-quality Industrial Enamel Paint, designed specifically for heavy-duty industrial applications. Our enamel paint formulations are engineered to provide exceptional protection for machinery, equipment, and structural components exposed to harsh industrial environments.
+    detailedDescription: `YNM Safety is a premier manufacturer and supplier of high-quality Industrial Enamel Paint, designed specifically for heavy-duty industrial applications. Our enamel paint formulations are engineered to provide exceptional protection for machinery, equipment, and structural components exposed to harsh industrial environments.
 
 With over a decade of manufacturing excellence, we have developed advanced paint technologies that combine superior durability with excellent aesthetic appeal. Our Industrial Enamel Paint is manufactured using premium raw materials and state-of-the-art production processes, ensuring consistent quality and performance across every batch.
 
@@ -250,7 +250,7 @@ The paint is specifically formulated to withstand extreme temperatures, chemical
         "Increasing focus on sustainable and eco-friendly paints"
       ],
       cagr: "9%",
-      description: "The industrial paint market in India is experiencing robust growth, driven by the country's expanding manufacturing sector, infrastructure development, and increasing focus on equipment protection and maintenance. YNM Mega Industries is well-positioned to capitalize on this growth with our high-quality product range and established export network.",
+      description: "The industrial paint market in India is experiencing robust growth, driven by the country's expanding manufacturing sector, infrastructure development, and increasing focus on equipment protection and maintenance. YNM Safety is well-positioned to capitalize on this growth with our high-quality product range and established export network.",
       // Market Segmentation by Application
       marketSegmentation: [
         { label: "Manufacturing", value: 35, color: "#74060D" },
@@ -382,7 +382,7 @@ The paint is specifically formulated to withstand extreme temperatures, chemical
     image: "/assets/product-exterior-weather-coat.png",
     heroImage: "/assets/gallery-manufacturing-facility.jpg",
     
-    detailedDescription: `YNM Mega Industries' Exterior Weather Coat is a premium, all-weather protective coating designed specifically for exterior wall applications. This advanced acrylic-based formulation provides exceptional protection against harsh weather conditions, UV radiation, and environmental pollutants.
+    detailedDescription: `YNM Safety' Exterior Weather Coat is a premium, all-weather protective coating designed specifically for exterior wall applications. This advanced acrylic-based formulation provides exceptional protection against harsh weather conditions, UV radiation, and environmental pollutants.
 
 Our Exterior Weather Coat is manufactured using cutting-edge technology and premium raw materials, ensuring superior durability and aesthetic appeal. The paint is specifically engineered to withstand extreme temperature variations, heavy rainfall, intense sunlight, and pollution, making it ideal for buildings in diverse climatic conditions.
 
@@ -589,7 +589,7 @@ With over 10 years of proven performance in various projects across India and in
         "Increasing demand for eco-friendly paints"
       ],
       cagr: "8.5%",
-      description: "The exterior paint market in India is experiencing strong growth, driven by the country's construction boom, urbanization, and increasing focus on building aesthetics and protection. YNM Mega Industries is positioned to serve this growing market with our high-quality Exterior Weather Coat."
+      description: "The exterior paint market in India is experiencing strong growth, driven by the country's construction boom, urbanization, and increasing focus on building aesthetics and protection. YNM Safety is positioned to serve this growing market with our high-quality Exterior Weather Coat."
     },
 
     manufacturingProcess: [

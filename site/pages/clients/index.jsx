@@ -32,7 +32,7 @@ export default function ClientsPage() {
   return (
     <>
       <Head>
-        <title>Our Clients - YNM Mega Industries Pvt Ltd</title>
+        <title>Our Clients - YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Trusted by leading companies and institutions across India and globally. See our client portfolio and partnerships." />
       </Head>
 
@@ -102,19 +102,6 @@ export default function ClientsPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="clients-cta">
-          <div className="clients-cta-content">
-            <h2>Want to Become Our Client?</h2>
-            <p>Join our network of satisfied clients and experience quality manufacturing and reliable export services.</p>
-            <Link href="/contact" className="clients-cta-btn">
-              Get Started
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </section>
       </main>
 
       <Footer />
@@ -350,63 +337,6 @@ export default function ClientsPage() {
           line-height: 1.5;
         }
 
-        /* CTA Section */
-        .clients-cta {
-          padding: 80px 20px;
-          text-align: center;
-          background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
-        }
-
-        .clients-cta-content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        .clients-cta h2 {
-          font-size: 32px;
-          font-weight: 800;
-          color: #F7F3EA;
-          margin: 0 0 12px;
-        }
-
-        .clients-cta p {
-          font-size: 16px;
-          color: #E6D3A3;
-          margin: 0 0 30px;
-          font-weight: 500;
-        }
-
-        .clients-cta-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          padding: 18px 40px;
-          font-size: 16px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          color: #74060D;
-          background: #C9A24D;
-          border: 3px solid #E6D3A3;
-          border-radius: 30px;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(201, 162, 77, 0.3);
-          cursor: pointer;
-        }
-
-        .clients-cta-btn:hover {
-          background: #E6D3A3;
-          color: #74060D;
-          border-color: #C9A24D;
-          transform: translateY(-3px);
-          box-shadow: 0 10px 30px rgba(201, 162, 77, 0.5);
-        }
-
-        .clients-cta-btn:active {
-          transform: translateY(-1px);
-        }
-
         @media (max-width: 768px) {
           .clients-container {
             grid-template-columns: 1fr;
@@ -417,14 +347,6 @@ export default function ClientsPage() {
           .clients-hero {
             height: 40vh;
             min-height: 300px;
-          }
-
-          .clients-cta {
-            padding: 60px 16px;
-          }
-
-          .clients-cta h2 {
-            font-size: 28px;
           }
 
           .clients-grid-section {

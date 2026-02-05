@@ -1,4 +1,4 @@
-# robots.txt - YNM Mega Industries
+# robots.txt - YNM Safety
 User-agent: *
 Allow: /
 

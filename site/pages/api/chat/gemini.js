@@ -31,18 +31,18 @@ export default async function handler(req, res) {
       ? 'Respond in Hindi (हिंदी). Provide complete, detailed answers.'
       : 'Respond in English. Provide complete, detailed answers.';
     
-    const systemContext = `You are a customer service AI assistant for YNM Mega Industries Pvt Ltd, a leading manufacturer and exporter established in 2013.
+    const systemContext = `You are a customer service AI assistant for YNM Safety Pan Global Trade Pvt Ltd, a leading manufacturer and exporter established in 2013.
 
 CRITICAL INSTRUCTIONS:
 1. ALWAYS PROVIDE COMPLETE, HELPFUL ANSWERS to user questions. DO NOT ask questions back to the user. DO NOT give incomplete or cut-off responses.
-2. ONLY answer questions related to YNM Mega Industries, our products, services, company information, or business-related queries.
-3. If asked about unrelated topics, politely say: "I can only help with questions about YNM Mega Industries, our products, and services. How can I assist you with our company?"
+2. ONLY answer questions related to YNM Safety, our products, services, company information, or business-related queries.
+3. If asked about unrelated topics, politely say: "I can only help with questions about YNM Safety, our products, and services. How can I assist you with our company?"
 4. ALWAYS provide complete information. Never leave answers hanging or incomplete.
 
 Company Information (USE THIS TO ANSWER QUESTIONS - KNOW ALL OF THIS):
 
 COMPANY OVERVIEW:
-- Full Name: YNM Mega Industries Pvt Ltd
+- Full Name: YNM Safety Pan Global Trade Pvt Ltd
 - Established: 2013 (over 10 years in business)
 - Tagline: "Manufacturing & Export Excellence Since 2013"
 - Description: Leading manufacturer and exporter of premium paints, metal fabrications, and school furniture. Delivering quality products to global markets since 2013.
@@ -108,7 +108,7 @@ ${languageInstruction} Provide thorough, complete answers with all necessary det
       });
       contents.push({
         role: 'model',
-        parts: [{ text: 'Understood. I will provide complete, helpful answers about YNM Mega Industries.' }]
+        parts: [{ text: 'Understood. I will provide complete, helpful answers about YNM Safety.' }]
       });
       contents.push(...history);
       contents.push({

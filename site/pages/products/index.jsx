@@ -83,7 +83,7 @@ export default function ProductsPage() {
   return (
     <>
       <Head>
-        <title>Our Products - YNM Mega Industries</title>
+        <title>Our Products - YNM Safety</title>
         <meta name="description" content="Explore our range of premium paints, metal fabrication, and school furniture products." />
       </Head>
 
@@ -258,19 +258,6 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="products-cta">
-          <div className="products-cta-content">
-            <h2>Need Custom Products?</h2>
-            <p>We offer customization across all product categories. Contact us with your requirements.</p>
-            <Link href="/contact" className="products-cta-btn">
-              Contact Us
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </section>
       </main>
 
       <Footer />
@@ -639,56 +626,6 @@ export default function ProductsPage() {
           background: linear-gradient(135deg, #C9A24D 0%, #D4AF37 100%);
           color: #74060D;
           gap: 14px;
-        }
-
-        /* CTA Section */
-        .products-cta {
-          padding: 80px 20px;
-          background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
-          text-align: center;
-        }
-
-        .products-cta-content {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        .products-cta h2 {
-          font-size: 36px;
-          font-weight: 800;
-          color: #F7F3EA;
-          margin: 0 0 16px;
-        }
-
-        .products-cta p {
-          font-size: 18px;
-          color: #E6D3A3;
-          margin: 0 0 40px;
-          font-weight: 500;
-        }
-
-        .products-cta-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          padding: 18px 40px;
-          font-size: 16px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          color: #74060D;
-          background: #C9A24D;
-          border: 2px solid #E6D3A3;
-          border-radius: 30px;
-          text-decoration: none;
-          transition: all 0.3s ease;
-        }
-
-        .products-cta-btn:hover {
-          background: #E6D3A3;
-          color: #9A1B2E;
-          transform: translateY(-3px);
-          box-shadow: 0 15px 40px rgba(201, 162, 77, 0.4);
         }
 
         /* Laptop responsive breakpoints */

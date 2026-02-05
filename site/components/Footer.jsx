@@ -22,7 +22,7 @@ const fallbackFooter = {
   phone: "+91 96765 75770 / +91 90002 62013",
   email: "sales@ynmsafety.com",
   address: "Survey, 84P, Gowra Fountain Head, 4th Floor, Suite, 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081",
-  copyright: `© ${new Date().getFullYear()} YNM Mega Industries Pvt Ltd. All rights reserved.`,
+  copyright: `© ${new Date().getFullYear()} YNM Safety Pan Global Trade Pvt Ltd. All rights reserved.`,
 };
 
 // Social media links
@@ -95,7 +95,7 @@ function Footer({ footerData: propFooterData }) {
   const phone = footerData?.footerPhone || "+91 96765 75770 / +91 90002 62013";
   const email = footerData?.footerEmail || "sales@ynmsafety.com";
   const address = footerData?.footerAddress || "Survey, 84P, Gowra Fountain Head, 4th Floor, Suite, 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081";
-  const copyright = footerData?.footerCopyright || `© ${new Date().getFullYear()} YNM Mega Industries Pvt Ltd. All rights reserved.`;
+  const copyright = footerData?.footerCopyright || `© ${new Date().getFullYear()} YNM Safety Pan Global Trade Pvt Ltd. All rights reserved.`;
   const quickLinks = footerData?.quickLinks && Array.isArray(footerData.quickLinks) && footerData.quickLinks.length > 0
     ? footerData.quickLinks
     : quickLinksFromT;
@@ -162,9 +162,6 @@ function Footer({ footerData: propFooterData }) {
 
           <p className="ft-copyright">
             {copyright}
-          </p>
-          <p className="ft-credit">
-            Created by <span className="ft-creator">Om Gupta</span>
           </p>
         </div>
 
@@ -235,12 +232,6 @@ function Footer({ footerData: propFooterData }) {
             {address && <p className="ft-contact-item">Address: {address}</p>}
           </div>
           
-          {/* Legal Links */}
-          <div className="ft-legal">
-            <Link href="/terms" className="ft-legal-link">Terms & Conditions</Link>
-            <span className="ft-legal-divider">|</span>
-            <Link href="/privacy" className="ft-legal-link">Privacy Policy</Link>
-          </div>
         </div>
       </div>
     </footer>

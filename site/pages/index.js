@@ -193,7 +193,7 @@ const fallbackTestimonialsData = [
     company: "National Highways Infra Ltd.",
     role: "Procurement Head",
     rating: 4,
-    text: "YNM Mega Industries is a reliable manufacturer and exporter of hot thermoplastic road marking material and cold plastic paint for large highway projects. Their metal beam crash barriers and W beam crash barrier systems consistently meet international safety and durability standards.",
+    text: "YNM Safety is a reliable manufacturer and exporter of hot thermoplastic road marking material and cold plastic paint for large highway projects. Their metal beam crash barriers and W beam crash barrier systems consistently meet international safety and durability standards.",
     photo: "/assets/team-member-01.png",
     rotation: 1.5,
   },
@@ -203,7 +203,7 @@ const fallbackTestimonialsData = [
     company: "State Education Board",
     role: "Infrastructure Coordinator",
     rating: 5,
-    text: "We partnered with YNM Mega Industries for school furniture manufacturing and bulk exports, and the quality was excellent. Their ability to deliver durable desks and chairs on time makes them a trusted school furniture manufacturer for government institutions.",
+    text: "We partnered with YNM Safety for school furniture manufacturing and bulk exports, and the quality was excellent. Their ability to deliver durable desks and chairs on time makes them a trusted school furniture manufacturer for government institutions.",
     photo: "/assets/team-member-02.png",
     rotation: -1.5,
   },
@@ -213,7 +213,7 @@ const fallbackTestimonialsData = [
     company: "Urban Infra Solutions",
     role: "Design Director",
     rating: 4,
-    text: "YNM Mega Industries supplies premium retro reflective signages and road safety products with superior night visibility. Their expertise as a hot thermoplastic road marking manufacturer adds strong value to urban infrastructure projects.",
+    text: "YNM Safety supplies premium retro reflective signages and road safety products with superior night visibility. Their expertise as a hot thermoplastic road marking manufacturer adds strong value to urban infrastructure projects.",
     photo: "/assets/team-member-03.png",
     rotation: 1.2,
   },
@@ -223,7 +223,7 @@ const fallbackTestimonialsData = [
     company: "Gulf Traders LLC, UAE",
     role: "Import Director",
     rating: 4,
-    text: "YNM Mega Industries is an excellent export partner for road safety products, including cold plastic paint, metal beam crash barriers, and W beam crash barrier systems. Competitive pricing and consistent export timelines make them ideal for Middle East markets.",
+    text: "YNM Safety is an excellent export partner for road safety products, including cold plastic paint, metal beam crash barriers, and W beam crash barrier systems. Competitive pricing and consistent export timelines make them ideal for Middle East markets.",
     photo: "/assets/team-member-04.png",
     rotation: -1.2,
   },
@@ -233,7 +233,7 @@ const fallbackTestimonialsData = [
     company: "African Trade Corp, Nigeria",
     role: "Sourcing Head",
     rating: 4,
-    text: "YNM Mega Industries is a dependable exporter of hot thermoplastic road marking paint and retro reflective sign boards for African infrastructure projects. Their manufacturing quality and export packaging meet international compliance requirements.",
+    text: "YNM Safety is a dependable exporter of hot thermoplastic road marking paint and retro reflective sign boards for African infrastructure projects. Their manufacturing quality and export packaging meet international compliance requirements.",
     photo: "/assets/team-member-06.png",
     rotation: 1.5,
   },
@@ -243,7 +243,7 @@ const fallbackTestimonialsData = [
     company: "Smart City Development Authority",
     role: "Project Manager",
     rating: 5,
-    text: "We used cold plastic road marking paint and reflective signages from YNM Mega Industries across multiple smart city zones. Their strength as a complete road safety products manufacturer helped ensure smooth project execution.",
+    text: "We used cold plastic road marking paint and reflective signages from YNM Safety across multiple smart city zones. Their strength as a complete road safety products manufacturer helped ensure smooth project execution.",
     photo: "/assets/team-member-07.png",
     rotation: -1.2,
   },
@@ -253,7 +253,7 @@ const fallbackTestimonialsData = [
     company: "Middle East Infra Projects",
     role: "Operations Head",
     rating: 4,
-    text: "YNM Mega Industries delivers high-quality metal beam crash barriers and W beam crash barrier manufacturing solutions for expressway developments. Their export-ready production and engineering standards are highly reliable.",
+    text: "YNM Safety delivers high-quality metal beam crash barriers and W beam crash barrier manufacturing solutions for expressway developments. Their export-ready production and engineering standards are highly reliable.",
     photo: "/assets/team-member-05.png",
     rotation: 1.3,
   },
@@ -263,7 +263,7 @@ const fallbackTestimonialsData = [
     company: "EduSpace Furniture Pvt. Ltd.",
     role: "Purchase Manager",
     rating: 5,
-    text: "As a school furniture manufacturer and exporter, YNM Mega Industries provides strong, ergonomic desks and chairs for institutional use. Their large-scale manufacturing supports bulk orders without compromising quality.",
+    text: "As a school furniture manufacturer and exporter, YNM Safety provides strong, ergonomic desks and chairs for institutional use. Their large-scale manufacturing supports bulk orders without compromising quality.",
     photo: "/assets/team-member-08.png",
     rotation: -1.5,
   },
@@ -273,7 +273,7 @@ const fallbackTestimonialsData = [
     company: "RoadSafe Engineers",
     role: "Highway Safety Consultant",
     rating: 5,
-    text: "The hot thermoplastic road marking materials from YNM Mega Industries offer excellent adhesion and long service life. Their retro reflective signages and crash barrier systems significantly improve highway safety compliance.",
+    text: "The hot thermoplastic road marking materials from YNM Safety offer excellent adhesion and long service life. Their retro reflective signages and crash barrier systems significantly improve highway safety compliance.",
     photo: "/assets/team-member-09.png",
     rotation: 1.2,
   },
@@ -283,7 +283,7 @@ const fallbackTestimonialsData = [
     company: "State Road Development Corporation",
     role: "Chief Engineer",
     rating: 4,
-    text: "YNM Mega Industries is a trusted manufacturer and exporter of road safety products, from cold plastic paint to metal beam crash barriers. Their technical expertise and quality control standards support large-scale infrastructure projects.",
+    text: "YNM Safety is a trusted manufacturer and exporter of road safety products, from cold plastic paint to metal beam crash barriers. Their technical expertise and quality control standards support large-scale infrastructure projects.",
     photo: "/assets/team-member-10.png",
     rotation: -1.3,
   },
@@ -293,10 +293,10 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
   return (
     <>
       <Head>
-        <title>YNM Mega Industries Pvt Ltd | Manufacturing & Export</title>
+        <title>YNM Safety Pan Global Trade Pvt Ltd | Manufacturing & Export</title>
         <meta 
           name="description" 
-          content="YNM Mega Industries Pvt Ltd - Leading manufacturer and exporter of premium paints, metal fabrications, and school furniture. Quality products for global markets."
+          content="YNM Safety Pan Global Trade Pvt Ltd - Leading manufacturer and exporter of premium paints, metal fabrications, and school furniture. Quality products for global markets."
         />
       </Head>
       <Hero heroData={heroData} navLinks={navLinks} />

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 // Company details
 const companyInfo = {
-  name: "YNM Mega Industries Pvt Ltd",
+  name: "YNM Safety Pan Global Trade Pvt Ltd",
   tagline: "Manufacturing & Export Excellence Since 2013",
   email: "hr@ynmsafety.com",
   phone: "+91 96765 75770 / +91 90002 62013",
@@ -46,6 +46,22 @@ const openPositions = [
     location: "Hyderabad, India",
     type: "Full-time",
     description: "Build client relationships and drive business growth.",
+  },
+  {
+    id: 5,
+    title: "Warehouse Supervisor",
+    department: "Operations",
+    location: "Hyderabad, India",
+    type: "Full-time",
+    description: "Oversee warehouse operations, inventory management, and logistics coordination.",
+  },
+  {
+    id: 6,
+    title: "Accounts Executive",
+    department: "Finance",
+    location: "Hyderabad, India",
+    type: "Full-time",
+    description: "Handle financial records, invoicing, and support accounting operations.",
   },
 ];
 
@@ -317,8 +333,8 @@ export default function CareersPage() {
   return (
     <>
       <Head>
-        <title>Careers | YNM Mega Industries Pvt Ltd</title>
-        <meta name="description" content="Join YNM Mega Industries. Explore career opportunities in manufacturing, quality control, export, and sales. Build your career with us." />
+        <title>Careers | YNM Safety Pan Global Trade Pvt Ltd</title>
+        <meta name="description" content="Join YNM Safety. Explore career opportunities in manufacturing, quality control, export, and sales. Build your career with us." />
       </Head>
 
       <Navbar />
@@ -342,7 +358,7 @@ export default function CareersPage() {
             <div className="positions-section">
               <div className="section-header">
                 <h2>Open Positions</h2>
-                <p>Explore current job opportunities at YNM Mega Industries</p>
+                <p>Explore current job opportunities at YNM Safety</p>
               </div>
 
               <div className="positions-grid">
@@ -357,18 +373,6 @@ export default function CareersPage() {
                       <span className="position-location">📍 {position.location}</span>
                     </div>
                     <p className="position-desc">{position.description}</p>
-                    <button 
-                      className="position-apply-btn"
-                      onClick={() => {
-                        setFormData({ ...formData, position: position.title });
-                        document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                    >
-                      Apply Now
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
-                    </button>
                   </div>
                 ))}
               </div>
@@ -561,7 +565,7 @@ export default function CareersPage() {
 
             {/* Why Join Us */}
             <div className="why-join-section">
-              <h2>Why Join YNM Mega Industries?</h2>
+              <h2>Why Join YNM Safety?</h2>
               <div className="benefits-grid">
                 <div className="benefit-card">
                   <div className="benefit-icon">🏭</div>
@@ -756,29 +760,7 @@ export default function CareersPage() {
           font-size: 14px;
           color: #5a4a4a;
           line-height: 1.6;
-          margin: 0 0 20px;
-        }
-
-        .position-apply-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 12px 24px;
-          font-size: 13px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          color: #F7F3EA;
-          background: linear-gradient(135deg, #74060D, #9A1B2E);
-          border: 2px solid #C9A24D;
-          border-radius: 30px;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-
-        .position-apply-btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 10px 30px rgba(116, 6, 13, 0.3);
+          margin: 0;
         }
 
         /* Application Form */

@@ -1,5 +1,5 @@
 # ==============================================
-# YNM MEGA INDUSTRIES - GITLEAKS CONFIGURATION
+# YNM SAFETY - GITLEAKS CONFIGURATION
 # Secret scanning rules for CI/CD integration
 # ==============================================
 # Install: brew install gitleaks
@@ -22,7 +22,7 @@ tags = ["api-key", "google"]
 [[rules]]
 id = "google-private-key"
 description = "Google Service Account Private Key"
-regex = '''-----BEGIN PRIVATE KEY-----'''
+regex = '''-----BEGIN (RSA |EC )?PRIVATE KEY-----'''
 tags = ["private-key", "google"]
 
 [[rules]]
