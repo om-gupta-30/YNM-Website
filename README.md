@@ -3,13 +3,14 @@
 [![Next.js](https://img.shields.io/badge/Next.js-15.0.7-black?logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-20.x-339933?logo=node.js)](https://nodejs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
 
 A modern, responsive corporate website for **YNM Mega Industries Pvt Ltd**, a leading manufacturer and exporter of road safety products, industrial paints, metal fabrication, and school furniture based in Hyderabad, India.
 
 ## Live Website
 
-🌐 [ynmsafety.com](https://ynmsafety.com)
+[ynmsafety.com](https://ynmsafety.com)
 
 ---
 
@@ -21,18 +22,19 @@ A modern, responsive corporate website for **YNM Mega Industries Pvt Ltd**, a le
 | React | 19.0.0 | UI Library |
 | Tailwind CSS | 3.4.x | Utility-first Styling |
 | Nodemailer | 7.x | Email Services |
-| Google Gemini API | - | AI-powered Chatbot |
-| Google Sheets API | - | Contact Form Data Storage |
+| Google Gemini API | 2.x | AI-powered Chatbot |
+| Google Sheets API | v4 | Contact Form Data Storage |
 
 ## Features
 
-- **AI Chatbot** - Powered by Google Gemini for instant customer queries
+- **AI Chatbot** - Powered by Google Gemini 2.x for instant customer queries
 - **Responsive Design** - Optimized for all devices (mobile, tablet, laptop, desktop)
 - **Cross-Platform Support** - Windows and Mac specific optimizations
 - **Contact & Quote Forms** - Integrated with Google Sheets
 - **Career Portal** - Job applications with PDF resume upload & email notifications
 - **Interactive India Map** - Regional contact information with click-to-view details
-- **Product Catalog** - Detailed product pages with specifications, pricing, and galleries
+- **Product Catalog** - Detailed product pages with specifications and galleries
+- **Multi-language Support** - English and Hindi language options
 - **Performance Optimized** - Lazy loading, caching, and smooth animations
 
 ---
@@ -40,47 +42,57 @@ A modern, responsive corporate website for **YNM Mega Industries Pvt Ltd**, a le
 ## Project Structure
 
 ```
-ynm-website/
-├── site/                          # Next.js application
-│   ├── components/                # React components
-│   │   ├── Navbar.jsx            # Navigation bar
-│   │   ├── Footer.jsx            # Site footer
-│   │   ├── Chatbot.jsx           # AI chatbot widget
-│   │   ├── Hero.jsx              # Hero section
-│   │   ├── IndiaPresenceMap.jsx  # Interactive map
-│   │   ├── Mascot.jsx            # Animated mascot
+YNM-website/
+├── site/                           # Next.js application
+│   ├── components/                 # React components
+│   │   ├── Navbar.jsx             # Navigation bar
+│   │   ├── Footer.jsx             # Site footer
+│   │   ├── Chatbot.jsx            # AI chatbot widget
+│   │   ├── Hero.jsx               # Hero section
+│   │   ├── IndiaPresenceMap.jsx   # Interactive map
+│   │   ├── DirectorSection.jsx    # Director testimonial
+│   │   ├── EmployeesSection.jsx   # Employee testimonials
 │   │   └── ...
-│   ├── pages/                     # Routes & API endpoints
+│   ├── contexts/                   # React contexts
+│   │   └── LanguageContext.jsx    # Multi-language support
+│   ├── pages/                      # Routes & API endpoints
 │   │   ├── api/
-│   │   │   ├── contact/submit.js # Contact form → Google Sheets
-│   │   │   ├── careers/submit.js # Career form with email & PDF
-│   │   │   ├── chat/gemini.js    # AI chatbot API
-│   │   │   └── health.js         # Health check endpoint
+│   │   │   ├── contact/submit.js  # Contact form → Google Sheets
+│   │   │   ├── careers/submit.js  # Career form with email & PDF
+│   │   │   ├── chat/gemini.js     # AI chatbot API
+│   │   │   └── health.js          # Health check endpoint
 │   │   ├── products/
-│   │   │   ├── index.jsx         # Product catalog
-│   │   │   ├── [productId].jsx   # Dynamic product pages
-│   │   │   └── fabrication.jsx   # Fabrication products
+│   │   │   ├── index.jsx          # Product catalog
+│   │   │   ├── [productId].jsx    # Dynamic product pages
+│   │   │   └── fabrication.jsx    # Fabrication products
 │   │   ├── about/
 │   │   ├── careers/
 │   │   ├── clients/
 │   │   ├── contact/
+│   │   ├── our-team/
 │   │   └── ...
-│   ├── lib/                       # Data & utilities
+│   ├── lib/                        # Data & utilities
 │   │   ├── productsCategoriesData.js
+│   │   ├── productsData.js
 │   │   ├── chatbotData.js
+│   │   ├── directorData.js
+│   │   ├── employeesData.js
 │   │   ├── indiaContacts.js
-│   │   └── ...
+│   │   └── translations.js
 │   ├── styles/
-│   │   └── globals.css           # Global styles & responsive breakpoints
-│   ├── public/                    # Static assets
-│   │   ├── assets/               # Images & media
-│   │   ├── certificates/         # PDF certificates
-│   │   └── fonts/                # Custom fonts
-│   ├── .env.example              # Environment template (safe to commit)
-│   ├── .gitignore                # Git ignore rules
-│   ├── Dockerfile                # Docker configuration
+│   │   └── globals.css            # Global styles & responsive breakpoints
+│   ├── public/                     # Static assets
+│   │   ├── assets/                # Images & media
+│   │   │   ├── brand-logos/       # Client/partner logos
+│   │   │   ├── employeephotos/    # Employee photos
+│   │   │   └── team/              # Director & team photos
+│   │   ├── certificates/          # PDF certificates
+│   │   └── fonts/                 # Custom fonts
+│   ├── .env.example               # Environment template (safe to commit)
+│   ├── .gitignore                 # Git ignore rules
+│   ├── Dockerfile                 # Docker configuration
 │   └── package.json
-├── .gitignore                     # Root git ignore rules
+├── .gitignore                      # Root git ignore rules
 └── README.md
 ```
 
@@ -171,7 +183,7 @@ cp site/.env.example site/.env.local
 
 ---
 
-## 🔒 Security
+## Security
 
 ### What's Protected (NEVER committed to git)
 
@@ -185,27 +197,27 @@ cp site/.env.example site/.env.local
 
 ### Pre-configured Protections
 
-✅ `.env.local` and all `.env.*` files are gitignored  
-✅ No hardcoded API keys in source code  
-✅ Service account files are gitignored  
-✅ All secrets accessed via `process.env`  
-✅ API keys are only used server-side (never exposed to browser)  
+- `.env.local` and all `.env.*` files are gitignored
+- No hardcoded API keys in source code
+- Service account files are gitignored
+- All secrets accessed via `process.env`
+- API keys are only used server-side (never exposed to browser)
+- Rate limiting on career form submissions
+- reCAPTCHA integration for spam protection
 
 ### Before Pushing to GitHub/Vercel/GCP
 
-Run this command to verify no secrets will be leaked:
+Run these commands to verify no secrets will be leaked:
 
 ```bash
 # Check what files will be committed
 git status
 
-# Verify these are NOT listed:
-# - .env.local (or any .env file except .env.example)
-# - Any .json credential files
-# - Any .pem or .key files
+# Verify no sensitive files are staged
+git diff --cached --name-only | grep -E '\.(env|pem|key|credentials)' && echo "WARNING: Sensitive files detected!" || echo "OK: No sensitive files staged"
 
-# Double-check with:
-git diff --cached --name-only
+# List all tracked files to double-check
+git ls-files | grep -E '\.(env|pem|key)' | grep -v '.example'
 ```
 
 ### Deployment Checklist
@@ -213,7 +225,9 @@ git diff --cached --name-only
 - [ ] All environment variables set in hosting platform (Vercel/GCP)
 - [ ] HTTPS enabled on production domain
 - [ ] Google Cloud IAM permissions reviewed
+- [ ] Google Sheets shared with service account email
 - [ ] No secrets in git history
+- [ ] reCAPTCHA keys configured (optional but recommended)
 
 ---
 
@@ -301,5 +315,5 @@ This codebase is proprietary software. Unauthorized copying, modification, distr
 
 <p align="center">
   <strong>Developed by Om Gupta</strong><br>
-  © 2024-2026 YNM Mega Industries Pvt Ltd
+  © 2024-2026 YNM Mega Industries Pvt Ltd. All rights reserved.
 </p>

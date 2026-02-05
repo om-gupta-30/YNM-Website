@@ -387,9 +387,6 @@ export default function FabricationPage() {
                             </span>
                           ))}
                         </div>
-                        <div className="hover-cta">
-                          <span className="hover-enquire">Get Quote →</span>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -861,32 +858,6 @@ export default function FabricationPage() {
           </div>
         </section>
 
-        {/* Client Logos Marquee */}
-        <section className="fabrication-clients-section">
-          <div className="clients-container">
-            <h3>Trusted by Industry Leaders</h3>
-            <div className="clients-marquee">
-              <div className="marquee-track">
-                <div className="client-logo">NHAI</div>
-                <div className="client-logo">L&T</div>
-                <div className="client-logo">Tata Projects</div>
-                <div className="client-logo">IRB Infra</div>
-                <div className="client-logo">Dilip Buildcon</div>
-                <div className="client-logo">Ashoka Buildcon</div>
-                <div className="client-logo">GMR</div>
-                <div className="client-logo">Adani Infra</div>
-                <div className="client-logo">NHAI</div>
-                <div className="client-logo">L&T</div>
-                <div className="client-logo">Tata Projects</div>
-                <div className="client-logo">IRB Infra</div>
-                <div className="client-logo">Dilip Buildcon</div>
-                <div className="client-logo">Ashoka Buildcon</div>
-                <div className="client-logo">GMR</div>
-                <div className="client-logo">Adani Infra</div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Comparison Table Section */}
         <section className="fabrication-comparison-section">

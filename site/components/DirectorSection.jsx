@@ -16,7 +16,7 @@ export default function DirectorSection({ directorData: propDirectorData }) {
     return null;
   }
 
-  const photoSrc = directorData.photo || "/directorphoto.png";
+  const photoSrc = directorData.photo || "/assets/team/directorphoto.png";
 
   return (
     <section id="our-director" className="director-section">

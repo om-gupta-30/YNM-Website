@@ -8934,7 +8934,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(/directorphoto.png) center/cover no-repeat;
+  background: url(/assets/team/directorphoto.png) center/cover no-repeat;
   filter: blur(6px);
   transform: scale(1.05);
 }
@@ -9422,7 +9422,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(/directorphoto.png) center/cover no-repeat;
+  background: url(/assets/team/directorphoto.png) center/cover no-repeat;
   filter: blur(6px);
   transform: scale(1.05);
 }
