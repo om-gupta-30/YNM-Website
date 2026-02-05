@@ -1,5 +1,6 @@
 # ==============================================
 # YNM MEGA INDUSTRIES - GITIGNORE
+# SECURITY HARDENED - Prevents secret leaks
 # ==============================================
 
 # Dependencies
@@ -11,34 +12,81 @@ pnpm-debug.log*
 .pnpm-store/
 
 # ==============================================
-# ENVIRONMENT & SECRETS (CRITICAL - Never commit!)
+# 🔒 ENVIRONMENT & SECRETS (CRITICAL - NEVER commit!)
 # ==============================================
+# ALL .env files except .env.example
 .env
+.env.*
 .env.local
 .env.*.local
 .env.development
 .env.production
+.env.staging
+.env.test
 .env.development.local
 .env.production.local
+**/.env
+**/.env.*
+**/.env.local
 !.env.example
+!**/.env.example
 
-# Keys & Certificates (NEVER commit!)
+# ==============================================
+# 🔒 KEYS & CERTIFICATES (NEVER commit!)
+# ==============================================
 *.pem
 *.key
 *.p12
 *.pfx
 *.crt
 *.cert
+*.der
+*.cer
+*.keystore
+*.jks
+id_rsa
+id_rsa.*
+id_dsa
+id_dsa.*
+id_ecdsa
+id_ecdsa.*
+id_ed25519
+id_ed25519.*
+*.pub  # SSH public keys (optional but safer)
 
-# Credentials (NEVER commit!)
+# ==============================================
+# 🔒 CREDENTIALS & SECRETS (NEVER commit!)
+# ==============================================
 credentials.json
+*credentials*.json
 service-account*.json
+serviceaccount*.json
 *-credentials.json
 *-key.json
+*_key.json
 *.credentials
 secrets/
 private/
 .secrets/
+.credentials/
+config/secrets.*
+**/secrets.*
+*.secret
+*.secrets
+
+# Google Cloud specific
+gcloud-service-key.json
+google-credentials.json
+firebase-adminsdk*.json
+*-firebase-adminsdk-*.json
+
+# AWS specific
+.aws/
+aws-credentials*
+
+# Azure specific
+.azure/
+azure-credentials*
 
 # ==============================================
 # BUILD OUTPUTS
