@@ -110,6 +110,19 @@ coverage/
 *.rej
 
 # ==============================================
+# SECURITY REPORTS (Don't commit)
+# ==============================================
+SECURITY_AUDIT_REPORT.md
+*_AUDIT_*.md
+PROJECT_CLEANUP_SUMMARY.txt
+BUILD_REPORT.md
+ENV_TEST_RESULTS.md
+GCP_DEPLOYMENT_REPORT.md
+*_REPORT.md
+*_RESULTS.md
+*_SUMMARY.*
+
+# ==============================================
 # VERCEL / DEPLOYMENT
 # ==============================================
 .vercel

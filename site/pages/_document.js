@@ -31,21 +31,8 @@ export default function Document() {
         {/* Windows-specific optimizations */}
         <meta name="msapplication-tap-highlight" content="no" />
         
-        {/* Google Analytics 4 - defer loading for performance */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX');
-            `,
-          }}
-        />
+        {/* Note: Google Analytics should be added via environment variable NEXT_PUBLIC_GA_ID */}
+        {/* and implemented in _app.js using next/script for better performance */}
         
         <link rel="icon" href="/favicon.ico" />
         
