@@ -1,5 +1,5 @@
 # ==============================================
-# YNM MEGA INDUSTRIES - SECURITY SCAN WORKFLOW
+# YNM SAFETY - SECURITY SCAN WORKFLOW
 # Runs on every push/PR to detect leaked secrets
 # ==============================================
 

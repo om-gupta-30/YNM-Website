@@ -16,7 +16,7 @@ export default function EmployeesSection({ employeesData: propEmployeesData, hig
 
   const displayData = employeesData && employeesData.length > 0
     ? employeesData
-    : [{ id: 1, name: "Rajesh Kumar", role: "Chief Executive Officer (CEO)", department: "Executive Leadership", text: "At YNM Mega Industries, we're committed to manufacturing excellence and global expansion.", photo: "/assets/team-member-01.png" }];
+    : [{ id: 1, name: "Rajesh Kumar", role: "Chief Executive Officer (CEO)", department: "Executive Leadership", text: "At YNM Safety, we're committed to manufacturing excellence and global expansion.", photo: "/assets/team-member-01.png" }];
 
   return (
     <section id="our-team" className="employees-section">

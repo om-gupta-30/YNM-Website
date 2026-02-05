@@ -4,6 +4,10 @@ import Script from "next/script";
 import Mascot from "@/components/Mascot";
 import FloatingSocialMedia from "@/components/FloatingSocialMedia";
 import Chatbot from "@/components/Chatbot";
+import UnderConstruction from "@/components/UnderConstruction";
+
+// Check if under construction mode is enabled
+const isUnderConstruction = process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION === 'true';
 
 // Fast smooth scroll function (500ms with easeOutQuart)
 const smoothScrollTo = (targetY, duration = 500) => {
@@ -83,6 +87,11 @@ export default function App({ Component, pageProps }) {
       if (scrollTimeout) clearTimeout(scrollTimeout);
     };
   }, []);
+
+  // Show Under Construction page if enabled
+  if (isUnderConstruction) {
+    return <UnderConstruction />;
+  }
 
   return (
     <>

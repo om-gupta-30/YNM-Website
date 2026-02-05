@@ -1,4 +1,4 @@
-# YNM Mega Industries - Corporate Website
+# YNM Safety - Corporate Website
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.12-black?logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
@@ -6,7 +6,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
 
-A modern, responsive corporate website for **YNM Mega Industries Pvt Ltd**, a leading manufacturer and exporter of road safety products, industrial paints, metal fabrication, and school furniture based in Hyderabad, India.
+A modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd**, a leading manufacturer and exporter of road safety products, industrial paints, metal fabrication, and school furniture based in Hyderabad, India.
 
 ## Live Website
 
@@ -29,6 +29,7 @@ A modern, responsive corporate website for **YNM Mega Industries Pvt Ltd**, a le
 
 ## Features
 
+- **Under Construction Mode** - Toggle to show "Coming Soon" page during development
 - **AI Chatbot** - Powered by Google Gemini 2.x for instant customer queries
 - **Responsive Design** - Optimized for all devices (mobile, tablet, laptop, desktop)
 - **Cross-Platform Support** - Windows and Mac specific optimizations
@@ -47,6 +48,7 @@ A modern, responsive corporate website for **YNM Mega Industries Pvt Ltd**, a le
 YNM-website/
 ├── site/                           # Next.js application
 │   ├── components/                 # React components
+│   │   ├── UnderConstruction.jsx  # Under construction page with contact form
 │   │   ├── Navbar.jsx             # Navigation bar
 │   │   ├── Footer.jsx             # Site footer
 │   │   ├── Chatbot.jsx            # AI chatbot widget
@@ -173,6 +175,25 @@ docker run -p 3000:3000 --env-file .env.local ynm-website
 2. **Fill in your credentials** (see below for detailed instructions)
 
 3. **NEVER commit `.env.local`** - It's automatically gitignored
+
+---
+
+### Under Construction Mode
+
+This website has a built-in "Under Construction" mode that shows a simple landing page with contact form while hiding the full website. This is useful for deploying early while still developing the full site.
+
+| Environment | `NEXT_PUBLIC_UNDER_CONSTRUCTION` | What Visitors See |
+|-------------|----------------------------------|-------------------|
+| **Production** | `true` | Under Construction page + Contact Form only |
+| **Local Dev** | `false` | Full website (all pages accessible) |
+
+**To enable Under Construction mode in production:**
+- Set `NEXT_PUBLIC_UNDER_CONSTRUCTION=true` in your deployment platform (Vercel/GCP)
+- Your local `.env.local` should have it set to `false` so you can develop normally
+
+**When ready to launch the full site:**
+- Change `NEXT_PUBLIC_UNDER_CONSTRUCTION=false` in production
+- The full website will go live immediately
 
 ---
 
@@ -319,13 +340,16 @@ docker run -p 3000:3000 --env-file .env.local ynm-website
 ### Example `.env.local` File
 
 ```bash
+# Under Construction Mode (set to 'true' in production, 'false' for local dev)
+NEXT_PUBLIC_UNDER_CONSTRUCTION=false
+
 # Google Sheets (Contact Form)
 GOOGLE_SHEET_ID=your_google_sheet_id_here
 GOOGLE_SERVICE_ACCOUNT_EMAIL=your-service-account@your-project.iam.gserviceaccount.com
-GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYourPrivateKeyHere\n-----END PRIVATE KEY-----\n"
+GOOGLE_PRIVATE_KEY="your_private_key_from_service_account_json"
 
 # Google Gemini API (Chatbot)
-GOOGLE_GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+GOOGLE_GEMINI_API_KEY=your_gemini_api_key_here
 
 # Gmail (Email Notifications)
 GMAIL_USER=your-email@gmail.com
@@ -426,7 +450,7 @@ git ls-files | grep -E '\.(env|pem|key)' | grep -v '.example'
 
 # 4. Search for hardcoded secrets in tracked files
 cd site
-git ls-files -z | xargs -0 grep -l "AIzaSy\|-----BEGIN PRIVATE KEY" 2>/dev/null && echo "⚠️ WARNING: Potential hardcoded secrets!" || echo "✅ OK: No hardcoded secrets"
+git ls-files -z | xargs -0 grep -l "AIzaSy" 2>/dev/null && echo "⚠️ WARNING: Potential hardcoded secrets!" || echo "✅ OK: No hardcoded secrets"
 cd ..
 
 # 5. Run build to verify everything compiles
@@ -483,14 +507,17 @@ cd site && npm run build
 
 3. **Environment Variables to Add**
    ```
+   NEXT_PUBLIC_UNDER_CONSTRUCTION=true
    GOOGLE_SHEET_ID=your_sheet_id
    GOOGLE_SERVICE_ACCOUNT_EMAIL=your_service_account@project.iam.gserviceaccount.com
-   GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+   GOOGLE_PRIVATE_KEY="your_private_key_from_service_account_json"
    GOOGLE_GEMINI_API_KEY=your_gemini_api_key
    GMAIL_USER=your_email@gmail.com
    GMAIL_APP_PASSWORD=your_16_char_app_password
    HR_EMAIL=hr@ynmsafety.com
    ```
+   
+   > **Note:** Set `NEXT_PUBLIC_UNDER_CONSTRUCTION=true` to show only the Under Construction page. Set to `false` when ready to launch the full website.
 
 ### Google Cloud Platform (Cloud Run)
 
@@ -666,7 +693,7 @@ All API routes are located in `site/pages/api/` and are server-side only.
 **Response:**
 ```json
 {
-  "response": "YNM Mega Industries offers premium paints, metal fabrication...",
+  "response": "YNM Safety offers premium paints, metal fabrication...",
   "usage": {
     "promptTokens": 150,
     "totalTokens": 300
@@ -733,7 +760,7 @@ npm run lint         # Run ESLint to check code quality
 
 ## License
 
-**Proprietary** - All rights reserved by YNM Mega Industries Pvt Ltd.
+**Proprietary** - All rights reserved by YNM Safety Pan Global Trade Pvt Ltd.
 
 This codebase is proprietary software. Unauthorized copying, modification, distribution, or use is strictly prohibited.
 
@@ -741,7 +768,7 @@ This codebase is proprietary software. Unauthorized copying, modification, distr
 
 ## Contact
 
-**YNM Mega Industries Pvt Ltd**
+**YNM Safety Pan Global Trade Pvt Ltd**
 
 | | |
 |---|---|
@@ -755,5 +782,5 @@ This codebase is proprietary software. Unauthorized copying, modification, distr
 
 <p align="center">
   <strong>Developed by Om Gupta</strong><br>
-  © 2024-2026 YNM Mega Industries Pvt Ltd. All rights reserved.
+  © 2024-2026 YNM Safety Pan Global Trade Pvt Ltd. All rights reserved.
 </p>

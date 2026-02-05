@@ -175,7 +175,13 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
                   alt={selectedBrand.name}
                   width={200}
                   height={100}
-                  style={{ objectFit: "contain" }}
+                  style={{ 
+                    objectFit: "contain",
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    width: "auto",
+                    height: "auto"
+                  }}
                 />
               </div>
               <h3 className="brand-popup-name">{selectedBrand.name}</h3>

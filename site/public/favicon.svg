@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#C9A227"/>
+      <stop offset="100%" style="stop-color:#B8960F"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0A10"/>
+      <stop offset="100%" style="stop-color:#74060D"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" fill="url(#redGrad)"/>
+  <!-- Gold MY Icon -->
+  <g transform="translate(80, 100)">
+    <!-- Left bracket of M -->
+    <path d="M0 0 L0 312 L40 312 L40 80 L40 0 Z" fill="url(#goldGrad)"/>
+    <!-- Right bracket of M -->
+    <path d="M120 0 L120 312 L160 312 L160 80 L160 0 Z" fill="url(#goldGrad)"/>
+    <!-- Top connector -->
+    <path d="M0 0 L160 0 L160 40 L0 40 Z" fill="url(#goldGrad)"/>
+    <!-- Y shape in middle -->
+    <path d="M60 40 L80 120 L100 40 L140 40 L100 160 L100 312 L60 312 L60 160 L20 40 Z" fill="url(#goldGrad)"/>
+  </g>
+  <!-- YNM Text -->
+  <text x="200" y="340" font-family="Arial, sans-serif" font-size="140" font-weight="bold" fill="#FFFFFF" letter-spacing="8">YNM</text>
+</svg>

@@ -3,17 +3,17 @@
  */
 const directorData = {
   id: 1,
-  name: "Rishuu N Jaiin",
+  name: "Rishuu Jaiin",
   role: "Managing Director",
   department: "Executive Management",
   photo: "/assets/team/rishu-sir-3.png",
   photo2: "/assets/team/directorphoto2.png", // Alternative photo for detailed page
-  quote: "Leading YNM Mega Industries has been an inspiring and fulfilling journey. What truly sets our organization apart is the dedication of our people and the strong values we practice every day. I am proud of our team's commitment to quality, innovation, and collaboration, which continues to drive our success in fabrication, paint manufacturing, and school furniture while strengthening our global presence.",
-  about: "Rishuu N Jaiin is the Managing Director of YNM Mega Industries Pvt Ltd, a leading manufacturer and exporter of premium paints, metal fabrications, and school furniture. With a vision for excellence and global expansion, he has been instrumental in establishing YNM as a trusted name in manufacturing and export since 2013. Under his leadership, the company has expanded its reach to over 15 countries and built strong relationships with clients across Asia, Africa, and the Middle East.",
+  quote: "Leading YNM Safety has been an inspiring and fulfilling journey. What truly sets our organization apart is the dedication of our people and the strong values we practice every day. I am proud of our team's commitment to quality, innovation, and collaboration, which continues to drive our success in fabrication, paint manufacturing, and school furniture while strengthening our global presence.",
+  about: "Rishuu Jaiin is the Managing Director of YNM Safety Pan Global Trade Pvt Ltd, a leading manufacturer and exporter of premium paints, metal fabrications, and school furniture. With a vision for excellence and global expansion, he has been instrumental in establishing YNM as a trusted name in manufacturing and export since 2013. Under his leadership, the company has expanded its reach to over 15 countries and built strong relationships with clients across Asia, Africa, and the Middle East.",
   ventures: [
     {
       id: 1,
-      name: "YNM Mega Industries Pvt Ltd",
+      name: "YNM Safety Pan Global Trade Pvt Ltd",
       description: "Leading manufacturer and exporter of industrial & decorative paints, metal fabrications, and school furniture. Serving clients across 15+ countries with quality products and reliable service. Established in 2013, the company has grown to become a trusted name in manufacturing and export.",
       role: "Managing Director",
       year: "2013 - Present",
@@ -62,22 +62,6 @@ const directorData = {
     }
   ],
   
-  // Additional information
-  education: [
-    {
-      degree: "Master of Business Administration (MBA)",
-      institution: "Indian Institute of Management",
-      year: "2008-2010",
-      specialization: "Operations & International Business"
-    },
-    {
-      degree: "Bachelor of Engineering (B.E.)",
-      institution: "Prestigious Engineering College",
-      year: "2004-2008",
-      specialization: "Mechanical Engineering"
-    }
-  ],
-  
   achievements: [
     {
       title: "Export Excellence Award",
@@ -107,34 +91,34 @@ const directorData = {
   
   milestones: [
     {
+      year: "2008",
+      title: "Engineering Graduate",
+      description: "Completed B.E. in Mechanical Engineering, laying the foundation for manufacturing expertise"
+    },
+    {
+      year: "2010",
+      title: "MBA Completed",
+      description: "Earned MBA with specialization in Operations & International Business"
+    },
+    {
       year: "2013",
-      title: "Company Founded",
-      description: "Established YNM Mega Industries with a vision for manufacturing excellence"
+      title: "Entrepreneurial Journey Begins",
+      description: "Founded YNM Safety, turning vision into reality as a first-generation entrepreneur"
     },
     {
-      year: "2015",
-      title: "First International Export",
-      description: "Expanded operations to international markets, beginning export journey"
-    },
-    {
-      year: "2017",
-      title: "ISO 9001:2015 Certification",
-      description: "Achieved international quality management system certification"
-    },
-    {
-      year: "2019",
-      title: "15+ Country Expansion",
-      description: "Reached milestone of exporting to 15+ countries across multiple continents"
+      year: "2018",
+      title: "Industry Recognition",
+      description: "Recognized as an emerging business leader in manufacturing sector"
     },
     {
       year: "2021",
-      title: "500+ Projects Milestone",
-      description: "Successfully completed 500+ projects across various sectors"
+      title: "Entrepreneur of the Year",
+      description: "Awarded by Hyderabad Chamber of Commerce for exceptional leadership"
     },
     {
       year: "2023",
-      title: "Market Leadership",
-      description: "Established as a leading manufacturer and exporter in the industry"
+      title: "Export Excellence Award",
+      description: "Honored for outstanding contribution to international trade and exports"
     }
   ],
   
@@ -145,8 +129,7 @@ const directorData = {
     companiesLed: "6",
     countriesReached: "17+",
     projectsDelivered: "500+",
-    teamSize: "200+",
-    annualRevenue: "₹50+ Crores"
+    teamSize: "200+"
   }
 };
 

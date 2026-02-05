@@ -38,7 +38,7 @@ export default function Navbar() {
           {!logoError ? (
             <Image
               src="/assets/logo-navbar.jpg"
-              alt="YNM Mega Industries logo"
+              alt="YNM Safety logo"
               width={50}
               height={50}
               className="nav-logo-new"

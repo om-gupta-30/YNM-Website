@@ -439,8 +439,8 @@ ${formData.message || "None"}
   return (
     <>
       <Head>
-        <title>Get a Quote | YNM Mega Industries Pvt Ltd</title>
-        <meta name="description" content="Request a quote for W Beam Crash Barriers, Industrial Paints, Metal Fabrication, and School Furniture from YNM Mega Industries." />
+        <title>Get a Quote | YNM Safety Pan Global Trade Pvt Ltd</title>
+        <meta name="description" content="Request a quote for W Beam Crash Barriers, Industrial Paints, Metal Fabrication, and School Furniture from YNM Safety." />
       </Head>
 
       <Navbar />
@@ -1001,7 +1001,7 @@ ${formData.message || "None"}
                       )}
                     </button>
                     <p className="form-disclaimer">
-                      By submitting this form, you agree to our <Link href="/privacy">Privacy Policy</Link> and <Link href="/terms">Terms of Service</Link>.
+                      By submitting this form, you agree to our Privacy Policy and Terms of Service.
                     </p>
                   </div>
                 </form>

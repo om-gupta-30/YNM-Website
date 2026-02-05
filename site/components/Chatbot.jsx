@@ -71,7 +71,7 @@ export default function Chatbot() {
       const savedMessages = localStorage.getItem(`chatbot_messages_${chatSessionId.current}`);
       const initialMessage = {
         id: 1,
-        text: "Hello! 👋 I'm your AI assistant powered by Google Gemini. I can help you with questions about YNM Mega Industries, our products, services, and more. How can I assist you today?",
+        text: "Hello! 👋 I'm your YNM Safety assistant. I can help you with questions about our products, services, and more. How can I assist you today?",
         sender: "bot",
         timestamp: new Date()
       };
@@ -286,7 +286,7 @@ export default function Chatbot() {
       chatSessionId.current = `chat_${Date.now()}`;
       const initialMessage = {
         id: 1,
-        text: "Hello! 👋 I'm your AI assistant powered by Google Gemini. I can help you with questions about YNM Mega Industries, our products, services, and more. How can I assist you today?",
+        text: "Hello! 👋 I'm your YNM Safety assistant. I can help you with questions about our products, services, and more. How can I assist you today?",
         sender: "bot",
         timestamp: new Date()
       };
@@ -596,19 +596,37 @@ export default function Chatbot() {
   }, [inputValue, isTyping, messages, language]);
 
   // Toggle chat
-  const toggleChat = () => {
-    if (isMinimized) {
+  const toggleChat = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (isOpen) {
+      // Close the chat
+      setIsOpen(false);
       setIsMinimized(false);
-      setIsOpen(true);
     } else {
-      setIsOpen(!isOpen);
+      // Open the chat
+      setIsOpen(true);
+      setIsMinimized(false);
     }
   };
 
   // Minimize chat
-  const minimizeChat = () => {
-    setIsMinimized(true);
+  const minimizeChat = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     setIsOpen(false);
+    setIsMinimized(true);
+  };
+
+  // Close chat completely
+  const closeChat = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    setIsOpen(false);
+    setIsMinimized(false);
   };
 
   return (
@@ -637,13 +655,20 @@ export default function Chatbot() {
 
       {/* Chatbot Window */}
       {isOpen && !isMinimized && (
-        <div className="chatbot-window">
+        <div className="chatbot-window" onClick={(e) => e.stopPropagation()}>
           <div className="chatbot-header">
             <div className="chatbot-header-content">
-              <div className="chatbot-avatar">🤖</div>
+              <div className="chatbot-avatar">
+                <Image 
+                  src="/assets/mascot.png" 
+                  alt="YNM Mascot" 
+                  width={36} 
+                  height={36}
+                  style={{ borderRadius: '50%', objectFit: 'cover' }}
+                />
+              </div>
               <div>
                 <h3>YNM AI Assistant</h3>
-                <p>Powered by Google Gemini</p>
               </div>
             </div>
             <div className="chatbot-header-actions">

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,11 +7,51 @@ import Footer from "@/components/Footer";
 import directorData from "@/lib/directorData";
 
 export default function OurDirectorPage() {
+  const [appointmentForm, setAppointmentForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    purpose: "",
+    preferredDate: "",
+    preferredTime: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleAppointmentChange = (e) => {
+    setAppointmentForm({ ...appointmentForm, [e.target.name]: e.target.value });
+  };
+
+  const handleAppointmentSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    setSubmitted(true);
+    setIsSubmitting(false);
+    setAppointmentForm({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      purpose: "",
+      preferredDate: "",
+      preferredTime: "",
+      message: "",
+    });
+    
+    setTimeout(() => setSubmitted(false), 8000);
+  };
+
   return (
     <>
       <Head>
-        <title>Our Director - YNM Mega Industries Pvt Ltd</title>
-        <meta name="description" content="Meet Rishuu N Jaiin, Managing Director of YNM Mega Industries - leading manufacturer and exporter with a vision for excellence and global expansion." />
+        <title>Our Director - YNM Safety Pan Global Trade Pvt Ltd</title>
+        <meta name="description" content="Meet Rishuu Jaiin, Managing Director of YNM Safety - leading manufacturer and exporter with a vision for excellence and global expansion." />
       </Head>
 
       <Navbar />
@@ -167,17 +208,14 @@ export default function OurDirectorPage() {
           <section className="director-milestones-section">
             <div className="director-section-container">
               <h2>Career Milestones</h2>
-              <p className="section-subtitle">
-                Key moments in the journey of building successful ventures
+              <p className="section-subtitle" style={{ color: '#E6D3A3' }}>
+                Key moments in the personal journey of Rishuu Jaiin
               </p>
               <div className="milestones-timeline">
                 {directorData.milestones.map((milestone, index) => (
-                  <div 
-                    key={index} 
-                    className={`milestone-item ${index % 2 === 0 ? 'milestone-top' : 'milestone-bottom'}`}
-                    data-year={milestone.year}
-                  >
+                  <div key={index} className="milestone-item">
                     <div className="milestone-content">
+                      <span className="milestone-year">{milestone.year}</span>
                       <h3>{milestone.title}</h3>
                       <p>{milestone.description}</p>
                     </div>
@@ -200,6 +238,189 @@ export default function OurDirectorPage() {
             </div>
           </section>
         )}
+
+        {/* Book Appointment Section */}
+        <section className="director-appointment-section">
+          <div className="appointment-container">
+            <div className="appointment-info">
+              <span className="appointment-tag">MEET THE DIRECTOR</span>
+              <h2>Book an Appointment</h2>
+              <p>Schedule a personal meeting with Rishuu Jaiin to discuss business opportunities, partnerships, or strategic collaborations.</p>
+              
+              <div className="appointment-benefits">
+                <div className="benefit-item">
+                  <span className="benefit-icon">📅</span>
+                  <div>
+                    <h4>Flexible Scheduling</h4>
+                    <p>Choose a time that works best for you</p>
+                  </div>
+                </div>
+                <div className="benefit-item">
+                  <span className="benefit-icon">💼</span>
+                  <div>
+                    <h4>Business Discussions</h4>
+                    <p>Explore partnerships and collaborations</p>
+                  </div>
+                </div>
+                <div className="benefit-item">
+                  <span className="benefit-icon">🤝</span>
+                  <div>
+                    <h4>Personal Attention</h4>
+                    <p>One-on-one meeting with leadership</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="appointment-form-wrapper">
+              {submitted ? (
+                <div className="appointment-success">
+                  <div className="success-icon">✓</div>
+                  <h3>Appointment Request Sent!</h3>
+                  <p>Thank you for your interest. Our team will contact you shortly to confirm your appointment.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleAppointmentSubmit} className="appointment-form">
+                  <h3>Request an Appointment</h3>
+                  
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="apt-name">Full Name *</label>
+                      <input
+                        type="text"
+                        id="apt-name"
+                        name="name"
+                        value={appointmentForm.name}
+                        onChange={handleAppointmentChange}
+                        required
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="apt-email">Email *</label>
+                      <input
+                        type="email"
+                        id="apt-email"
+                        name="email"
+                        value={appointmentForm.email}
+                        onChange={handleAppointmentChange}
+                        required
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="apt-phone">Phone *</label>
+                      <input
+                        type="tel"
+                        id="apt-phone"
+                        name="phone"
+                        value={appointmentForm.phone}
+                        onChange={handleAppointmentChange}
+                        required
+                        placeholder="+91 98765 43210"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="apt-company">Company Name</label>
+                      <input
+                        type="text"
+                        id="apt-company"
+                        name="company"
+                        value={appointmentForm.company}
+                        onChange={handleAppointmentChange}
+                        placeholder="Your company"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="apt-purpose">Purpose of Meeting *</label>
+                    <select
+                      id="apt-purpose"
+                      name="purpose"
+                      value={appointmentForm.purpose}
+                      onChange={handleAppointmentChange}
+                      required
+                    >
+                      <option value="">Select purpose</option>
+                      <option value="Business Partnership">Business Partnership</option>
+                      <option value="Product Inquiry">Product Inquiry</option>
+                      <option value="Export Collaboration">Export Collaboration</option>
+                      <option value="Investment Discussion">Investment Discussion</option>
+                      <option value="General Meeting">General Meeting</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="apt-date">Preferred Date *</label>
+                      <input
+                        type="date"
+                        id="apt-date"
+                        name="preferredDate"
+                        value={appointmentForm.preferredDate}
+                        onChange={handleAppointmentChange}
+                        required
+                        min={new Date().toISOString().split('T')[0]}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="apt-time">Preferred Time *</label>
+                      <select
+                        id="apt-time"
+                        name="preferredTime"
+                        value={appointmentForm.preferredTime}
+                        onChange={handleAppointmentChange}
+                        required
+                      >
+                        <option value="">Select time</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="5:00 PM">5:00 PM</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="apt-message">Additional Message</label>
+                    <textarea
+                      id="apt-message"
+                      name="message"
+                      value={appointmentForm.message}
+                      onChange={handleAppointmentChange}
+                      rows={4}
+                      placeholder="Tell us more about what you'd like to discuss..."
+                    />
+                  </div>
+
+                  <button type="submit" className="appointment-submit-btn" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <span className="btn-spinner" />
+                        Sending Request...
+                      </>
+                    ) : (
+                      <>
+                        Request Appointment
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        </section>
 
         {/* Quote Section */}
         <section className="director-quote-section">
@@ -235,6 +456,7 @@ export default function OurDirectorPage() {
           position: absolute;
           inset: 0;
           background: linear-gradient(135deg, #74060D 0%, #9A1B2E 50%, #5a0509 100%);
+          pointer-events: none;
         }
 
         .our-director-hero-overlay {
@@ -242,6 +464,7 @@ export default function OurDirectorPage() {
           inset: 0;
           background: radial-gradient(circle at 30% 40%, rgba(201, 162, 77, 0.2), transparent 60%),
                       radial-gradient(circle at 70% 60%, rgba(154, 27, 46, 0.15), transparent 50%);
+          pointer-events: none;
         }
 
         .our-director-hero-content {
@@ -624,12 +847,15 @@ export default function OurDirectorPage() {
         }
 
         .achievements-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           gap: 30px;
         }
 
         .achievement-card {
+          flex: 0 1 280px;
+          max-width: 320px;
           background: linear-gradient(135deg, rgba(116, 6, 13, 0.05), rgba(201, 162, 77, 0.05));
           border-radius: 20px;
           padding: 35px;
@@ -681,134 +907,42 @@ export default function OurDirectorPage() {
         /* Milestones Timeline Section */
         .director-milestones-section {
           padding: 80px 20px;
-          background: linear-gradient(180deg, rgba(116, 6, 13, 0.05) 0%, transparent 100%);
-          overflow: hidden;
+          background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
+          position: relative;
         }
 
         .director-milestones-section h2 {
           font-size: 36px;
           font-weight: 800;
-          color: #74060D;
+          color: #F7F3EA;
           text-align: center;
           margin: 0 0 20px;
         }
 
         .milestones-timeline {
-          max-width: 1400px;
+          max-width: 1200px;
           margin: 0 auto;
-          position: relative;
-          padding: 120px 40px 80px;
-          display: grid;
-          grid-template-columns: repeat(6, 1fr);
-          gap: 15px;
-          align-items: center;
-        }
-
-        .milestones-timeline::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 40px;
-          right: 40px;
-          height: 4px;
-          background: linear-gradient(90deg, #74060D, #C9A24D, #74060D);
-          transform: translateY(-50%);
-          z-index: 1;
-          border-radius: 2px;
-          box-shadow: 0 2px 8px rgba(116, 6, 13, 0.2);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 25px;
+          padding-top: 30px;
         }
 
         .milestone-item {
-          position: relative;
-          z-index: 2;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .milestone-item.milestone-top {
-          align-items: flex-end;
-          padding-bottom: 80px;
-        }
-
-        .milestone-item.milestone-bottom {
-          align-items: flex-start;
-          padding-top: 80px;
-        }
-
-        .milestone-item::before {
-          content: '';
-          position: absolute;
-          left: 50%;
-          width: 24px;
-          height: 24px;
-          background: linear-gradient(135deg, #74060D, #9A1B2E);
-          border: 4px solid #C9A24D;
-          border-radius: 50%;
-          transform: translateX(-50%);
-          z-index: 3;
-          box-shadow: 0 4px 15px rgba(116, 6, 13, 0.4), 0 0 0 6px rgba(116, 6, 13, 0.05);
-          transition: all 0.4s ease;
-        }
-
-        .milestone-item.milestone-top::before {
-          bottom: 60px;
-        }
-
-        .milestone-item.milestone-bottom::before {
-          top: 60px;
-        }
-
-        .milestone-item:hover::before {
-          transform: translateX(-50%) scale(1.4);
-          box-shadow: 0 6px 20px rgba(116, 6, 13, 0.5), 0 0 0 8px rgba(201, 162, 77, 0.2);
-          background: linear-gradient(135deg, #9A1B2E, #C9A24D);
-        }
-
-        .milestone-item::after {
-          content: attr(data-year);
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          font-size: 16px;
-          font-weight: 800;
-          color: #74060D;
-          background: linear-gradient(135deg, #F7F3EA, white);
-          padding: 6px 14px;
-          border-radius: 20px;
-          border: 2px solid #C9A24D;
-          white-space: nowrap;
-          z-index: 4;
-          box-shadow: 0 4px 12px rgba(116, 6, 13, 0.25);
-          transition: all 0.4s ease;
-        }
-
-        .milestone-item.milestone-top::after {
-          bottom: 95px;
-        }
-
-        .milestone-item.milestone-bottom::after {
-          top: 95px;
-        }
-
-        .milestone-item:hover::after {
-          transform: translateX(-50%) scale(1.1);
-          box-shadow: 0 6px 16px rgba(116, 6, 13, 0.35);
-          background: linear-gradient(135deg, #C9A24D, #E6D3A3);
-          color: #74060D;
+          flex: 0 1 340px;
+          max-width: 380px;
         }
 
         .milestone-content {
           background: white;
           padding: 30px;
-          border-radius: 20px;
-          box-shadow: 0 8px 30px rgba(116, 6, 13, 0.12);
-          border: 2px solid #E6D3A3;
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          width: 100%;
-          max-width: 280px;
+          border-radius: 16px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease;
           position: relative;
           overflow: hidden;
+          height: 100%;
         }
 
         .milestone-content::before {
@@ -816,204 +950,424 @@ export default function OurDirectorPage() {
           position: absolute;
           top: 0;
           left: 0;
-          right: 0;
-          height: 4px;
-          background: linear-gradient(90deg, #74060D, #C9A24D);
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.4s ease;
-        }
-
-        .milestone-content::after {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-left: 14px solid transparent;
-          border-right: 14px solid transparent;
-        }
-
-        .milestone-top .milestone-content::after {
-          bottom: -14px;
-          left: 50%;
-          transform: translateX(-50%);
-          border-top: 14px solid white;
-          filter: drop-shadow(0 2px 4px rgba(116, 6, 13, 0.1));
-        }
-
-        .milestone-bottom .milestone-content::after {
-          top: -14px;
-          left: 50%;
-          transform: translateX(-50%);
-          border-bottom: 14px solid white;
-          filter: drop-shadow(0 -2px 4px rgba(116, 6, 13, 0.1));
-        }
-
-        .milestone-year {
-          font-size: 22px;
-          font-weight: 800;
-          color: #C9A24D;
-          text-align: center;
-          margin-bottom: 12px;
-          display: block;
+          width: 6px;
+          height: 100%;
+          background: linear-gradient(180deg, #C9A24D, #74060D);
         }
 
         .milestone-item:hover .milestone-content {
-          transform: translateY(-5px);
-          border-color: #C9A24D;
-          box-shadow: 0 20px 50px rgba(116, 6, 13, 0.2);
+          transform: translateY(-8px);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
 
-        .milestone-item:hover .milestone-content::before {
-          transform: scaleX(1);
+        .milestone-year {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 700;
+          color: white;
+          background: linear-gradient(135deg, #74060D, #9A1B2E);
+          padding: 6px 16px;
+          border-radius: 20px;
+          margin-bottom: 15px;
         }
 
         .milestone-content h3 {
           font-size: 20px;
           font-weight: 700;
           color: #74060D;
-          margin: 0 0 12px;
+          margin: 0 0 10px;
           line-height: 1.3;
         }
 
         .milestone-content p {
           font-size: 14px;
           line-height: 1.6;
-          color: #1a2744;
+          color: #5a4a4a;
+          margin: 0;
+        }
+
+        /* Book Appointment Section */
+        .director-appointment-section {
+          padding: 100px 20px;
+          background: linear-gradient(135deg, #F7F3EA 0%, #E6D3A3 50%, #F7F3EA 100%);
+          position: relative;
+        }
+
+        .appointment-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: start;
+        }
+
+        .appointment-info {
+          padding: 40px 0;
+        }
+
+        .appointment-tag {
+          display: inline-block;
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.3em;
+          color: #74060D;
+          background: #C9A24D;
+          padding: 8px 20px;
+          border-radius: 30px;
+          margin-bottom: 20px;
+        }
+
+        .appointment-info h2 {
+          font-size: 42px;
+          font-weight: 800;
+          color: #74060D;
+          margin: 0 0 20px;
+          line-height: 1.2;
+        }
+
+        .appointment-info > p {
+          font-size: 16px;
+          line-height: 1.8;
+          color: #5a4a4a;
+          margin: 0 0 40px;
+        }
+
+        .appointment-benefits {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        .benefit-item {
+          display: flex;
+          gap: 16px;
+          align-items: flex-start;
+        }
+
+        .benefit-icon {
+          font-size: 32px;
+          flex-shrink: 0;
+        }
+
+        .benefit-item h4 {
+          font-size: 18px;
+          font-weight: 700;
+          color: #74060D;
+          margin: 0 0 4px;
+        }
+
+        .benefit-item p {
+          font-size: 14px;
+          color: #5a4a4a;
+          margin: 0;
+        }
+
+        .appointment-form-wrapper {
+          background: white;
+          border-radius: 24px;
+          padding: 50px;
+          box-shadow: 0 25px 80px rgba(116, 6, 13, 0.15);
+          border: 3px solid #C9A24D;
+        }
+
+        .appointment-form h3 {
+          font-size: 28px;
+          font-weight: 800;
+          color: #74060D;
+          margin: 0 0 30px;
+          text-align: center;
+        }
+
+        .appointment-form .form-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+
+        .appointment-form .form-group {
+          margin-bottom: 20px;
+        }
+
+        .appointment-form label {
+          display: block;
+          font-size: 13px;
+          font-weight: 600;
+          color: #74060D;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 8px;
+        }
+
+        .appointment-form input,
+        .appointment-form select,
+        .appointment-form textarea {
+          width: 100%;
+          padding: 14px 18px;
+          font-size: 15px;
+          border: 2px solid #E6D3A3;
+          border-radius: 12px;
+          background: #F7F3EA;
+          color: #74060D;
+          transition: all 0.3s ease;
+          font-family: inherit;
+        }
+
+        .appointment-form input:focus,
+        .appointment-form select:focus,
+        .appointment-form textarea:focus {
+          outline: none;
+          border-color: #C9A24D;
+          background: #fff;
+          box-shadow: 0 0 0 4px rgba(201, 162, 77, 0.15);
+        }
+
+        .appointment-form textarea {
+          resize: vertical;
+          min-height: 100px;
+        }
+
+        .appointment-submit-btn {
+          width: 100%;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          padding: 18px 32px;
+          font-size: 15px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #F7F3EA;
+          background: linear-gradient(135deg, #74060D, #9A1B2E);
+          border: 3px solid #C9A24D;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          margin-top: 10px;
+        }
+
+        .appointment-submit-btn:hover:not(:disabled) {
+          transform: translateY(-3px);
+          box-shadow: 0 15px 40px rgba(116, 6, 13, 0.4);
+        }
+
+        .appointment-submit-btn:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+        }
+
+        .appointment-submit-btn .btn-spinner {
+          width: 20px;
+          height: 20px;
+          border: 3px solid transparent;
+          border-top-color: #F7F3EA;
+          border-radius: 50%;
+          animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+
+        .appointment-success {
+          text-align: center;
+          padding: 60px 30px;
+        }
+
+        .appointment-success .success-icon {
+          width: 90px;
+          height: 90px;
+          background: linear-gradient(135deg, #C9A24D, #E6D3A3);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 42px;
+          color: #74060D;
+          margin: 0 auto 30px;
+          box-shadow: 0 10px 40px rgba(201, 162, 77, 0.4);
+        }
+
+        .appointment-success h3 {
+          font-size: 28px;
+          font-weight: 800;
+          color: #74060D;
+          margin: 0 0 16px;
+        }
+
+        .appointment-success p {
+          font-size: 16px;
+          color: #5a4a4a;
+          line-height: 1.7;
           margin: 0;
         }
 
         /* Leadership Philosophy Section */
         .director-philosophy-section {
-          padding: 80px 20px;
-          background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
+          padding: 100px 20px;
+          background: linear-gradient(180deg, #F7F3EA 0%, #E6D3A3 100%);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .director-philosophy-section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 6px;
+          background: linear-gradient(90deg, #74060D, #C9A24D, #74060D);
         }
 
         .director-philosophy-section h2 {
           font-size: 36px;
           font-weight: 800;
-          color: #F7F3EA;
+          color: #74060D;
           text-align: center;
-          margin: 0 0 40px;
+          margin: 0 0 50px;
         }
 
         .philosophy-content {
           max-width: 900px;
           margin: 0 auto;
-          background: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(10px);
-          padding: 50px;
+          background: white;
+          padding: 60px;
           border-radius: 24px;
-          border: 2px solid rgba(201, 162, 77, 0.3);
+          border: 3px solid #C9A24D;
           text-align: center;
           position: relative;
+          box-shadow: 0 20px 60px rgba(116, 6, 13, 0.15);
+        }
+
+        .philosophy-content::before {
+          content: '';
+          position: absolute;
+          top: -3px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 6px;
+          background: linear-gradient(90deg, #74060D, #C9A24D);
+          border-radius: 0 0 10px 10px;
         }
 
         .philosophy-icon {
-          font-size: 64px;
-          margin-bottom: 24px;
+          font-size: 72px;
+          margin-bottom: 30px;
+          display: inline-block;
+          animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
         }
 
         .philosophy-content p {
           font-size: 20px;
           line-height: 1.9;
-          color: #E6D3A3;
+          color: #5a4a4a;
           margin: 0;
           font-style: italic;
         }
 
         /* Quote Section */
         .director-quote-section {
-          padding: 80px 20px;
-          background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
+          padding: 100px 20px;
+          background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .director-quote-section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(circle at 20% 30%, rgba(201, 162, 77, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 70%, rgba(201, 162, 77, 0.08) 0%, transparent 40%);
+          pointer-events: none;
         }
 
         .director-quote-container {
-          max-width: 800px;
+          max-width: 900px;
           margin: 0 auto;
           text-align: center;
           position: relative;
+          z-index: 2;
+          background: rgba(255, 255, 255, 0.03);
+          padding: 60px 50px;
+          border-radius: 24px;
+          border: 2px solid rgba(201, 162, 77, 0.2);
+          backdrop-filter: blur(10px);
         }
 
         .director-quote-icon {
-          font-size: 120px;
-          font-family: serif;
-          color: rgba(201, 162, 77, 0.3);
+          font-size: 100px;
+          font-family: Georgia, serif;
+          color: #C9A24D;
           line-height: 1;
-          position: absolute;
-          top: -40px;
-          left: 50%;
-          transform: translateX(-50%);
+          display: block;
+          margin-bottom: 30px;
+          opacity: 0.8;
         }
 
         .director-quote-text {
-          font-size: 24px;
-          line-height: 1.8;
+          font-size: 22px;
+          line-height: 1.9;
           color: #F7F3EA;
           font-style: italic;
-          margin: 0 0 30px;
+          margin: 0 0 40px;
           position: relative;
-          z-index: 1;
         }
 
         .director-quote-author {
-          font-size: 18px;
+          font-size: 20px;
           color: #C9A24D;
-          font-weight: 600;
+          font-weight: 700;
           margin: 0;
-        }
-
-        @media (max-width: 1200px) {
-          .milestones-timeline {
-            grid-template-columns: repeat(3, 1fr);
-            padding: 100px 30px 70px;
-            gap: 30px;
-          }
+          display: inline-block;
+          padding: 12px 30px;
+          background: rgba(201, 162, 77, 0.1);
+          border: 2px solid rgba(201, 162, 77, 0.3);
+          border-radius: 30px;
         }
 
         @media (max-width: 968px) {
           .milestones-timeline {
-            grid-template-columns: repeat(2, 1fr);
-            padding: 80px 20px 60px;
             gap: 20px;
           }
 
-          .milestones-timeline::before {
-            left: 20px;
-            right: 20px;
-          }
-
-          .milestone-item.milestone-top {
-            padding-bottom: 60px;
-          }
-
-          .milestone-item.milestone-bottom {
-            padding-top: 60px;
-          }
-
-          .milestone-item.milestone-top::before {
-            bottom: 50px;
-          }
-
-          .milestone-item.milestone-bottom::before {
-            top: 50px;
-          }
-
-          .milestone-content {
+          .milestone-item {
+            flex: 0 1 100%;
             max-width: 100%;
-            padding: 25px;
+          }
+        }
+
+        @media (max-width: 992px) {
+          .appointment-container {
+            grid-template-columns: 1fr;
+            gap: 40px;
           }
 
-          .milestone-year {
-            font-size: 20px;
+          .appointment-info {
+            text-align: center;
+            padding: 0;
           }
 
-          .milestone-content h3 {
-            font-size: 18px;
+          .appointment-benefits {
+            align-items: center;
           }
 
-          .milestone-content p {
-            font-size: 13px;
+          .benefit-item {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
           }
         }
 
@@ -1047,59 +1401,31 @@ export default function OurDirectorPage() {
           }
 
           .ventures-grid,
-          .achievements-grid,
           .education-grid {
             grid-template-columns: 1fr;
           }
 
-          .milestones-timeline {
-            grid-template-columns: 1fr;
-            padding: 60px 15px 40px;
-            gap: 30px;
-          }
-
-          .milestones-timeline::before {
-            left: 15px;
-            right: 15px;
-            height: 3px;
-          }
-
-          .milestone-item.milestone-top,
-          .milestone-item.milestone-bottom {
-            padding-top: 50px;
-            padding-bottom: 50px;
+          .achievements-grid {
+            flex-direction: column;
             align-items: center;
           }
 
-          .milestone-item.milestone-top::before,
-          .milestone-item.milestone-bottom::before,
-          .milestone-item::after {
-            display: none;
+          .achievement-card {
+            flex: 0 1 auto;
+            max-width: 100%;
+            width: 100%;
           }
 
           .milestone-content {
-            max-width: 100%;
-            padding: 20px;
-            border-radius: 16px;
-          }
-
-          .milestone-content::after {
-            display: none;
-          }
-
-          .milestone-year {
-            font-size: 18px;
-            margin-bottom: 12px;
+            padding: 25px;
           }
 
           .milestone-content h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
+            font-size: 18px;
           }
 
           .milestone-content p {
-            font-size: 12px;
-            line-height: 1.5;
+            font-size: 13px;
           }
 
           .director-quote-text {
@@ -1112,11 +1438,40 @@ export default function OurDirectorPage() {
           }
 
           .philosophy-content {
-            padding: 30px 20px;
+            padding: 40px 25px;
           }
 
           .philosophy-content p {
+            font-size: 16px;
+          }
+
+          .director-quote-container {
+            padding: 40px 25px;
+          }
+
+          .director-quote-text {
             font-size: 18px;
+          }
+
+          .director-quote-icon {
+            font-size: 60px;
+          }
+
+          .appointment-form-wrapper {
+            padding: 30px 20px;
+          }
+
+          .appointment-info h2 {
+            font-size: 32px;
+          }
+
+          .appointment-form h3 {
+            font-size: 22px;
+          }
+
+          .appointment-form .form-row {
+            grid-template-columns: 1fr;
+            gap: 0;
           }
         }
       `}</style>

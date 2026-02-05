@@ -8,7 +8,7 @@ import IndiaPresenceMap from "@/components/IndiaPresenceMap";
 
 // Company details
 const companyInfo = {
-  name: "YNM Mega Industries Pvt Ltd",
+  name: "YNM Safety Pan Global Trade Pvt Ltd",
   tagline: "Manufacturing & Export Excellence Since 2013",
   address: "Survey, 84P, Gowra Fountain Head, 4th Floor, Suite, 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081",
   phone: "+91 96765 75770 / +91 90002 62013",
@@ -138,8 +138,8 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Us | YNM Mega Industries Pvt Ltd</title>
-        <meta name="description" content="Get in touch with YNM Mega Industries for premium paints, fabrications, and school furniture. Contact us for quotes, exports, and partnerships." />
+        <title>Contact Us | YNM Safety Pan Global Trade Pvt Ltd</title>
+        <meta name="description" content="Get in touch with YNM Safety for premium paints, fabrications, and school furniture. Contact us for quotes, exports, and partnerships." />
       </Head>
 
       <Navbar />
@@ -289,7 +289,7 @@ export default function ContactPage() {
                 <div className="company-logo">
                   <Image 
                     src="/assets/logo-footer.jpg" 
-                    alt="YNM Mega Industries" 
+                    alt="YNM Safety" 
                     width={70} 
                     height={70} 
                     style={{ objectFit: "contain", borderRadius: "12px" }}

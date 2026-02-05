@@ -34,7 +34,10 @@ export default function Document() {
         {/* Note: Google Analytics should be added via environment variable NEXT_PUBLIC_GA_ID */}
         {/* and implemented in _app.js using next/script for better performance */}
         
-        <link rel="icon" href="/favicon.ico" />
+        {/* Favicon - Multiple formats for best compatibility */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/assets/logo-navbar.jpg" />
         
         {/* Critical CSS for preventing layout shift */}
         <style

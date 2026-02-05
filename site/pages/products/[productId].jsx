@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Flag from "@/components/Flag";
 import { getProductById, getAllProducts } from "@/lib/productsCategoriesData";
 import { getProductById as getLegacyProduct } from "./index";
 
@@ -249,7 +250,7 @@ export default function ProductDetailPage() {
     return (
       <>
         <Head>
-          <title>Loading... - YNM Mega Industries</title>
+          <title>Loading... - YNM Safety</title>
         </Head>
         <Navbar />
         <main className="product-detail-page">
@@ -266,7 +267,7 @@ export default function ProductDetailPage() {
     return (
       <>
         <Head>
-          <title>Product Not Found - YNM Mega Industries</title>
+          <title>Product Not Found - YNM Safety</title>
         </Head>
         <Navbar />
         <main className="product-detail-page">
@@ -294,7 +295,7 @@ export default function ProductDetailPage() {
     : allProducts.filter(p => p.id !== product.id && p.category === product.category).slice(0, 3);
 
   // Use product meta data if available
-  const metaTitle = product.meta?.title || `${product.name} - YNM Mega Industries`;
+  const metaTitle = product.meta?.title || `${product.name} - YNM Safety`;
   const metaDescription = product.meta?.description || product.shortDesc || product.desc;
 
   return (
@@ -632,21 +633,21 @@ export default function ProductDetailPage() {
                   // 14 currencies with flags (7 per row)
                   const currencyData = [
                     // Row 1
-                    { code: 'INR', symbol: '₹', rate: 1, name: 'India', flag: '🇮🇳' },
-                    { code: 'USD', symbol: '$', rate: 1/83.12, name: 'USA', flag: '🇺🇸' },
-                    { code: 'EUR', symbol: '€', rate: 1/90.50, name: 'Europe', flag: '🇪🇺' },
-                    { code: 'GBP', symbol: '£', rate: 1/105.20, name: 'UK', flag: '🇬🇧' },
-                    { code: 'AED', symbol: 'د.إ', rate: 1/22.64, name: 'UAE', flag: '🇦🇪' },
-                    { code: 'SAR', symbol: '﷼', rate: 1/22.16, name: 'Saudi Arabia', flag: '🇸🇦' },
-                    { code: 'AUD', symbol: 'A$', rate: 1/54.50, name: 'Australia', flag: '🇦🇺' },
+                    { code: 'INR', symbol: '₹', rate: 1, name: 'India', countryCode: 'in' },
+                    { code: 'USD', symbol: '$', rate: 1/83.12, name: 'USA', countryCode: 'us' },
+                    { code: 'EUR', symbol: '€', rate: 1/90.50, name: 'Europe', countryCode: 'eu' },
+                    { code: 'GBP', symbol: '£', rate: 1/105.20, name: 'UK', countryCode: 'gb' },
+                    { code: 'AED', symbol: 'د.إ', rate: 1/22.64, name: 'UAE', countryCode: 'ae' },
+                    { code: 'SAR', symbol: '﷼', rate: 1/22.16, name: 'Saudi Arabia', countryCode: 'sa' },
+                    { code: 'AUD', symbol: 'A$', rate: 1/54.50, name: 'Australia', countryCode: 'au' },
                     // Row 2
-                    { code: 'CAD', symbol: 'C$', rate: 1/61.20, name: 'Canada', flag: '🇨🇦' },
-                    { code: 'JPY', symbol: '¥', rate: 1/0.54, name: 'Japan', flag: '🇯🇵' },
-                    { code: 'CNY', symbol: '¥', rate: 1/11.45, name: 'China', flag: '🇨🇳' },
-                    { code: 'SGD', symbol: 'S$', rate: 1/61.80, name: 'Singapore', flag: '🇸🇬' },
-                    { code: 'ZAR', symbol: 'R', rate: 1/4.58, name: 'South Africa', flag: '🇿🇦' },
-                    { code: 'MYR', symbol: 'RM', rate: 1/18.70, name: 'Malaysia', flag: '🇲🇾' },
-                    { code: 'QAR', symbol: 'ر.ق', rate: 1/22.84, name: 'Qatar', flag: '🇶🇦' }
+                    { code: 'CAD', symbol: 'C$', rate: 1/61.20, name: 'Canada', countryCode: 'ca' },
+                    { code: 'JPY', symbol: '¥', rate: 1/0.54, name: 'Japan', countryCode: 'jp' },
+                    { code: 'CNY', symbol: '¥', rate: 1/11.45, name: 'China', countryCode: 'cn' },
+                    { code: 'SGD', symbol: 'S$', rate: 1/61.80, name: 'Singapore', countryCode: 'sg' },
+                    { code: 'ZAR', symbol: 'R', rate: 1/4.58, name: 'South Africa', countryCode: 'za' },
+                    { code: 'MYR', symbol: 'RM', rate: 1/18.70, name: 'Malaysia', countryCode: 'my' },
+                    { code: 'QAR', symbol: 'ر.ق', rate: 1/22.84, name: 'Qatar', countryCode: 'qa' }
                   ];
 
                   return currencyData.map((currency, index) => {
@@ -657,7 +658,7 @@ export default function ProductDetailPage() {
                         key={index} 
                         className={`currency-price-card ${index === 0 ? 'highlighted' : ''}`}
                       >
-                        <div className="currency-flag-icon">{currency.flag}</div>
+                        <div className="currency-flag-icon"><Flag country={currency.countryCode} size={28} /></div>
                         <div className="currency-code-badge">
                           <span className="currency-code">{currency.code}</span>
                         </div>
@@ -699,25 +700,25 @@ export default function ProductDetailPage() {
                   product.globalAvailability.regions.map((region, index) => {
                     const regionIcons = {
                       'North America': '🌎',
-                      'Europe': '🇪🇺',
+                      'Europe': '🌍',
                       'Asia / Asia Pacific': '🌏',
                       'Asia Pacific': '🌏',
                       'Latin America': '🌎',
                       'Middle East & Africa': '🌍',
                       'Oceania': '🌏'
                     };
-                    // Country to flag mapping
-                    const countryFlags = {
-                      'United States': '🇺🇸', 'Canada': '🇨🇦', 'Mexico': '🇲🇽',
-                      'Germany': '🇩🇪', 'United Kingdom': '🇬🇧', 'France': '🇫🇷', 
-                      'Italy': '🇮🇹', 'Spain': '🇪🇸', 'Other EU countries': '🇪🇺',
-                      'China': '🇨🇳', 'India': '🇮🇳', 'Japan': '🇯🇵', 
-                      'South Korea': '🇰🇷', 'Australia': '🇦🇺', 'Indonesia': '🇮🇩',
-                      'Thailand': '🇹🇭', 'Malaysia': '🇲🇾', 'Singapore': '🇸🇬',
-                      'Brazil': '🇧🇷', 'Argentina': '🇦🇷', 'Colombia': '🇨🇴',
-                      'Saudi Arabia': '🇸🇦', 'United Arab Emirates': '🇦🇪', 
-                      'South Africa': '🇿🇦', 'Qatar': '🇶🇦', 'Kuwait': '🇰🇼',
-                      'New Zealand': '🇳🇿', 'UAE': '🇦🇪'
+                    // Country to code mapping for Flag component
+                    const countryToCode = {
+                      'United States': 'us', 'Canada': 'ca', 'Mexico': 'mx',
+                      'Germany': 'de', 'United Kingdom': 'gb', 'France': 'fr', 
+                      'Italy': 'it', 'Spain': 'es', 'Other EU countries': 'eu',
+                      'China': 'cn', 'India': 'in', 'Japan': 'jp', 
+                      'South Korea': 'kr', 'Australia': 'au', 'Indonesia': 'id',
+                      'Thailand': 'th', 'Malaysia': 'my', 'Singapore': 'sg',
+                      'Brazil': 'br', 'Argentina': 'ar', 'Colombia': 'co',
+                      'Saudi Arabia': 'sa', 'United Arab Emirates': 'ae', 
+                      'South Africa': 'za', 'Qatar': 'qa', 'Kuwait': 'kw',
+                      'New Zealand': 'nz', 'UAE': 'ae'
                     };
                     return (
                       <div key={index} className="region-card">
@@ -726,7 +727,7 @@ export default function ProductDetailPage() {
                         <div className="region-countries">
                           {region.countries.map((country, countryIndex) => (
                             <span key={countryIndex} className="country-tag">
-                              <span className="country-flag">{countryFlags[country] || '🏳️'}</span>
+                              <span className="country-flag"><Flag country={countryToCode[country] || country} size={18} /></span>
                               {country}
                             </span>
                           ))}
@@ -741,41 +742,41 @@ export default function ProductDetailPage() {
                       <div className="region-icon">🌏</div>
                       <h3>Asia Pacific</h3>
                       <div className="region-countries">
-                        <span className="country-tag"><span className="country-flag">🇮🇳</span>India</span>
-                        <span className="country-tag"><span className="country-flag">🇨🇳</span>China</span>
-                        <span className="country-tag"><span className="country-flag">🇯🇵</span>Japan</span>
-                        <span className="country-tag"><span className="country-flag">🇸🇬</span>Singapore</span>
-                        <span className="country-tag"><span className="country-flag">🇲🇾</span>Malaysia</span>
-                        <span className="country-tag"><span className="country-flag">🇹🇭</span>Thailand</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="in" size={18} /></span>India</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="cn" size={18} /></span>China</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="jp" size={18} /></span>Japan</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="sg" size={18} /></span>Singapore</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="my" size={18} /></span>Malaysia</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="th" size={18} /></span>Thailand</span>
                       </div>
                     </div>
                     <div className="region-card">
                       <div className="region-icon">🌍</div>
                       <h3>Middle East</h3>
                       <div className="region-countries">
-                        <span className="country-tag"><span className="country-flag">🇦🇪</span>UAE</span>
-                        <span className="country-tag"><span className="country-flag">🇸🇦</span>Saudi Arabia</span>
-                        <span className="country-tag"><span className="country-flag">🇶🇦</span>Qatar</span>
-                        <span className="country-tag"><span className="country-flag">🇰🇼</span>Kuwait</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="ae" size={18} /></span>UAE</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="sa" size={18} /></span>Saudi Arabia</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="qa" size={18} /></span>Qatar</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="kw" size={18} /></span>Kuwait</span>
                       </div>
                     </div>
                     <div className="region-card">
                       <div className="region-icon">🌎</div>
                       <h3>Africa</h3>
                       <div className="region-countries">
-                        <span className="country-tag"><span className="country-flag">🇰🇪</span>Kenya</span>
-                        <span className="country-tag"><span className="country-flag">🇳🇬</span>Nigeria</span>
-                        <span className="country-tag"><span className="country-flag">🇿🇦</span>South Africa</span>
-                        <span className="country-tag"><span className="country-flag">🇬🇭</span>Ghana</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="ke" size={18} /></span>Kenya</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="ng" size={18} /></span>Nigeria</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="za" size={18} /></span>South Africa</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="gh" size={18} /></span>Ghana</span>
                       </div>
                     </div>
                     <div className="region-card">
                       <div className="region-icon">🌐</div>
                       <h3>Europe</h3>
                       <div className="region-countries">
-                        <span className="country-tag"><span className="country-flag">🇬🇧</span>UK</span>
-                        <span className="country-tag"><span className="country-flag">🇩🇪</span>Germany</span>
-                        <span className="country-tag"><span className="country-flag">🇫🇷</span>France</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="gb" size={18} /></span>UK</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="de" size={18} /></span>Germany</span>
+                        <span className="country-tag"><span className="country-flag"><Flag country="fr" size={18} /></span>France</span>
                       </div>
                     </div>
                   </>
