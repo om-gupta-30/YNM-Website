@@ -510,23 +510,23 @@ export const productsData = {
             detailedSpecs: [
               {
                 label: "Country of Origin",
-                value: "India",
+                value: "Imported Countries",
                 icon: "location"
               },
               {
-                label: "Manufacturing / Supply Location",
-                value: "Hyderabad",
+                label: "Manufacturing Location",
+                value: "All Over India",
                 icon: "location"
+              },
+              {
+                label: "Quality Standards",
+                value: "1. IS 73\n2. ASTM",
+                icon: "standard"
               },
               {
                 label: "Packing Options",
                 value: "Bulk, Bitumen Drums",
                 icon: "package"
-              },
-              {
-                label: "Quality Standards",
-                value: "IS 73, MoRTH, ISO 9001:2015",
-                icon: "standard"
               },
               {
                 label: "Minimum Order Quantity (MOQ)",
@@ -761,57 +761,57 @@ export const productsData = {
             },
             
             // Manufacturing Process - 10 Steps
-            manufacturingProcessIntro: "YNM Safety manufactures and supplies Bitumen VG 40 through a controlled, quality-driven process to ensure excellent viscosity, durability, and compliance with IS 73 and ASTM standards.",
-            manufacturingProcess: [
+            importingProcessIntro: "YNM Safety imports and supplies premium Bitumen VG 40 from trusted international refineries through a controlled, quality-driven process to ensure excellent viscosity, durability, and compliance with IS 73 and ASTM standards.",
+            importingProcess: [
               {
                 step: "01",
-                title: "Raw Material Selection",
-                description: "The manufacturing of Bitumen VG 40 begins with the selection of high-quality crude oil sourced from approved refineries. Crude oil with suitable hydrocarbon composition is chosen to ensure optimal viscosity, durability, and performance in heavy-traffic applications."
+                title: "Supplier Identification & Evaluation",
+                description: "YNM Safety identifies and evaluates certified international bitumen suppliers and refineries with proven track records. We conduct thorough assessments of supplier credentials, production capabilities, quality certifications, and compliance with international standards to ensure reliable sourcing."
               },
               {
                 step: "02",
-                title: "Crude Oil Distillation",
-                description: "The selected crude oil is processed in a refinery through atmospheric distillation. During this process, lighter fractions such as petrol, diesel, and kerosene are separated, leaving behind heavy residue known as vacuum residue, which forms the base material for bitumen production."
+                title: "Quality Specification Agreement",
+                description: "Detailed technical specifications for Bitumen VG 40 are agreed upon with the supplier, including viscosity requirements, penetration values, softening point, ductility, flash point, and other parameters as per IS 73 and ASTM standards. Product samples are evaluated and tested before placing bulk orders."
               },
               {
                 step: "03",
-                title: "Vacuum Distillation & Refining",
-                description: "The vacuum residue undergoes further vacuum distillation to remove remaining lighter components at controlled temperatures. This step helps achieve the desired penetration and viscosity characteristics required for VG 40 grade bitumen."
+                title: "Purchase Order & Documentation",
+                description: "Once specifications are confirmed, purchase orders are placed with complete documentation including product specifications, quantity requirements, delivery timelines, and quality certificates. All import documentation, including Letter of Credit (LC), commercial invoices, and shipping instructions are prepared."
               },
               {
                 step: "04",
-                title: "Air Blowing / Oxidation Process",
-                description: "The refined residue is subjected to a controlled air blowing (oxidation) process. Hot air is passed through the material to improve stiffness, elasticity, and temperature resistance. This process enhances the rheological properties of bitumen, making it suitable for heavy-duty pavements."
+                title: "Pre-Shipment Inspection & Testing",
+                description: "Before shipment, independent third-party inspection agencies conduct pre-shipment quality testing at the supplier's facility. Comprehensive laboratory tests verify that the Bitumen VG 40 meets all agreed specifications and international quality standards."
               },
               {
                 step: "05",
-                title: "Viscosity Grade Adjustment (VG 40)",
-                description: "The bitumen is carefully monitored and tested to meet VG 40 specifications as per IS:73 standards. Parameters such as viscosity at 60°C, penetration value, softening point, and ductility are adjusted to ensure consistent quality and performance."
+                title: "International Shipping & Logistics",
+                description: "Bitumen VG 40 is loaded into specialized heated bulk tankers or steel drums for maritime transportation. YNM Safety coordinates with international freight forwarders and shipping lines to ensure safe transit, proper temperature maintenance, and timely delivery to Indian ports."
               },
               {
                 step: "06",
-                title: "Quality Testing & Laboratory Analysis",
-                description: "Each batch of Bitumen VG 40 undergoes stringent quality control tests, including viscosity test, penetration test, softening point test, ductility test, and flash & fire point test. Only material that meets standard specifications is approved for dispatch."
+                title: "Customs Clearance & Import Compliance",
+                description: "Upon arrival at Indian ports, YNM Safety handles all customs clearance procedures, including submission of Bills of Lading, commercial invoices, packing lists, test certificates, and payment of applicable customs duties. All regulatory and import compliance requirements are strictly followed."
               },
               {
                 step: "07",
-                title: "Storage in Heated Tanks",
-                description: "Finished Bitumen VG 40 is stored in insulated, temperature-controlled storage tanks. Continuous heating ensures proper flow characteristics and prevents solidification before loading."
+                title: "Port Receipt & Quality Re-Testing",
+                description: "After customs clearance, the imported Bitumen VG 40 undergoes re-testing at YNM Safety's quality control laboratories. Parameters such as viscosity, penetration, softening point, ductility, and flash point are verified to ensure the product maintains its quality during transportation."
               },
               {
                 step: "08",
-                title: "Packaging & Loading",
-                description: "Bitumen VG 40 is packed and dispatched in various forms based on customer requirements: Bulk supply through heated bitumen tankers, Steel drums, and Bitumen bags (as per project needs). All packaging is handled under strict safety and handling procedures."
+                title: "Storage in Temperature-Controlled Facilities",
+                description: "Approved bitumen is transferred to YNM Safety's insulated, temperature-controlled storage tanks located across India. Continuous heating systems maintain optimal flow characteristics and prevent solidification. Storage facilities are strategically located for efficient pan-India distribution."
               },
               {
                 step: "09",
-                title: "Dispatch & Transportation",
-                description: "The final product is dispatched with proper documentation, including test certificates and batch details. Transportation is carried out using approved tankers to ensure temperature maintenance and product integrity until delivery at the project site."
+                title: "Quality Certification & Documentation",
+                description: "Each batch of imported Bitumen VG 40 is issued with comprehensive quality certificates, test reports, and batch traceability documents. All certifications comply with IS 73, ASTM standards, and MoRTH specifications, providing complete assurance to customers."
               },
               {
                 step: "10",
-                title: "End-Use Application",
-                description: "Once delivered, Bitumen VG 40 is used for road construction in national highways, expressways, industrial roads, toll plazas, ports, and airport pavements where high load-bearing capacity is required."
+                title: "Domestic Distribution & Project Supply",
+                description: "YNM Safety supplies Bitumen VG 40 across India through heated tankers, steel drums, or bulk deliveries based on project requirements. Timely delivery, technical support, and consistent quality make YNM Safety a trusted partner for highway projects, expressways, airport runways, and heavy-traffic road construction."
               }
             ],
             
@@ -843,23 +843,9 @@ export const productsData = {
             // Quality Certificates
             certificates: [
               {
-                id: "iso-9001",
-                title: "ISO 9001:2015",
-                description: "Quality Management System Certification",
-                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
-                icon: "shield"
-              },
-              {
                 id: "is-73",
                 title: "IS 73",
                 description: "Indian Standard for Paving Bitumen Specification",
-                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
-                icon: "check"
-              },
-              {
-                id: "morth",
-                title: "MoRTH",
-                description: "Ministry of Road Transport & Highways Specifications",
                 pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
                 icon: "check"
               },

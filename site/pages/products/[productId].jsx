@@ -118,6 +118,7 @@ export default function ProductDetailPage() {
           projects: [],
           marketGrowth: legacyProduct.marketGrowth || null,
           manufacturingProcess: [],
+          importingProcess: [],
           statistics: legacyProduct.statistics || {}
         };
       }
@@ -204,9 +205,10 @@ export default function ProductDetailPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productId]);
 
-  // Scroll animation for manufacturing steps - must be called before any returns
+  // Scroll animation for manufacturing/importing steps - must be called before any returns
   useEffect(() => {
-    if (!product || !product.manufacturingProcess || product.manufacturingProcess.length === 0) return;
+    const processSteps = product?.importingProcess || product?.manufacturingProcess;
+    if (!product || !processSteps || processSteps.length === 0) return;
 
     const observerOptions = {
       threshold: 0.2,
@@ -1361,17 +1363,19 @@ export default function ProductDetailPage() {
           </section>
         )}
 
-        {/* Manufacturing Process Section */}
-        {product.manufacturingProcess && product.manufacturingProcess.length > 0 && (
+        {/* Manufacturing/Importing Process Section */}
+        {((product.manufacturingProcess && product.manufacturingProcess.length > 0) || (product.importingProcess && product.importingProcess.length > 0)) && (
           <section className="product-manufacturing-section">
             <div className="product-section-container">
-              <h2 className="product-section-title">Manufacturing Process of {product.name}</h2>
+              <h2 className="product-section-title">
+                {product.importingProcess ? `Importing Process of ${product.name}` : `Manufacturing Process of ${product.name}`}
+              </h2>
               <p className="product-section-subtitle">
-                {product.manufacturingProcessIntro || `Our ${product.name} undergoes a meticulous manufacturing process, ensuring precision, durability, and adherence to stringent quality standards.`}
+                {product.importingProcessIntro || product.manufacturingProcessIntro || `Our ${product.name} undergoes a meticulous ${product.importingProcess ? 'importing' : 'manufacturing'} process, ensuring precision, durability, and adherence to stringent quality standards.`}
               </p>
 
               <div className="manufacturing-steps">
-                {product.manufacturingProcess.map((step, index) => {
+                {(product.importingProcess || product.manufacturingProcess).map((step, index) => {
                   const isVisible = visibleSteps.has(index);
                   return (
                     <div
