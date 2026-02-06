@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // Company facts and prompts the mascot will share
 const mascotPrompts = [
-  "🌍 Leading manufacturer & exporter of road marking paints to 15+ countries across Asia, Africa & the Middle East!",
+  "🌍 Leading manufacturer & exporter of road marking paints to 50+ countries across Asia, Africa & the Middle East!",
   "🛣️ We manufacture hot thermoplastic paints, cold plastic paints & water-based road marking paints for highways!",
   "🛡️ Trusted road safety products manufacturer - crash barriers, retro reflective signages & gantry systems!",
   "🏗️ In-house metal fabrication for W beam, double W beam, thrie beam & roller crash barriers!",

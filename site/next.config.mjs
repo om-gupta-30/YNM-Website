@@ -12,6 +12,8 @@ const nextConfig = {
     ],
     // Static export can't use the Image Optimization API.
     unoptimized: true,
+    // Configure allowed image qualities
+    qualities: [75, 85, 90, 100],
   },
   // NOTE:
   // We use a Next.js API Route for the contact form (/api/contact/submit).

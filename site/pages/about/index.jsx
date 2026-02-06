@@ -19,27 +19,27 @@ const galleryImages = [
   { id: 8, src: "/assets/product-laboratory-table.png", alt: "Laboratory Equipment", category: "products" },
 ];
 
-// About section content (same as home page About / USP)
+// About section content
 const aboutSectionContent = [
   {
     icon: "🏭",
     title: "Advanced Manufacturing",
-    description: "YNM Safety operates advanced manufacturing facilities delivering high-quality industrial paints, precision metal fabrication, and engineered school furniture. As a trusted global manufacturer, we combine modern machinery, skilled expertise, and efficient processes to serve worldwide industrial and infrastructure projects."
+    description: "YNM Safety operates advanced manufacturing facilities for hot thermoplastic paints, cold plastic paints, and road safety products. Our in-house production includes metal beam crash barriers, W beam crash barriers, double W beam crash barriers, road studs, bitumen products, and precision fabrications. With modern machinery and strict process control, we deliver durable, high-performance road safety solutions for highways, urban roads, and infrastructure projects."
   },
   {
     icon: "✅",
     title: "Quality Certified",
-    description: "At YNM Safety, quality is our foundation. All our products including industrial paints, fabrication components, and school furniture are manufactured under ISO 9001:2015 certified quality systems, ensuring durability, safety, and consistent performance for global markets."
+    description: "Quality is the foundation of YNM Safety. All our products—including road marking paints, metal beam crash barriers, retro reflective signages, signages, and road safety furniture—are manufactured under ISO-certified quality management systems. Each batch undergoes rigorous testing to ensure strength, visibility, weather resistance, and long service life in demanding traffic conditions."
   },
   {
     icon: "🌍",
     title: "Global Export Network",
-    description: "YNM Safety is a reliable global exporter of industrial paints, metal fabrication products, safety solutions, and school furniture. We supply to clients across Asia, Africa, the Middle East, and international markets with efficient logistics, compliance, and timely delivery."
+    description: "YNM Safety is a reliable global exporter of road safety products and infrastructure solutions. We supply hot thermoplastic paints, cold plastic paints, bitumen, road studs, crash barriers, and safety signages to clients across international markets. Our strong logistics network ensures compliance, safe packaging, and on-time delivery for projects worldwide."
   },
   {
     icon: "🎨",
     title: "Custom Solutions",
-    description: "We specialize in customized manufacturing solutions including bespoke paint formulations, custom metal fabrication, and made-to-order school furniture. YNM Safety supports global clients with flexible production, technical expertise, and project-specific solutions."
+    description: "We specialize in customized road safety and fabrication solutions tailored to project-specific requirements. From bespoke metal beam crash barrier manufacturing to custom retro reflective signages, road safety furnitures, and fabrications, YNM Safety delivers flexible production, technical expertise, and scalable solutions for government, industrial, and private infrastructure projects."
   }
 ];
 
@@ -48,27 +48,27 @@ const timeline = [
   {
     year: "2013",
     title: "Foundation",
-    description: "YNM Safety was established with a vision to deliver quality manufacturing and export services."
+    description: "YNM Safety was established with a clear vision to become a trusted manufacturer and exporter of road safety products, hot thermoplastic paints, and infrastructure solutions. From the beginning, our focus has been on quality manufacturing, innovation, and long-term customer partnerships."
   },
   {
     year: "2015",
     title: "ISO Certification",
-    description: "Achieved ISO 9001:2015 certification, establishing our commitment to quality excellence."
+    description: "We achieved ISO 9001:2015 certification, reinforcing our commitment to quality control and standardized manufacturing. This milestone strengthened our capabilities in producing cold plastic paints, road marking materials, metal beam crash barriers, and safety signages that meet international standards."
   },
   {
     year: "2018",
     title: "Global Expansion",
-    description: "Expanded export operations to 15+ countries across Asia, Africa, and the Middle East."
+    description: "YNM Safety expanded its export operations to over 50+ countries across Asia, Africa, and the Middle East. Our growing global presence enabled us to supply bitumen products, road studs, W beam crash barriers, double W beam crash barriers, and retro reflective signages to international infrastructure projects."
   },
   {
     year: "2023",
     title: "10 Years of Excellence",
-    description: "Celebrated a decade of manufacturing excellence with 500+ projects and 100+ satisfied clients."
+    description: "We proudly celebrated a decade of manufacturing excellence, completing 500+ projects and serving 1000+ satisfied clients. This milestone reflects our strong expertise in road safety furniture, fabrications, crash barrier manufacturing, and road marking solutions for highways and urban roads."
   },
   {
     year: "2026",
     title: "PAN India Expansion",
-    description: "Opening manufacturing units across India, strengthening our nationwide presence and production capabilities."
+    description: "As part of our growth strategy, YNM Safety continues its PAN India expansion with new manufacturing units and enhanced production capacity. This expansion strengthens our position as reliable metal beam crash barrier manufacturers and road safety solution providers, supporting large-scale infrastructure development across India and global markets."
   }
 ];
 
@@ -85,7 +85,7 @@ export default function AboutPage() {
     <>
       <Head>
         <title>About Us - YNM Safety Pan Global Trade Pvt Ltd</title>
-        <meta name="description" content="Learn about YNM Safety - Leading manufacturer and exporter of premium paints, metal fabrications, and school furniture since 2013." />
+        <meta name="description" content="YNM Safety Pan Global Trade Pvt Ltd is a trusted manufacturer and exporter of high-quality road safety and infrastructure products, delivering reliable solutions for highways, urban roads, and industrial projects worldwide." />
       </Head>
 
       <Navbar />
@@ -97,8 +97,8 @@ export default function AboutPage() {
           <div className="about-hero-overlay" />
           <div className="about-hero-content">
             <span className="about-tag">ABOUT US</span>
-            <h1>Manufacturing Excellence Since 2013</h1>
-            <p>Leading manufacturer and exporter delivering quality products to global markets</p>
+            <h1>Road Safety & Infrastructure Excellence</h1>
+            <p>Trusted manufacturer and exporter delivering reliable solutions for highways, urban roads, and industrial projects worldwide</p>
           </div>
         </section>
 
@@ -106,31 +106,27 @@ export default function AboutPage() {
         <section className="about-story">
           <div className="about-story-container">
             <div className="about-story-content">
-              <h2>Our Story</h2>
+              <h2>About YNM Safety</h2>
               <div className="story-divider" />
               <p>
-                YNM Safety Pan Global Trade Pvt Ltd was founded in 2013 with a vision to become a leading 
-                manufacturer and exporter of premium industrial products. What started as a small operation 
-                has grown into a trusted partner for businesses across India and 15+ countries worldwide.
+                YNM Safety Pan Global Trade Pvt Ltd is a trusted manufacturer and exporter of high-quality road safety and infrastructure products, delivering reliable solutions for highways, urban roads, and industrial projects worldwide. Since our inception, we have focused on engineering products that enhance road safety, durability, and long-term performance.
               </p>
               <p>
-                Over the past decade, we have built a reputation for manufacturing excellence, quality 
-                assurance, and reliable export services. Our state-of-the-art facility is equipped with 
-                modern machinery and automated processes, ensuring consistent quality and timely delivery 
-                for every project.
+                We specialize in the manufacturing of hot thermoplastic paints, cold plastic paints, and advanced road marking solutions designed to meet international standards. Our product portfolio also includes road studs, bitumen products, retro reflective signages, and signages, ensuring maximum visibility and safety across all traffic conditions.
               </p>
               <p>
-                Today, we manufacture premium paints, metal fabrications, school furniture, and safety 
-                equipment, serving diverse industries from construction to education. Our commitment to 
-                quality, innovation, and customer satisfaction drives everything we do.
+                As experienced metal beam crash barrier manufacturers, we produce a complete range of W beam crash barriers, double W beam crash barriers, and metal beam crash barriers using precision fabrication and strict quality control. Our in-house capabilities extend to fabrications, road safety furniture, and road safety furniture, supporting infrastructure projects with consistent quality and timely delivery.
+              </p>
+              <p>
+                With modern manufacturing facilities, skilled professionals, and a strong commitment to innovation, YNM Safety serves government bodies, contractors, and private developers across multiple countries. Our focus on quality, compliance, and customer satisfaction has positioned us as a reliable partner in the global road safety and traffic management industry.
               </p>
             </div>
             <div className="about-story-image">
               <Image
-                src="/assets/gallery-manufacturing-facility.jpg"
-                alt="YNM Manufacturing Facility"
+                src="/assets/aboutus.png"
+                alt="YNM Safety - Road Safety & Infrastructure Solutions"
                 width={600}
-                height={400}
+                height={500}
                 style={{ objectFit: "cover", borderRadius: "16px" }}
               />
             </div>
@@ -156,10 +152,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* About Section (same content as home page About / USP) */}
+        {/* About Section (USP) */}
         <section className="about-values">
           <div className="values-container">
-            <h2>About section</h2>
+            <h2>Why Choose YNM Safety</h2>
             <div className="story-divider" />
             <div className="values-grid">
               {aboutSectionContent.map((value, index) => (
@@ -173,50 +169,24 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Gallery Section */}
+        {/* Gallery Section - Coming Soon */}
         <section className="about-gallery">
           <div className="gallery-container">
             <h2>Our Gallery</h2>
             <div className="story-divider" />
             <p className="gallery-subtitle">Take a look at our facilities, production processes, and products</p>
             
-            {/* Category Filter */}
-            <div className="gallery-filters">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`filter-btn ${selectedCategory === category ? "active" : ""}`}
-                  onClick={() => setSelectedCategory(category)}
-                >
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </button>
-              ))}
-            </div>
-
-            {/* Gallery Grid */}
-            <div className="gallery-grid">
-              {filteredImages.map((image) => (
-                <div
-                  key={image.id}
-                  className="gallery-item"
-                  onClick={() => setSelectedImage(image)}
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={400}
-                    height={300}
-                    style={{ objectFit: "cover" }}
-                  />
-                  <div className="gallery-overlay">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                      <polyline points="17 8 12 3 7 8" />
-                      <line x1="12" y1="3" x2="12" y2="15" />
-                    </svg>
-                  </div>
-                </div>
-              ))}
+            {/* Coming Soon Placeholder */}
+            <div className="gallery-coming-soon">
+              <div className="gallery-coming-soon-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+              </div>
+              <h3>Gallery Coming Soon</h3>
+              <p>We&apos;re preparing an amazing collection of photos showcasing our manufacturing facilities, production processes, and product range. Stay tuned!</p>
             </div>
           </div>
         </section>
@@ -250,16 +220,18 @@ export default function AboutPage() {
               <div className="mission-icon">🎯</div>
               <h3>Our Mission</h3>
               <p>
-                To deliver premium quality manufacturing and export services that exceed customer expectations, 
-                while maintaining the highest standards of quality, innovation, and reliability in every product we create.
+                To deliver premium quality road safety products and infrastructure solutions that exceed customer expectations, 
+                while maintaining the highest standards of quality, innovation, and reliability in every product we manufacture. 
+                We are committed to enhancing road safety across highways, urban roads, and industrial projects worldwide.
               </p>
             </div>
             <div className="mission-card">
               <div className="mission-icon">👁️</div>
               <h3>Our Vision</h3>
               <p>
-                To become a globally recognized manufacturing and export company, known for product excellence, 
-                innovation, and reliability, while expanding our presence across continents.
+                To become a globally recognized leader in road safety and infrastructure manufacturing, known for product excellence, 
+                innovation, and reliability. We aim to expand our presence across continents while supporting large-scale infrastructure 
+                development and contributing to safer roads for communities worldwide.
               </p>
             </div>
           </div>
@@ -492,7 +464,7 @@ export default function AboutPage() {
 
         .values-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-template-columns: repeat(2, 1fr);
           gap: 30px;
         }
 
@@ -524,9 +496,10 @@ export default function AboutPage() {
 
         .value-card p {
           font-size: 14px;
-          line-height: 1.6;
+          line-height: 1.7;
           color: #5a4a4a;
           margin: 0;
+          text-align: left;
         }
 
         /* Gallery Section */
@@ -557,6 +530,51 @@ export default function AboutPage() {
           font-size: 16px;
           color: #9A1B2E;
           margin: 0 0 40px;
+        }
+
+        .gallery-coming-soon {
+          background: linear-gradient(135deg, #FFFFFF 0%, #F7F3EA 100%);
+          border: 2px dashed #C9A24D;
+          border-radius: 20px;
+          padding: 80px 40px;
+          text-align: center;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        .gallery-coming-soon-icon {
+          width: 120px;
+          height: 120px;
+          background: linear-gradient(135deg, #C9A24D 0%, #E6D3A3 100%);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 30px;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        .gallery-coming-soon-icon svg {
+          color: #74060D;
+        }
+
+        .gallery-coming-soon h3 {
+          font-size: 32px;
+          font-weight: 800;
+          color: #74060D;
+          margin: 0 0 16px;
+        }
+
+        .gallery-coming-soon p {
+          font-size: 16px;
+          line-height: 1.7;
+          color: #5a4a4a;
+          margin: 0;
+        }
+
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.05); }
         }
 
         .gallery-filters {
@@ -815,6 +833,14 @@ export default function AboutPage() {
 
           .gallery-grid {
             grid-template-columns: 1fr;
+          }
+
+          .mission-container {
+            grid-template-columns: 1fr;
+          }
+
+          .mission-card {
+            padding: 40px 24px;
           }
         }
       `}</style>

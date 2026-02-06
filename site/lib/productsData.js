@@ -16,7 +16,7 @@ export const enhancedProductsData = {
 
 With over a decade of manufacturing excellence, we have developed advanced paint technologies that combine superior durability with excellent aesthetic appeal. Our Industrial Enamel Paint is manufactured using premium raw materials and state-of-the-art production processes, ensuring consistent quality and performance across every batch.
 
-The paint is specifically formulated to withstand extreme temperatures, chemical exposure, and mechanical stress, making it ideal for use in manufacturing facilities, power plants, refineries, and heavy industrial operations. Our commitment to quality is reflected in our ISO 9001:2015 certification and our ability to export to over 15 countries worldwide.`,
+The paint is specifically formulated to withstand extreme temperatures, chemical exposure, and mechanical stress, making it ideal for use in manufacturing facilities, power plants, refineries, and heavy industrial operations. Our commitment to quality is reflected in our ISO 9001:2015 certification and our ability to export to over 50 countries worldwide.`,
 
     // Detailed Specifications
     detailedSpecs: [
@@ -117,7 +117,7 @@ The paint is specifically formulated to withstand extreme temperatures, chemical
         "Cost-effective solution with excellent price-to-performance ratio",
         "Environmentally responsible formulation with low VOC content",
         "Versatile application across multiple industrial sectors",
-        "Proven track record with successful projects in 15+ countries",
+        "Proven track record with successful projects in 50+ countries",
         "Technical support and color matching services available",
         "Bulk manufacturing capabilities for large-scale projects"
       ]
@@ -340,7 +340,7 @@ The paint is specifically formulated to withstand extreme temperatures, chemical
       annualCapacity: "500,000 liters",
       productionSpeed: "10,000 liters/day",
       qualityStandards: "ISO 9001:2015",
-      exportCountries: "15+ countries"
+      exportCountries: "50+ countries"
     },
 
     // Pricing Information
@@ -644,7 +644,7 @@ With over 10 years of proven performance in various projects across India and in
       annualCapacity: "400,000 liters",
       productionSpeed: "8,000 liters/day",
       qualityStandards: "ISO 9001:2015",
-      exportCountries: "15+ countries"
+      exportCountries: "50+ countries"
     },
 
     // Pricing Information

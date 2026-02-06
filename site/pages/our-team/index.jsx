@@ -141,112 +141,110 @@ export default function OurDirectorPage() {
         )}
 
         {/* Ventures Section */}
-        {directorData.ventures && directorData.ventures.length > 0 && (
-          <section className="director-ventures-section">
-            <div className="director-section-container">
-              <h2>Ventures & Business Interests</h2>
-              <p className="section-subtitle">
-                Leading multiple successful ventures across manufacturing, exports, infrastructure, and innovation
-              </p>
-              <div className="ventures-grid">
-                {directorData.ventures.map((venture) => (
-                  <div key={venture.id} className="venture-card">
-                    {venture.logo && (
-                      <div className="venture-logo">
-                        <Image
-                          src={venture.logo}
-                          alt={venture.name}
-                          width={60}
-                          height={60}
-                          style={{ objectFit: "contain" }}
-                        />
-                      </div>
-                    )}
-                    <h3>{venture.name}</h3>
-                    <p className="venture-role">{venture.role}</p>
-                    <p className="venture-year">{venture.year}</p>
-                    <p className="venture-description">{venture.description}</p>
-                    {venture.achievements && venture.achievements.length > 0 && (
-                      <div className="venture-achievements">
-                        {venture.achievements.map((achievement, idx) => (
-                          <span key={idx} className="achievement-badge">{achievement}</span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
+        <section className="director-ventures-section">
+          <div className="director-section-container">
+            <h2>Ventures & Business Interests</h2>
+            <p className="section-subtitle">
+              Leading successful ventures in manufacturing and exports
+            </p>
+            <div className="ventures-grid">
+              {/* YNM Safety - Main Venture */}
+              <div className="venture-card">
+                <div className="venture-logo">
+                  <Image
+                    src="/assets/logo-navbar.jpg"
+                    alt="YNM Safety"
+                    width={60}
+                    height={60}
+                    style={{ objectFit: "contain", borderRadius: 8 }}
+                  />
+                </div>
+                <h3>YNM Safety Pan Global Trade Pvt Ltd</h3>
+                <p className="venture-role">Founder & Managing Director</p>
+                <p className="venture-year">2013 - Present</p>
+                <p className="venture-description">Leading manufacturer and exporter of road safety products, hot thermoplastic paints, metal beam crash barriers, signages, and infrastructure solutions. Serving clients across 50+ countries worldwide.</p>
+                <div className="venture-achievements">
+                  <span className="achievement-badge">50+ Export Countries</span>
+                  <span className="achievement-badge">500+ Projects</span>
+                  <span className="achievement-badge">ISO 9001:2015</span>
+                </div>
+              </div>
+              
+              {/* Coming Soon Card */}
+              <div className="venture-card coming-soon-card">
+                <div className="coming-soon-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <h3>More Ventures Coming Soon</h3>
+                <p className="venture-description">Additional business interests and ventures will be announced shortly. Stay tuned for exciting updates!</p>
               </div>
             </div>
-          </section>
-        )}
+          </div>
+        </section>
 
-        {/* Achievements & Awards Section */}
-        {directorData.achievements && directorData.achievements.length > 0 && (
-          <section className="director-achievements-section">
-            <div className="director-section-container">
-              <h2>Achievements & Recognition</h2>
-              <p className="section-subtitle">
-                Recognized for excellence in leadership, innovation, and business growth
-              </p>
-              <div className="achievements-grid">
-                {directorData.achievements.map((achievement, index) => (
-                  <div key={index} className="achievement-card">
-                    <div className="achievement-icon">🏆</div>
-                    <div className="achievement-year">{achievement.year}</div>
-                    <h3>{achievement.title}</h3>
-                    <p className="achievement-org">{achievement.organization}</p>
-                    <p className="achievement-desc">{achievement.description}</p>
-                  </div>
-                ))}
+        {/* Achievements & Awards Section - Coming Soon */}
+        <section className="director-achievements-section">
+          <div className="director-section-container">
+            <h2>Achievements & Recognition</h2>
+            <p className="section-subtitle">
+              Recognized for excellence in leadership, innovation, and business growth
+            </p>
+            <div className="section-coming-soon">
+              <div className="coming-soon-icon-large">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="12" cy="8" r="7"/>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                </svg>
               </div>
+              <h3>Coming Soon</h3>
+              <p>Awards, certifications, and recognition details will be updated shortly.</p>
             </div>
-          </section>
-        )}
+          </div>
+        </section>
 
-        {/* Member Of Section */}
-        {directorData.memberOf && directorData.memberOf.length > 0 && (
-          <section className="director-memberof-section">
-            <div className="director-section-container">
-              <h2>Member Of</h2>
-              <p className="section-subtitle">
-                Professional associations and organizations contributing to industry growth
-              </p>
-              <div className="memberof-grid">
-                {directorData.memberOf.map((membership) => (
-                  <div key={membership.id} className="memberof-card">
-                    <div className="memberof-icon">🏛️</div>
-                    <h3>{membership.name}</h3>
-                    <p className="memberof-role">{membership.role}</p>
-                    <p className="memberof-description">{membership.description}</p>
-                  </div>
-                ))}
+        {/* Member Of Section - Coming Soon */}
+        <section className="director-memberof-section">
+          <div className="director-section-container">
+            <h2>Member Of</h2>
+            <p className="section-subtitle">
+              Professional associations and organizations contributing to industry growth
+            </p>
+            <div className="section-coming-soon">
+              <div className="coming-soon-icon-large">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
               </div>
+              <h3>Coming Soon</h3>
+              <p>Professional memberships and association details will be updated shortly.</p>
             </div>
-          </section>
-        )}
+          </div>
+        </section>
 
-        {/* Milestones Timeline Section */}
-        {directorData.milestones && directorData.milestones.length > 0 && (
-          <section className="director-milestones-section">
-            <div className="director-section-container">
-              <h2>Career Milestones</h2>
-              <p className="section-subtitle" style={{ color: '#E6D3A3' }}>
-                Key moments in the personal journey of Rishuu Jaiin
-              </p>
-              <div className="milestones-timeline">
-                {directorData.milestones.map((milestone, index) => (
-                  <div key={index} className="milestone-item">
-                    <div className="milestone-content">
-                      <span className="milestone-year">{milestone.year}</span>
-                      <h3>{milestone.title}</h3>
-                      <p>{milestone.description}</p>
-                    </div>
-                  </div>
-                ))}
+        {/* Milestones Timeline Section - Coming Soon */}
+        <section className="director-milestones-section">
+          <div className="director-section-container">
+            <h2>Career Milestones</h2>
+            <p className="section-subtitle" style={{ color: '#E6D3A3' }}>
+              Key moments in the journey of leadership and growth
+            </p>
+            <div className="section-coming-soon" style={{ background: 'rgba(255,255,255,0.1)' }}>
+              <div className="coming-soon-icon-large" style={{ background: 'rgba(201, 162, 77, 0.3)' }}>
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#C9A24D" strokeWidth="1.5">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
               </div>
+              <h3 style={{ color: '#F7F3EA' }}>Coming Soon</h3>
+              <p style={{ color: '#E6D3A3' }}>Career milestones and journey highlights will be updated shortly.</p>
             </div>
-          </section>
-        )}
+          </div>
+        </section>
 
         {/* Leadership Philosophy Section */}
         {directorData.leadershipPhilosophy && (
@@ -852,6 +850,74 @@ export default function OurDirectorPage() {
           padding: 6px 14px;
           border-radius: 20px;
           border: 1px solid rgba(201, 162, 77, 0.3);
+        }
+
+        .coming-soon-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          border: 2px dashed #C9A24D;
+          background: linear-gradient(135deg, #F7F3EA 0%, #fff 100%);
+        }
+
+        .coming-soon-card .coming-soon-icon {
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(135deg, #C9A24D 0%, #E6D3A3 100%);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          color: #74060D;
+        }
+
+        .coming-soon-card h3 {
+          color: #74060D;
+          text-align: center;
+        }
+
+        .coming-soon-card .venture-description {
+          text-align: center;
+          color: #666;
+        }
+
+        .section-coming-soon {
+          background: linear-gradient(135deg, #F7F3EA 0%, #fff 100%);
+          border: 2px dashed #C9A24D;
+          border-radius: 20px;
+          padding: 60px 40px;
+          text-align: center;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+
+        .coming-soon-icon-large {
+          width: 100px;
+          height: 100px;
+          background: linear-gradient(135deg, #C9A24D 0%, #E6D3A3 100%);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 24px;
+          color: #74060D;
+        }
+
+        .section-coming-soon h3 {
+          font-size: 28px;
+          font-weight: 800;
+          color: #74060D;
+          margin: 0 0 12px;
+        }
+
+        .section-coming-soon p {
+          font-size: 16px;
+          color: #666;
+          margin: 0;
+          line-height: 1.6;
         }
 
         /* Achievements Section */

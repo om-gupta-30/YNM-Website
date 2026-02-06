@@ -6,17 +6,20 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
 
-A modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd**, a leading manufacturer and exporter of road safety products, industrial paints, metal fabrication, and school furniture based in Hyderabad, India.
+A modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd**, a leading manufacturer and exporter of road safety products, road marking paints, metal beam crash barriers, highway signages, bitumen products, and precision metal fabrication based in Hyderabad, India.
 
-## Critical security note (read before pushing)
+## IMPORTANT: Before pushing to GitHub / Vercel / GCP
 
-This repo previously had a committed `site/.env.local` containing real credentials (Google service account private key, Gemini API key, and email app password). The file has been removed from the working tree, but **git history may still contain it**.
+`site/.env.local` containing real credentials (Google service account private key, Gemini API key, Gmail app password) was committed in early git history. The file has been removed from tracking, but **it still exists in git history**.
 
-Before pushing to GitHub (or importing into Vercel/GCP), do **all** of the following:
+**You MUST do the following before pushing:**
 
-- **Rotate credentials** that were exposed (create new Gemini API key, revoke/replace Gmail app password, rotate the GCP service account key).
-- **Purge the secret file from git history** (see [Purging leaked secrets from git history](#purging-leaked-secrets-from-git-history)).
-- **Run secret scan locally**: `gitleaks detect --source . --verbose`
+1. **Purge secrets from git history** (see [Purging leaked secrets](#purging-leaked-secrets-from-git-history) below)
+2. **Rotate ALL exposed credentials:**
+   - Create a new Gemini API key at [AI Studio](https://aistudio.google.com/app/apikey)
+   - Revoke and recreate the Gmail App Password
+   - Rotate the GCP service account key (delete old key, create new one)
+3. **Run a secret scan:** `gitleaks detect --source . --verbose`
 
 ## Live Website
 
@@ -40,15 +43,17 @@ Before pushing to GitHub (or importing into Vercel/GCP), do **all** of the follo
 ## Features
 
 - **Under Construction Mode** - Toggle to show "Coming Soon" page during development
-- **AI Chatbot** - Powered by Google Gemini 2.x for instant customer queries
+- **AI Chatbot** - Powered by Google Gemini 2.5 Flash with full company knowledge base
 - **Responsive Design** - Optimized for all devices (mobile, tablet, laptop, desktop)
 - **Cross-Platform Support** - Windows and Mac specific optimizations
-- **Contact & Quote Forms** - Integrated with Google Sheets
+- **Contact & Quote Forms** - Integrated with Google Sheets for data storage
 - **Career Portal** - Job applications with PDF resume upload & email notifications
 - **Interactive India Map** - Regional contact information with click-to-view details
-- **Product Catalog** - Detailed product pages with specifications and galleries
-- **Multi-language Support** - English and Hindi language options
+- **Product Catalog** - Detailed product pages with specs, application areas, projects, and market data
+- **Fabrication Showcase** - Bento grid design showcasing 34+ fabrication products
+- **Multi-language Support** - 12 Indian languages supported
 - **Performance Optimized** - Lazy loading, caching, and smooth animations
+- **SEO Optimized** - Custom meta tags, sitemap, and robots.txt
 
 ---
 
@@ -56,58 +61,77 @@ Before pushing to GitHub (or importing into Vercel/GCP), do **all** of the follo
 
 ```
 YNM-website/
-├── site/                           # Next.js application
-│   ├── components/                 # React components
-│   │   ├── UnderConstruction.jsx  # Under construction page with contact form
-│   │   ├── Navbar.jsx             # Navigation bar
-│   │   ├── Footer.jsx             # Site footer
-│   │   ├── Chatbot.jsx            # AI chatbot widget
-│   │   ├── Hero.jsx               # Hero section
-│   │   ├── IndiaPresenceMap.jsx   # Interactive map
-│   │   ├── DirectorSection.jsx    # Director testimonial
-│   │   ├── EmployeesSection.jsx   # Employee testimonials
-│   │   └── ...
-│   ├── contexts/                   # React contexts
-│   │   └── LanguageContext.jsx    # Multi-language support
-│   ├── pages/                      # Routes & API endpoints
-│   │   ├── api/
-│   │   │   ├── contact/submit.js  # Contact form → Google Sheets
-│   │   │   ├── careers/submit.js  # Career form with email & PDF
-│   │   │   ├── chat/gemini.js     # AI chatbot API
-│   │   │   └── health.js          # Health check endpoint
-│   │   ├── products/
-│   │   │   ├── index.jsx          # Product catalog
-│   │   │   ├── [productId].jsx    # Dynamic product pages
-│   │   │   └── fabrication.jsx    # Fabrication products
-│   │   ├── about/
-│   │   ├── careers/
-│   │   ├── clients/
-│   │   ├── contact/
-│   │   ├── our-team/
-│   │   └── ...
-│   ├── lib/                        # Data & utilities
-│   │   ├── productsCategoriesData.js
-│   │   ├── productsData.js
-│   │   ├── chatbotData.js
-│   │   ├── directorData.js
-│   │   ├── employeesData.js
-│   │   ├── indiaContacts.js
-│   │   └── translations.js
-│   ├── styles/
-│   │   └── globals.css            # Global styles & responsive breakpoints
-│   ├── public/                     # Static assets
-│   │   ├── assets/                # Images & media
-│   │   │   ├── brand-logos/       # Client/partner logos
-│   │   │   ├── employeephotos/    # Employee photos
-│   │   │   └── team/              # Director & team photos
-│   │   ├── certificates/          # PDF certificates
-│   │   └── fonts/                 # Custom fonts
-│   ├── .env.example               # Environment template (safe to commit)
-│   ├── .gitignore                 # Git ignore rules
-│   ├── Dockerfile                 # Docker configuration
-│   └── package.json
-├── .gitignore                      # Root git ignore rules
-└── README.md
+├── .github/
+│   └── workflows/
+│       └── security-scan.yml       # GitHub Actions secret scanning
+├── .gitignore                      # Root git ignore rules (security-hardened)
+├── .gitleaks.toml                  # Gitleaks secret scanning config
+├── LICENSE                         # Proprietary license
+├── README.md                       # This file
+└── site/                           # Next.js application
+    ├── components/                 # React components (19 components)
+    │   ├── Chatbot.jsx            # AI chatbot widget (Gemini-powered)
+    │   ├── Hero.jsx               # Hero section
+    │   ├── Navbar.jsx             # Navigation bar
+    │   ├── Footer.jsx             # Site footer
+    │   ├── ProductsSection.jsx    # Products showcase
+    │   ├── BrandsSection.jsx      # Client logos carousel
+    │   ├── TestimonialsSection.jsx # Client testimonials
+    │   ├── DirectorSection.jsx    # Director profile
+    │   ├── EmployeesSection.jsx   # Employee testimonials
+    │   ├── IndiaPresenceMap.jsx   # Interactive India map
+    │   ├── FloatingSocialMedia.jsx # Social media buttons
+    │   ├── Mascot.jsx             # Animated mascot
+    │   ├── UnderConstruction.jsx  # Under construction page
+    │   └── ...
+    ├── contexts/
+    │   └── LanguageContext.jsx    # Multi-language support (12 languages)
+    ├── lib/                        # Data & utilities
+    │   ├── chatbotData.js         # AI chatbot FAQ & product catalog
+    │   ├── productsCategoriesData.js # Full product catalog (5 categories)
+    │   ├── productsData.js        # Enhanced product details
+    │   ├── directorData.js        # Director profile & ventures
+    │   ├── employeesData.js       # Employee testimonials
+    │   ├── indiaContacts.js       # Regional contact info
+    │   ├── indiaMapPaths.js       # SVG paths for India map
+    │   └── translations.js        # UI translations (12 languages)
+    ├── pages/                      # Routes & API endpoints
+    │   ├── api/
+    │   │   ├── contact/submit.js  # Contact form → Google Sheets
+    │   │   ├── careers/submit.js  # Career form (PDF upload + email)
+    │   │   ├── chat/gemini.js     # AI chatbot API (Gemini 2.5)
+    │   │   └── health.js          # Health check endpoint
+    │   ├── products/
+    │   │   ├── index.jsx          # Product catalog with categories
+    │   │   ├── [productId].jsx    # Dynamic product detail pages
+    │   │   └── fabrication.jsx    # Fabrication products (34+ items)
+    │   ├── about/index.jsx        # Company story & timeline
+    │   ├── careers/index.jsx      # Job application portal
+    │   ├── clients/index.jsx      # Client showcase
+    │   ├── contact/index.jsx      # Contact form & map
+    │   ├── get-quote/index.jsx    # Quote request form
+    │   ├── our-team/index.jsx     # Director & leadership page
+    │   ├── foreign-collaborations/
+    │   ├── investor-relations/
+    │   └── index.js               # Homepage
+    ├── styles/
+    │   └── globals.css            # Tailwind + custom styles
+    ├── public/                     # Static assets
+    │   ├── assets/                # Images & media
+    │   │   ├── brand-logos/       # 18 client/partner logos
+    │   │   ├── employeephotos/    # Employee photos
+    │   │   ├── team/              # Director & team photos
+    │   │   └── testimonials/      # Client testimonial images
+    │   ├── certificates/          # ISO certificate PDF
+    │   ├── fonts/                 # Montserrat font
+    │   ├── favicon.svg
+    │   ├── robots.txt
+    │   └── sitemap.xml
+    ├── .env.example               # Environment template (safe to commit)
+    ├── .gitignore                 # Site-level git ignore rules
+    ├── .dockerignore              # Docker ignore rules
+    ├── Dockerfile                 # Multi-stage Docker build
+    └── package.json               # Dependencies & scripts
 ```
 
 ---
@@ -795,11 +819,11 @@ npm run lint         # Run ESLint to check code quality
 
 ## Product Categories
 
-1. **Industrial Paints** - Hot Thermoplastic, Cold Plastic, Water Base Road Marking Paints
-2. **Metal Beam Crash Barriers** - W Beam, Thrie Beam, Roller Barrier, Attenuator
-3. **Signages** - Gantry, Cantilever, Canopy, Informatory, Retro-Reflective
-4. **Fabrication** - 34+ products including Sign Board Structures, High Mast, Bridge Bearings
-5. **School Furniture** - Desks, Chairs, Laboratory Tables
+1. **Road Marking Paints** - Hot Thermoplastic, Cold Plastic, Water Base Road Marking Paints
+2. **Bitumen** - Bitumen VG 40 for highway construction
+3. **Metal Beam Crash Barriers** - W Beam, Thrie Beam, Double W Beam, Roller Barrier, End Terminals, Crash Attenuators
+4. **Signages** - Retro Reflective Gantry, Cantilever, Canopy, Informatory Signage
+5. **Fabrication** - 34+ products including Solar Panel Structures, Railway Structures, GI Dustbins, High Mast Poles, Bridge Bearings, Toll Plaza Equipment
 
 ---
 
@@ -817,15 +841,15 @@ This codebase is proprietary software. Unauthorized copying, modification, distr
 
 | | |
 |---|---|
-| 🌐 Website | [ynmsafety.com](https://ynmsafety.com) |
-| 📧 Sales | sales@ynmsafety.com |
-| 📧 HR | hr@ynmsafety.com |
-| 📞 Phone | +91 96765 75770 |
-| 📍 Location | Hyderabad, Telangana, India |
+| Website | [ynmsafety.com](https://ynmsafety.com) |
+| Sales | sales@ynmsafety.com |
+| HR | ynm.hr@ynmsafety.com |
+| Phone | +91 96765 75770 / +91 90002 62013 |
+| Location | Hyderabad, Telangana, India |
 
 ---
 
 <p align="center">
   <strong>Developed by Om Gupta</strong><br>
-  © 2024-2026 YNM Safety Pan Global Trade Pvt Ltd. All rights reserved.
+  &copy; 2024-2026 YNM Safety Pan Global Trade Pvt Ltd. All rights reserved.
 </p>
