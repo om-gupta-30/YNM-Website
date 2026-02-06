@@ -8,6 +8,16 @@
 
 A modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd**, a leading manufacturer and exporter of road safety products, industrial paints, metal fabrication, and school furniture based in Hyderabad, India.
 
+## Critical security note (read before pushing)
+
+This repo previously had a committed `site/.env.local` containing real credentials (Google service account private key, Gemini API key, and email app password). The file has been removed from the working tree, but **git history may still contain it**.
+
+Before pushing to GitHub (or importing into Vercel/GCP), do **all** of the following:
+
+- **Rotate credentials** that were exposed (create new Gemini API key, revoke/replace Gmail app password, rotate the GCP service account key).
+- **Purge the secret file from git history** (see [Purging leaked secrets from git history](#purging-leaked-secrets-from-git-history)).
+- **Run secret scan locally**: `gitleaks detect --source . --verbose`
+
 ## Live Website
 
 [ynmsafety.com](https://ynmsafety.com)
@@ -403,6 +413,41 @@ HR_EMAIL=hr@ynmsafety.com
 ---
 
 ## Security
+
+### Purging leaked secrets from git history
+
+If `site/.env.local` (or any other secret file) was ever committed, **removing it now is not enough**—the secret remains in git history and can be extracted after you push.
+
+Recommended approaches:
+
+1. **Surgical removal (recommended)**: remove the file from all commits using `git filter-repo` (or BFG), then force-push.
+2. **Fresh-history reset (fastest)**: create a new orphan history with the current clean state, then force-push.
+
+Notes:
+- After rewriting history, **rotate every exposed credential** anyway (history may already be cached by GitHub, forks, CI logs, etc.).
+- Force-pushing rewrites history for everyone. Coordinate with any collaborators.
+
+`git filter-repo` example (removes the file from all history):
+
+```bash
+# From repo root
+git filter-repo --path site/.env.local --invert-paths
+
+# After this, you must force-push to update GitHub:
+git push --force --all
+git push --force --tags
+```
+
+Orphan-history example (keeps only current state as the new `main`):
+
+```bash
+# From repo root
+git checkout --orphan clean-main
+git add -A
+git commit -m "Clean history (remove leaked secrets)"
+git branch -M main
+git push --force origin main
+```
 
 ### What's Protected (NEVER committed to git)
 

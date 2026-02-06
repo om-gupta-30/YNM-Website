@@ -28,11 +28,22 @@ export default function handler(req, res) {
 
   const allPresent = missingVars.length === 0;
 
-  res.status(allPresent ? 200 : 503).json({
+  // Avoid leaking operational details in production. In local/dev this is useful for setup.
+  const isProd = process.env.NODE_ENV === 'production';
+
+  const base = {
     status: allPresent ? 'healthy' : 'degraded',
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV || 'development',
     version: process.env.npm_package_version || '1.0.0',
+  };
+
+  if (isProd) {
+    return res.status(allPresent ? 200 : 503).json(base);
+  }
+
+  return res.status(allPresent ? 200 : 503).json({
+    ...base,
     envVars: {
       total: requiredEnvVars.length,
       present: requiredEnvVars.length - missingVars.length,

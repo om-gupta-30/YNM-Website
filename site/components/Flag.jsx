@@ -1,6 +1,8 @@
 // Flag component using flagcdn.com for cross-platform compatibility
 // Windows doesn't support emoji flags, so we use actual images
 
+import Image from 'next/image';
+
 const countryCodeMap = {
   // Common names to ISO codes
   'India': 'in',
@@ -83,14 +85,14 @@ export default function Flag({ country, size = 24, className = "" }) {
   const code = countryCodeMap[country] || country?.toLowerCase() || 'un';
   
   // Use flagcdn.com which provides high-quality flag images
-  const flagUrl = `https://flagcdn.com/w40/${code}.png`;
-  const flagUrl2x = `https://flagcdn.com/w80/${code}.png`;
+  const flagUrl40 = `https://flagcdn.com/w40/${code}.png`;
+  const flagUrl80 = `https://flagcdn.com/w80/${code}.png`;
+  const src = size > 24 ? flagUrl80 : flagUrl40;
   
   return (
-    <img
-      src={flagUrl}
-      srcSet={`${flagUrl2x} 2x`}
-      alt={`${country} flag`}
+    <Image
+      src={src}
+      alt={`${country || 'Unknown'} flag`}
       width={size}
       height={Math.round(size * 0.75)}
       className={`flag-img ${className}`}
