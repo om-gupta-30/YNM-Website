@@ -4,7 +4,12 @@ const nextConfig = {
   // Output as standalone for Docker deployment
   output: 'standalone',
   images: {
-    remotePatterns: [],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'flagcdn.com',
+      },
+    ],
     // Static export can't use the Image Optimization API.
     unoptimized: true,
   },

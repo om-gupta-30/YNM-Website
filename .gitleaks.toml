@@ -51,7 +51,6 @@ paths = [
     '''yarn\.lock$''',
     '''pnpm-lock\.yaml$''',
     '''\.gitleaks\.toml$''',
-    '''\.md$''',  # Markdown files (docs)
 ]
 
 # Specific strings to ignore (false positives)
@@ -60,4 +59,5 @@ regexes = [
     '''example\.com''',
     '''placeholder''',
     '''YOUR_.*_KEY''',
+    '''x{4}\s+x{4}\s+x{4}\s+x{4}''', # README placeholder "xxxx xxxx xxxx xxxx"
 ]
