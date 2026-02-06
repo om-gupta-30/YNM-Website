@@ -290,9 +290,8 @@ export default function ContactPage() {
                   <Image 
                     src="/assets/logo-footer.jpg" 
                     alt="YNM Safety" 
-                    width={70} 
-                    height={70} 
-                    style={{ objectFit: "contain", borderRadius: "12px" }}
+                    fill
+                    style={{ objectFit: "cover" }}
                   />
                 </div>
                 <h3>{companyInfo.name}</h3>
@@ -662,23 +661,18 @@ export default function ContactPage() {
         }
 
         .company-logo {
-          width: 80px;
-          height: 80px;
+          width: 100px;
+          height: 100px;
           border-radius: 16px;
           overflow: hidden;
           margin: 0 auto 20px;
           border: 3px solid #C9A24D;
           position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           background: #fff;
         }
         
         .company-logo :global(img) {
-          object-fit: contain !important;
-          width: 100% !important;
-          height: 100% !important;
+          object-fit: cover !important;
         }
 
         .company-card h3 {
