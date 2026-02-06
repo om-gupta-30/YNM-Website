@@ -1774,6 +1774,418 @@ export const productsData = {
               "/assets/Ynm safety Commercial &  Advertising.png",
               "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
             ]
+          },
+          {
+            id: "sg6",
+            slug: "cantilever-signage-manufacturers",
+            name: "Cantilever Signage",
+            shortDesc: "High-visibility cantilever signages manufactures for highways, expressways, and global road safety infrastructure.",
+            desc: "Robust and high-visibility overhead cantilever signage solutions for highways, expressways, and major road corridors. Single-pole mounted structures for advance traffic information.",
+            image: "/assets/ynm safety cantilever.png",
+            heroImage: "/assets/ynm safety cantilever.png",
+            specs: ["Single-Pole Cantilever", "High visibility", "15-20 Years Design Life", "IRC 67 compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Cantilever Signage Manufacturers | Worldwide Supply | YNM Safety",
+              description: "Leading Cantilever signages manufactures delivering durable highway and road safety signages worldwide. YNM Safety manufactures high-quality cantilever signages compliant with international standards.",
+              slug: "/cantilever-signage-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the trusted Cantilever signages manufactures, delivering robust and high-visibility overhead signage solutions for highways, expressways, and major road corridors across global markets. Cantilever signages are designed to provide advance traffic information without obstructing road movement, ensuring maximum visibility and improved driver response.\n\nAs YNM Safety manufactures premium-quality signages, our cantilever structures are engineered to withstand high wind loads, extreme weather conditions, and long-term outdoor exposure. These signages are widely used for lane guidance, directional information, exit identification, and regulatory traffic control.\n\nAll cantilever signages are manufactured with strict quality control and comply with international road safety standards, making them suitable for government, EPC, and private infrastructure projects worldwide.",
+            detailedDescription: "YNM Safety is one of the trusted Cantilever signages manufactures, delivering robust and high-visibility overhead signage solutions for highways, expressways, and major road corridors across global markets. Cantilever signages are designed to provide advance traffic information without obstructing road movement, ensuring maximum visibility and improved driver response.\n\nAs YNM Safety manufactures premium-quality signages, our cantilever structures are engineered to withstand high wind loads, extreme weather conditions, and long-term outdoor exposure. These signages are widely used for lane guidance, directional information, exit identification, and regulatory traffic control.\n\nAll cantilever signages are manufactured with strict quality control and comply with international road safety standards, making them suitable for government, EPC, and private infrastructure projects worldwide.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Cantilever Signage Structure" },
+              { label: "Material", value: "Structural Steel / Mild Steel" },
+              { label: "Finish", value: "Hot Dip Galvanized / Painted" },
+              { label: "Sign Board", value: "Retro-Reflective Sheeting" },
+              { label: "Mounting Type", value: "Single-Pole Cantilever" },
+              { label: "Design Life", value: "15-20 Years" },
+              { label: "Application Area", value: "High-Speed & Urban Road Networks" },
+              { label: "Compliance", value: "IRC 67, MoRTH, ISO 9001:2015" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Wrapped with bubble wrap",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "IRC 67, MoRTH, ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Based",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Cantilever Signage Structure",
+                "Material: Structural Steel / Mild Steel",
+                "Finish: Hot Dip Galvanized / Painted",
+                "Sign Board: Retro-Reflective Sheeting",
+                "Mounting Type: Single-Pole Cantilever",
+                "Design Life: 15-20 Years",
+                "Application: High-Speed & Urban Road Networks",
+                "Compliance: IRC 67, MoRTH, ISO 9001:2015",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "Excellent visibility from long distances",
+                "Strong structural stability in high-wind environments",
+                "Corrosion-resistant for long service life",
+                "Custom-designed for multi-lane roadways",
+                "Fully compliant with global safety norms",
+                "Low maintenance with high durability"
+              ],
+              advantages: [
+                "Enhances driver awareness and road safety",
+                "Reduces last-moment lane changes",
+                "Ideal for high-speed and controlled-access roads",
+                "Low maintenance with high durability",
+                "Trusted signages manufacturers – YNM Safety",
+                "Meets government and international road safety standards"
+              ]
+            },
+            
+            features: [
+              "Excellent visibility from long distances",
+              "Strong structural stability in high-wind environments",
+              "Corrosion-resistant for long service life",
+              "Custom-designed for multi-lane roadways",
+              "Fully compliant with global safety norms",
+              "Low maintenance with high durability"
+            ],
+            
+            advantages: [
+              "Enhances driver awareness and road safety",
+              "Reduces last-moment lane changes",
+              "Ideal for high-speed and controlled-access roads",
+              "Low maintenance with high durability",
+              "Trusted signages manufacturers – YNM Safety",
+              "Meets government and international road safety standards"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Highways & Expressways",
+                description: "Cantilever signages provide clear overhead traffic guidance on highways and expressways.",
+                image: "/assets/YNM Safety Cantilever Highways & Expressways.png",
+                details: "Cantilever signages ensure maximum visibility across multiple lanes without obstructing traffic flow. They are designed to withstand high wind loads and high-speed vehicle conditions. This improves driver response time and overall road safety."
+              },
+              {
+                id: "app2",
+                title: "Urban Roads & Streets",
+                description: "Cantilever signages are ideal for urban roads and busy city streets.",
+                image: "/assets/YNM Safety Cantilever Urban Roads & Streets.png",
+                details: "Elevated cantilever signages remain clearly visible even in congested traffic conditions. They deliver advance directional and lane information to drivers. This helps reduce confusion and improves traffic movement in urban areas."
+              },
+              {
+                id: "app3",
+                title: "Toll Plazas",
+                description: "Cantilever signages are widely used at toll plazas for clear lane and regulatory guidance.",
+                image: "/assets/YNM Safety Cantilever Toll Plazas.png",
+                details: "At toll plazas, cantilever signages display lane usage, toll instructions, and regulatory messages. Their strong structural design ensures reliability in high-stress zones. This enhances safety and operational efficiency."
+              },
+              {
+                id: "app4",
+                title: "Industrial Areas",
+                description: "Cantilever signages support safe traffic movement in industrial areas.",
+                image: "/assets/YNM Safety Cantilever Industrial areas.png",
+                details: "Cantilever signages provide clear directional and warning information for heavy vehicles. Their robust construction withstands harsh industrial environments. This improves navigation and reduces accident risks within industrial zones."
+              },
+              {
+                id: "app5",
+                title: "Ports & Logistics Hubs",
+                description: "Cantilever signages are suitable for ports and logistics hubs with heavy vehicle traffic.",
+                image: "/assets/YNM Safety Cantilever Ports & Logistics Hubs.png",
+                details: "Overhead cantilever signages offer high visibility in large cargo and logistics areas. They guide vehicles through complex routes and loading zones. This ensures smooth traffic flow and improved safety operations."
+              },
+              {
+                id: "app6",
+                title: "Smart / Intelligent Transportation Systems (ITS)",
+                description: "Cantilever signages play a key role in smart and intelligent transportation systems.",
+                image: "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png",
+                details: "Cantilever signages integrate effectively with ITS infrastructure for traffic management. Their elevated positioning supports clear data visibility and driver communication. This contributes to efficient and modern road management systems."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Highways & Expressways",
+                short: "Cantilever signages provide clear overhead traffic guidance on highways and expressways.",
+                hover: "Cantilever signages ensure maximum visibility across multiple lanes without obstructing traffic flow. They are designed to withstand high wind loads and high-speed vehicle conditions. This improves driver response time and overall road safety.",
+                image: "/assets/YNM Safety Cantilever Highways & Expressways.png"
+              },
+              {
+                title: "Urban Roads & Streets",
+                short: "Cantilever signages are ideal for urban roads and busy city streets.",
+                hover: "Elevated cantilever signages remain clearly visible even in congested traffic conditions. They deliver advance directional and lane information to drivers. This helps reduce confusion and improves traffic movement in urban areas.",
+                image: "/assets/YNM Safety Cantilever Urban Roads & Streets.png"
+              },
+              {
+                title: "Toll Plazas",
+                short: "Cantilever signages are widely used at toll plazas for clear lane and regulatory guidance.",
+                hover: "At toll plazas, cantilever signages display lane usage, toll instructions, and regulatory messages. Their strong structural design ensures reliability in high-stress zones. This enhances safety and operational efficiency.",
+                image: "/assets/YNM Safety Cantilever Toll Plazas.png"
+              },
+              {
+                title: "Industrial Areas",
+                short: "Cantilever signages support safe traffic movement in industrial areas.",
+                hover: "Cantilever signages provide clear directional and warning information for heavy vehicles. Their robust construction withstands harsh industrial environments. This improves navigation and reduces accident risks within industrial zones.",
+                image: "/assets/YNM Safety Cantilever Industrial areas.png"
+              },
+              {
+                title: "Ports & Logistics Hubs",
+                short: "Cantilever signages are suitable for ports and logistics hubs with heavy vehicle traffic.",
+                hover: "Overhead cantilever signages offer high visibility in large cargo and logistics areas. They guide vehicles through complex routes and loading zones. This ensures smooth traffic flow and improved safety operations.",
+                image: "/assets/YNM Safety Cantilever Ports & Logistics Hubs.png"
+              },
+              {
+                title: "Smart / Intelligent Transportation Systems (ITS)",
+                short: "Cantilever signages play a key role in smart and intelligent transportation systems.",
+                hover: "Cantilever signages integrate effectively with ITS infrastructure for traffic management. Their elevated positioning supports clear data visibility and driver communication. This contributes to efficient and modern road management systems.",
+                image: "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder - can be updated later)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Cantilever Signage Market Growth | YNM Safety",
+              description: "In 2023–24, the global portable cantilever sign systems market was valued at around USD 1.28 billion, showing growth from the previous year's baseline as demand expanded across infrastructure and commercial sectors. Analysts forecast that this segment will continue to grow at a steady CAGR of about 6.4%, lifting the market to roughly USD 2.22 billion by 2033.\n\nYNM Safety manufactures cantilever signages that support long-term performance and modern road safety requirements across various traffic environments.",
+              cagr: "6.4%",
+              growthFactors: [
+                "Urbanization and Infrastructure Expansion",
+                "Government Regulations and Safety Initiatives",
+                "Technological Advancements",
+                "Versatility and Flexibility",
+                "Rising Demand for Durable Signage"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.28B",
+                projectedMarketSize: "$2.22B",
+                currentYear: "2024",
+                projectedYear: "2033",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "40,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 1.05 },
+                { year: "2022", value: 1.15 },
+                { year: "2023", value: 1.22 },
+                { year: "2024", value: 1.28 },
+                { year: "2025", value: 1.40 },
+                { year: "2026", value: 1.55 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia",
+                  countries: ["India", "China", "Japan", "South Korea", "United Arab Emirates", "Saudi Arabia", "Singapore", "Malaysia"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Netherlands", "Sweden", "Poland"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "South America",
+                  countries: ["Brazil", "Argentina", "Chile", "Colombia"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa", "Egypt", "Nigeria", "Kenya"]
+                },
+                {
+                  name: "Oceania",
+                  countries: ["Australia", "New Zealand"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "As one of the leading Cantilever signages manufacturers, YNM Safety Manufactures follows a precision-driven and quality-controlled production process to deliver durable, high-visibility signages for highway, road, and infrastructure projects worldwide. Below is the complete manufacturing workflow from raw material selection to final dispatch.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Selection & Quality Inspection",
+                description: "The manufacturing process of cantilever signage begins with sourcing premium-grade raw materials to ensure structural strength and long service life. Materials include high-tensile structural steel, aluminum or GI sheets for signage panels, high-intensity reflective sheeting, industrial fasteners, and anti-corrosive coatings. Each batch undergoes strict quality inspection before production."
+              },
+              {
+                step: "02",
+                title: "Steel Cutting & Structural Fabrication",
+                description: "Steel pipes, plates, and channels are precision-cut using CNC machines and hydraulic shearing systems. These components form the vertical support poles, horizontal cantilever arms, base plates, and stiffeners. Accurate fabrication ensures proper load distribution and stability for cantilever signages installed in high-wind and heavy-traffic areas."
+              },
+              {
+                step: "03",
+                title: "Welding & Cantilever Frame Assembly",
+                description: "Cut steel components are assembled and welded using MIG and ARC welding techniques to create a rigid cantilever structure. All welded joints are checked for strength, alignment, and dimensional accuracy to meet safety and engineering standards followed by professional cantilever signages manufacturers."
+              },
+              {
+                step: "04",
+                title: "Surface Preparation & Corrosion Protection",
+                description: "To enhance durability and weather resistance, the fabricated cantilever structure undergoes: Shot blasting or sand blasting to remove rust and impurities, application of anti-corrosive primer, and hot-dip galvanization or epoxy coating. This process ensures long-term protection against corrosion, moisture, and extreme environmental conditions."
+              },
+              {
+                step: "05",
+                title: "Signage Panel Manufacturing",
+                description: "Signage panels are manufactured using aluminum or GI sheets and precisely cut to required dimensions. High-intensity reflective sheeting is applied for maximum visibility. Graphics, symbols, and text are added using digital printing, vinyl pasting, or screen printing, ensuring compliance with international signage standards."
+              },
+              {
+                step: "06",
+                title: "Painting & Final Finishing",
+                description: "The cantilever structure is painted with weather-resistant, UV-protected industrial paints. This step enhances visual appeal, improves visibility, and extends the life of the signages in outdoor environments."
+              },
+              {
+                step: "07",
+                title: "Final Assembly & Mounting",
+                description: "Manufactured signage panels are securely mounted onto the cantilever structure using heavy-duty bolts and fixtures. Electrical components are integrated where illuminated signages are required. All assemblies are tightened and rechecked for safety."
+              },
+              {
+                step: "08",
+                title: "Quality Testing & Inspection",
+                description: "Every cantilever signage undergoes multiple quality checks, including: Dimensional accuracy, weld strength and finish, coating thickness, reflective performance and visual clarity. Load and wind-resistance inspections ensure the signages perform reliably in real-world conditions."
+              },
+              {
+                step: "09",
+                title: "Packing & Labeling",
+                description: "Approved cantilever signage panels and structures are packed using protective materials to prevent transit damage. Each package is properly labeled with product details, project information, and handling instructions."
+              },
+              {
+                step: "10",
+                title: "Storage & Dispatch",
+                description: "Once approved, the finished cantilever signages are carefully packed with protective materials to prevent transit damage. Each dispatch includes proper labeling, installation guidelines, and quality assurance documents, ensuring safe delivery to project locations worldwide."
+              }
+            ],
+            
+            // Pricing Information - Toggle between Reflective Part and MS Part
+            pricing: {
+              hasToggle: true,
+              pricingTypes: [
+                {
+                  id: "reflective",
+                  name: "Reflective Part",
+                  description: "Retro reflective sheeting on aluminium/GI panels",
+                  basePriceINR: 420,
+                  unit: "per sq. ft",
+                  icon: "✨"
+                },
+                {
+                  id: "ms-part",
+                  name: "MS Part (Mild Steel)",
+                  description: "Cantilever structure and steel components",
+                  basePriceINR: 110,
+                  unit: "per kg",
+                  icon: "🔩"
+                }
+              ],
+              // Default pricing for backwards compatibility
+              basePriceINR: 420,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹420 per sq. ft (Reflective Part)",
+              bulkDiscounts: [
+                { minQuantity: 5, discount: 3 },
+                { minQuantity: 10, discount: 5 },
+                { minQuantity: 20, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "240-300 cantilevers",
+              productionSpeed: "20-25 cantilevers",
+              qualityStandards: "ISO 9001:2015",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "morth",
+                title: "MoRTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm safety cantilever.png",
+              "/assets/YNM Safety Cantilever Highways & Expressways.png",
+              "/assets/YNM Safety Cantilever Urban Roads & Streets.png",
+              "/assets/YNM Safety Cantilever Toll Plazas.png",
+              "/assets/YNM Safety Cantilever Industrial areas.png",
+              "/assets/YNM Safety Cantilever Ports & Logistics Hubs.png",
+              "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
+            ]
           }
         ]
       },
