@@ -130,7 +130,46 @@ const directorData = {
     countriesReached: "17+",
     projectsDelivered: "500+",
     teamSize: "200+"
-  }
+  },
+  
+  memberOf: [
+    {
+      id: 1,
+      name: "Federation of Indian Export Organizations (FIEO)",
+      role: "Member",
+      description: "Active member contributing to export promotion and international trade development"
+    },
+    {
+      id: 2,
+      name: "Confederation of Indian Industry (CII)",
+      role: "Member",
+      description: "Engaged in industry collaboration and policy advocacy"
+    },
+    {
+      id: 3,
+      name: "Hyderabad Chamber of Commerce",
+      role: "Member",
+      description: "Contributing to regional business development and networking"
+    },
+    {
+      id: 4,
+      name: "Indian Paint Association",
+      role: "Member",
+      description: "Active participant in paint industry standards and innovation"
+    },
+    {
+      id: 5,
+      name: "Export Promotion Council for EOUs & SEZs",
+      role: "Member",
+      description: "Supporting export-oriented unit initiatives and special economic zones"
+    },
+    {
+      id: 6,
+      name: "Bureau of Indian Standards (BIS)",
+      role: "Member",
+      description: "Contributing to quality standards and product certification initiatives"
+    }
+  ]
 };
 
 export default directorData;

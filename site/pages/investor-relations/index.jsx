@@ -11,6 +11,8 @@ const milestones = [
   { year: "2018", title: "ISO Certified", desc: "Quality management systems" },
   { year: "2021", title: "Expansion", desc: "New manufacturing facility" },
   { year: "2024", title: "PAN India", desc: "Nationwide distribution" },
+  { year: "2025", title: "Contracting", desc: "Major contracting ventures" },
+  { year: "2026", title: "PAN India Mfg", desc: "Nationwide manufacturing operations" },
 ];
 
 const investmentThesis = [
@@ -158,9 +160,9 @@ export default function InvestorRelationsPage() {
                   {/* Year labels */}
                   <div className="ir-chart-years">
                     <span>2013</span>
-                    <span>2017</span>
-                    <span>2021</span>
-                    <span>2024</span>
+                    <span>2018</span>
+                    <span>2022</span>
+                    <span>2026</span>
                   </div>
                 </div>
                 {/* Floating stat badges */}

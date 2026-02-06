@@ -34,11 +34,25 @@ const globalRegions = [
     name: "Middle East", 
     code: "ae",
     countries: [
-      { name: "UAE", code: "ae" },
+      { name: "Dubai (UAE)", code: "ae" },
+      { name: "Abu Dhabi", code: "ae" },
       { name: "Saudi Arabia", code: "sa" },
       { name: "Qatar", code: "qa" },
       { name: "Oman", code: "om" },
-      { name: "Kuwait", code: "kw" }
+      { name: "Kuwait", code: "kw" },
+      { name: "Bahrain", code: "bh" }
+    ]
+  },
+  { 
+    name: "East Asia", 
+    code: "cn",
+    countries: [
+      { name: "Hong Kong (China)", code: "hk" },
+      { name: "Shanghai", code: "cn" },
+      { name: "Shenzhen", code: "cn" },
+      { name: "Taiwan", code: "tw" },
+      { name: "South Korea", code: "kr" },
+      { name: "Japan", code: "jp" }
     ]
   },
   { 
@@ -49,7 +63,10 @@ const globalRegions = [
       { name: "Nigeria", code: "ng" },
       { name: "South Africa", code: "za" },
       { name: "Egypt", code: "eg" },
-      { name: "Tanzania", code: "tz" }
+      { name: "Tanzania", code: "tz" },
+      { name: "Ghana", code: "gh" },
+      { name: "Ethiopia", code: "et" },
+      { name: "Morocco", code: "ma" }
     ]
   },
   { 
@@ -60,7 +77,8 @@ const globalRegions = [
       { name: "Malaysia", code: "my" },
       { name: "Indonesia", code: "id" },
       { name: "Thailand", code: "th" },
-      { name: "Vietnam", code: "vn" }
+      { name: "Vietnam", code: "vn" },
+      { name: "Philippines", code: "ph" }
     ]
   },
   { 
@@ -70,8 +88,7 @@ const globalRegions = [
       { name: "Germany", code: "de" },
       { name: "UK", code: "gb" },
       { name: "Netherlands", code: "nl" },
-      { name: "France", code: "fr" },
-      { name: "Italy", code: "it" }
+      { name: "France", code: "fr" }
     ]
   },
 ];

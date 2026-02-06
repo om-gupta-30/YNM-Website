@@ -203,6 +203,28 @@ export default function OurDirectorPage() {
           </section>
         )}
 
+        {/* Member Of Section */}
+        {directorData.memberOf && directorData.memberOf.length > 0 && (
+          <section className="director-memberof-section">
+            <div className="director-section-container">
+              <h2>Member Of</h2>
+              <p className="section-subtitle">
+                Professional associations and organizations contributing to industry growth
+              </p>
+              <div className="memberof-grid">
+                {directorData.memberOf.map((membership) => (
+                  <div key={membership.id} className="memberof-card">
+                    <div className="memberof-icon">🏛️</div>
+                    <h3>{membership.name}</h3>
+                    <p className="memberof-role">{membership.role}</p>
+                    <p className="memberof-description">{membership.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Milestones Timeline Section */}
         {directorData.milestones && directorData.milestones.length > 0 && (
           <section className="director-milestones-section">
@@ -904,6 +926,93 @@ export default function OurDirectorPage() {
           margin: 0;
         }
 
+        /* Member Of Section */
+        .director-memberof-section {
+          padding: 80px 20px;
+          background: linear-gradient(180deg, #F7F3EA 0%, rgba(201, 162, 77, 0.1) 100%);
+        }
+
+        .director-memberof-section h2 {
+          font-size: 36px;
+          font-weight: 800;
+          color: #74060D;
+          text-align: center;
+          margin: 0 0 20px;
+        }
+
+        .memberof-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+        }
+
+        .memberof-card {
+          background: white;
+          border-radius: 20px;
+          padding: 35px;
+          text-align: center;
+          border: 2px solid #E6D3A3;
+          box-shadow: 0 8px 30px rgba(116, 6, 13, 0.08);
+          transition: all 0.4s ease;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .memberof-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, #C9A24D, #74060D, #C9A24D);
+          transform: scaleX(0);
+          transition: transform 0.4s ease;
+        }
+
+        .memberof-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 50px rgba(116, 6, 13, 0.15);
+          border-color: #C9A24D;
+        }
+
+        .memberof-card:hover::before {
+          transform: scaleX(1);
+        }
+
+        .memberof-icon {
+          font-size: 48px;
+          margin-bottom: 20px;
+        }
+
+        .memberof-card h3 {
+          font-size: 20px;
+          font-weight: 700;
+          color: #74060D;
+          margin: 0 0 12px;
+          line-height: 1.4;
+        }
+
+        .memberof-role {
+          display: inline-block;
+          font-size: 13px;
+          color: #F7F3EA;
+          background: linear-gradient(135deg, #74060D, #9A1B2E);
+          padding: 6px 18px;
+          border-radius: 20px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin: 0 0 16px;
+        }
+
+        .memberof-description {
+          font-size: 15px;
+          line-height: 1.7;
+          color: #5a4a4a;
+          margin: 0;
+        }
+
         /* Milestones Timeline Section */
         .director-milestones-section {
           padding: 80px 20px;
@@ -1347,6 +1456,10 @@ export default function OurDirectorPage() {
             flex: 0 1 100%;
             max-width: 100%;
           }
+
+          .memberof-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
 
         @media (max-width: 992px) {
@@ -1401,7 +1514,8 @@ export default function OurDirectorPage() {
           }
 
           .ventures-grid,
-          .education-grid {
+          .education-grid,
+          .memberof-grid {
             grid-template-columns: 1fr;
           }
 
