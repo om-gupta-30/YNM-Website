@@ -20,7 +20,6 @@ export default function ProductDetailPage() {
   const [comparisonProducts, setComparisonProducts] = useState([]);
   const [animatedStats, setAnimatedStats] = useState({});
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
-  const [activePricingType, setActivePricingType] = useState(0);
   const [exchangeRates, setExchangeRates] = useState({
     USD: 1,
     EUR: 0.92,
@@ -590,104 +589,10 @@ export default function ProductDetailPage() {
           </section>
         )}
 
-        {/* Pricing & Currency Section */}
-        {product.pricing && (
-          <section className="product-pricing-section">
-            <div className="product-section-container">
-              <h2 className="product-section-title">Pricing</h2>
-
-              {/* Pricing Toggle for products with multiple pricing types */}
-              {product.pricing.hasToggle && product.pricing.pricingTypes && (
-                <div className="pricing-toggle-wrapper">
-                  <div className="pricing-toggle-container">
-                    {product.pricing.pricingTypes.map((pricingType, index) => (
-                      <button
-                        key={pricingType.id}
-                        className={`pricing-toggle-btn ${activePricingType === index ? 'active' : ''}`}
-                        onClick={() => setActivePricingType(index)}
-                      >
-                        <span className="pricing-toggle-icon">{pricingType.icon}</span>
-                        <span className="pricing-toggle-name">{pricingType.name}</span>
-                      </button>
-                    ))}
-                  </div>
-                  {product.pricing.pricingTypes[activePricingType] && (
-                    <p className="pricing-toggle-description">
-                      {product.pricing.pricingTypes[activePricingType].description}
-                    </p>
-                  )}
-                </div>
-              )}
-
-              {/* Multi-Currency Pricing Grid - 7x2 layout */}
-              <div className="multi-currency-pricing-grid">
-                {(() => {
-                  // Base price in INR - use toggle price if available
-                  const basePriceINR = product.pricing.hasToggle && product.pricing.pricingTypes 
-                    ? product.pricing.pricingTypes[activePricingType]?.basePriceINR || product.pricing.basePriceINR || 1900
-                    : product.pricing.basePriceINR || 1900;
-                  const priceUnit = product.pricing.hasToggle && product.pricing.pricingTypes 
-                    ? product.pricing.pricingTypes[activePricingType]?.unit || product.pricing.unit || 'per kg'
-                    : product.pricing.unit || 'per kg';
-                  
-                  // 14 currencies with flags (7 per row)
-                  const currencyData = [
-                    // Row 1
-                    { code: 'INR', symbol: '₹', rate: 1, name: 'India', countryCode: 'in' },
-                    { code: 'USD', symbol: '$', rate: 1/83.12, name: 'USA', countryCode: 'us' },
-                    { code: 'EUR', symbol: '€', rate: 1/90.50, name: 'Europe', countryCode: 'eu' },
-                    { code: 'GBP', symbol: '£', rate: 1/105.20, name: 'UK', countryCode: 'gb' },
-                    { code: 'AED', symbol: 'د.إ', rate: 1/22.64, name: 'UAE', countryCode: 'ae' },
-                    { code: 'SAR', symbol: '﷼', rate: 1/22.16, name: 'Saudi Arabia', countryCode: 'sa' },
-                    { code: 'AUD', symbol: 'A$', rate: 1/54.50, name: 'Australia', countryCode: 'au' },
-                    // Row 2
-                    { code: 'CAD', symbol: 'C$', rate: 1/61.20, name: 'Canada', countryCode: 'ca' },
-                    { code: 'JPY', symbol: '¥', rate: 1/0.54, name: 'Japan', countryCode: 'jp' },
-                    { code: 'CNY', symbol: '¥', rate: 1/11.45, name: 'China', countryCode: 'cn' },
-                    { code: 'SGD', symbol: 'S$', rate: 1/61.80, name: 'Singapore', countryCode: 'sg' },
-                    { code: 'ZAR', symbol: 'R', rate: 1/4.58, name: 'South Africa', countryCode: 'za' },
-                    { code: 'MYR', symbol: 'RM', rate: 1/18.70, name: 'Malaysia', countryCode: 'my' },
-                    { code: 'QAR', symbol: 'ر.ق', rate: 1/22.84, name: 'Qatar', countryCode: 'qa' }
-                  ];
-
-                  return currencyData.map((currency, index) => {
-                    const convertedPrice = basePriceINR * currency.rate;
-                    
-                    return (
-                      <div 
-                        key={index} 
-                        className={`currency-price-card ${index === 0 ? 'highlighted' : ''}`}
-                      >
-                        <div className="currency-flag-icon"><Flag country={currency.countryCode} size={28} /></div>
-                        <div className="currency-code-badge">
-                          <span className="currency-code">{currency.code}</span>
-                        </div>
-                        <div className="currency-price">
-                          <span className="currency-symbol">{currency.symbol}</span>
-                          <span className="currency-amount">
-                            {currency.code === 'INR' 
-                              ? convertedPrice.toLocaleString('en-IN') 
-                              : currency.code === 'JPY'
-                                ? Math.round(convertedPrice).toLocaleString()
-                                : convertedPrice.toFixed(2)}
-                          </span>
-                        </div>
-                        <div className="currency-unit">{priceUnit}</div>
-                        <div className="currency-name">{currency.name}</div>
-                      </div>
-                    );
-                  });
-                })()}
-              </div>
-
-            </div>
-          </section>
-        )}
-
-        {/* Global Availability Map */}
+        {/* Export Availability Map */}
         <section className="product-availability-section">
           <div className="product-section-container">
-            <h2 className="product-section-title">Global Availability</h2>
+            <h2 className="product-section-title">Export Availability</h2>
             <p className="product-section-subtitle">
               Our {product.name} is available and exported to {product.statistics?.exportCountries || '25+ countries'} worldwide
             </p>
@@ -2623,7 +2528,7 @@ export default function ProductDetailPage() {
           color: #F7F3EA;
         }
 
-        /* Global Availability Section */
+        /* Export Availability Section */
         .product-availability-section {
           padding: 80px 0;
           background: white;
