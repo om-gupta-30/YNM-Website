@@ -97,7 +97,8 @@ export default function ProductsPage() {
           <div className="products-hero-content">
             <span className="products-hero-tag">Our Products</span>
             <h1>Quality Products for Every Need</h1>
-            <p>Explore our comprehensive range of premium paints, metal fabrication, and school furniture</p>
+            <p>Explore our comprehensive range of premium paints, metal fabrication, and road safety products</p>
+            <p className="products-coming-soon">More products coming soon...</p>
           </div>
         </section>
 
@@ -131,80 +132,72 @@ export default function ProductsPage() {
           <div className="products-grid-container">
             {activeCategory === "all" ? (
               <>
-                {/* Show products grouped by category (skip fabrication - has its own page) */}
-                {categories.filter(([categoryKey]) => categoryKey !== "fabrication").map(([categoryKey, category]) => (
-                  <div key={categoryKey} className="category-group">
-                    <div className="category-group-header">
-                      <div className="category-group-icon">{category.icon}</div>
-                      <div>
-                        <h2>{category.title}</h2>
-                        <p>{category.description}</p>
-                      </div>
-                    </div>
-                    <div className="products-grid">
-                      {category.products.map((product) => (
-                        <div
-                          key={product.id}
-                          className="product-card"
-                          onClick={() => handleProductClick(product)}
-                        >
-                          <div className="product-card-image">
-                            <Image
-                              src={product.image}
-                              alt={product.name}
-                              fill
-                              style={{ objectFit: "cover" }}
-                            />
-                            <div className="product-card-overlay" />
-                            <div className="product-card-badge">{category.title}</div>
+                {/* Show all products in a single grid */}
+                <div className="products-grid">
+                  {/* All products from non-fabrication categories */}
+                  {categories.filter(([categoryKey]) => categoryKey !== "fabrication").flatMap(([categoryKey, category]) =>
+                    category.products.map((product) => (
+                      <div
+                        key={product.id}
+                        className="product-card"
+                        onClick={() => handleProductClick(product)}
+                      >
+                        <div className="product-card-image">
+                          <Image
+                            src={product.image}
+                            alt={product.name}
+                            fill
+                            style={{ objectFit: "cover" }}
+                          />
+                          <div className="product-card-overlay" />
+                          <div className="product-card-badge">{category.title}</div>
+                        </div>
+                        <div className="product-card-content">
+                          <h3>{product.name}</h3>
+                          <p>{product.desc}</p>
+                          <div className="product-card-specs">
+                            {product.specs.slice(0, 2).map((spec, i) => (
+                              <span key={i} className="spec-tag">{spec}</span>
+                            ))}
                           </div>
-                          <div className="product-card-content">
-                            <h3>{product.name}</h3>
-                            <p>{product.desc}</p>
-                            <div className="product-card-specs">
-                              {product.specs.slice(0, 2).map((spec, i) => (
-                                <span key={i} className="spec-tag">{spec}</span>
-                              ))}
-                            </div>
-                            <div className="product-card-footer">
-                              <span className="product-card-cta">
-                                View Details
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                  <path d="M5 12h14M12 5l7 7-7 7" />
-                                </svg>
-                              </span>
-                            </div>
+                          <div className="product-card-footer">
+                            <span className="product-card-cta">
+                              View Details
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                              </svg>
+                            </span>
                           </div>
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-                
-                {/* Fabrication category card linking to dedicated page */}
-                <div className="category-group">
-                  <div className="category-group-header">
-                    <div className="category-group-icon">⚙️</div>
-                    <div>
-                      <h2>Fabrication</h2>
-                      <p>Custom steel and metal fabrication solutions. From structural components to precision-engineered parts for all industrial needs.</p>
-                    </div>
-                  </div>
-                  <div className="fabrication-link-card" onClick={() => router.push('/products/fabrication')}>
-                    <div className="fabrication-link-content">
-                      <div className="fabrication-link-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      </div>
+                    ))
+                  )}
+                  
+                  {/* Fabrication card linking to dedicated page */}
+                  <div className="product-card fabrication-card" onClick={() => router.push('/products/fabrication')}>
+                    <div className="product-card-image" style={{ background: 'linear-gradient(135deg, #74060D 0%, #9A1B2E 100%)' }}>
+                      <div className="fabrication-card-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#C9A24D" strokeWidth="1.5">
                           <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                         </svg>
                       </div>
-                      <h3>34+ Fabrication Products</h3>
-                      <p>Sign Board Structures, Gantry Structures, High Mast, Bridge Bearings, and more...</p>
-                      <span className="fabrication-link-btn">
-                        View All Fabrication Products
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                      </span>
+                      <div className="product-card-badge">Fabrication</div>
+                    </div>
+                    <div className="product-card-content">
+                      <h3>Fabrication Products</h3>
+                      <p>Solar Panel Structures, Railway Structures, GI Dustbins, Rickshaw & more coming soon...</p>
+                      <div className="product-card-specs">
+                        <span className="spec-tag">4+ Products</span>
+                        <span className="spec-tag">Custom Solutions</span>
+                      </div>
+                      <div className="product-card-footer">
+                        <span className="product-card-cta">
+                          View All
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                          </svg>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -325,6 +318,14 @@ export default function ProductsPage() {
           max-width: 600px;
           margin: 0 auto;
           font-weight: 500;
+        }
+
+        .products-coming-soon {
+          margin-top: 12px !important;
+          font-size: 14px !important;
+          color: #C9A24D !important;
+          font-style: italic;
+          opacity: 0.9;
         }
 
         /* Category Tabs Section */
@@ -466,6 +467,26 @@ export default function ProductsPage() {
           position: relative;
           height: 280px;
           overflow: hidden;
+        }
+
+        .fabrication-card-icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100px;
+          height: 100px;
+          background: rgba(201, 162, 77, 0.2);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .fabrication-card .product-card-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .product-card-overlay {

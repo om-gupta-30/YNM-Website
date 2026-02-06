@@ -2,7 +2,7 @@
 export const productsData = {
   manufacturing: {
     title: "What We Manufacture",
-    description: "Premium quality products manufactured in-house with strict quality control. All our products are exported to 15+ countries worldwide.",
+    description: "Premium quality products manufactured in-house with strict quality control. All our products are exported to 50+ countries worldwide.",
     icon: "🏭",
     categories: {
       paints: {
@@ -445,28 +445,8 @@ export const productsData = {
               "/assets/ynm safety thermoplastic paints.png",
               "/assets/Bag Design Mockup.jpg"
             ]
-          },
-          {
-            id: "p2",
-            name: "Cold Plastic Paint",
-            desc: "High-performance cold plastic road marking paint. Easy application with superior adhesion and visibility.",
-            image: "/assets/product-exterior-weather-coat.png",
-            specs: ["Easy application", "Superior adhesion", "High visibility", "Durable finish"]
-          },
-          {
-            id: "p3",
-            name: "Water Base Paint",
-            desc: "Eco-friendly water-based paint for road markings and traffic applications. Low VOC and environmentally safe.",
-            image: "/assets/product-epoxy-floor-coating.png",
-            specs: ["Eco-friendly", "Low VOC", "Water-based", "Environmentally safe"]
           }
         ]
-      },
-      "road-safety-furniture": {
-        title: "Road Safety Furniture",
-        description: "Essential road safety equipment including guardrails, bollards, and traffic barriers designed for maximum durability and safety compliance.",
-        icon: "🛣️",
-        products: []
       },
       bitumen: {
         title: "Bitumen",
@@ -1294,34 +1274,6 @@ export const productsData = {
                 description: "Approved crash barriers are securely bundled, labeled, and stored in covered areas. Products are then dispatched with proper documentation to ensure safe and timely delivery."
               }
             ]
-          },
-          {
-            id: "cb2",
-            name: "Thrie Beam",
-            desc: "Heavy-duty thrie-beam guardrails for high-speed highways and bridges. Enhanced strength and durability.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Thrie-beam profile", "Extra strength", "Bridge applications", "Long span capability"]
-          },
-          {
-            id: "cb3",
-            name: "Double W Beam",
-            desc: "Double W-beam crash barrier system for maximum protection on high-risk road sections.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Double W-beam design", "Maximum protection", "Heavy-duty construction", "IS certified"]
-          },
-          {
-            id: "cb4",
-            name: "Roller Crash Barrier",
-            desc: "Advanced roller crash barrier system with energy-absorbing rollers for enhanced safety.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Energy absorbing", "Roller system", "Enhanced safety", "Easy installation"]
-          },
-          {
-            id: "cb5",
-            name: "Attenuator",
-            desc: "Crash attenuator systems for terminal end treatments and impact absorption.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Impact absorption", "Terminal treatment", "Safety compliance", "Durable design"]
           }
         ]
       },
@@ -1330,34 +1282,6 @@ export const productsData = {
         description: "Retro-reflective sign boards and traffic signages for roads and highways. High visibility and weather-resistant for optimal safety.",
         icon: "🚦",
         products: [
-          {
-            id: "sg1",
-            name: "Gantry",
-            desc: "Overhead gantry signages for highways and expressways. High-visibility overhead traffic guidance systems.",
-            image: "/assets/product-exterior-weather-coat.png",
-            specs: ["Overhead installation", "High visibility", "Weather resistant", "Durable construction"]
-          },
-          {
-            id: "sg2",
-            name: "Cantilever",
-            desc: "Cantilever signages mounted on single support posts. Ideal for road sides and median installations.",
-            image: "/assets/product-exterior-weather-coat.png",
-            specs: ["Single post support", "IRR 2000 compliant", "Multiple sizes", "Easy installation"]
-          },
-          {
-            id: "sg3",
-            name: "Canopy",
-            desc: "Canopy signages for covered areas and overhead installations. Weather-protected signage solutions.",
-            image: "/assets/product-exterior-weather-coat.png",
-            specs: ["Weather protected", "High visibility", "Custom sizes", "Long service life"]
-          },
-          {
-            id: "sg4",
-            name: "Informatory Signages",
-            desc: "Informatory signages providing directions, distances, and important information to road users.",
-            image: "/assets/product-exterior-weather-coat.png",
-            specs: ["Informational", "Retro-reflective", "Weatherproof", "IS certified"]
-          },
           {
             id: "sg5",
             slug: "retro-reflective-gantry-signage-manufactures",
@@ -2194,252 +2118,37 @@ export const productsData = {
         description: "Custom steel and metal fabrication solutions. From structural components to precision-engineered parts for all industrial needs.",
         icon: "⚙️",
         simpleDisplay: true, // Flag for simplified display (only name and photo)
+        comingSoonMessage: "More products coming soon",
         products: [
           {
             id: "fab1",
-            name: "Sign Board Structures",
-            desc: "Custom fabricated sign board structures for highways and roads.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Steel Structure", "Custom Design", "Durable"]
-          },
-          {
-            id: "fab2",
-            name: "Cantilever Structures",
-            desc: "Heavy-duty cantilever structures for road signage applications.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Cantilever Design", "High Strength", "Weather Resistant"]
-          },
-          {
-            id: "fab3",
-            name: "Gantry Structures",
-            desc: "Overhead gantry structures for highway signage systems.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Overhead Design", "Large Span", "Heavy Duty"]
-          },
-          {
-            id: "fab4",
-            name: "VMS Structures",
-            desc: "Variable Message Sign structures for intelligent transportation.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["VMS Compatible", "Modular", "Sturdy Construction"]
-          },
-          {
-            id: "fab5",
-            name: "ITMS Structures",
-            desc: "Intelligent Traffic Management System structures.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["ITMS Ready", "Smart Integration", "Durable"]
-          },
-          {
-            id: "fab6",
-            name: "Street Light Poles",
-            desc: "Galvanized street light poles for urban lighting.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Galvanized", "Multiple Heights", "Corrosion Resistant"]
-          },
-          {
-            id: "fab7",
-            name: "Solar Light Poles",
-            desc: "Solar-ready light poles for eco-friendly lighting solutions.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Solar Compatible", "Energy Efficient", "Sustainable"]
-          },
-          {
-            id: "fab8",
-            name: "High Mast",
-            desc: "High mast lighting poles for large area illumination.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["High Rise", "Wide Coverage", "Stadium Grade"]
-          },
-          {
-            id: "fab9",
-            name: "Scaffolding Parts",
-            desc: "Quality scaffolding components for construction sites.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Safety Certified", "Modular", "Easy Assembly"]
-          },
-          {
-            id: "fab10",
-            name: "Shuttering Materials",
-            desc: "Concrete shuttering materials for construction projects.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Heavy Duty", "Reusable", "Precision Made"]
-          },
-          {
-            id: "fab11",
-            name: "Cup Lock",
-            desc: "Cup lock scaffolding system components.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Quick Lock", "Versatile", "Strong Connection"]
-          },
-          {
-            id: "fab12",
-            name: "Ledger",
-            desc: "Scaffolding ledgers for horizontal bracing.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Standard Sizes", "Galvanized", "High Load Capacity"]
-          },
-          {
-            id: "fab13",
-            name: "Base Jack",
-            desc: "Adjustable base jacks for scaffolding leveling.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Adjustable Height", "Heavy Load", "Threaded Rod"]
-          },
-          {
-            id: "fab14",
-            name: "I-Girders",
-            desc: "Steel I-Girders for bridge and infrastructure construction.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["High Strength", "Bridge Grade", "Custom Lengths"]
-          },
-          {
-            id: "fab15",
-            name: "RE Panel Moulds",
-            desc: "Reinforced Earth panel moulds for retaining walls.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Precision Cast", "Durable", "Multiple Sizes"]
-          },
-          {
-            id: "fab16",
-            name: "Foot Over Bridges",
-            desc: "Prefabricated foot over bridge structures.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Pedestrian Safe", "Modular Design", "Quick Assembly"]
-          },
-          {
-            id: "fab17",
-            name: "Gabion Wire Mesh",
-            desc: "Gabion wire mesh for erosion control and retaining walls.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Galvanized Wire", "Corrosion Resistant", "Flexible"]
-          },
-          {
-            id: "fab18",
-            name: "Bridge Bearings",
-            desc: "Elastomeric and metallic bridge bearings.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Load Distribution", "Movement Absorption", "Long Life"]
-          },
-          {
-            id: "fab19",
-            name: "Anchor Cones",
-            desc: "Precast concrete anchor cones for construction.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Precise Dimensions", "Easy Installation", "Reusable"]
-          },
-          {
-            id: "fab20",
-            name: "Open Web Bridge Girders",
-            desc: "Open web steel girders for bridge construction.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Lightweight", "High Span", "Cost Effective"]
-          },
-          {
-            id: "fab21",
-            name: "Modular Pontoon",
-            desc: "Modular floating pontoon systems.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Floating Platform", "Interlocking", "Marine Grade"]
-          },
-          {
-            id: "fab22",
-            name: "Expansion Joints",
-            desc: "Bridge and road expansion joints.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Thermal Movement", "Waterproof", "Durable"]
-          },
-          {
-            id: "fab23",
-            name: "Pedestrian Guardrails",
-            desc: "Safety guardrails for pedestrian pathways.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Safety Barrier", "Aesthetic Design", "Galvanized"]
-          },
-          {
-            id: "fab24",
-            name: "Noise Barriers",
-            desc: "Sound barrier panels for highways and railways.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Noise Reduction", "Weather Proof", "Easy Install"]
-          },
-          {
-            id: "fab25",
-            name: "Adjustable Prop Jack",
-            desc: "Adjustable prop jacks for slab support.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Height Adjustable", "Heavy Load", "Easy Operation"]
-          },
-          {
-            id: "fab26",
-            name: "Barricading Boards",
-            desc: "Traffic barricading boards for road safety.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["High Visibility", "Reflective", "Portable"]
-          },
-          {
-            id: "fab27",
-            name: "Heavy Duty Racks",
-            desc: "Industrial heavy duty storage racks.",
-            image: "/assets/product-industrial-racking.png",
-            specs: ["High Capacity", "Warehouse Grade", "Adjustable"]
-          },
-          {
-            id: "fab28",
-            name: "Slotted Angle Racks",
-            desc: "Versatile slotted angle storage racks.",
-            image: "/assets/product-industrial-racking.png",
-            specs: ["Modular Design", "Easy Assembly", "Cost Effective"]
-          },
-          {
-            id: "fab29",
-            name: "Camera Poles",
-            desc: "CCTV and surveillance camera mounting poles.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Multiple Heights", "Galvanized", "Sturdy Base"]
-          },
-          {
-            id: "fab30",
-            name: "Parking Signages",
-            desc: "Parking lot signage structures and boards.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Reflective", "Weather Resistant", "Clear Marking"]
-          },
-          {
-            id: "fab31",
             name: "Solar Panel Structures / Frames",
             desc: "Mounting structures and frames for solar panels.",
             image: "/assets/product-structural-steel.png",
             specs: ["Solar Mounting", "Tilt Adjustable", "Corrosion Resistant"]
           },
           {
-            id: "fab32",
+            id: "fab2",
             name: "Railway Structures",
             desc: "Steel structures for railway infrastructure.",
             image: "/assets/product-custom-metal-enclosure.png",
             specs: ["Railway Grade", "Heavy Duty", "Safety Certified"]
           },
           {
-            id: "fab33",
+            id: "fab3",
             name: "GI Dustbins",
             desc: "Galvanized iron dustbins for public spaces.",
             image: "/assets/product-structural-steel.png",
             specs: ["Galvanized", "Durable", "Easy Clean"]
           },
           {
-            id: "fab34",
+            id: "fab4",
             name: "Rickshaw",
             desc: "Custom fabricated rickshaw frames and parts.",
             image: "/assets/product-custom-metal-enclosure.png",
             specs: ["Custom Design", "Lightweight", "Sturdy Frame"]
           }
         ]
-      },
-      furniture: {
-        title: "School Furniture",
-        description: "Ergonomic and durable furniture for educational institutions. Desks, chairs, and complete classroom solutions built to last.",
-        icon: "🪑",
-        products: []
       }
     }
   }

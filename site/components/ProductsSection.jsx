@@ -13,45 +13,38 @@ function getProductCount(categoryId) {
 const productConfig = [
   { 
     id: "paints", 
-    image: "/assets/product-industrial-paint.png", 
+    image: "/assets/ynm safety thermoplastic paints.png", 
     link: "/products?category=paints", 
     title: "Paints", 
-    description: "Hot thermoplastic, cold plastic & water-based road marking paints for highways and infrastructure." 
+    description: "Hot thermoplastic road marking paints for highways, expressways & urban road safety applications." 
   },
   { 
-    id: "road-safety-furniture", 
-    image: "/assets/product-industrial-racking.png", 
-    link: "/products?category=road-safety-furniture", 
-    title: "Road Safety Furniture", 
-    description: "Guardrails, bollards, and traffic safety equipment designed for maximum durability." 
+    id: "bitumen", 
+    image: "/assets/Ynm safety bitumen manufactures.png", 
+    link: "/products?category=bitumen", 
+    title: "Bitumen", 
+    description: "High-performance VG 40 paving grade bitumen for highways, expressways and heavy traffic roads." 
   },
   { 
     id: "crash-barriers", 
-    image: "/assets/product-structural-steel.png", 
+    image: "/assets/metal beam crash barrier ynm safety.png", 
     link: "/products?category=crash-barriers", 
     title: "Metal Beam Crash Barriers", 
-    description: "High-strength W-beam and MBCB systems engineered for highways and expressways." 
+    description: "High-strength W-beam crash barriers engineered for highways and expressways safety." 
   },
   { 
     id: "signages", 
-    image: "/assets/product-exterior-weather-coat.png", 
+    image: "/assets/Ynm safety signages.png", 
     link: "/products?category=signages", 
     title: "Signages", 
-    description: "Retro-reflective sign boards and traffic signages for high visibility performance." 
+    description: "Retro-reflective gantry signages and cantilever signages for high visibility traffic guidance." 
   },
   { 
     id: "fabrication", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    link: "/products?category=fabrication", 
+    image: "/assets/railway-fab-2.png", 
+    link: "/products/fabrication", 
     title: "Fabrication", 
-    description: "Custom metal fabrication and structural steel components for industrial applications." 
-  },
-  { 
-    id: "school-furniture", 
-    image: "/assets/product-student-desk-chair.png", 
-    link: "/products?category=furniture", 
-    title: "School Furniture", 
-    description: "Ergonomic tables, chairs, and desks for educational institutions." 
+    description: "Custom steel fabrication including solar structures, railway structures, and industrial products." 
   },
 ];
 
@@ -72,7 +65,7 @@ export default function ProductsSection() {
         <div className="ps-bar" />
       </div>
 
-      {/* Products Grid - 3 columns, all 6 products */}
+      {/* Products Grid - 5 product categories */}
       <div className="ps-products-grid-container">
         <div className="ps-products-grid">
           {productConfig.map((product, index) => (
@@ -92,7 +85,7 @@ export default function ProductsSection() {
                 <p>{product.description}</p>
                 <div className="ps-product-actions">
                   <div className="ps-product-count">
-                    {getProductCount(product.id === "school-furniture" ? "furniture" : product.id)} Types
+                    {getProductCount(product.id)} Types
                   </div>
                   <Link href={product.link} className="ps-product-cta">
                     Explore

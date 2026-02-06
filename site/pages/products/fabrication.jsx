@@ -6,250 +6,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
 
-// Fabrication products data - 34 products with names, images, and detailed info
+// Fabrication products data - 4 products with photos available
 const fabricationProducts = [
   { 
     id: "fab1", 
-    name: "Sign Board Structures", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Signage",
-    description: "Heavy-duty steel structures designed for highway and road signage installations.",
-    specs: ["Hot-dip galvanized", "Wind load resistant", "Custom sizes available", "IS/BS standards"]
-  },
-  { 
-    id: "fab2", 
-    name: "Cantilever Structures", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Signage",
-    description: "Single-arm cantilever sign supports for overhead highway messaging systems.",
-    specs: ["Span up to 12m", "Structural steel grade", "Corrosion protected", "Easy installation"]
-  },
-  { 
-    id: "fab3", 
-    name: "Gantry Structures", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Signage",
-    description: "Full-span overhead gantry systems for multi-lane highway signage.",
-    specs: ["Span up to 40m", "Modular design", "Heavy load capacity", "Low maintenance"]
-  },
-  { 
-    id: "fab4", 
-    name: "VMS Structures", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Signage",
-    description: "Variable Message Sign mounting structures with integrated cable management.",
-    specs: ["LED display compatible", "Weatherproof design", "Quick access panels", "Vibration dampened"]
-  },
-  { 
-    id: "fab5", 
-    name: "ITMS Structures", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Signage",
-    description: "Intelligent Traffic Management System poles and mounting platforms.",
-    specs: ["Sensor mounts", "Camera brackets", "Cable routing", "Smart city ready"]
-  },
-  { 
-    id: "fab6", 
-    name: "Street Light Poles", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Poles",
-    description: "Decorative and standard street lighting poles for urban and highway applications.",
-    specs: ["Height 6-12m", "Octagonal/Round/Hexagonal", "Hot-dip galvanized", "Powder coated"]
-  },
-  { 
-    id: "fab7", 
-    name: "Solar Light Poles", 
-    images: ["/assets/solar-fab.png", "/assets/solar-fab-2.png"], 
-    category: "Poles",
-    description: "Integrated solar panel mounting poles with battery housing provisions.",
-    specs: ["Panel tilt adjustable", "Battery box included", "All-in-one option", "Off-grid ready"]
-  },
-  { 
-    id: "fab8", 
-    name: "High Mast", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Poles",
-    description: "High mast lighting poles for stadiums, airports, and large open areas.",
-    specs: ["Height 15-40m", "Raising/Lowering system", "Corona rings", "Aircraft warning lights"]
-  },
-  { 
-    id: "fab9", 
-    name: "Scaffolding Parts", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Construction",
-    description: "Complete scaffolding system components for construction sites.",
-    specs: ["Cuplock/Ringlock", "Load tested", "Interchangeable", "Rental grade quality"]
-  },
-  { 
-    id: "fab10", 
-    name: "Shuttering Materials", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Construction",
-    description: "Reusable steel shuttering/formwork for concrete construction.",
-    specs: ["High reuse cycles", "Precise dimensions", "Easy assembly", "Leak-proof joints"]
-  },
-  { 
-    id: "fab11", 
-    name: "Cup Lock", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Construction",
-    description: "Cuplock scaffolding system with quick-lock mechanism.",
-    specs: ["4-way connection", "Auto-locking cups", "Heavy duty steel", "Multiple standards"]
-  },
-  { 
-    id: "fab12", 
-    name: "Ledger", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Construction",
-    description: "Horizontal ledger beams for scaffolding framework systems.",
-    specs: ["Lengths 0.5-3m", "Blade ends", "Welded construction", "Load certified"]
-  },
-  { 
-    id: "fab13", 
-    name: "Base Jack", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Construction",
-    description: "Adjustable base jacks for leveling scaffolding on uneven surfaces.",
-    specs: ["Adjustment 300-600mm", "Swivel plate option", "Threaded rod", "Heavy duty base"]
-  },
-  { 
-    id: "fab14", 
-    name: "I-Girders", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Bridge",
-    description: "Steel I-beam girders for bridge construction and heavy structures.",
-    specs: ["Custom lengths", "Welded/Rolled", "High strength steel", "Camber built-in"]
-  },
-  { 
-    id: "fab15", 
-    name: "RE Panel Moulds", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Bridge",
-    description: "Retaining wall panel moulds for precast concrete production.",
-    specs: ["Precise tolerances", "Multiple sizes", "Easy demoulding", "Long service life"]
-  },
-  { 
-    id: "fab16", 
-    name: "Foot Over Bridges", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Bridge",
-    description: "Pedestrian foot over bridge structures for railways and highways.",
-    specs: ["Span up to 30m", "Truss/Box design", "Anti-slip flooring", "Roof options"]
-  },
-  { 
-    id: "fab17", 
-    name: "Gabion Wire Mesh", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Bridge",
-    description: "Heavy-duty gabion mesh baskets for erosion control and retaining walls.",
-    specs: ["GI/PVC coated", "Various mesh sizes", "High tensile wire", "Corrosion resistant"]
-  },
-  { 
-    id: "fab18", 
-    name: "Bridge Bearings", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Bridge",
-    description: "Elastomeric and steel bridge bearings for load transfer and movement.",
-    specs: ["Pot/Elastomeric/Spherical", "Load rated", "Movement capacity", "IRC compliant"]
-  },
-  { 
-    id: "fab19", 
-    name: "Anchor Cones", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Bridge",
-    description: "Prestressing anchor cones for post-tensioned concrete structures.",
-    specs: ["Multi-strand", "Recess formers", "Precision machined", "Reusable options"]
-  },
-  { 
-    id: "fab20", 
-    name: "Open Web Bridge Girders", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Bridge",
-    description: "Lightweight open web steel joist girders for bridge decks.",
-    specs: ["High strength-weight ratio", "Easy inspection", "Long spans", "Factory fabricated"]
-  },
-  { 
-    id: "fab21", 
-    name: "Modular Pontoon", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Bridge",
-    description: "Floating modular pontoon systems for temporary bridges and jetties.",
-    specs: ["HDPE/Steel", "Quick assembly", "High buoyancy", "Interlocking design"]
-  },
-  { 
-    id: "fab22", 
-    name: "Expansion Joints", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Bridge",
-    description: "Bridge expansion joints to accommodate thermal movement.",
-    specs: ["Movement ±50-300mm", "Watertight seals", "Low noise", "Modular/Strip seal"]
-  },
-  { 
-    id: "fab23", 
-    name: "Pedestrian Guardrails", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Safety",
-    description: "Safety guardrails for pedestrian pathways and sidewalks.",
-    specs: ["Galvanized steel", "Decorative options", "Impact resistant", "Easy install"]
-  },
-  { 
-    id: "fab24", 
-    name: "Noise Barriers", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Safety",
-    description: "Acoustic noise barriers for highways and railways near residential areas.",
-    specs: ["25-35 dB reduction", "Absorptive/Reflective", "Transparent panels", "Vandal resistant"]
-  },
-  { 
-    id: "fab25", 
-    name: "Adjustable Prop Jack", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Construction",
-    description: "Heavy-duty adjustable props for slab support during construction.",
-    specs: ["Adjustment 1.8-5m", "Load 2-4 tons", "Easy operation", "Safety collar"]
-  },
-  { 
-    id: "fab26", 
-    name: "Barricading Boards", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Safety",
-    description: "Temporary barricading and fencing boards for work zones.",
-    specs: ["Reflective strips", "Stackable design", "Weather resistant", "Reusable"]
-  },
-  { 
-    id: "fab27", 
-    name: "Heavy Duty Racks", 
-    image: "/assets/product-industrial-racking.png", 
-    category: "Storage",
-    description: "Industrial pallet racking systems for warehouses and factories.",
-    specs: ["Load 1-5 tons/level", "Selective/Drive-in", "Adjustable beams", "FIFO/LIFO"]
-  },
-  { 
-    id: "fab28", 
-    name: "Slotted Angle Racks", 
-    image: "/assets/product-industrial-racking.png", 
-    category: "Storage",
-    description: "Versatile slotted angle storage systems for light-medium loads.",
-    specs: ["Bolt-less assembly", "Adjustable shelves", "Powder coated", "Custom sizes"]
-  },
-  { 
-    id: "fab29", 
-    name: "Camera Poles", 
-    image: "/assets/product-structural-steel.png", 
-    category: "Poles",
-    description: "CCTV and surveillance camera mounting poles for security systems.",
-    specs: ["Height 4-10m", "Hinged base option", "Cable concealment", "Multi-camera mounts"]
-  },
-  { 
-    id: "fab30", 
-    name: "Parking Signages", 
-    image: "/assets/product-custom-metal-enclosure.png", 
-    category: "Signage",
-    description: "Parking lot signage structures and directional sign posts.",
-    specs: ["Reflective finish", "LED backlit options", "Vandal proof", "Modular signs"]
-  },
-  { 
-    id: "fab31", 
     name: "Solar Panel Structures / Frames", 
     images: ["/assets/solar-fab-2.png", "/assets/solar-fab.png"], 
     category: "Solar",
@@ -257,7 +17,7 @@ const fabricationProducts = [
     specs: ["Fixed/Tracking", "Aluminum/GI steel", "Wind certified", "Quick mount"]
   },
   { 
-    id: "fab32", 
+    id: "fab2", 
     name: "Railway Structures", 
     images: ["/assets/railway-fab.png", "/assets/railway-fab-2.png", "/assets/railway-fab-3.png"], 
     category: "Railway",
@@ -265,7 +25,7 @@ const fabricationProducts = [
     specs: ["RDSO approved", "Long span roofs", "Integrated drainage", "Fire resistant"]
   },
   { 
-    id: "fab33", 
+    id: "fab3", 
     name: "GI Dustbins", 
     image: "/assets/dustbin-fab.png", 
     category: "Urban",
@@ -273,7 +33,7 @@ const fabricationProducts = [
     specs: ["Corrosion proof", "Multiple sizes", "Lid options", "Easy emptying"]
   },
   { 
-    id: "fab34", 
+    id: "fab4", 
     name: "Rickshaw", 
     image: "/assets/rickshaw-fab.png", 
     category: "Urban",
@@ -281,6 +41,9 @@ const fabricationProducts = [
     specs: ["Lightweight design", "Rust protected", "Custom branding", "Durable finish"]
   },
 ];
+
+// Flag to show coming soon message
+const showComingSoon = true;
 
 // Get unique categories
 const categories = ["All", ...new Set(fabricationProducts.map(p => p.category))];
@@ -335,19 +98,22 @@ export default function FabricationPage() {
         <section className="fabrication-hero">
           <div className="fabrication-hero-bg" />
           <div className="fabrication-hero-overlay" />
+          
+          {/* Back Button - Positioned Top Left */}
+          <Link href="/products" className="fabrication-back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to Products
+          </Link>
+          
           <div className="fabrication-hero-content">
-            <Link href="/products" className="fabrication-back-link">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-              </svg>
-              Back to Products
-            </Link>
             <span className="fabrication-hero-tag">Fabrication</span>
             <h1>Our Fabrication Products</h1>
             <p>Custom steel and metal fabrication solutions for infrastructure, construction, and industrial applications</p>
             <div className="fabrication-hero-stats">
               <div className="fabrication-stat">
-                <span className="fabrication-stat-number">34+</span>
+                <span className="fabrication-stat-number">4+</span>
                 <span className="fabrication-stat-label">Products</span>
               </div>
               <div className="fabrication-stat">
@@ -355,7 +121,7 @@ export default function FabricationPage() {
                 <span className="fabrication-stat-label">Certified</span>
               </div>
               <div className="fabrication-stat">
-                <span className="fabrication-stat-number">40+</span>
+                <span className="fabrication-stat-number">50+</span>
                 <span className="fabrication-stat-label">Countries</span>
               </div>
             </div>
@@ -436,6 +202,19 @@ export default function FabricationPage() {
                 </div>
               ))}
             </div>
+            
+            {/* Coming Soon Message */}
+            {showComingSoon && (
+              <div className="coming-soon-banner">
+                <div className="coming-soon-content">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
+                  <span>More Products Coming Soon</span>
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
@@ -778,29 +557,22 @@ export default function FabricationPage() {
                   <span>200+ Skilled Workers</span>
                 </div>
               </div>
-              <button className="video-play-btn">
+              <button className="video-play-btn" disabled style={{ opacity: 0.6, cursor: 'not-allowed' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                   <polygon points="5,3 19,12 5,21" />
                 </svg>
-                Watch Factory Tour
+                Coming Soon
               </button>
             </div>
             <div className="video-preview">
-              <div className="video-thumbnail">
-                <Image
-                  src="/assets/product-structural-steel.png"
-                  alt="Factory Tour"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-                <div className="video-overlay">
-                  <div className="play-button-large">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5,3 19,12 5,21" />
-                    </svg>
-                  </div>
+              <div className="video-coming-soon">
+                <div className="coming-soon-icon">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <polygon points="5,3 19,12 5,21" />
+                  </svg>
                 </div>
-                <div className="video-duration">03:45</div>
+                <h3>Video Coming Soon</h3>
+                <p>We&apos;re working on an amazing factory tour video for you</p>
               </div>
             </div>
           </div>
@@ -821,7 +593,7 @@ export default function FabricationPage() {
               </div>
               <div className="stat-counter-card highlight">
                 <div className="counter-icon">🌍</div>
-                <div className="counter-value">40+</div>
+                <div className="counter-value">50+</div>
                 <div className="counter-label">Countries Served</div>
                 <div className="counter-bar">
                   <div className="counter-bar-fill" style={{ width: '85%' }} />
@@ -1044,27 +816,6 @@ export default function FabricationPage() {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="fabrication-cta-section">
-          <div className="fabrication-cta-container">
-            <div className="fabrication-cta-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-              </svg>
-            </div>
-            <h2>Need Custom Fabrication?</h2>
-            <p>Contact us for bulk orders, custom specifications, or project-based requirements</p>
-            <div className="fabrication-cta-buttons">
-              <Link href="/get-quote" className="fabrication-cta-btn primary">
-                Get a Quote
-              </Link>
-              <Link href="/contact" className="fabrication-cta-btn secondary">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
@@ -1248,27 +999,33 @@ export default function FabricationPage() {
         }
 
         .fabrication-back-link {
+          position: absolute;
+          top: 20px;
+          left: 40px;
+          z-index: 100;
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          background: rgba(255,255,255,0.15);
-          backdrop-filter: blur(10px);
-          color: #fff;
-          font-size: 14px;
-          font-weight: 500;
-          padding: 10px 20px;
+          background: linear-gradient(135deg, #C9A24D 0%, #D4AF37 100%);
+          color: #74060D;
+          font-size: 13px;
+          font-weight: 700;
+          padding: 12px 24px;
           border-radius: 50px;
-          margin-bottom: 24px;
-          transition: all 0.3s ease;
           text-decoration: none;
-          border: 1px solid rgba(255,255,255,0.2);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          box-shadow: 0 4px 20px rgba(201, 162, 77, 0.4);
+          transition: all 0.3s ease;
         }
 
         .fabrication-back-link:hover {
-          background: #C9A24D;
-          color: #74060D;
-          border-color: #C9A24D;
           transform: translateX(-4px);
+          box-shadow: 0 6px 25px rgba(201, 162, 77, 0.6);
+        }
+
+        .fabrication-back-link svg {
+          stroke: #74060D;
         }
 
         .fabrication-hero-tag {
@@ -1413,8 +1170,38 @@ export default function FabricationPage() {
 
         .fabrication-products-grid {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 24px;
+        }
+
+        /* Coming Soon Banner */
+        .coming-soon-banner {
+          margin-top: 40px;
+          padding: 30px;
+          background: linear-gradient(135deg, rgba(116, 6, 13, 0.05) 0%, rgba(201, 162, 77, 0.1) 100%);
+          border: 2px dashed rgba(201, 162, 77, 0.4);
+          border-radius: 16px;
+          text-align: center;
+        }
+
+        .coming-soon-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          color: #74060D;
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        .coming-soon-content svg {
+          color: #C9A24D;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.7; transform: scale(1.1); }
         }
 
         .fabrication-product-card {
@@ -1622,104 +1409,20 @@ export default function FabricationPage() {
           overflow: hidden;
         }
 
-        /* CTA Section */
-        .fabrication-cta-section {
-          background: linear-gradient(135deg, #74060D 0%, #5a050a 100%);
-          padding: 80px 20px;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .fabrication-cta-section::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: 
-            radial-gradient(circle at 20% 50%, rgba(201, 162, 77, 0.15) 0%, transparent 40%),
-            radial-gradient(circle at 80% 50%, rgba(201, 162, 77, 0.15) 0%, transparent 40%);
-        }
-
-        .fabrication-cta-container {
-          max-width: 800px;
-          margin: 0 auto;
-          text-align: center;
-          position: relative;
-          z-index: 1;
-        }
-
-        .fabrication-cta-icon {
-          width: 80px;
-          height: 80px;
-          background: rgba(201, 162, 77, 0.15);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 24px;
-          color: #C9A24D;
-        }
-
-        .fabrication-cta-container h2 {
-          font-size: 40px;
-          font-weight: 800;
-          color: #fff;
-          margin: 0 0 16px;
-        }
-
-        .fabrication-cta-container p {
-          font-size: 18px;
-          color: rgba(255,255,255,0.85);
-          margin: 0 0 36px;
-          line-height: 1.7;
-        }
-
-        .fabrication-cta-buttons {
-          display: flex;
-          justify-content: center;
-          gap: 16px;
-          flex-wrap: wrap;
-        }
-
-        .fabrication-cta-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 16px 36px;
-          border-radius: 50px;
-          font-size: 16px;
-          font-weight: 700;
-          text-decoration: none;
-          transition: all 0.3s ease;
-        }
-
-        .fabrication-cta-btn.primary {
-          background: linear-gradient(135deg, #C9A24D 0%, #D4AF37 100%);
-          color: #74060D;
-          box-shadow: 0 4px 20px rgba(201, 162, 77, 0.4);
-        }
-
-        .fabrication-cta-btn.primary:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 10px 30px rgba(201, 162, 77, 0.5);
-        }
-
-        .fabrication-cta-btn.secondary {
-          background: transparent;
-          color: #fff;
-          border: 2px solid rgba(255,255,255,0.4);
-        }
-
-        .fabrication-cta-btn.secondary:hover {
-          border-color: #C9A24D;
-          color: #C9A24D;
-          background: rgba(201, 162, 77, 0.1);
-        }
-
         /* Responsive */
         @media (max-width: 1200px) {
           .fabrication-products-grid {
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+          }
+
+          .coming-soon-banner {
+            margin-top: 30px;
+            padding: 24px;
+          }
+
+          .coming-soon-content {
+            font-size: 18px;
           }
         }
 
@@ -1729,7 +1432,7 @@ export default function FabricationPage() {
           }
 
           .fabrication-products-grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 18px;
           }
 
@@ -1756,6 +1459,13 @@ export default function FabricationPage() {
             padding: 100px 20px 50px;
           }
 
+          .fabrication-back-link {
+            top: 16px;
+            left: 20px;
+            font-size: 12px;
+            padding: 10px 18px;
+          }
+
           .fabrication-hero h1 {
             font-size: 32px;
           }
@@ -1769,13 +1479,20 @@ export default function FabricationPage() {
             gap: 16px;
           }
 
+          .coming-soon-banner {
+            margin-top: 24px;
+            padding: 20px;
+          }
+
+          .coming-soon-content {
+            font-size: 16px;
+            flex-direction: column;
+            gap: 8px;
+          }
+
           .fabrication-product-name {
             font-size: 13px;
             min-height: 36px;
-          }
-
-          .fabrication-cta-container h2 {
-            font-size: 28px;
           }
 
           .fabrication-hero-stats {
@@ -1808,8 +1525,11 @@ export default function FabricationPage() {
           }
 
           .fabrication-back-link {
-            font-size: 13px;
-            padding: 8px 16px;
+            top: 12px;
+            left: 16px;
+            font-size: 11px;
+            padding: 10px 16px;
+            letter-spacing: 0.5px;
           }
 
           .fabrication-products-grid {
@@ -1833,15 +1553,6 @@ export default function FabricationPage() {
           .fabrication-product-category {
             font-size: 9px;
             padding: 3px 8px;
-          }
-
-          .fabrication-cta-btn {
-            padding: 14px 28px;
-            font-size: 14px;
-          }
-
-          .fabrication-cta-container h2 {
-            font-size: 24px;
           }
         }
 
@@ -2776,6 +2487,55 @@ export default function FabricationPage() {
 
         .video-preview {
           position: relative;
+        }
+
+        .video-coming-soon {
+          background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.9) 100%);
+          border: 2px dashed rgba(201, 162, 77, 0.4);
+          border-radius: 24px;
+          aspect-ratio: 16/10;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 40px;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .coming-soon-icon {
+          width: 100px;
+          height: 100px;
+          background: rgba(201, 162, 77, 0.15);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 24px;
+          color: #C9A24D;
+          animation: pulse-video 2s ease-in-out infinite;
+        }
+
+        .coming-soon-icon svg {
+          margin-left: 8px;
+        }
+
+        @keyframes pulse-video {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        .video-coming-soon h3 {
+          color: #C9A24D;
+          font-size: 28px;
+          font-weight: 700;
+          margin: 0 0 12px;
+        }
+
+        .video-coming-soon p {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 16px;
+          margin: 0;
         }
 
         .video-thumbnail {

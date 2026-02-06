@@ -19,8 +19,8 @@ const heroNavConfig = [
 const statsData = [
   { value: 10, suffix: "+", key: "yearsExperience" },
   { value: 500, suffix: "+", key: "projectsDelivered" },
-  { value: 15, suffix: "+", key: "exportCountries" },
-  { value: 100, suffix: "+", key: "happyClients" },
+  { value: 50, suffix: "+", key: "exportCountries" },
+  { value: 1000, suffix: "+", key: "happyClients" },
 ];
 
 export default function Hero({ heroData: propHeroData, navLinks: propNavLinks }) {

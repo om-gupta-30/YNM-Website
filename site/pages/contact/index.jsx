@@ -368,7 +368,7 @@ export default function ContactPage() {
           <div className="india-map-wrapper">
             <div className="india-map-header">
               <h2>Our Presence Across India</h2>
-              <p>Click on any state to view our regional contacts and representatives</p>
+              <p>We are expanding our network across India to serve you better</p>
             </div>
             <IndiaPresenceMap />
           </div>

@@ -14,11 +14,11 @@ const directorData = {
     {
       id: 1,
       name: "YNM Safety Pan Global Trade Pvt Ltd",
-      description: "Leading manufacturer and exporter of industrial & decorative paints, metal fabrications, and school furniture. Serving clients across 15+ countries with quality products and reliable service. Established in 2013, the company has grown to become a trusted name in manufacturing and export.",
+      description: "Leading manufacturer and exporter of industrial & decorative paints, metal fabrications, and road safety products. Serving clients across 50+ countries with quality products and reliable service. Established in 2013, the company has grown to become a trusted name in manufacturing and export.",
       role: "Managing Director",
       year: "2013 - Present",
       logo: "/assets/logo-navbar.jpg",
-      achievements: ["15+ Export Countries", "500+ Projects Delivered", "ISO 9001:2015 Certified"]
+      achievements: ["50+ Export Countries", "500+ Projects Delivered", "ISO 9001:2015 Certified"]
     },
     {
       id: 2,
@@ -125,7 +125,7 @@ const directorData = {
   leadershipPhilosophy: "I believe in building organizations that combine innovation with integrity, quality with efficiency, and growth with sustainability. Leadership is about empowering teams, fostering collaboration, and creating value for all stakeholders. At YNM, we don't just manufacture products—we build relationships, trust, and lasting partnerships that drive mutual success.",
   
   keyStatistics: {
-    yearsExperience: "15+",
+    yearsExperience: "10+",
     companiesLed: "6",
     countriesReached: "17+",
     projectsDelivered: "500+",

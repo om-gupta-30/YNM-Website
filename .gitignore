@@ -182,3 +182,12 @@ GCP_DEPLOYMENT_REPORT.md
 .gcloudignore
 app.yaml.bak
 *.json.enc
+
+# ==============================================
+# LOOSE / TEMPORARY IMAGE FOLDERS (not part of app)
+# ==============================================
+# Source image folders that were imported into site/public/assets/
+cantilever*/
+fabrication*/
+testimonials/
+aboutus.png

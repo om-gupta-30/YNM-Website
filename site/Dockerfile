@@ -27,8 +27,9 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 
 # Build argument for Under Construction mode
+# Set to 'false' to show the full website
 # Set to 'true' to show only the Under Construction page
-ARG NEXT_PUBLIC_UNDER_CONSTRUCTION=true
+ARG NEXT_PUBLIC_UNDER_CONSTRUCTION=false
 ENV NEXT_PUBLIC_UNDER_CONSTRUCTION=$NEXT_PUBLIC_UNDER_CONSTRUCTION
 
 # Build the Next.js application

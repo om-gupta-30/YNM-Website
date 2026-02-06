@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { useEffect } from "react";
+import Head from "next/head";
 import Script from "next/script";
 import Mascot from "@/components/Mascot";
 import FloatingSocialMedia from "@/components/FloatingSocialMedia";
@@ -95,6 +96,10 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
+      </Head>
+      
       {/* Google Analytics - Only load if GA_ID is configured */}
       {process.env.NEXT_PUBLIC_GA_ID && (
         <>
