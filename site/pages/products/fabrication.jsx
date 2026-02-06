@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -59,7 +59,7 @@ const fabricationProducts = [
   { 
     id: "fab7", 
     name: "Solar Light Poles", 
-    image: "/assets/product-structural-steel.png", 
+    images: ["/assets/solar-fab.png", "/assets/solar-fab-2.png"], 
     category: "Poles",
     description: "Integrated solar panel mounting poles with battery housing provisions.",
     specs: ["Panel tilt adjustable", "Battery box included", "All-in-one option", "Off-grid ready"]
@@ -251,7 +251,7 @@ const fabricationProducts = [
   { 
     id: "fab31", 
     name: "Solar Panel Structures / Frames", 
-    image: "/assets/product-structural-steel.png", 
+    images: ["/assets/solar-fab-2.png", "/assets/solar-fab.png"], 
     category: "Solar",
     description: "Ground and rooftop mounting structures for solar PV installations.",
     specs: ["Fixed/Tracking", "Aluminum/GI steel", "Wind certified", "Quick mount"]
@@ -259,7 +259,7 @@ const fabricationProducts = [
   { 
     id: "fab32", 
     name: "Railway Structures", 
-    image: "/assets/product-custom-metal-enclosure.png", 
+    images: ["/assets/railway-fab.png", "/assets/railway-fab-2.png", "/assets/railway-fab-3.png"], 
     category: "Railway",
     description: "Platform shelters, canopies, and railway infrastructure fabrication.",
     specs: ["RDSO approved", "Long span roofs", "Integrated drainage", "Fire resistant"]
@@ -267,7 +267,7 @@ const fabricationProducts = [
   { 
     id: "fab33", 
     name: "GI Dustbins", 
-    image: "/assets/product-structural-steel.png", 
+    image: "/assets/dustbin-fab.png", 
     category: "Urban",
     description: "Galvanized iron dustbins for public spaces and municipal use.",
     specs: ["Corrosion proof", "Multiple sizes", "Lid options", "Easy emptying"]
@@ -275,7 +275,7 @@ const fabricationProducts = [
   { 
     id: "fab34", 
     name: "Rickshaw", 
-    image: "/assets/product-custom-metal-enclosure.png", 
+    image: "/assets/rickshaw-fab.png", 
     category: "Urban",
     description: "E-rickshaw and cycle rickshaw body fabrication and frames.",
     specs: ["Lightweight design", "Rust protected", "Custom branding", "Durable finish"]
@@ -288,6 +288,34 @@ const categories = ["All", ...new Set(fabricationProducts.map(p => p.category))]
 export default function FabricationPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [hoveredProduct, setHoveredProduct] = useState(null);
+  const [imageIndices, setImageIndices] = useState({});
+
+  // Auto-rotate carousel images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndices(prev => {
+        const newIndices = { ...prev };
+        fabricationProducts.forEach(product => {
+          if (product.images && product.images.length > 1) {
+            const currentIndex = prev[product.id] || 0;
+            newIndices[product.id] = (currentIndex + 1) % product.images.length;
+          }
+        });
+        return newIndices;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Helper function to get current image for a product
+  const getProductImage = (product) => {
+    if (product.images && product.images.length > 0) {
+      const index = imageIndices[product.id] || 0;
+      return product.images[index];
+    }
+    return product.image || "/assets/product-structural-steel.png";
+  };
 
   const filteredProducts = activeCategory === "All" 
     ? fabricationProducts 
@@ -367,11 +395,21 @@ export default function FabricationPage() {
                   <div className="fabrication-product-number">{String(index + 1).padStart(2, '0')}</div>
                   <div className="fabrication-product-image">
                     <Image
-                      src={product.image}
+                      src={getProductImage(product)}
                       alt={product.name}
                       fill
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: "cover", transition: "opacity 0.5s ease" }}
                     />
+                    {product.images && product.images.length > 1 && (
+                      <div className="carousel-indicators">
+                        {product.images.map((_, idx) => (
+                          <span 
+                            key={idx} 
+                            className={`carousel-dot ${(imageIndices[product.id] || 0) === idx ? 'active' : ''}`}
+                          />
+                        ))}
+                      </div>
+                    )}
                     <div className="fabrication-product-overlay" />
                     
                     {/* Hover Details Popup */}
@@ -1428,6 +1466,32 @@ export default function FabricationPage() {
           aspect-ratio: 1/1;
           overflow: hidden;
           background: linear-gradient(135deg, #f5efe9 0%, #e8dfd4 100%);
+        }
+
+        /* Carousel Indicators */
+        .carousel-indicators {
+          position: absolute;
+          bottom: 12px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 6px;
+          z-index: 10;
+        }
+
+        .carousel-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.5);
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+
+        .carousel-dot.active {
+          background: #C9A24D;
+          transform: scale(1.2);
+          box-shadow: 0 0 8px rgba(201, 162, 77, 0.6);
         }
 
         .fabrication-product-overlay {
