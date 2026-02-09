@@ -59,8 +59,8 @@ export default function UnderConstruction() {
         <title>YNM Safety - Coming Soon</title>
         <meta name="description" content="YNM Safety - Website under construction. Contact us for inquiries." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/assets/logo-navbar.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/assets/logo-navbar.jpg" />
         <link rel="preload" href="/assets/logo-navbar.jpg" as="image" />
       </Head>
 

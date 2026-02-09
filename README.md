@@ -8,22 +8,17 @@
 
 A modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd**, a leading manufacturer and exporter of road safety products, road marking paints, metal beam crash barriers, highway signages, bitumen products, and precision metal fabrication based in Hyderabad, India.
 
-## IMPORTANT: Before pushing to GitHub / Vercel / GCP
-
-`site/.env.local` containing real credentials (Google service account private key, Gemini API key, Gmail app password) was committed in early git history. The file has been removed from tracking, but **it still exists in git history**.
-
-**You MUST do the following before pushing:**
-
-1. **Purge secrets from git history** (see [Purging leaked secrets](#purging-leaked-secrets-from-git-history) below)
-2. **Rotate ALL exposed credentials:**
-   - Create a new Gemini API key at [AI Studio](https://aistudio.google.com/app/apikey)
-   - Revoke and recreate the Gmail App Password
-   - Rotate the GCP service account key (delete old key, create new one)
-3. **Run a secret scan:** `gitleaks detect --source . --verbose`
-
 ## Live Website
 
 [ynmsafety.com](https://ynmsafety.com)
+
+---
+
+## Repository Status
+
+- **GitHub ready** – No secrets in repo; `.env.example` and `.env.gcp.example` contain placeholders only
+- **Security scan** – Gitleaks runs on push/PR via GitHub Actions
+- **Clean structure** – No unnecessary files; all assets used by the app
 
 ---
 
@@ -61,77 +56,65 @@ A modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd
 
 ```
 YNM-website/
-├── .github/
-│   └── workflows/
-│       └── security-scan.yml       # GitHub Actions secret scanning
-├── .gitignore                      # Root git ignore rules (security-hardened)
-├── .gitleaks.toml                  # Gitleaks secret scanning config
-├── LICENSE                         # Proprietary license
-├── README.md                       # This file
-└── site/                           # Next.js application
-    ├── components/                 # React components (19 components)
-    │   ├── Chatbot.jsx            # AI chatbot widget (Gemini-powered)
-    │   ├── Hero.jsx               # Hero section
-    │   ├── Navbar.jsx             # Navigation bar
-    │   ├── Footer.jsx             # Site footer
-    │   ├── ProductsSection.jsx    # Products showcase
-    │   ├── BrandsSection.jsx      # Client logos carousel
-    │   ├── TestimonialsSection.jsx # Client testimonials
-    │   ├── DirectorSection.jsx    # Director profile
-    │   ├── EmployeesSection.jsx   # Employee testimonials
-    │   ├── IndiaPresenceMap.jsx   # Interactive India map
-    │   ├── FloatingSocialMedia.jsx # Social media buttons
-    │   ├── Mascot.jsx             # Animated mascot
-    │   ├── UnderConstruction.jsx  # Under construction page
+├── .github/workflows/
+│   └── security-scan.yml           # GitHub Actions: secret scanning on push/PR
+├── .gitignore                      # Root: env, keys, build outputs (no leaks)
+├── .gitleaks.toml                  # Gitleaks rules for CI/local scans
+├── docs/                           # Internal documentation
+│   └── SEARCH-CONSOLE.md           # Google Search Console setup & reindex
+├── LICENSE
+├── README.md
+└── site/                           # Next.js app (set as root in Vercel/GCP)
+    ├── components/                 # React components
+    │   ├── Chatbot.jsx             # AI chatbot (Gemini)
+    │   ├── Hero.jsx, Navbar.jsx, Footer.jsx
+    │   ├── ProductsSection.jsx, BrandsSection.jsx
+    │   ├── TestimonialsSection.jsx, DirectorSection.jsx
+    │   ├── EmployeesSection.jsx, IndiaPresenceMap.jsx
+    │   ├── FloatingSocialMedia.jsx, Mascot.jsx
+    │   ├── UnderConstruction.jsx
     │   └── ...
     ├── contexts/
-    │   └── LanguageContext.jsx    # Multi-language support (12 languages)
+    │   └── LanguageContext.jsx     # Multi-language support (12 languages)
     ├── lib/                        # Data & utilities
-    │   ├── chatbotData.js         # AI chatbot FAQ & product catalog
-    │   ├── productsCategoriesData.js # Full product catalog (5 categories)
-    │   ├── productsData.js        # Enhanced product details
-    │   ├── directorData.js        # Director profile & ventures
-    │   ├── employeesData.js       # Employee testimonials
-    │   ├── indiaContacts.js       # Regional contact info
-    │   ├── indiaMapPaths.js       # SVG paths for India map
-    │   └── translations.js        # UI translations (12 languages)
+    │   ├── chatbotData.js          # AI chatbot FAQ & product catalog
+    │   ├── productsCategoriesData.js
+    │   ├── productsData.js
+    │   ├── directorData.js
+    │   ├── employeesData.js
+    │   ├── indiaContacts.js
+    │   ├── indiaMapPaths.js
+    │   └── translations.js
     ├── pages/                      # Routes & API endpoints
     │   ├── api/
-    │   │   ├── contact/submit.js  # Contact form → Google Sheets
-    │   │   ├── careers/submit.js  # Career form (PDF upload + email)
-    │   │   ├── chat/gemini.js     # AI chatbot API (Gemini 2.5)
-    │   │   └── health.js          # Health check endpoint
+    │   │   ├── contact/submit.js   # Contact form → Google Sheets
+    │   │   ├── careers/submit.js   # Career form (PDF upload + email)
+    │   │   ├── chat/gemini.js      # AI chatbot API (Gemini 2.5)
+    │   │   └── health.js           # Health check endpoint
     │   ├── products/
-    │   │   ├── index.jsx          # Product catalog with categories
-    │   │   ├── [productId].jsx    # Dynamic product detail pages
-    │   │   └── fabrication.jsx    # Fabrication products (34+ items)
-    │   ├── about/index.jsx        # Company story & timeline
-    │   ├── careers/index.jsx      # Job application portal
-    │   ├── clients/index.jsx      # Client showcase
-    │   ├── contact/index.jsx      # Contact form & map
-    │   ├── get-quote/index.jsx    # Quote request form
-    │   ├── our-team/index.jsx     # Director & leadership page
-    │   ├── foreign-collaborations/
-    │   ├── investor-relations/
-    │   └── index.js               # Homepage
+    │   │   ├── index.jsx
+    │   │   ├── [productId].jsx
+    │   │   └── fabrication.jsx
+    │   ├── about/, careers/, clients/, contact/
+    │   ├── get-quote/, foreign-collaborations/, investor-relations/
+    │   ├── our-team/
+    │   └── index.js
+    ├── scripts/
+    │   └── verify-integrations.js  # Test Google Sheets, Gemini, Contact form
     ├── styles/
-    │   └── globals.css            # Tailwind + custom styles
+    │   └── globals.css
     ├── public/                     # Static assets
-    │   ├── assets/                # Images & media
-    │   │   ├── brand-logos/       # 18 client/partner logos
-    │   │   ├── employeephotos/    # Employee photos
-    │   │   ├── team/              # Director & team photos
-    │   │   └── testimonials/      # Client testimonial images
-    │   ├── certificates/          # ISO certificate PDF
-    │   ├── fonts/                 # Montserrat font
-    │   ├── favicon.svg
-    │   ├── robots.txt
-    │   └── sitemap.xml
-    ├── .env.example               # Environment template (safe to commit)
-    ├── .gitignore                 # Site-level git ignore rules
-    ├── .dockerignore              # Docker ignore rules
-    ├── Dockerfile                 # Multi-stage Docker build
-    └── package.json               # Dependencies & scripts
+    │   ├── assets/                 # Images, logos, team photos
+    │   ├── certificates/           # ISO certificate PDF
+    │   ├── fonts/                  # Montserrat font
+    │   ├── favicon.svg, favicon.ico
+    │   ├── robots.txt, sitemap.xml
+    │   └── google*.html            # Google Search Console verification
+    ├── .env.example                # Environment template (safe to commit)
+    ├── .env.gcp.example            # GCP Cloud Run env reference
+    ├── .gitignore
+    ├── .dockerignore, Dockerfile
+    └── package.json
 ```
 
 ---
@@ -149,8 +132,8 @@ YNM-website/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/ynm-website.git
-cd ynm-website/site
+git clone https://github.com/your-org/YNM-website.git
+cd YNM-website/site
 
 # 2. Install dependencies
 npm install
@@ -199,16 +182,13 @@ docker run -p 3000:3000 --env-file .env.local ynm-website
 
 ## Environment Variables
 
-### Setup Instructions
+The app **builds and runs** without any env vars (e.g. `npm run build`). For **contact form**, **chatbot**, and **careers** to work, set credentials in `.env.local` (local) or in Vercel/GCP (deployment).
 
-1. **Copy the template file:**
-   ```bash
-   cp site/.env.example site/.env.local
-   ```
+### Setup (local)
 
-2. **Fill in your credentials** (see below for detailed instructions)
-
-3. **NEVER commit `.env.local`** - It's automatically gitignored
+1. **Copy the template:** `cp site/.env.example site/.env.local`
+2. **Replace placeholders** in `.env.local` with your values (see tables below).
+3. **Never commit `.env.local`** — it is gitignored.
 
 ---
 
@@ -436,46 +416,13 @@ HR_EMAIL=hr@ynmsafety.com
 
 ---
 
-## Security
+## Security (GitHub / Vercel / GCP – no leaks)
 
-### Purging leaked secrets from git history
+The repo includes a **GitHub Actions** workflow (`.github/workflows/security-scan.yml`) that runs Gitleaks on push/PR to detect secrets. For local scans: `gitleaks detect --source . --verbose`.
 
-If `site/.env.local` (or any other secret file) was ever committed, **removing it now is not enough**—the secret remains in git history and can be extracted after you push.
+### What's protected (never committed)
 
-Recommended approaches:
-
-1. **Surgical removal (recommended)**: remove the file from all commits using `git filter-repo` (or BFG), then force-push.
-2. **Fresh-history reset (fastest)**: create a new orphan history with the current clean state, then force-push.
-
-Notes:
-- After rewriting history, **rotate every exposed credential** anyway (history may already be cached by GitHub, forks, CI logs, etc.).
-- Force-pushing rewrites history for everyone. Coordinate with any collaborators.
-
-`git filter-repo` example (removes the file from all history):
-
-```bash
-# From repo root
-git filter-repo --path site/.env.local --invert-paths
-
-# After this, you must force-push to update GitHub:
-git push --force --all
-git push --force --tags
-```
-
-Orphan-history example (keeps only current state as the new `main`):
-
-```bash
-# From repo root
-git checkout --orphan clean-main
-git add -A
-git commit -m "Clean history (remove leaked secrets)"
-git branch -M main
-git push --force origin main
-```
-
-### What's Protected (NEVER committed to git)
-
-All sensitive files are automatically protected by `.gitignore`:
+Sensitive paths are in `.gitignore` (root and `site/`). Never committed:
 
 | File/Pattern | Contains | Status |
 |--------------|----------|--------|
@@ -486,6 +433,8 @@ All sensitive files are automatically protected by `.gitignore`:
 | `service-account*.json` | GCP credentials | ✓ Gitignored |
 | `node_modules/` | Dependencies | ✓ Gitignored |
 | `.next/` | Build outputs | ✓ Gitignored |
+
+**Safe to commit:** `site/.env.example` and `site/.env.gcp.example` contain **placeholders only**—no real keys or IDs. Real credentials go in `.env.local` (local) or in Vercel/GCP dashboard (deployment).
 
 ### Security Features
 
@@ -498,56 +447,34 @@ All sensitive files are automatically protected by `.gitignore`:
 ✅ **CAPTCHA Protection**: Math CAPTCHA on career form  
 ✅ **No Hardcoded Secrets**: All sensitive data in environment variables  
 
-### Pre-Deployment Security Checklist
+### Before you push (GitHub / Vercel / GCP)
 
-Before pushing to GitHub, Vercel, or GCP, verify your project is secure:
+Run these from the **project root** to ensure no secrets are leaked:
 
 ```bash
-# Navigate to project root
-cd "/path/to/YNM website"
-
-# 1. Verify .env.local is properly gitignored
+# 1. .env.local must be ignored (expected output: "site/.env.local")
 git check-ignore site/.env.local
-# Expected output: "site/.env.local"
 
-# 2. Check if any sensitive files are staged for commit
-git diff --cached --name-only | grep -E '\.(env|pem|key|credentials)' && echo "⚠️ WARNING: Sensitive files detected!" || echo "✅ OK: No sensitive files staged"
+# 2. No sensitive files staged (expected: no output, or only .env.example / .env.gcp.example)
+git diff --cached --name-only | grep -E '\.env' | grep -v '\.env\.example' | grep -v '\.env\.gcp\.example' && echo "⚠️ STOP: Sensitive env file staged!" || echo "✅ OK"
 
-# 3. Verify no sensitive files are tracked in git
-git ls-files | grep -E '\.(env|pem|key)' | grep -v '.example'
-# Expected: No output (no sensitive files tracked)
+# 3. Only safe env templates tracked (expected: site/.env.example and optionally site/.env.gcp.example)
+git ls-files | grep '\.env'
 
-# 4. Search for hardcoded secrets in tracked files
-cd site
-git ls-files -z | xargs -0 grep -l "AIzaSy" 2>/dev/null && echo "⚠️ WARNING: Potential hardcoded secrets!" || echo "✅ OK: No hardcoded secrets"
-cd ..
-
-# 5. Run build to verify everything compiles
-cd site && npm run build
+# 4. Optional: full secret scan (install: brew install gitleaks)
+gitleaks detect --source . --verbose
 ```
 
-**✅ All checks should pass before deployment!**
+- **Never commit** `.env`, `.env.local`, `.env.gcp.yaml`, or any file with real API keys or passwords.
+- **Vercel / GCP:** set all environment variables in the platform dashboard; the repo is never used for secrets.
+- **Local only:** copy `site/.env.example` to `site/.env.local` and fill in values; `.env.local` is gitignored.
 
 ---
 
 ### Security Best Practices
 
-**DO:**
-- ✅ Keep all secrets in `.env.local` (never commit)
-- ✅ Use environment variables via `process.env`
-- ✅ Set environment variables in hosting platform dashboard
-- ✅ Rotate API keys regularly
-- ✅ Use service accounts with minimal permissions
-- ✅ Enable HTTPS (automatic on Vercel/Cloud Run)
-- ✅ Review `.gitignore` before every commit
-
-**DON'T:**
-- ❌ Never commit `.env.local` or any `.env` files (except `.env.example`)
-- ❌ Never hardcode API keys, passwords, or secrets in code
-- ❌ Never commit private keys, certificates, or credentials
-- ❌ Never push `node_modules/` or `.next/` to git
-- ❌ Never share `.env.local` via email or chat
-- ❌ Never use real credentials in example files
+**Do:** Use `.env.local` locally (gitignored); set env vars in Vercel/GCP dashboard for deployment; use `process.env` in code only.  
+**Don’t:** Commit any `.env` (except `.env.example`), hardcode secrets, or commit keys/certificates. `.gitignore` and the Security Scan workflow help prevent leaks.
 
 ---
 
@@ -784,10 +711,12 @@ All API routes are located in `site/pages/api/` and are server-side only.
 **Response:**
 ```json
 {
-  "status": "ok",
-  "timestamp": "2026-02-05T12:00:00.000Z"
+  "status": "healthy",
+  "timestamp": "2026-02-09T12:00:00.000Z",
+  "environment": "production"
 }
 ```
+*(Returns `degraded` if required env vars are missing; `healthy` when all are present.)*
 
 ---
 
@@ -800,20 +729,20 @@ npm run dev          # Start Next.js dev server at http://localhost:3000
 
 # Production
 npm run build        # Create optimized production build in .next/
-                     # Minifies code, optimizes images, generates static pages
-
 npm run start        # Start production server (requires npm run build first)
-                     # Serves from .next/ folder
 
 # Code Quality
 npm run lint         # Run ESLint to check code quality
-                     # Checks for syntax errors, best practices, and style issues
+
+# Integration Verification (optional)
+node scripts/verify-integrations.js
+# Or against production: VERIFY_BASE_URL=https://ynmsafety.com node scripts/verify-integrations.js
 ```
 
 **Notes:**
 - Always run `npm run build` before deploying to production
-- Use `npm run dev` for local development only (includes debug info)
-- Run `npm run lint` before committing to catch issues early
+- Use `npm run dev` for local development only
+- Run `npm run lint` before committing
 
 ---
 

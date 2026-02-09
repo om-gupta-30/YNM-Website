@@ -48,13 +48,13 @@ export default function DirectorSection({ directorData: propDirectorData }) {
                   src={photoSrc}
                   alt={directorData.name}
                   fill
+                  sizes="(max-width: 768px) 80vw, 400px"
                   style={{
                     objectFit: "cover",
                     objectPosition: "center 15%",
                     transform: "scale(1.1)",
                   }}
                   loading="lazy"
-                  unoptimized
                   onError={(e) => { 
                     console.error("Image failed to load:", photoSrc);
                     e.target.style.display = "none"; 
@@ -71,7 +71,7 @@ export default function DirectorSection({ directorData: propDirectorData }) {
             <p className="director-text">{directorData.quote}</p>
             
             <div className="director-info">
-              <h4 className="director-name">{directorData.name}</h4>
+              <p className="director-name">{directorData.name}</p>
               <p className="director-role">{directorData.role}</p>
             </div>
           </div>

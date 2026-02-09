@@ -1,6 +1,7 @@
 # ==============================================
 # YNM SAFETY - GITIGNORE
-# SECURITY HARDENED - Prevents secret leaks
+# SECURITY: Only .env.example and .env.gcp.example (placeholders) may be committed.
+# All other .env* and secrets are ignored.
 # ==============================================
 
 # Dependencies
@@ -30,6 +31,7 @@ pnpm-debug.log*
 **/.env.local
 !.env.example
 !**/.env.example
+!**/.env.gcp.example
 
 # ==============================================
 # 🔒 KEYS & CERTIFICATES (NEVER commit!)

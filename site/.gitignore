@@ -1,5 +1,6 @@
 # ==============================================
 # YNM SAFETY - SITE GITIGNORE
+# Only .env.example is safe to commit.
 # ==============================================
 
 # Dependencies
@@ -16,8 +17,11 @@ node_modules/
 .env.production
 .env.development.local
 .env.production.local
-# Allow .env.example (template without secrets)
+# Allow .env.example and .env.gcp.example (templates only)
 !.env.example
+!.env.gcp.example
+# Do not commit env files with real values
+.env.gcp.yaml
 
 # Keys & Certificates (NEVER commit!)
 *.pem

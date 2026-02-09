@@ -205,7 +205,7 @@ export default function InvestorRelationsPage() {
               </svg>
             </div>
             <div className="ir-phil-text">
-              <h3>Our Philosophy on Investment</h3>
+              <h2>Our Philosophy on Investment</h2>
               <p>We believe the best investments are partnerships. We&apos;re not seeking capital for capital&apos;s sake – we&apos;re looking for partners who bring strategic value, industry expertise, and shared commitment to building something meaningful.</p>
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function InvestorRelationsPage() {
                     <span>{m.year}</span>
                   </div>
                   <div className="ir-timeline-content">
-                    <h4>{m.title}</h4>
+                    <h3>{m.title}</h3>
                     <p>{m.desc}</p>
                   </div>
                 </div>

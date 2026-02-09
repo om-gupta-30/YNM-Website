@@ -119,7 +119,7 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
       
       {/* Section Header */}
       <div className="brands-header">
-        <Link href="/clients" className="brands-tag">Our Clients</Link>
+        <Link href="/clients" className="brands-tag">Clients</Link>
         <h2>Brands We Work With</h2>
         <div className="brands-header-bar" />
       </div>

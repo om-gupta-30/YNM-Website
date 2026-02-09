@@ -263,11 +263,15 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
   return (
     <>
       <Head>
-        <title>YNM Safety Pan Global Trade Pvt Ltd | Manufacturing & Export</title>
+        <title>YNM SAFETY MANUFACTURE</title>
         <meta 
           name="description" 
-          content="YNM Safety Pan Global Trade Pvt Ltd - Leading manufacturer and exporter of premium paints, metal fabrications, and school furniture. Quality products for global markets."
+          content="YNM Safety manufactures hot thermoplastic paints, cold plastic paints, metal beam crash barriers, bitumen, road signages, road studs and complete road safety products for highways, expressways and urban roads across India."
         />
+        <link rel="canonical" href="https://www.ynmsafety.com/" />
+        <meta property="og:url" content="https://www.ynmsafety.com/" />
+        <meta property="og:title" content="YNM SAFETY MANUFACTURE" />
+        <meta property="og:description" content="YNM Safety manufactures hot thermoplastic paints, cold plastic paints, metal beam crash barriers, bitumen, road signages, road studs and complete road safety products for highways, expressways and urban roads across India." />
       </Head>
       <Hero heroData={heroData} navLinks={navLinks} />
       <USPSection uspData={uspData} />

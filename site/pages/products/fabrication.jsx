@@ -147,8 +147,9 @@ export default function FabricationPage() {
         </section>
 
         {/* Products Grid Section */}
-        <section className="fabrication-products-section">
+        <section className="fabrication-products-section" aria-labelledby="fabrication-products-heading">
           <div className="fabrication-products-container">
+            <h2 id="fabrication-products-heading" className="sr-only">Our Fabrication Products</h2>
             <div className="fabrication-products-grid">
               {filteredProducts.map((product, index) => (
                 <div 
