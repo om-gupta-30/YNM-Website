@@ -357,7 +357,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
 
         {/* NAVBAR */}
         <nav id="navbar" ref={navbarRef}>
-          <Link href="/" className="nav-brand">
+          <Link href="/" className="nav-brand" aria-label="Home">
             <div className="nav-logo-wrapper hero-logo-heartbeat">
               <Image 
                 src="/assets/logo-navbar.jpg" 
@@ -459,7 +459,8 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
               fill 
               id="hero-image" 
               priority 
-              quality={90}
+              quality={85}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
               style={{ objectFit: 'cover', objectPosition: 'center center' }}
               unoptimized={heroImageUrl && (heroImageUrl.startsWith('http') || heroImageUrl.startsWith('//'))}
             />
@@ -516,7 +517,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
             ) : (
               <>
                 <Link href="/products" className="hero-btn primary">
-                  Explore Products
+                  Products
                 </Link>
                 <Link href="/contact" className="hero-btn secondary">
                   Contact Us

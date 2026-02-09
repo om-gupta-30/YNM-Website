@@ -47,6 +47,7 @@ tags = ["secret"]
 [allowlist]
 paths = [
     '''\.env\.example$''',
+    '''\.env\.gcp\.example$''',
     '''package-lock\.json$''',
     '''yarn\.lock$''',
     '''pnpm-lock\.yaml$''',

@@ -1,11 +1,14 @@
 import "@/styles/globals.css";
+import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import Head from "next/head";
 import Script from "next/script";
-import Mascot from "@/components/Mascot";
-import FloatingSocialMedia from "@/components/FloatingSocialMedia";
-import Chatbot from "@/components/Chatbot";
 import UnderConstruction from "@/components/UnderConstruction";
+
+// Lazy-load below-the-fold / non-critical UI to reduce initial JS (PageSpeed: unused JS)
+const Mascot = dynamic(() => import("@/components/Mascot"), { ssr: false });
+const FloatingSocialMedia = dynamic(() => import("@/components/FloatingSocialMedia"), { ssr: false });
+const Chatbot = dynamic(() => import("@/components/Chatbot"), { ssr: false });
 
 // Check if under construction mode is enabled
 const isUnderConstruction = process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION === 'true';

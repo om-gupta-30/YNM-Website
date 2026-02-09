@@ -81,14 +81,14 @@ export default function OurDirectorPage() {
                 />
               </div>
               <div className="director-profile-info">
-                <h2>{directorData.name}</h2>
+                <p className="director-profile-name">{directorData.name}</p>
                 <p className="director-profile-role">{directorData.role}</p>
                 <p className="director-profile-department">{directorData.department}</p>
               </div>
             </div>
 
             <div className="director-about-section">
-              <h3>About</h3>
+              <h2>About</h2>
               <p>{directorData.about}</p>
             </div>
           </div>
@@ -271,21 +271,21 @@ export default function OurDirectorPage() {
                 <div className="benefit-item">
                   <span className="benefit-icon">📅</span>
                   <div>
-                    <h4>Flexible Scheduling</h4>
+                    <h3>Flexible Scheduling</h3>
                     <p>Choose a time that works best for you</p>
                   </div>
                 </div>
                 <div className="benefit-item">
                   <span className="benefit-icon">💼</span>
                   <div>
-                    <h4>Business Discussions</h4>
+                    <h3>Business Discussions</h3>
                     <p>Explore partnerships and collaborations</p>
                   </div>
                 </div>
                 <div className="benefit-item">
                   <span className="benefit-icon">🤝</span>
                   <div>
-                    <h4>Personal Attention</h4>
+                    <h3>Personal Attention</h3>
                     <p>One-on-one meeting with leadership</p>
                   </div>
                 </div>
@@ -575,7 +575,8 @@ export default function OurDirectorPage() {
           flex-shrink: 0;
         }
 
-        .director-profile-info h2 {
+        .director-profile-info h2,
+        .director-profile-info .director-profile-name {
           font-size: 36px;
           font-weight: 800;
           color: #74060D;
@@ -1571,7 +1572,8 @@ export default function OurDirectorPage() {
             height: 180px;
           }
 
-          .director-profile-info h2 {
+          .director-profile-info h2,
+          .director-profile-info .director-profile-name {
             font-size: 28px;
           }
 

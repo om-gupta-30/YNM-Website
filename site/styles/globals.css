@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Screen-reader only (accessibility) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ========================================
    GLOBAL RESPONSIVE LAYOUT SYSTEM
    Laptop-First Design: 1366px → 1440px → 1600px → 1920px

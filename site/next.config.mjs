@@ -10,15 +10,36 @@ const nextConfig = {
         hostname: 'flagcdn.com',
       },
     ],
-    // Static export can't use the Image Optimization API.
-    unoptimized: true,
-    // Configure allowed image qualities
+    // Enable Next.js Image Optimization (WebP/AVIF, resizing) for smaller payloads
+    unoptimized: false,
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
     qualities: [75, 85, 90, 100],
   },
-  // NOTE:
-  // We use a Next.js API Route for the contact form (/api/contact/submit).
-  // API Routes do NOT work with `output: "export"` (pure static export),
-  // and `trailingSlash: true` can also redirect API URLs.
+  // Efficient cache lifetimes for static assets (PageSpeed: "Use efficient cache lifetimes")
+  async headers() {
+    return [
+      {
+        source: '/assets/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/fonts/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+    ];
+  },
   trailingSlash: false,
 };
 

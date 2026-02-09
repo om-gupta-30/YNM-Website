@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <nav id="navbar" className="standalone-navbar">
-      <Link href="/" className="nav-brand">
+      <Link href="/" className="nav-brand" aria-label="Home">
         <div className="nav-logo-wrapper hero-logo-heartbeat">
           {!logoError ? (
             <Image
@@ -44,7 +44,6 @@ export default function Navbar() {
               className="nav-logo-new"
               priority
               onError={() => setLogoError(true)}
-              unoptimized
             />
           ) : (
             <div className="nav-logo-fallback" style={{

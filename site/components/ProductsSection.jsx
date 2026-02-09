@@ -60,7 +60,7 @@ export default function ProductsSection() {
 
       {/* Header */}
       <div className="ps-header">
-        <Link href="/products" className="ps-tag">Our Products</Link>
+        <Link href="/products" className="ps-tag">Products</Link>
         <h2>Manufacturers and Exporters of Premium Industrial Products</h2>
         <div className="ps-bar" />
       </div>
@@ -75,6 +75,7 @@ export default function ProductsSection() {
                   src={product.image}
                   alt={product.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
                   style={{ objectFit: "cover" }}
                 />
                 <div className="ps-product-overlay" />
