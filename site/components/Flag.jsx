@@ -43,6 +43,26 @@ const countryCodeMap = {
   'Egypt': 'eg',
   'Tanzania': 'tz',
   'Ghana': 'gh',
+  'Nepal': 'np',
+  'Russia': 'ru',
+  'Belgium': 'be',
+  'Poland': 'pl',
+  'Czech Republic': 'cz',
+  'Austria': 'at',
+  'Mauritius': 'mu',
+  'Chile': 'cl',
+  'Peru': 'pe',
+  'Papua New Guinea': 'pg',
+  'Philippines': 'ph',
+  'Sweden': 'se',
+  'Switzerland': 'ch',
+  'Panama': 'pa',
+  'Taiwan': 'tw',
+  'Israel': 'il',
+  'Turkey': 'tr',
+  'Algeria': 'dz',
+  'Ecuador': 'ec',
+  'Venezuela': 've',
   // Direct codes
   'in': 'in',
   'us': 'us',
@@ -79,6 +99,26 @@ const countryCodeMap = {
   'eg': 'eg',
   'tz': 'tz',
   'gh': 'gh',
+  'np': 'np',
+  'ru': 'ru',
+  'be': 'be',
+  'pl': 'pl',
+  'cz': 'cz',
+  'at': 'at',
+  'mu': 'mu',
+  'cl': 'cl',
+  'pe': 'pe',
+  'pg': 'pg',
+  'ph': 'ph',
+  'se': 'se',
+  'ch': 'ch',
+  'pa': 'pa',
+  'tw': 'tw',
+  'il': 'il',
+  'tr': 'tr',
+  'dz': 'dz',
+  'ec': 'ec',
+  've': 've',
 };
 
 export default function Flag({ country, size = 24, className = "" }) {
@@ -103,6 +143,8 @@ export default function Flag({ country, size = 24, className = "" }) {
         borderRadius: '2px',
       }}
       loading="lazy"
+      quality={75}
+      unoptimized={false}
     />
   );
 }

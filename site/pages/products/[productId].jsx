@@ -155,20 +155,7 @@ export default function ProductDetailPage() {
       images.push(...appImages);
     }
     
-    // If we still don't have enough images, add some gallery images
-    if (images.length < 3) {
-      const galleryImages = [
-        "/assets/gallery-manufacturing-facility.jpg",
-        "/assets/gallery-production-line.jpg",
-        "/assets/gallery-quality-control.jpg",
-        "/assets/gallery-warehouse.jpg"
-      ];
-      galleryImages.forEach(img => {
-        if (images.length < 4 && !images.includes(img)) {
-          images.push(img);
-        }
-      });
-    }
+    // Note: Factory gallery images removed - Coming Soon section implemented
     
     return images.slice(0, 4); // Limit to 4 images
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -354,6 +341,10 @@ export default function ProductDetailPage() {
                         fill
                         style={{ objectFit: "cover" }}
                         priority={index === 0}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                        quality={index === 0 ? 85 : 75}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                       />
                     </div>
                   ))}
@@ -387,6 +378,10 @@ export default function ProductDetailPage() {
                     fill
                     style={{ objectFit: "cover" }}
                     priority
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    quality={85}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                   />
                   <div className="product-hero-overlay" />
                 </>
@@ -825,6 +820,10 @@ export default function ProductDetailPage() {
                         alt={app.title}
                         fill
                         style={{ objectFit: "cover" }}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={75}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                       />
                       <div className="application-overlay" />
                     </div>
@@ -1319,63 +1318,29 @@ export default function ProductDetailPage() {
               See our manufacturing facility and quality certifications that ensure premium product quality
             </p>
 
-            {/* Factory Images Gallery */}
+            {/* Factory Images Gallery - Coming Soon */}
             <div className="proof-factory-gallery">
               <div className="factory-gallery-header">
                 <h3>Our Manufacturing Facility</h3>
                 <p>State-of-the-art production facility ensuring consistent quality</p>
               </div>
-              <div className="factory-images-grid">
-                <div className="factory-image-card">
-                  <div className="factory-image-wrapper">
-                    <Image
-                      src="/assets/gallery-manufacturing-facility.jpg"
-                      alt="Manufacturing Facility"
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                    <div className="factory-image-overlay">
-                      <span className="factory-image-label">Production Facility</span>
-                    </div>
+              <div className="factory-coming-soon">
+                <div className="coming-soon-content">
+                  <div className="coming-soon-icon">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <polyline points="21 15 16 10 5 21" />
+                    </svg>
                   </div>
-                </div>
-                <div className="factory-image-card">
-                  <div className="factory-image-wrapper">
-                    <Image
-                      src="/assets/gallery-production-line.jpg"
-                      alt="Production Line"
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                    <div className="factory-image-overlay">
-                      <span className="factory-image-label">Production Line</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="factory-image-card">
-                  <div className="factory-image-wrapper">
-                    <Image
-                      src="/assets/gallery-quality-control.jpg"
-                      alt="Quality Control"
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                    <div className="factory-image-overlay">
-                      <span className="factory-image-label">Quality Control</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="factory-image-card">
-                  <div className="factory-image-wrapper">
-                    <Image
-                      src="/assets/gallery-warehouse.jpg"
-                      alt="Warehouse"
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                    <div className="factory-image-overlay">
-                      <span className="factory-image-label">Warehouse Facility</span>
-                    </div>
+                  <h4>Coming Soon</h4>
+                  <p>Factory images and facility tour will be available shortly</p>
+                  <div className="coming-soon-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span>Under Preparation</span>
                   </div>
                 </div>
               </div>
@@ -4174,6 +4139,74 @@ export default function ProductDetailPage() {
           letter-spacing: 0.05em;
         }
 
+        /* Coming Soon Section */
+        .factory-coming-soon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 400px;
+          background: linear-gradient(135deg, rgba(116, 6, 13, 0.03) 0%, rgba(201, 162, 77, 0.03) 100%);
+          border: 2px dashed #E6D3A3;
+          border-radius: 20px;
+          padding: 60px 40px;
+        }
+
+        .coming-soon-content {
+          text-align: center;
+          max-width: 500px;
+        }
+
+        .coming-soon-icon {
+          margin: 0 auto 24px;
+          width: 80px;
+          height: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, rgba(116, 6, 13, 0.08), rgba(201, 162, 77, 0.08));
+          border-radius: 50%;
+          color: #9A1B2E;
+        }
+
+        .coming-soon-content h4 {
+          font-size: 32px;
+          font-weight: 800;
+          color: #74060D;
+          margin: 0 0 12px;
+          letter-spacing: -0.02em;
+        }
+
+        .coming-soon-content > p {
+          font-size: 16px;
+          color: #666;
+          margin: 0 0 24px;
+          line-height: 1.6;
+        }
+
+        .coming-soon-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 10px 20px;
+          background: white;
+          border: 2px solid #E6D3A3;
+          border-radius: 30px;
+          color: #9A1B2E;
+          font-size: 14px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        }
+
+        .coming-soon-badge svg {
+          color: #C9A24D;
+        }
+
+        .coming-soon-badge:hover {
+          border-color: #C9A24D;
+          background: linear-gradient(135deg, rgba(116, 6, 13, 0.05), rgba(201, 162, 77, 0.05));
+          transform: translateY(-2px);
+        }
+
         .proof-certificates {
           margin-top: 60px;
         }
@@ -4814,6 +4847,15 @@ export default function ProductDetailPage() {
             gap: 24px;
           }
 
+          .factory-coming-soon {
+            min-height: 350px;
+            padding: 50px 30px;
+          }
+
+          .coming-soon-content h4 {
+            font-size: 28px;
+          }
+
           .certificates-grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
@@ -4987,6 +5029,39 @@ export default function ProductDetailPage() {
           .factory-images-grid {
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 20px;
+          }
+
+          .factory-coming-soon {
+            min-height: 300px;
+            padding: 40px 20px;
+          }
+
+          .coming-soon-icon {
+            width: 60px;
+            height: 60px;
+          }
+
+          .coming-soon-icon svg {
+            width: 50px;
+            height: 50px;
+          }
+
+          .coming-soon-content h4 {
+            font-size: 24px;
+          }
+
+          .coming-soon-content > p {
+            font-size: 14px;
+          }
+
+          .coming-soon-badge {
+            font-size: 12px;
+            padding: 8px 16px;
+          }
+
+          .coming-soon-badge svg {
+            width: 16px;
+            height: 16px;
           }
 
           .factory-image-wrapper {

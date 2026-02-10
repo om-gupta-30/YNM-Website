@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import IndiaPresenceMap from "@/components/IndiaPresenceMap";
+import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha } from "@/lib/recaptchaUtils";
 
 // Company details
 const companyInfo = {
@@ -37,6 +38,14 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  // Load reCAPTCHA script
+  useEffect(() => {
+    if (siteKey) {
+      loadRecaptchaScript();
+    }
+  }, [siteKey]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -50,12 +59,22 @@ export default function ContactPage() {
     setError(null);
     
     try {
+      // Get reCAPTCHA token
+      const recaptchaToken = siteKey ? getRecaptchaToken() : null;
+      
+      if (siteKey && !recaptchaToken) {
+        throw new Error('Please complete the "I\'m not a robot" verification');
+      }
+
       const response = await fetch('/api/contact/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
       });
 
       const data = await response.json();
@@ -68,6 +87,11 @@ export default function ContactPage() {
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
       
+      // Reset reCAPTCHA
+      if (siteKey) {
+        resetRecaptcha();
+      }
+      
       // Auto-hide success message after 10 seconds
       setTimeout(() => {
         setSubmitted(false);
@@ -76,6 +100,10 @@ export default function ContactPage() {
     } catch (err) {
       console.error('Form submission error:', err);
       setError(err.message || 'Failed to send message. Please try again.');
+      // Reset reCAPTCHA on error
+      if (siteKey) {
+        resetRecaptcha();
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -267,6 +295,17 @@ export default function ContactPage() {
                       placeholder="Tell us about your requirements..."
                     />
                   </div>
+
+                  {/* reCAPTCHA */}
+                  {siteKey && (
+                    <div style={{ marginBottom: '20px' }}>
+                      <div 
+                        className="g-recaptcha" 
+                        data-sitekey={siteKey}
+                        style={{ display: 'inline-block' }}
+                      />
+                    </div>
+                  )}
 
                   <button type="submit" className="contact-btn" disabled={isSubmitting}>
                     {isSubmitting ? (

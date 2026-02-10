@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha } from "@/lib/recaptchaUtils";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,6 +20,14 @@ export default function OurDirectorPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  useEffect(() => {
+    if (siteKey) {
+      loadRecaptchaScript();
+    }
+  }, [siteKey]);
 
   const handleAppointmentChange = (e) => {
     setAppointmentForm({ ...appointmentForm, [e.target.name]: e.target.value });
@@ -27,24 +36,50 @@ export default function OurDirectorPage() {
   const handleAppointmentSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setSubmitted(true);
-    setIsSubmitting(false);
-    setAppointmentForm({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      purpose: "",
-      preferredDate: "",
-      preferredTime: "",
-      message: "",
-    });
-    
-    setTimeout(() => setSubmitted(false), 8000);
+    try {
+      const recaptchaToken = siteKey ? getRecaptchaToken() : null;
+      
+      if (siteKey && !recaptchaToken) {
+        throw new Error('Please complete the "I\'m not a robot" verification');
+      }
+
+      const response = await fetch('/api/director-appointment/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...appointmentForm,
+          recaptchaToken,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitted(true);
+        setAppointmentForm({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          purpose: "",
+          preferredDate: "",
+          preferredTime: "",
+          message: "",
+        });
+        if (siteKey) resetRecaptcha();
+        setTimeout(() => setSubmitted(false), 8000);
+      } else {
+        setError(data.error || 'Something went wrong. Please try again.');
+        if (siteKey) resetRecaptcha();
+      }
+    } catch (err) {
+      setError(err.message || 'Network error. Please check your connection and try again.');
+      if (siteKey) resetRecaptcha();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -301,6 +336,19 @@ export default function OurDirectorPage() {
                 </div>
               ) : (
                 <form onSubmit={handleAppointmentSubmit} className="appointment-form">
+                  {error && (
+                    <div style={{ 
+                      padding: '12px 16px', 
+                      marginBottom: '20px', 
+                      backgroundColor: '#fee', 
+                      border: '1px solid #fcc', 
+                      borderRadius: '8px', 
+                      color: '#c33',
+                      fontSize: '14px'
+                    }}>
+                      {error}
+                    </div>
+                  )}
                   <h3>Request an Appointment</h3>
                   
                   <div className="form-row">
@@ -420,6 +468,16 @@ export default function OurDirectorPage() {
                       placeholder="Tell us more about what you'd like to discuss..."
                     />
                   </div>
+
+                  {siteKey && (
+                    <div style={{ marginBottom: '20px' }}>
+                      <div 
+                        className="g-recaptcha" 
+                        data-sitekey={siteKey}
+                        style={{ display: 'inline-block' }}
+                      />
+                    </div>
+                  )}
 
                   <button type="submit" className="appointment-submit-btn" disabled={isSubmitting}>
                     {isSubmitting ? (

@@ -277,10 +277,10 @@ function getEmailTransporter() {
 const getNoReplyFrom = () =>
   `"YNM Careers (Do Not Reply)" <${process.env.CAREERS_NOREPLY_FROM || 'noreply@ynmsafety.com'}>`;
 
-const hrEmail = () => process.env.HR_EMAIL || 'hr@ynmsafety.com';
+const hrEmail = () => process.env.HR_EMAIL || 'ynm.hr@ynmsafety.com';
 
-// Send confirmation email to applicant (no-reply)
-async function sendConfirmationEmail(formData) {
+// Send confirmation email to applicant (no-reply) with resume PDF attached
+async function sendConfirmationEmail(formData, resumeFile) {
   const transporter = getEmailTransporter();
   if (!transporter) {
     console.warn('Email not configured. Skipping confirmation email.');
@@ -346,6 +346,11 @@ async function sendConfirmationEmail(formData) {
     text: emailText,
     html: emailHtml,
     headers: { 'Auto-Submitted': 'auto-generated' },
+    attachments: resumeFile ? [{
+      filename: resumeFile.originalFilename || 'resume.pdf',
+      path: resumeFile.filepath,
+      contentType: 'application/pdf'
+    }] : []
   };
 
   try {
@@ -505,14 +510,18 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'All required fields must be filled.' });
     }
 
-    // Validate reCAPTCHA
-    if (!formData.recaptchaToken) {
-      return res.status(400).json({ error: 'Please complete the "I\'m not a robot" verification.' });
-    }
+    // Validate reCAPTCHA (only if configured)
+    if (process.env.RECAPTCHA_SECRET_KEY) {
+      if (!formData.recaptchaToken) {
+        return res.status(400).json({ error: 'Please complete the "I\'m not a robot" verification.' });
+      }
 
-    const recaptchaValid = await validateRecaptcha(formData.recaptchaToken);
-    if (!recaptchaValid) {
-      return res.status(400).json({ error: 'reCAPTCHA verification failed. Please try again.' });
+      const recaptchaValid = await validateRecaptcha(formData.recaptchaToken);
+      if (!recaptchaValid) {
+        return res.status(400).json({ error: 'reCAPTCHA verification failed. Please try again.' });
+      }
+    } else {
+      console.log('RECAPTCHA_SECRET_KEY not set; skipping reCAPTCHA check for careers form');
     }
 
     // Validate CAPTCHA
@@ -563,8 +572,8 @@ export default async function handler(req, res) {
       });
     }
 
-    // Send confirmation email to applicant (no-reply)
-    await sendConfirmationEmail(formData);
+    // Send confirmation email to applicant (no-reply) with resume PDF attached
+    await sendConfirmationEmail(formData, resumeFile);
 
     // Send HR notification with PDF attached (no-reply)
     await sendHRNotificationEmail(formData, resumeFile);
