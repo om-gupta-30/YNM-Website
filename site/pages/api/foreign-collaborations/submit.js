@@ -13,8 +13,9 @@ export default async function handler(req, res) {
   try {
     const { companyName, contactName, email, country, collaborationType, message, recaptchaToken } = req.body;
 
-    // Verify reCAPTCHA if configured
-    if (process.env.RECAPTCHA_SECRET_KEY) {
+    // Verify reCAPTCHA only if token is provided
+    // Token is only sent from allowed production domains
+    if (recaptchaToken && process.env.RECAPTCHA_SECRET_KEY) {
       const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
       if (!recaptchaResult.success) {
         return res.status(400).json({ 
