@@ -3,11 +3,31 @@
  */
 
 /**
+ * Check if current domain is allowed for reCAPTCHA
+ * reCAPTCHA should ONLY work on production domains
+ */
+export function isAllowedDomain() {
+  if (typeof window === 'undefined') return false;
+  
+  const hostname = window.location.hostname;
+  const allowedDomains = ['ynmsafety.com', 'www.ynmsafety.com'];
+  
+  return allowedDomains.includes(hostname);
+}
+
+/**
  * Load Google reCAPTCHA script
  * Call this once when the form component mounts
+ * ONLY loads on allowed domains (ynmsafety.com, www.ynmsafety.com)
  */
 export function loadRecaptchaScript(callback) {
   if (typeof window === 'undefined') return;
+  
+  // STRICT: Only load reCAPTCHA on production domains
+  if (!isAllowedDomain()) {
+    console.log('[reCAPTCHA] Not loading - domain not allowed:', window.location.hostname);
+    return;
+  }
   
   // Check if already loaded
   if (window.grecaptcha) {

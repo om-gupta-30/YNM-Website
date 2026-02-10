@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha } from "@/lib/recaptchaUtils";
+import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha, isAllowedDomain } from "@/lib/recaptchaUtils";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -82,11 +82,17 @@ export default function InvestorRelationsPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [showRecaptcha, setShowRecaptcha] = useState(false);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   useEffect(() => {
-    if (siteKey) {
-      loadRecaptchaScript();
+    if (typeof window !== 'undefined') {
+      const allowed = isAllowedDomain();
+      setShowRecaptcha(allowed && !!siteKey);
+      
+      if (allowed && siteKey) {
+        loadRecaptchaScript();
+      }
     }
   }, [siteKey]);
 
@@ -98,9 +104,9 @@ export default function InvestorRelationsPage() {
     setError('');
 
     try {
-      const recaptchaToken = siteKey ? getRecaptchaToken() : null;
+      const recaptchaToken = showRecaptcha ? getRecaptchaToken() : null;
       
-      if (siteKey && !recaptchaToken) {
+      if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
 
@@ -118,15 +124,15 @@ export default function InvestorRelationsPage() {
       if (response.ok && data.success) {
         setSubmitted(true);
         setFormData({ name: "", organization: "", email: "", investorType: "", message: "" });
-        if (siteKey) resetRecaptcha();
+        if (showRecaptcha) resetRecaptcha();
         setTimeout(() => setSubmitted(false), 8000);
       } else {
         setError(data.error || 'Something went wrong. Please try again.');
-        if (siteKey) resetRecaptcha();
+        if (showRecaptcha) resetRecaptcha();
       }
     } catch (err) {
       setError(err.message || 'Network error. Please check your connection and try again.');
-      if (siteKey) resetRecaptcha();
+      if (showRecaptcha) resetRecaptcha();
     } finally {
       setIsSubmitting(false);
     }
@@ -523,7 +529,7 @@ export default function InvestorRelationsPage() {
                     <label>Message</label>
                     <textarea name="message" value={formData.message} onChange={handleChange} rows={3} placeholder="Tell us about your interest..." />
                   </div>
-                  {siteKey && (
+                  {showRecaptcha && (
                     <div style={{ marginBottom: '20px' }}>
                       <div 
                         className="g-recaptcha" 
