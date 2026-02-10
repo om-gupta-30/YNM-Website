@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha } from "@/lib/recaptchaUtils";
+import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha, isAllowedDomain } from "@/lib/recaptchaUtils";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,11 +21,17 @@ export default function OurDirectorPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [showRecaptcha, setShowRecaptcha] = useState(false);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   useEffect(() => {
-    if (siteKey) {
-      loadRecaptchaScript();
+    if (typeof window !== 'undefined') {
+      const allowed = isAllowedDomain();
+      setShowRecaptcha(allowed && !!siteKey);
+      
+      if (allowed && siteKey) {
+        loadRecaptchaScript();
+      }
     }
   }, [siteKey]);
 
@@ -39,9 +45,9 @@ export default function OurDirectorPage() {
     setError('');
     
     try {
-      const recaptchaToken = siteKey ? getRecaptchaToken() : null;
+      const recaptchaToken = showRecaptcha ? getRecaptchaToken() : null;
       
-      if (siteKey && !recaptchaToken) {
+      if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
 
@@ -68,15 +74,15 @@ export default function OurDirectorPage() {
           preferredTime: "",
           message: "",
         });
-        if (siteKey) resetRecaptcha();
+        if (showRecaptcha) resetRecaptcha();
         setTimeout(() => setSubmitted(false), 8000);
       } else {
         setError(data.error || 'Something went wrong. Please try again.');
-        if (siteKey) resetRecaptcha();
+        if (showRecaptcha) resetRecaptcha();
       }
     } catch (err) {
       setError(err.message || 'Network error. Please check your connection and try again.');
-      if (siteKey) resetRecaptcha();
+      if (showRecaptcha) resetRecaptcha();
     } finally {
       setIsSubmitting(false);
     }
@@ -469,7 +475,7 @@ export default function OurDirectorPage() {
                     />
                   </div>
 
-                  {siteKey && (
+                  {showRecaptcha && (
                     <div style={{ marginBottom: '20px' }}>
                       <div 
                         className="g-recaptcha" 

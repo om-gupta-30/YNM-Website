@@ -5,7 +5,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import IndiaPresenceMap from "@/components/IndiaPresenceMap";
-import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha } from "@/lib/recaptchaUtils";
+import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha, isAllowedDomain } from "@/lib/recaptchaUtils";
 
 // Company details
 const companyInfo = {
@@ -38,12 +38,18 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
+  const [showRecaptcha, setShowRecaptcha] = useState(false);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-  // Load reCAPTCHA script
+  // Load reCAPTCHA script ONLY on allowed domains
   useEffect(() => {
-    if (siteKey) {
-      loadRecaptchaScript();
+    if (typeof window !== 'undefined') {
+      const allowed = isAllowedDomain();
+      setShowRecaptcha(allowed && !!siteKey);
+      
+      if (allowed && siteKey) {
+        loadRecaptchaScript();
+      }
     }
   }, [siteKey]);
 
@@ -59,10 +65,10 @@ export default function ContactPage() {
     setError(null);
     
     try {
-      // Get reCAPTCHA token
-      const recaptchaToken = siteKey ? getRecaptchaToken() : null;
+      // Get reCAPTCHA token ONLY if on allowed domain
+      const recaptchaToken = showRecaptcha ? getRecaptchaToken() : null;
       
-      if (siteKey && !recaptchaToken) {
+      if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
 
@@ -296,8 +302,8 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* reCAPTCHA */}
-                  {siteKey && (
+                  {/* reCAPTCHA - ONLY on production domains */}
+                  {showRecaptcha && (
                     <div style={{ marginBottom: '20px' }}>
                       <div 
                         className="g-recaptcha" 
