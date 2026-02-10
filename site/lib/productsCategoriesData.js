@@ -1670,8 +1670,8 @@ export const productsData = {
             name: "Double W Beam Crash Barriers",
             shortDesc: "High-strength double W beam crash barrier manufactures delivering superior impact resistance, durability, and enhanced road safety for global infrastructure projects.",
             desc: "High-strength double W beam crash barrier manufactures delivering superior impact resistance, durability, and enhanced road safety for global infrastructure projects.",
-            image: "/assets/YNM Safety Highways & Expressways w double beam barrier.jpg",
-            heroImage: "/assets/YNM Safety Highways & Expressways w double beam barrier.jpg",
+            image: "/assets/YNM Safety Highways Expressways w double beam barrier.jpg",
+            heroImage: "/assets/YNM Safety Highways Expressways w double beam barrier.jpg",
             specs: ["Double W-beam profile", "Hot-dip galvanized", "IS 5986 certified", "MoRTH compliant", "High tensile strength", "2.7mm/3.0mm thickness"],
             overview: "YNM Safety is one of the leading double W beam manufactures, delivering robust and reliable metal beam crash barriers engineered for maximum road safety and long-term performance. As trusted YNM Safety manufactures, our double W beam crash barriers are designed to absorb high-impact collisions, prevent vehicle crossovers, and reduce accident severity on highways and expressways. Manufactured using premium galvanized steel, our W beam barriers offer excellent corrosion resistance and structural strength. Our products are widely supplied to government projects, EPC contractors, and private infrastructure developers, making YNM Safety a preferred name among metal beam manufactures and w beam barrier manufactures across domestic and international markets.",
             detailedDescription: "YNM Safety is one of the leading double W beam manufactures, delivering robust and reliable metal beam crash barriers engineered for maximum road safety and long-term performance. As trusted YNM Safety manufactures, our double W beam crash barriers are designed to absorb high-impact collisions, prevent vehicle crossovers, and reduce accident severity on highways and expressways. Manufactured using premium galvanized steel, our W beam barriers offer excellent corrosion resistance and structural strength. Our products are widely supplied to government projects, EPC contractors, and private infrastructure developers, making YNM Safety a preferred name among metal beam manufactures and w beam barrier manufactures across domestic and international markets.",
@@ -1801,21 +1801,21 @@ export const productsData = {
                 id: "app1",
                 title: "Highways & Expressways",
                 description: "YNM Safety double W beam crash barriers provide strong vehicle containment and enhanced safety on high-speed highways and expressways.",
-                image: "/assets/YNM Safety Highways & Expressways w double beam barrier.jpg",
+                image: "/assets/YNM Safety Highways Expressways w double beam barrier.jpg",
                 details: "YNM Safety manufactures high-quality double W beam barriers designed to absorb impact energy and prevent cross-over accidents. Our metal beam crash barriers meet MORTH and IRC standards, ensuring long-term durability and highway safety performance."
               },
               {
                 id: "app2",
                 title: "Urban Roads & Arterial Streets",
                 description: "Double W beam barriers improve traffic discipline and road safety on busy urban roads and arterial streets.",
-                image: "/assets/YNM Safety Urban roads & arterial streets w double beam barrier.jpg",
+                image: "/assets/YNM Safety Urban roads arterial streets w double beam barrier.jpg",
                 details: "YNM Safety metal beam manufactures supply crash barriers that protect vehicles and pedestrians in high-traffic city environments. These W beam barriers reduce accident severity and maintain structural stability under frequent impact conditions."
               },
               {
                 id: "app3",
                 title: "Bridges & Flyovers",
                 description: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
-                image: "/assets/YNM Safety Bridges & flyovers w double beam barrier.jpg",
+                image: "/assets/YNM Safety Bridges flyovers w double beam barrier.jpg",
                 details: "YNM Safety manufactures corrosion-resistant double W beam crash barriers ideal for elevated structures. Our W beam barrier manufactures ensure controlled vehicle deflection and long service life in demanding bridge conditions."
               },
               {
@@ -1829,7 +1829,7 @@ export const productsData = {
                 id: "app5",
                 title: "Road Medians & Central Dividers",
                 description: "W beam crash barriers prevent vehicle cross-overs and enhance median safety.",
-                image: "/assets/YNM Safety Road medians & central dividers w double beam barrier.jpg",
+                image: "/assets/YNM Safety Road medians central dividers w double beam barrier.jpg",
                 details: "YNM Safety manufactures double W beam barriers for medians and central dividers to improve traffic separation. Our metal beam manufactures deliver high-strength barriers that minimize head-on collision risks."
               },
               {
@@ -1846,19 +1846,19 @@ export const productsData = {
                 title: "Highways & Expressways",
                 short: "YNM Safety double W beam crash barriers provide strong vehicle containment and enhanced safety on high-speed highways and expressways.",
                 hover: "YNM Safety manufactures high-quality double W beam barriers designed to absorb impact energy and prevent cross-over accidents. Our metal beam crash barriers meet MORTH and IRC standards, ensuring long-term durability and highway safety performance.",
-                image: "/assets/YNM Safety Highways & Expressways w double beam barrier.jpg"
+                image: "/assets/YNM Safety Highways Expressways w double beam barrier.jpg"
               },
               {
                 title: "Urban Roads & Arterial Streets",
                 short: "Double W beam barriers improve traffic discipline and road safety on busy urban roads and arterial streets.",
                 hover: "YNM Safety metal beam manufactures supply crash barriers that protect vehicles and pedestrians in high-traffic city environments. These W beam barriers reduce accident severity and maintain structural stability under frequent impact conditions.",
-                image: "/assets/YNM Safety Urban roads & arterial streets w double beam barrier.jpg"
+                image: "/assets/YNM Safety Urban roads arterial streets w double beam barrier.jpg"
               },
               {
                 title: "Bridges & Flyovers",
                 short: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
                 hover: "YNM Safety manufactures corrosion-resistant double W beam crash barriers ideal for elevated structures. Our W beam barrier manufactures ensure controlled vehicle deflection and long service life in demanding bridge conditions.",
-                image: "/assets/YNM Safety Bridges & flyovers w double beam barrier.jpg"
+                image: "/assets/YNM Safety Bridges flyovers w double beam barrier.jpg"
               },
               {
                 title: "Curves, Ramps & Interchanges",
@@ -1870,7 +1870,7 @@ export const productsData = {
                 title: "Road Medians & Central Dividers",
                 short: "W beam crash barriers prevent vehicle cross-overs and enhance median safety.",
                 hover: "YNM Safety manufactures double W beam barriers for medians and central dividers to improve traffic separation. Our metal beam manufactures deliver high-strength barriers that minimize head-on collision risks.",
-                image: "/assets/YNM Safety Road medians & central dividers w double beam barrier.jpg"
+                image: "/assets/YNM Safety Road medians central dividers w double beam barrier.jpg"
               },
               {
                 title: "Embankments, Slopes & Roadside Hazards",
@@ -1901,11 +1901,11 @@ export const productsData = {
             },
             
             gallery: [
-              "/assets/YNM Safety Highways & Expressways w double beam barrier.jpg",
-              "/assets/YNM Safety Urban roads & arterial streets w double beam barrier.jpg",
-              "/assets/YNM Safety Bridges & flyovers w double beam barrier.jpg",
+              "/assets/YNM Safety Highways Expressways w double beam barrier.jpg",
+              "/assets/YNM Safety Urban roads arterial streets w double beam barrier.jpg",
+              "/assets/YNM Safety Bridges flyovers w double beam barrier.jpg",
               "/assets/YNM Safety Curves Ramps and Interchanges w double beam barrier.jpg",
-              "/assets/YNM Safety Road medians & central dividers w double beam barrier.jpg",
+              "/assets/YNM Safety Road medians central dividers w double beam barrier.jpg",
               "/assets/YNM Safety Embankments Slopes and Roadside hazards w double beam barrier.jpg"
             ],
             
@@ -2078,8 +2078,8 @@ export const productsData = {
             name: "Roller Beam Crash Barriers",
             shortDesc: "YNM Safety manufactures advanced roller beam crash barriers engineered to reduce collision impact, minimize vehicle damage, and enhance road safety across highways, curves, and high-risk zones.",
             desc: "YNM Safety manufactures advanced roller beam crash barriers engineered to reduce collision impact, minimize vehicle damage, and enhance road safety across highways, curves, and high-risk zones.",
-            image: "/assets/YNM Safety Highways & Expressways roller beam barriers.jpg",
-            heroImage: "/assets/YNM Safety Highways & Expressways roller beam barriers.jpg",
+            image: "/assets/YNM Safety Highways Expressways roller beam barriers.jpg",
+            heroImage: "/assets/YNM Safety Highways Expressways roller beam barriers.jpg",
             specs: ["Rotating roller design", "Hot-dip galvanized", "MoRTH 810 certified", "EN 1317 compliant", "High energy absorption", "3.0mm thickness"],
             overview: "YNM Safety is one of the trusted roller beam crash barrier manufacturers, delivering next-generation metal beam crash barriers that combine steel strength with energy-absorbing roller technology. As experienced YNM Safety metal beam crash barrier manufacturers, our roller beam systems are designed to rotate upon impact, reducing collision force and safely redirecting vehicles back onto the roadway. This innovative mechanism significantly lowers accident severity, vehicle damage, and fatality risks, especially at curves and accident-prone zones. Our roller beam crash barriers are widely adopted in national highways, expressways, bridges, and smart road infrastructure projects across India and international markets.",
             detailedDescription: "YNM Safety is one of the trusted roller beam crash barrier manufacturers, delivering next-generation metal beam crash barriers that combine steel strength with energy-absorbing roller technology. As experienced YNM Safety metal beam crash barrier manufacturers, our roller beam systems are designed to rotate upon impact, reducing collision force and safely redirecting vehicles back onto the roadway. This innovative mechanism significantly lowers accident severity, vehicle damage, and fatality risks, especially at curves and accident-prone zones. Our roller beam crash barriers are widely adopted in national highways, expressways, bridges, and smart road infrastructure projects across India and international markets.",
@@ -2207,42 +2207,42 @@ export const productsData = {
                 id: "app1",
                 title: "Highways & Expressways",
                 description: "YNM Safety roller beam crash barriers provide controlled vehicle redirection and enhanced safety on high-speed highways and expressways.",
-                image: "/assets/YNM Safety Highways & Expressways roller beam barriers.jpg",
+                image: "/assets/YNM Safety Highways Expressways roller beam barriers.jpg",
                 details: "As leading roller beam crash barrier manufacturers, YNM Safety designs metal beam crash barriers that absorb high-impact collisions and reduce accident severity. Our systems comply with MoRTH and IRC standards, ensuring long-term performance on national and expressway corridors."
               },
               {
                 id: "app2",
                 title: "Sharp Curves & Accident-Prone Zones",
                 description: "Roller beam crash barriers improve safety at sharp curves and high-risk accident zones.",
-                image: "/assets/YNM Safety Sharp curves &Accident prone zones roller beam barriers.jpg",
+                image: "/assets/YNM Safety Sharp curves Accident prone zones roller beam barriers.jpg",
                 details: "YNM Safety manufactures roller beam crash barriers with rotating energy-absorbing rollers that minimize collision impact and prevent vehicle rollover. These metal beam crash barriers are ideal for locations with frequent skidding and loss-of-control incidents."
               },
               {
                 id: "app3",
                 title: "Medians & Central Dividers",
                 description: "Roller beam barriers enhance median safety by preventing vehicle cross-over accidents.",
-                image: "/assets/YNM Safety Medians & Central dividers roller beam barriers.jpg",
+                image: "/assets/YNM Safety Medians Central dividers roller beam barriers.jpg",
                 details: "YNM Safety metal beam crash barrier manufacturers supply high-visibility roller beam systems that safely redirect vehicles back to their lanes. These barriers significantly reduce the risk of head-on collisions on divided highways and urban corridors."
               },
               {
                 id: "app4",
                 title: "Bridges & Flyovers",
                 description: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
-                image: "/assets/YNM Safety Bridges & Flyovers roller beam barriers.jpg",
+                image: "/assets/YNM Safety Bridges Flyovers roller beam barriers.jpg",
                 details: "YNM Safety roller beam crash barrier manufacturers deliver corrosion-resistant systems designed for elevated structures. Our metal beam crash barriers ensure controlled vehicle deflection and long service life under demanding traffic conditions."
               },
               {
                 id: "app5",
                 title: "Mountain Roads & Ghat Sections",
                 description: "Roller beam crash barriers protect vehicles on steep slopes and narrow mountain roads.",
-                image: "/assets/YNM Safety Mountain roads & ghat sections roller beam barriers.jpg",
+                image: "/assets/YNM Safety Mountain roads ghat sections roller beam barriers.jpg",
                 details: "YNM Safety manufactures roller beam crash barriers specifically for ghat sections, where rotating rollers absorb impact energy and prevent vehicles from falling into deep valleys. These metal beam crash barriers enhance safety on winding and low-visibility terrain."
               },
               {
                 id: "app6",
                 title: "Interchanges & Ramps",
                 description: "Roller beam crash barriers guide vehicles safely through interchanges and ramps.",
-                image: "/assets/YNM Safety Interchnages & Ramps roller beam barriers.jpg",
+                image: "/assets/YNM Safety Interchnages Ramps roller beam barriers.jpg",
                 details: "YNM Safety metal beam crash barrier manufacturers design advanced roller beam systems that improve vehicle stability at merging and diverging points. These crash barriers reduce accident severity and ensure smoother traffic flow in complex road networks."
               }
             ],
@@ -2252,37 +2252,37 @@ export const productsData = {
                 title: "Highways & Expressways",
                 short: "YNM Safety roller beam crash barriers provide controlled vehicle redirection and enhanced safety on high-speed highways and expressways.",
                 hover: "As leading roller beam crash barrier manufacturers, YNM Safety designs metal beam crash barriers that absorb high-impact collisions and reduce accident severity. Our systems comply with MoRTH and IRC standards, ensuring long-term performance on national and expressway corridors.",
-                image: "/assets/YNM Safety Highways & Expressways roller beam barriers.jpg"
+                image: "/assets/YNM Safety Highways Expressways roller beam barriers.jpg"
               },
               {
                 title: "Sharp Curves & Accident-Prone Zones",
                 short: "Roller beam crash barriers improve safety at sharp curves and high-risk accident zones.",
                 hover: "YNM Safety manufactures roller beam crash barriers with rotating energy-absorbing rollers that minimize collision impact and prevent vehicle rollover. These metal beam crash barriers are ideal for locations with frequent skidding and loss-of-control incidents.",
-                image: "/assets/YNM Safety Sharp curves &Accident prone zones roller beam barriers.jpg"
+                image: "/assets/YNM Safety Sharp curves Accident prone zones roller beam barriers.jpg"
               },
               {
                 title: "Medians & Central Dividers",
                 short: "Roller beam barriers enhance median safety by preventing vehicle cross-over accidents.",
                 hover: "YNM Safety metal beam crash barrier manufacturers supply high-visibility roller beam systems that safely redirect vehicles back to their lanes. These barriers significantly reduce the risk of head-on collisions on divided highways and urban corridors.",
-                image: "/assets/YNM Safety Medians & Central dividers roller beam barriers.jpg"
+                image: "/assets/YNM Safety Medians Central dividers roller beam barriers.jpg"
               },
               {
                 title: "Bridges & Flyovers",
                 short: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
                 hover: "YNM Safety roller beam crash barrier manufacturers deliver corrosion-resistant systems designed for elevated structures. Our metal beam crash barriers ensure controlled vehicle deflection and long service life under demanding traffic conditions.",
-                image: "/assets/YNM Safety Bridges & Flyovers roller beam barriers.jpg"
+                image: "/assets/YNM Safety Bridges Flyovers roller beam barriers.jpg"
               },
               {
                 title: "Mountain Roads & Ghat Sections",
                 short: "Roller beam crash barriers protect vehicles on steep slopes and narrow mountain roads.",
                 hover: "YNM Safety manufactures roller beam crash barriers specifically for ghat sections, where rotating rollers absorb impact energy and prevent vehicles from falling into deep valleys. These metal beam crash barriers enhance safety on winding and low-visibility terrain.",
-                image: "/assets/YNM Safety Mountain roads & ghat sections roller beam barriers.jpg"
+                image: "/assets/YNM Safety Mountain roads ghat sections roller beam barriers.jpg"
               },
               {
                 title: "Interchanges & Ramps",
                 short: "Roller beam crash barriers guide vehicles safely through interchanges and ramps.",
                 hover: "YNM Safety metal beam crash barrier manufacturers design advanced roller beam systems that improve vehicle stability at merging and diverging points. These crash barriers reduce accident severity and ensure smoother traffic flow in complex road networks.",
-                image: "/assets/YNM Safety Interchnages & Ramps roller beam barriers.jpg"
+                image: "/assets/YNM Safety Interchnages Ramps roller beam barriers.jpg"
               }
             ],
             
@@ -2307,12 +2307,12 @@ export const productsData = {
             },
             
             gallery: [
-              "/assets/YNM Safety Highways & Expressways roller beam barriers.jpg",
-              "/assets/YNM Safety Sharp curves &Accident prone zones roller beam barriers.jpg",
-              "/assets/YNM Safety Medians & Central dividers roller beam barriers.jpg",
-              "/assets/YNM Safety Bridges & Flyovers roller beam barriers.jpg",
-              "/assets/YNM Safety Mountain roads & ghat sections roller beam barriers.jpg",
-              "/assets/YNM Safety Interchnages & Ramps roller beam barriers.jpg"
+              "/assets/YNM Safety Highways Expressways roller beam barriers.jpg",
+              "/assets/YNM Safety Sharp curves Accident prone zones roller beam barriers.jpg",
+              "/assets/YNM Safety Medians Central dividers roller beam barriers.jpg",
+              "/assets/YNM Safety Bridges Flyovers roller beam barriers.jpg",
+              "/assets/YNM Safety Mountain roads ghat sections roller beam barriers.jpg",
+              "/assets/YNM Safety Interchnages Ramps roller beam barriers.jpg"
             ],
             
             // Our Projects / Clients
