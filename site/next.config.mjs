@@ -10,15 +10,10 @@ const nextConfig = {
         hostname: 'flagcdn.com',
       },
     ],
-    // Enable Next.js Image Optimization (WebP/AVIF, resizing) for smaller payloads
-    unoptimized: false,
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
+    // Disable Next.js Image Optimization - use pre-compressed JPGs directly
+    // This avoids /_next/image API issues in Docker/Cloud Run deployments
+    unoptimized: true,
     dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   // Enable compression for better performance
   compress: true,
