@@ -762,9 +762,9 @@ node scripts/verify-integrations.js
 
 ## Product Categories
 
-1. **Road Marking Paints** - Hot Thermoplastic, Cold Plastic, Water Base Road Marking Paints
+1. **Road Marking Paints** - Hot Thermoplastic, Cold Plastic, Water Base Road Marking Paints, Waterborne Airfield Marking Paints
 2. **Bitumen** - Bitumen VG 40 for highway construction
-3. **Metal Beam Crash Barriers** - W Beam, Thrie Beam, Double W Beam, Roller Barrier, End Terminals, Crash Attenuators
+3. **Metal Beam Crash Barriers** - W Beam, Thrie Beam, Double W Beam, Roller Beam Barriers, End Terminals, Crash Attenuators
 4. **Signages** - Retro Reflective Gantry, Cantilever, Canopy, Informatory Signage
 5. **Fabrication** - 34+ products including Solar Panel Structures, Railway Structures, GI Dustbins, High Mast Poles, Bridge Bearings, Toll Plaza Equipment
 
