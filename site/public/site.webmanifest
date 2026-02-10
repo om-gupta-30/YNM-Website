@@ -1,0 +1,28 @@
+{
+  "name": "YNM Safety Pan Global Trade Pvt Ltd",
+  "short_name": "YNM Safety",
+  "description": "Leading manufacturer and exporter of road safety products, paints, crash barriers, and signages",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo-navbar.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "theme_color": "#74060D",
+  "background_color": "#FDFBF7",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}

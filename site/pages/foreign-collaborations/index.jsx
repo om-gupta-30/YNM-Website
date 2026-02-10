@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha } from "@/lib/recaptchaUtils";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -113,7 +114,15 @@ export default function ForeignCollaborationsPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
   const [activeRegion, setActiveRegion] = useState(0);
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  useEffect(() => {
+    if (siteKey) {
+      loadRecaptchaScript();
+    }
+  }, [siteKey]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -127,9 +136,41 @@ export default function ForeignCollaborationsPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setSubmitted(true);
-    setIsSubmitting(false);
+    setError('');
+
+    try {
+      const recaptchaToken = siteKey ? getRecaptchaToken() : null;
+      
+      if (siteKey && !recaptchaToken) {
+        throw new Error('Please complete the "I\'m not a robot" verification');
+      }
+
+      const response = await fetch('/api/foreign-collaborations/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitted(true);
+        setFormData({ companyName: "", country: "", contactName: "", email: "", collaborationType: "", message: "" });
+        if (siteKey) resetRecaptcha();
+        setTimeout(() => setSubmitted(false), 8000);
+      } else {
+        setError(data.error || 'Something went wrong. Please try again.');
+        if (siteKey) resetRecaptcha();
+      }
+    } catch (err) {
+      setError(err.message || 'Network error. Please check your connection and try again.');
+      if (siteKey) resetRecaptcha();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -186,19 +227,19 @@ export default function ForeignCollaborationsPage() {
                 {/* Floating location markers */}
                 <div className="fc-markers">
                   <div className="fc-marker fc-marker-1">
-                    <span>🇦🇪</span>
+                    <span><Flag country="ae" size={32} /></span>
                     <div className="fc-marker-pulse" />
                   </div>
                   <div className="fc-marker fc-marker-2">
-                    <span>🇸🇬</span>
+                    <span><Flag country="sg" size={32} /></span>
                     <div className="fc-marker-pulse" />
                   </div>
                   <div className="fc-marker fc-marker-3">
-                    <span>🇩🇪</span>
+                    <span><Flag country="de" size={32} /></span>
                     <div className="fc-marker-pulse" />
                   </div>
                   <div className="fc-marker fc-marker-4">
-                    <span>🇰🇪</span>
+                    <span><Flag country="ke" size={32} /></span>
                     <div className="fc-marker-pulse" />
                   </div>
                 </div>
@@ -416,6 +457,19 @@ export default function ForeignCollaborationsPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="fc-form">
+                  {error && (
+                    <div style={{ 
+                      padding: '12px 16px', 
+                      marginBottom: '20px', 
+                      backgroundColor: '#fee', 
+                      border: '1px solid #fcc', 
+                      borderRadius: '8px', 
+                      color: '#c33',
+                      fontSize: '14px'
+                    }}>
+                      {error}
+                    </div>
+                  )}
                   <div className="fc-form-grid">
                     <div className="fc-field">
                       <label>Company Name <span>*</span></label>
@@ -448,6 +502,15 @@ export default function ForeignCollaborationsPage() {
                     <label>Message</label>
                     <textarea name="message" value={formData.message} onChange={handleChange} rows={4} placeholder="Tell us about your interest..." />
                   </div>
+                  {siteKey && (
+                    <div style={{ marginBottom: '20px' }}>
+                      <div 
+                        className="g-recaptcha" 
+                        data-sitekey={siteKey}
+                        style={{ display: 'inline-block' }}
+                      />
+                    </div>
+                  )}
                   <button type="submit" disabled={isSubmitting} className="fc-submit-btn">
                     {isSubmitting ? (
                       <span>Sending...</span>

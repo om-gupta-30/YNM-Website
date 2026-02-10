@@ -1,17 +1,17 @@
 import { saveToGoogleSheet, isValidEmail } from '@/lib/googleSheets';
 import { verifyRecaptchaToken } from '@/lib/recaptchaUtils';
 
-// ==============================================
-// API HANDLER
-// ==============================================
+/**
+ * API endpoint for Director Appointment Request form
+ * Saves to "our director appointment" sheet tab
+ */
 export default async function handler(req, res) {
-  // Only allow POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { name, email, phone, company, subject, message, recaptchaToken } = req.body;
+    const { name, email, phone, company, purpose, preferredDate, preferredTime, message, recaptchaToken } = req.body;
 
     // Verify reCAPTCHA if configured
     if (process.env.RECAPTCHA_SECRET_KEY) {
@@ -25,10 +25,10 @@ export default async function handler(req, res) {
     }
 
     // Validation
-    if (!name || !email || !subject || !message) {
+    if (!name || !email || !phone || !purpose) {
       return res.status(400).json({ 
         error: 'Missing required fields',
-        required: ['name', 'email', 'subject', 'message']
+        required: ['name', 'email', 'phone', 'purpose']
       });
     }
 
@@ -37,27 +37,28 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid email address' });
     }
 
-    // Save to "contact us" sheet tab
+    // Save to "our director appointment" sheet tab
     const rowData = [
       name,
       email,
-      phone || '',
+      phone,
       company || '',
-      subject,
-      message,
+      purpose,
+      preferredDate || '',
+      preferredTime || '',
+      message || '',
     ];
 
-    const sheetsResult = await saveToGoogleSheet('contact us', rowData);
+    const sheetsResult = await saveToGoogleSheet('our director appointment', rowData);
 
-    // Return success
     return res.status(200).json({
       success: true,
-      message: 'Thanks! Your message has been submitted successfully.',
+      message: 'Thank you! Your appointment request has been submitted successfully. Our team will contact you soon.',
       sheets: sheetsResult,
     });
 
   } catch (error) {
-    console.error('[Contact Form] Error:', error);
+    console.error('[Director Appointment] Error:', error);
     return res.status(500).json({ 
       error: 'Failed to process your request',
       message: error.message 

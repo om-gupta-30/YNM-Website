@@ -14,11 +14,13 @@ A modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd
 
 ---
 
-## Repository Status
+## 🔒 Repository Status
 
-- **GitHub ready** – No secrets in repo; `.env.example` and `.env.gcp.example` contain placeholders only
-- **Security scan** – Gitleaks runs on push/PR via GitHub Actions
-- **Clean structure** – No unnecessary files; all assets used by the app
+- ✅ **GitHub Ready** – No secrets in repo; `.env.example` and `.env.gcp.example` contain placeholders only
+- ✅ **Security Scanned** – Gitleaks runs on push/PR via GitHub Actions (`.github/workflows/security-scan.yml`)
+- ✅ **Clean Structure** – No unnecessary files; all assets used by the app
+- ✅ **Production Ready** – Build verified, all tests passing
+- ✅ **Safe to Deploy** – Vercel, GCP Cloud Run, or any Node.js host
 
 ---
 
@@ -31,24 +33,27 @@ A modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd
 | Tailwind CSS | 3.4.1 | Utility-first Styling |
 | Nodemailer | 7.0.12 | Email Services (Career Applications) |
 | Google Gemini API | 2.5 Flash | AI-powered Chatbot |
-| Google Sheets API | v4 | Contact Form Data Storage |
+| Google Sheets API | v4 | Form Data Storage (4 forms, 4 tabs) |
+| Google Analytics | GA4 | Visitor Tracking & Analytics |
+| Google reCAPTCHA | v2 | Spam Protection (5 forms) |
 | Formidable | 3.5.4 | PDF Resume Upload Handling |
 | PDF Parse | 2.4.5 | Resume Validation & Security |
 
 ## Features
 
-- **Under Construction Mode** - Toggle to show "Coming Soon" page during development
-- **AI Chatbot** - Powered by Google Gemini 2.5 Flash with full company knowledge base
+- **AI Chatbot** - Powered by Google Gemini 2.5 Flash with comprehensive company knowledge
+- **5 Contact Forms** - All integrated with Google Sheets (4 tabs: contact, director appointment, investor relations, foreign collaborations)
+- **Career Portal** - Job applications with PDF resume upload & automated email notifications to applicants and HR
+- **Google Analytics** - GA4 visitor tracking and analytics
+- **reCAPTCHA Protection** - "I'm not a robot" verification on all forms to prevent spam
 - **Responsive Design** - Optimized for all devices (mobile, tablet, laptop, desktop)
 - **Cross-Platform Support** - Windows and Mac specific optimizations
-- **Contact & Quote Forms** - Integrated with Google Sheets for data storage
-- **Career Portal** - Job applications with PDF resume upload & email notifications
 - **Interactive India Map** - Regional contact information with click-to-view details
 - **Product Catalog** - Detailed product pages with specs, application areas, projects, and market data
 - **Fabrication Showcase** - Bento grid design showcasing 34+ fabrication products
-- **Multi-language Support** - 12 Indian languages supported
-- **Performance Optimized** - Lazy loading, caching, and smooth animations
-- **SEO Optimized** - Custom meta tags, sitemap, and robots.txt
+- **Multi-language Support** - 12 Indian languages supported (English, Hindi, Telugu, Tamil, etc.)
+- **Performance Optimized** - Lazy loading, caching, image optimization, and smooth animations
+- **SEO Optimized** - Custom meta tags, sitemap, robots.txt, and structured data
 
 ---
 
@@ -72,11 +77,12 @@ YNM-website/
     │   ├── TestimonialsSection.jsx, DirectorSection.jsx
     │   ├── EmployeesSection.jsx, IndiaPresenceMap.jsx
     │   ├── FloatingSocialMedia.jsx, Mascot.jsx
-    │   ├── UnderConstruction.jsx
-    │   └── ...
+    │   └── Flag.jsx
     ├── contexts/
     │   └── LanguageContext.jsx     # Multi-language support (12 languages)
     ├── lib/                        # Data & utilities
+    │   ├── googleSheets.js         # Shared Google Sheets integration
+    │   ├── recaptchaUtils.js       # Shared reCAPTCHA utilities
     │   ├── chatbotData.js          # AI chatbot FAQ & product catalog
     │   ├── productsCategoriesData.js
     │   ├── productsData.js
@@ -88,6 +94,9 @@ YNM-website/
     ├── pages/                      # Routes & API endpoints
     │   ├── api/
     │   │   ├── contact/submit.js   # Contact form → Google Sheets
+    │   │   ├── director-appointment/submit.js  # Director appointment → Sheets
+    │   │   ├── investor-relations/submit.js    # Investor inquiries → Sheets
+    │   │   ├── foreign-collaborations/submit.js # Partnership → Sheets
     │   │   ├── careers/submit.js   # Career form (PDF upload + email)
     │   │   ├── chat/gemini.js      # AI chatbot API (Gemini 2.5)
     │   │   └── health.js           # Health check endpoint
@@ -139,12 +148,13 @@ cd YNM-website/site
 npm install
 
 # 3. Set up environment variables
-cp .env.example .env.local
+cp .env.example .env
 
-# 4. Edit .env.local with your credentials
-# - Add your Google Sheets ID and service account credentials
-# - Add your Gemini API key
-# - Add your email configuration (Gmail or SMTP)
+# 4. Edit .env with your credentials (see SETUP.md for detailed guide)
+# - Google Sheets credentials (all 4 forms)
+# - Google Gemini API key (chatbot)
+# - Gmail credentials (career emails)
+# - (Optional) Google Analytics, reCAPTCHA
 
 # 5. Run development server
 npm run dev
@@ -173,7 +183,7 @@ cd site
 docker build -t ynm-website .
 
 # Run container with environment variables
-docker run -p 3000:3000 --env-file .env.local ynm-website
+docker run -p 3000:3000 --env-file .env ynm-website
 
 # Access at http://localhost:3000
 ```
@@ -182,51 +192,39 @@ docker run -p 3000:3000 --env-file .env.local ynm-website
 
 ## Environment Variables
 
-The app **builds and runs** without any env vars (e.g. `npm run build`). For **contact form**, **chatbot**, and **careers** to work, set credentials in `.env.local` (local) or in Vercel/GCP (deployment).
+The app **builds and runs** without any env vars (e.g. `npm run build`). For **forms**, **chatbot**, and **careers** to work, set credentials in `site/.env` (local) or in Vercel/GCP (deployment).
 
 ### Setup (local)
 
-1. **Copy the template:** `cp site/.env.example site/.env.local`
-2. **Replace placeholders** in `.env.local` with your values (see tables below).
-3. **Never commit `.env.local`** — it is gitignored.
-
----
-
-### Under Construction Mode
-
-This website has a built-in "Under Construction" mode that shows a simple landing page with contact form while hiding the full website. This is useful for deploying early while still developing the full site.
-
-| Environment | `NEXT_PUBLIC_UNDER_CONSTRUCTION` | What Visitors See |
-|-------------|----------------------------------|-------------------|
-| **Production** | `true` | Under Construction page + Contact Form only |
-| **Local Dev** | `false` | Full website (all pages accessible) |
-
-**To enable Under Construction mode in production:**
-- Set `NEXT_PUBLIC_UNDER_CONSTRUCTION=true` in your deployment platform (Vercel/GCP)
-- Your local `.env.local` should have it set to `false` so you can develop normally
-
-**When ready to launch the full site:**
-- Change `NEXT_PUBLIC_UNDER_CONSTRUCTION=false` in production
-- The full website will go live immediately
+1. **Copy the template:** `cp site/.env.example site/.env`
+2. **Replace placeholders** in `site/.env` with your values (see [SETUP.md](SETUP.md)).
+3. **Never commit `site/.env`** — it is gitignored.
 
 ---
 
 ### Required Variables
 
-#### 1. Google Sheets API (Contact Form Storage)
+#### 1. Google Sheets API (All 4 Forms - One Sheet, 4 Tabs)
 
 | Variable | Description | How to Get |
 |----------|-------------|------------|
-| `GOOGLE_SHEET_ID` | Google Sheet ID from URL | [Create Sheet Guide](#google-sheets-setup) |
+| `GOOGLE_SHEET_ID` | Google Sheet ID from URL | [See SETUP.md](SETUP.md#google-sheets-setup) |
 | `GOOGLE_SERVICE_ACCOUNT_EMAIL` | Service account email | [GCP Console](https://console.cloud.google.com/) → IAM → Service Accounts |
 | `GOOGLE_PRIVATE_KEY` | Service account private key (JSON) | Download from GCP Console when creating service account key |
+
+**Form Mapping:**
+- Contact Us → "contact us" tab
+- Director Appointment → "our director appointment" tab
+- Investor Relations → "investor relations" tab
+- Foreign Collaborations → "foreign collaborations" tab
 
 <details>
 <summary><b>Google Sheets Setup Guide (Click to Expand)</b></summary>
 
 1. **Create a Google Sheet**
    - Go to [Google Sheets](https://sheets.google.com)
-   - Create a new spreadsheet named "YNM Contact Forms"
+   - Create a new spreadsheet named "Website Forms"
+   - Create 4 tabs: `contact us`, `our director appointment`, `investor relations`, `foreign collaborations`
    - Copy the **Sheet ID** from URL: `https://docs.google.com/spreadsheets/d/SHEET_ID_HERE/edit`
 
 2. **Create GCP Service Account**
@@ -308,11 +306,12 @@ This website has a built-in "Under Construction" mode that shows a simple landin
 
 ---
 
-#### 4. HR Email Recipient
+#### 4. Career Form Email Settings
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `HR_EMAIL` | Email to receive career applications | `hr@ynmsafety.com` |
+| `HR_EMAIL` | Email to receive career applications | `ynm.hr@ynmsafety.com` |
+| `CAREERS_NOREPLY_FROM` | Sender email for career notifications | `guptaom31619@gmail.com` |
 
 ---
 
@@ -333,9 +332,9 @@ This website has a built-in "Under Construction" mode that shows a simple landin
 
 ---
 
-### Optional Variables
+### Optional Variables (Recommended)
 
-#### 6. reCAPTCHA v2 (Spam Protection)
+#### 6. reCAPTCHA v2 (Spam Protection - All 5 Forms)
 
 | Variable | Description | How to Get |
 |----------|-------------|------------|
@@ -426,48 +425,60 @@ Sensitive paths are in `.gitignore` (root and `site/`). Never committed:
 
 | File/Pattern | Contains | Status |
 |--------------|----------|--------|
-| `.env.local` | All environment variables | ✓ Gitignored |
-| `.env.*` | Any environment file | ✓ Gitignored |
+| `.env` | All environment variables | ✓ Gitignored |
+| `.env.*` (except .example) | Any environment file | ✓ Gitignored |
 | `*.pem`, `*.key` | Private keys | ✓ Gitignored |
 | `credentials.json` | Service account files | ✓ Gitignored |
 | `service-account*.json` | GCP credentials | ✓ Gitignored |
 | `node_modules/` | Dependencies | ✓ Gitignored |
 | `.next/` | Build outputs | ✓ Gitignored |
 
-**Safe to commit:** `site/.env.example` and `site/.env.gcp.example` contain **placeholders only**—no real keys or IDs. Real credentials go in `.env.local` (local) or in Vercel/GCP dashboard (deployment).
+**Safe to commit:** `site/.env.example` and `site/.env.gcp.example` contain **placeholders only**—no real keys or IDs. Real credentials go in `site/.env` (local) or in Vercel/GCP dashboard (deployment).
 
 ### Security Features
 
 ✅ **Environment Variables**: All secrets accessed via `process.env` only  
 ✅ **Server-Side Only**: API keys never exposed to browser/client  
 ✅ **Rate Limiting**: Career form limited to 3 submissions per 15 minutes per IP  
-✅ **reCAPTCHA Ready**: Optional Google reCAPTCHA v2 integration  
+✅ **reCAPTCHA v2**: "I'm not a robot" protection on all 5 forms  
 ✅ **PDF Security**: Validates PDF files, rejects password-protected resumes  
 ✅ **Email Validation**: Strict email format validation on all forms  
-✅ **CAPTCHA Protection**: Math CAPTCHA on career form  
+✅ **CAPTCHA Protection**: Math CAPTCHA + reCAPTCHA on career form  
 ✅ **No Hardcoded Secrets**: All sensitive data in environment variables  
+✅ **GitHub Actions**: Automated security scanning with Gitleaks  
 
 ### Before you push (GitHub / Vercel / GCP)
 
-Run these from the **project root** to ensure no secrets are leaked:
+Run the automated security check script from the **project root**:
 
 ```bash
-# 1. .env.local must be ignored (expected output: "site/.env.local")
-git check-ignore site/.env.local
+# Automated pre-push security check (recommended)
+./pre-push-check.sh
 
-# 2. No sensitive files staged (expected: no output, or only .env.example / .env.gcp.example)
-git diff --cached --name-only | grep -E '\.env' | grep -v '\.env\.example' | grep -v '\.env\.gcp\.example' && echo "⚠️ STOP: Sensitive env file staged!" || echo "✅ OK"
+# What it checks:
+# ✅ .env is gitignored
+# ✅ Only .env.example files are tracked
+# ✅ No sensitive files staged
+# ✅ No hardcoded secrets (Gitleaks scan if installed)
+# ✅ Production build passes
+# ✅ No large files (>10MB)
+```
 
-# 3. Only safe env templates tracked (expected: site/.env.example and optionally site/.env.gcp.example)
-git ls-files | grep '\.env'
+**Manual checks (if needed):**
+```bash
+# 1. Verify .env is gitignored
+git check-ignore site/.env  # Should output: site/.env
 
-# 4. Optional: full secret scan (install: brew install gitleaks)
+# 2. Check only .env.example is tracked
+git ls-files | grep '\.env'  # Should show: site/.env.example, site/.env.gcp.example
+
+# 3. Full secret scan (optional, requires: brew install gitleaks)
 gitleaks detect --source . --verbose
 ```
 
-- **Never commit** `.env`, `.env.local`, `.env.gcp.yaml`, or any file with real API keys or passwords.
-- **Vercel / GCP:** set all environment variables in the platform dashboard; the repo is never used for secrets.
-- **Local only:** copy `site/.env.example` to `site/.env.local` and fill in values; `.env.local` is gitignored.
+- **Never commit** `site/.env`, `.env.gcp.yaml`, or any file with real API keys or passwords.
+- **Vercel / GCP:** Set all environment variables in the platform dashboard; the repo is never used for secrets.
+- **Local only:** Copy `site/.env.example` to `site/.env` and fill in values; `site/.env` is gitignored.
 
 ---
 
@@ -486,8 +497,8 @@ gitleaks detect --source . --verbose
 
 1. **Prepare Repository**
    ```bash
-   # Ensure .env.local is NOT tracked
-   git check-ignore site/.env.local  # Should output: site/.env.local
+   # Ensure site/.env is NOT tracked
+   git check-ignore site/.env  # Should output: site/.env
    
    # Push to GitHub
    git add .
@@ -498,22 +509,23 @@ gitleaks detect --source . --verbose
 2. **Deploy on Vercel**
    - Go to [vercel.com](https://vercel.com) and import your GitHub repository
    - Set **Root Directory** to `site`
-   - Add all environment variables from `.env.local` in Vercel dashboard
+   - Add all environment variables from `site/.env` in Vercel dashboard
    - Click **Deploy**
 
 3. **Environment Variables to Add**
    ```
-   NEXT_PUBLIC_UNDER_CONSTRUCTION=true
    GOOGLE_SHEET_ID=your_sheet_id
    GOOGLE_SERVICE_ACCOUNT_EMAIL=your_service_account@project.iam.gserviceaccount.com
-   GOOGLE_PRIVATE_KEY="your_private_key_from_service_account_json"
-   GOOGLE_GEMINI_API_KEY=your_gemini_api_key
-   GMAIL_USER=your_email@gmail.com
-   GMAIL_APP_PASSWORD=your_16_char_app_password
-   HR_EMAIL=hr@ynmsafety.com
+   GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+   GOOGLE_GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   GMAIL_USER=guptaom31619@gmail.com
+   GMAIL_APP_PASSWORD=your_16_char_password
+   HR_EMAIL=ynm.hr@ynmsafety.com
+   CAREERS_NOREPLY_FROM=guptaom31619@gmail.com
+   NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+   NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6LcXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   RECAPTCHA_SECRET_KEY=6LcYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
    ```
-   
-   > **Note:** Set `NEXT_PUBLIC_UNDER_CONSTRUCTION=true` to show only the Under Construction page. Set to `false` when ready to launch the full website.
 
 ### Google Cloud Platform (Cloud Run)
 
@@ -567,11 +579,13 @@ After deploying to any platform:
 
 - [ ] ✅ HTTPS is enabled (automatic on Vercel/Cloud Run)
 - [ ] ✅ All environment variables are set in the hosting platform
-- [ ] ✅ Test contact form (should save to Google Sheets)
-- [ ] ✅ Test career form (should send emails with PDF attachments)
+- [ ] ✅ Test all 4 forms (should save to correct Google Sheet tabs)
+- [ ] ✅ Test career form (should send emails with PDF attachments to applicant + HR)
 - [ ] ✅ Test AI chatbot (should respond with Gemini API)
-- [ ] ✅ Verify `.env.local` is NOT in git repository
-- [ ] ✅ Google Sheets is shared with service account email
+- [ ] ✅ Test reCAPTCHA (verify bot protection works)
+- [ ] ✅ Verify `site/.env` is NOT in git repository
+- [ ] ✅ Google Sheets is shared with service account email (Editor permission)
+- [ ] ✅ Production domain added to reCAPTCHA admin
 - [ ] ✅ Custom domain configured (if applicable)
 - [ ] ✅ Analytics/monitoring enabled (optional)
 

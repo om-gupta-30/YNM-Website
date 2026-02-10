@@ -26,11 +26,14 @@ COPY . .
 # Disable telemetry during build
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Build argument for Under Construction mode
-# Set to 'false' to show the full website
-# Set to 'true' to show only the Under Construction page
-ARG NEXT_PUBLIC_UNDER_CONSTRUCTION=false
-ENV NEXT_PUBLIC_UNDER_CONSTRUCTION=$NEXT_PUBLIC_UNDER_CONSTRUCTION
+# Accept build arguments for NEXT_PUBLIC_* variables
+# These MUST be available at build time (not runtime)
+ARG NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+ARG NEXT_PUBLIC_GA_ID
+
+# Set as environment variables for the build
+ENV NEXT_PUBLIC_RECAPTCHA_SITE_KEY=$NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+ENV NEXT_PUBLIC_GA_ID=$NEXT_PUBLIC_GA_ID
 
 # Build the Next.js application
 RUN npm run build

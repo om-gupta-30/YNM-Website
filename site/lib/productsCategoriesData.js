@@ -445,6 +445,395 @@ export const productsData = {
               "/assets/ynm safety thermoplastic paints.png",
               "/assets/Bag Design Mockup.jpg"
             ]
+          },
+          {
+            id: "p2",
+            slug: "waterborne-airfield-marking-paints-manufacturers",
+            name: "Waterborne Airfield Marking Paints",
+            shortDesc: "YNM Safety manufactures premium waterborne airfield marking paints engineered for superior visibility, fast drying, and long-lasting performance across airport and aviation infrastructure.",
+            desc: "YNM Safety manufactures premium waterborne airfield marking paints engineered for superior visibility, fast drying, and long-lasting performance across airport and aviation infrastructure.",
+            image: "/assets/YNM Safety Runways.png",
+            heroImage: "/assets/YNM Safety Runways.png",
+            specs: ["Waterborne base", "Fast drying", "High visibility", "Weather resistant", "Strong adhesion", "Low VOC"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Waterborne Airfield Marking Paints Manufacturers | Airport Marking Paints | YNM Safety",
+              description: "YNM Safety manufactures high-quality waterborne airfield marking paints for runways, taxiways, aprons, and helipads, offering durable, fast-drying, and high-visibility airport marking solutions.",
+              slug: "/waterborne-airfield-marking-paints-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is a trusted name among waterborne airfield marking paints manufactures, delivering high-performance airport marking solutions for modern aviation infrastructure. As leading YNM Safety manufactures, our YNM Safety waterborne paints are specially formulated for runways, taxiways, aprons, and helipads, ensuring clear guidance, safety, and operational efficiency in critical airfield environments. Our YNM Safety Waterborne Airfield Marking Paints manufactures products offer excellent adhesion, fast curing, and long service life, making them ideal for high-traffic airport surfaces exposed to aircraft movement and harsh weather conditions.",
+            detailedDescription: "YNM Safety is a trusted name among waterborne airfield marking paints manufactures, delivering high-performance airport marking solutions for modern aviation infrastructure. As leading YNM Safety manufactures, our YNM Safety waterborne paints are specially formulated for runways, taxiways, aprons, and helipads, ensuring clear guidance, safety, and operational efficiency in critical airfield environments. Our YNM Safety Waterborne Airfield Marking Paints manufactures products offer excellent adhesion, fast curing, and long service life, making them ideal for high-traffic airport surfaces exposed to aircraft movement and harsh weather conditions.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Waterborne Airfield Marking Paints" },
+              { label: "Base", value: "Waterborne" },
+              { label: "Finish", value: "Matt / Semi-Gloss" },
+              { label: "Drying Time", value: "Fast Drying" },
+              { label: "Weather Resistance", value: "Excellent" },
+              { label: "Adhesion", value: "Strong adhesion on concrete & asphalt" },
+              { label: "Visibility", value: "High contrast daytime & night visibility" },
+              { label: "Compliance", value: "IS164- 2023" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "20Kg",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IS164-2023, Federal Specification TTP 1952D, ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "1MT",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "32089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "20Kg Container",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Waterborne Airfield Marking Paints",
+                "Base: Waterborne",
+                "Finish: Matt / Semi-Gloss",
+                "Drying Time: Fast Drying",
+                "Weather Resistance: Excellent",
+                "Adhesion: Strong adhesion on concrete & asphalt",
+                "Visibility: High contrast daytime & night visibility",
+                "Compliance: IS164- 2023",
+                "HSN Code: 32089090"
+              ],
+              keyFeatures: [
+                "High visibility for aviation safety",
+                "Fast drying to minimize runway downtime",
+                "Excellent adhesion on airfield surfaces",
+                "UV and weather resistant formulation",
+                "Low VOC, eco-friendly waterborne system",
+                "Manufactured by trusted YNM Safety manufactures"
+              ],
+              advantages: [
+                "Enhances runway and taxiway safety",
+                "Ensures accurate aircraft guidance",
+                "Reduces maintenance and repainting cycles",
+                "Cost-effective airfield marking solution",
+                "Trusted YNM Safety Waterborne Airfield Marking Paints manufactures"
+              ]
+            },
+            
+            features: [
+              "High visibility for aviation safety",
+              "Fast drying to minimize runway downtime",
+              "Excellent adhesion on airfield surfaces",
+              "UV and weather resistant formulation",
+              "Low VOC, eco-friendly waterborne system",
+              "Manufactured by trusted YNM Safety manufactures"
+            ],
+            
+            advantages: [
+              "Enhances runway and taxiway safety",
+              "Ensures accurate aircraft guidance",
+              "Reduces maintenance and repainting cycles",
+              "Cost-effective airfield marking solution",
+              "Trusted YNM Safety Waterborne Airfield Marking Paints manufactures"
+            ],
+            
+            technicalSpecs: {
+              "Product Type": "Waterborne Airfield Marking Paints",
+              "Base": "Waterborne",
+              "Finish": "Matt / Semi-Gloss",
+              "Drying Time": "Fast Drying",
+              "Weather Resistance": "Excellent",
+              "Adhesion": "Strong adhesion on concrete & asphalt",
+              "Visibility": "High contrast daytime & night visibility",
+              "Compliance": "IS164- 2023",
+              "Country of Origin": "India",
+              "Manufacturing Location": "Hyderabad",
+              "Net Weight": "20Kg",
+              "Quality Standards": "IS164-2023, Federal Specification TTP 1952D, ISO 9001:2015",
+              "MOQ": "1MT",
+              "HSN Code": "32089090",
+              "Packing Type": "20Kg Container"
+            },
+            
+            // Application Areas with images
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Runways",
+                description: "YNM Safety waterborne airfield marking paints deliver high-visibility runway markings for safe aircraft landing and take-off.",
+                image: "/assets/YNM Safety Runways.png",
+                details: "YNM Safety manufactures waterborne airfield marking paints designed to withstand heavy aircraft loads and extreme weather conditions. Our runway marking paints ensure long-lasting visibility and compliance with aviation safety standards."
+              },
+              {
+                id: "app2",
+                title: "Taxiways",
+                description: "Waterborne airfield marking paints provide clear directional guidance on airport taxiways.",
+                image: "/assets/YNM Safety Taxiways.png",
+                details: "YNM Safety waterborne paints offer fast drying and strong adhesion for uninterrupted taxiway operations. Manufactured for precise markings that improve aircraft movement safety."
+              },
+              {
+                id: "app3",
+                title: "Aprons",
+                description: "Waterborne airfield marking paints support safe aircraft servicing and ground operations on aprons.",
+                image: "/assets/YNM Safety Aprons.png",
+                details: "YNM Safety manufactures durable waterborne airfield marking paints resistant to surface wear and operational stress. Ideal for high-traffic apron zones requiring consistent marking clarity."
+              },
+              {
+                id: "app4",
+                title: "Aircraft Parking Bays",
+                description: "Clear aircraft parking bay markings ensure accurate positioning and safety.",
+                image: "/assets/YNM Safety Aircraft Parking Bays.png",
+                details: "YNM Safety waterborne airfield marking paints manufactures supply high-contrast paints for aircraft parking areas. Designed for long-lasting visibility in busy airport environments."
+              },
+              {
+                id: "app5",
+                title: "Holding Position Markings",
+                description: "Holding position markings improve runway safety and aircraft control.",
+                image: "/assets/YNM Safety Holding position markings.png",
+                details: "YNM Safety manufactures waterborne airfield marking paints for precise holding position identification. These markings reduce runway incursion risks and enhance pilot awareness."
+              },
+              {
+                id: "app6",
+                title: "Helipads",
+                description: "Waterborne airfield marking paints provide durable and highly visible helipad markings.",
+                image: "/assets/YNM Safety Helipads.png",
+                details: "YNM Safety waterborne paints deliver excellent adhesion and clarity for rooftop and ground helipads. Manufactured to support safe helicopter landing and take-off operations."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Runways",
+                short: "YNM Safety waterborne airfield marking paints deliver high-visibility runway markings for safe aircraft landing and take-off.",
+                hover: "YNM Safety manufactures waterborne airfield marking paints designed to withstand heavy aircraft loads and extreme weather conditions. Our runway marking paints ensure long-lasting visibility and compliance with aviation safety standards.",
+                image: "/assets/YNM Safety Runways.png"
+              },
+              {
+                title: "Taxiways",
+                short: "Waterborne airfield marking paints provide clear directional guidance on airport taxiways.",
+                hover: "YNM Safety waterborne paints offer fast drying and strong adhesion for uninterrupted taxiway operations. Manufactured for precise markings that improve aircraft movement safety.",
+                image: "/assets/YNM Safety Taxiways.png"
+              },
+              {
+                title: "Aprons",
+                short: "Waterborne airfield marking paints support safe aircraft servicing and ground operations on aprons.",
+                hover: "YNM Safety manufactures durable waterborne airfield marking paints resistant to surface wear and operational stress. Ideal for high-traffic apron zones requiring consistent marking clarity.",
+                image: "/assets/YNM Safety Aprons.png"
+              },
+              {
+                title: "Aircraft Parking Bays",
+                short: "Clear aircraft parking bay markings ensure accurate positioning and safety.",
+                hover: "YNM Safety waterborne airfield marking paints manufactures supply high-contrast paints for aircraft parking areas. Designed for long-lasting visibility in busy airport environments.",
+                image: "/assets/YNM Safety Aircraft Parking Bays.png"
+              },
+              {
+                title: "Holding Position Markings",
+                short: "Holding position markings improve runway safety and aircraft control.",
+                hover: "YNM Safety manufactures waterborne airfield marking paints for precise holding position identification. These markings reduce runway incursion risks and enhance pilot awareness.",
+                image: "/assets/YNM Safety Holding position markings.png"
+              },
+              {
+                title: "Helipads",
+                short: "Waterborne airfield marking paints provide durable and highly visible helipad markings.",
+                hover: "YNM Safety waterborne paints deliver excellent adhesion and clarity for rooftop and ground helipads. Manufactured to support safe helicopter landing and take-off operations.",
+                image: "/assets/YNM Safety Helipads.png"
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 150,
+              currency: "INR",
+              unit: "per kg",
+              displayPrice: "₹150 per kg",
+              packageSizes: [
+                { size: "20 kg", priceINR: 150, moq: 50 },
+                { size: "100 kg", priceINR: 145, moq: 20 },
+                { size: "1000 kg", priceINR: 140, moq: 5 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 1000, discount: 3 },
+                { minQuantity: 5000, discount: 5 },
+                { minQuantity: 10000, discount: 8 },
+                { minQuantity: 25000, discount: 10 }
+              ]
+            },
+            
+            gallery: [
+              "/assets/YNM Safety Runways.png",
+              "/assets/YNM Safety Taxiways.png",
+              "/assets/YNM Safety Aprons.png",
+              "/assets/YNM Safety Aircraft Parking Bays.png",
+              "/assets/YNM Safety Holding position markings.png",
+              "/assets/YNM Safety Helipads.png"
+            ],
+            
+            // Our Projects / Clients
+            projects: [],
+            
+            meta: {
+              title: "Waterborne Airfield Marking Paints Manufacturers | Airport Marking Paints | YNM Safety",
+              description: "YNM Safety manufactures high-quality waterborne airfield marking paints for runways, taxiways, aprons, and helipads, offering durable, fast-drying, and high-visibility airport marking solutions.",
+              slug: "/waterborne-airfield-marking-paints-manufacturers"
+            },
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Waterborne Airfield Marking Paint Market Growth",
+              description: "The water airfield marking paint market is growing steadily, driven by global airport expansion and stricter aviation safety standards. The market was valued at around USD 550–600 million in recent years and is projected to reach nearly USD 900 million–1 billion by the early 2030s. This reflects an average CAGR of about 5–6% over the forecast period. Growth is further supported by rising air traffic and the shift toward eco-friendly, low-VOC water-based coatings.",
+              cagr: "5-6%",
+              growthFactors: [
+                "Airport Infrastructure Expansion",
+                "Environmental & Safety regulations",
+                "Increasing Air traffic worldwide",
+                "Technological Advancements in paint formulations",
+                "Growth in Emerging Regions and new airport development"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$575M",
+                projectedMarketSize: "$950M",
+                currentYear: "2024",
+                projectedYear: "2032",
+                airportsGlobal: "41,000+",
+                annualPaintConsumption: "15,000+ MT",
+                aviationSafetySpending: "$12B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "North America", value: 32, color: "#74060D" },
+                { region: "Europe", value: 28, color: "#9A1B2E" },
+                { region: "Asia Pacific", value: 25, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 10, color: "#D4A853" },
+                { region: "Latin America", value: 5, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 0.575 },
+                { year: "2026", value: 0.65 },
+                { year: "2028", value: 0.75 },
+                { year: "2030", value: 0.85 },
+                { year: "2032", value: 0.95 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Russia", "Sweden", "Netherlands", "Switzerland", "Belgium", "Austria"]
+                },
+                {
+                  name: "Asia & Asia-Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Australia", "Indonesia", "Vietnam", "Philippines", "Thailand", "Malaysia", "Taiwan"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina", "Colombia", "Chile", "Panama"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates", "Saudi Arabia", "Egypt", "South Africa", "Nigeria", "Israel", "Turkey"]
+                }
+              ]
+            },
+            
+            performanceMetrics: "50 MT/month",
+            
+            statistics: {
+              annualCapacity: "600 MT",
+              exportCountries: "20+",
+              qualityStandards: "IS164-2023",
+              productionSpeed: "50 MT"
+            },
+            
+            // Manufacturing Process
+            manufacturingProcessIntro: "YNM Safety manufactures Waterborne Airfield Marking Paints through a controlled, quality-driven process to ensure excellent visibility, adhesion, weather resistance, and compliance with aviation safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Procurement",
+                description: "High-quality raw materials such as acrylic or styrene-acrylic emulsions, titanium dioxide pigments, extender fillers, additives, defoamers, and deionized water are sourced from approved suppliers to ensure consistency, durability, and compliance with airfield standards."
+              },
+              {
+                step: "02",
+                title: "Raw Material Inspection & Quality Check",
+                description: "All incoming raw materials are tested for parameters like purity, viscosity, particle size, and moisture content to ensure they meet aviation and environmental specifications before production begins."
+              },
+              {
+                step: "03",
+                title: "Pre-Mixing of Liquid Components",
+                description: "Water, binders, wetting agents, dispersants, and other liquid additives are charged into the mixing vessel and blended at controlled speed to create a uniform base mixture."
+              },
+              {
+                step: "04",
+                title: "Pigment & Filler Dispersion",
+                description: "High-opacity pigments such as titanium dioxide and selected fillers are slowly added to the pre-mix. High-speed dispersers are used to achieve fine particle dispersion for excellent color brightness and visibility."
+              },
+              {
+                step: "05",
+                title: "Grinding & Homogenization",
+                description: "The paint slurry is processed through grinding equipment to ensure uniform particle size, smooth texture, and consistent film performance required for runway and taxiway markings."
+              },
+              {
+                step: "06",
+                title: "Let-Down & Final Mixing",
+                description: "Additional binders, performance additives, anti-settling agents, and rheology modifiers are added during the let-down stage to achieve the required viscosity, drying time, skid resistance, and durability."
+              },
+              {
+                step: "07",
+                title: "Quality Control Testing",
+                description: "The finished paint is tested for color consistency, viscosity, drying time, adhesion, reflectivity compatibility, abrasion resistance, and compliance with ICAO / FAA / DGCA standards."
+              },
+              {
+                step: "08",
+                title: "Filtration & Batch Approval",
+                description: "The paint is filtered to remove any impurities or agglomerates. After final inspection and approval by the quality team, the batch is released for packing."
+              },
+              {
+                step: "09",
+                title: "Filling & Packaging",
+                description: "Approved paint is filled into HDPE drums or containers of required capacity, properly sealed, batch-coded, and labeled with product specifications and safety information."
+              },
+              {
+                step: "10",
+                title: "Storage & Dispatch",
+                description: "Packed materials are stored in a controlled warehouse environment and dispatched as per customer orders with proper documentation to ensure safe transport and on-time delivery to airfield projects."
+              }
+            ]
           }
         ]
       },
@@ -1272,6 +1661,414 @@ export const productsData = {
                 step: "09",
                 title: "Packing, Storage & Dispatch",
                 description: "Approved crash barriers are securely bundled, labeled, and stored in covered areas. Products are then dispatched with proper documentation to ensure safe and timely delivery."
+              }
+            ]
+          },
+          {
+            id: "cb2",
+            slug: "double-w-beam-crash-barriers-manufacturers",
+            name: "Double W Beam Crash Barriers",
+            shortDesc: "High-strength double W beam crash barrier manufactures delivering superior impact resistance, durability, and enhanced road safety for global infrastructure projects.",
+            desc: "High-strength double W beam crash barrier manufactures delivering superior impact resistance, durability, and enhanced road safety for global infrastructure projects.",
+            image: "/assets/YNM Safety Highways & Expressways w double beam barrier.png",
+            heroImage: "/assets/YNM Safety Highways & Expressways w double beam barrier.png",
+            specs: ["Double W-beam profile", "Hot-dip galvanized", "IS 5986 certified", "MoRTH compliant", "High tensile strength", "2.7mm/3.0mm thickness"],
+            overview: "YNM Safety is one of the leading double W beam manufactures, delivering robust and reliable metal beam crash barriers engineered for maximum road safety and long-term performance. As trusted YNM Safety manufactures, our double W beam crash barriers are designed to absorb high-impact collisions, prevent vehicle crossovers, and reduce accident severity on highways and expressways. Manufactured using premium galvanized steel, our W beam barriers offer excellent corrosion resistance and structural strength. Our products are widely supplied to government projects, EPC contractors, and private infrastructure developers, making YNM Safety a preferred name among metal beam manufactures and w beam barrier manufactures across domestic and international markets.",
+            detailedDescription: "YNM Safety is one of the leading double W beam manufactures, delivering robust and reliable metal beam crash barriers engineered for maximum road safety and long-term performance. As trusted YNM Safety manufactures, our double W beam crash barriers are designed to absorb high-impact collisions, prevent vehicle crossovers, and reduce accident severity on highways and expressways. Manufactured using premium galvanized steel, our W beam barriers offer excellent corrosion resistance and structural strength. Our products are widely supplied to government projects, EPC contractors, and private infrastructure developers, making YNM Safety a preferred name among metal beam manufactures and w beam barrier manufactures across domestic and international markets.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Double W Beam Crash Barrier" },
+              { label: "Material", value: "High-Grade Galvanized Steel" },
+              { label: "Beam Thickness", value: "2.7 mm / 3.0 mm" },
+              { label: "Beam Width", value: "310 mm" },
+              { label: "Surface Finish", value: "Hot Dip Galvanized" },
+              { label: "Coating Thickness", value: "550 – 610 GSM" },
+              { label: "Impact Absorption", value: "High Energy Absorption" },
+              { label: "Design Life", value: "20 – 25 Years" },
+              { label: "Compliance", value: "ISO 9001: 2015" },
+              { label: "Application Area", value: "Highways, Expressways, Bridges" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "30 Kg/Rm (Railways), 40 Kg/Rm (Highways)",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IRC 119, MoRTH 803, ISO 9001:2015, EN 1317",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "1000 rm (India), 5000 rm (Export)",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "73089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Double W Beam Crash Barrier",
+                "Material: High-Grade Galvanized Steel",
+                "Beam Thickness: 2.7 mm / 3.0 mm",
+                "Beam Width: 310 mm",
+                "Surface Finish: Hot Dip Galvanized",
+                "Coating Thickness: 550 – 610 GSM",
+                "Impact Absorption: High Energy Absorption",
+                "Design Life: 20 – 25 Years",
+                "Compliance: ISO 9001: 2015",
+                "Application Area: Highways, Expressways, Bridges",
+                "HSN Code: 73089090"
+              ],
+              keyFeatures: [
+                "High impact energy absorption",
+                "Superior corrosion resistance",
+                "Long service life with minimal maintenance",
+                "Designed for high-speed road safety",
+                "Manufactured to global standards"
+              ],
+              advantages: [
+                "Prevents vehicle cross-over accidents",
+                "Reduces fatal crash severity",
+                "Easy installation & replacement",
+                "Cost-effective long-term safety solution",
+                "Trusted double w beam manufactures – YNM Safety"
+              ]
+            },
+            
+            features: [
+              "High impact energy absorption",
+              "Superior corrosion resistance",
+              "Long service life with minimal maintenance",
+              "Designed for high-speed road safety",
+              "Manufactured to global standards"
+            ],
+            
+            advantages: [
+              "Prevents vehicle cross-over accidents",
+              "Reduces fatal crash severity",
+              "Easy installation & replacement",
+              "Cost-effective long-term safety solution",
+              "Trusted double w beam manufactures – YNM Safety"
+            ],
+            
+            technicalSpecs: {
+              "Product Type": "Double W Beam Crash Barrier",
+              "Material": "High-Grade Galvanized Steel",
+              "Beam Thickness": "2.7 mm / 3.0 mm",
+              "Beam Width": "310 mm",
+              "Surface Finish": "Hot Dip Galvanized",
+              "Coating Thickness": "550 – 610 GSM",
+              "Impact Absorption": "High Energy Absorption",
+              "Design Life": "20 – 25 Years",
+              "Compliance": "ISO 9001: 2015",
+              "Country of Origin": "India",
+              "Manufacturing Location": "Hyderabad",
+              "Net Weight": "30 Kg/Rm (Railways), 40 Kg/Rm (Highways)",
+              "Quality Standards": "IRC 119, MoRTH 803, ISO 9001:2015, EN 1317",
+              "MOQ": "1000 rm (India), 5000 rm (Export)",
+              "HSN Code": "73089090",
+              "Packing Type": "Standard"
+            },
+            
+            // Application Areas with images
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Highways & Expressways",
+                description: "YNM Safety double W beam crash barriers provide strong vehicle containment and enhanced safety on high-speed highways and expressways.",
+                image: "/assets/YNM Safety Highways & Expressways w double beam barrier.png",
+                details: "YNM Safety manufactures high-quality double W beam barriers designed to absorb impact energy and prevent cross-over accidents. Our metal beam crash barriers meet MORTH and IRC standards, ensuring long-term durability and highway safety performance."
+              },
+              {
+                id: "app2",
+                title: "Urban Roads & Arterial Streets",
+                description: "Double W beam barriers improve traffic discipline and road safety on busy urban roads and arterial streets.",
+                image: "/assets/YNM Safety Urban roads & arterial streets w double beam barrier.png",
+                details: "YNM Safety metal beam manufactures supply crash barriers that protect vehicles and pedestrians in high-traffic city environments. These W beam barriers reduce accident severity and maintain structural stability under frequent impact conditions."
+              },
+              {
+                id: "app3",
+                title: "Bridges & Flyovers",
+                description: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
+                image: "/assets/YNM Safety Bridges & flyovers w double beam barrier.png",
+                details: "YNM Safety manufactures corrosion-resistant double W beam crash barriers ideal for elevated structures. Our W beam barrier manufactures ensure controlled vehicle deflection and long service life in demanding bridge conditions."
+              },
+              {
+                id: "app4",
+                title: "Curves, Ramps & Interchanges",
+                description: "Double W beam barriers guide vehicles safely through sharp curves, ramps, and interchanges.",
+                image: "/assets/YNM Safety Curves Ramps and Interchanges w double beam barrier.png",
+                details: "YNM Safety double W beam manufactures design barriers that effectively absorb collision impact at high-risk curve locations. These metal beam crash barriers enhance vehicle stability and reduce run-off-road accidents."
+              },
+              {
+                id: "app5",
+                title: "Road Medians & Central Dividers",
+                description: "W beam crash barriers prevent vehicle cross-overs and enhance median safety.",
+                image: "/assets/YNM Safety Road medians & central dividers w double beam barrier.png",
+                details: "YNM Safety manufactures double W beam barriers for medians and central dividers to improve traffic separation. Our metal beam manufactures deliver high-strength barriers that minimize head-on collision risks."
+              },
+              {
+                id: "app6",
+                title: "Embankments, Slopes & Roadside Hazards",
+                description: "Double W beam crash barriers protect vehicles from roadside hazards and steep embankments.",
+                image: "/assets/YNM Safety Embankments Slopes and Roadside hazards w double beam barrier.png",
+                details: "YNM Safety metal beam manufactures supply robust crash barriers for slope protection and hazard containment. These W beam barriers reduce vehicle roll-over risks and enhance overall roadside safety."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Highways & Expressways",
+                short: "YNM Safety double W beam crash barriers provide strong vehicle containment and enhanced safety on high-speed highways and expressways.",
+                hover: "YNM Safety manufactures high-quality double W beam barriers designed to absorb impact energy and prevent cross-over accidents. Our metal beam crash barriers meet MORTH and IRC standards, ensuring long-term durability and highway safety performance.",
+                image: "/assets/YNM Safety Highways & Expressways w double beam barrier.png"
+              },
+              {
+                title: "Urban Roads & Arterial Streets",
+                short: "Double W beam barriers improve traffic discipline and road safety on busy urban roads and arterial streets.",
+                hover: "YNM Safety metal beam manufactures supply crash barriers that protect vehicles and pedestrians in high-traffic city environments. These W beam barriers reduce accident severity and maintain structural stability under frequent impact conditions.",
+                image: "/assets/YNM Safety Urban roads & arterial streets w double beam barrier.png"
+              },
+              {
+                title: "Bridges & Flyovers",
+                short: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
+                hover: "YNM Safety manufactures corrosion-resistant double W beam crash barriers ideal for elevated structures. Our W beam barrier manufactures ensure controlled vehicle deflection and long service life in demanding bridge conditions.",
+                image: "/assets/YNM Safety Bridges & flyovers w double beam barrier.png"
+              },
+              {
+                title: "Curves, Ramps & Interchanges",
+                short: "Double W beam barriers guide vehicles safely through sharp curves, ramps, and interchanges.",
+                hover: "YNM Safety double W beam manufactures design barriers that effectively absorb collision impact at high-risk curve locations. These metal beam crash barriers enhance vehicle stability and reduce run-off-road accidents.",
+                image: "/assets/YNM Safety Curves , Ramps and Interchnages w double beam barrier.png"
+              },
+              {
+                title: "Road Medians & Central Dividers",
+                short: "W beam crash barriers prevent vehicle cross-overs and enhance median safety.",
+                hover: "YNM Safety manufactures double W beam barriers for medians and central dividers to improve traffic separation. Our metal beam manufactures deliver high-strength barriers that minimize head-on collision risks.",
+                image: "/assets/YNM Safety Road medians & central dividers w double beam barrier.png"
+              },
+              {
+                title: "Embankments, Slopes & Roadside Hazards",
+                short: "Double W beam crash barriers protect vehicles from roadside hazards and steep embankments.",
+                hover: "YNM Safety metal beam manufactures supply robust crash barriers for slope protection and hazard containment. These W beam barriers reduce vehicle roll-over risks and enhance overall roadside safety.",
+                image: "/assets/YNM Safety Embankments Slopes and Roadside hazards w double beam barrier.png"
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 2100,
+              currency: "INR",
+              unit: "per running meter",
+              thickness: "t=3mm",
+              displayPrice: "₹2,100 per running meter (t=3mm)",
+              packageSizes: [
+                { size: "100 meters", priceINR: 2100, moq: 100 },
+                { size: "500 meters", priceINR: 2050, moq: 500 },
+                { size: "1000 meters", priceINR: 2000, moq: 1000 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 500, discount: 3 },
+                { minQuantity: 1000, discount: 5 },
+                { minQuantity: 5000, discount: 8 },
+                { minQuantity: 10000, discount: 10 }
+              ]
+            },
+            
+            gallery: [
+              "/assets/YNM Safety Highways & Expressways w double beam barrier.png",
+              "/assets/YNM Safety Urban roads & arterial streets w double beam barrier.png",
+              "/assets/YNM Safety Bridges & flyovers w double beam barrier.png",
+              "/assets/YNM Safety Curves Ramps and Interchanges w double beam barrier.png",
+              "/assets/YNM Safety Road medians & central dividers w double beam barrier.png",
+              "/assets/YNM Safety Embankments Slopes and Roadside hazards w double beam barrier.png"
+            ],
+            
+            // Our Projects / Clients
+            projects: [
+              {
+                id: "proj1",
+                title: "M/S AV Developer - Agra Project",
+                client: "M/S AV Developer",
+                location: "Agra",
+                description: "Supplied 42,000 Running Meters of Double W-Beam Crash Barriers for highway safety infrastructure development project in Agra. Our high-quality galvanized steel barriers provided excellent impact resistance and long-term durability for this critical road safety installation.",
+                quantity: "42,000 RM",
+                year: "2024"
+              }
+            ],
+            
+            meta: {
+              title: "Double W Beam Crash Barriers Manufacturers | Metal Beam Barriers | YNM Safety",
+              description: "YNM Safety manufactures high-quality double W beam crash barriers and metal beam barriers for highways, expressways, and road safety projects, compliant with international standards.",
+              slug: "/double-w-beam-crash-barriers-manufacturers"
+            },
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Double W-Beam Crash Barrier Market Growth",
+              description: "Double W-beam crash barriers (as part of the broader W-beam/metal beam crash barrier segment), Compared with ~USD 1.25–1.5 billion in 2024, the Double W-beam crash barrier segment is projected to nearly double in value by 2033 (to around USD 2.3–2.8 billion), reflecting strong infrastructure investment and rising road safety demand worldwide.",
+              cagr: "5-7%",
+              growthFactors: [
+                "Expansion of road and highway infrastructure",
+                "Stringent government road safety regulations",
+                "Growth in vehicle population and traffic density",
+                "Rapid urbanization and expressway development",
+                "Advancements in crash barrier design and materials"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.4B",
+                projectedMarketSize: "$2.6B",
+                currentYear: "2024",
+                projectedYear: "2033",
+                highwayKmGlobal: "75M+",
+                annualInstallations: "15,000+",
+                roadsafetySpending: "$200B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 24, color: "#9A1B2E" },
+                { region: "Europe", value: 18, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 1.4 },
+                { year: "2026", value: 1.7 },
+                { year: "2028", value: 2.0 },
+                { year: "2030", value: 2.3 },
+                { year: "2032", value: 2.5 },
+                { year: "2033", value: 2.6 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia",
+                  countries: ["China", "India", "Nepal", "Malaysia", "Singapore", "Russia", "South Korea", "Japan", "Indonesia", "Vietnam", "Thailand"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["United Kingdom", "Germany", "France", "Italy", "Spain", "Netherlands", "Belgium", "Poland", "Czech Republic", "Austria"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Middle East",
+                  countries: ["Saudi Arabia", "United Arab Emirates", "Qatar", "Oman"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa", "Mauritius"]
+                },
+                {
+                  name: "Latin America & Caribbean",
+                  countries: ["Brazil", "Argentina", "Colombia", "Chile", "Peru", "Mexico"]
+                },
+                {
+                  name: "Oceania",
+                  countries: ["Australia", "New Zealand", "Papua New Guinea"]
+                }
+              ]
+            },
+            
+            performanceMetrics: "500,000 running meters/month",
+            
+            statistics: {
+              annualCapacity: "6,000,000 R.M",
+              exportCountries: "20+",
+              qualityStandards: "ISO 9001: 2015",
+              productionSpeed: "500,000 RM"
+            },
+            
+            // Manufacturing Process
+            manufacturingProcessIntro: "Our Double W Beam Crash Barriers are manufactured through a controlled, quality-driven process to ensure maximum strength, durability, and compliance with national and international road safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Procurement",
+                description: "High-quality hot rolled steel coils or sheets (as per IS 5986 / ASTM A36 / EN standards) are procured. The steel must meet specified yield strength, thickness, and chemical composition requirements to ensure impact resistance and durability."
+              },
+              {
+                step: "02",
+                title: "Material Inspection & Testing",
+                description: "Incoming steel coils are inspected for thickness tolerance, surface defects, and mechanical properties. Only approved and tested raw material is released for production."
+              },
+              {
+                step: "03",
+                title: "Decoiling & Sheet Cutting",
+                description: "Steel coils are mounted on decoilers and straightened. Sheets are then cut to required lengths using shearing or slitting machines based on the standard W-beam size."
+              },
+              {
+                step: "04",
+                title: "Roll Forming (Double W Profile)",
+                description: "Cut steel sheets are passed through a precision roll-forming line where they are shaped into the Double W (Thrie Beam / W-Beam) profile. This step ensures accurate wave geometry, uniform thickness, and consistent strength along the beam."
+              },
+              {
+                step: "05",
+                title: "Punching & Slotting",
+                description: "Computer-controlled punching machines create bolt holes and slots for spacer blocks and posts. This allows easy installation and proper alignment at site."
+              },
+              {
+                step: "06",
+                title: "Edge Trimming & Finishing",
+                description: "Edges are trimmed and deburred to remove sharp corners. This enhances worker safety, product aesthetics, and coating adhesion."
+              },
+              {
+                step: "07",
+                title: "Hot Dip Galvanizing",
+                description: "Formed W-beams are galvanized using the hot dip galvanizing process as per IS 2629 / IS 4759 / ASTM A123. This provides uniform zinc coating, high corrosion resistance, and long service life in harsh weather conditions."
+              },
+              {
+                step: "08",
+                title: "Galvanized Coating Thickness Inspection",
+                description: "Zinc coating thickness is measured using calibrated gauges to ensure compliance with standards. Visual checks are done for smooth finish, no bare spots, and proper adhesion."
+              },
+              {
+                step: "09",
+                title: "Straightening & Final Quality Check",
+                description: "Post-galvanization, beams are straightened if required and undergo final inspection for dimensions, hole alignment, coating quality, and overall finish."
+              },
+              {
+                step: "10",
+                title: "Packing & Labeling",
+                description: "Approved crash barriers are stacked properly, bundled with protective spacers, and labeled with batch number, size, and standard reference. This prevents damage during transportation."
+              },
+              {
+                step: "11",
+                title: "Dispatch",
+                description: "Finished Double W Beam Crash Barriers are dispatched as per customer or project requirements to Highways & Expressways, Urban Roads, and Bridges & Flyovers."
               }
             ]
           }

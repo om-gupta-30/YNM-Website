@@ -3,15 +3,13 @@ import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import Head from "next/head";
 import Script from "next/script";
-import UnderConstruction from "@/components/UnderConstruction";
 
 // Lazy-load below-the-fold / non-critical UI to reduce initial JS (PageSpeed: unused JS)
 const Mascot = dynamic(() => import("@/components/Mascot"), { ssr: false });
 const FloatingSocialMedia = dynamic(() => import("@/components/FloatingSocialMedia"), { ssr: false });
 const Chatbot = dynamic(() => import("@/components/Chatbot"), { ssr: false });
 
-// Check if under construction mode is enabled
-const isUnderConstruction = process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION === 'true';
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 // Fast smooth scroll function (500ms with easeOutQuart)
 const smoothScrollTo = (targetY, duration = 500) => {
@@ -92,10 +90,22 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
-  // Show Under Construction page if enabled
-  if (isUnderConstruction) {
-    return <UnderConstruction />;
-  }
+  const analytics = gaId ? (
+    <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${gaId}');
+        `}
+      </Script>
+    </>
+  ) : null;
 
   return (
     <>
@@ -104,22 +114,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       
       {/* Google Analytics - Only load if GA_ID is configured */}
-      {process.env.NEXT_PUBLIC_GA_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-            `}
-          </Script>
-        </>
-      )}
+      {analytics}
       
       <Component {...pageProps} />
       <Mascot />
