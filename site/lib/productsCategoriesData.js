@@ -2071,6 +2071,406 @@ export const productsData = {
                 description: "Finished Double W Beam Crash Barriers are dispatched as per customer or project requirements to Highways & Expressways, Urban Roads, and Bridges & Flyovers."
               }
             ]
+          },
+          {
+            id: "cb3",
+            slug: "roller-beam-crash-barrier-manufacturers",
+            name: "Roller Beam Crash Barriers",
+            shortDesc: "YNM Safety manufactures advanced roller beam crash barriers engineered to reduce collision impact, minimize vehicle damage, and enhance road safety across highways, curves, and high-risk zones.",
+            desc: "YNM Safety manufactures advanced roller beam crash barriers engineered to reduce collision impact, minimize vehicle damage, and enhance road safety across highways, curves, and high-risk zones.",
+            image: "/assets/YNM Safety Highways & Expressways roller beam barriers.png",
+            heroImage: "/assets/YNM Safety Highways & Expressways roller beam barriers.png",
+            specs: ["Rotating roller design", "Hot-dip galvanized", "MoRTH 810 certified", "EN 1317 compliant", "High energy absorption", "3.0mm thickness"],
+            overview: "YNM Safety is one of the trusted roller beam crash barrier manufacturers, delivering next-generation metal beam crash barriers that combine steel strength with energy-absorbing roller technology. As experienced YNM Safety metal beam crash barrier manufacturers, our roller beam systems are designed to rotate upon impact, reducing collision force and safely redirecting vehicles back onto the roadway. This innovative mechanism significantly lowers accident severity, vehicle damage, and fatality risks, especially at curves and accident-prone zones. Our roller beam crash barriers are widely adopted in national highways, expressways, bridges, and smart road infrastructure projects across India and international markets.",
+            detailedDescription: "YNM Safety is one of the trusted roller beam crash barrier manufacturers, delivering next-generation metal beam crash barriers that combine steel strength with energy-absorbing roller technology. As experienced YNM Safety metal beam crash barrier manufacturers, our roller beam systems are designed to rotate upon impact, reducing collision force and safely redirecting vehicles back onto the roadway. This innovative mechanism significantly lowers accident severity, vehicle damage, and fatality risks, especially at curves and accident-prone zones. Our roller beam crash barriers are widely adopted in national highways, expressways, bridges, and smart road infrastructure projects across India and international markets.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Roller Beam Crash Barrier" },
+              { label: "Material", value: "High-Strength Galvanized Steel & Polymer Rollers" },
+              { label: "Beam Thickness", value: "3.0 mm" },
+              { label: "Roller Diameter", value: "345 mm" },
+              { label: "Surface Finish", value: "Hot Dip Galvanized" },
+              { label: "Coating Thickness", value: "550–610 GSM" },
+              { label: "Impact Energy Absorption", value: "Very High" },
+              { label: "Design Life", value: "20–25 Years" },
+              { label: "Compliance", value: "MoRTH 810, EN 1317, ISO 9001:2015" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "35-50 Kg/Rm",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "EN 1317, MoRTH 810, ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "1Km",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "73089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Roller Beam Crash Barrier",
+                "Material: High-Strength Galvanized Steel & Polymer Rollers",
+                "Beam Thickness: 3.0 mm",
+                "Roller Diameter: 345 mm",
+                "Surface Finish: Hot Dip Galvanized",
+                "Coating Thickness: 550–610 GSM",
+                "Impact Energy Absorption: Very High",
+                "Design Life: 20–25 Years",
+                "Compliance: MoRTH 810, EN 1317, ISO 9001:2015",
+                "HSN Code: 73089090"
+              ],
+              keyFeatures: [
+                "High impact energy absorption through rotating rollers",
+                "Reduces vehicle damage and occupant injury",
+                "Excellent corrosion resistance",
+                "Ideal for sharp curves and high-risk zones",
+                "Manufactured by certified YNM Safety manufacturers"
+              ],
+              advantages: [
+                "Minimizes fatal accident severity",
+                "Prevents vehicle rollover and cross-over",
+                "Improves visibility with reflective rollers",
+                "Low maintenance and long service life",
+                "Trusted YNM Safety metal beam crash barrier manufacturers"
+              ]
+            },
+            
+            features: [
+              "High impact energy absorption through rotating rollers",
+              "Reduces vehicle damage and occupant injury",
+              "Excellent corrosion resistance",
+              "Ideal for sharp curves and high-risk zones",
+              "Manufactured by certified YNM Safety manufacturers"
+            ],
+            
+            advantages: [
+              "Minimizes fatal accident severity",
+              "Prevents vehicle rollover and cross-over",
+              "Improves visibility with reflective rollers",
+              "Low maintenance and long service life",
+              "Trusted YNM Safety metal beam crash barrier manufacturers"
+            ],
+            
+            technicalSpecs: {
+              "Product Type": "Roller Beam Crash Barrier",
+              "Material": "High-Strength Galvanized Steel & Polymer Rollers",
+              "Beam Thickness": "3.0 mm",
+              "Roller Diameter": "345 mm",
+              "Surface Finish": "Hot Dip Galvanized",
+              "Coating Thickness": "550–610 GSM",
+              "Impact Energy Absorption": "Very High",
+              "Design Life": "20–25 Years",
+              "Compliance": "MoRTH 810, EN 1317, ISO 9001:2015",
+              "Country of Origin": "India",
+              "Manufacturing Location": "Hyderabad",
+              "Net Weight": "35-50 Kg/Rm",
+              "Quality Standards": "EN 1317, MoRTH 810, ISO 9001:2015",
+              "MOQ": "1Km",
+              "HSN Code": "73089090",
+              "Packing Type": "Standard"
+            },
+            
+            // Application Areas with images
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Highways & Expressways",
+                description: "YNM Safety roller beam crash barriers provide controlled vehicle redirection and enhanced safety on high-speed highways and expressways.",
+                image: "/assets/YNM Safety Highways & Expressways roller beam barriers.png",
+                details: "As leading roller beam crash barrier manufacturers, YNM Safety designs metal beam crash barriers that absorb high-impact collisions and reduce accident severity. Our systems comply with MoRTH and IRC standards, ensuring long-term performance on national and expressway corridors."
+              },
+              {
+                id: "app2",
+                title: "Sharp Curves & Accident-Prone Zones",
+                description: "Roller beam crash barriers improve safety at sharp curves and high-risk accident zones.",
+                image: "/assets/YNM Safety Sharp curves &Accident prone zones roller beam barriers.png",
+                details: "YNM Safety manufactures roller beam crash barriers with rotating energy-absorbing rollers that minimize collision impact and prevent vehicle rollover. These metal beam crash barriers are ideal for locations with frequent skidding and loss-of-control incidents."
+              },
+              {
+                id: "app3",
+                title: "Medians & Central Dividers",
+                description: "Roller beam barriers enhance median safety by preventing vehicle cross-over accidents.",
+                image: "/assets/YNM Safety Medians & Central dividers roller beam barriers.png",
+                details: "YNM Safety metal beam crash barrier manufacturers supply high-visibility roller beam systems that safely redirect vehicles back to their lanes. These barriers significantly reduce the risk of head-on collisions on divided highways and urban corridors."
+              },
+              {
+                id: "app4",
+                title: "Bridges & Flyovers",
+                description: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
+                image: "/assets/YNM Safety Bridges & Flyovers roller beam barriers.png",
+                details: "YNM Safety roller beam crash barrier manufacturers deliver corrosion-resistant systems designed for elevated structures. Our metal beam crash barriers ensure controlled vehicle deflection and long service life under demanding traffic conditions."
+              },
+              {
+                id: "app5",
+                title: "Mountain Roads & Ghat Sections",
+                description: "Roller beam crash barriers protect vehicles on steep slopes and narrow mountain roads.",
+                image: "/assets/YNM Safety Mountain roads & ghat sections roller beam barriers.png",
+                details: "YNM Safety manufactures roller beam crash barriers specifically for ghat sections, where rotating rollers absorb impact energy and prevent vehicles from falling into deep valleys. These metal beam crash barriers enhance safety on winding and low-visibility terrain."
+              },
+              {
+                id: "app6",
+                title: "Interchanges & Ramps",
+                description: "Roller beam crash barriers guide vehicles safely through interchanges and ramps.",
+                image: "/assets/YNM Safety Interchnages & Ramps roller beam barriers.png",
+                details: "YNM Safety metal beam crash barrier manufacturers design advanced roller beam systems that improve vehicle stability at merging and diverging points. These crash barriers reduce accident severity and ensure smoother traffic flow in complex road networks."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Highways & Expressways",
+                short: "YNM Safety roller beam crash barriers provide controlled vehicle redirection and enhanced safety on high-speed highways and expressways.",
+                hover: "As leading roller beam crash barrier manufacturers, YNM Safety designs metal beam crash barriers that absorb high-impact collisions and reduce accident severity. Our systems comply with MoRTH and IRC standards, ensuring long-term performance on national and expressway corridors.",
+                image: "/assets/YNM Safety Highways & Expressways roller beam barriers.png"
+              },
+              {
+                title: "Sharp Curves & Accident-Prone Zones",
+                short: "Roller beam crash barriers improve safety at sharp curves and high-risk accident zones.",
+                hover: "YNM Safety manufactures roller beam crash barriers with rotating energy-absorbing rollers that minimize collision impact and prevent vehicle rollover. These metal beam crash barriers are ideal for locations with frequent skidding and loss-of-control incidents.",
+                image: "/assets/YNM Safety Sharp curves &Accident prone zones roller beam barriers.png"
+              },
+              {
+                title: "Medians & Central Dividers",
+                short: "Roller beam barriers enhance median safety by preventing vehicle cross-over accidents.",
+                hover: "YNM Safety metal beam crash barrier manufacturers supply high-visibility roller beam systems that safely redirect vehicles back to their lanes. These barriers significantly reduce the risk of head-on collisions on divided highways and urban corridors.",
+                image: "/assets/YNM Safety Medians & Central dividers roller beam barriers.png"
+              },
+              {
+                title: "Bridges & Flyovers",
+                short: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
+                hover: "YNM Safety roller beam crash barrier manufacturers deliver corrosion-resistant systems designed for elevated structures. Our metal beam crash barriers ensure controlled vehicle deflection and long service life under demanding traffic conditions.",
+                image: "/assets/YNM Safety Bridges & Flyovers roller beam barriers.png"
+              },
+              {
+                title: "Mountain Roads & Ghat Sections",
+                short: "Roller beam crash barriers protect vehicles on steep slopes and narrow mountain roads.",
+                hover: "YNM Safety manufactures roller beam crash barriers specifically for ghat sections, where rotating rollers absorb impact energy and prevent vehicles from falling into deep valleys. These metal beam crash barriers enhance safety on winding and low-visibility terrain.",
+                image: "/assets/YNM Safety Mountain roads & ghat sections roller beam barriers.png"
+              },
+              {
+                title: "Interchanges & Ramps",
+                short: "Roller beam crash barriers guide vehicles safely through interchanges and ramps.",
+                hover: "YNM Safety metal beam crash barrier manufacturers design advanced roller beam systems that improve vehicle stability at merging and diverging points. These crash barriers reduce accident severity and ensure smoother traffic flow in complex road networks.",
+                image: "/assets/YNM Safety Interchnages & Ramps roller beam barriers.png"
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 2500,
+              currency: "INR",
+              unit: "per running meter",
+              thickness: "t=3mm",
+              displayPrice: "₹2,500 per running meter (t=3mm)",
+              packageSizes: [
+                { size: "100 meters", priceINR: 2500, moq: 100 },
+                { size: "500 meters", priceINR: 2450, moq: 500 },
+                { size: "1000 meters", priceINR: 2400, moq: 1000 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 500, discount: 3 },
+                { minQuantity: 1000, discount: 5 },
+                { minQuantity: 5000, discount: 8 },
+                { minQuantity: 10000, discount: 10 }
+              ]
+            },
+            
+            gallery: [
+              "/assets/YNM Safety Highways & Expressways roller beam barriers.png",
+              "/assets/YNM Safety Sharp curves &Accident prone zones roller beam barriers.png",
+              "/assets/YNM Safety Medians & Central dividers roller beam barriers.png",
+              "/assets/YNM Safety Bridges & Flyovers roller beam barriers.png",
+              "/assets/YNM Safety Mountain roads & ghat sections roller beam barriers.png",
+              "/assets/YNM Safety Interchnages & Ramps roller beam barriers.png"
+            ],
+            
+            // Our Projects / Clients
+            projects: [
+              {
+                id: "proj1",
+                title: "National Highway Project - Phase I",
+                client: "National Highways Authority of India",
+                location: "Maharashtra",
+                description: "Supplied 15,000 Running Meters of Roller Beam Crash Barriers for highway safety infrastructure development. Our innovative roller beam technology provided superior impact absorption and reduced accident severity on this critical highway corridor.",
+                quantity: "15,000 RM",
+                year: "2024"
+              }
+            ],
+            
+            meta: {
+              title: "Roller Beam Crash Barrier Manufacturers | YNM Safety",
+              description: "YNM Safety is a leading roller beam crash barrier manufacturer in India, supplying high-performance metal beam crash barriers designed for superior impact absorption, vehicle redirection, and long-term road safety compliance.",
+              slug: "/roller-beam-crash-barrier-manufacturers"
+            },
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Roller Beam Crash Barrier Market Growth",
+              description: "The global barrier systems market, which includes roller and metal beam crash barriers, was valued at about USD 21.1 B in 2023 and is forecast to reach around USD 25.5 B by 2028, reflecting a CAGR of approximately 3.8% driven by infrastructure expansion and stricter safety regulations.",
+              cagr: "3.8%",
+              growthFactors: [
+                "Stricter Road Safety Regulations",
+                "Rapid Infrastructure Expansion",
+                "Growing Vehicle Population and Traffic Volumes",
+                "Technological Advancements in Design and Materials",
+                "Urbanization and Expanding Transportation Networks"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$21.1B",
+                projectedMarketSize: "$25.5B",
+                currentYear: "2023",
+                projectedYear: "2028",
+                highwayKmGlobal: "80M+",
+                annualInstallations: "18,000+",
+                roadsafetySpending: "$220B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 40, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 18, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2023", value: 21.1 },
+                { year: "2024", value: 21.9 },
+                { year: "2025", value: 22.7 },
+                { year: "2026", value: 23.6 },
+                { year: "2027", value: 24.5 },
+                { year: "2028", value: 25.5 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia",
+                  countries: ["South Korea", "Japan", "China", "Malaysia", "Singapore", "India", "Indonesia"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "France", "Netherlands"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa", "Algeria", "Mozambique", "Ghana"]
+                },
+                {
+                  name: "Middle East",
+                  countries: ["United Arab Emirates"]
+                },
+                {
+                  name: "South America",
+                  countries: ["Brazil"]
+                }
+              ]
+            },
+            
+            performanceMetrics: {
+              monthly: "10 km",
+              annually: "120 km"
+            },
+            
+            statistics: {
+              annualCapacity: "120 km",
+              exportCountries: "20+",
+              qualityStandards: "MoRTH 810, EN 1317",
+              productionSpeed: "10 km/month"
+            },
+            
+            // Manufacturing Process
+            manufacturingProcessIntro: "Our Roller Beam Crash Barriers are manufactured through a precision-driven process combining advanced steel fabrication with innovative roller technology to ensure maximum impact absorption and road safety compliance.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Procurement & Quality Check",
+                description: "High-strength steel coils and polymer materials are sourced from certified suppliers. All materials undergo rigorous testing to ensure compliance with MoRTH 810, EN 1317, and ISO 9001:2015 standards."
+              },
+              {
+                step: "02",
+                title: "Steel Sheet Cutting & Preparation",
+                description: "Steel coils are precision-cut to required dimensions using advanced slitting machines. The cut sheets are prepared for roll-forming with exact dimensional accuracy."
+              },
+              {
+                step: "03",
+                title: "Roll Forming & Profile Creation",
+                description: "Steel sheets are passed through specialized roll-forming machines to create the beam profile that will house the roller mechanisms. This ensures structural integrity and proper roller alignment."
+              },
+              {
+                step: "04",
+                title: "Roller Component Manufacturing",
+                description: "High-strength polymer rollers are manufactured with precision diameter (345mm) to ensure smooth rotation upon impact. Each roller undergoes quality inspection for dimensional accuracy and rotation performance."
+              },
+              {
+                step: "05",
+                title: "Assembly & Roller Integration",
+                description: "Formed steel beams are integrated with roller components using precision mounting hardware. This critical step ensures rollers rotate freely while maintaining structural strength."
+              },
+              {
+                step: "06",
+                title: "Surface Preparation & Cleaning",
+                description: "Assembled barriers undergo thorough cleaning through degreasing and pickling processes to remove contaminants and ensure optimal galvanizing adhesion."
+              },
+              {
+                step: "07",
+                title: "Hot-Dip Galvanizing",
+                description: "The barrier systems are hot-dip galvanized as per IS 4759 standards, achieving a uniform zinc coating of 550-610 GSM for superior corrosion resistance and long service life."
+              },
+              {
+                step: "08",
+                title: "Roller Function Testing",
+                description: "Post-galvanization, each roller mechanism is tested for smooth rotation, impact response, and alignment. Only barriers meeting strict performance criteria are approved for dispatch."
+              },
+              {
+                step: "09",
+                title: "Final Inspection & Documentation",
+                description: "Completed roller beam barriers undergo comprehensive quality inspection including dimensional accuracy, coating thickness, and mechanical strength verification."
+              },
+              {
+                step: "10",
+                title: "Packaging & Dispatch",
+                description: "Approved roller beam crash barriers are carefully packaged with protective materials to prevent damage during transportation. Complete documentation including quality certificates and installation guides is provided."
+              }
+            ]
           }
         ]
       },
