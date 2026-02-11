@@ -189,15 +189,16 @@ app.yaml.bak
 # LOOSE / TEMPORARY IMAGE FOLDERS (not part of app)
 # ==============================================
 # Source image folders that were imported into site/public/assets/
-cantilever*/
-fabrication*/
-testimonials/
-aboutus.png
-2wbeam/
-airfield/
-rbcb/
-cold/
-*_temp/
-*_source/
-enamel/
-wkbp/
+# Use /folder to only match at repo root (not in site/public/assets/)
+/cantilever*/
+/fabrication*/
+/testimonials/
+/aboutus.png
+/2wbeam/
+/airfield/
+/rbcb/
+/cold/
+/*_temp/
+/*_source/
+/enamel/
+/wkbp/

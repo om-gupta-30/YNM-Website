@@ -175,7 +175,7 @@ GOOGLE_GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ### Step 1: Enable 2-Step Verification
 
 1. Go to https://myaccount.google.com/security
-2. Sign in with `guptaom31619@gmail.com`
+2. Sign in with your Gmail account
 3. Find "2-Step Verification"
 4. If "Off" → Click and enable it
 5. If "On" → Continue to next step
@@ -194,10 +194,10 @@ GOOGLE_GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ### Step 3: Add to .env
 
 ```env
-GMAIL_USER=guptaom31619@gmail.com
-GMAIL_APP_PASSWORD=abcd efgh ijkl mnop
+GMAIL_USER=your-email@gmail.com
+GMAIL_APP_PASSWORD=<paste the 16-char app password from Google>
 HR_EMAIL=ynm.hr@ynmsafety.com
-CAREERS_NOREPLY_FROM=guptaom31619@gmail.com
+CAREERS_NOREPLY_FROM=your-email@gmail.com
 ```
 
 **What happens:**
@@ -318,8 +318,8 @@ GOOGLE_SHEET_ID=your_sheet_id
 GOOGLE_SERVICE_ACCOUNT_EMAIL=your-service-account@project.iam.gserviceaccount.com
 GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
 GOOGLE_GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GMAIL_USER=guptaom31619@gmail.com
-GMAIL_APP_PASSWORD=your_16_char_password
+GMAIL_USER=your-email@gmail.com
+GMAIL_APP_PASSWORD=<16-char-app-password>
 HR_EMAIL=ynm.hr@ynmsafety.com
 ```
 
@@ -328,7 +328,7 @@ HR_EMAIL=ynm.hr@ynmsafety.com
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6LcXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 RECAPTCHA_SECRET_KEY=6LcYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
-CAREERS_NOREPLY_FROM=guptaom31619@gmail.com
+CAREERS_NOREPLY_FROM=your-email@gmail.com
 ```
 
 ### Vercel Deployment
