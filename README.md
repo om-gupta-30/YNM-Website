@@ -65,10 +65,13 @@ YNM-website/
 │   └── security-scan.yml           # GitHub Actions: secret scanning on push/PR
 ├── .gitignore                      # Root: env, keys, build outputs (no leaks)
 ├── .gitleaks.toml                  # Gitleaks rules for CI/local scans
+├── deploy-gcp.sh                   # GCP Cloud Run deployment script
+├── pre-push-check.sh               # Security check before pushing to GitHub
 ├── docs/                           # Internal documentation
 │   └── SEARCH-CONSOLE.md           # Google Search Console setup & reindex
 ├── LICENSE
 ├── README.md
+├── SETUP.md                        # Detailed setup guide for all integrations
 └── site/                           # Next.js app (set as root in Vercel/GCP)
     ├── components/                 # React components
     │   ├── Chatbot.jsx             # AI chatbot (Gemini)
@@ -112,7 +115,11 @@ YNM-website/
     ├── styles/
     │   └── globals.css
     ├── public/                     # Static assets
-    │   ├── assets/                 # Images, logos, team photos
+    │   ├── assets/                 # Images, logos, products
+    │   │   ├── brand-logos/        # Client/partner logos
+    │   │   ├── employeephotos/     # Team member photos
+    │   │   ├── team/               # Director photos
+    │   │   └── testimonials/       # Client testimonial photos
     │   ├── certificates/           # ISO certificate PDF
     │   ├── fonts/                  # Montserrat font
     │   ├── favicon.svg, favicon.ico
@@ -310,7 +317,7 @@ The app **builds and runs** without any env vars (e.g. `npm run build`). For **f
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `HR_EMAIL` | Email to receive career applications | `ynm.hr@ynmsafety.com` |
-| `CAREERS_NOREPLY_FROM` | Sender email for career notifications | `guptaom31619@gmail.com` |
+| `CAREERS_NOREPLY_FROM` | Sender email for career notifications | Same as `GMAIL_USER` (e.g. `your-email@gmail.com`) |
 
 ---
 
@@ -517,10 +524,10 @@ gitleaks detect --source . --verbose
    GOOGLE_SERVICE_ACCOUNT_EMAIL=your_service_account@project.iam.gserviceaccount.com
    GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
    GOOGLE_GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-   GMAIL_USER=guptaom31619@gmail.com
-   GMAIL_APP_PASSWORD=your_16_char_password
+   GMAIL_USER=your-email@gmail.com
+   GMAIL_APP_PASSWORD=<16-char-app-password-from-google>
    HR_EMAIL=ynm.hr@ynmsafety.com
-   CAREERS_NOREPLY_FROM=guptaom31619@gmail.com
+   CAREERS_NOREPLY_FROM=your-email@gmail.com
    NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
    NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6LcXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    RECAPTCHA_SECRET_KEY=6LcYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY

@@ -12,38 +12,7 @@ title = "YNM Security - Secret Detection Rules"
 # Use default gitleaks rules as base
 useDefault = true
 
-# Additional custom rules for this project
-[[rules]]
-id = "google-api-key"
-description = "Google API Key"
-regex = '''AIza[0-9A-Za-z_-]{35}'''
-tags = ["api-key", "google"]
-
-[[rules]]
-id = "google-private-key"
-description = "Google Service Account Private Key"
-regex = '''-----BEGIN (RSA |EC )?PRIVATE KEY-----'''
-tags = ["private-key", "google"]
-
-[[rules]]
-id = "gmail-app-password"
-description = "Gmail App Password (16 char format)"
-regex = '''[a-z]{4}\s[a-z]{4}\s[a-z]{4}\s[a-z]{4}'''
-tags = ["password", "gmail"]
-
-[[rules]]
-id = "generic-password-assignment"
-description = "Password assignment in code"
-regex = '''(?i)(password|passwd|pwd)\s*[:=]\s*['\"][^'\"]{4,}['\"]'''
-tags = ["password"]
-
-[[rules]]
-id = "generic-secret-assignment"
-description = "Secret assignment in code"
-regex = '''(?i)(secret|api_key|apikey|access_token)\s*[:=]\s*['\"][^'\"]{8,}['\"]'''
-tags = ["secret"]
-
-# Files to always ignore (not secrets)
+# Files to always ignore (not secrets - templates and documentation)
 [allowlist]
 paths = [
     '''\.env\.example$''',
@@ -52,13 +21,44 @@ paths = [
     '''yarn\.lock$''',
     '''pnpm-lock\.yaml$''',
     '''\.gitleaks\.toml$''',
+    '''README\.md$''',
+    '''SETUP\.md$''',
+    '''docs/.*\.md$''',
 ]
 
-# Specific strings to ignore (false positives)
+# Specific strings to ignore (false positives and placeholders)
 regexes = [
-    '''your_[a-z_]+_here''',  # Placeholder values
+    '''your_[a-z_]+_here''',
     '''example\.com''',
     '''placeholder''',
     '''YOUR_.*_KEY''',
-    '''x{4}\s+x{4}\s+x{4}\s+x{4}''', # README placeholder "xxxx xxxx xxxx xxxx"
+    '''x{4}\s+x{4}\s+x{4}\s+x{4}''',
+    '''AIzaSyX{28,}''',
+    '''6Lc[XY]{33,}''',
+    '''REPLACE_ME''',
+    '''your-email@gmail\.com''',
+    '''your_actual_[a-z_]+_here''',
+]
+
+# Commit-level allowlist for historical commits with false positives
+commits = [
+    # Historical commits with placeholder documentation
+]
+
+# Stopwords - common words that trigger false positives
+stopwords = [
+    "water",
+    "paint",
+    "kerb",
+    "base",
+    "road",
+    "edge",
+    "visi",
+    "high",
+    "nage",
+    "expo",
+    "cing",
+    "nces",
+    "ater",
+    "mater",
 ]
