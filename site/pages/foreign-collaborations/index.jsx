@@ -446,7 +446,7 @@ export default function ForeignCollaborationsPage() {
 
               <div className="fc-email-direct">
                 <span>Or reach us directly:</span>
-                <a href="mailto:partnerships@ynmsafety.com">partnerships@ynmsafety.com</a>
+                <a href="mailto:partnership@ynmsafety.com">partnership@ynmsafety.com</a>
               </div>
             </div>
 

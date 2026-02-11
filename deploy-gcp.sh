@@ -16,11 +16,12 @@ PROJECT_ID="gen-lang-client-0473608308"
 SERVICE_NAME="ynm-website"
 REGION="asia-south1"
 
-# Public environment variables (safe to pass as build args)
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY="6LeXgGYsAAAAAC1XWMf29FKDTRV-dfobscTkGo8J"
-NEXT_PUBLIC_GA_ID="G-KXRFYK5QTK"
+# Public env vars: set in GCP Cloud Run or export before running this script.
+# Do not commit real values. Use: export NEXT_PUBLIC_RECAPTCHA_SITE_KEY=... NEXT_PUBLIC_GA_ID=...
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY="${NEXT_PUBLIC_RECAPTCHA_SITE_KEY:-}"
+NEXT_PUBLIC_GA_ID="${NEXT_PUBLIC_GA_ID:-}"
 
-echo -e "${GREEN}🚀 Deploying YNM Safety Website to GCP Cloud Run${NC}"
+echo -e "${GREEN}Deploying YNM Safety Website to GCP Cloud Run${NC}"
 echo "=================================================="
 echo "Project: ${PROJECT_ID}"
 echo "Service: ${SERVICE_NAME}"

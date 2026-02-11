@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { isAllowedDomain } from "@/lib/recaptchaUtils";
 
 // Company details
 const companyInfo = {
@@ -92,8 +93,10 @@ export default function CareersPage() {
   const [error, setError] = useState(null);
   const [fileError, setFileError] = useState(null);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [showRecaptcha, setShowRecaptcha] = useState(false);
   const recaptchaRef = useRef(null);
   const recaptchaWidgetId = useRef(null);
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   // Initialize CAPTCHA on client side only (fixes hydration error)
   useEffect(() => {
@@ -103,9 +106,20 @@ export default function CareersPage() {
     }
   }, [captchaInitialized]);
 
-  // Load reCAPTCHA script (only when site key is configured)
+  // Check if reCAPTCHA should be shown (only on allowed domains)
   useEffect(() => {
-    if (!process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) return;
+    if (typeof window !== 'undefined') {
+      const allowed = isAllowedDomain();
+      const shouldShow = allowed && !!siteKey;
+      setShowRecaptcha(shouldShow);
+      console.log('[Careers] reCAPTCHA check - allowed:', allowed, 'siteKey:', !!siteKey, 'showRecaptcha:', shouldShow);
+    }
+  }, [siteKey]);
+
+  // Load reCAPTCHA script (only when site key is configured AND on allowed domains)
+  useEffect(() => {
+    if (!siteKey) return;
+    if (!showRecaptcha) return; // Only load on allowed domains
     // Wait for recaptchaRef to be available
     if (!recaptchaRef.current) return;
 
@@ -116,7 +130,7 @@ export default function CareersPage() {
       if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && !recaptchaWidgetId.current) {
         try {
           recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-            sitekey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+            sitekey: siteKey,
             callback: (token) => {
               setRecaptchaToken(token);
             },
@@ -127,14 +141,15 @@ export default function CareersPage() {
               setRecaptchaToken(null);
             }
           });
+          console.log('[Careers] reCAPTCHA widget rendered successfully');
         } catch (error) {
-          console.error('reCAPTCHA render error:', error);
+          console.error('[Careers] reCAPTCHA render error:', error);
         }
       }
     };
 
     // If script already exists and grecaptcha is available
-    if (existingScript && window.grecaptcha) {
+    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
       initRecaptcha();
       return;
     }
@@ -146,6 +161,7 @@ export default function CareersPage() {
     
     // Set up global callback
     window[callbackName] = () => {
+      console.log('[Careers] reCAPTCHA script loaded, initializing widget...');
       initRecaptcha();
       // Clean up callback after use
       if (window[callbackName]) {
@@ -154,12 +170,13 @@ export default function CareersPage() {
     };
 
     // Load reCAPTCHA v2 script
+    console.log('[Careers] Loading reCAPTCHA script...');
     const script = document.createElement('script');
     script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
     script.async = true;
     script.defer = true;
     script.onerror = () => {
-      console.error('Failed to load reCAPTCHA script');
+      console.error('[Careers] Failed to load reCAPTCHA script');
       delete window[callbackName];
     };
 
@@ -178,7 +195,7 @@ export default function CareersPage() {
         delete window[callbackName];
       }
     };
-  }, []);
+  }, [showRecaptcha, siteKey]);
 
   const handleChange = (e) => {
     if (e.target.type === "file") {
@@ -242,8 +259,8 @@ export default function CareersPage() {
     setIsSubmitting(true);
     setError(null);
     
-    // Validate reCAPTCHA (only when configured)
-    if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && !recaptchaToken) {
+    // Validate reCAPTCHA (only when shown on allowed domains)
+    if (showRecaptcha && !recaptchaToken) {
       setError('Please complete the "I\'m not a robot" verification.');
       setIsSubmitting(false);
       return;
@@ -361,20 +378,10 @@ export default function CareersPage() {
                 <p>Explore current job opportunities at YNM Safety</p>
               </div>
 
-              <div className="positions-grid">
-                {openPositions.map((position) => (
-                  <div key={position.id} className="position-card">
-                    <div className="position-header">
-                      <h3>{position.title}</h3>
-                      <span className="position-badge">{position.type}</span>
-                    </div>
-                    <div className="position-meta">
-                      <span className="position-dept">{position.department}</span>
-                      <span className="position-location">📍 {position.location}</span>
-                    </div>
-                    <p className="position-desc">{position.description}</p>
-                  </div>
-                ))}
+              <div className="coming-soon-container">
+                <div className="coming-soon-icon">🚀</div>
+                <h3>Coming Soon</h3>
+                <p>We&apos;re currently reviewing our hiring needs. Check back soon for exciting opportunities!</p>
               </div>
             </div>
 
@@ -453,9 +460,6 @@ export default function CareersPage() {
                         required
                       >
                         <option value="">Select a position</option>
-                        {openPositions.map((pos) => (
-                          <option key={pos.id} value={pos.title}>{pos.title}</option>
-                        ))}
                         <option value="General Application">General Application</option>
                       </select>
                     </div>
@@ -510,8 +514,8 @@ export default function CareersPage() {
                     />
                   </div>
 
-                  {/* reCAPTCHA (only when NEXT_PUBLIC_RECAPTCHA_SITE_KEY is set) */}
-                  {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+                  {/* reCAPTCHA (only on allowed production domains) */}
+                  {showRecaptcha && (
                     <div className="form-group recaptcha-group">
                       <label>Security Verification *</label>
                       <div ref={recaptchaRef} className="recaptcha-container"></div>
@@ -689,6 +693,44 @@ export default function CareersPage() {
           font-size: 16px;
           color: #9A1B2E;
           margin: 0;
+        }
+
+        /* Coming Soon */
+        .coming-soon-container {
+          background: white;
+          border-radius: 24px;
+          padding: 80px 40px;
+          text-align: center;
+          border: 2px solid #E6D3A3;
+          box-shadow: 0 10px 40px rgba(116, 6, 13, 0.1);
+          margin-bottom: 80px;
+        }
+
+        .coming-soon-icon {
+          font-size: 64px;
+          margin-bottom: 24px;
+          animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+
+        .coming-soon-container h3 {
+          font-size: 32px;
+          font-weight: 800;
+          color: #74060D;
+          margin: 0 0 16px;
+        }
+
+        .coming-soon-container p {
+          font-size: 16px;
+          color: #9A1B2E;
+          margin: 0;
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         /* Positions Grid */

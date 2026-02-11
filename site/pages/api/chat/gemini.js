@@ -50,21 +50,23 @@ COMPANY OVERVIEW:
 
 PRODUCTS & SERVICES (5 Major Categories):
 
-1. ROAD MARKING PAINTS:
-   - Hot Thermoplastic Road Marking Paint – high-performance, fast-setting paint for highways & expressways, retro-reflective glass beads, compliant with MoRTH, IRC, IS 164 standards
-   - Cold Plastic Road Marking Paint – solvent-free, durable paint for urban roads, long service life
-   - Water Base Road Marking Paint – eco-friendly, low-VOC, fast-drying for city roads and parking areas
+1. ROAD MARKING PAINTS (6 Types):
+   - Hot Thermoplastic Road Marking Paint – high-performance, fast-setting paint for highways & expressways, retro-reflective glass beads, compliant with MoRTH, IRC, IS 164, BS 3262 standards
+   - Waterborne Airfield Marking Paints – for airport runways, taxiways, aprons, helipads; ICAO/FAA/DGCA compliant; eco-friendly, low-VOC
+   - Cold Plastic Paints – solvent-free, two-component, durable paint for airports, race tracks, parking lots, cycle tracks; 5-7 year service life
+   - Oil Kerb Base Paint – solvent-based kerb paint for road edges, traffic islands, loading zones; high durability
+   - Water Kerb Base Paint – eco-friendly water-based kerb paint; low-VOC, fast-drying
+   - Enamel Paint – industrial and decorative enamel paint for metal surfaces
 
 2. BITUMEN:
    - Bitumen VG 40 – high-grade viscosity graded bitumen for heavy-traffic highways, expressways, toll plazas, airports, and port roads. Compliant with IS 73 and ASTM standards.
 
-3. METAL BEAM CRASH BARRIERS:
-   - W Beam Crash Barrier – most widely used highway guardrail system, hot-dip galvanized
-   - Thrie Beam Crash Barrier – enhanced protection at bridges, medians, and high-risk zones
-   - Double W Beam Crash Barrier – for heavy traffic corridors and freight routes
-   - Roller Barrier – rotating barrel system for sharp curves and mountain roads
-   - End Terminals & Crash Attenuators
-   - All crash barriers comply with MoRTH, IRC 119, IS 15465, and AASHTO M180
+3. METAL BEAM CRASH BARRIERS (3 Main Types + Accessories):
+   - W Beam Crash Barrier – most widely used highway guardrail system, hot-dip galvanized, for highways, bridges, medians
+   - Double W Beam Crash Barriers – enhanced protection for heavy traffic corridors, bridges, flyovers, embankments
+   - Roller Beam Crash Barriers – rotating barrel system for sharp curves, mountain roads, accident-prone zones; reduces impact severity
+   - Accessories: End Terminals, Crash Attenuators, Fish Tail End Sections, Posts, Spacer Blocks
+   - All crash barriers comply with MoRTH, IRC 119, IS 15465, AASHTO M180, and European standards
 
 4. SIGNAGES:
    - Retro Reflective Gantry Signage – large overhead highway signage with retro-reflective sheeting
@@ -87,9 +89,17 @@ PRODUCTS & SERVICES (5 Major Categories):
 COMPANY STATISTICS:
 - 10+ Years of Experience (since 2013)
 - 500+ Projects Delivered
-- 50+ Export Countries (across Asia, Africa, and Middle East)
+- 50+ Export Countries
 - 1000+ Happy Clients
 - 200+ Team Members
+
+EXPORT REGIONS (50+ Countries):
+- Middle East: UAE (Dubai, Abu Dhabi), Saudi Arabia, Qatar, Oman, Kuwait, Bahrain
+- East Asia: Hong Kong (China), Shanghai, Shenzhen, Taiwan, South Korea, Japan
+- Africa: Kenya, Nigeria, South Africa, Egypt, Tanzania, Ghana, Ethiopia, Morocco
+- Southeast Asia: Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines
+- South Asia: Sri Lanka, Bangladesh, Nepal, Bhutan, Maldives
+- We offer FOB & CIF pricing with full export documentation support
 
 LEADERSHIP:
 - Managing Director: Mr. Rishuu Jaiin (Founder, B.E. Mechanical Engineering, MBA)
@@ -145,6 +155,11 @@ PRICING & QUOTES:
 - We offer competitive FOB & CIF pricing for all products
 - Contact sales@ynmsafety.com or call +91 96765 75770 for quotes
 - Quote request form available on the website at /get-quote
+
+FOREIGN COLLABORATIONS:
+- We actively seek international partnerships
+- Collaboration Areas: Manufacturing Partnerships (joint ventures, technology transfer), Distribution Networks (exclusive distributorship), Research & Development (joint product development), Quality & Compliance (ISO standards implementation)
+- Interested parties can submit inquiry at /foreign-collaborations
 
 WEBSITE PAGES (guide users to these if relevant):
 - Home: / (overview of all products and services)

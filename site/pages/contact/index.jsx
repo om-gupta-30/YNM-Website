@@ -39,6 +39,7 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
   const [showRecaptcha, setShowRecaptcha] = useState(false);
+  const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   // Load reCAPTCHA script ONLY on allowed domains
@@ -118,7 +119,8 @@ export default function ContactPage() {
   const handleSocialClick = (e, social) => {
     if (social.isComingSoon || social.href === "#") {
       e.preventDefault();
-      alert(`🚧 ${social.name} - Coming Soon! We're setting up our social presence.`);
+      setShowWhatsAppPopup(true);
+      setTimeout(() => setShowWhatsAppPopup(false), 2500);
       return;
     }
     // Allow normal link navigation for non-coming-soon links
@@ -171,6 +173,17 @@ export default function ContactPage() {
 
   return (
     <>
+      {/* WhatsApp Coming Soon Popup */}
+      {showWhatsAppPopup && (
+        <div className="whatsapp-popup">
+          <div className="whatsapp-popup-content">
+            <span className="whatsapp-popup-icon">📱</span>
+            <p>Coming Soon</p>
+            <small>Please use other ways to contact us</small>
+          </div>
+        </div>
+      )}
+
       <Head>
         <title>Contact Us | YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Get in touch with YNM Safety for premium paints, fabrications, and school furniture. Contact us for quotes, exports, and partnerships." />
@@ -384,26 +397,27 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Social Links */}
-              <div className="social-section">
-                <h4>Connect With Us</h4>
-                <div className="social-links">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      className="social-link"
-                      style={{ pointerEvents: 'auto', cursor: 'pointer', "--social-color": social.color }}
-                      target={social.isComingSoon ? "_self" : "_blank"}
-                      rel={social.isComingSoon ? undefined : "noopener noreferrer"}
-                      onClick={(e) => handleSocialClick(e, social)}
-                      title={social.name}
-                    >
-                      <SocialIcon icon={social.icon} />
-                    </a>
-                  ))}
-                </div>
-              </div>
+            </div>
+          </div>
+
+          {/* Social Links - Centered below the two columns */}
+          <div className="social-section">
+            <h4>Connect With Us</h4>
+            <div className="social-links">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  className="social-link"
+                  style={{ pointerEvents: 'auto', cursor: 'pointer', "--social-color": social.color }}
+                  target={social.isComingSoon ? "_self" : "_blank"}
+                  rel={social.isComingSoon ? undefined : "noopener noreferrer"}
+                  onClick={(e) => handleSocialClick(e, social)}
+                  title={social.name}
+                >
+                  <SocialIcon icon={social.icon} />
+                </a>
+              ))}
             </div>
           </div>
         </section>
@@ -811,13 +825,19 @@ export default function ContactPage() {
           font-weight: 500;
         }
 
-        /* Social Section */
+        /* Social Section - Full width centered */
         .social-section {
           background: #fff;
           border-radius: 24px;
           padding: 32px;
           box-shadow: 0 10px 40px rgba(116, 6, 13, 0.08);
           border: 2px solid #E6D3A3;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 500px;
+          margin: 50px auto 0;
         }
 
         .social-section h4 {
@@ -833,6 +853,7 @@ export default function ContactPage() {
         .social-links {
           display: flex;
           justify-content: center;
+          align-items: center;
           gap: 16px;
           flex-wrap: wrap;
         }
