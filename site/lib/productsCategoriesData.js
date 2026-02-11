@@ -172,7 +172,7 @@ export const productsData = {
                 id: "app6",
                 title: "Zebra Crossings & Junctions",
                 description: "YNM thermoplastic paints ensure bold and highly visible markings at junctions and zebra crossings.",
-                image: "/assets/ynm safety hot thermoplastic zebra crossing & junctions marking paints.jpeg",
+                image: "/assets/ynm safety hot thermoplastic zebra crossing and junctions marking paints.jpeg",
                 details: "YNM Safety manufactures YNM hot thermoplastic paints designed for critical traffic control areas. These thermoplastic paints improve road safety with thick, reflective markings and long service life."
               }
             ],
@@ -212,7 +212,7 @@ export const productsData = {
                 title: "Zebra Crossings & Junctions",
                 short: "YNM thermoplastic paints ensure bold and highly visible markings at junctions and zebra crossings.",
                 hover: "YNM Safety manufactures YNM hot thermoplastic paints designed for critical traffic control areas. These thermoplastic paints improve road safety with thick, reflective markings and long service life.",
-                image: "/assets/ynm safety hot thermoplastic zebra crossing & junctions marking paints.jpeg"
+                image: "/assets/ynm safety hot thermoplastic zebra crossing and junctions marking paints.jpeg"
               }
             ],
             
@@ -1621,6 +1621,772 @@ export const productsData = {
               "/assets/ynm-safety-loading-unloading-zones.png",
               "/assets/ynm-safety-factories-warehouses.png"
             ]
+          },
+          {
+            id: "p5",
+            slug: "water-kerb-base-paint-manufacturers",
+            name: "Water Kerb Base Paint",
+            shortDesc: "High-performance water kerb base paint manufactures delivering eco-friendly, durable, and high-visibility curb and road marking paints for highways, urban roads, and infrastructure projects worldwide.",
+            desc: "YNM Safety manufactures premium-quality water base paints designed for long-lasting curb and road edge markings with excellent adhesion on concrete and asphalt surfaces.",
+            image: "/assets/YNM Safety Kerbs and Road Edges.png",
+            heroImage: "/assets/YNM Safety Kerbs and Road Edges.png",
+            specs: ["Acrylic Water Based Resin", "Brush/Roller/Spray Application", "Surface Dry - 20-30 Minutes", "Smooth Matte/Semi-Gloss Finish", "IS164:2023 Compliant", "Low VOC Eco-friendly"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Water Kerb Base Paint Manufacturers | Road Marking Paints | YNM Safety",
+              description: "YNM Safety water kerb paint manufactures high-performance water base kerb paints and road marking paints for durable curb and traffic safety markings worldwide. Trusted water paints manufactures and paints manufactures compliant with IS164-2023 standards.",
+              slug: "/water-kerb-base-paint-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading water kerb paint manufactures in India, offering premium-quality water base paints designed for long-lasting curb and road edge markings. As reliable water paints manufactures and experienced paints manufactures, we deliver eco-friendly, low-VOC, and high-visibility marking solutions for highways, smart cities, municipal roads, and infrastructure projects.\n\nOur ynm safety water base paints manufactures products provide excellent adhesion on concrete kerbs, medians, and dividers while ensuring faster drying and environmental compliance. The water kerb base paint offers superior colour retention, crack resistance, and weather durability.\n\nBeing reputed water paints manufactures, YNM Safety focuses on sustainable production, consistent quality control, and compliance with IS 164 – 2023 standards for government and EPC projects.",
+            detailedDescription: "YNM Safety is one of the leading water kerb paint manufactures in India, offering premium-quality water base paints designed for long-lasting curb and road edge markings. As reliable water paints manufactures and experienced paints manufactures, we deliver eco-friendly, low-VOC, and high-visibility marking solutions for highways, smart cities, municipal roads, and infrastructure projects.\n\nOur ynm safety water base paints manufactures products provide excellent adhesion on concrete kerbs, medians, and dividers while ensuring faster drying and environmental compliance. The water kerb base paint offers superior colour retention, crack resistance, and weather durability.\n\nBeing reputed water paints manufactures, YNM Safety focuses on sustainable production, consistent quality control, and compliance with IS 164 – 2023 standards for government and EPC projects.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Water Kerb Base Paint" },
+              { label: "Material Base", value: "Acrylic Water Based Resin" },
+              { label: "Application Method", value: "Brush / Roller / Spray" },
+              { label: "Drying Time", value: "Surface Dry – 20–30 Minutes" },
+              { label: "Finish", value: "Smooth, Matte / Semi-Gloss" },
+              { label: "Colours Available", value: "Black, Yellow, White & Custom" },
+              { label: "Adhesion", value: "Excellent on Concrete & Asphalt" },
+              { label: "Compliance", value: "IS164:2023" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "20L",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "1. IS164:2023\n2. ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "20L Container",
+                icon: "package"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "1KL",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "32089090",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Water Kerb Base Paint",
+                "Material Base: Acrylic Water Based Resin",
+                "Application Method: Brush / Roller / Spray",
+                "Drying Time: Surface Dry – 20–30 Minutes",
+                "Finish: Smooth, Matte / Semi-Gloss",
+                "Colours Available: Black, Yellow, White & Custom",
+                "Adhesion: Excellent on Concrete & Asphalt",
+                "Compliance: IS164:2023",
+                "Application Area: Kerbs, Medians, Road Edges",
+                "HSN Code: 32089090"
+              ],
+              keyFeatures: [
+                "Low VOC and eco-friendly formulation",
+                "Fast drying with minimal traffic disruption",
+                "Excellent adhesion on concrete surfaces",
+                "High weather and UV resistance",
+                "Smooth and uniform finish",
+                "Long-lasting colour stability"
+              ],
+              advantages: [
+                "Enhances road edge visibility and traffic safety",
+                "Environmentally compliant marking solution",
+                "Cost-effective and easy application",
+                "Low maintenance and durable performance",
+                "Trusted water kerb paint manufactures – YNM Safety",
+                "Suitable for government and EPC projects"
+              ]
+            },
+            
+            features: [
+              "Low VOC and eco-friendly formulation",
+              "Fast drying with minimal traffic disruption",
+              "Excellent adhesion on concrete surfaces",
+              "High weather and UV resistance",
+              "Smooth and uniform finish",
+              "Long-lasting colour stability"
+            ],
+            
+            advantages: [
+              "Enhances road edge visibility and traffic safety",
+              "Environmentally compliant marking solution",
+              "Cost-effective and easy application",
+              "Low maintenance and durable performance",
+              "Trusted water kerb paint manufactures – YNM Safety",
+              "Suitable for government and EPC projects"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Kerbs and Road Edges",
+                description: "Water kerb base paint ensures sharp, high-visibility markings for kerbs and road edges.",
+                image: "/assets/YNM Safety Kerbs and Road Edges.png",
+                details: "Manufactured by leading water kerb paint manufactures, this eco-friendly coating provides excellent adhesion on concrete surfaces. YNM Safety water base paints manufactures deliver durable, weather-resistant finishes that maintain colour stability under heavy traffic and UV exposure."
+              },
+              {
+                id: "app2",
+                title: "Parking Lots",
+                description: "Water paints manufactures supply durable markings for parking lot boundaries and curb sections.",
+                image: "/assets/YNM Safety parking lots (1).png",
+                details: "YNM Safety water kerb base paint offers fast drying and smooth application for commercial and residential parking areas. As trusted paints manufactures, we ensure long-lasting visibility even under continuous vehicle movement and environmental wear."
+              },
+              {
+                id: "app3",
+                title: "Pedestrian Crossings",
+                description: "Water kerb base paint enhances pedestrian crossing visibility and road safety.",
+                image: "/assets/YNM Safety Pedestrian Crossings.png",
+                details: "Our ynm safety water base paints manufactures products provide strong adhesion and bright colour contrast for zebra crossings and safety zones. The low-VOC, fast-curing formula ensures minimal traffic disruption during application."
+              },
+              {
+                id: "app4",
+                title: "Road Markings",
+                description: "Water kerb paint is suitable for durable and eco-friendly road marking applications.",
+                image: "/assets/YNM Safety road markings.png",
+                details: "As experienced water paints manufactures, YNM Safety ensures consistent finish, excellent reflectivity, and long-term durability. The water-based formulation complies with environmental standards while maintaining superior marking performance."
+              },
+              {
+                id: "app5",
+                title: "Industrial & Warehouse Floors",
+                description: "Water kerb base paint defines safety lines and boundaries in industrial facilities.",
+                image: "/assets/YNM Safety Industrial and Warehouse Floors.png",
+                details: "Manufactured by reliable water kerb paint manufactures, this paint resists abrasion, dust, and light chemical exposure. It provides clear demarcation for forklift paths, loading zones, and pedestrian walkways inside warehouses."
+              },
+              {
+                id: "app6",
+                title: "Public Spaces & Recreational Areas",
+                description: "Water paints manufactures provide vibrant markings for public and recreational spaces.",
+                image: "/assets/YNM Safety Public Spaces and Recreational Areas.png",
+                details: "YNM Safety manufactures water kerb base paint that delivers durable, low-odor, and environmentally safe coatings for parks, playgrounds, and community areas. The paint maintains colour brightness and surface integrity even under outdoor exposure."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Kerbs and Road Edges",
+                short: "Water kerb base paint ensures sharp, high-visibility markings for kerbs and road edges.",
+                hover: "Manufactured by leading water kerb paint manufactures, this eco-friendly coating provides excellent adhesion on concrete surfaces. YNM Safety water base paints manufactures deliver durable, weather-resistant finishes that maintain colour stability under heavy traffic and UV exposure.",
+                image: "/assets/YNM Safety Kerbs and Road Edges.png"
+              },
+              {
+                title: "Parking Lots",
+                short: "Water paints manufactures supply durable markings for parking lot boundaries and curb sections.",
+                hover: "YNM Safety water kerb base paint offers fast drying and smooth application for commercial and residential parking areas. As trusted paints manufactures, we ensure long-lasting visibility even under continuous vehicle movement and environmental wear.",
+                image: "/assets/YNM Safety parking lots (1).png"
+              },
+              {
+                title: "Pedestrian Crossings",
+                short: "Water kerb base paint enhances pedestrian crossing visibility and road safety.",
+                hover: "Our ynm safety water base paints manufactures products provide strong adhesion and bright colour contrast for zebra crossings and safety zones. The low-VOC, fast-curing formula ensures minimal traffic disruption during application.",
+                image: "/assets/YNM Safety Pedestrian Crossings.png"
+              },
+              {
+                title: "Road Markings",
+                short: "Water kerb paint is suitable for durable and eco-friendly road marking applications.",
+                hover: "As experienced water paints manufactures, YNM Safety ensures consistent finish, excellent reflectivity, and long-term durability. The water-based formulation complies with environmental standards while maintaining superior marking performance.",
+                image: "/assets/YNM Safety road markings.png"
+              },
+              {
+                title: "Industrial & Warehouse Floors",
+                short: "Water kerb base paint defines safety lines and boundaries in industrial facilities.",
+                hover: "Manufactured by reliable water kerb paint manufactures, this paint resists abrasion, dust, and light chemical exposure. It provides clear demarcation for forklift paths, loading zones, and pedestrian walkways inside warehouses.",
+                image: "/assets/YNM Safety Industrial and Warehouse Floors.png"
+              },
+              {
+                title: "Public Spaces & Recreational Areas",
+                short: "Water paints manufactures provide vibrant markings for public and recreational spaces.",
+                hover: "YNM Safety manufactures water kerb base paint that delivers durable, low-odor, and environmentally safe coatings for parks, playgrounds, and community areas. The paint maintains colour brightness and surface integrity even under outdoor exposure.",
+                image: "/assets/YNM Safety Public Spaces and Recreational Areas.png"
+              }
+            ],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Water-Based Road Marking Paint Market Growth | YNM Safety",
+              description: "The global water-based road marking paints market was valued at around USD 14.5 billion in 2024 and is projected to reach approximately USD 26.5 billion by 2032, growing at a CAGR of about 7.5% during the forecast period. Growth is also supported by rapid urbanization and the need for durable, high-visibility road markings in both developed and developing regions. Overall, the market outlook for water-based kerb/base paints remains strong and steadily rising through the early 2030s.",
+              cagr: "7.5%",
+              growthFactors: [
+                "Cost-Effectiveness",
+                "Quick Application & Fast Drying",
+                "Versatility of Use",
+                "Global Government Initiatives",
+                "Increased Awareness of Sustainability",
+                "Compatibility with Reflective Materials"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$14.5B",
+                projectedMarketSize: "$26.5B",
+                currentYear: "2024",
+                projectedYear: "2032",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 14.5 },
+                { year: "2025", value: 15.6 },
+                { year: "2026", value: 16.8 },
+                { year: "2027", value: 18.1 },
+                { year: "2028", value: 19.5 },
+                { year: "2029", value: 21.0 },
+                { year: "2030", value: 22.6 },
+                { year: "2031", value: 24.4 },
+                { year: "2032", value: 26.5 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["United Kingdom", "Germany", "France", "Italy", "Russia", "Spain", "Switzerland", "Austria", "Belgium"]
+                },
+                {
+                  name: "Asia Pacific",
+                  countries: ["China", "Japan", "South Korea", "India", "Indonesia", "Vietnam", "Philippines", "Australia", "Thailand", "Singapore"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina", "Rest of Latin America"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 11 Steps
+            manufacturingProcessIntro: "As leading water kerb paint manufactures in India, YNM Safety follows a strict ISO 9001:2015 quality-controlled production system at our Hyderabad manufacturing facility. Our water kerb base paint is produced in compliance with IS 164:2023 standards to ensure durability, adhesion, and long-lasting road marking performance.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Procurement of Raw Materials",
+                description: "The process begins with sourcing premium acrylic water-based resin, titanium dioxide and iron oxide pigments, mineral fillers, performance additives (dispersants, defoamers, thickeners), preservatives, and treated water. As responsible ynm safety water base paints manufactures, only approved and tested raw materials are accepted for production."
+              },
+              {
+                step: "02",
+                title: "Raw Material Quality Inspection",
+                description: "All materials undergo laboratory testing for pH value, viscosity, solid content, colour strength, and chemical stability. This ensures compliance with IS 164:2023 standards and maintains consistency in every batch manufactured by YNM Safety."
+              },
+              {
+                step: "03",
+                title: "Water & Additive Pre-Mixing",
+                description: "Measured quantities of processed water are charged into high-speed disperser tanks. Wetting agents, dispersing agents, and defoamers are added and mixed thoroughly to create a stable base solution. This stage improves pigment bonding and ensures uniform paint formulation."
+              },
+              {
+                step: "04",
+                title: "Pigment & Filler Dispersion",
+                description: "Premium pigments and fillers are gradually added into the pre-mix under controlled high-speed agitation. This dispersion process ensures uniform colour development, brightness, and opacity required for kerbs, medians, road edges, and pedestrian markings."
+              },
+              {
+                step: "05",
+                title: "Grinding Process",
+                description: "The mixture is transferred to a bead mill or sand mill for fine grinding. Grinding reduces particle size to micron levels, resulting in smooth texture, improved adhesion, and superior surface finish — essential for high-performance water kerb base paint."
+              },
+              {
+                step: "06",
+                title: "Resin Let-Down & Final Blending",
+                description: "Acrylic water-based resin is added into the ground mixture in blending tanks. Performance additives are incorporated to enhance durability, drying time, weather resistance, and binding strength. This stage defines the final performance characteristics of the paint supplied by trusted water paints manufactures."
+              },
+              {
+                step: "07",
+                title: "Viscosity & Performance Adjustment",
+                description: "Thickeners and coalescing agents are added to achieve the required application viscosity and flow properties. As experienced paints manufactures, YNM Safety ensures smooth brush, roller, and spray application."
+              },
+              {
+                step: "08",
+                title: "Filtration",
+                description: "The finished water kerb base paint is passed through multi-stage filtration systems to remove impurities and ensure lump-free consistency. This guarantees professional finish during site application."
+              },
+              {
+                step: "09",
+                title: "Quality Control Testing",
+                description: "Each batch manufactured by ynm safety manufactures undergoes strict testing including: Viscosity test, pH test, Drying time analysis, Adhesion testing, Opacity & colour verification, and Density and solid content testing. Only batches meeting IS 164:2023 standards are approved for packaging."
+              },
+              {
+                step: "10",
+                title: "Filling & Packaging",
+                description: "The approved water kerb paint is filled into 20L containers using automated filling machines. Each container is batch-coded, labeled with manufacturing details, and sealed securely. Minimum order quantity is maintained at 1 KL for bulk supply."
+              },
+              {
+                step: "11",
+                title: "Storage & Dispatch",
+                description: "Finished goods are stored in a temperature-controlled warehouse to maintain product stability. Upon order confirmation, products are palletized and dispatched safely to domestic and international clients, strengthening YNM Safety's position among reliable water kerb paint manufactures and exporters from India."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 120,
+              currency: "INR",
+              unit: "per liter",
+              displayPrice: "₹120 per liter",
+              packageSizes: [
+                { size: "20L Container", priceINR: 120, moq: 50 },
+                { size: "200L Drum", priceINR: 115, moq: 5 },
+                { size: "1KL Bulk", priceINR: 110, moq: 1 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 1000, discount: 3 },
+                { minQuantity: 5000, discount: 5 },
+                { minQuantity: 10000, discount: 8 },
+                { minQuantity: 25000, discount: 10 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              monthlyCapacity: "50KL/M",
+              annualCapacity: "600KL/M",
+              productionSpeed: "50KL",
+              qualityStandards: "IS164:2023",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "is-164",
+                title: "IS164:2023",
+                description: "Indian Standard for Road Marking Paint",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images - Using wkbp folder images for carousel
+            gallery: [
+              "/assets/YNM Safety Kerbs and Road Edges.png",
+              "/assets/YNM Safety parking lots (1).png",
+              "/assets/YNM Safety Pedestrian Crossings.png",
+              "/assets/YNM Safety road markings.png",
+              "/assets/YNM Safety Industrial and Warehouse Floors.png",
+              "/assets/YNM Safety Public Spaces and Recreational Areas.png"
+            ]
+          },
+          {
+            id: "p6",
+            slug: "enamel-paint-manufacturers",
+            name: "Enamel Paint",
+            shortDesc: "Premium quality enamel paint manufactures delivering durable, high-gloss, weather-resistant coatings for architectural, industrial, automotive, and protective applications worldwide.",
+            desc: "YNM Safety manufactures high-performance enamel paint for architectural, industrial, automotive, and metal applications. Trusted enamel paint manufactures compliant with IS164:2023 standards.",
+            image: "/assets/YNM Safety Architectural and Decorative Coatings.png",
+            heroImage: "/assets/YNM Safety Architectural and Decorative Coatings.png",
+            specs: ["Synthetic / Alkyd Based", "High Gloss / Semi Gloss Finish", "Brush/Roller/Spray Application", "Surface Dry - 6-8 Hours", "IS164:2023 Compliant", "Excellent Metal & Wood Adhesion"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Enamel Paint Manufacturers | Industrial & Decorative Paints | YNM Safety",
+              description: "YNM Safety manufactures high-performance enamel paint for architectural, industrial, automotive, and metal applications. Trusted enamel paint manufactures and paints manufactures in India compliant with IS164:2023 standards.",
+              slug: "/enamel-paint-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading enamel paint manufactures in India, offering premium-quality enamel coatings designed for superior durability, gloss retention, and long-term surface protection. As trusted paints manufactures and recognized ynm safety paints manufactures, we provide enamel paint solutions for architectural, industrial, automotive, and protective coating applications.\n\nOur enamel paint is formulated with high-performance resins and pigments to deliver excellent adhesion on metal, wood, and previously painted surfaces. Being experienced enamel paint manufactures, YNM Safety ensures smooth finish, resistance to corrosion, and long-lasting colour stability even under harsh environmental conditions.\n\nAs reliable ynm safety manufactures, we focus on advanced production technology, strict quality control, and compliance with IS164:2023 standards to serve domestic and global markets.",
+            detailedDescription: "YNM Safety is one of the leading enamel paint manufactures in India, offering premium-quality enamel coatings designed for superior durability, gloss retention, and long-term surface protection. As trusted paints manufactures and recognized ynm safety paints manufactures, we provide enamel paint solutions for architectural, industrial, automotive, and protective coating applications.\n\nOur enamel paint is formulated with high-performance resins and pigments to deliver excellent adhesion on metal, wood, and previously painted surfaces. Being experienced enamel paint manufactures, YNM Safety ensures smooth finish, resistance to corrosion, and long-lasting colour stability even under harsh environmental conditions.\n\nAs reliable ynm safety manufactures, we focus on advanced production technology, strict quality control, and compliance with IS164:2023 standards to serve domestic and global markets.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Enamel Paint" },
+              { label: "Base Type", value: "Synthetic / Alkyd Based" },
+              { label: "Finish", value: "High Gloss / Semi Gloss" },
+              { label: "Application Method", value: "Brush / Roller / Spray" },
+              { label: "Drying Time", value: "Surface Dry – 6 to 8 Hours" },
+              { label: "Adhesion", value: "Excellent on Metal & Wood" },
+              { label: "Weather Resistance", value: "High UV & Moisture Resistance" },
+              { label: "Compliance", value: "IS164:2023" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "20L",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IS164:2023",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "20L Container",
+                icon: "package"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "1 KL",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "32089090",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Enamel Paint",
+                "Base Type: Synthetic / Alkyd Based",
+                "Finish: High Gloss / Semi Gloss",
+                "Application Method: Brush / Roller / Spray",
+                "Drying Time: Surface Dry – 6 to 8 Hours",
+                "Adhesion: Excellent on Metal & Wood",
+                "Weather Resistance: High UV & Moisture Resistance",
+                "Compliance: IS164:2023",
+                "Packing: 20L Container",
+                "HSN Code: 32089090"
+              ],
+              keyFeatures: [
+                "High gloss and smooth decorative finish",
+                "Excellent corrosion resistance",
+                "Superior adhesion on metal and wood",
+                "Long-lasting colour retention",
+                "Weather and moisture resistant",
+                "IS164:2023 compliant manufacturing"
+              ],
+              advantages: [
+                "Enhances durability of metal and wooden surfaces",
+                "Suitable for interior and exterior applications",
+                "Easy application with brush, roller, or spray",
+                "Cost-effective long-term protection solution",
+                "Trusted enamel paint manufactures – YNM Safety"
+              ]
+            },
+            
+            features: [
+              "High gloss and smooth decorative finish",
+              "Excellent corrosion resistance",
+              "Superior adhesion on metal and wood",
+              "Long-lasting colour retention",
+              "Weather and moisture resistant",
+              "IS164:2023 compliant manufacturing"
+            ],
+            
+            advantages: [
+              "Enhances durability of metal and wooden surfaces",
+              "Suitable for interior and exterior applications",
+              "Easy application with brush, roller, or spray",
+              "Cost-effective long-term protection solution",
+              "Trusted enamel paint manufactures – YNM Safety"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Architectural & Decorative Coatings",
+                description: "Enamel paint is widely used for decorative finishes in residential and commercial buildings.",
+                image: "/assets/YNM Safety Architectural and Decorative Coatings.png",
+                details: "As leading enamel paint manufactures, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection."
+              },
+              {
+                id: "app2",
+                title: "Industrial Coatings",
+                description: "Industrial enamel paint provides durable protection for machinery and equipment.",
+                image: "/assets/YNM Safety Industrial coatings.png",
+                details: "Our ynm safety paints manufactures products offer corrosion resistance and mechanical durability for factories, plants, and heavy industrial structures."
+              },
+              {
+                id: "app3",
+                title: "Automotive Coatings",
+                description: "Enamel paint is used in automotive refinishing and metal surface coating.",
+                image: "/assets/YNM Safety Automative Coatings.png",
+                details: "Manufactured under IS164:2023 standards, our enamel paint ensures high gloss, scratch resistance, and long-lasting performance in automotive applications."
+              },
+              {
+                id: "app4",
+                title: "Wood Coatings",
+                description: "Enamel paint enhances the durability and finish of wooden surfaces.",
+                image: "/assets/YNM Safety Wood Coatings.png",
+                details: "YNM Safety enamel paint manufactures provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures."
+              },
+              {
+                id: "app5",
+                title: "Marine & Protective Coatings",
+                description: "Enamel paint is suitable for marine and protective coating applications.",
+                image: "/assets/YNM Safety Marine and Protective Coatings.png",
+                details: "The corrosion-resistant formulation protects metal surfaces from salt spray, humidity, and harsh weather, making it ideal for marine and coastal environments."
+              },
+              {
+                id: "app6",
+                title: "Metal Fabrication",
+                description: "Enamel paint provides protective coating for fabricated metal components.",
+                image: "/assets/YNM Safety Metal fabrication.png",
+                details: "As trusted paints manufactures, we deliver enamel coatings that prevent rust formation and extend the life of fabricated steel and structural components."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Architectural & Decorative Coatings",
+                short: "Enamel paint is widely used for decorative finishes in residential and commercial buildings.",
+                hover: "As leading enamel paint manufactures, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection.",
+                image: "/assets/YNM Safety Architectural and Decorative Coatings.png"
+              },
+              {
+                title: "Industrial Coatings",
+                short: "Industrial enamel paint provides durable protection for machinery and equipment.",
+                hover: "Our ynm safety paints manufactures products offer corrosion resistance and mechanical durability for factories, plants, and heavy industrial structures.",
+                image: "/assets/YNM Safety Industrial coatings.png"
+              },
+              {
+                title: "Automotive Coatings",
+                short: "Enamel paint is used in automotive refinishing and metal surface coating.",
+                hover: "Manufactured under IS164:2023 standards, our enamel paint ensures high gloss, scratch resistance, and long-lasting performance in automotive applications.",
+                image: "/assets/YNM Safety Automative Coatings.png"
+              },
+              {
+                title: "Wood Coatings",
+                short: "Enamel paint enhances the durability and finish of wooden surfaces.",
+                hover: "YNM Safety enamel paint manufactures provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures.",
+                image: "/assets/YNM Safety Wood Coatings.png"
+              },
+              {
+                title: "Marine & Protective Coatings",
+                short: "Enamel paint is suitable for marine and protective coating applications.",
+                hover: "The corrosion-resistant formulation protects metal surfaces from salt spray, humidity, and harsh weather, making it ideal for marine and coastal environments.",
+                image: "/assets/YNM Safety Marine and Protective Coatings.png"
+              },
+              {
+                title: "Metal Fabrication",
+                short: "Enamel paint provides protective coating for fabricated metal components.",
+                hover: "As trusted paints manufactures, we deliver enamel coatings that prevent rust formation and extend the life of fabricated steel and structural components.",
+                image: "/assets/YNM Safety Metal fabrication.png"
+              }
+            ],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Enamel Paint Market Growth | YNM Safety",
+              description: "The global enamel paint market is experiencing steady growth driven by rising demand across construction, automotive, and industrial sectors. The enamel coatings market was estimated at approximately USD 6.23 billion in 2024. The global enamel product market is forecast to grow from about USD 4.49 billion in 2025 to USD 8.46 billion by 2032, registering a CAGR of approximately 9.46%.",
+              cagr: "9.46%",
+              growthFactors: [
+                "Infrastructure & Construction Growth",
+                "Automotive & Transportation Industry Expansion",
+                "Technological Advancements",
+                "Urbanization & Population Growth",
+                "Maintenance & Renovation Projects",
+                "Government Regulations & Standards"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$4.49B",
+                projectedMarketSize: "$8.46B",
+                currentYear: "2025",
+                projectedYear: "2032",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 40, color: "#74060D" },
+                { region: "North America", value: 20, color: "#9A1B2E" },
+                { region: "Europe", value: 18, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 14, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2025", value: 4.49 },
+                { year: "2026", value: 4.91 },
+                { year: "2027", value: 5.38 },
+                { year: "2028", value: 5.89 },
+                { year: "2029", value: 6.44 },
+                { year: "2030", value: 7.05 },
+                { year: "2031", value: 7.72 },
+                { year: "2032", value: 8.46 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Netherlands"]
+                },
+                {
+                  name: "Asia Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Malaysia", "Indonesia", "Vietnam"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina", "Mexico"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates (UAE)", "Saudi Arabia", "South Africa", "Egypt", "Nigeria"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 8 Steps
+            manufacturingProcessIntro: "As a leading enamel paint manufacturer, YNM Safety follows a systematic and quality-controlled production process to ensure superior gloss, durability, and long-lasting performance. Our enamel paints are manufactured as per IS 164:2023 standards, delivering excellent finish and protection for metal and wood surfaces.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Selection & Quality Testing",
+                description: "The manufacturing process begins with the careful selection of high-quality raw materials such as alkyd resins, pigments, solvents, additives, and dryers. Each raw material undergoes strict laboratory testing to ensure it meets required performance parameters and industry standards."
+              },
+              {
+                step: "02",
+                title: "Resin Preparation",
+                description: "Alkyd resin, the backbone of enamel paint, is prepared or sourced as per formulation requirements. The resin provides gloss, hardness, adhesion, and durability to the final product. Proper resin quality ensures excellent surface finish and weather resistance."
+              },
+              {
+                step: "03",
+                title: "Pigment Dispersion (Grinding Process)",
+                description: "In this stage, pigments and extenders are mixed with a portion of resin and solvents. The mixture is transferred to high-speed dispersers or ball mills for grinding. This process ensures uniform colour development, proper particle size reduction, enhanced hiding power, and smooth finish."
+              },
+              {
+                step: "04",
+                title: "Let-Down Process",
+                description: "After grinding, the pigment paste is transferred to mixing tanks where the remaining resin, solvents, and additives are added. This stage adjusts viscosity, gloss level, drying time, and flow and leveling properties. The formulation is carefully monitored to achieve the desired performance characteristics."
+              },
+              {
+                step: "05",
+                title: "Filtration",
+                description: "The paint is passed through fine filters to remove impurities, oversized particles, or contaminants. This step ensures a smooth, lump-free finish and improves shelf stability."
+              },
+              {
+                step: "06",
+                title: "Quality Control Testing",
+                description: "Before packaging, the enamel paint undergoes rigorous quality checks including viscosity test, gloss measurement, drying time test, adhesion test, flexibility test, shade matching, and coverage test. At YNM Safety, every batch is tested to maintain consistent quality and compliance with IS164:2023 standards."
+              },
+              {
+                step: "07",
+                title: "Filling & Packaging",
+                description: "After approval from the quality control department, the paint is filled into containers using automated filling machines. Proper labeling, batch coding, and sealing are done to ensure safe storage and transportation."
+              },
+              {
+                step: "08",
+                title: "Storage & Dispatch",
+                description: "Finished products are stored in controlled warehouse conditions before dispatch. With a production capacity of 50 KL per month and 600 KL annually, YNM Safety ensures timely delivery across India and exports to 20+ countries worldwide."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 150,
+              currency: "INR",
+              unit: "per liter",
+              displayPrice: "₹150 per liter",
+              packageSizes: [
+                { size: "20L Container", priceINR: 150, moq: 50 },
+                { size: "200L Drum", priceINR: 145, moq: 5 },
+                { size: "1KL Bulk", priceINR: 140, moq: 1 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 1000, discount: 3 },
+                { minQuantity: 5000, discount: 5 },
+                { minQuantity: 10000, discount: 8 },
+                { minQuantity: 25000, discount: 10 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              monthlyCapacity: "50KL/M",
+              annualCapacity: "600KL/Y",
+              productionSpeed: "50KL",
+              qualityStandards: "IS164:2023",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "is-164",
+                title: "IS164:2023",
+                description: "Indian Standard for Enamel Paint",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images - Using enamel folder images for carousel
+            gallery: [
+              "/assets/YNM Safety Architectural and Decorative Coatings.png",
+              "/assets/YNM Safety Industrial coatings.png",
+              "/assets/YNM Safety Automative Coatings.png",
+              "/assets/YNM Safety Wood Coatings.png",
+              "/assets/YNM Safety Marine and Protective Coatings.png",
+              "/assets/YNM Safety Metal fabrication.png"
+            ]
           }
         ]
       },
@@ -1753,42 +2519,42 @@ export const productsData = {
                 id: "app1",
                 title: "National Highways & Expressways",
                 description: "Bitumen VG 40 is widely used for national highways and expressways due to its high load-bearing capacity and durability.",
-                image: "/assets/YNM Safety National Highways & Expressways.png",
+                image: "/assets/YNM Safety National Highways and Expressways.png",
                 details: "VG 40 bitumen is specially designed for high-traffic highways exposed to heavy axle loads and varying climatic conditions. It provides excellent resistance to rutting, deformation, and moisture damage. This makes it ideal for long-life highway pavements and expressway construction."
               },
               {
                 id: "app2",
                 title: "Heavy-Traffic Corridors & Freight Routes",
                 description: "Bitumen VG 40 is ideal for heavy-traffic corridors and freight routes carrying continuous commercial vehicle movement.",
-                image: "/assets/YNM saftey Heavy-traffic corridors & freight routes.png",
+                image: "/assets/YNM saftey Heavy-traffic corridors and freight routes.png",
                 details: "VG 40 bitumen offers superior stiffness and stability required for roads with high truck and container traffic. It minimizes cracking and permanent deformation under repetitive loads. This ensures longer pavement life and reduced maintenance costs on freight corridors."
               },
               {
                 id: "app3",
                 title: "Toll Plazas & Intersections",
                 description: "Bitumen VG 40 is preferred for toll plazas and intersections where roads face extreme braking and turning stress.",
-                image: "/assets/YNM Safety Toll Plazas & Intersections.png",
+                image: "/assets/YNM Safety Toll Plazas and Intersections.png",
                 details: "High-stress zones demand a bitumen grade with excellent resistance to shear forces and surface wear. VG 40 bitumen maintains structural integrity under frequent stop-and-go traffic conditions. It helps prevent rutting, shoving, and surface failures at critical junctions."
               },
               {
                 id: "app4",
                 title: "Industrial Roads & Corridors",
                 description: "Bitumen VG 40 is extensively used in industrial roads designed for heavy machinery and loaded vehicles.",
-                image: "/assets/YNM safety Industrial roads & Corridors.png",
+                image: "/assets/YNM safety Industrial roads and Corridors.png",
                 details: "Industrial corridors require pavements that can withstand heavy axle loads and slow-moving traffic. VG 40 bitumen provides strong binding and high temperature stability. It ensures reliable performance in industrial zones and manufacturing hubs."
               },
               {
                 id: "app5",
                 title: "Port Roads & Container Yards",
                 description: "Bitumen VG 40 is suitable for port roads and container yards handling constant heavy container movement.",
-                image: "/assets/YNM Safety Port roads & Container yards.png",
+                image: "/assets/YNM Safety Port roads and Container yards.png",
                 details: "Port infrastructure demands high-performance bitumen capable of resisting deformation under extreme loads. VG 40 bitumen delivers excellent strength and durability for container terminals. It supports long-term pavement performance in coastal and high-load environments."
               },
               {
                 id: "app6",
                 title: "Airport Runways, Taxiways & Aprons",
                 description: "Bitumen VG 40 is used in airport runways, taxiways, and aprons requiring high structural strength.",
-                image: "/assets/YNM safety Airport runways , taxiways & aprons.png",
+                image: "/assets/YNM safety Airport runways taxiways and aprons.png",
                 details: "Airport pavements are subjected to very high static and dynamic loads from aircraft operations. VG 40 bitumen offers superior stability, adhesion, and temperature resistance. It ensures safe, durable, and long-lasting airside pavement performance."
               }
             ],
@@ -1798,37 +2564,37 @@ export const productsData = {
                 title: "National Highways & Expressways",
                 short: "Bitumen VG 40 is widely used for national highways and expressways due to its high load-bearing capacity and durability.",
                 hover: "VG 40 bitumen is specially designed for high-traffic highways exposed to heavy axle loads and varying climatic conditions. It provides excellent resistance to rutting, deformation, and moisture damage. This makes it ideal for long-life highway pavements and expressway construction.",
-                image: "/assets/YNM Safety National Highways & Expressways.png"
+                image: "/assets/YNM Safety National Highways and Expressways.png"
               },
               {
                 title: "Heavy-Traffic Corridors & Freight Routes",
                 short: "Bitumen VG 40 is ideal for heavy-traffic corridors and freight routes carrying continuous commercial vehicle movement.",
                 hover: "VG 40 bitumen offers superior stiffness and stability required for roads with high truck and container traffic. It minimizes cracking and permanent deformation under repetitive loads. This ensures longer pavement life and reduced maintenance costs on freight corridors.",
-                image: "/assets/YNM saftey Heavy-traffic corridors & freight routes.png"
+                image: "/assets/YNM saftey Heavy-traffic corridors and freight routes.png"
               },
               {
                 title: "Toll Plazas & Intersections",
                 short: "Bitumen VG 40 is preferred for toll plazas and intersections where roads face extreme braking and turning stress.",
                 hover: "High-stress zones demand a bitumen grade with excellent resistance to shear forces and surface wear. VG 40 bitumen maintains structural integrity under frequent stop-and-go traffic conditions. It helps prevent rutting, shoving, and surface failures at critical junctions.",
-                image: "/assets/YNM Safety Toll Plazas & Intersections.png"
+                image: "/assets/YNM Safety Toll Plazas and Intersections.png"
               },
               {
                 title: "Industrial Roads & Corridors",
                 short: "Bitumen VG 40 is extensively used in industrial roads designed for heavy machinery and loaded vehicles.",
                 hover: "Industrial corridors require pavements that can withstand heavy axle loads and slow-moving traffic. VG 40 bitumen provides strong binding and high temperature stability. It ensures reliable performance in industrial zones and manufacturing hubs.",
-                image: "/assets/YNM safety Industrial roads & Corridors.png"
+                image: "/assets/YNM safety Industrial roads and Corridors.png"
               },
               {
                 title: "Port Roads & Container Yards",
                 short: "Bitumen VG 40 is suitable for port roads and container yards handling constant heavy container movement.",
                 hover: "Port infrastructure demands high-performance bitumen capable of resisting deformation under extreme loads. VG 40 bitumen delivers excellent strength and durability for container terminals. It supports long-term pavement performance in coastal and high-load environments.",
-                image: "/assets/YNM Safety Port roads & Container yards.png"
+                image: "/assets/YNM Safety Port roads and Container yards.png"
               },
               {
                 title: "Airport Runways, Taxiways & Aprons",
                 short: "Bitumen VG 40 is used in airport runways, taxiways, and aprons requiring high structural strength.",
                 hover: "Airport pavements are subjected to very high static and dynamic loads from aircraft operations. VG 40 bitumen offers superior stability, adhesion, and temperature resistance. It ensures safe, durable, and long-lasting airside pavement performance.",
-                image: "/assets/YNM safety Airport runways , taxiways & aprons.png"
+                image: "/assets/YNM safety Airport runways taxiways and aprons.png"
               }
             ],
             
@@ -2017,12 +2783,12 @@ export const productsData = {
             // Gallery Images
             gallery: [
               "/assets/Ynm safety bitumen manufactures.png",
-              "/assets/YNM Safety National Highways & Expressways.png",
-              "/assets/YNM saftey Heavy-traffic corridors & freight routes.png",
-              "/assets/YNM Safety Toll Plazas & Intersections.png",
-              "/assets/YNM safety Industrial roads & Corridors.png",
-              "/assets/YNM Safety Port roads & Container yards.png",
-              "/assets/YNM safety Airport runways , taxiways & aprons.png"
+              "/assets/YNM Safety National Highways and Expressways.png",
+              "/assets/YNM saftey Heavy-traffic corridors and freight routes.png",
+              "/assets/YNM Safety Toll Plazas and Intersections.png",
+              "/assets/YNM safety Industrial roads and Corridors.png",
+              "/assets/YNM Safety Port roads and Container yards.png",
+              "/assets/YNM safety Airport runways taxiways and aprons.png"
             ]
           }
         ]
@@ -2178,7 +2944,7 @@ export const productsData = {
                 id: "app2",
                 title: "Curves & Sharp Bends",
                 description: "YNM Safety W beam crash barriers provide reliable protection at dangerous curves and sharp bends.",
-                image: "/assets/metal beam crash barrier Sharp Bends  &  corners ynm safey.png",
+                image: "/assets/metal beam crash barrier Sharp Bends and corners ynm safey.png",
                 details: "Engineered for impact absorption, our galvanized W beam crash barriers help control vehicle deviation on accident-prone curves. They significantly improve driver safety in sharp turns and hilly terrains."
               },
               {
@@ -2222,7 +2988,7 @@ export const productsData = {
                 title: "Curves & Sharp Bends",
                 short: "YNM Safety W beam crash barriers provide reliable protection at dangerous curves and sharp bends.",
                 hover: "Engineered for impact absorption, our galvanized W beam crash barriers help control vehicle deviation on accident-prone curves. They significantly improve driver safety in sharp turns and hilly terrains.",
-                image: "/assets/metal beam crash barrier Sharp Bends  &  corners ynm safey.png"
+                image: "/assets/metal beam crash barrier Sharp Bends and corners ynm safey.png"
               },
               {
                 title: "Bridges & Flyovers",
@@ -2278,7 +3044,7 @@ export const productsData = {
               "/assets/metal beam crash barrier Central Dividers from ynm safety.jpeg",
               "/assets/metal beam crash barrier Hazards at ynm safety.png",
               "/assets/metal beam crash barrier s ynm safety at Bridges.png",
-              "/assets/metal beam crash barrier Sharp Bends  &  corners ynm safey.png",
+              "/assets/metal beam crash barrier Sharp Bends and corners ynm safey.png",
               "/assets/ghat road w beam barrier ynm safety.png"
             ],
             
@@ -3393,42 +4159,42 @@ export const productsData = {
                 id: "app1",
                 title: "Highways & Expressways",
                 description: "Retro reflective gantry signages provide clear overhead guidance on highways and expressways.",
-                image: "/assets/Ynm safety Highways & Expressways.png",
+                image: "/assets/Ynm safety Highways and Expressways.png",
                 details: "YNM Safety manufactures retro reflective gantry signages for highways and expressways to ensure long-distance visibility at high speeds. As trusted gantry signage manufacturers, we deliver durable overhead signboards that improve lane discipline and road safety."
               },
               {
                 id: "app2",
                 title: "Urban Roads & City Streets",
                 description: "Gantry signages support organized traffic movement on urban roads and city streets.",
-                image: "/assets/Ynm safety Urban Roads & City streets.png",
+                image: "/assets/Ynm safety Urban Roads and City streets.png",
                 details: "YNM Safety manufactures gantry signboards for urban roads and city streets with high retro reflectivity. These overhead gantry signages help reduce driver confusion and improve traffic flow in busy city environments."
               },
               {
                 id: "app3",
                 title: "Toll Plazas & Bridges",
                 description: "Gantry signages improve lane identification at toll plazas and bridge approaches.",
-                image: "/assets/Ynm safety Toll ways & Bridges.png",
+                image: "/assets/Ynm safety Toll ways and Bridges.png",
                 details: "YNM Safety manufactures retro reflective gantry signages for toll plazas and bridges to ensure clear lane guidance and visibility. Our overhead gantry signboards are designed for durability and continuous operation in high-traffic zones."
               },
               {
                 id: "app4",
                 title: "Airports & Railway Stations",
                 description: "Gantry signages provide effective traffic guidance in transport hubs.",
-                image: "/assets/ynm safety Airports & Railway Stations.png",
+                image: "/assets/ynm safety Airports and Railway Stations.png",
                 details: "YNM Safety manufactures overhead gantry signages for airports and railway stations to manage vehicle movement efficiently. These retro reflective gantry signboards enhance navigation and safety in high-traffic transport areas."
               },
               {
                 id: "app5",
                 title: "Industrial Sites & Ports",
                 description: "Gantry signages ensure controlled traffic movement in industrial areas.",
-                image: "/assets/Ynm safety Industrial sites & port areas.png",
+                image: "/assets/Ynm safety Industrial sites and port areas.png",
                 details: "YNM Safety manufactures heavy-duty gantry signboards for industrial sites and ports. These retro reflective overhead signages support safe vehicle routing and operational efficiency."
               },
               {
                 id: "app6",
                 title: "Commercial & Advertising",
                 description: "Gantry structures support commercial signage and advertising displays.",
-                image: "/assets/Ynm safety Commercial &  Advertising.png",
+                image: "/assets/Ynm safety Commercial and Advertising.png",
                 details: "YNM Safety manufactures gantry structures suitable for commercial signage and advertising applications. Our overhead gantry signboards offer high visibility and long-term performance."
               },
               {
@@ -3445,37 +4211,37 @@ export const productsData = {
                 title: "Highways & Expressways",
                 short: "Retro reflective gantry signages provide clear overhead guidance on highways and expressways.",
                 hover: "YNM Safety manufactures retro reflective gantry signages for highways and expressways to ensure long-distance visibility at high speeds. As trusted gantry signage manufacturers, we deliver durable overhead signboards that improve lane discipline and road safety.",
-                image: "/assets/Ynm safety Highways & Expressways.png"
+                image: "/assets/Ynm safety Highways and Expressways.png"
               },
               {
                 title: "Urban Roads & City Streets",
                 short: "Gantry signages support organized traffic movement on urban roads and city streets.",
                 hover: "YNM Safety manufactures gantry signboards for urban roads and city streets with high retro reflectivity. These overhead gantry signages help reduce driver confusion and improve traffic flow in busy city environments.",
-                image: "/assets/Ynm safety Urban Roads & City streets.png"
+                image: "/assets/Ynm safety Urban Roads and City streets.png"
               },
               {
                 title: "Toll Plazas & Bridges",
                 short: "Gantry signages improve lane identification at toll plazas and bridge approaches.",
                 hover: "YNM Safety manufactures retro reflective gantry signages for toll plazas and bridges to ensure clear lane guidance and visibility. Our overhead gantry signboards are designed for durability and continuous operation in high-traffic zones.",
-                image: "/assets/Ynm safety Toll ways & Bridges.png"
+                image: "/assets/Ynm safety Toll ways and Bridges.png"
               },
               {
                 title: "Airports & Railway Stations",
                 short: "Gantry signages provide effective traffic guidance in transport hubs.",
                 hover: "YNM Safety manufactures overhead gantry signages for airports and railway stations to manage vehicle movement efficiently. These retro reflective gantry signboards enhance navigation and safety in high-traffic transport areas.",
-                image: "/assets/ynm safety Airports & Railway Stations.png"
+                image: "/assets/ynm safety Airports and Railway Stations.png"
               },
               {
                 title: "Industrial Sites & Ports",
                 short: "Gantry signages ensure controlled traffic movement in industrial areas.",
                 hover: "YNM Safety manufactures heavy-duty gantry signboards for industrial sites and ports. These retro reflective overhead signages support safe vehicle routing and operational efficiency.",
-                image: "/assets/Ynm safety Industrial sites & port areas.png"
+                image: "/assets/Ynm safety Industrial sites and port areas.png"
               },
               {
                 title: "Commercial & Advertising",
                 short: "Gantry structures support commercial signage and advertising displays.",
                 hover: "YNM Safety manufactures gantry structures suitable for commercial signage and advertising applications. Our overhead gantry signboards offer high visibility and long-term performance.",
-                image: "/assets/Ynm safety Commercial &  Advertising.png"
+                image: "/assets/Ynm safety Commercial and Advertising.png"
               },
               {
                 title: "Smart / Intelligent Transportation Systems (ITS)",
@@ -3674,12 +4440,12 @@ export const productsData = {
             // Gallery Images
             gallery: [
               "/assets/Ynm safety signages.png",
-              "/assets/Ynm safety Highways & Expressways.png",
-              "/assets/Ynm safety Urban Roads & City streets.png",
-              "/assets/Ynm safety Toll ways & Bridges.png",
-              "/assets/ynm safety Airports & Railway Stations.png",
-              "/assets/Ynm safety Industrial sites & port areas.png",
-              "/assets/Ynm safety Commercial &  Advertising.png",
+              "/assets/Ynm safety Highways and Expressways.png",
+              "/assets/Ynm safety Urban Roads and City streets.png",
+              "/assets/Ynm safety Toll ways and Bridges.png",
+              "/assets/ynm safety Airports and Railway Stations.png",
+              "/assets/Ynm safety Industrial sites and port areas.png",
+              "/assets/Ynm safety Commercial and Advertising.png",
               "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
             ]
           },
@@ -3810,14 +4576,14 @@ export const productsData = {
                 id: "app1",
                 title: "Highways & Expressways",
                 description: "Cantilever signages provide clear overhead traffic guidance on highways and expressways.",
-                image: "/assets/YNM Safety Cantilever Highways & Expressways.png",
+                image: "/assets/YNM Safety Cantilever Highways and Expressways.png",
                 details: "Cantilever signages ensure maximum visibility across multiple lanes without obstructing traffic flow. They are designed to withstand high wind loads and high-speed vehicle conditions. This improves driver response time and overall road safety."
               },
               {
                 id: "app2",
                 title: "Urban Roads & Streets",
                 description: "Cantilever signages are ideal for urban roads and busy city streets.",
-                image: "/assets/YNM Safety Cantilever Urban Roads & Streets.png",
+                image: "/assets/YNM Safety Cantilever Urban Roads and Streets.png",
                 details: "Elevated cantilever signages remain clearly visible even in congested traffic conditions. They deliver advance directional and lane information to drivers. This helps reduce confusion and improves traffic movement in urban areas."
               },
               {
@@ -3838,7 +4604,7 @@ export const productsData = {
                 id: "app5",
                 title: "Ports & Logistics Hubs",
                 description: "Cantilever signages are suitable for ports and logistics hubs with heavy vehicle traffic.",
-                image: "/assets/YNM Safety Cantilever Ports & Logistics Hubs.png",
+                image: "/assets/YNM Safety Cantilever Ports and Logistics Hubs.png",
                 details: "Overhead cantilever signages offer high visibility in large cargo and logistics areas. They guide vehicles through complex routes and loading zones. This ensures smooth traffic flow and improved safety operations."
               },
               {
@@ -3855,13 +4621,13 @@ export const productsData = {
                 title: "Highways & Expressways",
                 short: "Cantilever signages provide clear overhead traffic guidance on highways and expressways.",
                 hover: "Cantilever signages ensure maximum visibility across multiple lanes without obstructing traffic flow. They are designed to withstand high wind loads and high-speed vehicle conditions. This improves driver response time and overall road safety.",
-                image: "/assets/YNM Safety Cantilever Highways & Expressways.png"
+                image: "/assets/YNM Safety Cantilever Highways and Expressways.png"
               },
               {
                 title: "Urban Roads & Streets",
                 short: "Cantilever signages are ideal for urban roads and busy city streets.",
                 hover: "Elevated cantilever signages remain clearly visible even in congested traffic conditions. They deliver advance directional and lane information to drivers. This helps reduce confusion and improves traffic movement in urban areas.",
-                image: "/assets/YNM Safety Cantilever Urban Roads & Streets.png"
+                image: "/assets/YNM Safety Cantilever Urban Roads and Streets.png"
               },
               {
                 title: "Toll Plazas",
@@ -3879,7 +4645,7 @@ export const productsData = {
                 title: "Ports & Logistics Hubs",
                 short: "Cantilever signages are suitable for ports and logistics hubs with heavy vehicle traffic.",
                 hover: "Overhead cantilever signages offer high visibility in large cargo and logistics areas. They guide vehicles through complex routes and loading zones. This ensures smooth traffic flow and improved safety operations.",
-                image: "/assets/YNM Safety Cantilever Ports & Logistics Hubs.png"
+                image: "/assets/YNM Safety Cantilever Ports and Logistics Hubs.png"
               },
               {
                 title: "Smart / Intelligent Transportation Systems (ITS)",
@@ -4087,11 +4853,11 @@ export const productsData = {
             // Gallery Images
             gallery: [
               "/assets/ynm safety cantilever.png",
-              "/assets/YNM Safety Cantilever Highways & Expressways.png",
-              "/assets/YNM Safety Cantilever Urban Roads & Streets.png",
+              "/assets/YNM Safety Cantilever Highways and Expressways.png",
+              "/assets/YNM Safety Cantilever Urban Roads and Streets.png",
               "/assets/YNM Safety Cantilever Toll Plazas.png",
               "/assets/YNM Safety Cantilever Industrial areas.png",
-              "/assets/YNM Safety Cantilever Ports & Logistics Hubs.png",
+              "/assets/YNM Safety Cantilever Ports and Logistics Hubs.png",
               "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
             ]
           }

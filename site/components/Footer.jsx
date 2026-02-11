@@ -118,7 +118,8 @@ function Footer({ footerData: propFooterData }) {
         <div className="whatsapp-popup">
           <div className="whatsapp-popup-content">
             <span className="whatsapp-popup-icon">📱</span>
-            <p>WhatsApp coming soon!</p>
+            <p>Coming Soon</p>
+            <small>Please use other ways to contact us</small>
           </div>
         </div>
       )}

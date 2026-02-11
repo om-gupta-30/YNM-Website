@@ -132,7 +132,8 @@ function FloatingSocialMedia() {
         <div className="floating-social-popup">
           <div className="floating-social-popup-content">
             <span className="floating-social-popup-icon">📱</span>
-            <p>WhatsApp coming soon!</p>
+            <p>Coming Soon</p>
+            <small>Please use other ways to contact us</small>
           </div>
         </div>
       )}

@@ -530,33 +530,31 @@ gitleaks detect --source . --verbose
 
 **For Docker deployment with full control:**
 
-1. **Build and Deploy**
+1. **Prerequisites**
+   - All runtime secrets (Google Sheets, Gemini, Gmail, reCAPTCHA, HR email, etc.) must be in [GCP Secret Manager](https://console.cloud.google.com/security/secret-manager) and attached to the Cloud Run service (Variables & Secrets → Reference a secret).
+
+2. **Build and Deploy**
    ```bash
    cd site
-   npm run build  # Test build locally first
-   
-   # Deploy to Cloud Run (auto-builds from Dockerfile)
+   npm run build   # Test build locally first
+
+   # Deploy (build env for NEXT_PUBLIC_* from Secret Manager so client bundle has GA/reCAPTCHA)
+   export PROJECT_ID=gen-lang-client-0473608308
+   export REGION=asia-south1
    gcloud run deploy ynm-website \
      --source . \
      --platform managed \
-     --region asia-south1 \
+     --region $REGION \
+     --project $PROJECT_ID \
      --allow-unauthenticated \
-     --port 3000
+     --port 3000 \
+     --set-build-env-vars "NEXT_PUBLIC_RECAPTCHA_SITE_KEY=$(gcloud secrets versions access latest --secret=NEXT_PUBLIC_RECAPTCHA_SITE_KEY --project=$PROJECT_ID),NEXT_PUBLIC_GA_ID=$(gcloud secrets versions access latest --secret=NEXT_PUBLIC_GA_ID --project=$PROJECT_ID)"
    ```
 
-2. **Set Environment Variables**
-   
-   Use GCP Secret Manager (recommended) or environment variables:
-   ```bash
-   # Option 1: Via Console (recommended)
-   # Go to Cloud Run → Select Service → Edit & Deploy New Revision → Variables & Secrets
-   
-   # Option 2: Via CLI
-   gcloud run services update ynm-website \
-     --update-env-vars GOOGLE_SHEET_ID=your_sheet_id \
-     --update-env-vars GOOGLE_GEMINI_API_KEY=your_api_key \
-     --region asia-south1
-   ```
+3. **Set Environment Variables / Secrets**
+   - **Recommended:** Cloud Run → ynm-website → Edit & Deploy New Revision → Variables & Secrets → add each variable and reference the Secret Manager secret (e.g. `GOOGLE_SHEET_ID`, `GOOGLE_GEMINI_API_KEY`, `GMAIL_USER`, `GMAIL_APP_PASSWORD`, `HR_EMAIL`, `CAREERS_NOREPLY_FROM`, `RECAPTCHA_SECRET_KEY`, `GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_PRIVATE_KEY`).
+   - Required for forms, chatbot, careers, reCAPTCHA: `GOOGLE_SHEET_ID`, `GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_PRIVATE_KEY`, `GOOGLE_GEMINI_API_KEY`, `GMAIL_USER`, `GMAIL_APP_PASSWORD`, `HR_EMAIL`, `CAREERS_NOREPLY_FROM`, `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`, `RECAPTCHA_SECRET_KEY`, `NEXT_PUBLIC_GA_ID`.
+   - Never commit real values; use Secret Manager and reference in Cloud Run.
 
 ### Docker (Local Testing)
 
