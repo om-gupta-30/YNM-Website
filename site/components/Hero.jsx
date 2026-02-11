@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState, Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import heroImage from "@/public/assets/hero-image.png";
+// Use string path instead of static import for Cloud Run compatibility
+const heroImageDefault = "/assets/hero-image.png";
 
 const heroNavConfig = [
   { key: "products", href: "/products" },
@@ -365,6 +366,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
                 width={50}
                 height={50}
                 className="nav-logo-new"
+                unoptimized
                 priority 
               />
             </div>
@@ -454,15 +456,14 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
         <div id="hero-image-wrapper" ref={heroImageWrapperRef}>
           <div id="hero-image-safe">
             <Image 
-              src={heroImageUrl || heroImage} 
+              src={heroImageUrl || heroImageDefault} 
               alt="YNM Safety - Global Logistics & Manufacturing Excellence" 
               fill 
               id="hero-image" 
               priority 
-              quality={85}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
               style={{ objectFit: 'cover', objectPosition: 'center center' }}
-              unoptimized={heroImageUrl && (heroImageUrl.startsWith('http') || heroImageUrl.startsWith('//'))}
+              unoptimized
             />
           </div>
 

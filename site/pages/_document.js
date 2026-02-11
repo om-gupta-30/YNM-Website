@@ -22,6 +22,16 @@ export default function Document() {
           crossOrigin="anonymous"
         />
         
+        {/* Performance: Preload LCP hero image */}
+        <link
+          rel="preload"
+          href="/assets/hero-image.png"
+          as="image"
+          type="image/png"
+          fetchpriority="high"
+        />
+        
+        
         {/* Cross-platform rendering optimization */}
         <meta name="format-detection" content="telephone=no" />
         <meta name="theme-color" content="#74060D" />
@@ -53,38 +63,15 @@ export default function Document() {
         {/* Web App Manifest */}
         <link rel="manifest" href="/site.webmanifest" />
         
-        {/* Critical CSS for preventing layout shift */}
+        {/* Critical CSS for preventing layout shift and faster FCP */}
         <style
           dangerouslySetInnerHTML={{
             __html: `
               /* Prevent layout shift before CSS loads */
-              html { 
-                scroll-behavior: auto;
-                overflow-x: hidden;
-              }
-              body { 
-                margin: 0; 
-                overflow-x: hidden;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-              }
-              /* Ensure smooth rendering on all platforms */
-              * {
-                -webkit-tap-highlight-color: transparent;
-              }
-              /* Performance: GPU acceleration for smoother scrolling */
-              img, picture, video {
-                will-change: auto;
-                transform: translateZ(0);
-                backface-visibility: hidden;
-              }
-              /* Optimize for Windows Chrome/Edge */
-              @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-                * {
-                  font-smoothing: antialiased;
-                  -webkit-font-smoothing: antialiased;
-                }
-              }
+              html { scroll-behavior: auto; overflow-x: hidden; }
+              body { margin: 0; overflow-x: hidden; }
+              /* Critical hero section styles for faster LCP */
+              #hero { position: relative; min-height: 100vh; width: 100%; background: #74060D; }
             `,
           }}
         />

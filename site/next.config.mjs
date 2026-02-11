@@ -10,18 +10,16 @@ const nextConfig = {
         hostname: 'flagcdn.com',
       },
     ],
-    // Disable Next.js Image Optimization - use pre-compressed JPGs directly
-    // This avoids /_next/image API issues in Docker/Cloud Run deployments
+    // Disable Next.js Image Optimization for Cloud Run standalone deployment
+    // This prevents /_next/image API 404 errors in standalone/Docker mode
     unoptimized: true,
     dangerouslyAllowSVG: true,
+    // Custom loader to bypass optimization API entirely
+    loader: 'custom',
+    loaderFile: './lib/imageLoader.js',
   },
   // Enable compression for better performance
   compress: true,
-  
-  // Enable experimental features for better performance
-  experimental: {
-    optimizePackageImports: ['@/components', '@/lib'],
-  },
   
   // Efficient cache lifetimes for static assets (PageSpeed: "Use efficient cache lifetimes")
   async headers() {

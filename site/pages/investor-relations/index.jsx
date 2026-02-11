@@ -956,7 +956,7 @@ export default function InvestorRelationsPage() {
           flex-shrink: 0;
         }
 
-        .ir-phil-text h3 {
+        .ir-phil-text h2 {
           font-size: 20px;
           font-weight: 700;
           color: #fff;

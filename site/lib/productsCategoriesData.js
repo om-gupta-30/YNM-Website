@@ -596,7 +596,7 @@ export const productsData = {
                 id: "app2",
                 title: "Taxiways",
                 description: "Waterborne airfield marking paints provide clear directional guidance on airport taxiways.",
-                image: "/assets/YNM Safety Taxiways.png",
+                image: "/assets/ynm-safety-taxiways.png",
                 details: "YNM Safety waterborne paints offer fast drying and strong adhesion for uninterrupted taxiway operations. Manufactured for precise markings that improve aircraft movement safety."
               },
               {
@@ -640,7 +640,7 @@ export const productsData = {
                 title: "Taxiways",
                 short: "Waterborne airfield marking paints provide clear directional guidance on airport taxiways.",
                 hover: "YNM Safety waterborne paints offer fast drying and strong adhesion for uninterrupted taxiway operations. Manufactured for precise markings that improve aircraft movement safety.",
-                image: "/assets/YNM Safety Taxiways.png"
+                image: "/assets/ynm-safety-taxiways.png"
               },
               {
                 title: "Aprons",
@@ -689,7 +689,7 @@ export const productsData = {
             
             gallery: [
               "/assets/YNM Safety Runways.png",
-              "/assets/YNM Safety Taxiways.png",
+              "/assets/ynm-safety-taxiways.png",
               "/assets/YNM Safety Aprons.png",
               "/assets/YNM Safety Aircraft Parking Bays.png",
               "/assets/YNM Safety Holding position markings.png",
@@ -771,13 +771,13 @@ export const productsData = {
               ]
             },
             
-            performanceMetrics: "50 MT/month",
+            performanceMetrics: "600 MT",
             
             statistics: {
-              annualCapacity: "600 MT",
+              annualCapacity: "7200 MT",
               exportCountries: "20+",
               qualityStandards: "IS164-2023",
-              productionSpeed: "50 MT"
+              productionSpeed: "600 MT"
             },
             
             // Manufacturing Process
@@ -833,6 +833,793 @@ export const productsData = {
                 title: "Storage & Dispatch",
                 description: "Packed materials are stored in a controlled warehouse environment and dispatched as per customer orders with proper documentation to ensure safe transport and on-time delivery to airfield projects."
               }
+            ]
+          },
+          {
+            id: "p3",
+            slug: "cold-plastic-paints-manufacturers",
+            name: "Cold Plastic Paints",
+            shortDesc: "High-performance cold plastic paints manufacture delivering durable, high-visibility road marking paints for global traffic safety applications.",
+            desc: "YNM Safety manufactures premium cold plastic paints engineered for long-lasting performance and superior visibility for highways, urban roads, and industrial zones.",
+            image: "/assets/ynm-safety-cold-plastic-racetrack.png",
+            heroImage: "/assets/ynm-safety-cold-plastic-racetrack.png",
+            specs: ["Acrylic/MMA Based", "Fast Drying", "High-Visibility", "Anti-Skid", "2-5 Years Design Life", "MORTH 803.7 Compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Cold Plastic Paints Manufacturers | Road Marking Paints | YNM Safety",
+              description: "YNM Safety cold plastic paints manufactures high-performance road marking paints and cold plastic paints for durable traffic markings worldwide, compliant with international standards.",
+              slug: "/cold-plastic-paints-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the trusted cold plastic paints manufactures, offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our YNM Safety cold plastic paints are widely used for highways, expressways, urban roads, parking areas, and industrial zones across global markets.\n\nAs YNM Safety manufactures premium cold plastic paints, our products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal for projects requiring precise application without heating, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with international traffic safety standards and are suitable for government, EPC, and private infrastructure projects worldwide.",
+            detailedDescription: "YNM Safety is one of the trusted cold plastic paints manufactures, offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our YNM Safety cold plastic paints are widely used for highways, expressways, urban roads, parking areas, and industrial zones across global markets.\n\nAs YNM Safety manufactures premium cold plastic paints, our products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal for projects requiring precise application without heating, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with international traffic safety standards and are suitable for government, EPC, and private infrastructure projects worldwide.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Cold Plastic Paints" },
+              { label: "Material Base", value: "Acrylic / MMA Based Cold Plastic" },
+              { label: "Application Method", value: "Trowel / Screed / Spray" },
+              { label: "Drying Time", value: "Fast Drying" },
+              { label: "Glass Beads", value: "Drop-On / Premix" },
+              { label: "Finish", value: "High-Visibility & Anti-Skid" },
+              { label: "Design Life", value: "2 – 5 Years (Depending on Traffic)" },
+              { label: "Compliance", value: "MORTH 803.7 & IRC 35" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "16 Kg",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IRC 35, MORTH 803.7, ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "1 ton",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "32089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "16 Kg MS Container",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Cold Plastic Paints",
+                "Material Base: Acrylic / MMA Based Cold Plastic",
+                "Application Method: Trowel / Screed / Spray",
+                "Drying Time: Fast Drying",
+                "Glass Beads: Drop-On / Premix",
+                "Finish: High-Visibility & Anti-Skid",
+                "Design Life: 2 – 5 Years (Depending on Traffic)",
+                "Application Area: Highways, Urban Roads & Industrial Roads",
+                "Compliance: MORTH 803.7 & IRC 35",
+                "HSN Code: 32089090"
+              ],
+              keyFeatures: [
+                "Excellent day and night visibility",
+                "Fast curing with minimal traffic disruption",
+                "Strong adhesion to asphalt and concrete",
+                "High resistance to wear and weather",
+                "Environment-friendly cold plastic application process"
+              ],
+              advantages: [
+                "Enhances road safety and lane clarity",
+                "Reduces application time and energy cost",
+                "Ideal for high-traffic road marking applications",
+                "Long service life with low maintenance",
+                "Trusted cold plastic paints manufactures – YNM Safety"
+              ]
+            },
+            
+            features: [
+              "Excellent day and night visibility",
+              "Fast curing with minimal traffic disruption",
+              "Strong adhesion to asphalt and concrete",
+              "High resistance to wear and weather",
+              "Environment-friendly cold plastic application process"
+            ],
+            
+            advantages: [
+              "Enhances road safety and lane clarity",
+              "Reduces application time and energy cost",
+              "Ideal for high-traffic road marking applications",
+              "Long service life with low maintenance",
+              "Trusted cold plastic paints manufactures – YNM Safety"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Rumble Strips",
+                description: "Cold plastic paints are ideal for rumble strips, delivering high-build markings with excellent skid resistance and long service life.",
+                image: "/assets/ynm-safety-cold-plastic-rumble-strips.png",
+                details: "These paints create durable, tactile rumble strips that enhance driver alertness and road safety. Their superior adhesion and wear resistance make them suitable for high-traffic highways and expressways."
+              },
+              {
+                id: "app2",
+                title: "Parking Lots",
+                description: "Cold plastic paints provide clear, long-lasting markings for parking lots with excellent visibility and durability.",
+                image: "/assets/ynm-safety-cold-plastic-parking-lots.png",
+                details: "Perfect for indoor and outdoor parking areas, these paints resist abrasion, oil stains, and weathering. They ensure sharp line definition for bays, arrows, and symbols even under heavy vehicle movement."
+              },
+              {
+                id: "app3",
+                title: "Airports",
+                description: "Cold plastic paints are widely used in airports for precise and durable surface markings.",
+                image: "/assets/ynm-safety-cold-plastic-airports.png",
+                details: "Designed to withstand heavy aircraft loads and extreme weather conditions, these paints offer fast curing and high reflectivity. They are suitable for taxiways, aprons, and safety markings where performance is critical."
+              },
+              {
+                id: "app4",
+                title: "Sport Areas",
+                description: "Cold plastic paints deliver vibrant, wear-resistant markings for various sports surfaces.",
+                image: "/assets/ynm-safety-cold-plastic-sport-areas.png",
+                details: "These paints provide excellent color retention, flexibility, and slip resistance, making them ideal for stadiums, playgrounds, and multi-sport courts. They maintain performance under frequent use and outdoor exposure."
+              },
+              {
+                id: "app5",
+                title: "Cycle Track",
+                description: "Cold plastic paints ensure clear and highly visible markings for dedicated cycle tracks.",
+                image: "/assets/ynm-safety-cold-plastic-cycle-track.png",
+                details: "With strong adhesion and anti-skid properties, these paints enhance cyclist safety and lane visibility. They perform well under constant wear from bicycles and changing climatic conditions."
+              },
+              {
+                id: "app6",
+                title: "F1 Track",
+                description: "Cold plastic paints are suitable for high-performance race track markings, including F1 circuits.",
+                image: "/assets/ynm-safety-cold-plastic-f1-track.png",
+                details: "Engineered for extreme speeds and stress, these paints offer superior durability, precision, and skid resistance. They ensure consistent visibility and performance under intense racing conditions."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Rumble Strips",
+                short: "Cold plastic paints are ideal for rumble strips, delivering high-build markings with excellent skid resistance and long service life.",
+                hover: "These paints create durable, tactile rumble strips that enhance driver alertness and road safety. Their superior adhesion and wear resistance make them suitable for high-traffic highways and expressways.",
+                image: "/assets/ynm-safety-cold-plastic-rumble-strips.png"
+              },
+              {
+                title: "Parking Lots",
+                short: "Cold plastic paints provide clear, long-lasting markings for parking lots with excellent visibility and durability.",
+                hover: "Perfect for indoor and outdoor parking areas, these paints resist abrasion, oil stains, and weathering. They ensure sharp line definition for bays, arrows, and symbols even under heavy vehicle movement.",
+                image: "/assets/ynm-safety-cold-plastic-parking-lots.png"
+              },
+              {
+                title: "Airports",
+                short: "Cold plastic paints are widely used in airports for precise and durable surface markings.",
+                hover: "Designed to withstand heavy aircraft loads and extreme weather conditions, these paints offer fast curing and high reflectivity. They are suitable for taxiways, aprons, and safety markings where performance is critical.",
+                image: "/assets/ynm-safety-cold-plastic-airports.png"
+              },
+              {
+                title: "Sport Areas",
+                short: "Cold plastic paints deliver vibrant, wear-resistant markings for various sports surfaces.",
+                hover: "These paints provide excellent color retention, flexibility, and slip resistance, making them ideal for stadiums, playgrounds, and multi-sport courts. They maintain performance under frequent use and outdoor exposure.",
+                image: "/assets/ynm-safety-cold-plastic-sport-areas.png"
+              },
+              {
+                title: "Cycle Track",
+                short: "Cold plastic paints ensure clear and highly visible markings for dedicated cycle tracks.",
+                hover: "With strong adhesion and anti-skid properties, these paints enhance cyclist safety and lane visibility. They perform well under constant wear from bicycles and changing climatic conditions.",
+                image: "/assets/ynm-safety-cold-plastic-cycle-track.png"
+              },
+              {
+                title: "F1 Track",
+                short: "Cold plastic paints are suitable for high-performance race track markings, including F1 circuits.",
+                hover: "Engineered for extreme speeds and stress, these paints offer superior durability, precision, and skid resistance. They ensure consistent visibility and performance under intense racing conditions.",
+                image: "/assets/ynm-safety-cold-plastic-f1-track.png"
+              }
+            ],
+            
+            // Customer Success Stories / Projects
+            projects: [
+              {
+                id: "proj1",
+                title: "Safeway",
+                client: "Safeway",
+                location: "Gurgaon",
+                description: "Supplied cold plastic paints for road marking project. Our cold plastic paints provided excellent durability, high visibility, and anti-skid properties for this infrastructure project.",
+                quantity: "834 sq.m",
+                year: "2024",
+                highlight: "100%",
+                highlightLabel: "Quality Delivered",
+                logo: "/assets/ynm safety manufactures of gantry signages.png"
+              },
+              {
+                id: "proj2",
+                title: "Adani",
+                client: "Adani",
+                location: "Ahmedabad",
+                description: "Delivered cold plastic paint for road marking applications. YNM Safety's cold plastic paints ensured long-lasting and high-visibility markings for commercial infrastructure.",
+                quantity: "955.42 sq.m",
+                year: "2024",
+                highlight: "Premium",
+                highlightLabel: "Quality Grade",
+                logo: "/assets/ynm safety manufactures of gantry signages.png"
+              }
+            ],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Cold Plastic Paint Road Marking Market Growth | YNM Safety",
+              description: "The global cold plastic paint road marking paints market was valued at around US $1.12 billion in 2024 and is projected to reach US $2.21 billion by 2033, growing at a CAGR of ~7.8%. Growth is driven by rising infrastructure investments, stricter road safety regulations, and demand for durable, high-visibility markings. The market outlook remains positive, with steady expansion expected through 2033.",
+              cagr: "7.8%",
+              growthFactors: [
+                "Infrastructure development & maintenance",
+                "Stricter safety & regulatory standards",
+                "Urbanization & traffic management needs",
+                "Environmental & sustainability trends",
+                "Technological advancements"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.12B",
+                projectedMarketSize: "$2.21B",
+                currentYear: "2024",
+                projectedYear: "2033",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 1.12 },
+                { year: "2025", value: 1.21 },
+                { year: "2026", value: 1.30 },
+                { year: "2027", value: 1.40 },
+                { year: "2028", value: 1.51 },
+                { year: "2029", value: 1.63 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Australia", "Southeast Asian countries"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "France", "Italy", "United Kingdom", "Spain", "Russia"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Mexico", "Rest of Latin America"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["Saudi Arabia", "United Arab Emirates (UAE)", "South Africa", "Rest of Middle East & Africa"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 9 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures cold plastic paints through a controlled, quality-driven process to ensure excellent durability, adhesion, visibility, and compliance with road safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Procurement & Inspection",
+                description: "High-quality raw materials including acrylic/MMA resins, pigments, fillers, glass beads, and additives are sourced from certified suppliers. Each batch is inspected and tested to meet required quality and performance standards."
+              },
+              {
+                step: "02",
+                title: "Weighing & Batch Formulation",
+                description: "All raw materials are accurately weighed as per approved formulation to ensure consistent quality. Proper formulation is critical for durability, flow properties, and reflectivity of YNM cold plastic paints."
+              },
+              {
+                step: "03",
+                title: "Resin & Binder Preparation",
+                description: "The acrylic/MMA base resin is prepared and mixed with binders to create the foundation of the cold plastic paint. This ensures excellent adhesion and flexibility in the final product."
+              },
+              {
+                step: "04",
+                title: "Pigment & Filler Dispersion",
+                description: "High-opacity pigments such as titanium dioxide and selected fillers are added to the base mixture. High-speed dispersers achieve fine particle dispersion for excellent color brightness and visibility."
+              },
+              {
+                step: "05",
+                title: "Grinding & Homogenization",
+                description: "The paint mixture is processed through grinding equipment to ensure uniform particle size, smooth texture, and consistent film performance required for road marking applications."
+              },
+              {
+                step: "06",
+                title: "Additive Integration",
+                description: "Performance additives, anti-settling agents, anti-skid compounds, and rheology modifiers are added to achieve the required viscosity, drying time, and durability specifications."
+              },
+              {
+                step: "07",
+                title: "Quality Control Testing",
+                description: "The finished paint is tested for color consistency, viscosity, drying time, adhesion, reflectivity, abrasion resistance, and compliance with MORTH 803.7 & IRC 35 standards."
+              },
+              {
+                step: "08",
+                title: "Filtration & Batch Approval",
+                description: "The paint is filtered to remove any impurities or agglomerates. After final inspection and approval by the quality team, the batch is released for packing."
+              },
+              {
+                step: "09",
+                title: "Packaging & Storage",
+                description: "Approved cold plastic paint is filled into 16 Kg MS containers, properly sealed, batch-coded, and labeled with product specifications. Products are stored in controlled warehouse conditions before dispatch."
+              }
+            ],
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "300 tons",
+              productionSpeed: "25 tons",
+              qualityStandards: "ISO 9001:2015",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "irc-35",
+                title: "IRC 35",
+                description: "Indian Roads Congress Standard for Road Markings",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "morth-803-7",
+                title: "MORTH 803.7",
+                description: "Ministry of Road Transport & Highways Specifications for Cold Plastic",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-cold-plastic-racetrack.png",
+              "/assets/ynm-safety-cold-plastic-rumble-strips.png",
+              "/assets/ynm-safety-cold-plastic-parking-lots.png",
+              "/assets/ynm-safety-cold-plastic-airports.png",
+              "/assets/ynm-safety-cold-plastic-sport-areas.png",
+              "/assets/ynm-safety-cold-plastic-cycle-track.png",
+              "/assets/ynm-safety-cold-plastic-f1-track.png"
+            ]
+          },
+          {
+            id: "p4",
+            slug: "oil-kerb-base-paint-manufacturers",
+            name: "Oil Kerb Base Paint",
+            shortDesc: "High-performance oil kerb base paint manufactures delivering durable, high-visibility curb and road marking paints for highways, urban roads, and infrastructure projects worldwide.",
+            desc: "YNM Safety manufactures premium quality oil base paints designed for long-lasting curb and road edge markings with excellent adhesion on concrete and asphalt surfaces.",
+            image: "/assets/ynm-safety-traffic-islands.png",
+            heroImage: "/assets/ynm-safety-traffic-islands.png",
+            specs: ["Synthetic Resin/Alkyd Oil Base", "Brush/Roller/Spray Application", "Surface Dry - 30 Minutes", "Smooth Glossy Finish", "IS164-2023 Compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Oil Kerb Base Paint Manufacturers | Road Marking Paints | YNM Safety",
+              description: "YNM Safety oil kerb paint manufactures high-performance oil base kerb paints and road marking paints for durable curb and traffic markings worldwide. Trusted paints manufactures compliant with industry standards.",
+              slug: "/oil-kerb-base-paint-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading oil kerb paint manufactures in India, offering premium quality oil base paints designed for long-lasting curb and road edge markings. As trusted paints manufactures, we deliver durable, weather-resistant, and high-visibility marking solutions for highways, urban roads, smart cities, and infrastructure projects.\n\nOur ynm safety oil paints manufactures products ensure strong adhesion on concrete kerbs, medians, and dividers. The oil kerb base paint provides excellent colour retention, smooth finish, and resistance against dust, rain, and UV exposure.\n\nBeing reputed oil paints manufactures, YNM Safety focuses on consistent quality, fast drying performance, and compliance with industry standards for government and EPC projects.",
+            detailedDescription: "YNM Safety is one of the leading oil kerb paint manufactures in India, offering premium quality oil base paints designed for long-lasting curb and road edge markings. As trusted paints manufactures, we deliver durable, weather-resistant, and high-visibility marking solutions for highways, urban roads, smart cities, and infrastructure projects.\n\nOur ynm safety oil paints manufactures products ensure strong adhesion on concrete kerbs, medians, and dividers. The oil kerb base paint provides excellent colour retention, smooth finish, and resistance against dust, rain, and UV exposure.\n\nBeing reputed oil paints manufactures, YNM Safety focuses on consistent quality, fast drying performance, and compliance with industry standards for government and EPC projects.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Oil Kerb Base Paint" },
+              { label: "Material Base", value: "Synthetic Resin / Alkyd Oil Base" },
+              { label: "Application Method", value: "Brush / Roller / Spray" },
+              { label: "Drying Time", value: "Surface Dry – 30 Minutes" },
+              { label: "Finish", value: "Smooth, Glossy & High Visibility" },
+              { label: "Colours Available", value: "Black, Yellow, White & Custom" },
+              { label: "Adhesion", value: "Excellent on Concrete & Asphalt" },
+              { label: "Compliance", value: "IS164 -2023" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "20L",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IS164 - 2023",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "1KL",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "32089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "20L Container",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Oil Kerb Base Paint",
+                "Material Base: Synthetic Resin / Alkyd Oil Base",
+                "Application Method: Brush / Roller / Spray",
+                "Drying Time: Surface Dry – 30 Minutes",
+                "Finish: Smooth, Glossy & High Visibility",
+                "Colours Available: Black, Yellow, White & Custom",
+                "Adhesion: Excellent on Concrete & Asphalt",
+                "Compliance: IS164 -2023",
+                "Application Area: Kerbs, Medians, Road Edges",
+                "HSN Code: 32089090"
+              ],
+              keyFeatures: [
+                "Excellent adhesion on concrete surfaces",
+                "High weather and UV resistance",
+                "Smooth and glossy finish",
+                "Fast drying and easy application",
+                "Long-lasting colour stability",
+                "Suitable for government and EPC projects",
+                "Trusted oil kerb paint manufactures – YNM Safety"
+              ],
+              advantages: [
+                "Enhances road edge visibility and safety",
+                "Cost-effective marking solution",
+                "Low maintenance requirement",
+                "Strong resistance to dust, rain, and UV exposure",
+                "Suitable for highways and urban roads",
+                "Manufactured by leading oil paints manufactures"
+              ]
+            },
+            
+            features: [
+              "Excellent adhesion on concrete surfaces",
+              "High weather and UV resistance",
+              "Smooth and glossy finish",
+              "Fast drying and easy application",
+              "Long-lasting colour stability",
+              "Suitable for government and EPC projects",
+              "Trusted oil kerb paint manufactures – YNM Safety"
+            ],
+            advantages: [
+              "Enhances road edge visibility and safety",
+              "Cost-effective marking solution",
+              "Low maintenance requirement",
+              "Strong resistance to dust, rain, and UV exposure",
+              "Suitable for highways and urban roads",
+              "Manufactured by leading oil paints manufactures"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Traffic Islands & Medians",
+                description: "Oil kerb base paint provides high-visibility markings for traffic islands and medians, improving road guidance and safety.",
+                image: "/assets/ynm-safety-traffic-islands.png",
+                details: "Manufactured by leading oil kerb paint manufactures, this paint ensures long-lasting black and yellow contrast on concrete medians. It offers strong adhesion, UV resistance, and durability under heavy traffic and harsh weather conditions."
+              },
+              {
+                id: "app2",
+                title: "Bus Stops & Terminals",
+                description: "Oil paints manufactures supply durable kerb paints for bus stops and passenger terminals.",
+                image: "/assets/ynm-safety-bus-stops-terminals.png",
+                details: "YNM Safety oil kerb base paint enhances curb visibility and lane discipline in high-footfall areas. The fast-drying, weather-resistant formula ensures clear markings even with continuous bus movement and public traffic."
+              },
+              {
+                id: "app3",
+                title: "Kerbs and Road Edges",
+                description: "Oil kerb base paint is ideal for marking kerbs and road edges with sharp, durable finishes.",
+                image: "/assets/ynm-safety-kerbs-road-edges.png",
+                details: "As trusted paints manufactures, YNM Safety ensures smooth application and long-lasting colour retention. The paint resists fading, dust, and rain exposure, making it suitable for highways and urban roads."
+              },
+              {
+                id: "app4",
+                title: "Curbs & Gutters",
+                description: "Oil kerb paint delivers clean and professional curb and gutter markings.",
+                image: "/assets/ynm-safety-curbs-gutters.png",
+                details: "Our ynm safety oil paints manufactures products provide excellent adhesion on concrete surfaces. The oil-base formulation protects against moisture, surface cracks, and environmental wear."
+              },
+              {
+                id: "app5",
+                title: "Loading / Unloading Zones",
+                description: "Oil kerb base paint ensures clear boundary markings in loading and unloading areas.",
+                image: "/assets/ynm-safety-loading-unloading-zones.png",
+                details: "Designed for industrial and commercial zones, this paint withstands heavy vehicle movement and abrasion. It maintains brightness and visibility in logistics hubs and warehouse entry points."
+              },
+              {
+                id: "app6",
+                title: "Safety Zones in Factories & Warehouses",
+                description: "Oil paints manufactures provide high-contrast safety markings for factory and warehouse zones.",
+                image: "/assets/ynm-safety-factories-warehouses.png",
+                details: "YNM Safety manufactures oil kerb base paint that defines pedestrian paths, hazard zones, and equipment boundaries clearly. Its durable oil-base composition resists oil spills, chemicals, and frequent forklift movement."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Traffic Islands & Medians",
+                short: "Oil kerb base paint provides high-visibility markings for traffic islands and medians, improving road guidance and safety.",
+                hover: "Manufactured by leading oil kerb paint manufactures, this paint ensures long-lasting black and yellow contrast on concrete medians. It offers strong adhesion, UV resistance, and durability under heavy traffic and harsh weather conditions.",
+                image: "/assets/ynm-safety-traffic-islands.png"
+              },
+              {
+                title: "Bus Stops & Terminals",
+                short: "Oil paints manufactures supply durable kerb paints for bus stops and passenger terminals.",
+                hover: "YNM Safety oil kerb base paint enhances curb visibility and lane discipline in high-footfall areas. The fast-drying, weather-resistant formula ensures clear markings even with continuous bus movement and public traffic.",
+                image: "/assets/ynm-safety-bus-stops-terminals.png"
+              },
+              {
+                title: "Kerbs and Road Edges",
+                short: "Oil kerb base paint is ideal for marking kerbs and road edges with sharp, durable finishes.",
+                hover: "As trusted paints manufactures, YNM Safety ensures smooth application and long-lasting colour retention. The paint resists fading, dust, and rain exposure, making it suitable for highways and urban roads.",
+                image: "/assets/ynm-safety-kerbs-road-edges.png"
+              },
+              {
+                title: "Curbs & Gutters",
+                short: "Oil kerb paint delivers clean and professional curb and gutter markings.",
+                hover: "Our ynm safety oil paints manufactures products provide excellent adhesion on concrete surfaces. The oil-base formulation protects against moisture, surface cracks, and environmental wear.",
+                image: "/assets/ynm-safety-curbs-gutters.png"
+              },
+              {
+                title: "Loading / Unloading Zones",
+                short: "Oil kerb base paint ensures clear boundary markings in loading and unloading areas.",
+                hover: "Designed for industrial and commercial zones, this paint withstands heavy vehicle movement and abrasion. It maintains brightness and visibility in logistics hubs and warehouse entry points.",
+                image: "/assets/ynm-safety-loading-unloading-zones.png"
+              },
+              {
+                title: "Safety Zones in Factories & Warehouses",
+                short: "Oil paints manufactures provide high-contrast safety markings for factory and warehouse zones.",
+                hover: "YNM Safety manufactures oil kerb base paint that defines pedestrian paths, hazard zones, and equipment boundaries clearly. Its durable oil-base composition resists oil spills, chemicals, and frequent forklift movement.",
+                image: "/assets/ynm-safety-factories-warehouses.png"
+              }
+            ],
+            
+            // Customer Success Stories / Projects
+            projects: [
+              {
+                id: "proj1",
+                title: "Smart City Project",
+                client: "Urban Development Authority",
+                location: "Hyderabad",
+                description: "Supplied oil kerb base paint for smart city road marking project. Our oil kerb paints provided excellent durability, high visibility, and weather resistance for urban infrastructure.",
+                quantity: "500 KL",
+                year: "2024",
+                highlight: "100%",
+                highlightLabel: "Quality Delivered",
+                logo: "/assets/ynm safety manufactures of gantry signages.png"
+              },
+              {
+                id: "proj2",
+                title: "Highway Infrastructure",
+                client: "NHAI",
+                location: "Multiple States",
+                description: "Delivered oil kerb base paint for national highway kerb marking applications. YNM Safety's oil paints ensured long-lasting and high-visibility markings for road safety.",
+                quantity: "300 KL",
+                year: "2024",
+                highlight: "Premium",
+                highlightLabel: "Quality Grade",
+                logo: "/assets/ynm safety manufactures of gantry signages.png"
+              }
+            ],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Oil Kerb Base Paint Market Growth | YNM Safety",
+              description: "The global market for oil-base kerb/base paint is witnessing steady growth due to increasing infrastructure development and stringent road safety regulations. It is projected to grow at a CAGR of around 4.3–4.8% over the next decade. Rising urbanization and expansion of road networks in emerging economies are key drivers. The market size is expected to increase significantly by 2030, reflecting growing demand for durable and high-visibility road markings.",
+              cagr: "4.3-4.8%",
+              growthFactors: [
+                "Expansion of Road Infrastructure",
+                "Road Safety Regulations",
+                "Urbanization & Traffic Growth",
+                "Maintenance & Rehabilitation Projects",
+                "Technological Improvements"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$0.85B",
+                projectedMarketSize: "$1.25B",
+                currentYear: "2024",
+                projectedYear: "2030",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "30,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 35, color: "#74060D" },
+                { region: "North America", value: 20, color: "#9A1B2E" },
+                { region: "Europe", value: 22, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 15, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 0.85 },
+                { year: "2025", value: 0.89 },
+                { year: "2026", value: 0.93 },
+                { year: "2027", value: 0.98 },
+                { year: "2028", value: 1.03 },
+                { year: "2029", value: 1.08 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain"]
+                },
+                {
+                  name: "Asia-Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Australia"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["Saudi Arabia", "United Arab Emirates", "South Africa", "Egypt"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "As leading oil kerb paint manufactures, YNM Safety follows a strict and quality-controlled manufacturing process to produce high-performance oil base kerb paint for highways, medians, road edges, and industrial safety zones. Being trusted oil paints manufactures and professional paints manufactures, every batch is produced under advanced supervision from raw materials to final dispatch.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Selection of Raw Materials",
+                description: "The manufacturing of oil base kerb paint begins with sourcing premium alkyd resin (oil-base binder), mineral turpentine oil (solvent), titanium dioxide and iron oxide pigments, fillers like calcium carbonate, and specialty additives such as driers and anti-settling agents. YNM Safety manufactures only use approved and tested raw materials to ensure durability and long-lasting road marking performance."
+              },
+              {
+                step: "02",
+                title: "Quality Inspection of Raw Materials",
+                description: "All raw materials undergo laboratory testing for viscosity, purity, moisture content, colour strength, and chemical stability. As responsible oil base kerb paint manufacturers, we ensure compliance with IRC and MORTH guidelines before releasing materials for production."
+              },
+              {
+                step: "03",
+                title: "Resin Charging & Pre-Mixing",
+                description: "The alkyd oil resin is transferred into a high-speed disperser tank. Controlled quantities of mineral turpentine oil are added to adjust the base viscosity. This stage forms the foundation of high-performance oil kerb paint with proper flow and leveling properties."
+              },
+              {
+                step: "04",
+                title: "Pigment & Extender Dispersion",
+                description: "Premium pigments and fillers are gradually added under continuous high-speed mixing. This dispersion process ensures uniform colour development, opacity, and brightness required for road kerbs, medians, and safety markings."
+              },
+              {
+                step: "05",
+                title: "Grinding Process",
+                description: "The dispersed mixture is transferred to a bead mill or sand mill for fine grinding. Grinding reduces particle size to micron levels, giving smooth texture, strong adhesion, and superior finish — essential for long-lasting oil base kerb paint applications."
+              },
+              {
+                step: "06",
+                title: "Let-Down & Additive Adjustment",
+                description: "After grinding, the base paste is returned to blending tanks. Additional resin, solvents, and performance additives such as drying agents and anti-skinning chemicals are incorporated. This step adjusts drying time, gloss level, durability, and weather resistance of the oil kerb base paint."
+              },
+              {
+                step: "07",
+                title: "Filtration Process",
+                description: "The finished oil kerb paint is passed through fine filtration systems to remove impurities and ensure lump-free consistency. This guarantees smooth brush, roller, and spray application for highways and industrial zones."
+              },
+              {
+                step: "08",
+                title: "Quality Control Testing",
+                description: "Each batch manufactured by ynm safety manufactures undergoes strict quality checks including viscosity test, drying time analysis, adhesion testing, gloss measurement, opacity verification, and density & solid content testing. Only approved batches proceed to packaging."
+              },
+              {
+                step: "09",
+                title: "Filling & Packaging",
+                description: "The approved oil base kerb paint is filled into durable 20 Kg MS containers using precision filling machines. Each container is labeled with batch number, manufacturing date, and compliance details — reinforcing YNM Safety's position among trusted oil paints manufactures."
+              },
+              {
+                step: "10",
+                title: "Storage & Dispatch",
+                description: "The finished products are stored in controlled warehouse conditions to maintain quality stability. Upon order confirmation, the oil kerb paint is palletized and dispatched safely to domestic and international clients, strengthening YNM Safety's reputation as reliable oil kerb paint manufactures in India."
+              }
+            ],
+            
+            // Statistics
+            statistics: {
+              monthlyCapacity: "50kL",
+              annualCapacity: "600KL",
+              productionSpeed: "50kL",
+              qualityStandards: "IS164 -2023",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "is-164",
+                title: "IS164 - 2023",
+                description: "Indian Standard for Road Marking Paint",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-traffic-islands.png",
+              "/assets/ynm-safety-bus-stops-terminals.png",
+              "/assets/ynm-safety-kerbs-road-edges.png",
+              "/assets/ynm-safety-curbs-gutters.png",
+              "/assets/ynm-safety-loading-unloading-zones.png",
+              "/assets/ynm-safety-factories-warehouses.png"
             ]
           }
         ]

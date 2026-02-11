@@ -592,7 +592,8 @@ body {
 .srv-block.srv-inview .srv-reveal-line {
   animation: srvRevealLine var(--reveal-duration, 7s) ease-in-out infinite;
   animation-delay: var(--reveal-delay, 0s);
-  will-change: left;
+  will-change: transform;
+  left: 0;
 }
 
 @keyframes srvColorReveal {
@@ -605,9 +606,9 @@ body {
 }
 
 @keyframes srvRevealLine {
-  0%, 12% { left: 0%; }
-  32%, 52% { left: 100%; }
-  72%, 100% { left: 0%; }
+  0%, 12% { transform: translateX(0%); }
+  32%, 52% { transform: translateX(100%); }
+  72%, 100% { transform: translateX(0%); }
 }
 
 /* Brands: flip effect (hover + subtle auto-flip only when section in view) */
@@ -962,6 +963,21 @@ section, .ps, .srv, .brands, #why-choose-ynm, .testimonials-section, #testimonia
 [class*="card"]:not(:hover),
 [class*="inner"]:not(:hover) {
   will-change: auto;
+}
+
+/* Pause non-critical animations during scroll for better performance */
+body.is-scrolling [class*="particle"],
+body.is-scrolling [class*="shimmer"],
+body.is-scrolling [class*="pulse"],
+body.is-scrolling [class*="float"],
+body.is-scrolling [class*="glow"]:not(.hero-center-glow) {
+  animation-play-state: paused;
+}
+
+/* Content visibility optimization for off-screen sections */
+section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 /* Containment for layout stability */
@@ -1338,7 +1354,7 @@ div > canvas:only-child {
   content: "";
   position: absolute;
   top: 0;
-  left: -50%;
+  left: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(180deg, rgba(230, 211, 163, 0.95) 0%, rgba(247, 243, 234, 0.9) 100%);
@@ -1346,8 +1362,8 @@ div > canvas:only-child {
   border-bottom: 2px solid var(--deep-maroon);
   z-index: -1;
   animation: navbarSlideLeft 15s ease-in-out infinite;
-  will-change: left;
-  transform: translateZ(0);
+  will-change: transform;
+  transform: translateX(-100%);
   backface-visibility: hidden;
 }
 
@@ -1355,7 +1371,7 @@ div > canvas:only-child {
   content: "";
   position: absolute;
   top: 0;
-  right: -50%;
+  right: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(180deg, rgba(230, 211, 163, 0.95) 0%, rgba(247, 243, 234, 0.9) 100%);
@@ -1363,54 +1379,44 @@ div > canvas:only-child {
   border-bottom: 2px solid var(--deep-maroon);
   z-index: -1;
   animation: navbarSlideRight 15s ease-in-out infinite;
-  will-change: right;
-  transform: translateZ(0);
+  will-change: transform;
+  transform: translateX(100%);
   backface-visibility: hidden;
 }
 
 @keyframes navbarSlideLeft {
   0% {
-    left: -50%;
-    transform: translateZ(0);
+    transform: translateX(-100%);
   }
   40% {
-    left: -50%;
-    transform: translateZ(0);
+    transform: translateX(-100%);
   }
   50% {
-    left: 0%;
-    transform: translateZ(0);
+    transform: translateX(0%);
   }
   90% {
-    left: 0%;
-    transform: translateZ(0);
+    transform: translateX(0%);
   }
   100% {
-    left: -50%;
-    transform: translateZ(0);
+    transform: translateX(-100%);
   }
 }
 
 @keyframes navbarSlideRight {
   0% {
-    right: -50%;
-    transform: translateZ(0);
+    transform: translateX(100%);
   }
   40% {
-    right: -50%;
-    transform: translateZ(0);
+    transform: translateX(100%);
   }
   50% {
-    right: 0%;
-    transform: translateZ(0);
+    transform: translateX(0%);
   }
   90% {
-    right: 0%;
-    transform: translateZ(0);
+    transform: translateX(0%);
   }
   100% {
-    right: -50%;
-    transform: translateZ(0);
+    transform: translateX(100%);
   }
 }
 
@@ -1650,7 +1656,7 @@ div > canvas:only-child {
   content: "";
   position: absolute;
   top: 0;
-  left: -50%;
+  left: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(180deg, rgba(230, 211, 163, 0.98) 0%, rgba(247, 243, 234, 0.95) 100%);
@@ -1658,13 +1664,15 @@ div > canvas:only-child {
   border-bottom: 2px solid var(--deep-maroon);
   z-index: -1;
   animation: standaloneNavbarSlideLeft 15s ease-in-out infinite;
+  will-change: transform;
+  transform: translateX(-100%);
 }
 
 .standalone-navbar::after {
   content: "";
   position: absolute;
   top: 0;
-  right: -50%;
+  right: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(180deg, rgba(230, 211, 163, 0.98) 0%, rgba(247, 243, 234, 0.95) 100%);
@@ -1672,41 +1680,43 @@ div > canvas:only-child {
   border-bottom: 2px solid var(--deep-maroon);
   z-index: -1;
   animation: standaloneNavbarSlideRight 15s ease-in-out infinite;
+  will-change: transform;
+  transform: translateX(100%);
 }
 
 @keyframes standaloneNavbarSlideLeft {
   0% {
-    left: -50%;
+    transform: translateX(-100%);
   }
   40% {
-    left: -50%;
+    transform: translateX(-100%);
   }
   50% {
-    left: 0%;
+    transform: translateX(0%);
   }
   90% {
-    left: 0%;
+    transform: translateX(0%);
   }
   100% {
-    left: -50%;
+    transform: translateX(-100%);
   }
 }
 
 @keyframes standaloneNavbarSlideRight {
   0% {
-    right: -50%;
+    transform: translateX(100%);
   }
   40% {
-    right: -50%;
+    transform: translateX(100%);
   }
   50% {
-    right: 0%;
+    transform: translateX(0%);
   }
   90% {
-    right: 0%;
+    transform: translateX(0%);
   }
   100% {
-    right: -50%;
+    transform: translateX(100%);
   }
 }
 
@@ -2209,7 +2219,7 @@ div > canvas:only-child {
 .hero-gold-sweep {
   position: absolute;
   top: 0;
-  left: -120%;
+  left: 0;
   width: 120%;
   height: 100%;
   background: linear-gradient(120deg,
@@ -2219,17 +2229,19 @@ div > canvas:only-child {
   );
   animation: goldSweep 10s ease-in-out infinite;
   pointer-events: none;
+  will-change: transform;
+  transform: translateX(-100%);
 }
 
 @keyframes goldSweep {
   0% {
-    left: -120%;
+    transform: translateX(-100%);
   }
   60% {
-    left: 120%;
+    transform: translateX(100%);
   }
   100% {
-    left: 120%;
+    transform: translateX(100%);
   }
 }
 
@@ -2904,7 +2916,7 @@ div > canvas:only-child {
 .hero-streak {
   position: absolute;
   top: 30%;
-  left: -20%;
+  left: 0;
   width: 40%;
   height: 8%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
@@ -2913,11 +2925,13 @@ div > canvas:only-child {
   pointer-events: none;
   z-index: 4;
   animation: streakSweep 7s linear infinite;
+  will-change: transform, opacity;
+  transform: translateX(-100%);
 }
 
 @keyframes streakSweep {
   0% {
-    left: -40%;
+    transform: translateX(-100%);
     opacity: 0;
   }
   10% {
@@ -2927,7 +2941,7 @@ div > canvas:only-child {
     opacity: 0.1;
   }
   100% {
-    left: 120%;
+    transform: translateX(400%);
     opacity: 0;
   }
 }
@@ -9144,16 +9158,18 @@ img {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
   animation: mvDividerSweep 2.5s ease-in-out infinite;
+  will-change: transform;
+  transform: translateX(-200%);
 }
 
 @keyframes mvDividerSweep {
-  0% { left: -100%; }
-  50%, 100% { left: 200%; }
+  0% { transform: translateX(-200%); }
+  50%, 100% { transform: translateX(400%); }
 }
 
 /* Grid - Two cards side by side */

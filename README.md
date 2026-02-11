@@ -10,7 +10,7 @@ A modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd
 
 ## Live Website
 
-[ynmsafety.com](https://ynmsafety.com)
+[www.ynmsafety.com](https://www.ynmsafety.com)
 
 ---
 
@@ -83,6 +83,7 @@ YNM-website/
     ├── lib/                        # Data & utilities
     │   ├── googleSheets.js         # Shared Google Sheets integration
     │   ├── recaptchaUtils.js       # Shared reCAPTCHA utilities
+    │   ├── imageLoader.js          # Custom image loader for Cloud Run
     │   ├── chatbotData.js          # AI chatbot FAQ & product catalog
     │   ├── productsCategoriesData.js
     │   ├── productsData.js
@@ -108,8 +109,6 @@ YNM-website/
     │   ├── get-quote/, foreign-collaborations/, investor-relations/
     │   ├── our-team/
     │   └── index.js
-    ├── scripts/
-    │   └── verify-integrations.js  # Test Google Sheets, Gemini, Contact form
     ├── styles/
     │   └── globals.css
     ├── public/                     # Static assets
@@ -747,10 +746,6 @@ npm run start        # Start production server (requires npm run build first)
 
 # Code Quality
 npm run lint         # Run ESLint to check code quality
-
-# Integration Verification (optional)
-node scripts/verify-integrations.js
-# Or against production: VERIFY_BASE_URL=https://ynmsafety.com node scripts/verify-integrations.js
 ```
 
 **Notes:**
@@ -762,7 +757,7 @@ node scripts/verify-integrations.js
 
 ## Product Categories
 
-1. **Road Marking Paints** - Hot Thermoplastic, Cold Plastic, Water Base Road Marking Paints, Waterborne Airfield Marking Paints
+1. **Road Marking Paints** - Hot Thermoplastic, Cold Plastic Paints, Waterborne Airfield Marking Paints
 2. **Bitumen** - Bitumen VG 40 for highway construction
 3. **Metal Beam Crash Barriers** - W Beam, Thrie Beam, Double W Beam, Roller Beam Barriers, End Terminals, Crash Attenuators
 4. **Signages** - Retro Reflective Gantry, Cantilever, Canopy, Informatory Signage
