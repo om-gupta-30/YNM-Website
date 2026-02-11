@@ -86,7 +86,7 @@ export default function TestimonialsSection({ testimonialsData: propTestimonials
 
                     {/* Author */}
                     <div className="testimonial-author">
-                      <h4 className="testimonial-name">{testimonial.name}</h4>
+                      <h3 className="testimonial-name">{testimonial.name}</h3>
                       <p className="testimonial-company">{testimonial.company}</p>
                       <p className="testimonial-role">{testimonial.role}</p>
                     </div>

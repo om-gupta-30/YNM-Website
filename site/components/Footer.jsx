@@ -181,14 +181,14 @@ function Footer({ footerData: propFooterData }) {
 
         {/* Quick Links Column */}
         <div className="ft-col">
-          <h2 className="ft-heading">
+          <h3 className="ft-heading">
             Quick Links
             <span className="ft-heading-line"></span>
-          </h2>
+          </h3>
           <ul className="ft-links">
             {quickLinks.map((link) => (
               <li key={link.label}>
-                <Link href={link.href} className="ft-link">
+                <Link href={link.href} className="ft-link" aria-label={`${link.label} - Footer navigation`}>
                   {link.label}
                 </Link>
               </li>
@@ -198,10 +198,10 @@ function Footer({ footerData: propFooterData }) {
 
         {/* Contact Column */}
         <div id="contact" className="ft-col">
-          <h2 className="ft-heading">
+          <h3 className="ft-heading">
             Contact
             <span className="ft-heading-line"></span>
-          </h2>
+          </h3>
           <div className="ft-contact">
             {email && (
               <p className="ft-contact-item">

@@ -6,4 +6,4 @@ Allow: /
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://ynmsafety.com/sitemap.xml
+Sitemap: https://www.ynmsafety.com/sitemap.xml

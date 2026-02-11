@@ -100,11 +100,33 @@ export default function FabricationPage() {
           <div className="fabrication-hero-overlay" />
           
           {/* Back Button - Positioned Top Left */}
-          <Link href="/products" className="fabrication-back-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+          <Link 
+            href="/products" 
+            className="fabrication-back-link"
+            style={{
+              position: 'absolute',
+              top: '120px',
+              left: '40px',
+              background: 'linear-gradient(135deg, #C9A24D 0%, #D4AF37 100%)',
+              color: '#0F0D0C',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '10px 20px',
+              borderRadius: '50px',
+              textDecoration: 'none',
+              fontWeight: '700',
+              fontSize: '13px',
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+              boxShadow: '0 4px 20px rgba(201, 162, 77, 0.4)',
+              zIndex: 100
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F0D0C" strokeWidth="2.5">
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            Back to Products
+            Back
           </Link>
           
           <div className="fabrication-hero-content">
@@ -1000,18 +1022,14 @@ export default function FabricationPage() {
         }
 
         .fabrication-back-link {
-          position: absolute;
-          top: 20px;
-          left: 40px;
-          z-index: 100;
           display: inline-flex;
           align-items: center;
           gap: 8px;
           background: linear-gradient(135deg, #C9A24D 0%, #D4AF37 100%);
-          color: #74060D;
+          color: #0F0D0C;
           font-size: 13px;
           font-weight: 700;
-          padding: 12px 24px;
+          padding: 10px 20px;
           border-radius: 50px;
           text-decoration: none;
           text-transform: uppercase;
@@ -1021,12 +1039,13 @@ export default function FabricationPage() {
         }
 
         .fabrication-back-link:hover {
-          transform: translateX(-4px);
+          background: linear-gradient(135deg, #D4AF37 0%, #E6D3A3 100%);
           box-shadow: 0 6px 25px rgba(201, 162, 77, 0.6);
+          transform: translateX(-4px);
         }
 
         .fabrication-back-link svg {
-          stroke: #74060D;
+          stroke: #0F0D0C;
         }
 
         .fabrication-hero-tag {
@@ -1461,10 +1480,10 @@ export default function FabricationPage() {
           }
 
           .fabrication-back-link {
-            top: 16px;
-            left: 20px;
-            font-size: 12px;
-            padding: 10px 18px;
+            top: 100px !important;
+            left: 20px !important;
+            font-size: 12px !important;
+            padding: 8px 16px !important;
           }
 
           .fabrication-hero h1 {
@@ -1526,11 +1545,11 @@ export default function FabricationPage() {
           }
 
           .fabrication-back-link {
-            top: 12px;
-            left: 16px;
-            font-size: 11px;
-            padding: 10px 16px;
-            letter-spacing: 0.5px;
+            top: 100px !important;
+            left: 16px !important;
+            font-size: 11px !important;
+            padding: 8px 14px !important;
+            letter-spacing: 0.5px !important;
           }
 
           .fabrication-products-grid {
