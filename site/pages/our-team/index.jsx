@@ -250,7 +250,7 @@ export default function OurDirectorPage() {
               <div className="director-profile-photo">
                 <Image
                   src={directorData.photo2 || directorData.photo}
-                  alt={`${directorData.name} - Managing Director YNM Safety | Hot Thermoplastic Paint Manufacturers India`}
+                  alt={`${directorData.name} - Managing Director YNM Safety`}
                   fill
                   style={{ objectFit: "cover", objectPosition: "center 18%" }}
                 />
@@ -328,7 +328,7 @@ export default function OurDirectorPage() {
                 <div className="venture-logo">
                   <Image
                     src="/assets/logo-navbar.jpg"
-                    alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Road Safety Products"
+                    alt="YNM Safety Logo"
                     width={60}
                     height={60}
                     style={{ objectFit: "contain", borderRadius: 8 }}

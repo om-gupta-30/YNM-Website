@@ -24,22 +24,22 @@ const aboutSectionContent = [
   {
     icon: "🏭",
     title: "Advanced Manufacturing",
-    description: "YNM Safety operates advanced manufacturing facilities for hot thermoplastic paints, cold plastic paints, and road safety products. Our in-house production includes metal beam crash barriers, W beam crash barriers, double W beam crash barriers, road studs, bitumen products, and precision fabrications. With modern machinery and strict process control, we deliver durable, high-performance road safety solutions for highways, urban roads, and infrastructure projects."
+    description: "We run modern factories that make road safety products. This includes road marking paints, crash barriers, road studs, and bitumen products. Our skilled team uses the latest machines to create durable products for highways and city roads."
   },
   {
     icon: "✅",
     title: "Quality Certified",
-    description: "Quality is the foundation of YNM Safety. All our products—including road marking paints, metal beam crash barriers, retro reflective signages, signages, and road safety furniture—are manufactured under ISO-certified quality management systems. Each batch undergoes rigorous testing to ensure strength, visibility, weather resistance, and long service life in demanding traffic conditions."
+    description: "Quality comes first at YNM Safety. We hold ISO 9001:2015 certification. Every product we make goes through strict testing. This ensures our paints, barriers, and signs last long and perform well in all weather."
   },
   {
     icon: "🌍",
     title: "Global Export Network",
-    description: "YNM Safety is a reliable global exporter of road safety products and infrastructure solutions. We supply hot thermoplastic paints, cold plastic paints, bitumen, road studs, crash barriers, and safety signages to clients across international markets. Our strong logistics network ensures compliance, safe packaging, and on-time delivery for projects worldwide."
+    description: "We export to 50+ countries across Asia, Africa, and the Middle East. Our team handles all shipping and paperwork. We ensure safe packing and on-time delivery for projects worldwide."
   },
   {
     icon: "🎨",
     title: "Custom Solutions",
-    description: "We specialize in customized road safety and fabrication solutions tailored to project-specific requirements. From bespoke metal beam crash barrier manufacturing to custom retro reflective signages, road safety furnitures, and fabrications, YNM Safety delivers flexible production, technical expertise, and scalable solutions for government, industrial, and private infrastructure projects."
+    description: "Need something specific? We can help. We make custom crash barriers, signs, and other products to fit your project needs. Our team works with you to deliver the right solution on time."
   }
 ];
 
@@ -48,27 +48,27 @@ const timeline = [
   {
     year: "2013",
     title: "Foundation",
-    description: "YNM Safety was established with a clear vision to become a trusted manufacturer and exporter of road safety products, hot thermoplastic paints, and infrastructure solutions. From the beginning, our focus has been on quality manufacturing, innovation, and long-term customer partnerships."
+    description: "YNM Safety started with a simple goal: make great road safety products. From day one, we focused on quality and building strong customer relationships."
   },
   {
     year: "2015",
     title: "ISO Certification",
-    description: "We achieved ISO 9001:2015 certification, reinforcing our commitment to quality control and standardized manufacturing. This milestone strengthened our capabilities in producing cold plastic paints, road marking materials, metal beam crash barriers, and safety signages that meet international standards."
+    description: "We earned ISO 9001:2015 certification. This proved our commitment to quality. It also helped us meet global standards for all our products."
   },
   {
     year: "2018",
     title: "Global Expansion",
-    description: "YNM Safety expanded its export operations to over 50+ countries across Asia, Africa, and the Middle East. Our growing global presence enabled us to supply bitumen products, road studs, W beam crash barriers, double W beam crash barriers, and retro reflective signages to international infrastructure projects."
+    description: "We grew our exports to 50+ countries. Clients in Asia, Africa, and the Middle East now use our products in their road projects."
   },
   {
     year: "2023",
     title: "10 Years of Excellence",
-    description: "We proudly celebrated a decade of manufacturing excellence, completing 500+ projects and serving 1000+ satisfied clients. This milestone reflects our strong expertise in road safety furniture, fabrications, crash barrier manufacturing, and road marking solutions for highways and urban roads."
+    description: "We celebrated 10 years in business. By then, we had completed 500+ projects and served over 1000 happy clients."
   },
   {
     year: "2026",
     title: "PAN India Expansion",
-    description: "As part of our growth strategy, YNM Safety continues its PAN India expansion with new manufacturing units and enhanced production capacity. This expansion strengthens our position as reliable metal beam crash barrier manufacturers and road safety solution providers, supporting large-scale infrastructure development across India and global markets."
+    description: "We are opening new factories across India. This lets us serve more customers faster and support bigger infrastructure projects."
   }
 ];
 
@@ -189,7 +189,7 @@ export default function AboutPage() {
             <div className="about-story-image">
               <Image
                 src="/assets/aboutus.png"
-                alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers | Road Safety Products Manufacturer"
+                alt="YNM Safety Manufacturing Facility - Road Safety Products"
                 width={600}
                 height={500}
                 style={{ objectFit: "cover", borderRadius: "16px" }}

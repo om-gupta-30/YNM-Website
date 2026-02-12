@@ -31,6 +31,37 @@ const nextConfig = {
   
   // Efficient cache lifetimes for static assets (PageSpeed: "Use efficient cache lifetimes")
   async headers() {
+    // Security headers applied to all pages
+    const securityHeaders = [
+      // Content Security Policy - Protects against XSS attacks
+      {
+        key: 'Content-Security-Policy',
+        value: [
+          "default-src 'self'",
+          "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://maps.googleapis.com",
+          "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+          "img-src 'self' data: blob: https: http:",
+          "font-src 'self' https://fonts.gstatic.com",
+          "connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com https://flagcdn.com",
+          "frame-ancestors 'self'",
+          "base-uri 'self'",
+          "form-action 'self'",
+        ].join('; '),
+      },
+      // X-Frame-Options - Prevents clickjacking attacks
+      { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+      // Referrer-Policy - Controls how much referrer info is sent
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      // HSTS - Forces HTTPS connections
+      { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
+      // X-Content-Type-Options - Prevents MIME type sniffing
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      // X-DNS-Prefetch-Control - Controls DNS prefetching
+      { key: 'X-DNS-Prefetch-Control', value: 'on' },
+      // Permissions-Policy - Controls browser features
+      { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+    ];
+
     return [
       // HTML pages - Browser cache enabled for SEO, CDN cache disabled for instant deploys
       {
@@ -39,6 +70,7 @@ const nextConfig = {
           // max-age=300 (5 min browser cache for SEO), s-maxage=0 (no CDN cache for instant deploy)
           { key: 'Cache-Control', value: 'public, max-age=300, s-maxage=0, stale-while-revalidate=60' },
           { key: 'Link', value: '</assets/hero-image.webp>; rel=preload; as=image; type=image/webp; fetchpriority=high' },
+          ...securityHeaders,
         ],
       },
       // Static assets - long cache
@@ -47,29 +79,50 @@ const nextConfig = {
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
+          ...securityHeaders.filter(h => h.key !== 'X-Content-Type-Options'),
         ],
       },
       {
         source: '/fonts/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
+          ...securityHeaders,
         ],
       },
       {
         source: '/_next/static/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          ...securityHeaders,
         ],
       },
       {
         source: '/_next/image/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
+          ...securityHeaders,
         ],
+      },
+      // API routes - also need security headers
+      {
+        source: '/api/:path*',
+        headers: securityHeaders,
       },
     ];
   },
   trailingSlash: false,
+  
+  // Redirects for URL changes (SEO 301 redirects)
+  async redirects() {
+    return [
+      {
+        source: '/our-team',
+        destination: '/our-director',
+        permanent: true, // 301 redirect
+      },
+    ];
+  },
   
   // Performance optimizations
   poweredByHeader: false,

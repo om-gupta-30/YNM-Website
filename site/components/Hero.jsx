@@ -11,7 +11,7 @@ const heroNavConfig = [
   { key: "products", href: "/products" },
   { key: "clients", href: "/clients" },
   { key: "about", href: "/about" },
-  { key: "team", href: "/our-team" },
+  { key: "team", href: "/our-director" },
   { key: "foreignCollaborations", href: "/foreign-collaborations" },
   { key: "investor", href: "/investor-relations" },
   { key: "careers", href: "/careers" },
@@ -458,7 +458,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
           <div id="hero-image-safe">
             <Image 
               src={heroImageUrl || heroImageDefault} 
-              alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers | Road Marking Paint Manufacturer & Exporter" 
+              alt="YNM Safety - Hot Thermoplastic Paint and Road Marking Manufacturers India" 
               fill 
               id="hero-image" 
               priority 

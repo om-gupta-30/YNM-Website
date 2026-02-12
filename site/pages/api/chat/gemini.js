@@ -166,7 +166,7 @@ WEBSITE PAGES (guide users to these if relevant):
 - About Us: /about (company story, timeline, values, mission)
 - Products: /products (full product catalog with categories)
 - Fabrication: /products/fabrication (34+ fabrication products)
-- Our Director: /our-team (director profile and company leadership)
+- Our Director: /our-director (director profile and company leadership)
 - Contact: /contact (contact form, map, office details)
 - Get Quote: /get-quote (request a quotation)
 - Careers: /careers (job applications)

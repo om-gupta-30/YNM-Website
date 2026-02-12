@@ -2387,6 +2387,419 @@ export const productsData = {
               "/assets/YNM Safety Marine and Protective Coatings.png",
               "/assets/YNM Safety Metal fabrication.png"
             ]
+          },
+          {
+            id: "p7",
+            slug: "red-oxide-paint-manufacturers",
+            name: "Red Oxide Paint",
+            shortDesc: "High-purity Red Oxide manufactured by leading YNM Safety paint manufactures, delivering superior performance for construction, coatings, plastics, and industrial applications worldwide.",
+            desc: "YNM Safety manufactures high-performance Red Oxide paint compliant with IS:2074 standards. Trusted paints manufactures supplying premium red oxide pigment and coatings globally.",
+            image: "/assets/ynm-safety-industrial.jpg",
+            heroImage: "/assets/ynm-safety-industrial.jpg",
+            specs: ["IS:2074 Compliant", "High Durability", "Excellent Corrosion Resistance", "Strong Colour Stability", "Brush/Roller/Spray Application", "Matte/Primer Finish"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Red Oxide Paint Manufacturers | YNM Safety",
+              description: "YNM Safety paint manufactures high-performance Red Oxide paint compliant with IS:2074 standards. Trusted paints manufactures supplying premium red oxide pigment and coatings globally.",
+              slug: "/red-oxide-paint-manufacturers",
+              keywords: "YNM Safety Red Oxide Paint, Red Oxide Paint Manufacturer, Red Oxide Primer Manufacturer, Anti Rust Red Oxide Paint, Industrial Red Oxide Primer, Metal Primer Paint, Red Oxide Paint for Storage Tanks, Red Oxide Paint for Pipelines, Red Oxide Paint for Bridges, Red Oxide Paint for Infrastructure, Industrial Primer Coating, Structural Steel Primer, Corrosion Resistant Primer, Red Oxide Coating Supplier"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the trusted red oxide paint manufacturers in India, supplying high-quality red oxide coatings and pigments for industrial and construction applications. As experienced YNM Safety paint manufactures and professional paints manufactures, we ensure consistent quality, durability, and compliance with IS:2074 standards.\n\nOur Red Oxide is widely used in construction materials, paints & coatings, plastics, ceramics, and specialty industrial applications. The product offers excellent weather resistance, corrosion protection, and long-lasting colour stability.\n\nBeing reputed YNM Safety manufactures, we focus on delivering premium-grade red oxide paint suitable for domestic and export markets.",
+            detailedDescription: "YNM Safety is one of the trusted red oxide paint manufacturers in India, supplying high-quality red oxide coatings and pigments for industrial and construction applications. As experienced YNM Safety paint manufactures and professional paints manufactures, we ensure consistent quality, durability, and compliance with IS:2074 standards.\n\nOur Red Oxide is widely used in construction materials, paints & coatings, plastics, ceramics, and specialty industrial applications. The product offers excellent weather resistance, corrosion protection, and long-lasting colour stability.\n\nBeing reputed YNM Safety manufactures, we focus on delivering premium-grade red oxide paint suitable for domestic and export markets.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Red Oxide Paint" },
+              { label: "Grade", value: "IS:2074 Compliant" },
+              { label: "Appearance", value: "Red / Reddish Brown Powder or Liquid" },
+              { label: "Application Method", value: "Brush / Roller / Spray" },
+              { label: "Drying Time", value: "30–60 Minutes (Surface Dry)" },
+              { label: "Finish", value: "Matte / Primer Finish" },
+              { label: "Application Area", value: "Industrial & Construction Use" },
+              { label: "Compliance", value: "IS:2074" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "20L",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IS:2074",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "20L Container",
+                icon: "package"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "1KL",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "32089090",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Red Oxide Paint",
+                "Grade: IS:2074 Compliant",
+                "Appearance: Red / Reddish Brown Powder or Liquid",
+                "Application Method: Brush / Roller / Spray",
+                "Drying Time: 30–60 Minutes (Surface Dry)",
+                "Finish: Matte / Primer Finish",
+                "Application Area: Industrial & Construction Use",
+                "Compliance: IS:2074",
+                "Packing: 20L Container",
+                "HSN Code: 32089090"
+              ],
+              keyFeatures: [
+                "Excellent corrosion resistance",
+                "Strong colour stability",
+                "High durability and weather resistance",
+                "Cost-effective industrial solution",
+                "IS:2074 certified quality",
+                "Suitable for multi-industry applications"
+              ],
+              advantages: [
+                "Improves lifespan of metal structures",
+                "Ideal primer for protective coatings",
+                "Suitable for multi-industry applications",
+                "Low maintenance and high-performance formulation",
+                "Trusted paints manufactures – YNM Safety"
+              ]
+            },
+            
+            features: [
+              "Excellent corrosion resistance",
+              "Strong colour stability",
+              "High durability and weather resistance",
+              "Cost-effective industrial solution",
+              "IS:2074 certified quality",
+              "Suitable for multi-industry applications"
+            ],
+            
+            advantages: [
+              "Improves lifespan of metal structures",
+              "Ideal primer for protective coatings",
+              "Suitable for multi-industry applications",
+              "Low maintenance and high-performance formulation",
+              "Trusted paints manufactures – YNM Safety"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Construction and Building Materials",
+                description: "Red Oxide is widely used in construction materials for durability and colour stability.",
+                image: "/assets/ynm-safety-construction-building-materials.jpg",
+                details: "Manufactured by leading YNM Safety paint manufactures, red oxide enhances cement products, concrete blocks, and structural materials with long-lasting colour and weather resistance."
+              },
+              {
+                id: "app2",
+                title: "Cosmetics",
+                description: "Red Oxide is used in selected cosmetic-grade formulations.",
+                image: "/assets/ynm-safety-cosmetics.jpg",
+                details: "Its stable and safe pigment properties make it suitable for colour cosmetics where regulatory compliance is required."
+              },
+              {
+                id: "app3",
+                title: "Storage Tanks and Pipelines",
+                description: "YNM Safety Red Oxide Paint is widely used for storage tanks and pipelines to provide superior anti-corrosion protection and long-lasting durability.",
+                image: "/assets/ynm-safety-storage-tanks-pipelines.jpg",
+                details: "As a trusted Red Oxide Paint manufacturer, YNM Safety provides high-performance red oxide primer that protects storage tanks and pipelines from rust, moisture, and chemical exposure. The coating forms a strong protective barrier and improves adhesion of topcoats. It ensures extended service life and reduced maintenance costs in industrial environments."
+              },
+              {
+                id: "app4",
+                title: "Bridges and Infrastructure",
+                description: "YNM Safety Red Oxide Primer is ideal for bridges and infrastructure projects, offering strong corrosion resistance for structural steel.",
+                image: "/assets/ynm-safety-bridges-infrastructures.jpg",
+                details: "YNM Safety Red Oxide Paint is specially formulated to protect bridges, flyovers, and infrastructure steel structures from harsh weather and environmental damage. As a leading red oxide paint manufacturer, we provide durable primer coatings that enhance structural strength and longevity. It improves paint adhesion and ensures long-term performance for public infrastructure projects."
+              },
+              {
+                id: "app5",
+                title: "Industrial Applications",
+                description: "YNM Safety Red Oxide Paint is extensively used in industrial facilities to protect machinery, metal structures, and heavy equipment from corrosion.",
+                image: "/assets/ynm-safety-industrial.jpg",
+                details: "In industrial environments where metal surfaces face moisture, chemicals, and heavy usage, YNM Safety Red Oxide Primer delivers reliable anti-rust protection. Our red oxide paint enhances coating life and provides excellent bonding for enamel and industrial topcoats. It ensures durable protection for factories, plants, warehouses, and heavy machinery structures."
+              },
+              {
+                id: "app6",
+                title: "Packaging and Printing Inks",
+                description: "Red Oxide serves as a durable pigment for inks and packaging materials.",
+                image: "/assets/ynm-safety-packaging-printing-inks.jpg",
+                details: "Manufactured by trusted YNM Safety manufactures, it ensures consistent colour tone and long-lasting print quality in industrial packaging applications."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Construction and Building Materials",
+                short: "Red Oxide is widely used in construction materials for durability and colour stability.",
+                hover: "Manufactured by leading YNM Safety paint manufactures, red oxide enhances cement products, concrete blocks, and structural materials with long-lasting colour and weather resistance.",
+                image: "/assets/ynm-safety-construction-building-materials.jpg"
+              },
+              {
+                title: "Cosmetics",
+                short: "Red Oxide is used in selected cosmetic-grade formulations.",
+                hover: "Its stable and safe pigment properties make it suitable for colour cosmetics where regulatory compliance is required.",
+                image: "/assets/ynm-safety-cosmetics.jpg"
+              },
+              {
+                title: "Storage Tanks and Pipelines",
+                short: "YNM Safety Red Oxide Paint is widely used for storage tanks and pipelines to provide superior anti-corrosion protection and long-lasting durability.",
+                hover: "As a trusted Red Oxide Paint manufacturer, YNM Safety provides high-performance red oxide primer that protects storage tanks and pipelines from rust, moisture, and chemical exposure. The coating forms a strong protective barrier and improves adhesion of topcoats. It ensures extended service life and reduced maintenance costs in industrial environments.",
+                image: "/assets/ynm-safety-storage-tanks-pipelines.jpg"
+              },
+              {
+                title: "Bridges and Infrastructure",
+                short: "YNM Safety Red Oxide Primer is ideal for bridges and infrastructure projects, offering strong corrosion resistance for structural steel.",
+                hover: "YNM Safety Red Oxide Paint is specially formulated to protect bridges, flyovers, and infrastructure steel structures from harsh weather and environmental damage. As a leading red oxide paint manufacturer, we provide durable primer coatings that enhance structural strength and longevity. It improves paint adhesion and ensures long-term performance for public infrastructure projects.",
+                image: "/assets/ynm-safety-bridges-infrastructures.jpg"
+              },
+              {
+                title: "Industrial Applications",
+                short: "YNM Safety Red Oxide Paint is extensively used in industrial facilities to protect machinery, metal structures, and heavy equipment from corrosion.",
+                hover: "In industrial environments where metal surfaces face moisture, chemicals, and heavy usage, YNM Safety Red Oxide Primer delivers reliable anti-rust protection. Our red oxide paint enhances coating life and provides excellent bonding for enamel and industrial topcoats. It ensures durable protection for factories, plants, warehouses, and heavy machinery structures.",
+                image: "/assets/ynm-safety-industrial.jpg"
+              },
+              {
+                title: "Packaging and Printing Inks",
+                short: "Red Oxide serves as a durable pigment for inks and packaging materials.",
+                hover: "Manufactured by trusted YNM Safety manufactures, it ensures consistent colour tone and long-lasting print quality in industrial packaging applications.",
+                image: "/assets/ynm-safety-packaging-printing-inks.jpg"
+              }
+            ],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Red Oxide Paint Market Growth | YNM Safety",
+              description: "The global red oxide (red iron oxide pigment) market was valued at approximately USD 1.5–1.6 billion during 2023–2024. The market has grown steadily at an annual rate of around 3–5%, primarily driven by increasing construction activity and demand in paints & coatings.\n\nLooking ahead, the market is projected to reach nearly USD 2.5 billion by 2035, reflecting consistent expansion. The forecasted CAGR of 4–5% indicates stable and sustainable growth supported by rapid urbanization and rising global infrastructure investments.",
+              cagr: "4-5%",
+              growthFactors: [
+                "Paints, Coatings & Automotive Demand",
+                "Eco-friendly & Regulatory Preference",
+                "Diverse Applications",
+                "Durability and Weather Resistance",
+                "Cost-effectiveness",
+                "Rising Industrialization in Emerging Economies"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.6B",
+                projectedMarketSize: "$2.5B",
+                currentYear: "2024",
+                projectedYear: "2035",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 42, color: "#74060D" },
+                { region: "North America", value: 18, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 1.6 },
+                { year: "2026", value: 1.75 },
+                { year: "2028", value: 1.9 },
+                { year: "2030", value: 2.1 },
+                { year: "2032", value: 2.3 },
+                { year: "2035", value: 2.5 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia-Pacific",
+                  countries: ["China", "India", "Japan", "Indonesia", "Thailand", "Vietnam"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "France", "United Kingdom", "Italy", "Russia"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Colombia"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates (UAE)", "Saudi Arabia", "South Africa"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "As leading red oxide paint manufacturers, YNM Safety follows a strict and quality-controlled manufacturing process to produce high-performance anti-corrosive red oxide paint suitable for construction, fabrication, and industrial coating applications. Being trusted YNM Safety paint manufactures and professional paints manufactures, every batch is produced using advanced production technology and rigorous quality monitoring.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Selection of Premium Raw Materials",
+                description: "The manufacturing process of red oxide paint begins with sourcing high-quality red iron oxide pigments, alkyd or synthetic resin binders, solvents, fillers, and specialty performance additives. YNM Safety manufactures only use approved and industry-certified raw materials to ensure superior durability, corrosion resistance, and long-lasting colour stability in red oxide coatings."
+              },
+              {
+                step: "02",
+                title: "Raw Material Quality Inspection",
+                description: "All raw materials undergo strict laboratory testing for colour strength, viscosity, purity, moisture content, and chemical stability. As responsible red oxide paint manufacturers, YNM Safety ensures compliance with IS:2074 standards before releasing materials for production."
+              },
+              {
+                step: "03",
+                title: "Resin Charging & Pre-Mixing",
+                description: "The selected resin binder is transferred into high-speed mixing vessels. Controlled quantities of solvents are added to adjust viscosity and improve flow properties. This stage forms the foundation of high-performance red oxide primer paint with smooth application characteristics."
+              },
+              {
+                step: "04",
+                title: "Pigment Dispersion Process",
+                description: "Premium red iron oxide pigments and fillers are gradually introduced into the resin mixture under continuous high-speed dispersion. This process ensures uniform pigment distribution, excellent opacity, and consistent shade quality, making YNM Safety one of the trusted paints manufactures for industrial coatings."
+              },
+              {
+                step: "05",
+                title: "Grinding & Particle Size Reduction",
+                description: "The dispersed mixture is transferred to bead mills or sand mills for fine grinding. Grinding reduces pigment particle size to micron levels, providing smooth texture, strong adhesion, and enhanced corrosion protection. This step is critical in producing durable red oxide paint coatings."
+              },
+              {
+                step: "06",
+                title: "Let-Down & Additive Integration",
+                description: "After grinding, the base paste is transferred back to blending tanks. Additional resin, solvents, and additives such as drying agents, anti-settling chemicals, and stabilizers are incorporated. This stage adjusts drying time, durability, gloss level, and overall protective performance of the red oxide paint."
+              },
+              {
+                step: "07",
+                title: "Filtration & Finishing",
+                description: "The finished red oxide paint is passed through advanced filtration systems to remove impurities and ensure lump-free consistency. This guarantees smooth brush, roller, or spray application for construction, steel fabrication, and industrial machinery coatings."
+              },
+              {
+                step: "08",
+                title: "Quality Control Testing",
+                description: "Each batch manufactured by YNM Safety manufactures undergoes strict quality testing including viscosity testing, drying time evaluation, adhesion strength testing, shade and colour consistency verification, density and solid content testing, and corrosion resistance performance testing. Only batches meeting IS:2074 quality standards are approved for packaging and distribution."
+              },
+              {
+                step: "09",
+                title: "Filling & Packaging",
+                description: "The approved red oxide paint is filled into durable 20L containers using precision filling equipment. Each container is labeled with batch number, manufacturing date, and compliance details, reinforcing YNM Safety's reputation among trusted red oxide paint manufacturers."
+              },
+              {
+                step: "10",
+                title: "Storage & Dispatch",
+                description: "The finished products are stored in controlled warehouse environments to maintain stability and product quality. After order confirmation, the red oxide paint is palletized and dispatched safely to domestic and international customers, strengthening YNM Safety's position as reliable paints manufactures."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 120,
+              currency: "INR",
+              unit: "per liter",
+              displayPrice: "₹120 per liter",
+              packageSizes: [
+                { size: "20L Container", priceINR: 120, moq: 50 },
+                { size: "200L Drum", priceINR: 115, moq: 5 },
+                { size: "1KL Bulk", priceINR: 110, moq: 1 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 1000, discount: 3 },
+                { minQuantity: 5000, discount: 5 },
+                { minQuantity: 10000, discount: 8 },
+                { minQuantity: 25000, discount: 10 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              monthlyCapacity: "50 KL",
+              annualCapacity: "600 KL",
+              productionSpeed: "50 KL",
+              qualityStandards: "IS:2074",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "is-2074",
+                title: "IS:2074",
+                description: "Indian Standard for Red Oxide Paint",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images - Using red folder images for carousel
+            gallery: [
+              "/assets/ynm-safety-construction-building-materials.jpg",
+              "/assets/ynm-safety-cosmetics.jpg",
+              "/assets/ynm-safety-storage-tanks-pipelines.jpg",
+              "/assets/ynm-safety-bridges-infrastructures.jpg",
+              "/assets/ynm-safety-industrial.jpg",
+              "/assets/ynm-safety-packaging-printing-inks.jpg"
+            ],
+            
+            // FAQs
+            faqs: [
+              {
+                question: "What is Red Oxide Paint used for?",
+                answer: "YNM Safety Red Oxide Paint is primarily used as an anti-rust primer for metal surfaces such as storage tanks, pipelines, bridges, industrial machinery, and structural steel. It protects metal from corrosion and enhances topcoat adhesion."
+              },
+              {
+                question: "Why choose YNM Safety Red Oxide Paint?",
+                answer: "YNM Safety is a trusted Red Oxide Paint manufacturer offering high-performance anti-corrosion primers with excellent durability and strong adhesion. Our coatings ensure long-lasting protection in industrial and infrastructure environments."
+              },
+              {
+                question: "Can Red Oxide Paint be used on storage tanks and pipelines?",
+                answer: "Yes, YNM Safety Red Oxide Primer is ideal for storage tanks and pipelines. It creates a protective barrier against moisture, chemicals, and rust, extending the lifespan of metal structures."
+              },
+              {
+                question: "Is Red Oxide Paint suitable for bridges and infrastructure?",
+                answer: "Yes, our Red Oxide Paint is specially formulated for bridges, flyovers, and infrastructure projects. It provides strong corrosion resistance and improves the durability of structural steel."
+              },
+              {
+                question: "Does Red Oxide Paint require a topcoat?",
+                answer: "Yes, Red Oxide Primer is generally used as a base coat. After application, it should be covered with enamel or industrial paint for enhanced protection and long-term performance."
+              },
+              {
+                question: "How long does Red Oxide Primer last?",
+                answer: "When properly applied and top-coated, YNM Safety Red Oxide Paint provides long-lasting corrosion protection and reduces maintenance frequency."
+              }
+            ]
           }
         ]
       },
@@ -4407,6 +4820,406 @@ export const productsData = {
                 step: "08",
                 title: "Packing, Storage & Dispatch",
                 description: "Finished Thrie Beam crash barriers are bundled securely for safe transportation. Proper labeling and batch tracking ensure efficient dispatch to infrastructure projects across India. As a trusted Thrie Beam crash barrier manufacturer, YNM Safety ensures timely delivery for government, highway, bridge, and expressway projects."
+              }
+            ]
+          },
+          {
+            id: "cb5",
+            slug: "attenuator-manufacture-ynm-safety",
+            name: "Attenuator",
+            shortDesc: "High-performance impact attenuator manufactured by YNM Safety, a trusted Attenuator manufacture delivering advanced metal beam crash barrier safety systems for global highway infrastructure.",
+            desc: "High-performance impact attenuator manufactured by YNM Safety, a trusted Attenuator manufacture delivering advanced metal beam crash barrier safety systems for global highway infrastructure.",
+            image: "/assets/YNM Safety Highways exits and entrances.png",
+            heroImage: "/assets/YNM Safety Toll plazas (2).png",
+            specs: ["IRC SP 99:2013", "MoRTH Compliant", "High Energy Absorption", "80/100/110 Kmph Design Speed", "Galvanized Steel", "Bolt & Anchor Installation"],
+            overview: "YNM Safety is a leading Attenuator manufacture in India specializing in high-performance impact attenuation systems designed to reduce collision severity and protect motorists.\n\nOur Attenuator YNM manufactures systems are engineered as energy-absorbing safety devices that work seamlessly with metal beam crash barrier installations. These systems are tested and compliant with IRC SP 99:2013 and MoRTH guidelines, ensuring reliable performance in high-speed highway environments.\n\nAs a reputed YNM Safety manufactures road safety systems, we deliver durable, corrosion-resistant, and structurally strong attenuators suitable for national highways, expressways, urban corridors, and infrastructure projects worldwide.",
+            detailedDescription: "YNM Safety is a leading Attenuator manufacture in India specializing in high-performance impact attenuation systems designed to reduce collision severity and protect motorists.\n\nOur Attenuator YNM manufactures systems are engineered as energy-absorbing safety devices that work seamlessly with metal beam crash barrier installations. These systems are tested and compliant with IRC SP 99:2013 and MoRTH guidelines, ensuring reliable performance in high-speed highway environments.\n\nAs a reputed YNM Safety manufactures road safety systems, we deliver durable, corrosion-resistant, and structurally strong attenuators suitable for national highways, expressways, urban corridors, and infrastructure projects worldwide.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Road Safety Impact Attenuator" },
+              { label: "Material", value: "High Strength Steel" },
+              { label: "System Compatibility", value: "Metal Beam Crash Barrier" },
+              { label: "Design Speed Variants", value: "80 kmph / 100 kmph / 110 kmph" },
+              { label: "Installation", value: "Bolt & Anchor Based" },
+              { label: "Corrosion Protection", value: "Galvanized Steel" },
+              { label: "Compliance", value: "IRC SP 99:2013 & MoRTH" },
+              { label: "Application Area", value: "Highways, Toll Plazas, Bridge Approaches" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "110 Kmph: 775 Kg | 100 Kmph: 665 Kg | 80 Kmph: 551 Kg",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IRC SP 99:2013, MoRTH, ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "10 Units",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "73089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Road Safety Impact Attenuator",
+                "Material: High Strength Steel",
+                "System Compatibility: Metal Beam Crash Barrier",
+                "Design Speed Variants: 80 kmph / 100 kmph / 110 kmph",
+                "Installation: Bolt & Anchor Based",
+                "Corrosion Protection: Galvanized Steel",
+                "Compliance: IRC SP 99:2013 & MoRTH",
+                "Application Area: Highways, Toll Plazas, Bridge Approaches",
+                "Net Weight (110 Kmph): 775 Kg",
+                "Net Weight (100 Kmph): 665 Kg",
+                "Net Weight (80 Kmph): 551 Kg",
+                "HSN Code: 73089090"
+              ],
+              keyFeatures: [
+                "High energy absorption capacity",
+                "Available for multiple design speeds (80 / 100 / 110 Kmph)",
+                "Compliant with IRC SP 99:2013 & MoRTH",
+                "Heavy-duty galvanized steel construction",
+                "Long service life with minimal maintenance",
+                "Seamless integration with metal beam crash barrier systems"
+              ],
+              advantages: [
+                "Engineered for high-impact highway protection",
+                "Compatible with metal beam crash barrier systems",
+                "Globally exported from Hyderabad manufacturing facility",
+                "Certified quality standards",
+                "Trusted Attenuator manufacture – YNM Safety",
+                "Reduces collision severity and protects motorists"
+              ]
+            },
+            
+            features: [
+              "High energy absorption capacity",
+              "Available for multiple design speeds (80 / 100 / 110 Kmph)",
+              "Compliant with IRC SP 99:2013 & MoRTH",
+              "Heavy-duty galvanized steel construction",
+              "Long service life with minimal maintenance",
+              "Seamless integration with metal beam crash barrier systems"
+            ],
+            
+            advantages: [
+              "Engineered for high-impact highway protection",
+              "Compatible with metal beam crash barrier systems",
+              "Globally exported from Hyderabad manufacturing facility",
+              "Certified quality standards",
+              "Trusted Attenuator manufacture – YNM Safety",
+              "Reduces collision severity and protects motorists"
+            ],
+            
+            technicalSpecs: {
+              "Product Type": "Road Safety Impact Attenuator",
+              "Material": "High Strength Steel",
+              "System Compatibility": "Metal Beam Crash Barrier",
+              "Design Speed Variants": "80 kmph / 100 kmph / 110 kmph",
+              "Installation": "Bolt & Anchor Based",
+              "Corrosion Protection": "Galvanized Steel",
+              "Compliance": "IRC SP 99:2013 & MoRTH",
+              "Country of Origin": "India",
+              "Manufacturing Location": "Hyderabad",
+              "Net Weight (110 Kmph)": "775 Kg",
+              "Net Weight (100 Kmph)": "665 Kg",
+              "Net Weight (80 Kmph)": "551 Kg",
+              "Quality Standards": "IRC SP 99:2013, MoRTH, ISO 9001:2015",
+              "MOQ": "10 Units",
+              "HSN Code": "73089090",
+              "Packing Type": "Standard"
+            },
+            
+            // Application Areas with images
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Highway Exits and Entrances",
+                description: "Attenuator systems protect motorists at highway entry and exit points.",
+                image: "/assets/YNM Safety Highways exits and entrances.png",
+                details: "Installed at gore areas and diverging lanes, YNM Safety attenuator manufacture solutions absorb frontal impacts and reduce crash severity at high-speed merging zones."
+              },
+              {
+                id: "app2",
+                title: "Toll Plazas",
+                description: "Designed to safeguard toll booths and vehicle lanes.",
+                image: "/assets/YNM Safety Toll plazas (2).png",
+                details: "Attenuator YNM manufactures systems prevent severe damage by absorbing vehicle collision energy, protecting both toll infrastructure and passengers."
+              },
+              {
+                id: "app3",
+                title: "Bridge Approaches",
+                description: "Critical protection for bridge ends and approach zones.",
+                image: "/assets/YNM Safety Bridges approches.png",
+                details: "The attenuator works in combination with metal beam crash barrier systems to reduce impact force and prevent structural damage at vulnerable bridge points."
+              },
+              {
+                id: "app4",
+                title: "Work Zones and Construction Areas",
+                description: "Ensures safety in temporary traffic management zones.",
+                image: "/assets/YNM Safety Work zones and Construction areas.png",
+                details: "In high-risk construction areas, attenuator systems minimize accident impact and improve worker safety by absorbing vehicle collision energy efficiently."
+              },
+              {
+                id: "app5",
+                title: "Sharp Curves on Roads",
+                description: "Installed at dangerous curved sections.",
+                image: "/assets/YNM Safety Sharp curves.png",
+                details: "Attenuator manufacture systems reduce crash intensity at sharp bends where vehicles may lose control, enhancing overall highway safety."
+              },
+              {
+                id: "app6",
+                title: "Intersections and Junctions",
+                description: "Provides impact protection at busy road intersections.",
+                image: "/assets/YNM Safety Intersections and Junctions.png",
+                details: "YNM Safety attenuator systems protect fixed roadside hazards and reduce injury risks at high-traffic junctions."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Highway Exits and Entrances",
+                short: "Attenuator systems protect motorists at highway entry and exit points.",
+                hover: "Installed at gore areas and diverging lanes, YNM Safety attenuator manufacture solutions absorb frontal impacts and reduce crash severity at high-speed merging zones.",
+                image: "/assets/YNM Safety Highways exits and entrances.png"
+              },
+              {
+                title: "Toll Plazas",
+                short: "Designed to safeguard toll booths and vehicle lanes.",
+                hover: "Attenuator YNM manufactures systems prevent severe damage by absorbing vehicle collision energy, protecting both toll infrastructure and passengers.",
+                image: "/assets/YNM Safety Toll plazas (2).png"
+              },
+              {
+                title: "Bridge Approaches",
+                short: "Critical protection for bridge ends and approach zones.",
+                hover: "The attenuator works in combination with metal beam crash barrier systems to reduce impact force and prevent structural damage at vulnerable bridge points.",
+                image: "/assets/YNM Safety Bridges approches.png"
+              },
+              {
+                title: "Work Zones and Construction Areas",
+                short: "Ensures safety in temporary traffic management zones.",
+                hover: "In high-risk construction areas, attenuator systems minimize accident impact and improve worker safety by absorbing vehicle collision energy efficiently.",
+                image: "/assets/YNM Safety Work zones and Construction areas.png"
+              },
+              {
+                title: "Sharp Curves on Roads",
+                short: "Installed at dangerous curved sections.",
+                hover: "Attenuator manufacture systems reduce crash intensity at sharp bends where vehicles may lose control, enhancing overall highway safety.",
+                image: "/assets/YNM Safety Sharp curves.png"
+              },
+              {
+                title: "Intersections and Junctions",
+                short: "Provides impact protection at busy road intersections.",
+                hover: "YNM Safety attenuator systems protect fixed roadside hazards and reduce injury risks at high-traffic junctions.",
+                image: "/assets/YNM Safety Intersections and Junctions.png"
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 0,
+              currency: "INR",
+              unit: "per unit",
+              displayPrice: "Contact for pricing",
+              packageSizes: [
+                { size: "10 units", priceINR: 0, moq: 10 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 50, discount: 5 },
+                { minQuantity: 100, discount: 10 }
+              ]
+            },
+            
+            gallery: [
+              "/assets/YNM Safety Highways exits and entrances.png",
+              "/assets/YNM Safety Toll plazas (2).png",
+              "/assets/YNM Safety Bridges approches.png",
+              "/assets/YNM Safety Work zones and Construction areas.png",
+              "/assets/YNM Safety Sharp curves.png",
+              "/assets/YNM Safety Intersections and Junctions.png"
+            ],
+            
+            // Our Projects / Clients
+            projects: [
+              {
+                id: "proj1",
+                title: "National Highway Safety Upgrade",
+                client: "Government Project",
+                location: "Maharashtra",
+                description: "Supplied 85 units of Impact Attenuators for highway safety infrastructure upgrade project in Maharashtra. Our high-quality attenuator systems provided excellent impact absorption and protection at critical highway points.",
+                quantity: "85 Units",
+                year: "2024"
+              },
+              {
+                id: "proj2",
+                title: "Urban Expressway Project",
+                client: "Infrastructure Developer",
+                location: "Telangana",
+                description: "Delivered 60 units of Impact Attenuators for urban expressway safety enhancement in Telangana. The installation improved safety at toll plazas and expressway entrance/exit points.",
+                quantity: "60 Units",
+                year: "2024"
+              }
+            ],
+            
+            meta: {
+              title: "Attenuator Manufacture | Metal Beam Crash Barrier | YNM Safety",
+              description: "YNM Safety is a leading Attenuator manufacture in India offering IRC SP 99:2013 & MoRTH compliant impact attenuators and metal beam crash barrier systems for highways, toll plazas, and bridge safety worldwide.",
+              slug: "/attenuator-manufacture-ynm-safety"
+            },
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Attenuator Barrier Market Growth – Global Outlook",
+              description: "The global attenuator barrier market has grown steadily in recent years, reaching approximately USD 2.0 billion by 2024. Growth has been driven by stricter road safety regulations and expanding highway infrastructure. Looking ahead, the market is expected to grow at a CAGR of 4–5% through 2030, supported by increasing government investments in transportation and advanced barrier technologies.",
+              cagr: "4-5%",
+              growthFactors: [
+                "Increasing road safety regulations",
+                "Expansion of highway and urban infrastructure",
+                "Rising government investments in transportation",
+                "Technological advancements in barrier design",
+                "Growing awareness of traffic accident prevention",
+                "Strong presence of reliable manufacturers like YNM Safety"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$2.0B",
+                projectedMarketSize: "$2.8B",
+                currentYear: "2024",
+                projectedYear: "2030",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "10,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 35, color: "#74060D" },
+                { region: "North America", value: 25, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2022", value: 1.7 },
+                { year: "2023", value: 1.85 },
+                { year: "2024", value: 2.0 },
+                { year: "2026", value: 2.3 },
+                { year: "2028", value: 2.5 },
+                { year: "2030", value: 2.8 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia",
+                  countries: ["South Korea", "Japan", "China", "Malaysia", "Singapore", "India", "Indonesia"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "France", "Netherlands"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa", "Algeria", "Mozambique", "Ghana"]
+                },
+                {
+                  name: "Middle East",
+                  countries: ["United Arab Emirates"]
+                },
+                {
+                  name: "South America",
+                  countries: ["Brazil"]
+                }
+              ]
+            },
+            
+            performanceMetrics: {
+              monthly: "100 Units",
+              annually: "1200 Units"
+            },
+            
+            statistics: {
+              annualCapacity: "1,200 Units",
+              exportCountries: "20+",
+              qualityStandards: "ISO 9001:2015",
+              productionSpeed: "100 Units"
+            },
+            
+            // Manufacturing Process
+            manufacturingProcessIntro: "YNM Safety is a leading Attenuator manufacture in India, delivering high-performance impact attenuation systems designed to reduce collision severity and protect motorists. Our attenuators are manufactured using advanced engineering processes and high-strength galvanized steel to ensure maximum durability, corrosion resistance, and superior impact absorption performance for highways, toll plazas, and bridge approaches.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Design Engineering & Material Selection",
+                description: "The manufacturing process begins with precision design engineering based on IRC SP 99:2013 and MoRTH specifications. High-strength steel is selected and tested for tensile strength, yield strength, and chemical composition to ensure structural integrity and optimal energy absorption performance."
+              },
+              {
+                step: "02",
+                title: "Steel Cutting & Component Fabrication",
+                description: "Steel sheets and structural components are precision-cut using advanced CNC machines to achieve exact dimensions. Each component is fabricated to meet the specific design speed requirements (80/100/110 kmph) ensuring consistent quality across all attenuator units."
+              },
+              {
+                step: "03",
+                title: "Profile Forming & Shaping",
+                description: "The cut steel components are processed through forming machines to achieve the required energy-absorbing profiles. This critical stage ensures the attenuator can effectively absorb and dissipate collision energy during impact events."
+              },
+              {
+                step: "04",
+                title: "Welding & Assembly",
+                description: "Components are precisely welded and assembled following strict quality control procedures. All welds are inspected for structural integrity to ensure the attenuator system performs reliably under high-impact conditions."
+              },
+              {
+                step: "05",
+                title: "Surface Preparation & Cleaning",
+                description: "Assembled attenuator units undergo thorough surface preparation including degreasing and cleaning to remove oils, rust, and impurities. This ensures optimal adhesion during the galvanization process."
+              },
+              {
+                step: "06",
+                title: "Hot-Dip Galvanization",
+                description: "To provide long-lasting corrosion protection, the attenuator units undergo hot-dip galvanization as per IS 4759 / ASTM A123 standards. This creates a uniform zinc coating that significantly extends service life in harsh highway environments."
+              },
+              {
+                step: "07",
+                title: "Quality Testing & Inspection",
+                description: "Every attenuator unit undergoes comprehensive quality testing including dimensional accuracy verification, coating thickness measurement, visual inspection, and compliance verification with IRC SP 99:2013 and MoRTH standards."
+              },
+              {
+                step: "08",
+                title: "Packing, Documentation & Dispatch",
+                description: "Approved attenuator units are securely packed with proper labeling and documentation. Quality certificates are generated, and products are dispatched to project sites with installation guidelines and technical support."
               }
             ]
           }

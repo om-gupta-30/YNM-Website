@@ -9,7 +9,7 @@ const quickLinksConfig = [
   { key: "products", href: "/products" },
   { key: "clients", href: "/clients" },
   { key: "about", href: "/about" },
-  { key: "team", href: "/our-team" },
+  { key: "team", href: "/our-director" },
   { key: "foreignCollaborations", href: "/foreign-collaborations" },
   { key: "investor", href: "/investor-relations" },
   { key: "careers", href: "/careers" },
@@ -133,7 +133,7 @@ function Footer({ footerData: propFooterData }) {
           <div className="ft-logo-wrap-new ft-heartbeat">
             <Image 
               src="/assets/logo-footer.jpg" 
-              alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers | Thermoplastic Road Marking Paint" 
+              alt="YNM Safety Logo - Road Safety Products Manufacturer India" 
               width={140} 
               height={100} 
               className="ft-logo-new"
@@ -153,6 +153,7 @@ function Footer({ footerData: propFooterData }) {
                 rel={social.isComingSoon ? undefined : "noopener noreferrer"}
                 className={`ft-social-link ${social.name.toLowerCase().replace(' ', '-')}`}
                 title={social.name}
+                aria-label={`Follow YNM Safety on ${social.name}`}
                 onClick={(e) => handleSocialClick(e, social)}
                 style={{ pointerEvents: 'auto', cursor: 'pointer' }}
               >

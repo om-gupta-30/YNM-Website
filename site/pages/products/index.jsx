@@ -42,9 +42,24 @@ export default function ProductsPage() {
   const { category } = router.query;
   const [activeCategory, setActiveCategory] = useState(category || "all");
 
+  // Handle both query params (legacy) and hash navigation (SEO-friendly)
   useEffect(() => {
     if (category) {
       setActiveCategory(category);
+    }
+    // Handle hash-based navigation
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const hash = window.location.hash.slice(1); // Remove #
+      if (hash) {
+        setActiveCategory(hash);
+        // Scroll to products section smoothly
+        setTimeout(() => {
+          const productsSection = document.querySelector('.products-grid');
+          if (productsSection) {
+            productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      }
     }
   }, [category]);
 
@@ -59,7 +74,8 @@ export default function ProductsPage() {
     if (categoryKey === "all") {
       router.push('/products', undefined, { shallow: true });
     } else {
-      router.push(`/products?category=${categoryKey}`, undefined, { shallow: true });
+      // Use hash instead of query params for SEO
+      router.push(`/products#${categoryKey}`, undefined, { shallow: true });
     }
   };
 

@@ -29,25 +29,25 @@ function USPSection({ uspData: propUspData }) {
           id: "manufacturing",
           title: "Advanced Manufacturing",
           icon: "🏭",
-          description: "YNM Safety is a leading manufacturer of hot thermoplastic road marking paints, cold plastic paints, and water-based paints, supported by advanced metal fabrication facilities. Our manufacturing capabilities also include retro reflective signages, crash barriers, and engineered infrastructure products."
+          description: "We make road marking paints, crash barriers, and safety signs in our modern factory. Our products are built to last and keep roads safe."
         },
         {
           id: "certified",
           title: "Quality Certified",
           icon: "✅",
-          description: "All products at YNM Safety are manufactured under strict quality standards to ensure durability, visibility, and safety performance. As a trusted road safety products manufacturer, we deliver ISO-compliant paints, signages, and crash barrier systems designed for long-term infrastructure use."
+          description: "Every product meets strict quality standards. We are ISO certified and test each item before it leaves our factory."
         },
         {
           id: "export",
           title: "Global Export Network",
           icon: "🌍",
-          description: "YNM Safety is a reliable global exporter of road marking paints, metal beam crash barriers, and road safety solutions. We supply W beam crash barriers, double W beam, thrie beam, roller crash barriers, and signages to clients across international markets."
+          description: "We ship to 50+ countries worldwide. Our team handles all export needs and ensures on-time delivery."
         },
         {
           id: "customization",
           title: "Custom Solutions",
           icon: "🎨",
-          description: "We provide customized manufacturing solutions including bespoke paint formulations, custom metal fabrication, gantry and cantilever structures, and informative signage systems. YNM Safety supports infrastructure projects with flexible production and technical expertise."
+          description: "Need something special? We create custom paints, barriers, and signs to match your project needs."
         }
       ];
 

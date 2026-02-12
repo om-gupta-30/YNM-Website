@@ -2,6 +2,10 @@
 User-agent: *
 Allow: /
 
+# Disallow Next.js internal paths (JS bundles, build files)
+Disallow: /_next/
+Disallow: /_next/static/
+
 # Disallow sensitive paths
 Disallow: /api/
 

@@ -99,7 +99,7 @@ export default function ClientsPage() {
                   <div className="client-logo-wrapper">
                     <Image
                       src={client.logo}
-                      alt={`${client.name} - YNM Safety Client | Thermoplastic Paint Manufacturer India`}
+                      alt={`${client.name} logo - YNM Safety client`}
                       width={120}
                       height={80}
                       className="client-logo"

@@ -29,7 +29,7 @@ export default function DirectorSection({ directorData: propDirectorData }) {
 
       {/* Header */}
       <div className="director-header">
-        <Link href="/our-team" className="director-tag">Our Director</Link>
+        <Link href="/our-director" className="director-tag">Our Director</Link>
         <h2>What Our Director Says</h2>
         <div className="director-line" />
       </div>
@@ -46,7 +46,7 @@ export default function DirectorSection({ directorData: propDirectorData }) {
               <div className="director-photo">
                 <Image
                   src={photoSrc}
-                  alt={`${directorData.name} - Managing Director YNM Safety | Hot Thermoplastic Paint Manufacturers India`}
+                  alt={`${directorData.name} - Managing Director YNM Safety`}
                   fill
                   sizes="(max-width: 768px) 80vw, 400px"
                   style={{
