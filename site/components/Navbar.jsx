@@ -38,7 +38,7 @@ export default function Navbar() {
           {!logoError ? (
             <Image
               src="/assets/logo-navbar.jpg"
-              alt="YNM Safety logo"
+              alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers"
               width={50}
               height={50}
               className="nav-logo-new"

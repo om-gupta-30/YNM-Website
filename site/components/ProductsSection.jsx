@@ -16,35 +16,40 @@ const productConfig = [
     image: "/assets/ynm safety thermoplastic paints.png", 
     link: "/products?category=paints", 
     title: "Paints", 
-    description: "Hot thermoplastic road marking paints for highways, expressways & urban road safety applications." 
+    description: "Hot thermoplastic road marking paints for highways, expressways & urban road safety applications.",
+    altText: "YNM Safety Hot Thermoplastic Paints Manufacturer - Thermoplastic Road Marking Paint Manufacturers in India"
   },
   { 
     id: "bitumen", 
     image: "/assets/Ynm safety bitumen manufactures.png", 
     link: "/products?category=bitumen", 
     title: "Bitumen", 
-    description: "High-performance VG 40 paving grade bitumen for highways, expressways and heavy traffic roads." 
+    description: "High-performance VG 40 paving grade bitumen for highways, expressways and heavy traffic roads.",
+    altText: "YNM Safety Bitumen VG 40 Manufacturer - Highway Construction Bitumen Supplier India"
   },
   { 
     id: "crash-barriers", 
     image: "/assets/metal beam crash barrier ynm safety.png", 
     link: "/products?category=crash-barriers", 
     title: "Metal Beam Crash Barriers", 
-    description: "High-strength W-beam crash barriers engineered for highways and expressways safety." 
+    description: "High-strength W-beam crash barriers engineered for highways and expressways safety.",
+    altText: "YNM Safety Metal Beam Crash Barrier Manufacturer - W Beam Crash Barrier Manufacturers India"
   },
   { 
     id: "signages", 
     image: "/assets/Ynm safety signages.png", 
     link: "/products?category=signages", 
     title: "Signages", 
-    description: "Retro-reflective gantry signages and cantilever signages for high visibility traffic guidance." 
+    description: "Retro-reflective gantry signages and cantilever signages for high visibility traffic guidance.",
+    altText: "YNM Safety Retro Reflective Signage Manufacturer - Highway Gantry Signage India"
   },
   { 
     id: "fabrication", 
     image: "/assets/railway-fab-2.png", 
     link: "/products/fabrication", 
     title: "Fabrication", 
-    description: "Custom steel fabrication including solar structures, railway structures, and industrial products." 
+    description: "Custom steel fabrication including solar structures, railway structures, and industrial products.",
+    altText: "YNM Safety Fabrication - Custom Steel & Metal Fabrication Manufacturer India"
   },
 ];
 
@@ -73,7 +78,7 @@ export default function ProductsSection() {
               <div className="ps-product-image">
                 <Image
                   src={product.image}
-                  alt={product.title}
+                  alt={product.altText || product.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
                   style={{ objectFit: "cover" }}

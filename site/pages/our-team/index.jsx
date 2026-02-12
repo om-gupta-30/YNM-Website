@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha, isAllowedDomain } from "@/lib/recaptchaUtils";
+import { useState, useEffect, useRef } from "react";
+import { isAllowedDomain } from "@/lib/recaptchaUtils";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,18 +22,84 @@ export default function OurDirectorPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [showRecaptcha, setShowRecaptcha] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
+  const recaptchaWidgetId = useRef(null);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
+  // Check if reCAPTCHA should be shown (only on allowed domains)
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const allowed = isAllowedDomain();
-      setShowRecaptcha(allowed && !!siteKey);
-      
-      if (allowed && siteKey) {
-        loadRecaptchaScript();
-      }
+      const shouldShow = allowed && !!siteKey;
+      setShowRecaptcha(shouldShow);
     }
   }, [siteKey]);
+
+  // Load reCAPTCHA script and render widget explicitly
+  useEffect(() => {
+    if (!siteKey) return;
+    if (!showRecaptcha) return;
+    if (!recaptchaRef.current) return;
+
+    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
+    
+    const initRecaptcha = () => {
+      if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && recaptchaWidgetId.current === null) {
+        try {
+          recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
+            sitekey: siteKey,
+            callback: (token) => {
+              setRecaptchaToken(token);
+            },
+            'expired-callback': () => {
+              setRecaptchaToken(null);
+            },
+            'error-callback': () => {
+              setRecaptchaToken(null);
+            }
+          });
+        } catch (error) {
+          console.error('[Our Director] reCAPTCHA render error:', error);
+        }
+      }
+    };
+
+    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
+      initRecaptcha();
+      return;
+    }
+
+    const callbackName = `recaptchaCallback_director_${Math.floor(Math.random() * 1000000)}`;
+    
+    window[callbackName] = () => {
+      initRecaptcha();
+      delete window[callbackName];
+    };
+
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
+    script.async = true;
+    script.defer = true;
+    script.onerror = () => {
+      delete window[callbackName];
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+        try {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        } catch (error) {
+          // Ignore cleanup errors
+        }
+      }
+      if (window[callbackName]) {
+        delete window[callbackName];
+      }
+    };
+  }, [showRecaptcha, siteKey]);
 
   const handleAppointmentChange = (e) => {
     setAppointmentForm({ ...appointmentForm, [e.target.name]: e.target.value });
@@ -45,8 +111,7 @@ export default function OurDirectorPage() {
     setError('');
     
     try {
-      const recaptchaToken = showRecaptcha ? getRecaptchaToken() : null;
-      
+      // Validate reCAPTCHA (only when shown on allowed domains)
       if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
@@ -56,7 +121,7 @@ export default function OurDirectorPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...appointmentForm,
-          recaptchaToken,
+          recaptchaToken: recaptchaToken || '',
         }),
       });
 
@@ -74,15 +139,22 @@ export default function OurDirectorPage() {
           preferredTime: "",
           message: "",
         });
-        if (showRecaptcha) resetRecaptcha();
+        setRecaptchaToken(null);
+        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        }
         setTimeout(() => setSubmitted(false), 8000);
       } else {
         setError(data.error || 'Something went wrong. Please try again.');
-        if (showRecaptcha) resetRecaptcha();
+        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        }
       }
     } catch (err) {
       setError(err.message || 'Network error. Please check your connection and try again.');
-      if (showRecaptcha) resetRecaptcha();
+      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+        window.grecaptcha.reset(recaptchaWidgetId.current);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -93,6 +165,68 @@ export default function OurDirectorPage() {
       <Head>
         <title>Our Director - YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Meet Rishuu Jaiin, Managing Director of YNM Safety - leading manufacturer and exporter with a vision for excellence and global expansion." />
+        <link rel="canonical" href="https://www.ynmsafety.com/our-team" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://www.ynmsafety.com/our-team" />
+        <meta property="og:title" content="Our Director - YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta property="og:description" content="Meet Rishuu Jaiin, Managing Director of YNM Safety - leading manufacturer and exporter with a vision for excellence and global expansion." />
+        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Our Director - YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta name="twitter:description" content="Meet Rishuu Jaiin, Managing Director of YNM Safety - leading manufacturer and exporter." />
+        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        
+        {/* Schema Markup - Person */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfilePage",
+              "name": "Our Director",
+              "url": "https://www.ynmsafety.com/our-team",
+              "mainEntity": {
+                "@type": "Person",
+                "name": "Rishuu Jaiin",
+                "jobTitle": "Managing Director",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "YNM Safety Pan Global Trade Pvt Ltd"
+                }
+              }
+            })
+          }}
+        />
+        
+        {/* Schema Markup - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.ynmsafety.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Our Team",
+                  "item": "https://www.ynmsafety.com/our-team"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Navbar />
@@ -116,7 +250,7 @@ export default function OurDirectorPage() {
               <div className="director-profile-photo">
                 <Image
                   src={directorData.photo2 || directorData.photo}
-                  alt={directorData.name}
+                  alt={`${directorData.name} - Managing Director YNM Safety | Hot Thermoplastic Paint Manufacturers India`}
                   fill
                   style={{ objectFit: "cover", objectPosition: "center 18%" }}
                 />
@@ -194,7 +328,7 @@ export default function OurDirectorPage() {
                 <div className="venture-logo">
                   <Image
                     src="/assets/logo-navbar.jpg"
-                    alt="YNM Safety"
+                    alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Road Safety Products"
                     width={60}
                     height={60}
                     style={{ objectFit: "contain", borderRadius: 8 }}
@@ -476,12 +610,10 @@ export default function OurDirectorPage() {
                   </div>
 
                   {showRecaptcha && (
-                    <div style={{ marginBottom: '20px' }}>
-                      <div 
-                        className="g-recaptcha" 
-                        data-sitekey={siteKey}
-                        style={{ display: 'inline-block' }}
-                      />
+                    <div className="recaptcha-group">
+                      <label>Security Verification *</label>
+                      <div ref={recaptchaRef} className="recaptcha-container"></div>
+                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
                     </div>
                   )}
 
@@ -1366,6 +1498,37 @@ export default function OurDirectorPage() {
         .appointment-form textarea {
           resize: vertical;
           min-height: 100px;
+        }
+
+        .recaptcha-group {
+          background: #F7F3EA;
+          padding: 20px;
+          border-radius: 12px;
+          border: 2px solid #E6D3A3;
+          margin-bottom: 20px;
+        }
+
+        .recaptcha-group label {
+          display: block;
+          font-size: 13px;
+          font-weight: 600;
+          color: #74060D;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 12px;
+        }
+
+        .recaptcha-container {
+          display: flex;
+          justify-content: center;
+          margin: 12px 0;
+        }
+
+        .recaptcha-group small {
+          display: block;
+          font-size: 12px;
+          color: #9A1B2E;
+          text-align: center;
         }
 
         .appointment-submit-btn {

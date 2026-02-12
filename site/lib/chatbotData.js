@@ -2,7 +2,7 @@
 export const faqData = [
   {
     question: "What products do you manufacture?",
-    answer: "YNM Safety manufactures a comprehensive range of road safety and infrastructure products:\n\n**1. Road Marking Paints**\n- Hot Thermoplastic Road Marking Paint\n- Waterborne Airfield Marking Paints (for airports)\n- Cold Plastic Paints\n- Oil Kerb Base Paint\n- Water Kerb Base Paint\n- Enamel Paint\n\n**2. Bitumen**\n- Bitumen VG 40 for highway construction\n\n**3. Metal Beam Crash Barriers**\n- W Beam Crash Barrier\n- Double W Beam Crash Barriers\n- Roller Beam Crash Barriers\n- End Terminals & Crash Attenuators\n\n**4. Signages**\n- Retro Reflective Gantry Signage\n- Cantilever Signage\n- Canopy Signage\n- Informatory Signage\n\n**5. Fabrication (34+ products)**\n- Solar Panel Structures & Frames\n- Railway Structures\n- GI Dustbins\n- Rickshaw Bodies\n- High Mast Poles\n- Bridge Bearings\n- And 30+ more products\n\nAll products are manufactured in-house with strict quality control and exported to 50+ countries."
+    answer: "YNM Safety is a leading manufacturer and exporter of road safety and infrastructure products:\n\n**1. Road Marking Paints** (We are top thermoplastic road marking paint manufacturers in India)\n- Hot Thermoplastic Road Marking Paint - YNM Safety hot thermoplastic paints manufacturer\n- Cold Plastic Road Marking Paint - YNM Safety cold thermoplastic paints manufacturer\n- Waterborne Airfield Marking Paints (ICAO/FAA compliant)\n- Water Base Kerb Paint - YNM Safety water base kerb paint manufacturer\n- Oil Base Kerb Paint - YNM Safety oil base kerb paint manufacturer\n- Enamel Paint for industrial applications\n\n**2. Bitumen**\n- Bitumen VG 40 for highway construction\n\n**3. Metal Beam Crash Barriers**\n- W Beam Crash Barrier\n- Double W Beam Crash Barriers\n- Thrie Beam Crash Barriers\n- Roller Beam Crash Barriers\n- End Terminals & Crash Attenuators\n\n**4. Signages**\n- Retro Reflective Gantry Signage\n- Cantilever Signage\n- Canopy Signage\n- Informatory Signage\n\n**5. YNM Safety Fabrication (34+ products)**\n- Solar Panel Structures & Frames\n- Railway Structures\n- GI Dustbins\n- High Mast Poles\n- Bridge Bearings\n- And 30+ more custom fabrication products\n\nAll products are manufactured in-house with strict quality control and exported to 50+ countries."
   },
   {
     question: "What is your contact information?",
@@ -34,7 +34,7 @@ export const faqData = [
   },
   {
     question: "Tell me about YNM Safety",
-    answer: "**YNM Safety Pan Global Trade Pvt Ltd** is a trusted manufacturer and exporter of road safety and infrastructure products.\n\n**Founded:** 2013\n**Headquarters:** Hyderabad, Telangana, India\n**Team Size:** 200+ members\n\n**What We Do:**\n- Manufacture road marking paints, crash barriers, signages\n- Export to 50+ countries\n- Serve government bodies, contractors, and private developers\n\n**Key Milestones:**\n- 2013: Foundation\n- 2015: ISO 9001:2015 Certification\n- 2018: Global expansion to 50+ countries\n- 2023: 10 years of excellence, 500+ projects\n- 2026: PAN India expansion\n\n**Our Focus:** Quality, compliance, innovation, and customer satisfaction."
+    answer: "**YNM Safety Pan Global Trade Pvt Ltd** is India's leading manufacturer and exporter of road safety and infrastructure products.\n\n**Founded:** 2013\n**Headquarters:** Hyderabad, Telangana, India\n**Team Size:** 200+ members\n\n**What We Manufacture:**\n- YNM Safety hot thermoplastic paints manufacturer - top hot thermoplastic paint manufacturers in India\n- YNM Safety cold thermoplastic paints manufacturer - leading cold plastic paint manufacturers in India\n- YNM Safety water base kerb paint manufacturer\n- YNM Safety oil base kerb paint manufacturer\n- YNM Safety fabrication - custom steel & metal fabrication\n- Metal beam crash barriers, signages, bitumen\n\n**Why Choose YNM Safety:**\n- Best thermoplastic paint price per kg\n- Thermoplastic paint vendor with 50+ export countries\n- Thermoplastic road marking paint manufacturers in India with ISO 9001:2015 certification\n\n**Key Milestones:**\n- 2013: Foundation\n- 2015: ISO 9001:2015 Certification\n- 2018: Global expansion to 50+ countries\n- 2023: 10 years of excellence, 500+ projects\n- 2026: PAN India expansion\n\n**Our Focus:** Quality, compliance, innovation, and customer satisfaction."
   },
   {
     question: "Tell me about your crash barriers",
@@ -42,11 +42,11 @@ export const faqData = [
   },
   {
     question: "What road marking paints do you make?",
-    answer: "YNM Safety manufactures **6 types of road marking paints:**\n\n**1. Hot Thermoplastic Road Marking Paint**\n- High-performance, fast-setting\n- For highways and expressways\n- Retro-reflective glass beads included\n\n**2. Waterborne Airfield Marking Paints**\n- For airport runways, taxiways, aprons\n- ICAO/FAA/DGCA compliant\n- Eco-friendly, low-VOC\n\n**3. Cold Plastic Paints**\n- Solvent-free, durable\n- For urban roads and parking areas\n\n**4. Oil Kerb Base Paint**\n- For kerbs, road edges, traffic islands\n- High visibility, weather resistant\n\n**5. Water Kerb Base Paint**\n- Eco-friendly kerb paint\n- Low-VOC, fast-drying\n\n**6. Enamel Paint**\n- Industrial and decorative applications\n- Durable finish\n\nAll paints comply with MoRTH, IRC, IS 164, BS 3262 standards."
+    answer: "YNM Safety is among the top **hot thermoplastic paint manufacturers in India** and **cold plastic paint manufacturers**. We manufacture 6 types of road marking paints:\n\n**1. Hot Thermoplastic Road Marking Paint** - YNM Safety hot thermoplastic paints manufacturer\n- High-performance, fast-setting thermoplastic paint\n- For highways and expressways\n- Best thermoplastic paint price per kg in India\n- Retro-reflective glass beads included\n\n**2. Cold Plastic Road Marking Paint** - YNM Safety cold thermoplastic paints manufacturer\n- MMA cold plastic road marking paint\n- Solvent-free, highly durable\n- For airports, urban roads, parking areas\n- Cold plastic road marking paint at competitive price\n\n**3. Waterborne Airfield Marking Paints**\n- For airport runways, taxiways, aprons\n- ICAO/FAA/DGCA compliant\n- Eco-friendly, low-VOC\n\n**4. Oil Kerb Base Paint** - YNM Safety oil base kerb paint manufacturer\n- For kerbs, road edges, traffic islands\n- High visibility, weather resistant\n\n**5. Water Kerb Base Paint** - YNM Safety water base kerb paint manufacturer\n- Eco-friendly kerb paint\n- Low-VOC, fast-drying\n\n**6. Enamel Paint**\n- Industrial and decorative applications\n- Durable finish\n\nAs leading thermoplastic road marking paint manufacturers in India, all our paints comply with MoRTH, IRC, IS 164, BS 3262 standards."
   },
   {
     question: "Do you do fabrication work?",
-    answer: "Yes! YNM Safety has a dedicated **fabrication division** producing **34+ products:**\n\n**Popular Fabrication Products:**\n- Solar Panel Structures & Frames\n- Railway Structures & Platform Components\n- GI Dustbins & Waste Management Solutions\n- Rickshaw Bodies\n- High Mast Poles & Street Light Poles\n- Bridge Bearings & Expansion Joints\n- Sign Board Structures & Gantry Frames\n- Toll Plaza Equipment\n- Bus Stop Shelters\n- Custom Metal Fabrication\n\n**Our Capabilities:**\n- In-house welding, cutting, bending\n- Hot-dip galvanizing\n- Design to delivery solutions\n- Custom specifications\n\nVisit /products/fabrication to see all fabrication products."
+    answer: "Yes! **YNM Safety fabrication** division produces **34+ custom fabrication products:**\n\n**Popular YNM Safety Fabrication Products:**\n- Solar Panel Structures & Frames\n- Railway Structures & Platform Components\n- GI Dustbins & Waste Management Solutions\n- Rickshaw Bodies\n- High Mast Poles & Street Light Poles\n- Bridge Bearings & Expansion Joints\n- Sign Board Structures & Gantry Frames\n- Toll Plaza Equipment\n- Bus Stop Shelters\n- Custom Metal Fabrication\n\n**YNM Safety Fabrication Capabilities:**\n- In-house welding, cutting, bending\n- Hot-dip galvanizing\n- Design to delivery solutions\n- Custom specifications\n- Export-ready packaging\n\nVisit /products/fabrication to see all YNM Safety fabrication products."
   },
   {
     question: "What signages do you manufacture?",
@@ -70,11 +70,11 @@ export const faqData = [
   },
   {
     question: "What is cold plastic paint?",
-    answer: "**Cold Plastic Paint** is a solvent-free, two-component road marking paint manufactured by YNM Safety.\n\n**Key Features:**\n- No heating required (applied cold)\n- High durability and abrasion resistance\n- Excellent color retention\n- Eco-friendly formulation\n\n**Applications:**\n- Airports & runways\n- Cycle tracks\n- Racing tracks & F1 circuits\n- Parking lots\n- Sports areas\n- Rumble strips\n\n**Benefits:**\n- Long service life (5-7 years)\n- Anti-skid properties\n- High visibility\n- Weather resistant\n\nIdeal for areas requiring high-performance, long-lasting markings."
+    answer: "**Cold Plastic Paint** is a solvent-free, two-component road marking paint. YNM Safety is among the leading **cold plastic paint manufacturers in India**.\n\n**Key Features:**\n- No heating required (applied cold)\n- MMA cold plastic road marking paint technology\n- High durability and abrasion resistance\n- Excellent color retention\n- Eco-friendly formulation\n\n**Applications:**\n- Airports & runways\n- Cycle tracks\n- Racing tracks & F1 circuits\n- Parking lots\n- Sports areas\n- Rumble strips\n\n**Benefits:**\n- Long service life (5-7 years)\n- Anti-skid properties\n- High visibility\n- Weather resistant\n- Competitive cold plastic road marking paint price\n\nYNM Safety cold thermoplastic paints manufacturer provides ideal solutions for areas requiring high-performance, long-lasting markings."
   },
   {
     question: "What is the difference between hot and cold plastic paint?",
-    answer: "**Hot Thermoplastic vs Cold Plastic Paint:**\n\n**Hot Thermoplastic Paint:**\n- Applied at 180-220°C (heated)\n- Fast drying (2-5 minutes)\n- Cost-effective for large areas\n- 2-3 year service life\n- Best for: Highways, expressways, city roads\n\n**Cold Plastic Paint:**\n- Applied at ambient temperature (no heating)\n- Two-component system\n- Higher durability\n- 5-7 year service life\n- Best for: Airports, special markings, high-wear areas\n\n**When to Use Which:**\n- Highways & roads → Hot Thermoplastic\n- Airports & runways → Cold Plastic or Waterborne\n- Parking lots → Either works\n- Racing tracks → Cold Plastic"
+    answer: "**Hot Thermoplastic vs Cold Plastic Paint** - YNM Safety manufactures both:\n\n**Hot Thermoplastic Paint** (YNM Safety hot thermoplastic paints manufacturer):\n- Applied at 180-220°C (heated)\n- Fast drying (2-5 minutes)\n- Best thermoplastic paint price per kg\n- 2-3 year service life\n- Best for: Highways, expressways, city roads\n- Top hot thermoplastic paint manufacturers in India\n\n**Cold Plastic Paint** (YNM Safety cold thermoplastic paints manufacturer):\n- Applied at ambient temperature (no heating)\n- Two-component MMA cold plastic road marking paint\n- Higher durability\n- 5-7 year service life\n- Best for: Airports, special markings, high-wear areas\n- Leading cold plastic paint manufacturers in India\n\n**When to Use Which:**\n- Highways & roads → Hot Thermoplastic\n- Airports & runways → Cold Plastic or Waterborne\n- Parking lots → Either works\n- Racing tracks → Cold Plastic\n\nContact YNM Safety for thermoplastic paint vendor inquiries and competitive pricing."
   },
   {
     question: "What airport paints do you make?",
@@ -89,12 +89,12 @@ export const faqData = [
 // Product catalog data (matches actual product categories on the website)
 export const productCatalog = {
   paints: [
-    { id: "p1", name: "Hot Thermoplastic Road Marking Paint", image: "/assets/hot thermoplastci ynm safety.png", desc: "High-performance thermoplastic road marking paint for highways and expressways" },
-    { id: "p2", name: "Waterborne Airfield Marking Paints", image: "/assets/YNM Safety Runways.png", desc: "ICAO/FAA compliant airport marking paints for runways and taxiways" },
-    { id: "p3", name: "Cold Plastic Paints", image: "/assets/ynm-safety-cold-plastic-airports.png", desc: "Solvent-free durable road marking paint for high-wear areas" },
-    { id: "p4", name: "Oil Kerb Base Paint", image: "/assets/ynm-safety-kerbs-road-edges.png", desc: "High-visibility kerb and road edge marking paint" },
-    { id: "p5", name: "Water Kerb Base Paint", image: "/assets/ynm-safety-curbs-gutters.png", desc: "Eco-friendly water-based kerb paint" },
-    { id: "p6", name: "Enamel Paint", image: "/assets/product-industrial-paint.png", desc: "Industrial and decorative enamel paint" }
+    { id: "p1", name: "Hot Thermoplastic Road Marking Paint", image: "/assets/hot thermoplastci ynm safety.png", desc: "YNM Safety hot thermoplastic paints manufacturer - leading hot thermoplastic paint manufacturers in India for highways and expressways" },
+    { id: "p2", name: "Waterborne Airfield Marking Paints", image: "/assets/YNM Safety Runways.png", desc: "ICAO/FAA compliant airport marking paints for runways and taxiways - YNM Safety" },
+    { id: "p3", name: "Cold Plastic Paints", image: "/assets/ynm-safety-cold-plastic-airports.png", desc: "YNM Safety cold thermoplastic paints manufacturer - MMA cold plastic road marking paint for high-wear areas" },
+    { id: "p4", name: "Oil Kerb Base Paint", image: "/assets/ynm-safety-kerbs-road-edges.png", desc: "YNM Safety oil base kerb paint manufacturer - high-visibility kerb and road edge marking paint" },
+    { id: "p5", name: "Water Kerb Base Paint", image: "/assets/ynm-safety-curbs-gutters.png", desc: "YNM Safety water base kerb paint manufacturer - eco-friendly water-based kerb paint" },
+    { id: "p6", name: "Enamel Paint", image: "/assets/product-industrial-paint.png", desc: "Industrial and decorative enamel paint - YNM Safety" }
   ],
   bitumen: [
     { id: "b1", name: "Bitumen VG 40", image: "/assets/Ynm safety bitumen manufactures.png", desc: "High-grade viscosity bitumen for highway construction" }
@@ -109,10 +109,10 @@ export const productCatalog = {
     { id: "s2", name: "Cantilever Signage", image: "/assets/ynm safety cantilever.png", desc: "Single-arm mounted expressway signage" }
   ],
   fabrication: [
-    { id: "f1", name: "Solar Panel Structures", image: "/assets/solar-fab.png", desc: "Structural frames for solar panel installations" },
-    { id: "f2", name: "Railway Structures", image: "/assets/railway-fab.png", desc: "Platform components and railway infrastructure" },
-    { id: "f3", name: "GI Dustbins", image: "/assets/dustbin-fab.png", desc: "Galvanized iron waste management solutions" },
-    { id: "f4", name: "Rickshaw Bodies", image: "/assets/rickshaw-fab.png", desc: "Metal fabrication for rickshaw bodies" }
+    { id: "f1", name: "Solar Panel Structures", image: "/assets/solar-fab.png", desc: "YNM Safety fabrication - structural frames for solar panel installations" },
+    { id: "f2", name: "Railway Structures", image: "/assets/railway-fab.png", desc: "YNM Safety fabrication - platform components and railway infrastructure" },
+    { id: "f3", name: "GI Dustbins", image: "/assets/dustbin-fab.png", desc: "YNM Safety fabrication - galvanized iron waste management solutions" },
+    { id: "f4", name: "Rickshaw Bodies", image: "/assets/rickshaw-fab.png", desc: "YNM Safety fabrication - metal fabrication for rickshaw bodies" }
   ]
 };
 

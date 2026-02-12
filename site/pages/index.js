@@ -269,9 +269,121 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
           content="YNM Safety manufactures hot thermoplastic paints, cold plastic paints, metal beam crash barriers, bitumen, road signages, road studs and complete road safety products for highways, expressways and urban roads across India."
         />
         <link rel="canonical" href="https://www.ynmsafety.com/" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ynmsafety.com/" />
         <meta property="og:title" content="YNM SAFETY MANUFACTURE" />
         <meta property="og:description" content="YNM Safety manufactures hot thermoplastic paints, cold plastic paints, metal beam crash barriers, bitumen, road signages, road studs and complete road safety products for highways, expressways and urban roads across India." />
+        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta property="og:locale" content="en_IN" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="YNM SAFETY MANUFACTURE" />
+        <meta name="twitter:description" content="YNM Safety manufactures hot thermoplastic paints, cold plastic paints, metal beam crash barriers, bitumen, road signages, road studs and complete road safety products for highways, expressways and urban roads across India." />
+        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        
+        {/* Schema Markup - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "YNM Safety Pan Global Trade Pvt Ltd",
+              "alternateName": "YNM Safety",
+              "url": "https://www.ynmsafety.com",
+              "logo": "https://www.ynmsafety.com/assets/logo-navbar.jpg",
+              "description": "Leading manufacturer and exporter of road safety products, hot thermoplastic paints, crash barriers, and signages in India.",
+              "foundingDate": "2010",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-9100009638",
+                "contactType": "sales",
+                "areaServed": ["IN", "AE", "NG", "KE", "ZA"],
+                "availableLanguage": ["English", "Hindi"]
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Sy No 74, Kothur Village, Shabad Mandal",
+                "addressLocality": "Rangareddy",
+                "addressRegion": "Telangana",
+                "postalCode": "509217",
+                "addressCountry": "IN"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/ynmsafety",
+                "https://www.facebook.com/ynmsafety"
+              ]
+            })
+          }}
+        />
+        
+        {/* Schema Markup - LocalBusiness */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "@id": "https://www.ynmsafety.com/#business",
+              "name": "YNM Safety Pan Global Trade Pvt Ltd",
+              "image": "https://www.ynmsafety.com/assets/logo-navbar.jpg",
+              "url": "https://www.ynmsafety.com",
+              "telephone": "+91-9100009638",
+              "priceRange": "$$",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Sy No 74, Kothur Village, Shabad Mandal",
+                "addressLocality": "Rangareddy",
+                "addressRegion": "Telangana",
+                "postalCode": "509217",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 17.0385,
+                "longitude": 78.0824
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            })
+          }}
+        />
+        
+        {/* Schema Markup - WebSite with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "YNM Safety",
+              "url": "https://www.ynmsafety.com",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.ynmsafety.com/products?search={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+        
+        {/* Preload LCP image for faster rendering - WebP for better performance */}
+        <link rel="preload" as="image" href="/assets/hero-image.webp" type="image/webp" fetchPriority="high" />
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://flagcdn.com" />
       </Head>
       <Hero heroData={heroData} navLinks={navLinks} />
       <USPSection uspData={uspData} />

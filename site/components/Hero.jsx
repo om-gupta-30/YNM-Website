@@ -4,7 +4,8 @@ import { useEffect, useRef, useState, Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // Use string path instead of static import for Cloud Run compatibility
-const heroImageDefault = "/assets/hero-image.png";
+// WebP for better performance, PNG fallback handled by browser
+const heroImageDefault = "/assets/hero-image.webp";
 
 const heroNavConfig = [
   { key: "products", href: "/products" },
@@ -362,7 +363,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
             <div className="nav-logo-wrapper hero-logo-heartbeat">
               <Image 
                 src="/assets/logo-navbar.jpg" 
-                alt="YNM Safety logo" 
+                alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers" 
                 width={50}
                 height={50}
                 className="nav-logo-new"
@@ -457,7 +458,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
           <div id="hero-image-safe">
             <Image 
               src={heroImageUrl || heroImageDefault} 
-              alt="YNM Safety - Global Logistics & Manufacturing Excellence" 
+              alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers | Road Marking Paint Manufacturer & Exporter" 
               fill 
               id="hero-image" 
               priority 

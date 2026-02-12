@@ -77,7 +77,7 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
           <div className="brand-logo-wrap">
             <Image
               src={brand.logo}
-              alt={brand.name}
+              alt={`${brand.name} - YNM Safety Client | Road Marking Paint Manufacturers India`}
               width={100}
               height={50}
               className="brand-logo"

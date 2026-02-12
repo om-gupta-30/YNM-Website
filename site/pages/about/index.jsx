@@ -86,6 +86,71 @@ export default function AboutPage() {
       <Head>
         <title>About Us - YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="YNM Safety Pan Global Trade Pvt Ltd is a trusted manufacturer and exporter of high-quality road safety and infrastructure products, delivering reliable solutions for highways, urban roads, and industrial projects worldwide." />
+        <link rel="canonical" href="https://www.ynmsafety.com/about" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ynmsafety.com/about" />
+        <meta property="og:title" content="About Us - YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta property="og:description" content="YNM Safety Pan Global Trade Pvt Ltd is a trusted manufacturer and exporter of high-quality road safety and infrastructure products, delivering reliable solutions for highways, urban roads, and industrial projects worldwide." />
+        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us - YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta name="twitter:description" content="YNM Safety Pan Global Trade Pvt Ltd is a trusted manufacturer and exporter of high-quality road safety and infrastructure products." />
+        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        
+        {/* Schema Markup - AboutPage */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "name": "About YNM Safety",
+              "description": "YNM Safety Pan Global Trade Pvt Ltd is a trusted manufacturer and exporter of high-quality road safety and infrastructure products.",
+              "url": "https://www.ynmsafety.com/about",
+              "mainEntity": {
+                "@type": "Organization",
+                "name": "YNM Safety Pan Global Trade Pvt Ltd",
+                "foundingDate": "2013",
+                "numberOfEmployees": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 50,
+                  "maxValue": 200
+                },
+                "areaServed": ["India", "Middle East", "Africa", "Asia"]
+              }
+            })
+          }}
+        />
+        
+        {/* Schema Markup - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.ynmsafety.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "About Us",
+                  "item": "https://www.ynmsafety.com/about"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Navbar />
@@ -124,7 +189,7 @@ export default function AboutPage() {
             <div className="about-story-image">
               <Image
                 src="/assets/aboutus.png"
-                alt="YNM Safety - Road Safety & Infrastructure Solutions"
+                alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers | Road Safety Products Manufacturer"
                 width={600}
                 height={500}
                 style={{ objectFit: "cover", borderRadius: "16px" }}

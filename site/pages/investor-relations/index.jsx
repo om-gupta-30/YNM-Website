@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha, isAllowedDomain } from "@/lib/recaptchaUtils";
+import { useState, useEffect, useRef } from "react";
+import { isAllowedDomain } from "@/lib/recaptchaUtils";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -83,18 +83,84 @@ export default function InvestorRelationsPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [showRecaptcha, setShowRecaptcha] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
+  const recaptchaWidgetId = useRef(null);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
+  // Check if reCAPTCHA should be shown (only on allowed domains)
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const allowed = isAllowedDomain();
-      setShowRecaptcha(allowed && !!siteKey);
-      
-      if (allowed && siteKey) {
-        loadRecaptchaScript();
-      }
+      const shouldShow = allowed && !!siteKey;
+      setShowRecaptcha(shouldShow);
     }
   }, [siteKey]);
+
+  // Load reCAPTCHA script and render widget explicitly
+  useEffect(() => {
+    if (!siteKey) return;
+    if (!showRecaptcha) return;
+    if (!recaptchaRef.current) return;
+
+    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
+    
+    const initRecaptcha = () => {
+      if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && recaptchaWidgetId.current === null) {
+        try {
+          recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
+            sitekey: siteKey,
+            callback: (token) => {
+              setRecaptchaToken(token);
+            },
+            'expired-callback': () => {
+              setRecaptchaToken(null);
+            },
+            'error-callback': () => {
+              setRecaptchaToken(null);
+            }
+          });
+        } catch (error) {
+          console.error('[Investor Relations] reCAPTCHA render error:', error);
+        }
+      }
+    };
+
+    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
+      initRecaptcha();
+      return;
+    }
+
+    const callbackName = `recaptchaCallback_investor_${Math.floor(Math.random() * 1000000)}`;
+    
+    window[callbackName] = () => {
+      initRecaptcha();
+      delete window[callbackName];
+    };
+
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
+    script.async = true;
+    script.defer = true;
+    script.onerror = () => {
+      delete window[callbackName];
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+        try {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        } catch (error) {
+          // Ignore cleanup errors
+        }
+      }
+      if (window[callbackName]) {
+        delete window[callbackName];
+      }
+    };
+  }, [showRecaptcha, siteKey]);
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -104,8 +170,7 @@ export default function InvestorRelationsPage() {
     setError('');
 
     try {
-      const recaptchaToken = showRecaptcha ? getRecaptchaToken() : null;
-      
+      // Validate reCAPTCHA (only when shown on allowed domains)
       if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
@@ -115,7 +180,7 @@ export default function InvestorRelationsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          recaptchaToken,
+          recaptchaToken: recaptchaToken || '',
         }),
       });
 
@@ -124,15 +189,22 @@ export default function InvestorRelationsPage() {
       if (response.ok && data.success) {
         setSubmitted(true);
         setFormData({ name: "", organization: "", email: "", investorType: "", message: "" });
-        if (showRecaptcha) resetRecaptcha();
+        setRecaptchaToken(null);
+        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        }
         setTimeout(() => setSubmitted(false), 8000);
       } else {
         setError(data.error || 'Something went wrong. Please try again.');
-        if (showRecaptcha) resetRecaptcha();
+        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        }
       }
     } catch (err) {
       setError(err.message || 'Network error. Please check your connection and try again.');
-      if (showRecaptcha) resetRecaptcha();
+      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+        window.grecaptcha.reset(recaptchaWidgetId.current);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -143,6 +215,46 @@ export default function InvestorRelationsPage() {
       <Head>
         <title>Investor Relations | YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Explore investment opportunities with YNM Safety. Selectively open to partnerships aligned with our vision." />
+        <link rel="canonical" href="https://www.ynmsafety.com/investor-relations" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ynmsafety.com/investor-relations" />
+        <meta property="og:title" content="Investor Relations | YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta property="og:description" content="Explore investment opportunities with YNM Safety. Selectively open to partnerships aligned with our vision." />
+        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Investor Relations | YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta name="twitter:description" content="Explore investment opportunities with YNM Safety. Selectively open to partnerships." />
+        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        
+        {/* Schema Markup - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.ynmsafety.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Investor Relations",
+                  "item": "https://www.ynmsafety.com/investor-relations"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Navbar />
@@ -530,12 +642,10 @@ export default function InvestorRelationsPage() {
                     <textarea name="message" value={formData.message} onChange={handleChange} rows={3} placeholder="Tell us about your interest..." />
                   </div>
                   {showRecaptcha && (
-                    <div style={{ marginBottom: '20px' }}>
-                      <div 
-                        className="g-recaptcha" 
-                        data-sitekey={siteKey}
-                        style={{ display: 'inline-block' }}
-                      />
+                    <div className="ir-recaptcha-group">
+                      <label>Security Verification *</label>
+                      <div ref={recaptchaRef} className="ir-recaptcha-container"></div>
+                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
                     </div>
                   )}
                   <button type="submit" disabled={isSubmitting} className="ir-submit">
@@ -1518,6 +1628,37 @@ export default function InvestorRelationsPage() {
           border-color: #C9A24D;
           background: #fff;
           box-shadow: 0 0 0 3px rgba(201, 162, 77, 0.1);
+        }
+
+        .ir-recaptcha-group {
+          background: #FDFBF7;
+          padding: 20px;
+          border-radius: 8px;
+          border: 1px solid #E0DCD4;
+          margin-bottom: 20px;
+        }
+
+        .ir-recaptcha-group label {
+          display: block;
+          font-size: 12px;
+          font-weight: 700;
+          color: #1A1614;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 12px;
+        }
+
+        .ir-recaptcha-container {
+          display: flex;
+          justify-content: center;
+          margin: 12px 0;
+        }
+
+        .ir-recaptcha-group small {
+          display: block;
+          font-size: 12px;
+          color: #666;
+          text-align: center;
         }
 
         .ir-submit {
