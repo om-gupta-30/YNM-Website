@@ -359,7 +359,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
           }}
         />
         
-        {/* Schema Markup - WebSite with SearchAction */}
+        {/* Schema Markup - WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -367,12 +367,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "YNM Safety",
-              "url": "https://www.ynmsafety.com",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.ynmsafety.com/products?search={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
+              "url": "https://www.ynmsafety.com"
             })
           }}
         />

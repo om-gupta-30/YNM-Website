@@ -544,6 +544,7 @@ export default function ContactPage() {
                   rel={social.isComingSoon ? undefined : "noopener noreferrer"}
                   onClick={(e) => handleSocialClick(e, social)}
                   title={social.name}
+                  aria-label={`Follow YNM Safety on ${social.name}`}
                 >
                   <SocialIcon icon={social.icon} />
                 </a>

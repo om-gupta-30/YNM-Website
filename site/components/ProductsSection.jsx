@@ -14,7 +14,7 @@ const productConfig = [
   { 
     id: "paints", 
     image: "/assets/ynm safety thermoplastic paints.png", 
-    link: "/products?category=paints", 
+    link: "/products#paints", 
     title: "Paints", 
     description: "Hot thermoplastic road marking paints for highways, expressways & urban road safety applications.",
     altText: "YNM Safety Hot Thermoplastic Paints Manufacturer - Thermoplastic Road Marking Paint Manufacturers in India"
@@ -22,7 +22,7 @@ const productConfig = [
   { 
     id: "bitumen", 
     image: "/assets/Ynm safety bitumen manufactures.png", 
-    link: "/products?category=bitumen", 
+    link: "/products#bitumen", 
     title: "Bitumen", 
     description: "High-performance VG 40 paving grade bitumen for highways, expressways and heavy traffic roads.",
     altText: "YNM Safety Bitumen VG 40 Manufacturer - Highway Construction Bitumen Supplier India"
@@ -30,7 +30,7 @@ const productConfig = [
   { 
     id: "crash-barriers", 
     image: "/assets/metal beam crash barrier ynm safety.png", 
-    link: "/products?category=crash-barriers", 
+    link: "/products#crash-barriers", 
     title: "Metal Beam Crash Barriers", 
     description: "High-strength W-beam crash barriers engineered for highways and expressways safety.",
     altText: "YNM Safety Metal Beam Crash Barrier Manufacturer - W Beam Crash Barrier Manufacturers India"
@@ -38,7 +38,7 @@ const productConfig = [
   { 
     id: "signages", 
     image: "/assets/Ynm safety signages.png", 
-    link: "/products?category=signages", 
+    link: "/products#signages", 
     title: "Signages", 
     description: "Retro-reflective gantry signages and cantilever signages for high visibility traffic guidance.",
     altText: "YNM Safety Retro Reflective Signage Manufacturer - Highway Gantry Signage India"

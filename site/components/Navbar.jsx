@@ -8,7 +8,7 @@ const navConfig = [
   { key: "products", href: "/products" },
   { key: "clients", href: "/clients" },
   { key: "about", href: "/about" },
-  { key: "team", href: "/our-team" },
+  { key: "team", href: "/our-director" },
   { key: "foreignCollaborations", href: "/foreign-collaborations" },
   { key: "investor", href: "/investor-relations" },
   { key: "careers", href: "/careers" },

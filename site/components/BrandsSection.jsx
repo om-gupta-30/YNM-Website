@@ -75,11 +75,11 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
         <div className="brand-tile-front">
           <div className="brand-tile-texture" />
           <div className="brand-logo-wrap">
-            <Image
-              src={brand.logo}
-              alt={`${brand.name} - YNM Safety Client | Road Marking Paint Manufacturers India`}
-              width={100}
-              height={50}
+                          <Image
+                            src={brand.logo}
+                            alt={`${brand.name} logo - YNM Safety client`}
+                            width={100}
+                            height={50}
               className="brand-logo"
               style={{ objectFit: "contain" }}
             />

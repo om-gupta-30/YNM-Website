@@ -110,7 +110,7 @@ YNM-website/
     │   │   └── fabrication.jsx
     │   ├── about/, careers/, clients/, contact/
     │   ├── get-quote/, foreign-collaborations/, investor-relations/
-    │   ├── our-team/
+    │   ├── our-team/, our-director/
     │   └── index.js
     ├── styles/
     │   └── globals.css
@@ -762,7 +762,7 @@ npm run lint         # Run ESLint to check code quality
 
 ## Product Categories
 
-1. **Road Marking Paints** - Hot Thermoplastic, Cold Plastic Paints, Waterborne Airfield Marking Paints
+1. **Paints** - Hot Thermoplastic, Cold Plastic Paints, Waterborne Airfield Marking Paints, Enamel Paint, Red Oxide Paint
 2. **Bitumen** - Bitumen VG 40 for highway construction
 3. **Metal Beam Crash Barriers** - W Beam, Thrie Beam, Double W Beam, Roller Beam Barriers, End Terminals, Crash Attenuators
 4. **Signages** - Retro Reflective Gantry, Cantilever, Canopy, Informatory Signage
