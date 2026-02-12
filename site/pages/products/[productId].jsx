@@ -284,16 +284,86 @@ export default function ProductDetailPage() {
   const metaTitle = product.meta?.title || `${product.name} - YNM Safety`;
   const metaDescription = product.meta?.description || product.shortDesc || product.desc;
 
+  // Generate canonical URL
+  const productSlug = product.slug || product.id;
+  const canonicalUrl = `https://www.ynmsafety.com/products/${productSlug}`;
+  const productImageUrl = product.image ? `https://www.ynmsafety.com${product.image}` : 'https://www.ynmsafety.com/assets/logo-navbar.jpg';
+
   return (
     <>
       <Head>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        {product.image && <meta property="og:image" content={product.image} />}
-        <meta property="og:type" content="product" />
-        {product.meta?.slug && <link rel="canonical" href={`https://ynmsafety.com${product.meta.slug}`} />}
+        <meta property="og:image" content={productImageUrl} />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={productImageUrl} />
+        
+        {/* Schema Markup - Product */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": product.name,
+              "description": metaDescription,
+              "image": productImageUrl,
+              "brand": {
+                "@type": "Brand",
+                "name": "YNM Safety"
+              },
+              "manufacturer": {
+                "@type": "Organization",
+                "name": "YNM Safety Pan Global Trade Pvt Ltd"
+              },
+              "category": product.category || "Road Safety Products",
+              "url": canonicalUrl
+            })
+          }}
+        />
+        
+        {/* Schema Markup - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.ynmsafety.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Products",
+                  "item": "https://www.ynmsafety.com/products"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": product.name,
+                  "item": canonicalUrl
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Navbar />
@@ -337,7 +407,7 @@ export default function ProductDetailPage() {
                     >
                       <Image
                         src={imageSrc}
-                        alt={`${product.name} - Image ${index + 1}`}
+                        alt={`${product.name} - YNM Safety | Hot Thermoplastic Paint Manufacturers India - Image ${index + 1}`}
                         fill
                         style={{ objectFit: "cover" }}
                         priority={index === 0}
@@ -374,7 +444,7 @@ export default function ProductDetailPage() {
                 <>
                   <Image
                     src={product.heroImage || product.image}
-                    alt={product.name}
+                    alt={`${product.name} - YNM Safety Road Safety Products Manufacturer India`}
                     fill
                     style={{ objectFit: "cover" }}
                     priority
@@ -740,7 +810,7 @@ export default function ProductDetailPage() {
                   <div className="specs-image">
                     <Image
                       src={product.image}
-                      alt={product.name}
+                      alt={`${product.name} Specifications - YNM Safety Manufacturer India`}
                       fill
                       style={{ objectFit: "cover" }}
                     />
@@ -1566,7 +1636,7 @@ export default function ProductDetailPage() {
                     <div className="related-product-image">
                       <Image
                         src={relatedProduct.image}
-                        alt={relatedProduct.name}
+                        alt={`${relatedProduct.name} - YNM Safety Products India`}
                         fill
                         style={{ objectFit: "cover" }}
                       />

@@ -441,6 +441,46 @@ ${formData.message || "None"}
       <Head>
         <title>Get a Quote | YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Request a quote for W Beam Crash Barriers, Industrial Paints, Metal Fabrication, and School Furniture from YNM Safety." />
+        <link rel="canonical" href="https://www.ynmsafety.com/get-quote" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ynmsafety.com/get-quote" />
+        <meta property="og:title" content="Get a Quote | YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta property="og:description" content="Request a quote for W Beam Crash Barriers, Industrial Paints, Metal Fabrication, and School Furniture from YNM Safety." />
+        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Get a Quote | YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta name="twitter:description" content="Request a quote for W Beam Crash Barriers, Industrial Paints, Metal Fabrication, and School Furniture." />
+        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        
+        {/* Schema Markup - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.ynmsafety.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Get Quote",
+                  "item": "https://www.ynmsafety.com/get-quote"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Navbar />

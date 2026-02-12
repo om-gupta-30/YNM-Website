@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha, isAllowedDomain } from "@/lib/recaptchaUtils";
+import { useState, useEffect, useRef } from "react";
+import { isAllowedDomain } from "@/lib/recaptchaUtils";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -117,18 +117,84 @@ export default function ForeignCollaborationsPage() {
   const [error, setError] = useState('');
   const [activeRegion, setActiveRegion] = useState(0);
   const [showRecaptcha, setShowRecaptcha] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
+  const recaptchaWidgetId = useRef(null);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
+  // Check if reCAPTCHA should be shown (only on allowed domains)
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const allowed = isAllowedDomain();
-      setShowRecaptcha(allowed && !!siteKey);
-      
-      if (allowed && siteKey) {
-        loadRecaptchaScript();
-      }
+      const shouldShow = allowed && !!siteKey;
+      setShowRecaptcha(shouldShow);
     }
   }, [siteKey]);
+
+  // Load reCAPTCHA script and render widget explicitly
+  useEffect(() => {
+    if (!siteKey) return;
+    if (!showRecaptcha) return;
+    if (!recaptchaRef.current) return;
+
+    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
+    
+    const initRecaptcha = () => {
+      if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && recaptchaWidgetId.current === null) {
+        try {
+          recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
+            sitekey: siteKey,
+            callback: (token) => {
+              setRecaptchaToken(token);
+            },
+            'expired-callback': () => {
+              setRecaptchaToken(null);
+            },
+            'error-callback': () => {
+              setRecaptchaToken(null);
+            }
+          });
+        } catch (error) {
+          console.error('[Foreign Collaborations] reCAPTCHA render error:', error);
+        }
+      }
+    };
+
+    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
+      initRecaptcha();
+      return;
+    }
+
+    const callbackName = `recaptchaCallback_fc_${Math.floor(Math.random() * 1000000)}`;
+    
+    window[callbackName] = () => {
+      initRecaptcha();
+      delete window[callbackName];
+    };
+
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
+    script.async = true;
+    script.defer = true;
+    script.onerror = () => {
+      delete window[callbackName];
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+        try {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        } catch (error) {
+          // Ignore cleanup errors
+        }
+      }
+      if (window[callbackName]) {
+        delete window[callbackName];
+      }
+    };
+  }, [showRecaptcha, siteKey]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -145,8 +211,7 @@ export default function ForeignCollaborationsPage() {
     setError('');
 
     try {
-      const recaptchaToken = showRecaptcha ? getRecaptchaToken() : null;
-      
+      // Validate reCAPTCHA (only when shown on allowed domains)
       if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
@@ -156,7 +221,7 @@ export default function ForeignCollaborationsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          recaptchaToken,
+          recaptchaToken: recaptchaToken || '',
         }),
       });
 
@@ -165,15 +230,22 @@ export default function ForeignCollaborationsPage() {
       if (response.ok && data.success) {
         setSubmitted(true);
         setFormData({ companyName: "", country: "", contactName: "", email: "", collaborationType: "", message: "" });
-        if (showRecaptcha) resetRecaptcha();
+        setRecaptchaToken(null);
+        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        }
         setTimeout(() => setSubmitted(false), 8000);
       } else {
         setError(data.error || 'Something went wrong. Please try again.');
-        if (showRecaptcha) resetRecaptcha();
+        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        }
       }
     } catch (err) {
       setError(err.message || 'Network error. Please check your connection and try again.');
-      if (showRecaptcha) resetRecaptcha();
+      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+        window.grecaptcha.reset(recaptchaWidgetId.current);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -184,6 +256,46 @@ export default function ForeignCollaborationsPage() {
       <Head>
         <title>Global Partnerships | YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Explore partnership opportunities with YNM Safety. Open to international collaborations in manufacturing, distribution, and technology." />
+        <link rel="canonical" href="https://www.ynmsafety.com/foreign-collaborations" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ynmsafety.com/foreign-collaborations" />
+        <meta property="og:title" content="Global Partnerships | YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta property="og:description" content="Explore partnership opportunities with YNM Safety. Open to international collaborations in manufacturing, distribution, and technology." />
+        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Global Partnerships | YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta name="twitter:description" content="Explore partnership opportunities with YNM Safety. Open to international collaborations." />
+        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        
+        {/* Schema Markup - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.ynmsafety.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Foreign Collaborations",
+                  "item": "https://www.ynmsafety.com/foreign-collaborations"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Navbar />
@@ -509,12 +621,10 @@ export default function ForeignCollaborationsPage() {
                     <textarea name="message" value={formData.message} onChange={handleChange} rows={4} placeholder="Tell us about your interest..." />
                   </div>
                   {showRecaptcha && (
-                    <div style={{ marginBottom: '20px' }}>
-                      <div 
-                        className="g-recaptcha" 
-                        data-sitekey={siteKey}
-                        style={{ display: 'inline-block' }}
-                      />
+                    <div className="fc-recaptcha-group">
+                      <label>Security Verification *</label>
+                      <div ref={recaptchaRef} className="fc-recaptcha-container"></div>
+                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
                     </div>
                   )}
                   <button type="submit" disabled={isSubmitting} className="fc-submit-btn">
@@ -1509,6 +1619,37 @@ export default function ForeignCollaborationsPage() {
           border-color: #C9A24D;
           background: #fff;
           box-shadow: 0 0 0 3px rgba(201, 162, 77, 0.1);
+        }
+
+        .fc-recaptcha-group {
+          background: #FDFBF7;
+          padding: 20px;
+          border-radius: 8px;
+          border: 1px solid #E0DCD4;
+          margin-bottom: 20px;
+        }
+
+        .fc-recaptcha-group label {
+          display: block;
+          font-size: 12px;
+          font-weight: 700;
+          color: #1A1614;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 12px;
+        }
+
+        .fc-recaptcha-container {
+          display: flex;
+          justify-content: center;
+          margin: 12px 0;
+        }
+
+        .fc-recaptcha-group small {
+          display: block;
+          font-size: 12px;
+          color: #666;
+          text-align: center;
         }
 
         .fc-submit-btn {

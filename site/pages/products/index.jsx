@@ -85,6 +85,81 @@ export default function ProductsPage() {
       <Head>
         <title>Our Products - YNM Safety</title>
         <meta name="description" content="Explore our range of premium paints, metal fabrication, and school furniture products." />
+        <link rel="canonical" href="https://www.ynmsafety.com/products" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ynmsafety.com/products" />
+        <meta property="og:title" content="Our Products - YNM Safety" />
+        <meta property="og:description" content="Explore our range of premium paints, metal fabrication, road safety products, and school furniture." />
+        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Our Products - YNM Safety" />
+        <meta name="twitter:description" content="Explore our range of premium paints, metal fabrication, road safety products, and school furniture." />
+        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        
+        {/* Schema Markup - ItemList for Products */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": "YNM Safety Products",
+              "description": "Complete range of road safety and infrastructure products",
+              "url": "https://www.ynmsafety.com/products",
+              "numberOfItems": 10,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Hot Thermoplastic Road Marking Paint",
+                  "url": "https://www.ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufactures"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "W Beam Crash Barriers",
+                  "url": "https://www.ynmsafety.com/products/w-beam-crash-barrier-manufacturers"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Retro Reflective Signages",
+                  "url": "https://www.ynmsafety.com/products/retro-reflective-gantry-signage-manufactures"
+                }
+              ]
+            })
+          }}
+        />
+        
+        {/* Schema Markup - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.ynmsafety.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Products",
+                  "item": "https://www.ynmsafety.com/products"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Navbar />
@@ -145,7 +220,7 @@ export default function ProductsPage() {
                         <div className="product-card-image">
                           <Image
                             src={product.image}
-                            alt={product.name}
+                            alt={`${product.name} - YNM Safety | Hot Thermoplastic Paint Manufacturers India`}
                             fill
                             style={{ objectFit: "cover" }}
                           />
@@ -219,7 +294,7 @@ export default function ProductsPage() {
                       <div className="product-card-image">
                         <Image
                           src={product.image}
-                          alt={product.name}
+                          alt={`${product.name} - YNM Safety Road Safety Products Manufacturer India`}
                           fill
                           style={{ objectFit: "cover" }}
                         />

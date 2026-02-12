@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import IndiaPresenceMap from "@/components/IndiaPresenceMap";
-import { loadRecaptchaScript, getRecaptchaToken, resetRecaptcha, isAllowedDomain } from "@/lib/recaptchaUtils";
+import { isAllowedDomain } from "@/lib/recaptchaUtils";
 
 // Company details
 const companyInfo = {
@@ -40,19 +40,84 @@ export default function ContactPage() {
   const [error, setError] = useState(null);
   const [showRecaptcha, setShowRecaptcha] = useState(false);
   const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
+  const recaptchaWidgetId = useRef(null);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-  // Load reCAPTCHA script ONLY on allowed domains
+  // Check if reCAPTCHA should be shown (only on allowed domains)
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const allowed = isAllowedDomain();
-      setShowRecaptcha(allowed && !!siteKey);
-      
-      if (allowed && siteKey) {
-        loadRecaptchaScript();
-      }
+      const shouldShow = allowed && !!siteKey;
+      setShowRecaptcha(shouldShow);
     }
   }, [siteKey]);
+
+  // Load reCAPTCHA script and render widget explicitly
+  useEffect(() => {
+    if (!siteKey) return;
+    if (!showRecaptcha) return;
+    if (!recaptchaRef.current) return;
+
+    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
+    
+    const initRecaptcha = () => {
+      if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && recaptchaWidgetId.current === null) {
+        try {
+          recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
+            sitekey: siteKey,
+            callback: (token) => {
+              setRecaptchaToken(token);
+            },
+            'expired-callback': () => {
+              setRecaptchaToken(null);
+            },
+            'error-callback': () => {
+              setRecaptchaToken(null);
+            }
+          });
+        } catch (error) {
+          console.error('[Contact] reCAPTCHA render error:', error);
+        }
+      }
+    };
+
+    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
+      initRecaptcha();
+      return;
+    }
+
+    const callbackName = `recaptchaCallback_contact_${Math.floor(Math.random() * 1000000)}`;
+    
+    window[callbackName] = () => {
+      initRecaptcha();
+      delete window[callbackName];
+    };
+
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
+    script.async = true;
+    script.defer = true;
+    script.onerror = () => {
+      delete window[callbackName];
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+        try {
+          window.grecaptcha.reset(recaptchaWidgetId.current);
+        } catch (error) {
+          // Ignore cleanup errors
+        }
+      }
+      if (window[callbackName]) {
+        delete window[callbackName];
+      }
+    };
+  }, [showRecaptcha, siteKey]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -66,9 +131,7 @@ export default function ContactPage() {
     setError(null);
     
     try {
-      // Get reCAPTCHA token ONLY if on allowed domain
-      const recaptchaToken = showRecaptcha ? getRecaptchaToken() : null;
-      
+      // Validate reCAPTCHA (only when shown on allowed domains)
       if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
@@ -80,7 +143,7 @@ export default function ContactPage() {
         },
         body: JSON.stringify({
           ...formData,
-          recaptchaToken,
+          recaptchaToken: recaptchaToken || '',
         }),
       });
 
@@ -93,10 +156,11 @@ export default function ContactPage() {
       // Success!
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
+      setRecaptchaToken(null);
       
       // Reset reCAPTCHA
-      if (siteKey) {
-        resetRecaptcha();
+      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+        window.grecaptcha.reset(recaptchaWidgetId.current);
       }
       
       // Auto-hide success message after 10 seconds
@@ -108,8 +172,8 @@ export default function ContactPage() {
       console.error('Form submission error:', err);
       setError(err.message || 'Failed to send message. Please try again.');
       // Reset reCAPTCHA on error
-      if (siteKey) {
-        resetRecaptcha();
+      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
+        window.grecaptcha.reset(recaptchaWidgetId.current);
       }
     } finally {
       setIsSubmitting(false);
@@ -187,6 +251,74 @@ export default function ContactPage() {
       <Head>
         <title>Contact Us | YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Get in touch with YNM Safety for premium paints, fabrications, and school furniture. Contact us for quotes, exports, and partnerships." />
+        <link rel="canonical" href="https://www.ynmsafety.com/contact" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ynmsafety.com/contact" />
+        <meta property="og:title" content="Contact Us | YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta property="og:description" content="Get in touch with YNM Safety for premium paints, fabrications, and school furniture. Contact us for quotes, exports, and partnerships." />
+        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Us | YNM Safety Pan Global Trade Pvt Ltd" />
+        <meta name="twitter:description" content="Get in touch with YNM Safety for premium paints, fabrications, and school furniture." />
+        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        
+        {/* Schema Markup - ContactPage */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "name": "Contact YNM Safety",
+              "description": "Get in touch with YNM Safety for premium paints, fabrications, and school furniture.",
+              "url": "https://www.ynmsafety.com/contact",
+              "mainEntity": {
+                "@type": "Organization",
+                "name": "YNM Safety Pan Global Trade Pvt Ltd",
+                "telephone": "+91-9676575770",
+                "email": "sales@ynmsafety.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Survey, 84P, Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur",
+                  "addressLocality": "Hyderabad",
+                  "addressRegion": "Telangana",
+                  "postalCode": "500081",
+                  "addressCountry": "IN"
+                }
+              }
+            })
+          }}
+        />
+        
+        {/* Schema Markup - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.ynmsafety.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Contact",
+                  "item": "https://www.ynmsafety.com/contact"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Navbar />
@@ -317,12 +449,10 @@ export default function ContactPage() {
 
                   {/* reCAPTCHA - ONLY on production domains */}
                   {showRecaptcha && (
-                    <div style={{ marginBottom: '20px' }}>
-                      <div 
-                        className="g-recaptcha" 
-                        data-sitekey={siteKey}
-                        style={{ display: 'inline-block' }}
-                      />
+                    <div className="form-group recaptcha-group">
+                      <label>Security Verification *</label>
+                      <div ref={recaptchaRef} className="recaptcha-container"></div>
+                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
                     </div>
                   )}
 
@@ -598,6 +728,25 @@ export default function ContactPage() {
         .form-group textarea {
           resize: vertical;
           min-height: 120px;
+        }
+
+        .form-group small {
+          font-size: 12px;
+          color: #9A1B2E;
+          margin-top: 4px;
+        }
+
+        .recaptcha-group {
+          background: #F7F3EA;
+          padding: 20px;
+          border-radius: 12px;
+          border: 2px solid #E6D3A3;
+        }
+
+        .recaptcha-container {
+          display: flex;
+          justify-content: center;
+          margin: 12px 0;
         }
 
         .contact-btn {

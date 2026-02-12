@@ -133,7 +133,7 @@ function Footer({ footerData: propFooterData }) {
           <div className="ft-logo-wrap-new ft-heartbeat">
             <Image 
               src="/assets/logo-footer.jpg" 
-              alt="YNM Safety" 
+              alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers | Thermoplastic Road Marking Paint" 
               width={140} 
               height={100} 
               className="ft-logo-new"
@@ -171,7 +171,7 @@ function Footer({ footerData: propFooterData }) {
           <div className="ft-mascot-wrapper ft-heartbeat">
             <Image 
               src="/assets/mascot.png" 
-              alt="YNM Safety Mascot" 
+              alt="YNM Safety Mascot - Road Safety Products Manufacturer India" 
               width={120} 
               height={120} 
               className="ft-mascot-image-nobg"

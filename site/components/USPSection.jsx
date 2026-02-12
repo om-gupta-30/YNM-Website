@@ -34,7 +34,7 @@ function USPSection({ uspData: propUspData }) {
         {
           id: "certified",
           title: "Quality Certified",
-          icon: "✓",
+          icon: "✅",
           description: "All products at YNM Safety are manufactured under strict quality standards to ensure durability, visibility, and safety performance. As a trusted road safety products manufacturer, we deliver ISO-compliant paints, signages, and crash barrier systems designed for long-term infrastructure use."
         },
         {

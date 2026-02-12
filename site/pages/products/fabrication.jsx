@@ -89,6 +89,52 @@ export default function FabricationPage() {
       <Head>
         <title>Fabrication Products - YNM Safety</title>
         <meta name="description" content="Custom steel and metal fabrication solutions by YNM Safety. From structural components to precision-engineered parts for all industrial needs." />
+        <link rel="canonical" href="https://www.ynmsafety.com/products/fabrication" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ynmsafety.com/products/fabrication" />
+        <meta property="og:title" content="Fabrication Products - YNM Safety" />
+        <meta property="og:description" content="Custom steel and metal fabrication solutions by YNM Safety. From structural components to precision-engineered parts for all industrial needs." />
+        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Fabrication Products - YNM Safety" />
+        <meta name="twitter:description" content="Custom steel and metal fabrication solutions by YNM Safety." />
+        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        
+        {/* Schema Markup - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.ynmsafety.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Products",
+                  "item": "https://www.ynmsafety.com/products"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Fabrication",
+                  "item": "https://www.ynmsafety.com/products/fabrication"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <Navbar />
@@ -185,7 +231,7 @@ export default function FabricationPage() {
                   <div className="fabrication-product-image">
                     <Image
                       src={getProductImage(product)}
-                      alt={product.name}
+                      alt={`${product.name} - YNM Safety Fabrication | Custom Steel Metal Fabrication India`}
                       fill
                       style={{ objectFit: "cover", transition: "opacity 0.5s ease" }}
                     />

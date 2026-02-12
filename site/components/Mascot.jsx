@@ -91,7 +91,7 @@ function Mascot() {
         <div className="mascot-glow" />
         <Image
           src="/assets/mascot.png"
-          alt="YNM Safety Mascot"
+          alt="YNM Safety Mascot - Road Safety Products Manufacturer | Hot Thermoplastic Paint Manufacturers India"
           width={140}
           height={140}
           className="mascot-image"

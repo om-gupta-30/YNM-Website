@@ -1979,7 +1979,7 @@ export const productsData = {
             statistics: {
               monthlyCapacity: "50KL/M",
               annualCapacity: "600KL/M",
-              productionSpeed: "50KL",
+              productionSpeed: "50 KL/M",
               qualityStandards: "IS164:2023",
               exportCountries: "20+"
             },
@@ -2018,8 +2018,8 @@ export const productsData = {
             name: "Enamel Paint",
             shortDesc: "Premium quality enamel paint manufactures delivering durable, high-gloss, weather-resistant coatings for architectural, industrial, automotive, and protective applications worldwide.",
             desc: "YNM Safety manufactures high-performance enamel paint for architectural, industrial, automotive, and metal applications. Trusted enamel paint manufactures compliant with IS164:2023 standards.",
-            image: "/assets/YNM Safety Architectural and Decorative Coatings.png",
-            heroImage: "/assets/YNM Safety Architectural and Decorative Coatings.png",
+            image: "/assets/YNM Safety Industrial coatings.png",
+            heroImage: "/assets/YNM Safety Industrial coatings.png",
             specs: ["Synthetic / Alkyd Based", "High Gloss / Semi Gloss Finish", "Brush/Roller/Spray Application", "Surface Dry - 6-8 Hours", "IS164:2023 Compliant", "Excellent Metal & Wood Adhesion"],
             
             // SEO Meta Information
@@ -2138,7 +2138,7 @@ export const productsData = {
                 id: "app1",
                 title: "Architectural & Decorative Coatings",
                 description: "Enamel paint is widely used for decorative finishes in residential and commercial buildings.",
-                image: "/assets/YNM Safety Architectural and Decorative Coatings.png",
+                image: "/assets/enamel/YNM Safety Architectural and Decorative coatings.png",
                 details: "As leading enamel paint manufactures, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection."
               },
               {
@@ -2159,7 +2159,7 @@ export const productsData = {
                 id: "app4",
                 title: "Wood Coatings",
                 description: "Enamel paint enhances the durability and finish of wooden surfaces.",
-                image: "/assets/YNM Safety Wood Coatings.png",
+                image: "/assets/enamel/YNM Safety Wood coatings.png",
                 details: "YNM Safety enamel paint manufactures provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures."
               },
               {
@@ -2183,7 +2183,7 @@ export const productsData = {
                 title: "Architectural & Decorative Coatings",
                 short: "Enamel paint is widely used for decorative finishes in residential and commercial buildings.",
                 hover: "As leading enamel paint manufactures, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection.",
-                image: "/assets/YNM Safety Architectural and Decorative Coatings.png"
+                image: "/assets/enamel/YNM Safety Architectural and Decorative coatings.png"
               },
               {
                 title: "Industrial Coatings",
@@ -2201,7 +2201,7 @@ export const productsData = {
                 title: "Wood Coatings",
                 short: "Enamel paint enhances the durability and finish of wooden surfaces.",
                 hover: "YNM Safety enamel paint manufactures provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures.",
-                image: "/assets/YNM Safety Wood Coatings.png"
+                image: "/assets/enamel/YNM Safety Wood coatings.png"
               },
               {
                 title: "Marine & Protective Coatings",
@@ -2354,7 +2354,7 @@ export const productsData = {
             // Statistics
             statistics: {
               monthlyCapacity: "50KL/M",
-              annualCapacity: "600KL/Y",
+              annualCapacity: "600 KL",
               productionSpeed: "50KL",
               qualityStandards: "IS164:2023",
               exportCountries: "20+"
@@ -2380,10 +2380,10 @@ export const productsData = {
             
             // Gallery Images - Using enamel folder images for carousel
             gallery: [
-              "/assets/YNM Safety Architectural and Decorative Coatings.png",
+              "/assets/enamel/YNM Safety Architectural and Decorative coatings.png",
               "/assets/YNM Safety Industrial coatings.png",
               "/assets/YNM Safety Automative Coatings.png",
-              "/assets/YNM Safety Wood Coatings.png",
+              "/assets/enamel/YNM Safety Wood coatings.png",
               "/assets/YNM Safety Marine and Protective Coatings.png",
               "/assets/YNM Safety Metal fabrication.png"
             ]
@@ -3559,7 +3559,7 @@ export const productsData = {
             performanceMetrics: "500,000 running meters/month",
             
             statistics: {
-              annualCapacity: "6,000,000 R.M",
+              annualCapacity: "6,000,000 RM",
               exportCountries: "20+",
               qualityStandards: "ISO 9001: 2015",
               productionSpeed: "500,000 RM"
@@ -3967,7 +3967,7 @@ export const productsData = {
               annualCapacity: "120 km",
               exportCountries: "20+",
               qualityStandards: "MoRTH 810, EN 1317",
-              productionSpeed: "10 km/month"
+              productionSpeed: "10km"
             },
             
             // Manufacturing Process
@@ -4022,6 +4022,391 @@ export const productsData = {
                 step: "10",
                 title: "Packaging & Dispatch",
                 description: "Approved roller beam crash barriers are carefully packaged with protective materials to prevent damage during transportation. Complete documentation including quality certificates and installation guides is provided."
+              }
+            ]
+          },
+          {
+            id: "cb4",
+            slug: "thrie-beam-crash-barrier-manufacturers",
+            name: "Thrie Beam Crash Barrier",
+            shortDesc: "High-strength thrie beam crash barriers manufactures delivering superior impact resistance and road safety protection for highways, bridges, and infrastructure projects worldwide.",
+            desc: "High-strength thrie beam crash barriers manufactures delivering superior impact resistance and road safety protection for highways, bridges, and infrastructure projects worldwide.",
+            image: "/assets/YNM Safety Highways and Expressways (4).png",
+            heroImage: "/assets/YNM Safety Highways and Expressways (4).png",
+            specs: ["Thrie-beam profile", "Hot-dip galvanized", "High energy absorption", "MoRTH compliant", "High tensile strength", "55 Kg/RM"],
+            overview: "YNM Safety is one of the leading thrie beam crash barriers manufactures in India, delivering high-impact road safety solutions for highways, bridges, and expressways. As trusted metal beam crash barriers manufactures and experienced barriers manufactures, we design and produce crash barriers that offer superior strength and energy absorption during vehicle impact.\n\nOur thrie beam crash barriers provide enhanced protection compared to conventional W-beam systems, making them ideal for high-speed corridors and heavy vehicle routes. Being reputed ynm safety manufactures, we ensure strict compliance with IRC 119, MoRTH 803, EN 1317, and ISO 9001:2015 standards.\n\nThe thrie beam profile offers improved structural stability and better vehicle redirection, reducing accident severity and infrastructure damage.",
+            detailedDescription: "YNM Safety is one of the leading thrie beam crash barriers manufactures in India, delivering high-impact road safety solutions for highways, bridges, and expressways. As trusted metal beam crash barriers manufactures and experienced barriers manufactures, we design and produce crash barriers that offer superior strength and energy absorption during vehicle impact.\n\nOur thrie beam crash barriers provide enhanced protection compared to conventional W-beam systems, making them ideal for high-speed corridors and heavy vehicle routes. Being reputed ynm safety manufactures, we ensure strict compliance with IRC 119, MoRTH 803, EN 1317, and ISO 9001:2015 standards.\n\nThe thrie beam profile offers improved structural stability and better vehicle redirection, reducing accident severity and infrastructure damage.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Thrie Beam Crash Barrier" },
+              { label: "Material Grade", value: "High Strength Galvanized Steel" },
+              { label: "Thickness", value: "As per IRC / MoRTH Specification" },
+              { label: "Coating", value: "Hot Dip Galvanized" },
+              { label: "Impact Resistance", value: "High Energy Absorption" },
+              { label: "Net Weight", value: "55 Kg/RM" },
+              { label: "Compliance", value: "IRC 119, MoRTH 803, EN 1317" },
+              { label: "Application Area", value: "Highways, Bridges, Expressways" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "55 Kg/RM",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IRC 119, MoRTH 803, ISO 9001:2015, EN 1317",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "Project Based",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "73089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Thrie Beam Crash Barrier",
+                "Material Grade: High Strength Galvanized Steel",
+                "Thickness: As per IRC / MoRTH Specification",
+                "Coating: Hot Dip Galvanized",
+                "Impact Resistance: High Energy Absorption",
+                "Net Weight: 55 Kg/RM",
+                "Compliance: IRC 119, MoRTH 803, EN 1317",
+                "Quality Standards: ISO 9001:2015",
+                "HSN Code: 73089090"
+              ],
+              keyFeatures: [
+                "Superior impact resistance compared to W-beam",
+                "High energy absorption capacity",
+                "Hot dip galvanized corrosion protection",
+                "Long service life in extreme climates",
+                "Compliant with international safety standards",
+                "Manufactured by trusted thrie beam crash barriers manufactures"
+              ],
+              advantages: [
+                "Enhances highway and expressway safety",
+                "Suitable for heavy vehicle corridors",
+                "Reduces accident severity and vehicle rollover",
+                "Low maintenance and long-term durability",
+                "Preferred choice among metal beam crash barriers manufactures"
+              ]
+            },
+            
+            features: [
+              "Superior impact resistance compared to W-beam",
+              "High energy absorption capacity",
+              "Hot dip galvanized corrosion protection",
+              "Long service life in extreme climates",
+              "Compliant with international safety standards",
+              "Manufactured by trusted thrie beam crash barriers manufactures"
+            ],
+            advantages: [
+              "Enhances highway and expressway safety",
+              "Suitable for heavy vehicle corridors",
+              "Reduces accident severity and vehicle rollover",
+              "Low maintenance and long-term durability",
+              "Preferred choice among metal beam crash barriers manufactures"
+            ],
+            technicalSpecs: {
+              "Product Type": "Thrie Beam Crash Barrier",
+              "Material Grade": "High Strength Galvanized Steel",
+              "Thickness": "As per IRC / MoRTH Specification",
+              "Coating": "Hot Dip Galvanized",
+              "Impact Resistance": "High Energy Absorption",
+              "Net Weight": "55 Kg/RM",
+              "Compliance": "IRC 119, MoRTH 803, EN 1317",
+              "Country of Origin": "India",
+              "Manufacturing Location": "Hyderabad",
+              "Quality Standards": "IRC 119, MoRTH 803, ISO 9001:2015, EN 1317",
+              "MOQ": "Project Based",
+              "HSN Code": "73089090",
+              "Packing Type": "Standard"
+            },
+            
+            // Application Areas with images
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Highways & Expressways",
+                description: "Thrie beam crash barriers are widely installed on highways and expressways to improve road safety.",
+                image: "/assets/YNM Safety Highways and Expressways (4).png",
+                details: "As leading thrie beam crash barriers manufactures, YNM Safety provides high-strength barriers designed to absorb impact and safely redirect vehicles at high speeds, reducing accident severity."
+              },
+              {
+                id: "app2",
+                title: "Urban Roads & Streets",
+                description: "Thrie beam barriers provide controlled vehicle containment in urban road networks.",
+                image: "/assets/YNM Safety Urban Roads and streets (2).png",
+                details: "Manufactured by trusted barriers manufactures, these systems offer enhanced protection near intersections, medians, and pedestrian zones while maintaining structural stability."
+              },
+              {
+                id: "app3",
+                title: "Bridges & Flyovers",
+                description: "Thrie beam crash barriers ensure safety on bridges and elevated corridors.",
+                image: "/assets/YNM Safety Bridges and flyovers (3).png",
+                details: "The high energy-absorbing design prevents vehicles from breaching bridge edges, making them essential for flyovers and elevated road sections."
+              },
+              {
+                id: "app4",
+                title: "Industrial Areas",
+                description: "Crash barriers protect industrial zones and logistics corridors.",
+                image: "/assets/YNM Safety Industrial areas (2).png",
+                details: "Our metal beam crash barriers manufactures solutions safeguard heavy vehicle movement areas and protect infrastructure assets in industrial environments."
+              },
+              {
+                id: "app5",
+                title: "Airports & Runways",
+                description: "Thrie beam barriers provide perimeter and safety protection in airports.",
+                image: "/assets/YNM Safety Airports and Runways.png",
+                details: "Engineered for high-impact resistance, these barriers enhance security and prevent unauthorized vehicle intrusion in sensitive aviation zones."
+              },
+              {
+                id: "app6",
+                title: "Coastal & Mountain Roads",
+                description: "Thrie beam crash barriers are ideal for coastal and hilly terrains.",
+                image: "/assets/YNM Safety Coastal and Mountain roads.png",
+                details: "With galvanized corrosion resistance and structural durability, these barriers perform reliably under extreme weather and challenging terrain conditions."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Highways & Expressways",
+                short: "Thrie beam crash barriers are widely installed on highways and expressways to improve road safety.",
+                hover: "As leading thrie beam crash barriers manufactures, YNM Safety provides high-strength barriers designed to absorb impact and safely redirect vehicles at high speeds, reducing accident severity.",
+                image: "/assets/YNM Safety Highways and Expressways (4).png"
+              },
+              {
+                title: "Urban Roads & Streets",
+                short: "Thrie beam barriers provide controlled vehicle containment in urban road networks.",
+                hover: "Manufactured by trusted barriers manufactures, these systems offer enhanced protection near intersections, medians, and pedestrian zones while maintaining structural stability.",
+                image: "/assets/YNM Safety Urban Roads and streets (2).png"
+              },
+              {
+                title: "Bridges & Flyovers",
+                short: "Thrie beam crash barriers ensure safety on bridges and elevated corridors.",
+                hover: "The high energy-absorbing design prevents vehicles from breaching bridge edges, making them essential for flyovers and elevated road sections.",
+                image: "/assets/YNM Safety Bridges and flyovers (3).png"
+              },
+              {
+                title: "Industrial Areas",
+                short: "Crash barriers protect industrial zones and logistics corridors.",
+                hover: "Our metal beam crash barriers manufactures solutions safeguard heavy vehicle movement areas and protect infrastructure assets in industrial environments.",
+                image: "/assets/YNM Safety Industrial areas (2).png"
+              },
+              {
+                title: "Airports & Runways",
+                short: "Thrie beam barriers provide perimeter and safety protection in airports.",
+                hover: "Engineered for high-impact resistance, these barriers enhance security and prevent unauthorized vehicle intrusion in sensitive aviation zones.",
+                image: "/assets/YNM Safety Airports and Runways.png"
+              },
+              {
+                title: "Coastal & Mountain Roads",
+                short: "Thrie beam crash barriers are ideal for coastal and hilly terrains.",
+                hover: "With galvanized corrosion resistance and structural durability, these barriers perform reliably under extreme weather and challenging terrain conditions.",
+                image: "/assets/YNM Safety Coastal and Mountain roads.png"
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 2500,
+              currency: "INR",
+              unit: "per running meter",
+              thickness: "As per IRC/MoRTH",
+              displayPrice: "₹2,500 per running meter",
+              packageSizes: [
+                { size: "100 meters", priceINR: 2500, moq: 100 },
+                { size: "500 meters", priceINR: 2400, moq: 500 },
+                { size: "1000 meters", priceINR: 2300, moq: 1000 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 500, discount: 4 },
+                { minQuantity: 1000, discount: 8 },
+                { minQuantity: 5000, discount: 10 },
+                { minQuantity: 10000, discount: 12 }
+              ]
+            },
+            
+            gallery: [
+              "/assets/YNM Safety Highways and Expressways (4).png",
+              "/assets/YNM Safety Urban Roads and streets (2).png",
+              "/assets/YNM Safety Bridges and flyovers (3).png",
+              "/assets/YNM Safety Industrial areas (2).png",
+              "/assets/YNM Safety Airports and Runways.png",
+              "/assets/YNM Safety Coastal and Mountain roads.png"
+            ],
+            
+            // Our Projects / Clients
+            projects: [
+              {
+                id: "proj1",
+                title: "Anusha Projects Private Limited - Hyderabad Highway Project",
+                client: "Anusha Projects Private Limited",
+                location: "Hyderabad",
+                description: "Supplied 5000 RM of Thrie Beam Crash Barriers for highway safety infrastructure development project in Hyderabad. Our high-quality galvanized steel barriers provided excellent impact resistance and long-term durability for this critical road safety installation.",
+                quantity: "5,000 RM",
+                year: "2024"
+              }
+            ],
+            
+            meta: {
+              title: "Thrie Beam Crash Barrier Manufacturers | Metal Beam Crash Barriers | YNM Safety",
+              description: "YNM Safety manufactures high-performance thrie beam crash barriers for highways, bridges, and expressways. Trusted thrie beam crash barriers manufactures and metal beam crash barriers manufactures compliant with IRC, MoRTH 803 & EN 1317 standards.",
+              slug: "/thrie-beam-crash-barrier-manufacturers"
+            },
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Thrie Beam Crash Barrier Market Growth – Global Outlook",
+              description: "The global thrie beam crash barrier market has grown from around USD 1.5 billion in 2024 and is projected to reach nearly USD 2.5 billion by 2033. This reflects strong long-term growth driven by increasing investments in highway infrastructure, road modernization programs, and stricter road safety regulations worldwide.",
+              cagr: "5-7%",
+              growthFactors: [
+                "Increasing Highway & Expressway Development",
+                "Stricter Road Safety Regulations",
+                "Rising Heavy Vehicle & Freight Traffic",
+                "Government Infrastructure Spending Programs",
+                "Superior Impact Resistance Compared to W-Beam"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.5B",
+                projectedMarketSize: "$2.5B",
+                currentYear: "2024",
+                projectedYear: "2033",
+                highwayKmGlobal: "70M+",
+                annualInstallations: "15,000+",
+                roadsafetySpending: "$200B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 24, color: "#9A1B2E" },
+                { region: "Europe", value: 19, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 7, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 1.5 },
+                { year: "2025", value: 1.6 },
+                { year: "2026", value: 1.7 },
+                { year: "2027", value: 1.9 },
+                { year: "2028", value: 2.1 },
+                { year: "2033", value: 2.5 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia",
+                  countries: ["China", "India", "Philippines", "Malaysia", "UAE", "Saudi Arabia", "Turkey", "Iran", "Kazakhstan", "Uzbekistan"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa", "Algeria", "Mozambique", "Ghana", "Egypt", "Nigeria"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "France", "Italy", "Spain", "United Kingdom", "Poland", "Czechia", "Russia"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "South America",
+                  countries: ["Brazil", "Argentina", "Chile", "Peru"]
+                },
+                {
+                  name: "Oceania",
+                  countries: ["Australia", "New Zealand"]
+                }
+              ]
+            },
+            
+            performanceMetrics: {
+              monthly: "5,00,000 RM",
+              annually: "6,000,000 RM"
+            },
+            
+            statistics: {
+              annualCapacity: "6,000,000 RM",
+              exportCountries: "20+",
+              qualityStandards: "ISO 9001:2015",
+              productionSpeed: "5,00,000 RM"
+            },
+            
+            // Manufacturing Process
+            manufacturingProcessIntro: "YNM Safety is a leading Thrie Beam crash barrier manufacturer in India, delivering high-strength, precision-engineered road safety solutions. Our Thrie Beam metal crash barriers are manufactured using advanced roll forming technology and hot-dip galvanization to ensure maximum durability, corrosion resistance, and superior impact performance for highways and high-speed corridors.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Selection of High-Grade Steel Raw Material",
+                description: "The manufacturing process begins with procurement of premium quality hot rolled steel coils that comply with IS and ASTM standards. Each batch of steel is tested for tensile strength, yield strength, chemical composition, and surface quality. Using high-grade steel ensures structural integrity and long-term road safety performance."
+              },
+              {
+                step: "02",
+                title: "Coil Slitting and Sheet Cutting",
+                description: "The steel coils are processed through automatic slitting machines to achieve the required width. The sheets are then cut to standard lengths as per Thrie Beam crash barrier specifications. This stage ensures uniform thickness and dimensional precision for consistent barrier performance."
+              },
+              {
+                step: "03",
+                title: "Roll Forming into Thrie Beam Profile",
+                description: "The cut steel sheets pass through a multi-stage roll forming machine, where they are gradually shaped into the distinctive three-wave (Thrie Beam) profile. This process ensures accurate wave geometry, increased strength over W-beam barriers, improved vehicle containment, and high impact absorption capacity."
+              },
+              {
+                step: "04",
+                title: "Precision Punching & Hole Making",
+                description: "After profiling, automated punching machines create precisely aligned holes for bolting joints, spacer systems, and post connections. Accurate punching ensures seamless installation and proper alignment during on-site assembly."
+              },
+              {
+                step: "05",
+                title: "Deburring and Surface Preparation",
+                description: "Sharp edges and burrs are removed to ensure safe handling and smooth finishing. The beams are cleaned and prepared for galvanization to enhance corrosion resistance."
+              },
+              {
+                step: "06",
+                title: "Hot-Dip Galvanization",
+                description: "To provide long-lasting protection against rust and environmental damage, the beams undergo hot-dip galvanization as per IS 4759 / ASTM A123 standards. The galvanizing process includes degreasing and pickling, flux treatment, and dipping in molten zinc. This creates a thick, uniform zinc coating that significantly increases the service life of the Thrie Beam metal crash barrier system."
+              },
+              {
+                step: "07",
+                title: "Quality Control & Testing",
+                description: "Every batch undergoes strict quality inspection to ensure compliance with safety and infrastructure standards. Testing includes dimensional accuracy verification, zinc coating thickness test, impact resistance compliance, mechanical strength testing, and visual surface inspection. YNM Safety maintains high-quality standards to meet national highway project requirements."
+              },
+              {
+                step: "08",
+                title: "Packing, Storage & Dispatch",
+                description: "Finished Thrie Beam crash barriers are bundled securely for safe transportation. Proper labeling and batch tracking ensure efficient dispatch to infrastructure projects across India. As a trusted Thrie Beam crash barrier manufacturer, YNM Safety ensures timely delivery for government, highway, bridge, and expressway projects."
               }
             ]
           }

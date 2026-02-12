@@ -46,7 +46,7 @@ export default function DirectorSection({ directorData: propDirectorData }) {
               <div className="director-photo">
                 <Image
                   src={photoSrc}
-                  alt={directorData.name}
+                  alt={`${directorData.name} - Managing Director YNM Safety | Hot Thermoplastic Paint Manufacturers India`}
                   fill
                   sizes="(max-width: 768px) 80vw, 400px"
                   style={{

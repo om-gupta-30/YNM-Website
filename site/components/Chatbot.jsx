@@ -661,7 +661,7 @@ export default function Chatbot() {
               <div className="chatbot-avatar">
                 <Image 
                   src="/assets/mascot.png" 
-                  alt="YNM Mascot" 
+                  alt="YNM Safety Mascot - Hot Thermoplastic Paint Manufacturers India" 
                   width={36} 
                   height={36}
                   style={{ borderRadius: '50%', objectFit: 'cover' }}
@@ -741,7 +741,7 @@ export default function Chatbot() {
                         {Object.values(productCatalog).flat().slice(0, 3).map((product) => (
                           <div key={product.id} className="chatbot-product-card">
                             <div className="chatbot-product-card-image">
-                              <Image src={product.image} alt={product.name} width={80} height={80} />
+                              <Image src={product.image} alt={`${product.name} - YNM Safety Products India`} width={80} height={80} />
                             </div>
                             <div className="chatbot-product-card-info">
                               <h4>{product.name}</h4>

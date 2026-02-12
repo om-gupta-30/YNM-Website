@@ -64,7 +64,7 @@ export default function TestimonialsSection({ testimonialsData: propTestimonials
                     <div className="testimonial-photo">
                       <Image
                         src={photoSrc}
-                        alt={testimonial.name}
+                        alt={`${testimonial.name} - ${testimonial.company} | YNM Safety Client Testimonial`}
                         fill
                         style={{ objectFit: "cover" }}
                         loading="lazy"
