@@ -4,10 +4,10 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
-  <!-- Homepage -->
+  <!-- Homepage - Primary Landing Page -->
   <url>
     <loc>https://www.ynmsafety.com/</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,94 +15,189 @@
   <!-- Main Pages -->
   <url>
     <loc>https://www.ynmsafety.com/about</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.ynmsafety.com/products</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.ynmsafety.com/contact</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.ynmsafety.com/get-quote</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.ynmsafety.com/careers</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.ynmsafety.com/clients</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.ynmsafety.com/our-director</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.ynmsafety.com/foreign-collaborations</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.ynmsafety.com/investor-relations</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
-  <!-- Product Pages -->
-  <url>
-    <loc>https://www.ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufacturers</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ynmsafety.com/products/w-beam-crash-barrier-manufacturers</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ynmsafety.com/products/retro-reflective-gantry-signage-manufacturers</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
+  <!-- Product Category Pages -->
   <url>
     <loc>https://www.ynmsafety.com/products/fabrication</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- HIGH PRIORITY: Paint Products (Target Keywords: hot thermoplastic paint manufacturers, cold plastic paints) -->
+  <url>
+    <loc>https://www.ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/cold-plastic-paints-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/waterborne-airfield-marking-paints-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/oil-kerb-base-paint-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/water-kerb-base-paint-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/enamel-paint-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/red-oxide-paint-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Bitumen Products -->
+  <url>
+    <loc>https://www.ynmsafety.com/products/bitumen-vg-40-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/bitumen-vg-30-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- HIGH PRIORITY: Crash Barrier Products (Target Keyword: metal beam crash barriers) -->
+  <url>
+    <loc>https://www.ynmsafety.com/products/w-beam-crash-barrier-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/thrie-beam-crash-barrier-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/double-w-beam-crash-barriers-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/roller-beam-crash-barrier-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/attenuator-manufacture-ynm-safety</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- HIGH PRIORITY: Signage Products (Target Keyword: signages) -->
+  <url>
+    <loc>https://www.ynmsafety.com/products/retro-reflective-gantry-signage-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ynmsafety.com/products/cantilever-signage-manufacturers</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
