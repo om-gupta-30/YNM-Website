@@ -121,6 +121,11 @@ const nextConfig = {
         destination: '/our-director',
         permanent: true, // 301 redirect
       },
+      {
+        source: '/products/hot-thermoplastic-paint/hot-thermoplastic-paint',
+        destination: '/products/hot-thermoplastic-road-marking-paint-manufacturers',
+        permanent: true, // 301 redirect - Fix Google indexed incorrect URL
+      },
     ];
   },
   

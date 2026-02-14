@@ -14,22 +14,24 @@ export const productsData = {
             id: "p1",
             slug: "hot-thermoplastic-road-marking-paint-manufacturers",
             name: "Hot Thermoplastic Road Marking Paint",
-            shortDesc: "High-performance thermoplastic road marking paint manufacturers for highways, expressways & urban road safety.",
-            desc: "Premium hot thermoplastic road marking paint for highways and roads. Excellent durability and retro-reflective properties.",
+            shortDesc: "YNM Safety - Leading hot thermoplastic road marking paint manufacturers providing high-performance thermoplastic paint for highways, expressways & urban road safety. ISO certified manufacturers.",
+            desc: "YNM Safety manufactures premium hot thermoplastic road marking paint for highways and roads. As leading hot thermoplastic paint manufacturers, we provide excellent durability, retro-reflective properties and road safety solutions.",
             image: "/assets/hot thermoplastci ynm safety.png",
             heroImage: "/assets/hot thermoplastci ynm safety.png",
             specs: ["High durability", "Retro-reflective", "Weather resistant", "Long service life"],
+            price: "85",
+            priceUnit: "per kg",
             
             // SEO Meta Information
             meta: {
-              title: "Hot Thermoplastic Road Marking Paint Manufacturers | YNM Safety",
-              description: "Hot thermoplastic road marking paint manufacturers offering durable and high-visibility solutions. YNM Safety manufactures thermoplastic paint for highways, expressways & city roads.",
+              title: "Hot Thermoplastic Road Marking Paint Manufacturers India | YNM Safety - ISO Certified Thermoplastic Paint Exporters",
+              description: "YNM Safety - Leading hot thermoplastic road marking paint manufacturers in India. We manufacture premium hot thermoplastic paint, cold plastic paint & road safety products for highways, expressways & city roads. ISO certified thermoplastic paint manufacturers exporting to 50+ countries. Get quote now!",
               slug: "/hot-thermoplastic-road-marking-paint-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is among the reliable hot thermoplastic road marking paint manufacturers, delivering premium-quality thermoplastic paints designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity.\n\nAs one of the trusted thermoplastic paint manufacturers, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects.",
-            detailedDescription: "YNM Safety is among the reliable hot thermoplastic road marking paint manufacturers, delivering premium-quality thermoplastic paints designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity.\n\nAs one of the trusted thermoplastic paint manufacturers, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects.",
+            overview: "YNM Safety is among the leading hot thermoplastic road marking paint manufacturers in India, delivering premium-quality hot thermoplastic paint designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas. YNM manufactures complete road safety solutions including hot thermoplastic paint, cold plastic paint, and metal beam crash barriers.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity for optimal road safety performance.\n\nAs one of the trusted hot thermoplastic paint manufacturers and exporters, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects. We export our hot thermoplastic paint and road safety products to 50+ countries worldwide.",
+            detailedDescription: "YNM Safety is among the leading hot thermoplastic road marking paint manufacturers in India, delivering premium-quality hot thermoplastic paint designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas. YNM manufactures complete road safety solutions including hot thermoplastic paint, cold plastic paint, and metal beam crash barriers.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity for optimal road safety performance.\n\nAs one of the trusted hot thermoplastic paint manufacturers and exporters, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects. We export our hot thermoplastic paint and road safety products to 50+ countries worldwide.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -6566,6 +6568,125 @@ export const productsData = {
             desc: "Variable Message Sign structures for digital highway displays and traffic information systems.",
             image: "/assets/fabrication/vms-structures-1.jpg",
             specs: ["LED display mount", "Heavy duty", "Weather sealed", "NHAI approved"]
+          },
+          {
+            id: "fab18",
+            name: "I-Girders",
+            desc: "Heavy-duty I-girders for bridge construction, flyovers, and structural applications.",
+            image: "/assets/fabrication/i-girders-1.jpg",
+            specs: ["High load capacity", "Pre-stressed concrete", "Custom lengths", "Bridge certified"]
+          },
+          {
+            id: "fab19",
+            name: "RE Panel Moulds",
+            desc: "Reinforced Earth panel moulds for retaining walls and soil stabilization structures.",
+            image: "/assets/fabrication/re-panel-moulds-1.jpg",
+            specs: ["Precision casting", "Durable steel", "Reusable design", "Custom sizes"]
+          },
+          {
+            id: "fab20",
+            name: "Base Jack",
+            desc: "Heavy-duty base jacks for scaffolding systems and construction support structures.",
+            image: "/assets/fabrication/base-jack-1.jpg",
+            specs: ["Height adjustable", "High load capacity", "Galvanized finish", "Stable base"]
+          },
+          {
+            id: "fab21",
+            name: "Cup Lock",
+            desc: "Cuplock scaffolding system components for quick assembly construction frameworks.",
+            image: "/assets/fabrication/cup-lock-1.jpg",
+            specs: ["Quick assembly", "Interlocking design", "Heavy duty steel", "Modular system"]
+          },
+          {
+            id: "fab22",
+            name: "Expansion Joints",
+            desc: "Bridge expansion joints for thermal movement absorption in highway and bridge structures.",
+            image: "/assets/fabrication/expansion-joints-1.jpg",
+            specs: ["Thermal resistant", "Watertight seal", "Low maintenance", "IRC compliant"]
+          },
+          {
+            id: "fab23",
+            name: "Foot Over Bridges",
+            desc: "Prefabricated foot over bridge structures for railway stations and highways.",
+            image: "/assets/fabrication/foot-over-bridges-1.jpg",
+            specs: ["Modular design", "Weather resistant", "Safety railings", "RDSO approved"]
+          },
+          {
+            id: "fab24",
+            name: "High Mast",
+            desc: "High mast lighting poles for stadiums, highways, and large area illumination.",
+            image: "/assets/fabrication/high-mast-1.jpg",
+            specs: ["15-40m heights", "Lowering device", "Hot-dip galvanized", "Wind certified"]
+          },
+          {
+            id: "fab25",
+            name: "Ledger",
+            desc: "Scaffolding ledgers and horizontal bracing members for construction frameworks.",
+            image: "/assets/fabrication/ledger-1.jpg",
+            specs: ["Galvanized steel", "Multiple lengths", "Quick connect", "Load tested"]
+          },
+          {
+            id: "fab26",
+            name: "Modular Pontoon",
+            desc: "Modular floating pontoon systems for marinas, jetties, and water-based platforms.",
+            image: "/assets/fabrication/modular-pontoon-1.jpg",
+            specs: ["UV stabilized", "High buoyancy", "Interlocking system", "Low maintenance"]
+          },
+          {
+            id: "fab27",
+            name: "Noise Barriers",
+            desc: "Acoustic noise barriers for highways, railways, and industrial noise reduction.",
+            image: "/assets/fabrication/noise-barriers-1.jpg",
+            specs: ["Sound absorption", "Weather resistant", "Aesthetic designs", "NHAI compliant"]
+          },
+          {
+            id: "fab28",
+            name: "Pedestrian Guardrails",
+            desc: "Safety guardrails for pedestrian walkways, footpaths, and public areas.",
+            image: "/assets/fabrication/pedestrian-guardrails-1.jpg",
+            specs: ["Galvanized finish", "Anti-climb design", "Durable steel", "Custom colors"]
+          },
+          {
+            id: "fab29",
+            name: "Scaffolding Parts",
+            desc: "Complete range of scaffolding accessories and components for construction systems.",
+            image: "/assets/fabrication/scaffolding-parts-1.jpg",
+            specs: ["Universal fit", "Heavy duty", "Rust protected", "Safety certified"]
+          },
+          {
+            id: "fab30",
+            name: "Shuttering Materials",
+            desc: "Formwork and shuttering materials for concrete construction and casting applications.",
+            image: "/assets/fabrication/shuttering-materials-1.jpg",
+            specs: ["Reusable panels", "Easy assembly", "Smooth finish", "Load rated"]
+          },
+          {
+            id: "fab31",
+            name: "Bridge Bearings",
+            desc: "Heavy-duty bridge bearings for load transfer and movement accommodation in bridge structures.",
+            image: "/assets/fabrication/bridge-bearings-1.jpg",
+            specs: ["High load capacity", "Corrosion resistant", "Thermal movement", "IRC compliant"]
+          },
+          {
+            id: "fab32",
+            name: "Open Web Bridge Girders",
+            desc: "Open web steel girders for lightweight and efficient bridge construction applications.",
+            image: "/assets/fabrication/open-web-bridge-girders-1.jpg",
+            specs: ["Lightweight design", "High strength", "Easy installation", "Cost effective"]
+          },
+          {
+            id: "fab33",
+            name: "Gabion Wire Mesh",
+            desc: "Heavy-duty galvanized gabion wire mesh for retaining walls, erosion control, and landscaping applications.",
+            image: "/assets/fabrication/gabion-wire-mesh-1.jpg",
+            specs: ["Galvanized steel", "Corrosion resistant", "Flexible design", "Eco-friendly"]
+          },
+          {
+            id: "fab34",
+            name: "Anchor Cones",
+            desc: "Precision-engineered anchor cones for concrete formwork and post-tensioning applications.",
+            image: "/assets/fabrication/anchor-cones-1.jpg",
+            specs: ["High tensile strength", "Reusable design", "Easy installation", "Accurate positioning"]
           }
         ]
       }

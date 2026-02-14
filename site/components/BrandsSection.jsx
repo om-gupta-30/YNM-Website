@@ -77,7 +77,7 @@ export default function BrandsSection({ brandsData: propBrandsData }) {
           <div className="brand-logo-wrap">
                           <Image
                             src={brand.logo}
-                            alt={`${brand.name} logo - YNM Safety client`}
+                            alt={`${brand.name} - Client of Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety Premium Road Safety Products Supplier Telangana`}
                             width={100}
                             height={50}
               className="brand-logo"

@@ -46,7 +46,7 @@ export default function DirectorSection({ directorData: propDirectorData }) {
               <div className="director-photo">
                 <Image
                   src={photoSrc}
-                  alt={`${directorData.name} - Managing Director YNM Safety`}
+                  alt={`${directorData.name} - Managing Director Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety CEO Cold Plastic Paint & Metal Beam Crash Barrier Telangana`}
                   fill
                   sizes="(max-width: 768px) 80vw, 400px"
                   style={{

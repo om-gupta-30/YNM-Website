@@ -17,7 +17,7 @@ const productConfig = [
     link: "/products#paints", 
     title: "Paints", 
     description: "Hot thermoplastic road marking paints for highways, expressways & urban road safety applications.",
-    altText: "YNM Safety Hot Thermoplastic Paints Manufacturer - Thermoplastic Road Marking Paint Manufacturers in India"
+    altText: "Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety Premium Thermoplastic Road Marking Paint | Cold Plastic Paint Manufacturing | Highway Road Safety Paint Suppliers Telangana"
   },
   { 
     id: "bitumen", 
@@ -25,7 +25,7 @@ const productConfig = [
     link: "/products#bitumen", 
     title: "Bitumen", 
     description: "High-performance VG 40 paving grade bitumen for highways, expressways and heavy traffic roads.",
-    altText: "YNM Safety Bitumen VG 40 Manufacturer - Highway Construction Bitumen Supplier India"
+    altText: "Best Bitumen VG 40 Manufacturers in Hyderabad India | YNM Safety Highway Construction Bitumen Supplier | Paving Grade Bitumen Telangana"
   },
   { 
     id: "crash-barriers", 
@@ -33,7 +33,7 @@ const productConfig = [
     link: "/products#crash-barriers", 
     title: "Metal Beam Crash Barriers", 
     description: "High-strength W-beam crash barriers engineered for highways and expressways safety.",
-    altText: "YNM Safety Metal Beam Crash Barrier Manufacturer - W Beam Crash Barrier Manufacturers India"
+    altText: "Best Metal Beam Crash Barrier Manufacturers in Hyderabad India | YNM Safety W Beam Crash Barrier | Highway Safety Barriers Telangana | Road Safety Equipment Suppliers"
   },
   { 
     id: "signages", 
@@ -41,7 +41,7 @@ const productConfig = [
     link: "/products#signages", 
     title: "Signages", 
     description: "Retro-reflective gantry signages and cantilever signages for high visibility traffic guidance.",
-    altText: "YNM Safety Retro Reflective Signage Manufacturer - Highway Gantry Signage India"
+    altText: "Best Retro Reflective Signage Manufacturers in Hyderabad India | YNM Safety Highway Gantry Signage | Cantilever Signage Telangana | Road Safety Signboards"
   },
   { 
     id: "fabrication", 
@@ -49,7 +49,7 @@ const productConfig = [
     link: "/products/fabrication", 
     title: "Fabrication", 
     description: "Custom steel fabrication including solar structures, railway structures, and industrial products.",
-    altText: "YNM Safety Fabrication - Custom Steel & Metal Fabrication Manufacturer India"
+    altText: "Best Custom Steel Fabrication Manufacturers in Hyderabad India | YNM Safety Metal Fabrication | Solar Structures & Railway Structures Telangana"
   },
 ];
 

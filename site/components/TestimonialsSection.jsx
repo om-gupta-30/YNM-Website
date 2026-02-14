@@ -64,7 +64,7 @@ export default function TestimonialsSection({ testimonialsData: propTestimonials
                     <div className="testimonial-photo">
                       <Image
                         src={photoSrc}
-                        alt={`${testimonial.name} from ${testimonial.company}`}
+                        alt={`${testimonial.name} from ${testimonial.company} - Client Testimonial Best Hot Thermoplastic Paint Manufacturers Hyderabad India | YNM Safety Cold Plastic Paint Metal Beam Crash Barrier Review`}
                         fill
                         style={{ objectFit: "cover" }}
                         loading="lazy"
