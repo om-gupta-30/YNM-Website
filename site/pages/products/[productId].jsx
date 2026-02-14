@@ -523,7 +523,7 @@ export default function ProductDetailPage() {
                       <div className="stat-card-glow" />
                     </div>
                   )}
-                  {product.statistics.productionSpeed && (
+                  {(product.statistics.productionSpeed || product.statistics.monthlyCapacity) && (
                     <div className="stat-card">
                       <div className="stat-card-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -532,8 +532,8 @@ export default function ProductDetailPage() {
                         </svg>
                       </div>
                       <div className="stat-card-content">
-                        <div className="stat-value">{product.statistics.productionSpeed}</div>
-                        <div className="stat-label">Monthly Production</div>
+                        <div className="stat-value">{product.statistics.productionSpeed || product.statistics.monthlyCapacity}</div>
+                        <div className="stat-label">Monthly Production Capacity</div>
                       </div>
                       <div className="stat-card-glow" />
                     </div>

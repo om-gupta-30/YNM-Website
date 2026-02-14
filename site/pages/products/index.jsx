@@ -133,7 +133,7 @@ export default function ProductsPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Hot Thermoplastic Road Marking Paint",
-                  "url": "https://www.ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufactures"
+                  "url": "https://www.ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufacturers"
                 },
                 {
                   "@type": "ListItem",
@@ -145,7 +145,7 @@ export default function ProductsPage() {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Retro Reflective Signages",
-                  "url": "https://www.ynmsafety.com/products/retro-reflective-gantry-signage-manufactures"
+                  "url": "https://www.ynmsafety.com/products/retro-reflective-gantry-signage-manufacturers"
                 }
               ]
             })
