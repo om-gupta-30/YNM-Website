@@ -7,11 +7,11 @@ import Link from "next/link";
 
 // Simple response cache to prevent duplicate API calls
 const responseCache = new Map();
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+const CACHE_TTL = 10 * 60 * 1000; // 10 minutes (increased)
 
-// Rate limiting
+// Rate limiting - more restrictive
 const RATE_LIMIT_WINDOW = 60000; // 1 minute
-const MAX_REQUESTS_PER_WINDOW = 10;
+const MAX_REQUESTS_PER_WINDOW = 8; // Reduced from 10
 let requestCount = 0;
 let windowStart = Date.now();
 
@@ -27,6 +27,55 @@ const checkRateLimit = () => {
   requestCount++;
   return true;
 };
+
+// Off-topic detection keywords (to save API calls)
+const OFF_TOPIC_PATTERNS = [
+  /\b(movie|film|actor|actress|bollywood|hollywood|music|song|singer)\b/i,
+  /\b(cricket|football|sports|ipl|match|game|gaming)\b/i,
+  /\b(recipe|cook|food|restaurant|hotel)\b/i,
+  /\b(weather|forecast)\b/i,
+  /\b(joke|funny|laugh)\b/i,
+  /\b(news|politics|election|government|modi|congress)\b/i,
+  /\b(stock|share|market|crypto|bitcoin|investment)\b/i,
+  /\b(code|programming|javascript|python|java|react|nodejs)\b/i,
+  /\b(ai|chatgpt|openai|gemini|claude)\b/i,
+  /\b(dating|relationship|love|girlfriend|boyfriend)\b/i,
+  /\b(medical|doctor|hospital|disease|medicine)\b/i,
+  /\b(school|college|exam|study|homework)\b/i,
+  /\b(travel|flight|visa|passport|tourism)\b/i,
+];
+
+// YNM-related keywords (queries with these skip off-topic check)
+const ON_TOPIC_PATTERNS = [
+  /\b(ynm|safety|road|paint|thermoplastic|bitumen|barrier|crash|signage|sign|fabrication)\b/i,
+  /\b(highway|marking|export|import|manufacturer|product|quote|price|contact)\b/i,
+  /\b(hyderabad|india|office|business|company|director|team|career|job|hr)\b/i,
+  /\b(iso|morth|irc|aashto|standard|certification|quality)\b/i,
+  /\b(order|buy|purchase|supplier|vendor|client|project)\b/i,
+  /\b(steel|metal|galvanized|pole|mast|scaffold|bridge|railway)\b/i,
+];
+
+const isOffTopic = (query) => {
+  const lowerQuery = query.toLowerCase();
+  
+  // First check if it contains YNM-related keywords
+  for (const pattern of ON_TOPIC_PATTERNS) {
+    if (pattern.test(lowerQuery)) {
+      return false; // On-topic
+    }
+  }
+  
+  // Check for off-topic patterns
+  for (const pattern of OFF_TOPIC_PATTERNS) {
+    if (pattern.test(lowerQuery)) {
+      return true; // Off-topic
+    }
+  }
+  
+  return false; // Default: let API handle it
+};
+
+const OFF_TOPIC_RESPONSE = "I'm the YNM Safety assistant and can only help with questions about our company, products, and services. I can assist you with:\n\n• Road marking paints (thermoplastic, cold plastic, airfield paints)\n• Metal beam crash barriers\n• Highway signages\n• Bitumen products\n• Metal fabrication (34+ products)\n• Export inquiries\n• Quotes and pricing\n• Company information\n\nHow can I help you with YNM Safety today?";
 
 export default function Chatbot() {
   const language = 'en';
@@ -351,6 +400,20 @@ export default function Chatbot() {
     };
     setMessages(prev => [...prev, userMessage]);
     
+    // Check for off-topic questions first (saves API calls)
+    if (isOffTopic(query)) {
+      const offTopicMessage = {
+        id: Date.now() + 1,
+        text: OFF_TOPIC_RESPONSE,
+        sender: "bot",
+        timestamp: new Date(),
+        followUpQuestions: ["What products do you manufacture?", "How can I get a quote?", "Contact information"]
+      };
+      setMessages(prev => [...prev, offTopicMessage]);
+      setShowQuickActions(true);
+      return;
+    }
+    
     // Check rate limit
     if (!checkRateLimit()) {
       const rateLimitMessage = {
@@ -488,6 +551,20 @@ export default function Chatbot() {
     setInputValue("");
     setShowQuickActions(false);
     
+    // Check for off-topic questions first (saves API calls)
+    if (isOffTopic(currentInput)) {
+      const offTopicMessage = {
+        id: Date.now() + 1,
+        text: OFF_TOPIC_RESPONSE,
+        sender: "bot",
+        timestamp: new Date(),
+        followUpQuestions: ["What products do you manufacture?", "How can I get a quote?", "Contact information"]
+      };
+      setMessages(prev => [...prev, offTopicMessage]);
+      setShowQuickActions(true);
+      return;
+    }
+    
     // Check rate limit
     if (!checkRateLimit()) {
       const rateLimitMessage = {
@@ -497,6 +574,22 @@ export default function Chatbot() {
         timestamp: new Date()
       };
       setMessages(prev => [...prev, rateLimitMessage]);
+      setShowQuickActions(true);
+      return;
+    }
+    
+    // Check cache first before API call
+    const cacheKey = currentInput.toLowerCase().trim();
+    const cachedResponse = responseCache.get(cacheKey);
+    if (cachedResponse && (Date.now() - cachedResponse.timestamp < CACHE_TTL)) {
+      const botMessage = {
+        id: Date.now() + 1,
+        text: cachedResponse.response,
+        sender: "bot",
+        timestamp: new Date(),
+        followUpQuestions: generateFollowUpQuestions(cachedResponse.response)
+      };
+      setMessages(prev => [...prev, botMessage]);
       setShowQuickActions(true);
       return;
     }
@@ -513,10 +606,10 @@ export default function Chatbot() {
     try {
       const conversationHistory = messages
         .filter(msg => msg && msg.id !== 1 && msg.text && msg.sender)
-        .slice(-6) // Reduced from 10 to 6 for faster responses
+        .slice(-4) // Reduced to 4 for faster responses and lower token usage
         .map(msg => ({
           sender: msg.sender,
-          text: String(msg.text).trim()
+          text: String(msg.text).trim().slice(0, 300) // Limit message length
         }))
         .filter(msg => msg.text.length > 0);
 
@@ -554,6 +647,12 @@ export default function Chatbot() {
       if (!data || !data.response || typeof data.response !== 'string') {
         throw new Error('Invalid response from AI');
       }
+
+      // Cache the response for future identical queries
+      responseCache.set(cacheKey, {
+        response: data.response,
+        timestamp: Date.now()
+      });
 
       const botMessage = {
         id: Date.now(),

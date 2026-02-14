@@ -6,8 +6,113 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
 
-// Fabrication products data - 17 products with photos available
+// Fabrication products data - 34 products with photos available
 const fabricationProducts = [
+  // Priority products (1-14) as specified
+  { 
+    id: "fab28", 
+    name: "Pedestrian Guardrails", 
+    images: ["/assets/fabrication/pedestrian-guardrails-1.jpg", "/assets/fabrication/pedestrian-guardrails-2.jpg", "/assets/fabrication/pedestrian-guardrails-3.jpg"], 
+    category: "Urban",
+    description: "Safety guardrails for pedestrian walkways, footpaths, and public areas.",
+    specs: ["Galvanized finish", "Anti-climb design", "Durable steel", "Custom colors"]
+  },
+  { 
+    id: "fab27", 
+    name: "Noise Barriers", 
+    images: ["/assets/fabrication/noise-barriers-1.jpg", "/assets/fabrication/noise-barriers-2.jpg", "/assets/fabrication/noise-barriers-3.jpg"], 
+    category: "Infrastructure",
+    description: "Acoustic noise barriers for highways, railways, and industrial noise reduction.",
+    specs: ["Sound absorption", "Weather resistant", "Aesthetic designs", "NHAI compliant"]
+  },
+  { 
+    id: "fab23", 
+    name: "Foot Over Bridges", 
+    images: ["/assets/fabrication/foot-over-bridges-1.jpg", "/assets/fabrication/foot-over-bridges-2.jpg", "/assets/fabrication/foot-over-bridges-3.jpg"], 
+    category: "Infrastructure",
+    description: "Prefabricated foot over bridge structures for railway stations and highways.",
+    specs: ["Modular design", "Weather resistant", "Safety railings", "RDSO approved"]
+  },
+  { 
+    id: "fab24", 
+    name: "High Mast", 
+    images: ["/assets/fabrication/high-mast-1.jpg", "/assets/fabrication/high-mast-2.jpg", "/assets/fabrication/high-mast-3.jpg"], 
+    category: "Infrastructure",
+    description: "High mast lighting poles for stadiums, highways, and large area illumination.",
+    specs: ["15-40m heights", "Lowering device", "Hot-dip galvanized", "Wind certified"]
+  },
+  { 
+    id: "fab16", 
+    name: "Street Light Poles", 
+    images: ["/assets/fabrication/street-light-poles-1.jpg", "/assets/fabrication/street-light-poles-2.jpg", "/assets/fabrication/street-light-poles-3.jpg"], 
+    category: "Urban",
+    description: "Decorative and functional street light poles for urban roads, parks, and public spaces.",
+    specs: ["Aesthetic designs", "Corrosion resistant", "Multiple heights", "Easy installation"]
+  },
+  { 
+    id: "fab15", 
+    name: "Solar Light Poles", 
+    images: ["/assets/fabrication/solar-light-poles-1.jpg", "/assets/fabrication/solar-light-poles-2.jpg", "/assets/fabrication/solar-light-poles-3.jpg"], 
+    category: "Solar",
+    description: "Solar-powered street light poles with integrated panels for eco-friendly illumination.",
+    specs: ["Solar integrated", "LED compatible", "Auto on/off", "Low maintenance"]
+  },
+  { 
+    id: "fab14", 
+    name: "Sign Board Structures", 
+    images: ["/assets/fabrication/sign-board-structures-1.jpg", "/assets/fabrication/sign-board-structures-2.jpg", "/assets/fabrication/sign-board-structures-3.jpg"], 
+    category: "Infrastructure",
+    description: "Robust sign board mounting structures for highways, expressways, and urban roads.",
+    specs: ["Wind resistant", "Galvanized steel", "Multiple sizes", "MoRTH compliant"]
+  },
+  { 
+    id: "fab10", 
+    name: "ITMS Structures", 
+    images: ["/assets/fabrication/itms-structures-1.jpg", "/assets/fabrication/itms-structures-2.jpg", "/assets/fabrication/itms-structures-3.jpg"], 
+    category: "Infrastructure",
+    description: "Intelligent Traffic Management System structures for smart city traffic monitoring and control.",
+    specs: ["NHAI compliant", "Sensor mounting", "Weather resistant", "Modular design"]
+  },
+  { 
+    id: "fab12", 
+    name: "Barricading Boards", 
+    images: ["/assets/fabrication/barricading-boards-1.jpg", "/assets/fabrication/barricading-boards-2.jpg", "/assets/fabrication/barricading-boards-3.jpg"], 
+    category: "Infrastructure",
+    description: "Durable barricading boards for road safety, construction sites, and traffic management.",
+    specs: ["High visibility", "Reflective strips", "Weatherproof", "Stackable design"]
+  },
+  { 
+    id: "fab8", 
+    name: "Gantry Structures", 
+    images: ["/assets/Ynm safety signages.png", "/assets/Ynm safety Highways and Expressways.png", "/assets/Ynm safety Urban Roads and City streets.png"], 
+    category: "Infrastructure",
+    description: "Heavy-duty gantry structures for highway overhead signages and traffic management systems.",
+    specs: ["High load capacity", "Corrosion resistant", "Wide span designs", "MoRTH compliant"]
+  },
+  { 
+    id: "fab6", 
+    name: "Cantilever Structures", 
+    images: ["/assets/ynm safety cantilever.png", "/assets/YNM Safety Cantilever Highways and Expressways.png", "/assets/YNM Safety Cantilever Urban Roads and Streets.png"], 
+    category: "Infrastructure",
+    description: "Heavy-duty cantilever structures for highway signages, gantries, and overhead systems.",
+    specs: ["High load capacity", "Corrosion resistant", "Custom spans", "NHAI compliant"]
+  },
+  { 
+    id: "fab5", 
+    name: "Camera Poles", 
+    images: ["/assets/fabrication/camera-pole-1.png", "/assets/fabrication/camera-pole-2.png", "/assets/fabrication/camera-pole-3.png"], 
+    category: "Infrastructure",
+    description: "Sturdy metal poles for CCTV cameras, traffic monitoring, and surveillance systems.",
+    specs: ["Hot-dip galvanized", "Multi-height options", "Weather resistant", "Easy installation"]
+  },
+  { 
+    id: "fab7", 
+    name: "Parking Signages", 
+    images: ["/assets/fabrication/parking-signage-1.png", "/assets/fabrication/parking-signage-2.png", "/assets/fabrication/parking-signage-3.png"], 
+    category: "Urban",
+    description: "Durable parking lot signages and directional boards for malls, airports, and public areas.",
+    specs: ["Reflective coating", "Rust proof", "Custom designs", "UV resistant"]
+  },
   { 
     id: "fab1", 
     name: "Solar Panel Structures / Frames", 
@@ -16,6 +121,7 @@ const fabricationProducts = [
     description: "Ground and rooftop mounting structures for solar PV installations.",
     specs: ["Fixed/Tracking", "Aluminum/GI steel", "Wind certified", "Quick mount"]
   },
+  // Other products
   { 
     id: "fab2", 
     name: "Railway Structures", 
@@ -41,52 +147,12 @@ const fabricationProducts = [
     specs: ["Lightweight design", "Rust protected", "Custom branding", "Durable finish"]
   },
   { 
-    id: "fab5", 
-    name: "Camera Poles", 
-    images: ["/assets/fabrication/camera-pole-1.png", "/assets/fabrication/camera-pole-2.png", "/assets/fabrication/camera-pole-3.png"], 
-    category: "Infrastructure",
-    description: "Sturdy metal poles for CCTV cameras, traffic monitoring, and surveillance systems.",
-    specs: ["Hot-dip galvanized", "Multi-height options", "Weather resistant", "Easy installation"]
-  },
-  { 
-    id: "fab6", 
-    name: "Cantilever Structures", 
-    images: ["/assets/ynm safety cantilever.png", "/assets/YNM Safety Cantilever Highways and Expressways.png", "/assets/YNM Safety Cantilever Urban Roads and Streets.png"], 
-    category: "Infrastructure",
-    description: "Heavy-duty cantilever structures for highway signages, gantries, and overhead systems.",
-    specs: ["High load capacity", "Corrosion resistant", "Custom spans", "NHAI compliant"]
-  },
-  { 
-    id: "fab7", 
-    name: "Parking Signages", 
-    images: ["/assets/fabrication/parking-signage-1.png", "/assets/fabrication/parking-signage-2.png", "/assets/fabrication/parking-signage-3.png"], 
-    category: "Urban",
-    description: "Durable parking lot signages and directional boards for malls, airports, and public areas.",
-    specs: ["Reflective coating", "Rust proof", "Custom designs", "UV resistant"]
-  },
-  { 
-    id: "fab8", 
-    name: "Gantry Structures", 
-    images: ["/assets/Ynm safety signages.png", "/assets/Ynm safety Highways and Expressways.png", "/assets/Ynm safety Urban Roads and City streets.png"], 
-    category: "Infrastructure",
-    description: "Heavy-duty gantry structures for highway overhead signages and traffic management systems.",
-    specs: ["High load capacity", "Corrosion resistant", "Wide span designs", "MoRTH compliant"]
-  },
-  { 
     id: "fab9", 
     name: "Slotted Angle Racks", 
     images: ["/assets/fabrication/slotted-angle-rack-1.png", "/assets/fabrication/slotted-angle-rack-2.jpg", "/assets/fabrication/slotted-angle-rack-3.jpg"], 
     category: "Industrial",
     description: "Versatile slotted angle storage racks for warehouses, workshops, and industrial storage.",
     specs: ["Adjustable shelves", "Heavy duty", "Powder coated", "Easy assembly"]
-  },
-  { 
-    id: "fab10", 
-    name: "ITMS Structures", 
-    images: ["/assets/fabrication/itms-structures-1.jpg", "/assets/fabrication/itms-structures-2.jpg", "/assets/fabrication/itms-structures-3.jpg"], 
-    category: "Infrastructure",
-    description: "Intelligent Traffic Management System structures for smart city traffic monitoring and control.",
-    specs: ["NHAI compliant", "Sensor mounting", "Weather resistant", "Modular design"]
   },
   { 
     id: "fab11", 
@@ -97,14 +163,6 @@ const fabricationProducts = [
     specs: ["Height adjustable", "High load capacity", "Rust protected", "Easy operation"]
   },
   { 
-    id: "fab12", 
-    name: "Barricading Boards", 
-    images: ["/assets/fabrication/barricading-boards-1.jpg", "/assets/fabrication/barricading-boards-2.jpg", "/assets/fabrication/barricading-boards-3.jpg"], 
-    category: "Infrastructure",
-    description: "Durable barricading boards for road safety, construction sites, and traffic management.",
-    specs: ["High visibility", "Reflective strips", "Weatherproof", "Stackable design"]
-  },
-  { 
     id: "fab13", 
     name: "Heavy Duty Racks", 
     images: ["/assets/fabrication/heavy-duty-racks-1.jpg", "/assets/fabrication/heavy-duty-racks-2.jpg", "/assets/fabrication/heavy-duty-racks-3.jpg"], 
@@ -113,36 +171,116 @@ const fabricationProducts = [
     specs: ["High load capacity", "Powder coated", "Adjustable levels", "Forklift compatible"]
   },
   { 
-    id: "fab14", 
-    name: "Sign Board Structures", 
-    images: ["/assets/fabrication/sign-board-structures-1.jpg", "/assets/fabrication/sign-board-structures-2.jpg", "/assets/fabrication/sign-board-structures-3.jpg"], 
-    category: "Infrastructure",
-    description: "Robust sign board mounting structures for highways, expressways, and urban roads.",
-    specs: ["Wind resistant", "Galvanized steel", "Multiple sizes", "MoRTH compliant"]
-  },
-  { 
-    id: "fab15", 
-    name: "Solar Light Poles", 
-    images: ["/assets/fabrication/solar-light-poles-1.jpg", "/assets/fabrication/solar-light-poles-2.jpg", "/assets/fabrication/solar-light-poles-3.jpg"], 
-    category: "Solar",
-    description: "Solar-powered street light poles with integrated panels for eco-friendly illumination.",
-    specs: ["Solar integrated", "LED compatible", "Auto on/off", "Low maintenance"]
-  },
-  { 
-    id: "fab16", 
-    name: "Street Light Poles", 
-    images: ["/assets/fabrication/street-light-poles-1.jpg", "/assets/fabrication/street-light-poles-2.jpg", "/assets/fabrication/street-light-poles-3.jpg"], 
-    category: "Urban",
-    description: "Decorative and functional street light poles for urban roads, parks, and public spaces.",
-    specs: ["Aesthetic designs", "Corrosion resistant", "Multiple heights", "Easy installation"]
-  },
-  { 
     id: "fab17", 
     name: "VMS Structures", 
     images: ["/assets/fabrication/vms-structures-1.jpg", "/assets/fabrication/vms-structures-2.jpg", "/assets/fabrication/vms-structures-3.jpg"], 
     category: "Infrastructure",
     description: "Variable Message Sign structures for digital highway displays and traffic information systems.",
     specs: ["LED display mount", "Heavy duty", "Weather sealed", "NHAI approved"]
+  },
+  { 
+    id: "fab18", 
+    name: "I-Girders", 
+    images: ["/assets/fabrication/i-girders-1.jpg", "/assets/fabrication/i-girders-2.jpg", "/assets/fabrication/i-girders-3.jpg"], 
+    category: "Infrastructure",
+    description: "Heavy-duty I-girders for bridge construction, flyovers, and structural applications.",
+    specs: ["High load capacity", "Pre-stressed concrete", "Custom lengths", "Bridge certified"]
+  },
+  { 
+    id: "fab19", 
+    name: "RE Panel Moulds", 
+    images: ["/assets/fabrication/re-panel-moulds-1.jpg", "/assets/fabrication/re-panel-moulds-2.jpg", "/assets/fabrication/re-panel-moulds-3.jpg"], 
+    category: "Industrial",
+    description: "Reinforced Earth panel moulds for retaining walls and soil stabilization structures.",
+    specs: ["Precision casting", "Durable steel", "Reusable design", "Custom sizes"]
+  },
+  { 
+    id: "fab20", 
+    name: "Base Jack", 
+    images: ["/assets/fabrication/base-jack-1.jpg", "/assets/fabrication/base-jack-2.jpg", "/assets/fabrication/base-jack-3.jpg"], 
+    category: "Industrial",
+    description: "Heavy-duty base jacks for scaffolding systems and construction support structures.",
+    specs: ["Height adjustable", "High load capacity", "Galvanized finish", "Stable base"]
+  },
+  { 
+    id: "fab21", 
+    name: "Cup Lock", 
+    images: ["/assets/fabrication/cup-lock-1.jpg", "/assets/fabrication/cup-lock-2.jpg", "/assets/fabrication/cup-lock-3.jpg"], 
+    category: "Industrial",
+    description: "Cuplock scaffolding system components for quick assembly construction frameworks.",
+    specs: ["Quick assembly", "Interlocking design", "Heavy duty steel", "Modular system"]
+  },
+  { 
+    id: "fab22", 
+    name: "Expansion Joints", 
+    images: ["/assets/fabrication/expansion-joints-1.jpg", "/assets/fabrication/expansion-joints-2.jpg", "/assets/fabrication/expansion-joints-3.jpg"], 
+    category: "Infrastructure",
+    description: "Bridge expansion joints for thermal movement absorption in highway and bridge structures.",
+    specs: ["Thermal resistant", "Watertight seal", "Low maintenance", "IRC compliant"]
+  },
+  { 
+    id: "fab25", 
+    name: "Ledger", 
+    images: ["/assets/fabrication/ledger-1.jpg", "/assets/fabrication/ledger-2.jpg", "/assets/fabrication/ledger-3.jpg"], 
+    category: "Industrial",
+    description: "Scaffolding ledgers and horizontal bracing members for construction frameworks.",
+    specs: ["Galvanized steel", "Multiple lengths", "Quick connect", "Load tested"]
+  },
+  { 
+    id: "fab26", 
+    name: "Modular Pontoon", 
+    images: ["/assets/fabrication/modular-pontoon-1.jpg", "/assets/fabrication/modular-pontoon-2.jpg", "/assets/fabrication/modular-pontoon-3.jpg"], 
+    category: "Infrastructure",
+    description: "Modular floating pontoon systems for marinas, jetties, and water-based platforms.",
+    specs: ["UV stabilized", "High buoyancy", "Interlocking system", "Low maintenance"]
+  },
+  { 
+    id: "fab29", 
+    name: "Scaffolding Parts", 
+    images: ["/assets/fabrication/scaffolding-parts-1.jpg", "/assets/fabrication/scaffolding-parts-2.jpg", "/assets/fabrication/scaffolding-parts-3.jpg"], 
+    category: "Industrial",
+    description: "Complete range of scaffolding accessories and components for construction systems.",
+    specs: ["Universal fit", "Heavy duty", "Rust protected", "Safety certified"]
+  },
+  { 
+    id: "fab30", 
+    name: "Shuttering Materials", 
+    images: ["/assets/fabrication/shuttering-materials-1.jpg", "/assets/fabrication/shuttering-materials-2.jpg", "/assets/fabrication/shuttering-materials-3.jpg"], 
+    category: "Industrial",
+    description: "Formwork and shuttering materials for concrete construction and casting applications.",
+    specs: ["Reusable panels", "Easy assembly", "Smooth finish", "Load rated"]
+  },
+  { 
+    id: "fab31", 
+    name: "Bridge Bearings", 
+    images: ["/assets/fabrication/bridge-bearings-1.jpg", "/assets/fabrication/bridge-bearings-2.jpg", "/assets/fabrication/bridge-bearings-3.jpg"], 
+    category: "Infrastructure",
+    description: "Heavy-duty bridge bearings for load transfer and movement accommodation in bridge structures.",
+    specs: ["High load capacity", "Corrosion resistant", "Thermal movement", "IRC compliant"]
+  },
+  { 
+    id: "fab32", 
+    name: "Open Web Bridge Girders", 
+    images: ["/assets/fabrication/open-web-bridge-girders-1.jpg", "/assets/fabrication/open-web-bridge-girders-2.jpg", "/assets/fabrication/open-web-bridge-girders-3.jpg"], 
+    category: "Infrastructure",
+    description: "Open web steel girders for lightweight and efficient bridge construction applications.",
+    specs: ["Lightweight design", "High strength", "Easy installation", "Cost effective"]
+  },
+  { 
+    id: "fab33", 
+    name: "Gabion Wire Mesh", 
+    images: ["/assets/fabrication/gabion-wire-mesh-1.jpg", "/assets/fabrication/gabion-wire-mesh-2.jpg", "/assets/fabrication/gabion-wire-mesh-3.jpg"], 
+    category: "Infrastructure",
+    description: "Heavy-duty galvanized gabion wire mesh for retaining walls, erosion control, and landscaping applications.",
+    specs: ["Galvanized steel", "Corrosion resistant", "Flexible design", "Eco-friendly"]
+  },
+  { 
+    id: "fab34", 
+    name: "Anchor Cones", 
+    images: ["/assets/fabrication/anchor-cones-1.jpg", "/assets/fabrication/anchor-cones-2.jpg", "/assets/fabrication/anchor-cones-3.jpg"], 
+    category: "Construction",
+    description: "Precision-engineered anchor cones for concrete formwork and post-tensioning applications.",
+    specs: ["High tensile strength", "Reusable design", "Easy installation", "Accurate positioning"]
   },
 ];
 
@@ -251,7 +389,7 @@ export default function FabricationPage() {
               "name": "YNM Safety Fabrication Products",
               "description": "Custom steel and metal fabrication products for infrastructure, solar, and industrial applications",
               "url": "https://www.ynmsafety.com/products/fabrication",
-              "numberOfItems": 17,
+              "numberOfItems": 34,
               "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Solar Panel Structures"},
                 {"@type": "ListItem", "position": 2, "name": "ITMS Structures"},
@@ -320,7 +458,7 @@ export default function FabricationPage() {
             <p>Custom steel and metal fabrication solutions for infrastructure, construction, and industrial applications</p>
             <div className="fabrication-hero-stats">
               <div className="fabrication-stat">
-                <span className="fabrication-stat-number">17+</span>
+                <span className="fabrication-stat-number">34</span>
                 <span className="fabrication-stat-label">Products</span>
               </div>
               <div className="fabrication-stat">
@@ -339,16 +477,21 @@ export default function FabricationPage() {
         <section className="fabrication-filter-section">
           <div className="fabrication-filter-container">
             <div className="fabrication-filter-tabs">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  className={`fabrication-filter-tab ${activeCategory === cat ? 'active' : ''}`}
-                  onClick={() => setActiveCategory(cat)}
-                >
-                  {cat}
-                  {cat === "All" && <span className="filter-count">{fabricationProducts.length}</span>}
-                </button>
-              ))}
+              {categories.map((cat) => {
+                const count = cat === "All" 
+                  ? fabricationProducts.length 
+                  : fabricationProducts.filter(p => p.category === cat).length;
+                return (
+                  <button
+                    key={cat}
+                    className={`fabrication-filter-tab ${activeCategory === cat ? 'active' : ''}`}
+                    onClick={() => setActiveCategory(cat)}
+                  >
+                    {cat}
+                    <span className="filter-count">{count}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </section>

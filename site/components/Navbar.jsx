@@ -38,7 +38,7 @@ export default function Navbar() {
           {!logoError ? (
             <Image
               src="/assets/logo-navbar.jpg"
-              alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers"
+              alt="YNM Safety - Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | Premium Cold Plastic Paint Manufacturers Telangana"
               width={50}
               height={50}
               className="nav-logo-new"

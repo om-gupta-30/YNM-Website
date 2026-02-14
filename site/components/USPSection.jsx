@@ -27,27 +27,27 @@ function USPSection({ uspData: propUspData }) {
     : [
         {
           id: "manufacturing",
-          title: "Advanced Manufacturing",
+          title: "Hot Thermoplastic Paint Manufacturers",
           icon: "🏭",
-          description: "We make road marking paints, crash barriers, and safety signs in our modern factory. Our products are built to last and keep roads safe."
+          description: "YNM Safety is a leading hot thermoplastic paint manufacturer producing premium cold plastic paint, road marking paints, and metal beam crash barriers. Our advanced manufacturing facility ensures ISO-certified road safety products built for durability and compliance."
         },
         {
           id: "certified",
-          title: "Quality Certified",
+          title: "ISO Certified Road Safety Products",
           icon: "✅",
-          description: "Every product meets strict quality standards. We are ISO certified and test each item before it leaves our factory."
+          description: "As trusted hot thermoplastic paint manufacturers, YNM Safety maintains strict quality standards. Every cold plastic paint, metal beam crash barrier, and road safety product is ISO certified and thoroughly tested for highway safety compliance."
         },
         {
           id: "export",
-          title: "Global Export Network",
+          title: "Global Export Network - 50+ Countries",
           icon: "🌍",
-          description: "We ship to 50+ countries worldwide. Our team handles all export needs and ensures on-time delivery."
+          description: "YNM exports hot thermoplastic paint, cold plastic paint, and metal beam crash barriers to 50+ countries. Our experienced export team delivers road safety products worldwide with reliable shipping and on-time delivery."
         },
         {
           id: "customization",
-          title: "Custom Solutions",
+          title: "Custom Road Safety Solutions",
           icon: "🎨",
-          description: "Need something special? We create custom paints, barriers, and signs to match your project needs."
+          description: "YNM Safety provides customized hot thermoplastic paint, cold plastic paint formulations, and metal beam crash barrier solutions. We manufacture tailored road safety products to meet your specific project requirements and safety standards."
         }
       ];
 

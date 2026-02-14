@@ -329,7 +329,19 @@ export default function ProductDetailPage() {
                 "name": "YNM Safety Pan Global Trade Pvt Ltd"
               },
               "category": product.category || "Road Safety Products",
-              "url": canonicalUrl
+              "url": canonicalUrl,
+              "offers": {
+                "@type": "Offer",
+                "url": canonicalUrl,
+                "availability": "https://schema.org/InStock",
+                "price": product.price || "1",
+                "priceCurrency": "INR",
+                "priceValidUntil": "2027-12-31",
+                "seller": {
+                  "@type": "Organization",
+                  "name": "YNM Safety Pan Global Trade Pvt Ltd"
+                }
+              }
             })
           }}
         />

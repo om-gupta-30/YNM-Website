@@ -1,3 +1,47 @@
+// Simple in-memory cache for responses (server-side)
+const serverCache = new Map();
+const SERVER_CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+
+// Server-side rate limiting per IP
+const ipRateLimits = new Map();
+const IP_RATE_LIMIT_WINDOW = 60000; // 1 minute
+const IP_MAX_REQUESTS = 15; // 15 requests per minute per IP
+
+function checkIpRateLimit(ip) {
+  const now = Date.now();
+  const ipData = ipRateLimits.get(ip);
+  
+  if (!ipData || now - ipData.windowStart > IP_RATE_LIMIT_WINDOW) {
+    ipRateLimits.set(ip, { windowStart: now, count: 1 });
+    return true;
+  }
+  
+  if (ipData.count >= IP_MAX_REQUESTS) {
+    return false;
+  }
+  
+  ipData.count++;
+  return true;
+}
+
+// Clean up old cache entries periodically
+function cleanupCache() {
+  const now = Date.now();
+  for (const [key, value] of serverCache.entries()) {
+    if (now - value.timestamp > SERVER_CACHE_TTL) {
+      serverCache.delete(key);
+    }
+  }
+  for (const [ip, data] of ipRateLimits.entries()) {
+    if (now - data.windowStart > IP_RATE_LIMIT_WINDOW * 2) {
+      ipRateLimits.delete(ip);
+    }
+  }
+}
+
+// Run cleanup every 5 minutes
+setInterval(cleanupCache, 5 * 60 * 1000);
+
 export default async function handler(req, res) {
   // Set CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -12,11 +56,25 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // Get client IP for rate limiting
+  const clientIp = req.headers['x-forwarded-for']?.split(',')[0] || req.socket?.remoteAddress || 'unknown';
+  
+  // Check server-side rate limit
+  if (!checkIpRateLimit(clientIp)) {
+    return res.status(429).json({ 
+      error: 'Too many requests. Please wait a moment before trying again.',
+      retryAfter: 60
+    });
+  }
+
   const { message, conversationHistory = [], language = 'en' } = req.body;
 
   if (!message || typeof message !== 'string' || message.trim().length === 0) {
     return res.status(400).json({ error: 'Message is required and cannot be empty' });
   }
+
+  // Limit message length to prevent abuse
+  const trimmedMessage = message.trim().slice(0, 500);
 
   const apiKey = process.env.GOOGLE_GEMINI_API_KEY;
 
@@ -25,163 +83,157 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Gemini API key not configured' });
   }
 
+  // Check server-side cache first
+  const cacheKey = `${trimmedMessage.toLowerCase()}_${language}`;
+  const cachedResponse = serverCache.get(cacheKey);
+  if (cachedResponse && (Date.now() - cachedResponse.timestamp < SERVER_CACHE_TTL)) {
+    console.log('✓ Serving from server cache');
+    return res.status(200).json({ 
+      response: cachedResponse.response,
+      cached: true
+    });
+  }
+
   try {
     // Company context for the AI - with language support
     const languageInstruction = language === 'hi' 
-      ? 'Respond in Hindi (हिंदी). Provide complete, detailed answers.'
-      : 'Respond in English. Provide complete, detailed answers.';
+      ? 'Respond in Hindi (हिंदी). Be concise but complete.'
+      : 'Respond in English. Be concise but complete.';
     
-    const systemContext = `You are a customer service AI assistant for YNM Safety Pan Global Trade Pvt Ltd, a leading manufacturer and exporter of road safety products and infrastructure solutions, established in 2013.
+    const systemContext = `You are a customer service AI assistant for YNM Safety Pan Global Trade Pvt Ltd.
 
-CRITICAL INSTRUCTIONS:
-1. ALWAYS PROVIDE COMPLETE, HELPFUL ANSWERS to user questions. DO NOT ask questions back to the user. DO NOT give incomplete or cut-off responses.
-2. ONLY answer questions related to YNM Safety, our products, services, company information, or business-related queries.
-3. If asked about unrelated topics, politely say: "I can only help with questions about YNM Safety, our products, and services. How can I assist you with our company?"
-4. ALWAYS provide complete information. Never leave answers hanging or incomplete.
-
-Company Information (USE THIS TO ANSWER QUESTIONS - KNOW ALL OF THIS):
+STRICT RULES - FOLLOW THESE EXACTLY:
+1. ONLY answer questions about YNM Safety, our products, services, company, careers, or road safety/infrastructure industry topics.
+2. For ANY off-topic questions (politics, entertainment, general knowledge, coding, recipes, personal advice, other companies, etc.), respond ONLY with: "I'm the YNM Safety assistant and can only help with questions about our company, products, and services. How can I assist you with YNM Safety today?"
+3. Be concise - provide complete answers but don't over-explain. Use bullet points for lists.
+4. Never make up information not provided below.
 
 COMPANY OVERVIEW:
-- Full Name: YNM Safety Pan Global Trade Pvt Ltd
-- Established: 2013 (over 10 years in business)
+- Name: YNM Safety Pan Global Trade Pvt Ltd
+- Established: 2013 (12+ years experience)
 - Tagline: "Road Safety & Infrastructure Excellence Since 2013"
-- Core Business: Leading manufacturer and exporter of road safety products, road marking paints, metal beam crash barriers, highway signages, bitumen products, and precision metal fabrication.
+- Business: Manufacturer & exporter of road safety products, road marking paints, crash barriers, signages, bitumen, metal fabrication
 - Headquarters: Hyderabad, Telangana, India
+- Managing Director: Mr. Rishuu Jaiin (Founder, B.E. Mechanical, MBA)
 
-PRODUCTS & SERVICES (5 Major Categories):
+STATISTICS:
+- 12+ Years Experience | 500+ Projects | 50+ Export Countries | 1000+ Clients | 200+ Team Members
 
-1. ROAD MARKING PAINTS (6 Types):
-   - Hot Thermoplastic Road Marking Paint – high-performance, fast-setting paint for highways & expressways, retro-reflective glass beads, compliant with MoRTH, IRC, IS 164, BS 3262 standards
-   - Waterborne Airfield Marking Paints – for airport runways, taxiways, aprons, helipads; ICAO/FAA/DGCA compliant; eco-friendly, low-VOC
-   - Cold Plastic Paints – solvent-free, two-component, durable paint for airports, race tracks, parking lots, cycle tracks; 5-7 year service life
-   - Oil Kerb Base Paint – solvent-based kerb paint for road edges, traffic islands, loading zones; high durability
-   - Water Kerb Base Paint – eco-friendly water-based kerb paint; low-VOC, fast-drying
-   - Enamel Paint – industrial and decorative enamel paint for metal surfaces
+PRODUCTS (5 Categories):
+
+1. ROAD MARKING PAINTS (6 types):
+   • Hot Thermoplastic Road Marking Paint - high-performance paint for highways, MoRTH/IRC/IS 164/BS 3262 compliant, retro-reflective glass beads, ₹85/kg approx
+   • Waterborne Airfield Marking Paints - for airports, ICAO/FAA/DGCA compliant, eco-friendly
+   • Cold Plastic Paints (MMA) - solvent-free, 5-7 year life, for airports, race tracks, parking
+   • Oil Kerb Base Paint - for road edges, traffic islands
+   • Water Kerb Base Paint - eco-friendly, low-VOC
+   • Enamel Paint - industrial applications
 
 2. BITUMEN:
-   - Bitumen VG 40 – high-grade viscosity graded bitumen for heavy-traffic highways, expressways, toll plazas, airports, and port roads. Compliant with IS 73 and ASTM standards.
+   • Bitumen VG 40 - for heavy-traffic highways, IS 73/ASTM compliant
 
-3. METAL BEAM CRASH BARRIERS (3 Main Types + Accessories):
-   - W Beam Crash Barrier – most widely used highway guardrail system, hot-dip galvanized, for highways, bridges, medians
-   - Double W Beam Crash Barriers – enhanced protection for heavy traffic corridors, bridges, flyovers, embankments
-   - Roller Beam Crash Barriers – rotating barrel system for sharp curves, mountain roads, accident-prone zones; reduces impact severity
-   - Accessories: End Terminals, Crash Attenuators, Fish Tail End Sections, Posts, Spacer Blocks
-   - All crash barriers comply with MoRTH, IRC 119, IS 15465, AASHTO M180, and European standards
+3. METAL BEAM CRASH BARRIERS:
+   • W Beam Crash Barrier - most common, hot-dip galvanized
+   • Double W Beam - for bridges, flyovers
+   • Roller Beam - for sharp curves, mountain roads
+   • Accessories: End Terminals, Crash Attenuators, Posts
+   • Standards: MoRTH, IRC 119, IS 15465, AASHTO M180
 
 4. SIGNAGES:
-   - Retro Reflective Gantry Signage – large overhead highway signage with retro-reflective sheeting
-   - Cantilever Signage – single-arm mounted signs for expressways and toll plazas
-   - Canopy Signage – covered signage structures for toll plazas
-   - Informatory Signage – direction and information boards
-   - All signages comply with IRC 67 and MoRTH standards
+   • Retro Reflective Gantry Signage - overhead highway signs
+   • Cantilever Signage - single-arm mounted
+   • Canopy Signage - for toll plazas
+   • Informatory Signage - direction boards
+   • Standards: IRC 67, MoRTH
 
-5. FABRICATION (34+ Products):
-   - Solar Panel Structures & Frames
-   - Railway Structures & Platform Components
-   - GI Dustbins & Waste Management Solutions
-   - Rickshaw Bodies & Auto-Rickshaw Components
-   - High Mast Poles & Street Light Poles
-   - Bridge Bearings & Expansion Joints
-   - Sign Board Structures & Gantry Frames
-   - Toll Plaza Equipment & Barriers
-   - Custom Metal Fabrication (cutting, welding, galvanizing)
-
-COMPANY STATISTICS:
-- 10+ Years of Experience (since 2013)
-- 500+ Projects Delivered
-- 50+ Export Countries
-- 1000+ Happy Clients
-- 200+ Team Members
+5. FABRICATION (34 products):
+   • Solar Panel Structures & Frames
+   • Railway Structures & Platform Components
+   • GI Dustbins & Waste Management
+   • Rickshaw Bodies
+   • High Mast Poles (15-40m)
+   • Street Light Poles
+   • Solar Light Poles
+   • Bridge Bearings
+   • Expansion Joints
+   • Gantry Structures
+   • Sign Board Structures
+   • Slotted Angle Racks
+   • Heavy Duty Racks
+   • ITMS Structures (traffic management)
+   • VMS Structures (variable message signs)
+   • Adjustable Prop Jack
+   • Base Jack
+   • Cup Lock scaffolding
+   • Ledger (scaffolding)
+   • Scaffolding Parts
+   • Shuttering Materials
+   • Barricading Boards
+   • I-Girders (bridge construction)
+   • RE Panel Moulds (retaining walls)
+   • Foot Over Bridges
+   • Noise Barriers
+   • Pedestrian Guardrails
+   • Modular Pontoon
+   • Open Web Bridge Girders
+   • Gabion Wire Mesh
+   • Anchor Cones
+   • Bus Stop Shelters
+   • Toll Plaza Equipment
+   • Custom Metal Fabrication
 
 EXPORT REGIONS (50+ Countries):
-- Middle East: UAE (Dubai, Abu Dhabi), Saudi Arabia, Qatar, Oman, Kuwait, Bahrain
-- East Asia: Hong Kong (China), Shanghai, Shenzhen, Taiwan, South Korea, Japan
-- Africa: Kenya, Nigeria, South Africa, Egypt, Tanzania, Ghana, Ethiopia, Morocco
-- Southeast Asia: Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines
+- Middle East: UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain
+- East Asia: Hong Kong, China, Taiwan, South Korea, Japan
+- Africa: Kenya, Nigeria, South Africa, Egypt, Tanzania, Ghana
+- Southeast Asia: Singapore, Malaysia, Indonesia, Thailand, Vietnam
 - South Asia: Sri Lanka, Bangladesh, Nepal, Bhutan, Maldives
-- We offer FOB & CIF pricing with full export documentation support
+- Pricing: FOB & CIF with export documentation
 
-LEADERSHIP:
-- Managing Director: Mr. Rishuu Jaiin (Founder, B.E. Mechanical Engineering, MBA)
-- He leads 6 ventures under the YNM umbrella
-- Award-winning entrepreneur: Export Excellence Award (FIEO 2023), Manufacturing Excellence Award (CII 2022), Entrepreneur of the Year (Hyderabad Chamber of Commerce 2021)
+KEY TEAM:
+- Mr. Rishuu Jaiin - Managing Director
+- Ravi Kanneganti - Operations Manager
+- Pradeep Kumar - Product Head
+- Shweta Rai - Business Development
+- Bussa Rama Krishna - CFO
+- Divya Sekhar - Sr. HR Generalist
+- Om Gupta - Software Engineer
+- Gokari Shiva Kumar Reddy - Digital Marketing
 
-KEY TEAM MEMBERS:
-- Ravi Kanneganti – Operations Manager
-- Pradeep Kumar – Product Head
-- Shweta Rai – Business Development Manager
-- Om Gupta – Software Engineer
-- Gokari Shiva Kumar Reddy – Digital Marketing Specialist
-- Harikanth – Purchase Manager
-- Bussa Rama Krishna – Chief Financial Officer (CFO)
-- Divya Sekhar – Sr. Human Resource Generalist
+CERTIFICATIONS: ISO 9001:2015, MoRTH, IRC, IS, ASTM, BS, AASHTO
 
-CERTIFICATIONS & QUALITY:
-- ISO 9001:2015 certified
-- Products comply with MoRTH, IRC, IS (Indian Standards), ASTM, BS (British Standards), AASHTO
-- Strict quality control at every stage of manufacturing
-- Hot-dip galvanizing for crash barriers
-- Retro-reflective sheeting for signages
+KEY CLIENTS: GMR, NTPC, IndianOil, PowerGrid, Hyundai Glovis, Tech Mahindra, NCC, BSCPL, GVK, Prestige, Aparna Constructions, Ramoji Film City, NPCI
 
-KEY CLIENTS:
-GMR Group, NTPC, IndianOil Corporation, PowerGrid, Hyundai Glovis, Tech Mahindra, NCC, BSCPL, GVK, Prestige Group, Aparna Constructions, Alekhya Homes, NSL, NPCI, HCL, Ramoji Film City, Tom Tailor Sportswear, and many more.
-
-COMPANY TIMELINE:
-- 2013: Founded with focus on road safety products
-- 2015: Achieved ISO 9001:2015 certification
-- 2018: Expanded exports to 50+ countries
-- 2023: Celebrated 10 years, 500+ projects completed
-- 2026: PAN India expansion with new manufacturing units
-
-CONTACT INFORMATION:
+CONTACT:
 - Phone: +91 96765 75770 / +91 90002 62013
 - Email: sales@ynmsafety.com
-- HR Email: ynm.hr@ynmsafety.com (for career inquiries)
-- Address: Survey, 84P, Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081
-- Business Hours: Monday to Saturday, 10 AM to 6 PM IST (Closed on Sundays)
+- HR: ynm.hr@ynmsafety.com
+- Address: Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad 500081
+- Hours: Mon-Sat, 10 AM - 6 PM IST
 
-SOCIAL MEDIA & LINKS:
-- LinkedIn: https://www.linkedin.com/company/ynmsafety/
-- Facebook: https://www.facebook.com/profile.php?id=61583507530283
-- Instagram: https://www.instagram.com/ynm.safety/
-- Google Maps: https://maps.app.goo.gl/XVTWwaJb5YofQUv29
+WEBSITE PAGES:
+- /products - all products
+- /products/fabrication - 34 fabrication products
+- /get-quote - request quotation
+- /contact - contact form
+- /careers - job applications
+- /about - company story
+- /our-director - leadership
+- /clients - our clients
+- /foreign-collaborations - partnerships
 
-CAREERS:
-- We hire across Operations, Production, Sales, Marketing, IT, Purchase, Accounts, and HR
-- Applications accepted via the Careers page with PDF resume upload
-- Career inquiries: ynm.hr@ynmsafety.com
+CAREERS: Open positions in Operations, Sales, Marketing, IT, Purchase, Accounts, HR. Apply at /careers
 
-PRICING & QUOTES:
-- We offer competitive FOB & CIF pricing for all products
-- Contact sales@ynmsafety.com or call +91 96765 75770 for quotes
-- Quote request form available on the website at /get-quote
-
-FOREIGN COLLABORATIONS:
-- We actively seek international partnerships
-- Collaboration Areas: Manufacturing Partnerships (joint ventures, technology transfer), Distribution Networks (exclusive distributorship), Research & Development (joint product development), Quality & Compliance (ISO standards implementation)
-- Interested parties can submit inquiry at /foreign-collaborations
-
-WEBSITE PAGES (guide users to these if relevant):
-- Home: / (overview of all products and services)
-- About Us: /about (company story, timeline, values, mission)
-- Products: /products (full product catalog with categories)
-- Fabrication: /products/fabrication (34+ fabrication products)
-- Our Director: /our-director (director profile and company leadership)
-- Contact: /contact (contact form, map, office details)
-- Get Quote: /get-quote (request a quotation)
-- Careers: /careers (job applications)
-- Clients: /clients (our key clients and partners)
-- Foreign Collaborations: /foreign-collaborations
-- Investor Relations: /investor-relations
-
-${languageInstruction} Provide thorough, complete answers with all necessary details. Use bullet points when listing items. Be friendly and professional. Never cut off or truncate your responses.`;
+${languageInstruction}`;
 
     // Build conversation history for context (only user and model messages)
+    // Limit history to last 4 messages to reduce token usage
     const history = (conversationHistory || [])
       .filter(msg => msg && (msg.sender === 'user' || msg.sender === 'bot') && msg.text && msg.text.trim())
+      .slice(-4) // Only last 4 messages for context
       .map(msg => ({
         role: msg.sender === 'user' ? 'user' : 'model',
-        parts: [{ text: String(msg.text).trim() }]
+        parts: [{ text: String(msg.text).trim().slice(0, 300) }] // Limit each message
       }));
 
     // Prepare the request for Gemini API
@@ -192,7 +244,7 @@ ${languageInstruction} Provide thorough, complete answers with all necessary det
       // First message - include system context with user message
       contents.push({
         role: 'user',
-        parts: [{ text: `${systemContext}\n\nUser Question: ${message.trim()}\n\nProvide a complete, helpful answer:` }]
+        parts: [{ text: `${systemContext}\n\nQuestion: ${trimmedMessage}` }]
       });
     } else {
       // Subsequent messages - prepend system context, then add history and current message
@@ -202,38 +254,37 @@ ${languageInstruction} Provide thorough, complete answers with all necessary det
       });
       contents.push({
         role: 'model',
-        parts: [{ text: 'Understood. I will provide complete, helpful answers about YNM Safety.' }]
+        parts: [{ text: 'Understood. I will help with YNM Safety queries only.' }]
       });
       contents.push(...history);
       contents.push({
         role: 'user',
-        parts: [{ text: `${message.trim()}\n\nProvide a complete, helpful answer:` }]
+        parts: [{ text: trimmedMessage }]
       });
     }
 
     const requestBody = {
       contents: contents,
       generationConfig: {
-        temperature: 0.7,
-        topK: 40,
-        topP: 0.95,
-        maxOutputTokens: 4000, // Increased significantly to allow long, complete responses
+        temperature: 0.3, // Lower for more consistent, focused responses
+        topK: 20,
+        topP: 0.8,
+        maxOutputTokens: 1500, // Reduced - concise responses save tokens
       },
     };
 
-    // Use the latest available Gemini models (2.5 and 2.0 series)
-    // Priority: fastest and most capable first
+    // Use cost-effective models first (lite/flash variants)
+    // Priority: cheapest and fastest first, fallback to more capable
     const modelConfigs = [
-      // Latest and fastest models
-      { model: 'gemini-2.5-flash', version: 'v1beta' },
-      { model: 'gemini-2.0-flash', version: 'v1beta' },
-      { model: 'gemini-2.0-flash-001', version: 'v1beta' },
-      // More capable but slower
-      { model: 'gemini-2.5-pro', version: 'v1beta' },
-      { model: 'gemini-2.0-flash-exp', version: 'v1beta' },
-      // Lite versions as fallback
+      // Cheapest - Lite models first
       { model: 'gemini-2.0-flash-lite', version: 'v1beta' },
       { model: 'gemini-2.0-flash-lite-001', version: 'v1beta' },
+      // Fast models
+      { model: 'gemini-2.0-flash', version: 'v1beta' },
+      { model: 'gemini-2.5-flash', version: 'v1beta' },
+      // Fallback to more capable if needed
+      { model: 'gemini-1.5-flash', version: 'v1' },
+      { model: 'gemini-1.5-flash-latest', version: 'v1' },
     ];
     
     let response = null;
@@ -379,9 +430,22 @@ ${languageInstruction} Provide thorough, complete answers with all necessary det
       return res.status(500).json({ error: 'Invalid response text from AI' });
     }
 
+    const finalResponse = aiResponse.trim();
+    
+    // Cache the response for future identical queries
+    serverCache.set(cacheKey, {
+      response: finalResponse,
+      timestamp: Date.now()
+    });
+
+    // Log usage for monitoring
+    if (data.usageMetadata) {
+      console.log(`API Usage - Prompt: ${data.usageMetadata.promptTokenCount || 0}, Response: ${data.usageMetadata.candidatesTokenCount || 0}`);
+    }
+
     return res.status(200).json({ 
-      response: aiResponse.trim(),
-      usage: data.usageMetadata || null
+      response: finalResponse,
+      cached: false
     });
 
   } catch (error) {

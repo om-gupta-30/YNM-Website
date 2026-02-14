@@ -133,7 +133,7 @@ function Footer({ footerData: propFooterData }) {
           <div className="ft-logo-wrap-new ft-heartbeat">
             <Image 
               src="/assets/logo-footer.jpg" 
-              alt="YNM Safety Logo - Road Safety Products Manufacturer India" 
+              alt="YNM Safety Logo - Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | Premium Cold Plastic Paint & Metal Beam Crash Barrier Road Safety Products Telangana" 
               width={140} 
               height={100} 
               className="ft-logo-new"
@@ -172,7 +172,7 @@ function Footer({ footerData: propFooterData }) {
           <div className="ft-mascot-wrapper ft-heartbeat">
             <Image 
               src="/assets/mascot.png" 
-              alt="YNM Safety Mascot - Road Safety Products Manufacturer India" 
+              alt="YNM Safety Mascot - Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | Your Trusted Road Safety Products Partner Cold Plastic Paint Metal Beam Crash Barrier Telangana" 
               width={120} 
               height={120} 
               className="ft-mascot-image-nobg"

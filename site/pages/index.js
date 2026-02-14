@@ -263,22 +263,22 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
   return (
     <>
       <Head>
-        <title>Hot Thermoplastic Paint Manufacturers | YNM Safety</title>
+        <title>Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety - Premium Cold Plastic Paint & Metal Beam Crash Barrier Exporters Telangana</title>
         <meta 
           name="description" 
-          content="YNM Safety - Leading hot thermoplastic paint manufacturers. We manufacture cold plastic paints, road marking paints, retro-reflective signages, and metal beam crash barriers. ISO certified, exports to 50+ countries. Get quote now!"
+          content="YNM Safety - Best hot thermoplastic paint manufacturers in Hyderabad, Telangana, India. We manufacture premium cold plastic paint, thermoplastic road marking paint, metal beam crash barriers, W beam barriers & retro-reflective signages. ISO certified hot thermoplastic paint manufacturers in Hyderabad exporting road safety products to 50+ countries. Top quality road marking paint suppliers in Telangana. Get quote now!"
         />
         <meta 
           name="keywords" 
-          content="hot thermoplastic paint manufacturers, cold plastic paints, cold plastic paint manufacturers, metal beam crash barriers, metal beam crash barrier manufacturers, road signages, retro reflective signages, thermoplastic road marking paint, road marking paint manufacturers, highway safety products, w beam crash barriers, thrie beam crash barriers, road safety signages manufacturers, YNM Safety"
+          content="best hot thermoplastic paint manufacturers in Hyderabad, hot thermoplastic paint manufacturers in India, hot thermoplastic paint manufacturers in Telangana, hot thermoplastic paint suppliers Hyderabad, YNM, YNM Safety, cold plastic paint manufacturers Hyderabad, cold plastic paint manufacturers in India, metal beam crash barrier manufacturers Hyderabad, metal beam crash barrier manufacturers India, road safety products Hyderabad, thermoplastic road marking paint Hyderabad, road marking paint manufacturers Telangana, highway safety products India, w beam crash barriers Hyderabad, thrie beam crash barriers, retro reflective signages Hyderabad, road signages manufacturers India, thermoplastic paint exporters Hyderabad, cold plastic paint exporters India, crash barrier manufacturers Telangana, road safety equipment Hyderabad"
         />
         <link rel="canonical" href="https://www.ynmsafety.com/" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ynmsafety.com/" />
-        <meta property="og:title" content="Hot Thermoplastic Paint Manufacturers | YNM Safety" />
-        <meta property="og:description" content="YNM Safety - Leading hot thermoplastic paint manufacturers. We manufacture cold plastic paints, road marking paints, retro-reflective signages, and metal beam crash barriers. ISO certified, exports to 50+ countries." />
+        <meta property="og:title" content="Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety - Premium Cold Plastic Paint & Metal Beam Crash Barrier Telangana" />
+        <meta property="og:description" content="YNM Safety - Best hot thermoplastic paint manufacturers in Hyderabad, Telangana, India. We manufacture premium cold plastic paint, thermoplastic road marking paint, metal beam crash barriers & road safety products. ISO certified, exporting to 50+ countries." />
         <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
@@ -287,8 +287,8 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hot Thermoplastic Paint Manufacturers | YNM Safety" />
-        <meta name="twitter:description" content="YNM Safety - Leading hot thermoplastic paint manufacturers. We manufacture cold plastic paints, road marking paints, retro-reflective signages, and metal beam crash barriers." />
+        <meta name="twitter:title" content="Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety - Premium Cold Plastic Paint & Metal Beam Crash Barrier Telangana" />
+        <meta name="twitter:description" content="YNM Safety - Best hot thermoplastic paint manufacturers in Hyderabad, Telangana, India. Premium hot thermoplastic paint, cold plastic paint, metal beam crash barriers & road safety products. ISO certified, exporting to 50+ countries." />
         <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - Organization */}
@@ -299,10 +299,10 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "YNM Safety Pan Global Trade Pvt Ltd",
-              "alternateName": ["YNM Safety", "Hot Thermoplastic Paint Manufacturers"],
+              "alternateName": ["YNM Safety", "YNM", "Hot Thermoplastic Paint Manufacturers", "Cold Plastic Paint Manufacturers", "Metal Beam Crash Barrier Manufacturers"],
               "url": "https://www.ynmsafety.com",
               "logo": "https://www.ynmsafety.com/assets/logo-navbar.jpg",
-              "description": "YNM Safety is a leading hot thermoplastic paint manufacturer. We manufacture cold plastic paints, road marking paints, metal beam crash barriers, and retro-reflective signages for road safety. ISO certified with exports to 50+ countries.",
+              "description": "YNM Safety is the best hot thermoplastic paint manufacturer in Hyderabad, Telangana, India. We manufacture premium cold plastic paint, thermoplastic road marking paint, metal beam crash barriers, W beam crash barriers, and retro-reflective signages for road safety. ISO certified hot thermoplastic paint manufacturers in Hyderabad with exports to 50+ countries.",
               "foundingDate": "2010",
               "numberOfEmployees": {
                 "@type": "QuantitativeValue",
@@ -344,24 +344,24 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
                     "@type": "OfferCatalog",
                     "name": "Thermoplastic Paints",
                     "itemListElement": [
-                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Hot Thermoplastic Road Marking Paint"}},
-                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cold Plastic Paint"}}
+                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hot Thermoplastic Road Marking Paint", "description": "Premium thermoplastic road marking paint for highways"}},
+                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cold Plastic Paint", "description": "MMA cold plastic road marking paint for urban roads"}}
                     ]
                   },
                   {
                     "@type": "OfferCatalog",
                     "name": "Crash Barriers",
                     "itemListElement": [
-                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "W Beam Metal Crash Barrier"}},
-                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Thrie Beam Crash Barrier"}}
+                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "W Beam Metal Crash Barrier", "description": "Highway safety W-beam crash barriers"}},
+                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Thrie Beam Crash Barrier", "description": "Heavy-duty thrie beam crash barriers"}}
                     ]
                   },
                   {
                     "@type": "OfferCatalog", 
                     "name": "Road Signages",
                     "itemListElement": [
-                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Retro Reflective Signages"}},
-                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cantilever Signages"}}
+                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Retro Reflective Signages", "description": "High-visibility retro-reflective road signages"}},
+                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cantilever Signages", "description": "Cantilever signages for highway guidance"}}
                     ]
                   }
                 ]
@@ -411,7 +411,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
                 "worstRating": "1"
               },
               "areaServed": ["India", "Middle East", "Africa", "Southeast Asia"],
-              "knowsAbout": ["Hot Thermoplastic Paint Manufacturing", "Cold Plastic Paint Production", "Metal Beam Crash Barriers", "Road Safety Signages", "Highway Safety Products"]
+              "knowsAbout": ["Best Hot Thermoplastic Paint Manufacturers in Hyderabad", "Hot Thermoplastic Paint Manufacturers in India", "Hot Thermoplastic Paint Manufacturing Hyderabad", "Cold Plastic Paint Manufacturers Hyderabad", "Cold Plastic Paint Manufacturers in India", "Metal Beam Crash Barrier Manufacturers Hyderabad", "Metal Beam Crash Barriers Telangana", "Road Safety Products Hyderabad", "Road Safety Equipment India", "Thermoplastic Road Marking Paint Hyderabad", "W Beam Crash Barriers Manufacturers India", "Retro Reflective Signages Hyderabad", "Highway Safety Products Telangana", "Road Marking Paint Suppliers Hyderabad", "YNM Safety", "YNM"]
             })
           }}
         />
@@ -423,10 +423,10 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "YNM Safety - Hot Thermoplastic Paint Manufacturers",
+              "name": "YNM Safety - Hot Thermoplastic Paint Manufacturers India",
               "alternateName": "YNM Safety",
               "url": "https://www.ynmsafety.com",
-              "description": "Leading hot thermoplastic paint manufacturers. Cold plastic paints, metal beam crash barriers, and road signages.",
+              "description": "YNM Safety - Leading hot thermoplastic paint manufacturers in India. We manufacture cold plastic paint, metal beam crash barriers, road safety products and retro reflective signages.",
               "publisher": {
                 "@type": "Organization",
                 "name": "YNM Safety Pan Global Trade Pvt Ltd"
@@ -442,8 +442,9 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Product",
-              "name": "Hot Thermoplastic Road Marking Paint",
-              "description": "Premium hot thermoplastic road marking paint for highways, expressways, and city roads. High durability, retro-reflective glass beads, weather resistant. MoRTH and IRC compliant.",
+              "name": "Hot Thermoplastic Road Marking Paint by YNM Safety",
+              "description": "YNM Safety manufactures premium hot thermoplastic road marking paint for highways, expressways, and city roads. Our hot thermoplastic paint offers high durability, retro-reflective glass beads, weather resistance, and excellent road safety performance. MoRTH and IRC compliant thermoplastic paint from leading manufacturers in India.",
+              "image": "https://www.ynmsafety.com/assets/hot thermoplastci ynm safety.png",
               "brand": {
                 "@type": "Brand",
                 "name": "YNM Safety"
@@ -456,7 +457,9 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
               "material": "Thermoplastic resin with glass beads",
               "offers": {
                 "@type": "Offer",
+                "url": "https://www.ynmsafety.com/products/hot-thermoplastic-road-marking-paint",
                 "availability": "https://schema.org/InStock",
+                "price": "85",
                 "priceCurrency": "INR",
                 "priceValidUntil": "2027-12-31",
                 "seller": {
@@ -484,10 +487,10 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "Who are the best hot thermoplastic paint manufacturers?",
+                  "name": "Who are the best hot thermoplastic paint manufacturers in India?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "YNM Safety is one of the leading hot thermoplastic paint manufacturers, with ISO certification and exports to 50+ countries. We manufacture high-quality thermoplastic road marking paints compliant with MoRTH, IRC, and IS standards."
+                    "text": "YNM Safety is one of the leading hot thermoplastic paint manufacturers in India, with ISO certification and exports to 50+ countries. We manufacture high-quality hot thermoplastic paint, cold plastic paint, and thermoplastic road marking paints compliant with MoRTH, IRC, and IS standards. YNM Safety provides road safety products including metal beam crash barriers to clients worldwide."
                   }
                 },
                 {
@@ -495,7 +498,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
                   "name": "What is the difference between hot thermoplastic paint and cold plastic paint?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Hot thermoplastic paint requires heating to 180-200°C before application and offers longer durability. Cold plastic paint is applied at ambient temperature and is suitable for areas with lower traffic. YNM Safety manufactures both types for different road marking requirements."
+                    "text": "Hot thermoplastic paint requires heating to 180-200°C before application and offers longer durability with superior road safety performance. Cold plastic paint is applied at ambient temperature and is suitable for areas with lower traffic. YNM Safety, as leading hot thermoplastic paint manufacturers, manufactures both hot thermoplastic paint and cold plastic paint types for different road marking and highway safety requirements."
                   }
                 },
                 {
@@ -503,7 +506,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
                   "name": "What types of metal beam crash barriers does YNM Safety manufacture?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "YNM Safety manufactures W-Beam crash barriers, Thrie-Beam crash barriers, Double W-Beam crash barriers, and Roller Beam crash barriers. All our metal beam crash barriers meet MORTH and international safety standards."
+                    "text": "YNM Safety, leading metal beam crash barrier manufacturers, manufactures W-Beam crash barriers, Thrie-Beam crash barriers, Double W-Beam crash barriers, and Roller Beam crash barriers. All our metal beam crash barrier products meet MORTH and international road safety standards. YNM manufactures complete road safety solutions including hot thermoplastic paint and cold plastic paint."
                   }
                 },
                 {

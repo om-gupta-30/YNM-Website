@@ -38,11 +38,11 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
   const taglines = heroData?.taglines && Array.isArray(heroData.taglines) && heroData.taglines.length > 0
     ? heroData.taglines
     : [
-        "Road marking paint manufacturer & industrial exporter",
-        "Thermoplastic, cold plastic & water-based paint manufacturing",
-        "Road safety products, signages & fabrication solutions",
-        "Industrial fabrication & school furniture manufacturer",
-        "Global exporter of paints, signages & road safety systems"
+        "Leading Hot Thermoplastic Paint Manufacturers & Cold Plastic Paint Exporters",
+        "YNM Safety - Trusted Manufacturer of Road Marking Paints & Metal Beam Crash Barriers",
+        "Premium Hot Thermoplastic Paint, Cold Plastic Paint & Road Safety Products",
+        "ISO Certified Hot Thermoplastic Paint Manufacturers - Exporting to 50+ Countries",
+        "Metal Beam Crash Barrier Manufacturers & Retro Reflective Signage Solutions"
       ];
   
   const stats = heroData?.stats && Array.isArray(heroData.stats) && heroData.stats.length > 0
@@ -363,7 +363,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
             <div className="nav-logo-wrapper hero-logo-heartbeat">
               <Image 
                 src="/assets/logo-navbar.jpg" 
-                alt="YNM Safety - Hot Thermoplastic Paint Manufacturers in India | Cold Plastic Paint Manufacturers" 
+                alt="YNM Safety - Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | Premium Cold Plastic Paint | Metal Beam Crash Barrier | Road Safety Products Manufacturer & Exporter" 
                 width={50}
                 height={50}
                 className="nav-logo-new"
@@ -458,7 +458,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
           <div id="hero-image-safe">
             <Image 
               src={heroImageUrl || heroImageDefault} 
-              alt="YNM Safety - Hot Thermoplastic Paint and Road Marking Manufacturers India" 
+              alt="Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety Premium Cold Plastic Paint Manufacturing Facility | Metal Beam Crash Barrier & Thermoplastic Road Marking Paint Factory | ISO Certified Road Safety Products" 
               fill 
               id="hero-image" 
               priority 
