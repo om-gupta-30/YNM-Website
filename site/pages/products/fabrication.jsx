@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
 
-// Fabrication products data - 10 products with photos available
+// Fabrication products data - 17 products with photos available
 const fabricationProducts = [
   { 
     id: "fab1", 
@@ -80,6 +80,70 @@ const fabricationProducts = [
     description: "Versatile slotted angle storage racks for warehouses, workshops, and industrial storage.",
     specs: ["Adjustable shelves", "Heavy duty", "Powder coated", "Easy assembly"]
   },
+  { 
+    id: "fab10", 
+    name: "ITMS Structures", 
+    images: ["/assets/fabrication/itms-structures-1.jpg", "/assets/fabrication/itms-structures-2.jpg", "/assets/fabrication/itms-structures-3.jpg"], 
+    category: "Infrastructure",
+    description: "Intelligent Traffic Management System structures for smart city traffic monitoring and control.",
+    specs: ["NHAI compliant", "Sensor mounting", "Weather resistant", "Modular design"]
+  },
+  { 
+    id: "fab11", 
+    name: "Adjustable Prop Jack", 
+    images: ["/assets/fabrication/adjustable-prop-jack-1.jpg", "/assets/fabrication/adjustable-prop-jack-2.jpg", "/assets/fabrication/adjustable-prop-jack-3.jpg"], 
+    category: "Industrial",
+    description: "Heavy-duty adjustable prop jacks for construction scaffolding and temporary support systems.",
+    specs: ["Height adjustable", "High load capacity", "Rust protected", "Easy operation"]
+  },
+  { 
+    id: "fab12", 
+    name: "Barricading Boards", 
+    images: ["/assets/fabrication/barricading-boards-1.jpg", "/assets/fabrication/barricading-boards-2.jpg", "/assets/fabrication/barricading-boards-3.jpg"], 
+    category: "Infrastructure",
+    description: "Durable barricading boards for road safety, construction sites, and traffic management.",
+    specs: ["High visibility", "Reflective strips", "Weatherproof", "Stackable design"]
+  },
+  { 
+    id: "fab13", 
+    name: "Heavy Duty Racks", 
+    images: ["/assets/fabrication/heavy-duty-racks-1.jpg", "/assets/fabrication/heavy-duty-racks-2.jpg", "/assets/fabrication/heavy-duty-racks-3.jpg"], 
+    category: "Industrial",
+    description: "Industrial heavy-duty storage racks for warehouses, factories, and distribution centers.",
+    specs: ["High load capacity", "Powder coated", "Adjustable levels", "Forklift compatible"]
+  },
+  { 
+    id: "fab14", 
+    name: "Sign Board Structures", 
+    images: ["/assets/fabrication/sign-board-structures-1.jpg", "/assets/fabrication/sign-board-structures-2.jpg", "/assets/fabrication/sign-board-structures-3.jpg"], 
+    category: "Infrastructure",
+    description: "Robust sign board mounting structures for highways, expressways, and urban roads.",
+    specs: ["Wind resistant", "Galvanized steel", "Multiple sizes", "MoRTH compliant"]
+  },
+  { 
+    id: "fab15", 
+    name: "Solar Light Poles", 
+    images: ["/assets/fabrication/solar-light-poles-1.jpg", "/assets/fabrication/solar-light-poles-2.jpg", "/assets/fabrication/solar-light-poles-3.jpg"], 
+    category: "Solar",
+    description: "Solar-powered street light poles with integrated panels for eco-friendly illumination.",
+    specs: ["Solar integrated", "LED compatible", "Auto on/off", "Low maintenance"]
+  },
+  { 
+    id: "fab16", 
+    name: "Street Light Poles", 
+    images: ["/assets/fabrication/street-light-poles-1.jpg", "/assets/fabrication/street-light-poles-2.jpg", "/assets/fabrication/street-light-poles-3.jpg"], 
+    category: "Urban",
+    description: "Decorative and functional street light poles for urban roads, parks, and public spaces.",
+    specs: ["Aesthetic designs", "Corrosion resistant", "Multiple heights", "Easy installation"]
+  },
+  { 
+    id: "fab17", 
+    name: "VMS Structures", 
+    images: ["/assets/fabrication/vms-structures-1.jpg", "/assets/fabrication/vms-structures-2.jpg", "/assets/fabrication/vms-structures-3.jpg"], 
+    category: "Infrastructure",
+    description: "Variable Message Sign structures for digital highway displays and traffic information systems.",
+    specs: ["LED display mount", "Heavy duty", "Weather sealed", "NHAI approved"]
+  },
 ];
 
 // Flag to show coming soon message
@@ -127,22 +191,23 @@ export default function FabricationPage() {
   return (
     <>
       <Head>
-        <title>Fabrication Products - YNM Safety</title>
-        <meta name="description" content="Custom steel and metal fabrication solutions by YNM Safety. From structural components to precision-engineered parts for all industrial needs." />
+        <title>Fabrication Products | Hot Thermoplastic Paint Manufacturers | YNM Safety</title>
+        <meta name="description" content="YNM Safety manufactures custom steel & metal fabrication products: Solar panel structures, ITMS structures, VMS structures, street light poles, gantry structures, heavy-duty racks, sign board structures. ISO certified manufacturer, exports to 50+ countries." />
+        <meta name="keywords" content="metal fabrication, steel fabrication, solar panel structures, ITMS structures, VMS structures, street light poles, gantry structures, cantilever structures, heavy duty racks, sign board structures, camera poles, fabrication manufacturers" />
         <link rel="canonical" href="https://www.ynmsafety.com/products/fabrication" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ynmsafety.com/products/fabrication" />
-        <meta property="og:title" content="Fabrication Products - YNM Safety" />
-        <meta property="og:description" content="Custom steel and metal fabrication solutions by YNM Safety. From structural components to precision-engineered parts for all industrial needs." />
+        <meta property="og:title" content="Fabrication Products | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta property="og:description" content="YNM Safety manufactures custom steel & metal fabrication products: Solar panel structures, ITMS structures, VMS structures, street light poles, gantry structures, heavy-duty racks." />
         <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Fabrication Products - YNM Safety" />
-        <meta name="twitter:description" content="Custom steel and metal fabrication solutions by YNM Safety." />
+        <meta name="twitter:title" content="Fabrication Products | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta name="twitter:description" content="Custom steel & metal fabrication: Solar structures, ITMS, VMS, street light poles, gantry structures, heavy-duty racks." />
         <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - BreadcrumbList */}
@@ -171,6 +236,40 @@ export default function FabricationPage() {
                   "name": "Fabrication",
                   "item": "https://www.ynmsafety.com/products/fabrication"
                 }
+              ]
+            })
+          }}
+        />
+        
+        {/* Schema Markup - ItemList for Fabrication Products */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": "YNM Safety Fabrication Products",
+              "description": "Custom steel and metal fabrication products for infrastructure, solar, and industrial applications",
+              "url": "https://www.ynmsafety.com/products/fabrication",
+              "numberOfItems": 17,
+              "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Solar Panel Structures"},
+                {"@type": "ListItem", "position": 2, "name": "ITMS Structures"},
+                {"@type": "ListItem", "position": 3, "name": "VMS Structures"},
+                {"@type": "ListItem", "position": 4, "name": "Street Light Poles"},
+                {"@type": "ListItem", "position": 5, "name": "Solar Light Poles"},
+                {"@type": "ListItem", "position": 6, "name": "Gantry Structures"},
+                {"@type": "ListItem", "position": 7, "name": "Cantilever Structures"},
+                {"@type": "ListItem", "position": 8, "name": "Sign Board Structures"},
+                {"@type": "ListItem", "position": 9, "name": "Heavy Duty Racks"},
+                {"@type": "ListItem", "position": 10, "name": "Slotted Angle Racks"},
+                {"@type": "ListItem", "position": 11, "name": "Camera Poles"},
+                {"@type": "ListItem", "position": 12, "name": "Parking Signages"},
+                {"@type": "ListItem", "position": 13, "name": "Barricading Boards"},
+                {"@type": "ListItem", "position": 14, "name": "Adjustable Prop Jack"},
+                {"@type": "ListItem", "position": 15, "name": "Railway Structures"},
+                {"@type": "ListItem", "position": 16, "name": "GI Dustbins"},
+                {"@type": "ListItem", "position": 17, "name": "E-Rickshaw Frames"}
               ]
             })
           }}
@@ -221,7 +320,7 @@ export default function FabricationPage() {
             <p>Custom steel and metal fabrication solutions for infrastructure, construction, and industrial applications</p>
             <div className="fabrication-hero-stats">
               <div className="fabrication-stat">
-                <span className="fabrication-stat-number">9+</span>
+                <span className="fabrication-stat-number">17+</span>
                 <span className="fabrication-stat-label">Products</span>
               </div>
               <div className="fabrication-stat">

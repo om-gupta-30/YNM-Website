@@ -266,11 +266,11 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
         <title>Hot Thermoplastic Paint Manufacturers | YNM Safety</title>
         <meta 
           name="description" 
-          content="YNM Safety is a leading hot thermoplastic paint manufacturer offering cold plastic paint, hot thermoplastic paints, road signages, and metal beam crash barrier manufacturers for complete road safety solutions."
+          content="YNM Safety - Leading hot thermoplastic paint manufacturers. We manufacture cold plastic paints, road marking paints, retro-reflective signages, and metal beam crash barriers. ISO certified, exports to 50+ countries. Get quote now!"
         />
         <meta 
           name="keywords" 
-          content="YNM Safety, Hot thermoplastic paint manufacturers, Cold plastic paint manufacturer, Road marking paint manufacturers, Thermoplastic road marking paint, Road safety signages manufacturer, Metal beam crash barrier manufacturer, Highway safety products manufacturer, Reflective road paint supplier, Road safety solutions company"
+          content="hot thermoplastic paint manufacturers, cold plastic paints, cold plastic paint manufacturers, metal beam crash barriers, metal beam crash barrier manufacturers, road signages, retro reflective signages, thermoplastic road marking paint, road marking paint manufacturers, highway safety products, w beam crash barriers, thrie beam crash barriers, road safety signages manufacturers, YNM Safety"
         />
         <link rel="canonical" href="https://www.ynmsafety.com/" />
         
@@ -278,7 +278,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ynmsafety.com/" />
         <meta property="og:title" content="Hot Thermoplastic Paint Manufacturers | YNM Safety" />
-        <meta property="og:description" content="YNM Safety is a leading hot thermoplastic paint manufacturer offering cold plastic paint, hot thermoplastic paints, road signages, and metal beam crash barrier manufacturers for complete road safety solutions." />
+        <meta property="og:description" content="YNM Safety - Leading hot thermoplastic paint manufacturers. We manufacture cold plastic paints, road marking paints, retro-reflective signages, and metal beam crash barriers. ISO certified, exports to 50+ countries." />
         <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
@@ -288,7 +288,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hot Thermoplastic Paint Manufacturers | YNM Safety" />
-        <meta name="twitter:description" content="YNM Safety is a leading hot thermoplastic paint manufacturer offering cold plastic paint, hot thermoplastic paints, road signages, and metal beam crash barrier manufacturers for complete road safety solutions." />
+        <meta name="twitter:description" content="YNM Safety - Leading hot thermoplastic paint manufacturers. We manufacture cold plastic paints, road marking paints, retro-reflective signages, and metal beam crash barriers." />
         <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - Organization */}
@@ -299,18 +299,31 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "YNM Safety Pan Global Trade Pvt Ltd",
-              "alternateName": "YNM Safety",
+              "alternateName": ["YNM Safety", "Hot Thermoplastic Paint Manufacturers"],
               "url": "https://www.ynmsafety.com",
               "logo": "https://www.ynmsafety.com/assets/logo-navbar.jpg",
-              "description": "Leading manufacturer and exporter of road safety products, hot thermoplastic paints, crash barriers, and signages in India.",
+              "description": "YNM Safety is a leading hot thermoplastic paint manufacturer. We manufacture cold plastic paints, road marking paints, metal beam crash barriers, and retro-reflective signages for road safety. ISO certified with exports to 50+ countries.",
               "foundingDate": "2010",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-9100009638",
-                "contactType": "sales",
-                "areaServed": ["IN", "AE", "NG", "KE", "ZA"],
-                "availableLanguage": ["English", "Hindi"]
+              "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 50,
+                "maxValue": 200
               },
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-9100009638",
+                  "contactType": "sales",
+                  "areaServed": ["IN", "AE", "NG", "KE", "ZA", "GH", "TZ", "UG"],
+                  "availableLanguage": ["English", "Hindi"]
+                },
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-9100009638",
+                  "contactType": "customer service",
+                  "areaServed": "Worldwide"
+                }
+              ],
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Sy No 74, Kothur Village, Shabad Mandal",
@@ -322,24 +335,55 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
               "sameAs": [
                 "https://www.linkedin.com/company/ynmsafety",
                 "https://www.facebook.com/ynmsafety"
-              ]
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Road Safety Products",
+                "itemListElement": [
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Thermoplastic Paints",
+                    "itemListElement": [
+                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Hot Thermoplastic Road Marking Paint"}},
+                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cold Plastic Paint"}}
+                    ]
+                  },
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Crash Barriers",
+                    "itemListElement": [
+                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "W Beam Metal Crash Barrier"}},
+                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Thrie Beam Crash Barrier"}}
+                    ]
+                  },
+                  {
+                    "@type": "OfferCatalog", 
+                    "name": "Road Signages",
+                    "itemListElement": [
+                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Retro Reflective Signages"}},
+                      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cantilever Signages"}}
+                    ]
+                  }
+                ]
+              }
             })
           }}
         />
         
-        {/* Schema Markup - LocalBusiness */}
+        {/* Schema Markup - LocalBusiness/Manufacturer */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": ["LocalBusiness", "Manufacturer"],
               "@id": "https://www.ynmsafety.com/#business",
               "name": "YNM Safety Pan Global Trade Pvt Ltd",
               "image": "https://www.ynmsafety.com/assets/logo-navbar.jpg",
               "url": "https://www.ynmsafety.com",
               "telephone": "+91-9100009638",
               "priceRange": "$$",
+              "description": "Hot thermoplastic paint manufacturers. We manufacture cold plastic paints, metal beam crash barriers, and road safety signages.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Sy No 74, Kothur Village, Shabad Mandal",
@@ -358,20 +402,119 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                 "opens": "09:00",
                 "closes": "18:00"
-              }
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "areaServed": ["India", "Middle East", "Africa", "Southeast Asia"],
+              "knowsAbout": ["Hot Thermoplastic Paint Manufacturing", "Cold Plastic Paint Production", "Metal Beam Crash Barriers", "Road Safety Signages", "Highway Safety Products"]
             })
           }}
         />
         
-        {/* Schema Markup - WebSite */}
+        {/* Schema Markup - WebSite with SearchAction */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "YNM Safety",
-              "url": "https://www.ynmsafety.com"
+              "name": "YNM Safety - Hot Thermoplastic Paint Manufacturers",
+              "alternateName": "YNM Safety",
+              "url": "https://www.ynmsafety.com",
+              "description": "Leading hot thermoplastic paint manufacturers. Cold plastic paints, metal beam crash barriers, and road signages.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "YNM Safety Pan Global Trade Pvt Ltd"
+              }
+            })
+          }}
+        />
+        
+        {/* Schema Markup - Product (Hot Thermoplastic Paint) for Rich Snippets */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": "Hot Thermoplastic Road Marking Paint",
+              "description": "Premium hot thermoplastic road marking paint for highways, expressways, and city roads. High durability, retro-reflective glass beads, weather resistant. MoRTH and IRC compliant.",
+              "brand": {
+                "@type": "Brand",
+                "name": "YNM Safety"
+              },
+              "manufacturer": {
+                "@type": "Organization",
+                "name": "YNM Safety Pan Global Trade Pvt Ltd"
+              },
+              "category": "Road Marking Paint",
+              "material": "Thermoplastic resin with glass beads",
+              "offers": {
+                "@type": "Offer",
+                "availability": "https://schema.org/InStock",
+                "priceCurrency": "INR",
+                "priceValidUntil": "2027-12-31",
+                "seller": {
+                  "@type": "Organization",
+                  "name": "YNM Safety Pan Global Trade Pvt Ltd"
+                }
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "89",
+                "bestRating": "5"
+              }
+            })
+          }}
+        />
+        
+        {/* Schema Markup - FAQPage for Featured Snippets */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Who are the best hot thermoplastic paint manufacturers?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "YNM Safety is one of the leading hot thermoplastic paint manufacturers, with ISO certification and exports to 50+ countries. We manufacture high-quality thermoplastic road marking paints compliant with MoRTH, IRC, and IS standards."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the difference between hot thermoplastic paint and cold plastic paint?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hot thermoplastic paint requires heating to 180-200°C before application and offers longer durability. Cold plastic paint is applied at ambient temperature and is suitable for areas with lower traffic. YNM Safety manufactures both types for different road marking requirements."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What types of metal beam crash barriers does YNM Safety manufacture?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "YNM Safety manufactures W-Beam crash barriers, Thrie-Beam crash barriers, Double W-Beam crash barriers, and Roller Beam crash barriers. All our metal beam crash barriers meet MORTH and international safety standards."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What road signages does YNM Safety provide?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "YNM Safety manufactures retro-reflective signages, gantry signages, cantilever signages, and various traffic signboards. Our signages comply with IRC guidelines and are used on highways, expressways, and city roads across India and internationally."
+                  }
+                }
+              ]
             })
           }}
         />

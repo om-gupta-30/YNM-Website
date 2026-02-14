@@ -84,22 +84,23 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Us - YNM Safety Pan Global Trade Pvt Ltd</title>
-        <meta name="description" content="YNM Safety Pan Global Trade Pvt Ltd is a trusted manufacturer and exporter of high-quality road safety and infrastructure products, delivering reliable solutions for highways, urban roads, and industrial projects worldwide." />
+        <title>About Us | Hot Thermoplastic Paint Manufacturers | YNM Safety</title>
+        <meta name="description" content="YNM Safety - Leading hot thermoplastic paint manufacturers since 2013. We manufacture cold plastic paints, metal beam crash barriers, road signages, and fabrication products. ISO certified, exporting to 50+ countries. Trusted by NHAI, state PWDs, and international contractors." />
+        <meta name="keywords" content="about YNM Safety, hot thermoplastic paint manufacturers, cold plastic paint manufacturers, metal beam crash barrier manufacturers, road safety company, thermoplastic paint company, highway safety products manufacturer" />
         <link rel="canonical" href="https://www.ynmsafety.com/about" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ynmsafety.com/about" />
-        <meta property="og:title" content="About Us - YNM Safety Pan Global Trade Pvt Ltd" />
-        <meta property="og:description" content="YNM Safety Pan Global Trade Pvt Ltd is a trusted manufacturer and exporter of high-quality road safety and infrastructure products, delivering reliable solutions for highways, urban roads, and industrial projects worldwide." />
+        <meta property="og:title" content="About Us | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta property="og:description" content="YNM Safety - Leading hot thermoplastic paint manufacturers since 2013. We manufacture cold plastic paints, metal beam crash barriers, road signages. ISO certified, exporting to 50+ countries." />
         <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Us - YNM Safety Pan Global Trade Pvt Ltd" />
-        <meta name="twitter:description" content="YNM Safety Pan Global Trade Pvt Ltd is a trusted manufacturer and exporter of high-quality road safety and infrastructure products." />
+        <meta name="twitter:title" content="About Us | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta name="twitter:description" content="YNM Safety - Leading hot thermoplastic paint manufacturers. We manufacture cold plastic paints, metal beam crash barriers, and road signages." />
         <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - AboutPage */}

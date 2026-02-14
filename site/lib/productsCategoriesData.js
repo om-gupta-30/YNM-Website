@@ -6510,6 +6510,62 @@ export const productsData = {
             desc: "Versatile slotted angle storage racks for warehouses, workshops, and industrial storage.",
             image: "/assets/fabrication/slotted-angle-rack-1.png",
             specs: ["Adjustable shelves", "Heavy duty", "Powder coated", "Easy assembly"]
+          },
+          {
+            id: "fab10",
+            name: "ITMS Structures",
+            desc: "Intelligent Traffic Management System structures for smart city traffic monitoring and control.",
+            image: "/assets/fabrication/itms-structures-1.jpg",
+            specs: ["NHAI compliant", "Sensor mounting", "Weather resistant", "Modular design"]
+          },
+          {
+            id: "fab11",
+            name: "Adjustable Prop Jack",
+            desc: "Heavy-duty adjustable prop jacks for construction scaffolding and temporary support systems.",
+            image: "/assets/fabrication/adjustable-prop-jack-1.jpg",
+            specs: ["Height adjustable", "High load capacity", "Rust protected", "Easy operation"]
+          },
+          {
+            id: "fab12",
+            name: "Barricading Boards",
+            desc: "Durable barricading boards for road safety, construction sites, and traffic management.",
+            image: "/assets/fabrication/barricading-boards-1.jpg",
+            specs: ["High visibility", "Reflective strips", "Weatherproof", "Stackable design"]
+          },
+          {
+            id: "fab13",
+            name: "Heavy Duty Racks",
+            desc: "Industrial heavy-duty storage racks for warehouses, factories, and distribution centers.",
+            image: "/assets/fabrication/heavy-duty-racks-1.jpg",
+            specs: ["High load capacity", "Powder coated", "Adjustable levels", "Forklift compatible"]
+          },
+          {
+            id: "fab14",
+            name: "Sign Board Structures",
+            desc: "Robust sign board mounting structures for highways, expressways, and urban roads.",
+            image: "/assets/fabrication/sign-board-structures-1.jpg",
+            specs: ["Wind resistant", "Galvanized steel", "Multiple sizes", "MoRTH compliant"]
+          },
+          {
+            id: "fab15",
+            name: "Solar Light Poles",
+            desc: "Solar-powered street light poles with integrated panels for eco-friendly illumination.",
+            image: "/assets/fabrication/solar-light-poles-1.jpg",
+            specs: ["Solar integrated", "LED compatible", "Auto on/off", "Low maintenance"]
+          },
+          {
+            id: "fab16",
+            name: "Street Light Poles",
+            desc: "Decorative and functional street light poles for urban roads, parks, and public spaces.",
+            image: "/assets/fabrication/street-light-poles-1.jpg",
+            specs: ["Aesthetic designs", "Corrosion resistant", "Multiple heights", "Easy installation"]
+          },
+          {
+            id: "fab17",
+            name: "VMS Structures",
+            desc: "Variable Message Sign structures for digital highway displays and traffic information systems.",
+            image: "/assets/fabrication/vms-structures-1.jpg",
+            specs: ["LED display mount", "Heavy duty", "Weather sealed", "NHAI approved"]
           }
         ]
       }

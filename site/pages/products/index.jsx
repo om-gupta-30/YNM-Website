@@ -99,22 +99,23 @@ export default function ProductsPage() {
   return (
     <>
       <Head>
-        <title>Our Products - YNM Safety</title>
-        <meta name="description" content="Explore our range of premium paints, metal fabrication, and school furniture products." />
+        <title>Our Products | Hot Thermoplastic Paint Manufacturers | YNM Safety</title>
+        <meta name="description" content="Explore YNM Safety's complete range of road safety products: Hot thermoplastic paints, cold plastic paints, metal beam crash barriers (W-beam, Thrie-beam), retro-reflective signages, bitumen. ISO certified manufacturer, exports to 50+ countries." />
+        <meta name="keywords" content="hot thermoplastic paint, cold plastic paint, metal beam crash barriers, w beam crash barrier, road signages, retro reflective signages, road marking paint, highway safety products, thermoplastic paint manufacturers, crash barrier manufacturers" />
         <link rel="canonical" href="https://www.ynmsafety.com/products" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ynmsafety.com/products" />
-        <meta property="og:title" content="Our Products - YNM Safety" />
-        <meta property="og:description" content="Explore our range of premium paints, metal fabrication, road safety products, and school furniture." />
+        <meta property="og:title" content="Our Products | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta property="og:description" content="Explore YNM Safety's complete range of road safety products: Hot thermoplastic paints, cold plastic paints, metal beam crash barriers, retro-reflective signages. ISO certified manufacturer." />
         <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Our Products - YNM Safety" />
-        <meta name="twitter:description" content="Explore our range of premium paints, metal fabrication, road safety products, and school furniture." />
+        <meta name="twitter:title" content="Our Products | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta name="twitter:description" content="Explore YNM Safety's complete range of road safety products: Hot thermoplastic paints, cold plastic paints, metal beam crash barriers, retro-reflective signages." />
         <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - ItemList for Products */}
@@ -124,30 +125,86 @@ export default function ProductsPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ItemList",
-              "name": "YNM Safety Products",
-              "description": "Complete range of road safety and infrastructure products",
+              "name": "YNM Safety Road Safety Products",
+              "description": "Complete range of hot thermoplastic paints, cold plastic paints, metal beam crash barriers, and road signages manufactured by YNM Safety",
               "url": "https://www.ynmsafety.com/products",
-              "numberOfItems": 10,
+              "numberOfItems": 16,
               "itemListElement": [
                 {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Hot Thermoplastic Road Marking Paint",
+                  "description": "Premium hot thermoplastic paint for highway road markings",
                   "url": "https://www.ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufacturers"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
-                  "name": "W Beam Crash Barriers",
-                  "url": "https://www.ynmsafety.com/products/w-beam-crash-barrier-manufacturers"
+                  "name": "Cold Plastic Paint",
+                  "description": "High-quality cold plastic paint for road marking applications",
+                  "url": "https://www.ynmsafety.com/products/cold-plastic-paints-manufacturers"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
-                  "name": "Retro Reflective Signages",
+                  "name": "W Beam Metal Crash Barrier",
+                  "description": "W-beam metal crash barriers for highway safety",
+                  "url": "https://www.ynmsafety.com/products/w-beam-crash-barrier-manufacturers"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Thrie Beam Crash Barrier",
+                  "description": "Thrie-beam crash barriers for enhanced road protection",
+                  "url": "https://www.ynmsafety.com/products/thrie-beam-crash-barrier-manufacturers"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "name": "Double W Beam Crash Barrier",
+                  "description": "Double W-beam metal crash barriers for maximum protection",
+                  "url": "https://www.ynmsafety.com/products/double-w-beam-crash-barriers-manufacturers"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "name": "Retro Reflective Gantry Signage",
+                  "description": "Retro-reflective signages for highway gantries",
                   "url": "https://www.ynmsafety.com/products/retro-reflective-gantry-signage-manufacturers"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 7,
+                  "name": "Cantilever Signage",
+                  "description": "Cantilever road signages for traffic guidance",
+                  "url": "https://www.ynmsafety.com/products/cantilever-signage-manufacturers"
                 }
               ]
+            })
+          }}
+        />
+        
+        {/* Schema Markup - CollectionPage */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": "Road Safety Products by YNM Safety",
+              "description": "Browse our complete collection of hot thermoplastic paints, cold plastic paints, metal beam crash barriers, and road signages",
+              "url": "https://www.ynmsafety.com/products",
+              "mainEntity": {
+                "@type": "ItemList",
+                "name": "Product Categories",
+                "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": "Paints", "description": "Hot thermoplastic paint, cold plastic paint, road marking paints"},
+                  {"@type": "ListItem", "position": 2, "name": "Crash Barriers", "description": "W-beam, Thrie-beam, Double W-beam metal crash barriers"},
+                  {"@type": "ListItem", "position": 3, "name": "Signages", "description": "Retro-reflective signages, gantry signages, cantilever signages"},
+                  {"@type": "ListItem", "position": 4, "name": "Bitumen", "description": "VG-40, VG-30 bitumen products"},
+                  {"@type": "ListItem", "position": 5, "name": "Fabrication", "description": "Solar structures, ITMS, VMS, street light poles"}
+                ]
+              }
             })
           }}
         />
@@ -276,9 +333,9 @@ export default function ProductsPage() {
                     </div>
                     <div className="product-card-content">
                       <h3>Fabrication Products</h3>
-                      <p>Solar Panel Structures, Railway Structures, GI Dustbins, Rickshaw & more coming soon...</p>
+                      <p>Solar Structures, ITMS, VMS, Street Light Poles, Heavy Duty Racks, Gantry & more...</p>
                       <div className="product-card-specs">
-                        <span className="spec-tag">4+ Products</span>
+                        <span className="spec-tag">17+ Products</span>
                         <span className="spec-tag">Custom Solutions</span>
                       </div>
                       <div className="product-card-footer">

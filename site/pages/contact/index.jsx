@@ -249,22 +249,23 @@ export default function ContactPage() {
       )}
 
       <Head>
-        <title>Contact Us | YNM Safety Pan Global Trade Pvt Ltd</title>
-        <meta name="description" content="Get in touch with YNM Safety for premium paints, fabrications, and school furniture. Contact us for quotes, exports, and partnerships." />
+        <title>Contact Us | Hot Thermoplastic Paint Manufacturers | YNM Safety</title>
+        <meta name="description" content="Contact YNM Safety - Hot thermoplastic paint manufacturers. Get quotes for cold plastic paints, metal beam crash barriers, road signages. Call +91-9100009638 or email sales@ynmsafety.com. Export inquiries welcome." />
+        <meta name="keywords" content="contact YNM Safety, hot thermoplastic paint quote, cold plastic paint supplier, metal crash barrier manufacturers contact, road safety products quote" />
         <link rel="canonical" href="https://www.ynmsafety.com/contact" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ynmsafety.com/contact" />
-        <meta property="og:title" content="Contact Us | YNM Safety Pan Global Trade Pvt Ltd" />
-        <meta property="og:description" content="Get in touch with YNM Safety for premium paints, fabrications, and school furniture. Contact us for quotes, exports, and partnerships." />
+        <meta property="og:title" content="Contact Us | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta property="og:description" content="Contact YNM Safety for hot thermoplastic paints, cold plastic paints, metal beam crash barriers, road signages. Call +91-9100009638 or email sales@ynmsafety.com." />
         <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Us | YNM Safety Pan Global Trade Pvt Ltd" />
-        <meta name="twitter:description" content="Get in touch with YNM Safety for premium paints, fabrications, and school furniture." />
+        <meta name="twitter:title" content="Contact Us | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta name="twitter:description" content="Contact YNM Safety for hot thermoplastic paints, cold plastic paints, metal beam crash barriers. Call +91-9100009638." />
         <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - ContactPage */}
