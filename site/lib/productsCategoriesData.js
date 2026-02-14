@@ -12,9 +12,9 @@ export const productsData = {
         products: [
           {
             id: "p1",
-            slug: "hot-thermoplastic-road-marking-paint-manufactures",
+            slug: "hot-thermoplastic-road-marking-paint-manufacturers",
             name: "Hot Thermoplastic Road Marking Paint",
-            shortDesc: "High-performance thermoplastic road marking paint manufactures for highways, expressways & urban road safety.",
+            shortDesc: "High-performance thermoplastic road marking paint manufacturers for highways, expressways & urban road safety.",
             desc: "Premium hot thermoplastic road marking paint for highways and roads. Excellent durability and retro-reflective properties.",
             image: "/assets/hot thermoplastci ynm safety.png",
             heroImage: "/assets/hot thermoplastci ynm safety.png",
@@ -22,14 +22,14 @@ export const productsData = {
             
             // SEO Meta Information
             meta: {
-              title: "Hot Thermoplastic Road Marking Paint Manufactures | YNM Safety",
-              description: "Hot thermoplastic road marking paint manufactures offering durable and high-visibility solutions. YNM Safety manufactures thermoplastic paint for highways, expressways & city roads.",
-              slug: "/hot-thermoplastic-road-marking-paint-manufactures"
+              title: "Hot Thermoplastic Road Marking Paint Manufacturers | YNM Safety",
+              description: "Hot thermoplastic road marking paint manufacturers offering durable and high-visibility solutions. YNM Safety manufactures thermoplastic paint for highways, expressways & city roads.",
+              slug: "/hot-thermoplastic-road-marking-paint-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is among the reliable hot thermoplastic road marking paint manufactures, delivering premium-quality thermoplastic paints designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity.\n\nAs one of the trusted thermoplastic paint manufactures, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects.",
-            detailedDescription: "YNM Safety is among the reliable hot thermoplastic road marking paint manufactures, delivering premium-quality thermoplastic paints designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity.\n\nAs one of the trusted thermoplastic paint manufactures, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects.",
+            overview: "YNM Safety is among the reliable hot thermoplastic road marking paint manufacturers, delivering premium-quality thermoplastic paints designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity.\n\nAs one of the trusted thermoplastic paint manufacturers, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects.",
+            detailedDescription: "YNM Safety is among the reliable hot thermoplastic road marking paint manufacturers, delivering premium-quality thermoplastic paints designed for long-lasting and high-visibility road markings. We manufacture thermoplastic road marking paints widely used on highways, expressways, city roads, junctions, pedestrian crossings, and parking areas.\n\nOur hot thermoplastic paints are produced using high-grade resins, pigments, fillers, and reflective glass beads. YNM Safety manufactures thermoplastic road marking paint that ensures excellent adhesion, fast setting, and superior night-time reflectivity.\n\nAs one of the trusted thermoplastic paint manufacturers, YNM Safety follows strict quality control systems and manufactures products compliant with MoRTH, IRC, and IS standards for infrastructure and road safety projects.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -107,9 +107,9 @@ export const productsData = {
                 "Improves road visibility and lane discipline",
                 "Enhances night-time and wet-weather driving safety",
                 "Cost-effective road marking solution",
-                "Trusted thermoplastic paint manufactures – YNM Safety",
+                "Trusted thermoplastic paint manufacturers – YNM Safety",
                 "Suitable for bulk supply and export requirements",
-                "Manufactures as per government road safety standards"
+                "Manufactured as per government road safety standards"
               ]
             },
             
@@ -126,9 +126,9 @@ export const productsData = {
               "Improves road visibility and lane discipline",
               "Enhances night-time and wet-weather driving safety",
               "Cost-effective road marking solution",
-              "Trusted thermoplastic paint manufactures – YNM Safety",
+              "Trusted thermoplastic paint manufacturers – YNM Safety",
               "Suitable for bulk supply and export requirements",
-              "Manufactures as per government road safety standards"
+              "Manufactured as per government road safety standards"
             ],
             
             // Application Areas with images and hover effects
@@ -138,7 +138,7 @@ export const productsData = {
                 title: "Highways & Expressways",
                 description: "YNM Hot Thermoplastic Paints deliver durable and high-visibility road markings for highways and expressways.",
                 image: "/assets/ynm safety hot thermoplastic highway and expressways marking paints.png",
-                details: "YNM Safety is a trusted name among hot thermoplastic paints manufactures for long-lasting highway road markings. YNM thermoplastic paints provide excellent adhesion, skid resistance, and night-time visibility under heavy traffic."
+                details: "YNM Safety is a trusted name among hot thermoplastic paints manufacturers for long-lasting highway road markings. YNM thermoplastic paints provide excellent adhesion, skid resistance, and night-time visibility under heavy traffic."
               },
               {
                 id: "app2",
@@ -152,7 +152,7 @@ export const productsData = {
                 title: "Pedestrian Crossings",
                 description: "YNM hot thermoplastic paints enhance visibility and safety at pedestrian crossings.",
                 image: "/assets/ynm safety hot thermoplastic pedestian crossings marking paints.jpeg",
-                details: "YNM Safety, one of the leading hot thermoplastic paints manufactures, supplies durable road marking solutions for pedestrian crossings. YNM thermoplastic paints offer reflective and anti-skid surfaces for safer pedestrian movement."
+                details: "YNM Safety, one of the leading hot thermoplastic paints manufacturers, supplies durable road marking solutions for pedestrian crossings. YNM thermoplastic paints offer reflective and anti-skid surfaces for safer pedestrian movement."
               },
               {
                 id: "app4",
@@ -166,7 +166,7 @@ export const productsData = {
                 title: "Industrial Roads & Runways",
                 description: "YNM thermoplastic paints deliver heavy-duty performance for industrial roads and runways.",
                 image: "/assets/ynm safety hot thermoplastic runway marking paints.jpeg",
-                details: "YNM Safety is among the reliable hot thermoplastic paints manufactures for industrial and runway applications. YNM hot thermoplastic paints offer superior durability, chemical resistance, and performance under heavy vehicle loads."
+                details: "YNM Safety is among the reliable hot thermoplastic paints manufacturers for industrial and runway applications. YNM hot thermoplastic paints offer superior durability, chemical resistance, and performance under heavy vehicle loads."
               },
               {
                 id: "app6",
@@ -181,7 +181,7 @@ export const productsData = {
               {
                 title: "Highways & Expressways",
                 short: "YNM Hot Thermoplastic Paints deliver durable and high-visibility road markings for highways and expressways.",
-                hover: "YNM Safety is a trusted name among hot thermoplastic paints manufactures for long-lasting highway road markings. YNM thermoplastic paints provide excellent adhesion, skid resistance, and night-time visibility under heavy traffic.",
+                hover: "YNM Safety is a trusted name among hot thermoplastic paints manufacturers for long-lasting highway road markings. YNM thermoplastic paints provide excellent adhesion, skid resistance, and night-time visibility under heavy traffic.",
                 image: "/assets/ynm safety hot thermoplastic highway and expressways marking paints.png"
               },
               {
@@ -193,7 +193,7 @@ export const productsData = {
               {
                 title: "Pedestrian Crossings",
                 short: "YNM hot thermoplastic paints enhance visibility and safety at pedestrian crossings.",
-                hover: "YNM Safety, one of the leading hot thermoplastic paints manufactures, supplies durable road marking solutions for pedestrian crossings. YNM thermoplastic paints offer reflective and anti-skid surfaces for safer pedestrian movement.",
+                hover: "YNM Safety, one of the leading hot thermoplastic paints manufacturers, supplies durable road marking solutions for pedestrian crossings. YNM thermoplastic paints offer reflective and anti-skid surfaces for safer pedestrian movement.",
                 image: "/assets/ynm safety hot thermoplastic pedestian crossings marking paints.jpeg"
               },
               {
@@ -205,7 +205,7 @@ export const productsData = {
               {
                 title: "Industrial Roads & Runways",
                 short: "YNM thermoplastic paints deliver heavy-duty performance for industrial roads and runways.",
-                hover: "YNM Safety is among the reliable hot thermoplastic paints manufactures for industrial and runway applications. YNM hot thermoplastic paints offer superior durability, chemical resistance, and performance under heavy vehicle loads.",
+                hover: "YNM Safety is among the reliable hot thermoplastic paints manufacturers for industrial and runway applications. YNM hot thermoplastic paints offer superior durability, chemical resistance, and performance under heavy vehicle loads.",
                 image: "/assets/ynm safety hot thermoplastic runway marking paints.jpeg"
               },
               {
@@ -447,395 +447,6 @@ export const productsData = {
             ]
           },
           {
-            id: "p2",
-            slug: "waterborne-airfield-marking-paints-manufacturers",
-            name: "Waterborne Airfield Marking Paints",
-            shortDesc: "YNM Safety manufactures premium waterborne airfield marking paints engineered for superior visibility, fast drying, and long-lasting performance across airport and aviation infrastructure.",
-            desc: "YNM Safety manufactures premium waterborne airfield marking paints engineered for superior visibility, fast drying, and long-lasting performance across airport and aviation infrastructure.",
-            image: "/assets/YNM Safety Runways.png",
-            heroImage: "/assets/YNM Safety Runways.png",
-            specs: ["Waterborne base", "Fast drying", "High visibility", "Weather resistant", "Strong adhesion", "Low VOC"],
-            
-            // SEO Meta Information
-            meta: {
-              title: "Waterborne Airfield Marking Paints Manufacturers | Airport Marking Paints | YNM Safety",
-              description: "YNM Safety manufactures high-quality waterborne airfield marking paints for runways, taxiways, aprons, and helipads, offering durable, fast-drying, and high-visibility airport marking solutions.",
-              slug: "/waterborne-airfield-marking-paints-manufacturers"
-            },
-            
-            // Product Overview
-            overview: "YNM Safety is a trusted name among waterborne airfield marking paints manufactures, delivering high-performance airport marking solutions for modern aviation infrastructure. As leading YNM Safety manufactures, our YNM Safety waterborne paints are specially formulated for runways, taxiways, aprons, and helipads, ensuring clear guidance, safety, and operational efficiency in critical airfield environments. Our YNM Safety Waterborne Airfield Marking Paints manufactures products offer excellent adhesion, fast curing, and long service life, making them ideal for high-traffic airport surfaces exposed to aircraft movement and harsh weather conditions.",
-            detailedDescription: "YNM Safety is a trusted name among waterborne airfield marking paints manufactures, delivering high-performance airport marking solutions for modern aviation infrastructure. As leading YNM Safety manufactures, our YNM Safety waterborne paints are specially formulated for runways, taxiways, aprons, and helipads, ensuring clear guidance, safety, and operational efficiency in critical airfield environments. Our YNM Safety Waterborne Airfield Marking Paints manufactures products offer excellent adhesion, fast curing, and long service life, making them ideal for high-traffic airport surfaces exposed to aircraft movement and harsh weather conditions.",
-            
-            // Overview Technical Points (displayed below overview paragraph)
-            overviewPoints: [
-              { label: "Product Type", value: "Waterborne Airfield Marking Paints" },
-              { label: "Base", value: "Waterborne" },
-              { label: "Finish", value: "Matt / Semi-Gloss" },
-              { label: "Drying Time", value: "Fast Drying" },
-              { label: "Weather Resistance", value: "Excellent" },
-              { label: "Adhesion", value: "Strong adhesion on concrete & asphalt" },
-              { label: "Visibility", value: "High contrast daytime & night visibility" },
-              { label: "Compliance", value: "IS164- 2023" }
-            ],
-            
-            // Detailed Specifications for spec table
-            detailedSpecs: [
-              {
-                label: "Country of Origin",
-                value: "India",
-                icon: "location"
-              },
-              {
-                label: "Manufacturing Location",
-                value: "Hyderabad",
-                icon: "location"
-              },
-              {
-                label: "Net Weight",
-                value: "20Kg",
-                icon: "weight"
-              },
-              {
-                label: "Quality Standards",
-                value: "IS164-2023, Federal Specification TTP 1952D, ISO 9001:2015",
-                icon: "standard"
-              },
-              {
-                label: "Minimum Order Quantity (MOQ)",
-                value: "1MT",
-                icon: "package"
-              },
-              {
-                label: "HSN Code",
-                value: "32089090",
-                icon: "standard"
-              },
-              {
-                label: "Packing Type",
-                value: "20Kg Container",
-                icon: "package"
-              }
-            ],
-            
-            // Specifications for tabs
-            specifications: {
-              technical: [
-                "Product Type: Waterborne Airfield Marking Paints",
-                "Base: Waterborne",
-                "Finish: Matt / Semi-Gloss",
-                "Drying Time: Fast Drying",
-                "Weather Resistance: Excellent",
-                "Adhesion: Strong adhesion on concrete & asphalt",
-                "Visibility: High contrast daytime & night visibility",
-                "Compliance: IS164- 2023",
-                "HSN Code: 32089090"
-              ],
-              keyFeatures: [
-                "High visibility for aviation safety",
-                "Fast drying to minimize runway downtime",
-                "Excellent adhesion on airfield surfaces",
-                "UV and weather resistant formulation",
-                "Low VOC, eco-friendly waterborne system",
-                "Manufactured by trusted YNM Safety manufactures"
-              ],
-              advantages: [
-                "Enhances runway and taxiway safety",
-                "Ensures accurate aircraft guidance",
-                "Reduces maintenance and repainting cycles",
-                "Cost-effective airfield marking solution",
-                "Trusted YNM Safety Waterborne Airfield Marking Paints manufactures"
-              ]
-            },
-            
-            features: [
-              "High visibility for aviation safety",
-              "Fast drying to minimize runway downtime",
-              "Excellent adhesion on airfield surfaces",
-              "UV and weather resistant formulation",
-              "Low VOC, eco-friendly waterborne system",
-              "Manufactured by trusted YNM Safety manufactures"
-            ],
-            
-            advantages: [
-              "Enhances runway and taxiway safety",
-              "Ensures accurate aircraft guidance",
-              "Reduces maintenance and repainting cycles",
-              "Cost-effective airfield marking solution",
-              "Trusted YNM Safety Waterborne Airfield Marking Paints manufactures"
-            ],
-            
-            technicalSpecs: {
-              "Product Type": "Waterborne Airfield Marking Paints",
-              "Base": "Waterborne",
-              "Finish": "Matt / Semi-Gloss",
-              "Drying Time": "Fast Drying",
-              "Weather Resistance": "Excellent",
-              "Adhesion": "Strong adhesion on concrete & asphalt",
-              "Visibility": "High contrast daytime & night visibility",
-              "Compliance": "IS164- 2023",
-              "Country of Origin": "India",
-              "Manufacturing Location": "Hyderabad",
-              "Net Weight": "20Kg",
-              "Quality Standards": "IS164-2023, Federal Specification TTP 1952D, ISO 9001:2015",
-              "MOQ": "1MT",
-              "HSN Code": "32089090",
-              "Packing Type": "20Kg Container"
-            },
-            
-            // Application Areas with images
-            applicationAreas: [
-              {
-                id: "app1",
-                title: "Runways",
-                description: "YNM Safety waterborne airfield marking paints deliver high-visibility runway markings for safe aircraft landing and take-off.",
-                image: "/assets/YNM Safety Runways.png",
-                details: "YNM Safety manufactures waterborne airfield marking paints designed to withstand heavy aircraft loads and extreme weather conditions. Our runway marking paints ensure long-lasting visibility and compliance with aviation safety standards."
-              },
-              {
-                id: "app2",
-                title: "Taxiways",
-                description: "Waterborne airfield marking paints provide clear directional guidance on airport taxiways.",
-                image: "/assets/ynm-safety-taxiways.png",
-                details: "YNM Safety waterborne paints offer fast drying and strong adhesion for uninterrupted taxiway operations. Manufactured for precise markings that improve aircraft movement safety."
-              },
-              {
-                id: "app3",
-                title: "Aprons",
-                description: "Waterborne airfield marking paints support safe aircraft servicing and ground operations on aprons.",
-                image: "/assets/YNM Safety Aprons.png",
-                details: "YNM Safety manufactures durable waterborne airfield marking paints resistant to surface wear and operational stress. Ideal for high-traffic apron zones requiring consistent marking clarity."
-              },
-              {
-                id: "app4",
-                title: "Aircraft Parking Bays",
-                description: "Clear aircraft parking bay markings ensure accurate positioning and safety.",
-                image: "/assets/YNM Safety Aircraft Parking Bays.png",
-                details: "YNM Safety waterborne airfield marking paints manufactures supply high-contrast paints for aircraft parking areas. Designed for long-lasting visibility in busy airport environments."
-              },
-              {
-                id: "app5",
-                title: "Holding Position Markings",
-                description: "Holding position markings improve runway safety and aircraft control.",
-                image: "/assets/YNM Safety Holding position markings.png",
-                details: "YNM Safety manufactures waterborne airfield marking paints for precise holding position identification. These markings reduce runway incursion risks and enhance pilot awareness."
-              },
-              {
-                id: "app6",
-                title: "Helipads",
-                description: "Waterborne airfield marking paints provide durable and highly visible helipad markings.",
-                image: "/assets/YNM Safety Helipads.png",
-                details: "YNM Safety waterborne paints deliver excellent adhesion and clarity for rooftop and ground helipads. Manufactured to support safe helicopter landing and take-off operations."
-              }
-            ],
-            
-            applications: [
-              {
-                title: "Runways",
-                short: "YNM Safety waterborne airfield marking paints deliver high-visibility runway markings for safe aircraft landing and take-off.",
-                hover: "YNM Safety manufactures waterborne airfield marking paints designed to withstand heavy aircraft loads and extreme weather conditions. Our runway marking paints ensure long-lasting visibility and compliance with aviation safety standards.",
-                image: "/assets/YNM Safety Runways.png"
-              },
-              {
-                title: "Taxiways",
-                short: "Waterborne airfield marking paints provide clear directional guidance on airport taxiways.",
-                hover: "YNM Safety waterborne paints offer fast drying and strong adhesion for uninterrupted taxiway operations. Manufactured for precise markings that improve aircraft movement safety.",
-                image: "/assets/ynm-safety-taxiways.png"
-              },
-              {
-                title: "Aprons",
-                short: "Waterborne airfield marking paints support safe aircraft servicing and ground operations on aprons.",
-                hover: "YNM Safety manufactures durable waterborne airfield marking paints resistant to surface wear and operational stress. Ideal for high-traffic apron zones requiring consistent marking clarity.",
-                image: "/assets/YNM Safety Aprons.png"
-              },
-              {
-                title: "Aircraft Parking Bays",
-                short: "Clear aircraft parking bay markings ensure accurate positioning and safety.",
-                hover: "YNM Safety waterborne airfield marking paints manufactures supply high-contrast paints for aircraft parking areas. Designed for long-lasting visibility in busy airport environments.",
-                image: "/assets/YNM Safety Aircraft Parking Bays.png"
-              },
-              {
-                title: "Holding Position Markings",
-                short: "Holding position markings improve runway safety and aircraft control.",
-                hover: "YNM Safety manufactures waterborne airfield marking paints for precise holding position identification. These markings reduce runway incursion risks and enhance pilot awareness.",
-                image: "/assets/YNM Safety Holding position markings.png"
-              },
-              {
-                title: "Helipads",
-                short: "Waterborne airfield marking paints provide durable and highly visible helipad markings.",
-                hover: "YNM Safety waterborne paints deliver excellent adhesion and clarity for rooftop and ground helipads. Manufactured to support safe helicopter landing and take-off operations.",
-                image: "/assets/YNM Safety Helipads.png"
-              }
-            ],
-            
-            // Pricing Information
-            pricing: {
-              basePriceINR: 150,
-              currency: "INR",
-              unit: "per kg",
-              displayPrice: "₹150 per kg",
-              packageSizes: [
-                { size: "20 kg", priceINR: 150, moq: 50 },
-                { size: "100 kg", priceINR: 145, moq: 20 },
-                { size: "1000 kg", priceINR: 140, moq: 5 }
-              ],
-              bulkDiscounts: [
-                { minQuantity: 1000, discount: 3 },
-                { minQuantity: 5000, discount: 5 },
-                { minQuantity: 10000, discount: 8 },
-                { minQuantity: 25000, discount: 10 }
-              ]
-            },
-            
-            gallery: [
-              "/assets/YNM Safety Runways.png",
-              "/assets/ynm-safety-taxiways.png",
-              "/assets/YNM Safety Aprons.png",
-              "/assets/YNM Safety Aircraft Parking Bays.png",
-              "/assets/YNM Safety Holding position markings.png",
-              "/assets/YNM Safety Helipads.png"
-            ],
-            
-            // Our Projects / Clients
-            projects: [],
-            
-            meta: {
-              title: "Waterborne Airfield Marking Paints Manufacturers | Airport Marking Paints | YNM Safety",
-              description: "YNM Safety manufactures high-quality waterborne airfield marking paints for runways, taxiways, aprons, and helipads, offering durable, fast-drying, and high-visibility airport marking solutions.",
-              slug: "/waterborne-airfield-marking-paints-manufacturers"
-            },
-            
-            // Market Growth Information
-            marketGrowth: {
-              title: "Waterborne Airfield Marking Paint Market Growth",
-              description: "The water airfield marking paint market is growing steadily, driven by global airport expansion and stricter aviation safety standards. The market was valued at around USD 550–600 million in recent years and is projected to reach nearly USD 900 million–1 billion by the early 2030s. This reflects an average CAGR of about 5–6% over the forecast period. Growth is further supported by rising air traffic and the shift toward eco-friendly, low-VOC water-based coatings.",
-              cagr: "5-6%",
-              growthFactors: [
-                "Airport Infrastructure Expansion",
-                "Environmental & Safety regulations",
-                "Increasing Air traffic worldwide",
-                "Technological Advancements in paint formulations",
-                "Growth in Emerging Regions and new airport development"
-              ],
-              // Market Statistics
-              marketStats: {
-                currentMarketSize: "$575M",
-                projectedMarketSize: "$950M",
-                currentYear: "2024",
-                projectedYear: "2032",
-                airportsGlobal: "41,000+",
-                annualPaintConsumption: "15,000+ MT",
-                aviationSafetySpending: "$12B"
-              },
-              // Regional Distribution for Pie Chart
-              regionalDistribution: [
-                { region: "North America", value: 32, color: "#74060D" },
-                { region: "Europe", value: 28, color: "#9A1B2E" },
-                { region: "Asia Pacific", value: 25, color: "#C9A24D" },
-                { region: "Middle East & Africa", value: 10, color: "#D4A853" },
-                { region: "Latin America", value: 5, color: "#E8C97A" }
-              ],
-              // Year-wise Growth Data for Bar Chart
-              yearlyGrowth: [
-                { year: "2024", value: 0.575 },
-                { year: "2026", value: 0.65 },
-                { year: "2028", value: 0.75 },
-                { year: "2030", value: 0.85 },
-                { year: "2032", value: 0.95 }
-              ]
-            },
-            
-            // Global Availability - Structured by Region
-            globalAvailability: {
-              regions: [
-                {
-                  name: "North America",
-                  countries: ["United States", "Canada", "Mexico"]
-                },
-                {
-                  name: "Europe",
-                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Russia", "Sweden", "Netherlands", "Switzerland", "Belgium", "Austria"]
-                },
-                {
-                  name: "Asia & Asia-Pacific",
-                  countries: ["China", "India", "Japan", "South Korea", "Australia", "Indonesia", "Vietnam", "Philippines", "Thailand", "Malaysia", "Taiwan"]
-                },
-                {
-                  name: "Latin America",
-                  countries: ["Brazil", "Argentina", "Colombia", "Chile", "Panama"]
-                },
-                {
-                  name: "Middle East & Africa",
-                  countries: ["United Arab Emirates", "Saudi Arabia", "Egypt", "South Africa", "Nigeria", "Israel", "Turkey"]
-                }
-              ]
-            },
-            
-            performanceMetrics: "600 MT",
-            
-            statistics: {
-              annualCapacity: "7200 MT",
-              exportCountries: "20+",
-              qualityStandards: "IS164-2023",
-              productionSpeed: "600 MT"
-            },
-            
-            // Manufacturing Process
-            manufacturingProcessIntro: "YNM Safety manufactures Waterborne Airfield Marking Paints through a controlled, quality-driven process to ensure excellent visibility, adhesion, weather resistance, and compliance with aviation safety standards.",
-            manufacturingProcess: [
-              {
-                step: "01",
-                title: "Raw Material Procurement",
-                description: "High-quality raw materials such as acrylic or styrene-acrylic emulsions, titanium dioxide pigments, extender fillers, additives, defoamers, and deionized water are sourced from approved suppliers to ensure consistency, durability, and compliance with airfield standards."
-              },
-              {
-                step: "02",
-                title: "Raw Material Inspection & Quality Check",
-                description: "All incoming raw materials are tested for parameters like purity, viscosity, particle size, and moisture content to ensure they meet aviation and environmental specifications before production begins."
-              },
-              {
-                step: "03",
-                title: "Pre-Mixing of Liquid Components",
-                description: "Water, binders, wetting agents, dispersants, and other liquid additives are charged into the mixing vessel and blended at controlled speed to create a uniform base mixture."
-              },
-              {
-                step: "04",
-                title: "Pigment & Filler Dispersion",
-                description: "High-opacity pigments such as titanium dioxide and selected fillers are slowly added to the pre-mix. High-speed dispersers are used to achieve fine particle dispersion for excellent color brightness and visibility."
-              },
-              {
-                step: "05",
-                title: "Grinding & Homogenization",
-                description: "The paint slurry is processed through grinding equipment to ensure uniform particle size, smooth texture, and consistent film performance required for runway and taxiway markings."
-              },
-              {
-                step: "06",
-                title: "Let-Down & Final Mixing",
-                description: "Additional binders, performance additives, anti-settling agents, and rheology modifiers are added during the let-down stage to achieve the required viscosity, drying time, skid resistance, and durability."
-              },
-              {
-                step: "07",
-                title: "Quality Control Testing",
-                description: "The finished paint is tested for color consistency, viscosity, drying time, adhesion, reflectivity compatibility, abrasion resistance, and compliance with ICAO / FAA / DGCA standards."
-              },
-              {
-                step: "08",
-                title: "Filtration & Batch Approval",
-                description: "The paint is filtered to remove any impurities or agglomerates. After final inspection and approval by the quality team, the batch is released for packing."
-              },
-              {
-                step: "09",
-                title: "Filling & Packaging",
-                description: "Approved paint is filled into HDPE drums or containers of required capacity, properly sealed, batch-coded, and labeled with product specifications and safety information."
-              },
-              {
-                step: "10",
-                title: "Storage & Dispatch",
-                description: "Packed materials are stored in a controlled warehouse environment and dispatched as per customer orders with proper documentation to ensure safe transport and on-time delivery to airfield projects."
-              }
-            ]
-          },
-          {
             id: "p3",
             slug: "cold-plastic-paints-manufacturers",
             name: "Cold Plastic Paints",
@@ -848,13 +459,13 @@ export const productsData = {
             // SEO Meta Information
             meta: {
               title: "Cold Plastic Paints Manufacturers | Road Marking Paints | YNM Safety",
-              description: "YNM Safety cold plastic paints manufactures high-performance road marking paints and cold plastic paints for durable traffic markings worldwide, compliant with international standards.",
+              description: "YNM Safety cold plastic paints manufacturers high-performance road marking paints and cold plastic paints for durable traffic markings worldwide, compliant with international standards.",
               slug: "/cold-plastic-paints-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is one of the trusted cold plastic paints manufactures, offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our YNM Safety cold plastic paints are widely used for highways, expressways, urban roads, parking areas, and industrial zones across global markets.\n\nAs YNM Safety manufactures premium cold plastic paints, our products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal for projects requiring precise application without heating, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with international traffic safety standards and are suitable for government, EPC, and private infrastructure projects worldwide.",
-            detailedDescription: "YNM Safety is one of the trusted cold plastic paints manufactures, offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our YNM Safety cold plastic paints are widely used for highways, expressways, urban roads, parking areas, and industrial zones across global markets.\n\nAs YNM Safety manufactures premium cold plastic paints, our products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal for projects requiring precise application without heating, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with international traffic safety standards and are suitable for government, EPC, and private infrastructure projects worldwide.",
+            overview: "YNM Safety is one of the trusted cold plastic paints manufacturers, offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our YNM Safety cold plastic paints are widely used for highways, expressways, urban roads, parking areas, and industrial zones across global markets.\n\nAs YNM Safety manufactures premium cold plastic paints, our products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal for projects requiring precise application without heating, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with international traffic safety standards and are suitable for government, EPC, and private infrastructure projects worldwide.",
+            detailedDescription: "YNM Safety is one of the trusted cold plastic paints manufacturers, offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our YNM Safety cold plastic paints are widely used for highways, expressways, urban roads, parking areas, and industrial zones across global markets.\n\nAs YNM Safety manufactures premium cold plastic paints, our products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal for projects requiring precise application without heating, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with international traffic safety standards and are suitable for government, EPC, and private infrastructure projects worldwide.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -933,7 +544,7 @@ export const productsData = {
                 "Reduces application time and energy cost",
                 "Ideal for high-traffic road marking applications",
                 "Long service life with low maintenance",
-                "Trusted cold plastic paints manufactures – YNM Safety"
+                "Trusted cold plastic paints manufacturers – YNM Safety"
               ]
             },
             
@@ -950,7 +561,7 @@ export const productsData = {
               "Reduces application time and energy cost",
               "Ideal for high-traffic road marking applications",
               "Long service life with low maintenance",
-              "Trusted cold plastic paints manufactures – YNM Safety"
+              "Trusted cold plastic paints manufacturers – YNM Safety"
             ],
             
             // Application Areas with images and hover effects
@@ -1228,10 +839,399 @@ export const productsData = {
             ]
           },
           {
+            id: "p2",
+            slug: "waterborne-airfield-marking-paints-manufacturers",
+            name: "Waterborne Airfield Marking Paints",
+            shortDesc: "YNM Safety manufactures premium waterborne airfield marking paints engineered for superior visibility, fast drying, and long-lasting performance across airport and aviation infrastructure.",
+            desc: "YNM Safety manufactures premium waterborne airfield marking paints engineered for superior visibility, fast drying, and long-lasting performance across airport and aviation infrastructure.",
+            image: "/assets/YNM Safety Runways.png",
+            heroImage: "/assets/YNM Safety Runways.png",
+            specs: ["Waterborne base", "Fast drying", "High visibility", "Weather resistant", "Strong adhesion", "Low VOC"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Waterborne Airfield Marking Paints Manufacturers | Airport Marking Paints | YNM Safety",
+              description: "YNM Safety manufactures high-quality waterborne airfield marking paints for runways, taxiways, aprons, and helipads, offering durable, fast-drying, and high-visibility airport marking solutions.",
+              slug: "/waterborne-airfield-marking-paints-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is a trusted name among waterborne airfield marking paints manufacturers, delivering high-performance airport marking solutions for modern aviation infrastructure. As leading YNM Safety manufacturers, our YNM Safety waterborne paints are specially formulated for runways, taxiways, aprons, and helipads, ensuring clear guidance, safety, and operational efficiency in critical airfield environments. Our YNM Safety Waterborne Airfield Marking Paints manufactured products offer excellent adhesion, fast curing, and long service life, making them ideal for high-traffic airport surfaces exposed to aircraft movement and harsh weather conditions.",
+            detailedDescription: "YNM Safety is a trusted name among waterborne airfield marking paints manufacturers, delivering high-performance airport marking solutions for modern aviation infrastructure. As leading YNM Safety manufacturers, our YNM Safety waterborne paints are specially formulated for runways, taxiways, aprons, and helipads, ensuring clear guidance, safety, and operational efficiency in critical airfield environments. Our YNM Safety Waterborne Airfield Marking Paints manufactured products offer excellent adhesion, fast curing, and long service life, making them ideal for high-traffic airport surfaces exposed to aircraft movement and harsh weather conditions.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Waterborne Airfield Marking Paints" },
+              { label: "Base", value: "Waterborne" },
+              { label: "Finish", value: "Matt / Semi-Gloss" },
+              { label: "Drying Time", value: "Fast Drying" },
+              { label: "Weather Resistance", value: "Excellent" },
+              { label: "Adhesion", value: "Strong adhesion on concrete & asphalt" },
+              { label: "Visibility", value: "High contrast daytime & night visibility" },
+              { label: "Compliance", value: "IS164- 2023" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "20Kg",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IS164-2023, Federal Specification TTP 1952D, ISO 9001:2015",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "1MT",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "32089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "20Kg Container",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Waterborne Airfield Marking Paints",
+                "Base: Waterborne",
+                "Finish: Matt / Semi-Gloss",
+                "Drying Time: Fast Drying",
+                "Weather Resistance: Excellent",
+                "Adhesion: Strong adhesion on concrete & asphalt",
+                "Visibility: High contrast daytime & night visibility",
+                "Compliance: IS164- 2023",
+                "HSN Code: 32089090"
+              ],
+              keyFeatures: [
+                "High visibility for aviation safety",
+                "Fast drying to minimize runway downtime",
+                "Excellent adhesion on airfield surfaces",
+                "UV and weather resistant formulation",
+                "Low VOC, eco-friendly waterborne system",
+                "Manufactured by trusted YNM Safety manufacturers"
+              ],
+              advantages: [
+                "Enhances runway and taxiway safety",
+                "Ensures accurate aircraft guidance",
+                "Reduces maintenance and repainting cycles",
+                "Cost-effective airfield marking solution",
+                "Trusted YNM Safety Waterborne Airfield Marking Paints manufacturers"
+              ]
+            },
+            
+            features: [
+              "High visibility for aviation safety",
+              "Fast drying to minimize runway downtime",
+              "Excellent adhesion on airfield surfaces",
+              "UV and weather resistant formulation",
+              "Low VOC, eco-friendly waterborne system",
+              "Manufactured by trusted YNM Safety manufacturers"
+            ],
+            
+            advantages: [
+              "Enhances runway and taxiway safety",
+              "Ensures accurate aircraft guidance",
+              "Reduces maintenance and repainting cycles",
+              "Cost-effective airfield marking solution",
+              "Trusted YNM Safety Waterborne Airfield Marking Paints manufacturers"
+            ],
+            
+            technicalSpecs: {
+              "Product Type": "Waterborne Airfield Marking Paints",
+              "Base": "Waterborne",
+              "Finish": "Matt / Semi-Gloss",
+              "Drying Time": "Fast Drying",
+              "Weather Resistance": "Excellent",
+              "Adhesion": "Strong adhesion on concrete & asphalt",
+              "Visibility": "High contrast daytime & night visibility",
+              "Compliance": "IS164- 2023",
+              "Country of Origin": "India",
+              "Manufacturing Location": "Hyderabad",
+              "Net Weight": "20Kg",
+              "Quality Standards": "IS164-2023, Federal Specification TTP 1952D, ISO 9001:2015",
+              "MOQ": "1MT",
+              "HSN Code": "32089090",
+              "Packing Type": "20Kg Container"
+            },
+            
+            // Application Areas with images
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Runways",
+                description: "YNM Safety waterborne airfield marking paints deliver high-visibility runway markings for safe aircraft landing and take-off.",
+                image: "/assets/YNM Safety Runways.png",
+                details: "YNM Safety manufactures waterborne airfield marking paints designed to withstand heavy aircraft loads and extreme weather conditions. Our runway marking paints ensure long-lasting visibility and compliance with aviation safety standards."
+              },
+              {
+                id: "app2",
+                title: "Taxiways",
+                description: "Waterborne airfield marking paints provide clear directional guidance on airport taxiways.",
+                image: "/assets/ynm-safety-taxiways.png",
+                details: "YNM Safety waterborne paints offer fast drying and strong adhesion for uninterrupted taxiway operations. Manufactured for precise markings that improve aircraft movement safety."
+              },
+              {
+                id: "app3",
+                title: "Aprons",
+                description: "Waterborne airfield marking paints support safe aircraft servicing and ground operations on aprons.",
+                image: "/assets/YNM Safety Aprons.png",
+                details: "YNM Safety manufactures durable waterborne airfield marking paints resistant to surface wear and operational stress. Ideal for high-traffic apron zones requiring consistent marking clarity."
+              },
+              {
+                id: "app4",
+                title: "Aircraft Parking Bays",
+                description: "Clear aircraft parking bay markings ensure accurate positioning and safety.",
+                image: "/assets/YNM Safety Aircraft Parking Bays.png",
+                details: "YNM Safety waterborne airfield marking paints manufacturers supply high-contrast paints for aircraft parking areas. Designed for long-lasting visibility in busy airport environments."
+              },
+              {
+                id: "app5",
+                title: "Holding Position Markings",
+                description: "Holding position markings improve runway safety and aircraft control.",
+                image: "/assets/YNM Safety Holding position markings.png",
+                details: "YNM Safety manufactures waterborne airfield marking paints for precise holding position identification. These markings reduce runway incursion risks and enhance pilot awareness."
+              },
+              {
+                id: "app6",
+                title: "Helipads",
+                description: "Waterborne airfield marking paints provide durable and highly visible helipad markings.",
+                image: "/assets/YNM Safety Helipads.png",
+                details: "YNM Safety waterborne paints deliver excellent adhesion and clarity for rooftop and ground helipads. Manufactured to support safe helicopter landing and take-off operations."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Runways",
+                short: "YNM Safety waterborne airfield marking paints deliver high-visibility runway markings for safe aircraft landing and take-off.",
+                hover: "YNM Safety manufactures waterborne airfield marking paints designed to withstand heavy aircraft loads and extreme weather conditions. Our runway marking paints ensure long-lasting visibility and compliance with aviation safety standards.",
+                image: "/assets/YNM Safety Runways.png"
+              },
+              {
+                title: "Taxiways",
+                short: "Waterborne airfield marking paints provide clear directional guidance on airport taxiways.",
+                hover: "YNM Safety waterborne paints offer fast drying and strong adhesion for uninterrupted taxiway operations. Manufactured for precise markings that improve aircraft movement safety.",
+                image: "/assets/ynm-safety-taxiways.png"
+              },
+              {
+                title: "Aprons",
+                short: "Waterborne airfield marking paints support safe aircraft servicing and ground operations on aprons.",
+                hover: "YNM Safety manufactures durable waterborne airfield marking paints resistant to surface wear and operational stress. Ideal for high-traffic apron zones requiring consistent marking clarity.",
+                image: "/assets/YNM Safety Aprons.png"
+              },
+              {
+                title: "Aircraft Parking Bays",
+                short: "Clear aircraft parking bay markings ensure accurate positioning and safety.",
+                hover: "YNM Safety waterborne airfield marking paints manufacturers supply high-contrast paints for aircraft parking areas. Designed for long-lasting visibility in busy airport environments.",
+                image: "/assets/YNM Safety Aircraft Parking Bays.png"
+              },
+              {
+                title: "Holding Position Markings",
+                short: "Holding position markings improve runway safety and aircraft control.",
+                hover: "YNM Safety manufactures waterborne airfield marking paints for precise holding position identification. These markings reduce runway incursion risks and enhance pilot awareness.",
+                image: "/assets/YNM Safety Holding position markings.png"
+              },
+              {
+                title: "Helipads",
+                short: "Waterborne airfield marking paints provide durable and highly visible helipad markings.",
+                hover: "YNM Safety waterborne paints deliver excellent adhesion and clarity for rooftop and ground helipads. Manufactured to support safe helicopter landing and take-off operations.",
+                image: "/assets/YNM Safety Helipads.png"
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 150,
+              currency: "INR",
+              unit: "per kg",
+              displayPrice: "₹150 per kg",
+              packageSizes: [
+                { size: "20 kg", priceINR: 150, moq: 50 },
+                { size: "100 kg", priceINR: 145, moq: 20 },
+                { size: "1000 kg", priceINR: 140, moq: 5 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 1000, discount: 3 },
+                { minQuantity: 5000, discount: 5 },
+                { minQuantity: 10000, discount: 8 },
+                { minQuantity: 25000, discount: 10 }
+              ]
+            },
+            
+            gallery: [
+              "/assets/YNM Safety Runways.png",
+              "/assets/ynm-safety-taxiways.png",
+              "/assets/YNM Safety Aprons.png",
+              "/assets/YNM Safety Aircraft Parking Bays.png",
+              "/assets/YNM Safety Holding position markings.png",
+              "/assets/YNM Safety Helipads.png"
+            ],
+            
+            // Our Projects / Clients
+            projects: [],
+            
+            meta: {
+              title: "Waterborne Airfield Marking Paints Manufacturers | Airport Marking Paints | YNM Safety",
+              description: "YNM Safety manufactures high-quality waterborne airfield marking paints for runways, taxiways, aprons, and helipads, offering durable, fast-drying, and high-visibility airport marking solutions.",
+              slug: "/waterborne-airfield-marking-paints-manufacturers"
+            },
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Waterborne Airfield Marking Paint Market Growth",
+              description: "The water airfield marking paint market is growing steadily, driven by global airport expansion and stricter aviation safety standards. The market was valued at around USD 550–600 million in recent years and is projected to reach nearly USD 900 million–1 billion by the early 2030s. This reflects an average CAGR of about 5–6% over the forecast period. Growth is further supported by rising air traffic and the shift toward eco-friendly, low-VOC water-based coatings.",
+              cagr: "5-6%",
+              growthFactors: [
+                "Airport Infrastructure Expansion",
+                "Environmental & Safety regulations",
+                "Increasing Air traffic worldwide",
+                "Technological Advancements in paint formulations",
+                "Growth in Emerging Regions and new airport development"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$575M",
+                projectedMarketSize: "$950M",
+                currentYear: "2024",
+                projectedYear: "2032",
+                airportsGlobal: "41,000+",
+                annualPaintConsumption: "15,000+ MT",
+                aviationSafetySpending: "$12B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "North America", value: 32, color: "#74060D" },
+                { region: "Europe", value: 28, color: "#9A1B2E" },
+                { region: "Asia Pacific", value: 25, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 10, color: "#D4A853" },
+                { region: "Latin America", value: 5, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 0.575 },
+                { year: "2026", value: 0.65 },
+                { year: "2028", value: 0.75 },
+                { year: "2030", value: 0.85 },
+                { year: "2032", value: 0.95 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Russia", "Sweden", "Netherlands", "Switzerland", "Belgium", "Austria"]
+                },
+                {
+                  name: "Asia & Asia-Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Australia", "Indonesia", "Vietnam", "Philippines", "Thailand", "Malaysia", "Taiwan"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina", "Colombia", "Chile", "Panama"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates", "Saudi Arabia", "Egypt", "South Africa", "Nigeria", "Israel", "Turkey"]
+                }
+              ]
+            },
+            
+            performanceMetrics: "600 MT",
+            
+            statistics: {
+              annualCapacity: "7200 MT",
+              exportCountries: "20+",
+              qualityStandards: "IS164-2023",
+              productionSpeed: "600 MT"
+            },
+            
+            // Manufacturing Process
+            manufacturingProcessIntro: "YNM Safety manufactures Waterborne Airfield Marking Paints through a controlled, quality-driven process to ensure excellent visibility, adhesion, weather resistance, and compliance with aviation safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Procurement",
+                description: "High-quality raw materials such as acrylic or styrene-acrylic emulsions, titanium dioxide pigments, extender fillers, additives, defoamers, and deionized water are sourced from approved suppliers to ensure consistency, durability, and compliance with airfield standards."
+              },
+              {
+                step: "02",
+                title: "Raw Material Inspection & Quality Check",
+                description: "All incoming raw materials are tested for parameters like purity, viscosity, particle size, and moisture content to ensure they meet aviation and environmental specifications before production begins."
+              },
+              {
+                step: "03",
+                title: "Pre-Mixing of Liquid Components",
+                description: "Water, binders, wetting agents, dispersants, and other liquid additives are charged into the mixing vessel and blended at controlled speed to create a uniform base mixture."
+              },
+              {
+                step: "04",
+                title: "Pigment & Filler Dispersion",
+                description: "High-opacity pigments such as titanium dioxide and selected fillers are slowly added to the pre-mix. High-speed dispersers are used to achieve fine particle dispersion for excellent color brightness and visibility."
+              },
+              {
+                step: "05",
+                title: "Grinding & Homogenization",
+                description: "The paint slurry is processed through grinding equipment to ensure uniform particle size, smooth texture, and consistent film performance required for runway and taxiway markings."
+              },
+              {
+                step: "06",
+                title: "Let-Down & Final Mixing",
+                description: "Additional binders, performance additives, anti-settling agents, and rheology modifiers are added during the let-down stage to achieve the required viscosity, drying time, skid resistance, and durability."
+              },
+              {
+                step: "07",
+                title: "Quality Control Testing",
+                description: "The finished paint is tested for color consistency, viscosity, drying time, adhesion, reflectivity compatibility, abrasion resistance, and compliance with ICAO / FAA / DGCA standards."
+              },
+              {
+                step: "08",
+                title: "Filtration & Batch Approval",
+                description: "The paint is filtered to remove any impurities or agglomerates. After final inspection and approval by the quality team, the batch is released for packing."
+              },
+              {
+                step: "09",
+                title: "Filling & Packaging",
+                description: "Approved paint is filled into HDPE drums or containers of required capacity, properly sealed, batch-coded, and labeled with product specifications and safety information."
+              },
+              {
+                step: "10",
+                title: "Storage & Dispatch",
+                description: "Packed materials are stored in a controlled warehouse environment and dispatched as per customer orders with proper documentation to ensure safe transport and on-time delivery to airfield projects."
+              }
+            ]
+          },
+          {
             id: "p4",
             slug: "oil-kerb-base-paint-manufacturers",
             name: "Oil Kerb Base Paint",
-            shortDesc: "High-performance oil kerb base paint manufactures delivering durable, high-visibility curb and road marking paints for highways, urban roads, and infrastructure projects worldwide.",
+            shortDesc: "High-performance oil kerb base paint manufacturers delivering durable, high-visibility curb and road marking paints for highways, urban roads, and infrastructure projects worldwide.",
             desc: "YNM Safety manufactures premium quality oil base paints designed for long-lasting curb and road edge markings with excellent adhesion on concrete and asphalt surfaces.",
             image: "/assets/ynm-safety-traffic-islands.png",
             heroImage: "/assets/ynm-safety-traffic-islands.png",
@@ -1240,13 +1240,13 @@ export const productsData = {
             // SEO Meta Information
             meta: {
               title: "Oil Kerb Base Paint Manufacturers | Road Marking Paints | YNM Safety",
-              description: "YNM Safety oil kerb paint manufactures high-performance oil base kerb paints and road marking paints for durable curb and traffic markings worldwide. Trusted paints manufactures compliant with industry standards.",
+              description: "YNM Safety oil kerb paint manufacturers high-performance oil base kerb paints and road marking paints for durable curb and traffic markings worldwide. Trusted paints manufacturers compliant with industry standards.",
               slug: "/oil-kerb-base-paint-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is one of the leading oil kerb paint manufactures in India, offering premium quality oil base paints designed for long-lasting curb and road edge markings. As trusted paints manufactures, we deliver durable, weather-resistant, and high-visibility marking solutions for highways, urban roads, smart cities, and infrastructure projects.\n\nOur ynm safety oil paints manufactures products ensure strong adhesion on concrete kerbs, medians, and dividers. The oil kerb base paint provides excellent colour retention, smooth finish, and resistance against dust, rain, and UV exposure.\n\nBeing reputed oil paints manufactures, YNM Safety focuses on consistent quality, fast drying performance, and compliance with industry standards for government and EPC projects.",
-            detailedDescription: "YNM Safety is one of the leading oil kerb paint manufactures in India, offering premium quality oil base paints designed for long-lasting curb and road edge markings. As trusted paints manufactures, we deliver durable, weather-resistant, and high-visibility marking solutions for highways, urban roads, smart cities, and infrastructure projects.\n\nOur ynm safety oil paints manufactures products ensure strong adhesion on concrete kerbs, medians, and dividers. The oil kerb base paint provides excellent colour retention, smooth finish, and resistance against dust, rain, and UV exposure.\n\nBeing reputed oil paints manufactures, YNM Safety focuses on consistent quality, fast drying performance, and compliance with industry standards for government and EPC projects.",
+            overview: "YNM Safety is one of the leading oil kerb paint manufacturers in India, offering premium quality oil base paints designed for long-lasting curb and road edge markings. As trusted paints manufacturers, we deliver durable, weather-resistant, and high-visibility marking solutions for highways, urban roads, smart cities, and infrastructure projects.\n\nOur ynm safety oil paints manufacturers products ensure strong adhesion on concrete kerbs, medians, and dividers. The oil kerb base paint provides excellent colour retention, smooth finish, and resistance against dust, rain, and UV exposure.\n\nBeing reputed oil paints manufacturers, YNM Safety focuses on consistent quality, fast drying performance, and compliance with industry standards for government and EPC projects.",
+            detailedDescription: "YNM Safety is one of the leading oil kerb paint manufacturers in India, offering premium quality oil base paints designed for long-lasting curb and road edge markings. As trusted paints manufacturers, we deliver durable, weather-resistant, and high-visibility marking solutions for highways, urban roads, smart cities, and infrastructure projects.\n\nOur ynm safety oil paints manufacturers products ensure strong adhesion on concrete kerbs, medians, and dividers. The oil kerb base paint provides excellent colour retention, smooth finish, and resistance against dust, rain, and UV exposure.\n\nBeing reputed oil paints manufacturers, YNM Safety focuses on consistent quality, fast drying performance, and compliance with industry standards for government and EPC projects.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -1320,7 +1320,7 @@ export const productsData = {
                 "Fast drying and easy application",
                 "Long-lasting colour stability",
                 "Suitable for government and EPC projects",
-                "Trusted oil kerb paint manufactures – YNM Safety"
+                "Trusted oil kerb paint manufacturers – YNM Safety"
               ],
               advantages: [
                 "Enhances road edge visibility and safety",
@@ -1328,7 +1328,7 @@ export const productsData = {
                 "Low maintenance requirement",
                 "Strong resistance to dust, rain, and UV exposure",
                 "Suitable for highways and urban roads",
-                "Manufactured by leading oil paints manufactures"
+                "Manufactured by leading oil paints manufacturers"
               ]
             },
             
@@ -1339,7 +1339,7 @@ export const productsData = {
               "Fast drying and easy application",
               "Long-lasting colour stability",
               "Suitable for government and EPC projects",
-              "Trusted oil kerb paint manufactures – YNM Safety"
+              "Trusted oil kerb paint manufacturers – YNM Safety"
             ],
             advantages: [
               "Enhances road edge visibility and safety",
@@ -1347,7 +1347,7 @@ export const productsData = {
               "Low maintenance requirement",
               "Strong resistance to dust, rain, and UV exposure",
               "Suitable for highways and urban roads",
-              "Manufactured by leading oil paints manufactures"
+              "Manufactured by leading oil paints manufacturers"
             ],
             
             // Application Areas with images and hover effects
@@ -1357,12 +1357,12 @@ export const productsData = {
                 title: "Traffic Islands & Medians",
                 description: "Oil kerb base paint provides high-visibility markings for traffic islands and medians, improving road guidance and safety.",
                 image: "/assets/ynm-safety-traffic-islands.png",
-                details: "Manufactured by leading oil kerb paint manufactures, this paint ensures long-lasting black and yellow contrast on concrete medians. It offers strong adhesion, UV resistance, and durability under heavy traffic and harsh weather conditions."
+                details: "Manufactured by leading oil kerb paint manufacturers, this paint ensures long-lasting black and yellow contrast on concrete medians. It offers strong adhesion, UV resistance, and durability under heavy traffic and harsh weather conditions."
               },
               {
                 id: "app2",
                 title: "Bus Stops & Terminals",
-                description: "Oil paints manufactures supply durable kerb paints for bus stops and passenger terminals.",
+                description: "Oil paints manufacturers supply durable kerb paints for bus stops and passenger terminals.",
                 image: "/assets/ynm-safety-bus-stops-terminals.png",
                 details: "YNM Safety oil kerb base paint enhances curb visibility and lane discipline in high-footfall areas. The fast-drying, weather-resistant formula ensures clear markings even with continuous bus movement and public traffic."
               },
@@ -1371,14 +1371,14 @@ export const productsData = {
                 title: "Kerbs and Road Edges",
                 description: "Oil kerb base paint is ideal for marking kerbs and road edges with sharp, durable finishes.",
                 image: "/assets/ynm-safety-kerbs-road-edges.png",
-                details: "As trusted paints manufactures, YNM Safety ensures smooth application and long-lasting colour retention. The paint resists fading, dust, and rain exposure, making it suitable for highways and urban roads."
+                details: "As trusted paints manufacturers, YNM Safety ensures smooth application and long-lasting colour retention. The paint resists fading, dust, and rain exposure, making it suitable for highways and urban roads."
               },
               {
                 id: "app4",
                 title: "Curbs & Gutters",
                 description: "Oil kerb paint delivers clean and professional curb and gutter markings.",
                 image: "/assets/ynm-safety-curbs-gutters.png",
-                details: "Our ynm safety oil paints manufactures products provide excellent adhesion on concrete surfaces. The oil-base formulation protects against moisture, surface cracks, and environmental wear."
+                details: "Our ynm safety oil paints manufacturers products provide excellent adhesion on concrete surfaces. The oil-base formulation protects against moisture, surface cracks, and environmental wear."
               },
               {
                 id: "app5",
@@ -1390,7 +1390,7 @@ export const productsData = {
               {
                 id: "app6",
                 title: "Safety Zones in Factories & Warehouses",
-                description: "Oil paints manufactures provide high-contrast safety markings for factory and warehouse zones.",
+                description: "Oil paints manufacturers provide high-contrast safety markings for factory and warehouse zones.",
                 image: "/assets/ynm-safety-factories-warehouses.png",
                 details: "YNM Safety manufactures oil kerb base paint that defines pedestrian paths, hazard zones, and equipment boundaries clearly. Its durable oil-base composition resists oil spills, chemicals, and frequent forklift movement."
               }
@@ -1400,25 +1400,25 @@ export const productsData = {
               {
                 title: "Traffic Islands & Medians",
                 short: "Oil kerb base paint provides high-visibility markings for traffic islands and medians, improving road guidance and safety.",
-                hover: "Manufactured by leading oil kerb paint manufactures, this paint ensures long-lasting black and yellow contrast on concrete medians. It offers strong adhesion, UV resistance, and durability under heavy traffic and harsh weather conditions.",
+                hover: "Manufactured by leading oil kerb paint manufacturers, this paint ensures long-lasting black and yellow contrast on concrete medians. It offers strong adhesion, UV resistance, and durability under heavy traffic and harsh weather conditions.",
                 image: "/assets/ynm-safety-traffic-islands.png"
               },
               {
                 title: "Bus Stops & Terminals",
-                short: "Oil paints manufactures supply durable kerb paints for bus stops and passenger terminals.",
+                short: "Oil paints manufacturers supply durable kerb paints for bus stops and passenger terminals.",
                 hover: "YNM Safety oil kerb base paint enhances curb visibility and lane discipline in high-footfall areas. The fast-drying, weather-resistant formula ensures clear markings even with continuous bus movement and public traffic.",
                 image: "/assets/ynm-safety-bus-stops-terminals.png"
               },
               {
                 title: "Kerbs and Road Edges",
                 short: "Oil kerb base paint is ideal for marking kerbs and road edges with sharp, durable finishes.",
-                hover: "As trusted paints manufactures, YNM Safety ensures smooth application and long-lasting colour retention. The paint resists fading, dust, and rain exposure, making it suitable for highways and urban roads.",
+                hover: "As trusted paints manufacturers, YNM Safety ensures smooth application and long-lasting colour retention. The paint resists fading, dust, and rain exposure, making it suitable for highways and urban roads.",
                 image: "/assets/ynm-safety-kerbs-road-edges.png"
               },
               {
                 title: "Curbs & Gutters",
                 short: "Oil kerb paint delivers clean and professional curb and gutter markings.",
-                hover: "Our ynm safety oil paints manufactures products provide excellent adhesion on concrete surfaces. The oil-base formulation protects against moisture, surface cracks, and environmental wear.",
+                hover: "Our ynm safety oil paints manufacturers products provide excellent adhesion on concrete surfaces. The oil-base formulation protects against moisture, surface cracks, and environmental wear.",
                 image: "/assets/ynm-safety-curbs-gutters.png"
               },
               {
@@ -1429,7 +1429,7 @@ export const productsData = {
               },
               {
                 title: "Safety Zones in Factories & Warehouses",
-                short: "Oil paints manufactures provide high-contrast safety markings for factory and warehouse zones.",
+                short: "Oil paints manufacturers provide high-contrast safety markings for factory and warehouse zones.",
                 hover: "YNM Safety manufactures oil kerb base paint that defines pedestrian paths, hazard zones, and equipment boundaries clearly. Its durable oil-base composition resists oil spills, chemicals, and frequent forklift movement.",
                 image: "/assets/ynm-safety-factories-warehouses.png"
               }
@@ -1531,12 +1531,12 @@ export const productsData = {
             },
             
             // Manufacturing Process - 10 Steps
-            manufacturingProcessIntro: "As leading oil kerb paint manufactures, YNM Safety follows a strict and quality-controlled manufacturing process to produce high-performance oil base kerb paint for highways, medians, road edges, and industrial safety zones. Being trusted oil paints manufactures and professional paints manufactures, every batch is produced under advanced supervision from raw materials to final dispatch.",
+            manufacturingProcessIntro: "As leading oil kerb paint manufacturers, YNM Safety follows a strict and quality-controlled manufacturing process to produce high-performance oil base kerb paint for highways, medians, road edges, and industrial safety zones. Being trusted oil paints manufacturers and professional paints manufacturers, every batch is produced under advanced supervision from raw materials to final dispatch.",
             manufacturingProcess: [
               {
                 step: "01",
                 title: "Selection of Raw Materials",
-                description: "The manufacturing of oil base kerb paint begins with sourcing premium alkyd resin (oil-base binder), mineral turpentine oil (solvent), titanium dioxide and iron oxide pigments, fillers like calcium carbonate, and specialty additives such as driers and anti-settling agents. YNM Safety manufactures only use approved and tested raw materials to ensure durability and long-lasting road marking performance."
+                description: "The manufacturing of oil base kerb paint begins with sourcing premium alkyd resin (oil-base binder), mineral turpentine oil (solvent), titanium dioxide and iron oxide pigments, fillers like calcium carbonate, and specialty additives such as driers and anti-settling agents. YNM Safety manufacturers only use approved and tested raw materials to ensure durability and long-lasting road marking performance."
               },
               {
                 step: "02",
@@ -1571,17 +1571,17 @@ export const productsData = {
               {
                 step: "08",
                 title: "Quality Control Testing",
-                description: "Each batch manufactured by ynm safety manufactures undergoes strict quality checks including viscosity test, drying time analysis, adhesion testing, gloss measurement, opacity verification, and density & solid content testing. Only approved batches proceed to packaging."
+                description: "Each batch manufactured by ynm safety manufacturers undergoes strict quality checks including viscosity test, drying time analysis, adhesion testing, gloss measurement, opacity verification, and density & solid content testing. Only approved batches proceed to packaging."
               },
               {
                 step: "09",
                 title: "Filling & Packaging",
-                description: "The approved oil base kerb paint is filled into durable 20 Kg MS containers using precision filling machines. Each container is labeled with batch number, manufacturing date, and compliance details — reinforcing YNM Safety's position among trusted oil paints manufactures."
+                description: "The approved oil base kerb paint is filled into durable 20 Kg MS containers using precision filling machines. Each container is labeled with batch number, manufacturing date, and compliance details — reinforcing YNM Safety's position among trusted oil paints manufacturers."
               },
               {
                 step: "10",
                 title: "Storage & Dispatch",
-                description: "The finished products are stored in controlled warehouse conditions to maintain quality stability. Upon order confirmation, the oil kerb paint is palletized and dispatched safely to domestic and international clients, strengthening YNM Safety's reputation as reliable oil kerb paint manufactures in India."
+                description: "The finished products are stored in controlled warehouse conditions to maintain quality stability. Upon order confirmation, the oil kerb paint is palletized and dispatched safely to domestic and international clients, strengthening YNM Safety's reputation as reliable oil kerb paint manufacturers in India."
               }
             ],
             
@@ -1626,7 +1626,7 @@ export const productsData = {
             id: "p5",
             slug: "water-kerb-base-paint-manufacturers",
             name: "Water Kerb Base Paint",
-            shortDesc: "High-performance water kerb base paint manufactures delivering eco-friendly, durable, and high-visibility curb and road marking paints for highways, urban roads, and infrastructure projects worldwide.",
+            shortDesc: "High-performance water kerb base paint manufacturers delivering eco-friendly, durable, and high-visibility curb and road marking paints for highways, urban roads, and infrastructure projects worldwide.",
             desc: "YNM Safety manufactures premium-quality water base paints designed for long-lasting curb and road edge markings with excellent adhesion on concrete and asphalt surfaces.",
             image: "/assets/YNM Safety Kerbs and Road Edges.png",
             heroImage: "/assets/YNM Safety Kerbs and Road Edges.png",
@@ -1635,13 +1635,13 @@ export const productsData = {
             // SEO Meta Information
             meta: {
               title: "Water Kerb Base Paint Manufacturers | Road Marking Paints | YNM Safety",
-              description: "YNM Safety water kerb paint manufactures high-performance water base kerb paints and road marking paints for durable curb and traffic safety markings worldwide. Trusted water paints manufactures and paints manufactures compliant with IS164-2023 standards.",
+              description: "YNM Safety water kerb paint manufacturers high-performance water base kerb paints and road marking paints for durable curb and traffic safety markings worldwide. Trusted water paints manufacturers and paints manufacturers compliant with IS164-2023 standards.",
               slug: "/water-kerb-base-paint-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is one of the leading water kerb paint manufactures in India, offering premium-quality water base paints designed for long-lasting curb and road edge markings. As reliable water paints manufactures and experienced paints manufactures, we deliver eco-friendly, low-VOC, and high-visibility marking solutions for highways, smart cities, municipal roads, and infrastructure projects.\n\nOur ynm safety water base paints manufactures products provide excellent adhesion on concrete kerbs, medians, and dividers while ensuring faster drying and environmental compliance. The water kerb base paint offers superior colour retention, crack resistance, and weather durability.\n\nBeing reputed water paints manufactures, YNM Safety focuses on sustainable production, consistent quality control, and compliance with IS 164 – 2023 standards for government and EPC projects.",
-            detailedDescription: "YNM Safety is one of the leading water kerb paint manufactures in India, offering premium-quality water base paints designed for long-lasting curb and road edge markings. As reliable water paints manufactures and experienced paints manufactures, we deliver eco-friendly, low-VOC, and high-visibility marking solutions for highways, smart cities, municipal roads, and infrastructure projects.\n\nOur ynm safety water base paints manufactures products provide excellent adhesion on concrete kerbs, medians, and dividers while ensuring faster drying and environmental compliance. The water kerb base paint offers superior colour retention, crack resistance, and weather durability.\n\nBeing reputed water paints manufactures, YNM Safety focuses on sustainable production, consistent quality control, and compliance with IS 164 – 2023 standards for government and EPC projects.",
+            overview: "YNM Safety is one of the leading water kerb paint manufacturers in India, offering premium-quality water base paints designed for long-lasting curb and road edge markings. As reliable water paints manufacturers and experienced paints manufacturers, we deliver eco-friendly, low-VOC, and high-visibility marking solutions for highways, smart cities, municipal roads, and infrastructure projects.\n\nOur ynm safety water base paints manufacturers products provide excellent adhesion on concrete kerbs, medians, and dividers while ensuring faster drying and environmental compliance. The water kerb base paint offers superior colour retention, crack resistance, and weather durability.\n\nBeing reputed water paints manufacturers, YNM Safety focuses on sustainable production, consistent quality control, and compliance with IS 164 – 2023 standards for government and EPC projects.",
+            detailedDescription: "YNM Safety is one of the leading water kerb paint manufacturers in India, offering premium-quality water base paints designed for long-lasting curb and road edge markings. As reliable water paints manufacturers and experienced paints manufacturers, we deliver eco-friendly, low-VOC, and high-visibility marking solutions for highways, smart cities, municipal roads, and infrastructure projects.\n\nOur ynm safety water base paints manufacturers products provide excellent adhesion on concrete kerbs, medians, and dividers while ensuring faster drying and environmental compliance. The water kerb base paint offers superior colour retention, crack resistance, and weather durability.\n\nBeing reputed water paints manufacturers, YNM Safety focuses on sustainable production, consistent quality control, and compliance with IS 164 – 2023 standards for government and EPC projects.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -1721,7 +1721,7 @@ export const productsData = {
                 "Environmentally compliant marking solution",
                 "Cost-effective and easy application",
                 "Low maintenance and durable performance",
-                "Trusted water kerb paint manufactures – YNM Safety",
+                "Trusted water kerb paint manufacturers – YNM Safety",
                 "Suitable for government and EPC projects"
               ]
             },
@@ -1740,7 +1740,7 @@ export const productsData = {
               "Environmentally compliant marking solution",
               "Cost-effective and easy application",
               "Low maintenance and durable performance",
-              "Trusted water kerb paint manufactures – YNM Safety",
+              "Trusted water kerb paint manufacturers – YNM Safety",
               "Suitable for government and EPC projects"
             ],
             
@@ -1751,40 +1751,40 @@ export const productsData = {
                 title: "Kerbs and Road Edges",
                 description: "Water kerb base paint ensures sharp, high-visibility markings for kerbs and road edges.",
                 image: "/assets/YNM Safety Kerbs and Road Edges.png",
-                details: "Manufactured by leading water kerb paint manufactures, this eco-friendly coating provides excellent adhesion on concrete surfaces. YNM Safety water base paints manufactures deliver durable, weather-resistant finishes that maintain colour stability under heavy traffic and UV exposure."
+                details: "Manufactured by leading water kerb paint manufacturers, this eco-friendly coating provides excellent adhesion on concrete surfaces. YNM Safety water base paints manufacturers deliver durable, weather-resistant finishes that maintain colour stability under heavy traffic and UV exposure."
               },
               {
                 id: "app2",
                 title: "Parking Lots",
-                description: "Water paints manufactures supply durable markings for parking lot boundaries and curb sections.",
+                description: "Water paints manufacturers supply durable markings for parking lot boundaries and curb sections.",
                 image: "/assets/YNM Safety parking lots (1).png",
-                details: "YNM Safety water kerb base paint offers fast drying and smooth application for commercial and residential parking areas. As trusted paints manufactures, we ensure long-lasting visibility even under continuous vehicle movement and environmental wear."
+                details: "YNM Safety water kerb base paint offers fast drying and smooth application for commercial and residential parking areas. As trusted paints manufacturers, we ensure long-lasting visibility even under continuous vehicle movement and environmental wear."
               },
               {
                 id: "app3",
                 title: "Pedestrian Crossings",
                 description: "Water kerb base paint enhances pedestrian crossing visibility and road safety.",
                 image: "/assets/YNM Safety Pedestrian Crossings.png",
-                details: "Our ynm safety water base paints manufactures products provide strong adhesion and bright colour contrast for zebra crossings and safety zones. The low-VOC, fast-curing formula ensures minimal traffic disruption during application."
+                details: "Our ynm safety water base paints manufacturers products provide strong adhesion and bright colour contrast for zebra crossings and safety zones. The low-VOC, fast-curing formula ensures minimal traffic disruption during application."
               },
               {
                 id: "app4",
                 title: "Road Markings",
                 description: "Water kerb paint is suitable for durable and eco-friendly road marking applications.",
                 image: "/assets/YNM Safety road markings.png",
-                details: "As experienced water paints manufactures, YNM Safety ensures consistent finish, excellent reflectivity, and long-term durability. The water-based formulation complies with environmental standards while maintaining superior marking performance."
+                details: "As experienced water paints manufacturers, YNM Safety ensures consistent finish, excellent reflectivity, and long-term durability. The water-based formulation complies with environmental standards while maintaining superior marking performance."
               },
               {
                 id: "app5",
                 title: "Industrial & Warehouse Floors",
                 description: "Water kerb base paint defines safety lines and boundaries in industrial facilities.",
                 image: "/assets/YNM Safety Industrial and Warehouse Floors.png",
-                details: "Manufactured by reliable water kerb paint manufactures, this paint resists abrasion, dust, and light chemical exposure. It provides clear demarcation for forklift paths, loading zones, and pedestrian walkways inside warehouses."
+                details: "Manufactured by reliable water kerb paint manufacturers, this paint resists abrasion, dust, and light chemical exposure. It provides clear demarcation for forklift paths, loading zones, and pedestrian walkways inside warehouses."
               },
               {
                 id: "app6",
                 title: "Public Spaces & Recreational Areas",
-                description: "Water paints manufactures provide vibrant markings for public and recreational spaces.",
+                description: "Water paints manufacturers provide vibrant markings for public and recreational spaces.",
                 image: "/assets/YNM Safety Public Spaces and Recreational Areas.png",
                 details: "YNM Safety manufactures water kerb base paint that delivers durable, low-odor, and environmentally safe coatings for parks, playgrounds, and community areas. The paint maintains colour brightness and surface integrity even under outdoor exposure."
               }
@@ -1794,36 +1794,36 @@ export const productsData = {
               {
                 title: "Kerbs and Road Edges",
                 short: "Water kerb base paint ensures sharp, high-visibility markings for kerbs and road edges.",
-                hover: "Manufactured by leading water kerb paint manufactures, this eco-friendly coating provides excellent adhesion on concrete surfaces. YNM Safety water base paints manufactures deliver durable, weather-resistant finishes that maintain colour stability under heavy traffic and UV exposure.",
+                hover: "Manufactured by leading water kerb paint manufacturers, this eco-friendly coating provides excellent adhesion on concrete surfaces. YNM Safety water base paints manufacturers deliver durable, weather-resistant finishes that maintain colour stability under heavy traffic and UV exposure.",
                 image: "/assets/YNM Safety Kerbs and Road Edges.png"
               },
               {
                 title: "Parking Lots",
-                short: "Water paints manufactures supply durable markings for parking lot boundaries and curb sections.",
-                hover: "YNM Safety water kerb base paint offers fast drying and smooth application for commercial and residential parking areas. As trusted paints manufactures, we ensure long-lasting visibility even under continuous vehicle movement and environmental wear.",
+                short: "Water paints manufacturers supply durable markings for parking lot boundaries and curb sections.",
+                hover: "YNM Safety water kerb base paint offers fast drying and smooth application for commercial and residential parking areas. As trusted paints manufacturers, we ensure long-lasting visibility even under continuous vehicle movement and environmental wear.",
                 image: "/assets/YNM Safety parking lots (1).png"
               },
               {
                 title: "Pedestrian Crossings",
                 short: "Water kerb base paint enhances pedestrian crossing visibility and road safety.",
-                hover: "Our ynm safety water base paints manufactures products provide strong adhesion and bright colour contrast for zebra crossings and safety zones. The low-VOC, fast-curing formula ensures minimal traffic disruption during application.",
+                hover: "Our ynm safety water base paints manufacturers products provide strong adhesion and bright colour contrast for zebra crossings and safety zones. The low-VOC, fast-curing formula ensures minimal traffic disruption during application.",
                 image: "/assets/YNM Safety Pedestrian Crossings.png"
               },
               {
                 title: "Road Markings",
                 short: "Water kerb paint is suitable for durable and eco-friendly road marking applications.",
-                hover: "As experienced water paints manufactures, YNM Safety ensures consistent finish, excellent reflectivity, and long-term durability. The water-based formulation complies with environmental standards while maintaining superior marking performance.",
+                hover: "As experienced water paints manufacturers, YNM Safety ensures consistent finish, excellent reflectivity, and long-term durability. The water-based formulation complies with environmental standards while maintaining superior marking performance.",
                 image: "/assets/YNM Safety road markings.png"
               },
               {
                 title: "Industrial & Warehouse Floors",
                 short: "Water kerb base paint defines safety lines and boundaries in industrial facilities.",
-                hover: "Manufactured by reliable water kerb paint manufactures, this paint resists abrasion, dust, and light chemical exposure. It provides clear demarcation for forklift paths, loading zones, and pedestrian walkways inside warehouses.",
+                hover: "Manufactured by reliable water kerb paint manufacturers, this paint resists abrasion, dust, and light chemical exposure. It provides clear demarcation for forklift paths, loading zones, and pedestrian walkways inside warehouses.",
                 image: "/assets/YNM Safety Industrial and Warehouse Floors.png"
               },
               {
                 title: "Public Spaces & Recreational Areas",
-                short: "Water paints manufactures provide vibrant markings for public and recreational spaces.",
+                short: "Water paints manufacturers provide vibrant markings for public and recreational spaces.",
                 hover: "YNM Safety manufactures water kerb base paint that delivers durable, low-odor, and environmentally safe coatings for parks, playgrounds, and community areas. The paint maintains colour brightness and surface integrity even under outdoor exposure.",
                 image: "/assets/YNM Safety Public Spaces and Recreational Areas.png"
               }
@@ -1897,12 +1897,12 @@ export const productsData = {
             },
             
             // Manufacturing Process - 11 Steps
-            manufacturingProcessIntro: "As leading water kerb paint manufactures in India, YNM Safety follows a strict ISO 9001:2015 quality-controlled production system at our Hyderabad manufacturing facility. Our water kerb base paint is produced in compliance with IS 164:2023 standards to ensure durability, adhesion, and long-lasting road marking performance.",
+            manufacturingProcessIntro: "As leading water kerb paint manufacturers in India, YNM Safety follows a strict ISO 9001:2015 quality-controlled production system at our Hyderabad manufacturing facility. Our water kerb base paint is produced in compliance with IS 164:2023 standards to ensure durability, adhesion, and long-lasting road marking performance.",
             manufacturingProcess: [
               {
                 step: "01",
                 title: "Procurement of Raw Materials",
-                description: "The process begins with sourcing premium acrylic water-based resin, titanium dioxide and iron oxide pigments, mineral fillers, performance additives (dispersants, defoamers, thickeners), preservatives, and treated water. As responsible ynm safety water base paints manufactures, only approved and tested raw materials are accepted for production."
+                description: "The process begins with sourcing premium acrylic water-based resin, titanium dioxide and iron oxide pigments, mineral fillers, performance additives (dispersants, defoamers, thickeners), preservatives, and treated water. As responsible ynm safety water base paints manufacturers, only approved and tested raw materials are accepted for production."
               },
               {
                 step: "02",
@@ -1927,12 +1927,12 @@ export const productsData = {
               {
                 step: "06",
                 title: "Resin Let-Down & Final Blending",
-                description: "Acrylic water-based resin is added into the ground mixture in blending tanks. Performance additives are incorporated to enhance durability, drying time, weather resistance, and binding strength. This stage defines the final performance characteristics of the paint supplied by trusted water paints manufactures."
+                description: "Acrylic water-based resin is added into the ground mixture in blending tanks. Performance additives are incorporated to enhance durability, drying time, weather resistance, and binding strength. This stage defines the final performance characteristics of the paint supplied by trusted water paints manufacturers."
               },
               {
                 step: "07",
                 title: "Viscosity & Performance Adjustment",
-                description: "Thickeners and coalescing agents are added to achieve the required application viscosity and flow properties. As experienced paints manufactures, YNM Safety ensures smooth brush, roller, and spray application."
+                description: "Thickeners and coalescing agents are added to achieve the required application viscosity and flow properties. As experienced paints manufacturers, YNM Safety ensures smooth brush, roller, and spray application."
               },
               {
                 step: "08",
@@ -1942,7 +1942,7 @@ export const productsData = {
               {
                 step: "09",
                 title: "Quality Control Testing",
-                description: "Each batch manufactured by ynm safety manufactures undergoes strict testing including: Viscosity test, pH test, Drying time analysis, Adhesion testing, Opacity & colour verification, and Density and solid content testing. Only batches meeting IS 164:2023 standards are approved for packaging."
+                description: "Each batch manufactured by ynm safety manufacturers undergoes strict testing including: Viscosity test, pH test, Drying time analysis, Adhesion testing, Opacity & colour verification, and Density and solid content testing. Only batches meeting IS 164:2023 standards are approved for packaging."
               },
               {
                 step: "10",
@@ -1952,7 +1952,7 @@ export const productsData = {
               {
                 step: "11",
                 title: "Storage & Dispatch",
-                description: "Finished goods are stored in a temperature-controlled warehouse to maintain product stability. Upon order confirmation, products are palletized and dispatched safely to domestic and international clients, strengthening YNM Safety's position among reliable water kerb paint manufactures and exporters from India."
+                description: "Finished goods are stored in a temperature-controlled warehouse to maintain product stability. Upon order confirmation, products are palletized and dispatched safely to domestic and international clients, strengthening YNM Safety's position among reliable water kerb paint manufacturers and exporters from India."
               }
             ],
             
@@ -2016,8 +2016,8 @@ export const productsData = {
             id: "p6",
             slug: "enamel-paint-manufacturers",
             name: "Enamel Paint",
-            shortDesc: "Premium quality enamel paint manufactures delivering durable, high-gloss, weather-resistant coatings for architectural, industrial, automotive, and protective applications worldwide.",
-            desc: "YNM Safety manufactures high-performance enamel paint for architectural, industrial, automotive, and metal applications. Trusted enamel paint manufactures compliant with IS164:2023 standards.",
+            shortDesc: "Premium quality enamel paint manufacturers delivering durable, high-gloss, weather-resistant coatings for architectural, industrial, automotive, and protective applications worldwide.",
+            desc: "YNM Safety manufactures high-performance enamel paint for architectural, industrial, automotive, and metal applications. Trusted enamel paint manufacturers compliant with IS164:2023 standards.",
             image: "/assets/YNM Safety Industrial coatings.png",
             heroImage: "/assets/YNM Safety Industrial coatings.png",
             specs: ["Synthetic / Alkyd Based", "High Gloss / Semi Gloss Finish", "Brush/Roller/Spray Application", "Surface Dry - 6-8 Hours", "IS164:2023 Compliant", "Excellent Metal & Wood Adhesion"],
@@ -2025,13 +2025,13 @@ export const productsData = {
             // SEO Meta Information
             meta: {
               title: "Enamel Paint Manufacturers | Industrial & Decorative Paints | YNM Safety",
-              description: "YNM Safety manufactures high-performance enamel paint for architectural, industrial, automotive, and metal applications. Trusted enamel paint manufactures and paints manufactures in India compliant with IS164:2023 standards.",
+              description: "YNM Safety manufactures high-performance enamel paint for architectural, industrial, automotive, and metal applications. Trusted enamel paint manufacturers and paints manufacturers in India compliant with IS164:2023 standards.",
               slug: "/enamel-paint-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is one of the leading enamel paint manufactures in India, offering premium-quality enamel coatings designed for superior durability, gloss retention, and long-term surface protection. As trusted paints manufactures and recognized ynm safety paints manufactures, we provide enamel paint solutions for architectural, industrial, automotive, and protective coating applications.\n\nOur enamel paint is formulated with high-performance resins and pigments to deliver excellent adhesion on metal, wood, and previously painted surfaces. Being experienced enamel paint manufactures, YNM Safety ensures smooth finish, resistance to corrosion, and long-lasting colour stability even under harsh environmental conditions.\n\nAs reliable ynm safety manufactures, we focus on advanced production technology, strict quality control, and compliance with IS164:2023 standards to serve domestic and global markets.",
-            detailedDescription: "YNM Safety is one of the leading enamel paint manufactures in India, offering premium-quality enamel coatings designed for superior durability, gloss retention, and long-term surface protection. As trusted paints manufactures and recognized ynm safety paints manufactures, we provide enamel paint solutions for architectural, industrial, automotive, and protective coating applications.\n\nOur enamel paint is formulated with high-performance resins and pigments to deliver excellent adhesion on metal, wood, and previously painted surfaces. Being experienced enamel paint manufactures, YNM Safety ensures smooth finish, resistance to corrosion, and long-lasting colour stability even under harsh environmental conditions.\n\nAs reliable ynm safety manufactures, we focus on advanced production technology, strict quality control, and compliance with IS164:2023 standards to serve domestic and global markets.",
+            overview: "YNM Safety is one of the leading enamel paint manufacturers in India, offering premium-quality enamel coatings designed for superior durability, gloss retention, and long-term surface protection. As trusted paints manufacturers and recognized ynm safety paints manufacturers, we provide enamel paint solutions for architectural, industrial, automotive, and protective coating applications.\n\nOur enamel paint is formulated with high-performance resins and pigments to deliver excellent adhesion on metal, wood, and previously painted surfaces. Being experienced enamel paint manufacturers, YNM Safety ensures smooth finish, resistance to corrosion, and long-lasting colour stability even under harsh environmental conditions.\n\nAs reliable ynm safety manufacturers, we focus on advanced production technology, strict quality control, and compliance with IS164:2023 standards to serve domestic and global markets.",
+            detailedDescription: "YNM Safety is one of the leading enamel paint manufacturers in India, offering premium-quality enamel coatings designed for superior durability, gloss retention, and long-term surface protection. As trusted paints manufacturers and recognized ynm safety paints manufacturers, we provide enamel paint solutions for architectural, industrial, automotive, and protective coating applications.\n\nOur enamel paint is formulated with high-performance resins and pigments to deliver excellent adhesion on metal, wood, and previously painted surfaces. Being experienced enamel paint manufacturers, YNM Safety ensures smooth finish, resistance to corrosion, and long-lasting colour stability even under harsh environmental conditions.\n\nAs reliable ynm safety manufacturers, we focus on advanced production technology, strict quality control, and compliance with IS164:2023 standards to serve domestic and global markets.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -2111,7 +2111,7 @@ export const productsData = {
                 "Suitable for interior and exterior applications",
                 "Easy application with brush, roller, or spray",
                 "Cost-effective long-term protection solution",
-                "Trusted enamel paint manufactures – YNM Safety"
+                "Trusted enamel paint manufacturers – YNM Safety"
               ]
             },
             
@@ -2129,7 +2129,7 @@ export const productsData = {
               "Suitable for interior and exterior applications",
               "Easy application with brush, roller, or spray",
               "Cost-effective long-term protection solution",
-              "Trusted enamel paint manufactures – YNM Safety"
+              "Trusted enamel paint manufacturers – YNM Safety"
             ],
             
             // Application Areas with images and hover effects
@@ -2139,14 +2139,14 @@ export const productsData = {
                 title: "Architectural & Decorative Coatings",
                 description: "Enamel paint is widely used for decorative finishes in residential and commercial buildings.",
                 image: "/assets/enamel/YNM Safety Architectural and Decorative coatings.png",
-                details: "As leading enamel paint manufactures, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection."
+                details: "As leading enamel paint manufacturers, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection."
               },
               {
                 id: "app2",
                 title: "Industrial Coatings",
                 description: "Industrial enamel paint provides durable protection for machinery and equipment.",
                 image: "/assets/YNM Safety Industrial coatings.png",
-                details: "Our ynm safety paints manufactures products offer corrosion resistance and mechanical durability for factories, plants, and heavy industrial structures."
+                details: "Our ynm safety paints manufacturers products offer corrosion resistance and mechanical durability for factories, plants, and heavy industrial structures."
               },
               {
                 id: "app3",
@@ -2160,7 +2160,7 @@ export const productsData = {
                 title: "Wood Coatings",
                 description: "Enamel paint enhances the durability and finish of wooden surfaces.",
                 image: "/assets/enamel/YNM Safety Wood coatings.png",
-                details: "YNM Safety enamel paint manufactures provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures."
+                details: "YNM Safety enamel paint manufacturers provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures."
               },
               {
                 id: "app5",
@@ -2174,7 +2174,7 @@ export const productsData = {
                 title: "Metal Fabrication",
                 description: "Enamel paint provides protective coating for fabricated metal components.",
                 image: "/assets/YNM Safety Metal fabrication.png",
-                details: "As trusted paints manufactures, we deliver enamel coatings that prevent rust formation and extend the life of fabricated steel and structural components."
+                details: "As trusted paints manufacturers, we deliver enamel coatings that prevent rust formation and extend the life of fabricated steel and structural components."
               }
             ],
             
@@ -2182,13 +2182,13 @@ export const productsData = {
               {
                 title: "Architectural & Decorative Coatings",
                 short: "Enamel paint is widely used for decorative finishes in residential and commercial buildings.",
-                hover: "As leading enamel paint manufactures, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection.",
+                hover: "As leading enamel paint manufacturers, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection.",
                 image: "/assets/enamel/YNM Safety Architectural and Decorative coatings.png"
               },
               {
                 title: "Industrial Coatings",
                 short: "Industrial enamel paint provides durable protection for machinery and equipment.",
-                hover: "Our ynm safety paints manufactures products offer corrosion resistance and mechanical durability for factories, plants, and heavy industrial structures.",
+                hover: "Our ynm safety paints manufacturers products offer corrosion resistance and mechanical durability for factories, plants, and heavy industrial structures.",
                 image: "/assets/YNM Safety Industrial coatings.png"
               },
               {
@@ -2200,7 +2200,7 @@ export const productsData = {
               {
                 title: "Wood Coatings",
                 short: "Enamel paint enhances the durability and finish of wooden surfaces.",
-                hover: "YNM Safety enamel paint manufactures provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures.",
+                hover: "YNM Safety enamel paint manufacturers provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures.",
                 image: "/assets/enamel/YNM Safety Wood coatings.png"
               },
               {
@@ -2212,7 +2212,7 @@ export const productsData = {
               {
                 title: "Metal Fabrication",
                 short: "Enamel paint provides protective coating for fabricated metal components.",
-                hover: "As trusted paints manufactures, we deliver enamel coatings that prevent rust formation and extend the life of fabricated steel and structural components.",
+                hover: "As trusted paints manufacturers, we deliver enamel coatings that prevent rust formation and extend the life of fabricated steel and structural components.",
                 image: "/assets/YNM Safety Metal fabrication.png"
               }
             ],
@@ -2392,8 +2392,8 @@ export const productsData = {
             id: "p7",
             slug: "red-oxide-paint-manufacturers",
             name: "Red Oxide Paint",
-            shortDesc: "High-purity Red Oxide manufactured by leading YNM Safety paint manufactures, delivering superior performance for construction, coatings, plastics, and industrial applications worldwide.",
-            desc: "YNM Safety manufactures high-performance Red Oxide paint compliant with IS:2074 standards. Trusted paints manufactures supplying premium red oxide pigment and coatings globally.",
+            shortDesc: "High-purity Red Oxide manufactured by leading YNM Safety paint manufacturers, delivering superior performance for construction, coatings, plastics, and industrial applications worldwide.",
+            desc: "YNM Safety manufactures high-performance Red Oxide paint compliant with IS:2074 standards. Trusted paints manufacturers supplying premium red oxide pigment and coatings globally.",
             image: "/assets/ynm-safety-industrial.jpg",
             heroImage: "/assets/ynm-safety-industrial.jpg",
             specs: ["IS:2074 Compliant", "High Durability", "Excellent Corrosion Resistance", "Strong Colour Stability", "Brush/Roller/Spray Application", "Matte/Primer Finish"],
@@ -2401,14 +2401,14 @@ export const productsData = {
             // SEO Meta Information
             meta: {
               title: "Red Oxide Paint Manufacturers | YNM Safety",
-              description: "YNM Safety paint manufactures high-performance Red Oxide paint compliant with IS:2074 standards. Trusted paints manufactures supplying premium red oxide pigment and coatings globally.",
+              description: "YNM Safety paint manufacturers supply high-performance Red Oxide paint compliant with IS:2074 standards. Trusted paints manufacturers supplying premium red oxide pigment and coatings globally.",
               slug: "/red-oxide-paint-manufacturers",
               keywords: "YNM Safety Red Oxide Paint, Red Oxide Paint Manufacturer, Red Oxide Primer Manufacturer, Anti Rust Red Oxide Paint, Industrial Red Oxide Primer, Metal Primer Paint, Red Oxide Paint for Storage Tanks, Red Oxide Paint for Pipelines, Red Oxide Paint for Bridges, Red Oxide Paint for Infrastructure, Industrial Primer Coating, Structural Steel Primer, Corrosion Resistant Primer, Red Oxide Coating Supplier"
             },
             
             // Product Overview
-            overview: "YNM Safety is one of the trusted red oxide paint manufacturers in India, supplying high-quality red oxide coatings and pigments for industrial and construction applications. As experienced YNM Safety paint manufactures and professional paints manufactures, we ensure consistent quality, durability, and compliance with IS:2074 standards.\n\nOur Red Oxide is widely used in construction materials, paints & coatings, plastics, ceramics, and specialty industrial applications. The product offers excellent weather resistance, corrosion protection, and long-lasting colour stability.\n\nBeing reputed YNM Safety manufactures, we focus on delivering premium-grade red oxide paint suitable for domestic and export markets.",
-            detailedDescription: "YNM Safety is one of the trusted red oxide paint manufacturers in India, supplying high-quality red oxide coatings and pigments for industrial and construction applications. As experienced YNM Safety paint manufactures and professional paints manufactures, we ensure consistent quality, durability, and compliance with IS:2074 standards.\n\nOur Red Oxide is widely used in construction materials, paints & coatings, plastics, ceramics, and specialty industrial applications. The product offers excellent weather resistance, corrosion protection, and long-lasting colour stability.\n\nBeing reputed YNM Safety manufactures, we focus on delivering premium-grade red oxide paint suitable for domestic and export markets.",
+            overview: "YNM Safety is one of the trusted red oxide paint manufacturers in India, supplying high-quality red oxide coatings and pigments for industrial and construction applications. As experienced YNM Safety paint manufacturers and professional paints manufacturers, we ensure consistent quality, durability, and compliance with IS:2074 standards.\n\nOur Red Oxide is widely used in construction materials, paints & coatings, plastics, ceramics, and specialty industrial applications. The product offers excellent weather resistance, corrosion protection, and long-lasting colour stability.\n\nBeing reputed YNM Safety manufacturers, we focus on delivering premium-grade red oxide paint suitable for domestic and export markets.",
+            detailedDescription: "YNM Safety is one of the trusted red oxide paint manufacturers in India, supplying high-quality red oxide coatings and pigments for industrial and construction applications. As experienced YNM Safety paint manufacturers and professional paints manufacturers, we ensure consistent quality, durability, and compliance with IS:2074 standards.\n\nOur Red Oxide is widely used in construction materials, paints & coatings, plastics, ceramics, and specialty industrial applications. The product offers excellent weather resistance, corrosion protection, and long-lasting colour stability.\n\nBeing reputed YNM Safety manufacturers, we focus on delivering premium-grade red oxide paint suitable for domestic and export markets.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -2488,7 +2488,7 @@ export const productsData = {
                 "Ideal primer for protective coatings",
                 "Suitable for multi-industry applications",
                 "Low maintenance and high-performance formulation",
-                "Trusted paints manufactures – YNM Safety"
+                "Trusted paints manufacturers – YNM Safety"
               ]
             },
             
@@ -2506,7 +2506,7 @@ export const productsData = {
               "Ideal primer for protective coatings",
               "Suitable for multi-industry applications",
               "Low maintenance and high-performance formulation",
-              "Trusted paints manufactures – YNM Safety"
+              "Trusted paints manufacturers – YNM Safety"
             ],
             
             // Application Areas with images and hover effects
@@ -2516,7 +2516,7 @@ export const productsData = {
                 title: "Construction and Building Materials",
                 description: "Red Oxide is widely used in construction materials for durability and colour stability.",
                 image: "/assets/ynm-safety-construction-building-materials.jpg",
-                details: "Manufactured by leading YNM Safety paint manufactures, red oxide enhances cement products, concrete blocks, and structural materials with long-lasting colour and weather resistance."
+                details: "Manufactured by leading YNM Safety paint manufacturers, red oxide enhances cement products, concrete blocks, and structural materials with long-lasting colour and weather resistance."
               },
               {
                 id: "app2",
@@ -2551,7 +2551,7 @@ export const productsData = {
                 title: "Packaging and Printing Inks",
                 description: "Red Oxide serves as a durable pigment for inks and packaging materials.",
                 image: "/assets/ynm-safety-packaging-printing-inks.jpg",
-                details: "Manufactured by trusted YNM Safety manufactures, it ensures consistent colour tone and long-lasting print quality in industrial packaging applications."
+                details: "Manufactured by trusted YNM Safety manufacturers, it ensures consistent colour tone and long-lasting print quality in industrial packaging applications."
               }
             ],
             
@@ -2559,7 +2559,7 @@ export const productsData = {
               {
                 title: "Construction and Building Materials",
                 short: "Red Oxide is widely used in construction materials for durability and colour stability.",
-                hover: "Manufactured by leading YNM Safety paint manufactures, red oxide enhances cement products, concrete blocks, and structural materials with long-lasting colour and weather resistance.",
+                hover: "Manufactured by leading YNM Safety paint manufacturers, red oxide enhances cement products, concrete blocks, and structural materials with long-lasting colour and weather resistance.",
                 image: "/assets/ynm-safety-construction-building-materials.jpg"
               },
               {
@@ -2589,7 +2589,7 @@ export const productsData = {
               {
                 title: "Packaging and Printing Inks",
                 short: "Red Oxide serves as a durable pigment for inks and packaging materials.",
-                hover: "Manufactured by trusted YNM Safety manufactures, it ensures consistent colour tone and long-lasting print quality in industrial packaging applications.",
+                hover: "Manufactured by trusted YNM Safety manufacturers, it ensures consistent colour tone and long-lasting print quality in industrial packaging applications.",
                 image: "/assets/ynm-safety-packaging-printing-inks.jpg"
               }
             ],
@@ -2663,12 +2663,12 @@ export const productsData = {
             },
             
             // Manufacturing Process - 10 Steps
-            manufacturingProcessIntro: "As leading red oxide paint manufacturers, YNM Safety follows a strict and quality-controlled manufacturing process to produce high-performance anti-corrosive red oxide paint suitable for construction, fabrication, and industrial coating applications. Being trusted YNM Safety paint manufactures and professional paints manufactures, every batch is produced using advanced production technology and rigorous quality monitoring.",
+            manufacturingProcessIntro: "As leading red oxide paint manufacturers, YNM Safety follows a strict and quality-controlled manufacturing process to produce high-performance anti-corrosive red oxide paint suitable for construction, fabrication, and industrial coating applications. Being trusted YNM Safety paint manufacturers and professional paints manufacturers, every batch is produced using advanced production technology and rigorous quality monitoring.",
             manufacturingProcess: [
               {
                 step: "01",
                 title: "Selection of Premium Raw Materials",
-                description: "The manufacturing process of red oxide paint begins with sourcing high-quality red iron oxide pigments, alkyd or synthetic resin binders, solvents, fillers, and specialty performance additives. YNM Safety manufactures only use approved and industry-certified raw materials to ensure superior durability, corrosion resistance, and long-lasting colour stability in red oxide coatings."
+                description: "The manufacturing process of red oxide paint begins with sourcing high-quality red iron oxide pigments, alkyd or synthetic resin binders, solvents, fillers, and specialty performance additives. YNM Safety manufacturers only use approved and industry-certified raw materials to ensure superior durability, corrosion resistance, and long-lasting colour stability in red oxide coatings."
               },
               {
                 step: "02",
@@ -2683,7 +2683,7 @@ export const productsData = {
               {
                 step: "04",
                 title: "Pigment Dispersion Process",
-                description: "Premium red iron oxide pigments and fillers are gradually introduced into the resin mixture under continuous high-speed dispersion. This process ensures uniform pigment distribution, excellent opacity, and consistent shade quality, making YNM Safety one of the trusted paints manufactures for industrial coatings."
+                description: "Premium red iron oxide pigments and fillers are gradually introduced into the resin mixture under continuous high-speed dispersion. This process ensures uniform pigment distribution, excellent opacity, and consistent shade quality, making YNM Safety one of the trusted paints manufacturers for industrial coatings."
               },
               {
                 step: "05",
@@ -2703,7 +2703,7 @@ export const productsData = {
               {
                 step: "08",
                 title: "Quality Control Testing",
-                description: "Each batch manufactured by YNM Safety manufactures undergoes strict quality testing including viscosity testing, drying time evaluation, adhesion strength testing, shade and colour consistency verification, density and solid content testing, and corrosion resistance performance testing. Only batches meeting IS:2074 quality standards are approved for packaging and distribution."
+                description: "Each batch manufactured by YNM Safety manufacturers undergoes strict quality testing including viscosity testing, drying time evaluation, adhesion strength testing, shade and colour consistency verification, density and solid content testing, and corrosion resistance performance testing. Only batches meeting IS:2074 quality standards are approved for packaging and distribution."
               },
               {
                 step: "09",
@@ -2713,7 +2713,7 @@ export const productsData = {
               {
                 step: "10",
                 title: "Storage & Dispatch",
-                description: "The finished products are stored in controlled warehouse environments to maintain stability and product quality. After order confirmation, the red oxide paint is palletized and dispatched safely to domestic and international customers, strengthening YNM Safety's position as reliable paints manufactures."
+                description: "The finished products are stored in controlled warehouse environments to maintain stability and product quality. After order confirmation, the red oxide paint is palletized and dispatched safely to domestic and international customers, strengthening YNM Safety's position as reliable paints manufacturers."
               }
             ],
             
@@ -3203,12 +3203,400 @@ export const productsData = {
               "/assets/YNM Safety Port roads and Container yards.png",
               "/assets/YNM safety Airport runways taxiways and aprons.png"
             ]
+          },
+          {
+            id: "bit2",
+            slug: "bitumen-vg-30-manufacturers",
+            name: "Bitumen VG 30",
+            shortDesc: "High-performance Bitumen VG 30 manufacturers delivering premium paving grade bitumen for airport runways, industrial flooring, bridge decking & marine infrastructure.",
+            desc: "Premium paving grade bitumen VG 30 designed for road construction, waterproofing, and heavy-duty infrastructure applications.",
+            image: "/assets/bitumen/YNM-Safety-Airport-Runways.png",
+            heroImage: "/assets/bitumen/YNM-Safety-Airport-Runways.png",
+            specs: ["VG 30 Grade", "IS 73 Compliant", "ASTM Standards", "200 Kg Drums", "Export Ready"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Bitumen VG 30 Manufacturers | VG30 & VG40 Bitumen Suppliers | YNM Safety",
+              description: "YNM Safety manufactures premium Bitumen VG 30 and Bitumen VG 40 for airport runways, roofing, bridge decking, and infrastructure projects worldwide. Trusted bitumen manufacturers compliant with IS 73 and ASTM standards.",
+              slug: "/bitumen-vg-30-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is a trusted name among global bitumen manufacturers, supplying high-quality Bitumen VG 30 (Bitumen VG30) for road construction, waterproofing, and heavy-duty infrastructure applications. As reliable ynm safety bitumen manufacturers, we ensure consistent viscosity, superior aggregate bonding, and long-term durability.\n\nBitumen VG 30 is widely used in airport pavements, bridge decking, roofing systems, industrial flooring, and marine infrastructure. Its viscosity grade ensures excellent resistance to deformation, cracking, and moisture penetration under heavy loads and varying climatic conditions.\n\nAlong with VG30, we also supply Bitumen VG 40 for projects requiring enhanced load-bearing capacity and high-temperature resistance. As experienced ynm safety manufacturers, we maintain strict compliance with IS 73 and ASTM standards to meet global quality requirements.",
+            detailedDescription: "YNM Safety is a trusted name among global bitumen manufacturers, supplying high-quality Bitumen VG 30 (Bitumen VG30) for road construction, waterproofing, and heavy-duty infrastructure applications. As reliable ynm safety bitumen manufacturers, we ensure consistent viscosity, superior aggregate bonding, and long-term durability.\n\nBitumen VG 30 is widely used in airport pavements, bridge decking, roofing systems, industrial flooring, and marine infrastructure. Its viscosity grade ensures excellent resistance to deformation, cracking, and moisture penetration under heavy loads and varying climatic conditions.\n\nAlong with VG30, we also supply Bitumen VG 40 for projects requiring enhanced load-bearing capacity and high-temperature resistance. As experienced ynm safety manufacturers, we maintain strict compliance with IS 73 and ASTM standards to meet global quality requirements.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Bitumen VG 30" },
+              { label: "Grade", value: "Viscosity Grade 30" },
+              { label: "Standards", value: "IS 73, ASTM" },
+              { label: "Net Weight", value: "200 Kg Drum" },
+              { label: "MOQ", value: "200 Kg" },
+              { label: "HSN Code", value: "27132000" },
+              { label: "Packing Type", value: "Steel Drum" },
+              { label: "Alternate Grade", value: "Bitumen VG 40" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Quality Standards",
+                value: "1. IS 73\n2. ASTM",
+                icon: "standard"
+              },
+              {
+                label: "Packing Options",
+                value: "200 Kg Steel Drums",
+                icon: "package"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "200 Kg",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "27132000",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "Steel Drum",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Bitumen VG 30",
+                "Grade: Viscosity Grade 30",
+                "Standards: IS 73, ASTM",
+                "Net Weight: 200 Kg Drum",
+                "MOQ: 200 Kg",
+                "HSN Code: 27132000",
+                "Packing Type: Steel Drum",
+                "Alternate Grade: Bitumen VG 40",
+                "Country of Origin: India",
+                "Manufacturing Location: Hyderabad"
+              ],
+              keyFeatures: [
+                "High viscosity grade for durable pavement performance",
+                "Excellent adhesion and waterproofing properties",
+                "Strong resistance to rutting and cracking",
+                "Suitable for roofing and industrial applications",
+                "Manufactured under IS 73 and ASTM standards",
+                "Available alongside Bitumen VG 40"
+              ],
+              advantages: [
+                "Enhances structural strength of pavements and decks",
+                "Ideal for airport runways and bridge decking",
+                "Performs efficiently in waterproofing systems",
+                "Reliable under heavy traffic and industrial loads",
+                "Supplied by trusted ynm safety bitumen manufacturers"
+              ]
+            },
+            
+            features: [
+              "High viscosity grade for durable pavement performance",
+              "Excellent adhesion and waterproofing properties",
+              "Strong resistance to rutting and cracking",
+              "Suitable for roofing and industrial applications",
+              "Manufactured under IS 73 and ASTM standards",
+              "Available alongside Bitumen VG 40"
+            ],
+            
+            advantages: [
+              "Enhances structural strength of pavements and decks",
+              "Ideal for airport runways and bridge decking",
+              "Performs efficiently in waterproofing systems",
+              "Reliable under heavy traffic and industrial loads",
+              "Supplied by trusted ynm safety bitumen manufacturers"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Airport Runways",
+                description: "Bitumen VG 30 is widely used for airport runway construction and surfacing.",
+                image: "/assets/bitumen/YNM-Safety-Airport-Runways.png",
+                details: "Manufactured by leading bitumen manufacturers, VG30 provides high load-bearing capacity and thermal stability required for aircraft movement and continuous stress conditions."
+              },
+              {
+                id: "app2",
+                title: "Roofing & Waterproofing",
+                description: "Bitumen VG30 is ideal for roofing membranes and waterproofing systems.",
+                image: "/assets/bitumen/YNM-Safety-Roofing-and-Waterproofing.png",
+                details: "Its excellent binding and moisture resistance properties make it suitable for protecting buildings, basements, and structural foundations from water damage."
+              },
+              {
+                id: "app3",
+                title: "Industrial Flooring",
+                description: "Bitumen VG 30 supports heavy-duty industrial flooring applications.",
+                image: "/assets/bitumen/YNM-Safety-Industrial-Flooring.png",
+                details: "As trusted ynm safety manufacturers, we supply Bitumen VG30 that withstands mechanical stress, chemical exposure, and heavy equipment loads."
+              },
+              {
+                id: "app4",
+                title: "Bridge Decking",
+                description: "VG30 bitumen enhances bridge deck surfacing durability.",
+                image: "/assets/bitumen/YNM-Safety-Bridge-Decking.png",
+                details: "Its strong adhesion and crack resistance reduce water infiltration and structural damage in elevated road and bridge structures."
+              },
+              {
+                id: "app5",
+                title: "Marine & Port Infrastructure",
+                description: "Bitumen VG 30 is used in marine and port construction projects.",
+                image: "/assets/bitumen/YNM-Safety-Marine-and-Port-Infrastructure.png",
+                details: "The corrosion-resistant and waterproof properties ensure long-term performance in coastal and high-humidity environments."
+              },
+              {
+                id: "app6",
+                title: "Dam & Reservoir Construction",
+                description: "Bitumen VG30 is suitable for dam and reservoir waterproof lining.",
+                image: "/assets/bitumen/YNM-Safety-Dam-and-Reservoir-Construction.png",
+                details: "Its high binding strength and moisture resistance make it ideal for large-scale hydraulic and water containment projects."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Airport Runways",
+                short: "Bitumen VG 30 is widely used for airport runway construction and surfacing.",
+                hover: "Manufactured by leading bitumen manufacturers, VG30 provides high load-bearing capacity and thermal stability required for aircraft movement and continuous stress conditions.",
+                image: "/assets/bitumen/YNM-Safety-Airport-Runways.png"
+              },
+              {
+                title: "Roofing & Waterproofing",
+                short: "Bitumen VG30 is ideal for roofing membranes and waterproofing systems.",
+                hover: "Its excellent binding and moisture resistance properties make it suitable for protecting buildings, basements, and structural foundations from water damage.",
+                image: "/assets/bitumen/YNM-Safety-Roofing-and-Waterproofing.png"
+              },
+              {
+                title: "Industrial Flooring",
+                short: "Bitumen VG 30 supports heavy-duty industrial flooring applications.",
+                hover: "As trusted ynm safety manufacturers, we supply Bitumen VG30 that withstands mechanical stress, chemical exposure, and heavy equipment loads.",
+                image: "/assets/bitumen/YNM-Safety-Industrial-Flooring.png"
+              },
+              {
+                title: "Bridge Decking",
+                short: "VG30 bitumen enhances bridge deck surfacing durability.",
+                hover: "Its strong adhesion and crack resistance reduce water infiltration and structural damage in elevated road and bridge structures.",
+                image: "/assets/bitumen/YNM-Safety-Bridge-Decking.png"
+              },
+              {
+                title: "Marine & Port Infrastructure",
+                short: "Bitumen VG 30 is used in marine and port construction projects.",
+                hover: "The corrosion-resistant and waterproof properties ensure long-term performance in coastal and high-humidity environments.",
+                image: "/assets/bitumen/YNM-Safety-Marine-and-Port-Infrastructure.png"
+              },
+              {
+                title: "Dam & Reservoir Construction",
+                short: "Bitumen VG30 is suitable for dam and reservoir waterproof lining.",
+                hover: "Its high binding strength and moisture resistance make it ideal for large-scale hydraulic and water containment projects.",
+                image: "/assets/bitumen/YNM-Safety-Dam-and-Reservoir-Construction.png"
+              }
+            ],
+            
+            // Customer Success Stories / Projects
+            projects: [
+              {
+                id: "proj1",
+                title: "Airport Runway Surfacing Project",
+                client: "Major Airport Authority",
+                location: "India",
+                description: "Supplied premium Bitumen VG 30 for airport runway construction and surfacing. Our high-quality bitumen provided excellent load-bearing capacity and thermal stability for aircraft movement.",
+                quantity: "500 MT",
+                year: "2024",
+                highlight: "100%",
+                highlightLabel: "Quality Compliance",
+                logo: "/assets/bitumen/YNM-Safety-Airport-Runways.png"
+              }
+            ],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Bitumen VG 30 Market Growth | YNM Safety",
+              description: "The global Bitumen VG30 market is witnessing steady growth driven by increasing demand from road construction and infrastructure development. Valued at over USD 73 billion in 2024, the market is projected to reach nearly USD 99 billion by 2032, growing at a CAGR of approximately 3.9% during 2025–2032.",
+              cagr: "3.9%",
+              growthFactors: [
+                "Increasing demand from road construction and highway projects",
+                "Expansion of urbanization and infrastructure development globally",
+                "Rising use in pavement, roofing, and waterproofing applications",
+                "Government investments in transportation and public works",
+                "Growing need for durable and high-performance construction materials"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$73B",
+                projectedMarketSize: "$99B",
+                currentYear: "2024",
+                projectedYear: "2032",
+                monthlyCapacity: "5000 MT",
+                annualCapacity: "60000 MT",
+                exportCountries: "20+"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 40, color: "#74060D" },
+                { region: "North America", value: 20, color: "#9A1B2E" },
+                { region: "Europe", value: 18, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 14, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 73 },
+                { year: "2026", value: 79 },
+                { year: "2028", value: 85 },
+                { year: "2030", value: 92 },
+                { year: "2032", value: 99 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia",
+                  countries: ["United Arab Emirates", "Iraq", "India", "Iran", "Oman", "Bahrain", "Malaysia", "Bangladesh", "Pakistan", "Kazakhstan", "Nepal", "Bhutan", "Maldives"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["United Kingdom", "Lithuania", "Latvia"]
+                },
+                {
+                  name: "North America",
+                  countries: ["Canada", "United States"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["Egypt", "South Africa", "Djibouti"]
+                },
+                {
+                  name: "Asia Pacific",
+                  countries: ["Philippines"]
+                },
+                {
+                  name: "Others",
+                  countries: ["Turkey"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process
+            manufacturingProcessIntro: "As trusted bitumen manufacturers, YNM Safety follows a controlled refinery and quality assurance process to produce premium Bitumen VG 30 (Bitumen VG30) for airport runways, bridge decking, marine infrastructure, roofing, and industrial applications.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Selection of Crude Feedstock",
+                description: "The process begins with the selection of high-quality crude petroleum feedstock. Reputable bitumen manufacturers ensure the crude source is suitable for producing consistent viscosity grade bitumen with strong binding and durability properties."
+              },
+              {
+                step: "02",
+                title: "Atmospheric Distillation",
+                description: "Crude oil is heated in a refinery distillation column where lighter fractions such as LPG, petrol, diesel, and kerosene are separated. The heavier residue remaining at the bottom of the column becomes the base material for Bitumen VG 30 production."
+              },
+              {
+                step: "03",
+                title: "Vacuum Distillation",
+                description: "The heavy residue undergoes vacuum distillation to remove remaining volatile components under reduced pressure. This controlled process improves the density, viscosity, and structural properties required for Bitumen VG30."
+              },
+              {
+                step: "04",
+                title: "Viscosity Grading Process",
+                description: "The refined bitumen is processed and adjusted to meet VG 30 viscosity specifications as per IS 73 and ASTM standards. Strict temperature control ensures proper penetration value, softening point, and ductility characteristics."
+              },
+              {
+                step: "05",
+                title: "Quality Testing & Laboratory Analysis",
+                description: "Each batch of Bitumen VG 30 undergoes comprehensive quality testing including penetration test, softening point test, ductility test, flash and fire point test, and viscosity measurement. Only material meeting IS 73 and ASTM standards is approved."
+              },
+              {
+                step: "06",
+                title: "Homogenization & Storage",
+                description: "After testing approval, the Bitumen VG30 is transferred to heated storage tanks equipped with temperature control systems. This maintains uniform consistency and prevents premature hardening before packaging."
+              },
+              {
+                step: "07",
+                title: "Drum Filling & Packaging",
+                description: "The finished Bitumen VG 30 is filled into 200 Kg steel drums using automated drum filling systems. Proper sealing, batch labeling, and compliance marking are ensured. Bulk supply options are also available."
+              },
+              {
+                step: "08",
+                title: "Final Inspection & Dispatch",
+                description: "Before dispatch, final inspection checks are conducted for weight accuracy, drum sealing integrity, batch traceability, and documentation compliance. The product is then palletized and shipped globally."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 48,
+              currency: "INR",
+              unit: "per kg",
+              displayPrice: "₹48 per kg (Market Linked)",
+              packageSizes: [
+                { size: "Steel Drums (200 Kg)", priceINR: 48, moq: 200 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 1000, discount: 2 },
+                { minQuantity: 5000, discount: 4 },
+                { minQuantity: 10000, discount: 6 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              monthlyCapacity: "5,000 MT",
+              annualCapacity: "60,000 MT",
+              qualityStandards: "IS 73, ASTM",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "is-73",
+                title: "IS 73",
+                description: "Indian Standard for Paving Bitumen Specification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "astm",
+                title: "ASTM",
+                description: "American Society for Testing and Materials Standards",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "layers"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/bitumen/YNM-Safety-Airport-Runways.png",
+              "/assets/bitumen/YNM-Safety-Roofing-and-Waterproofing.png",
+              "/assets/bitumen/YNM-Safety-Industrial-Flooring.png",
+              "/assets/bitumen/YNM-Safety-Bridge-Decking.png",
+              "/assets/bitumen/YNM-Safety-Marine-and-Port-Infrastructure.png",
+              "/assets/bitumen/YNM-Safety-Dam-and-Reservoir-Construction.png"
+            ]
           }
         ]
       },
       "crash-barriers": {
         title: "Metal Beam Crash Barriers",
-        description: "High-strength metal beam crash barriers and W-beam guardrails for highways and expressways. Engineered for maximum impact resistance.",
+        description: "High-performance metal beam crash barriers for highway safety. W-beam, thrie beam, and roller barriers compliant with international standards.",
         icon: "🛡️",
         products: [
           {
@@ -3631,16 +4019,401 @@ export const productsData = {
             ]
           },
           {
+            id: "cb4",
+            slug: "thrie-beam-crash-barrier-manufacturers",
+            name: "Thrie Beam Crash Barrier",
+            shortDesc: "High-strength thrie beam crash barriers manufacturers delivering superior impact resistance and road safety protection for highways, bridges, and infrastructure projects worldwide.",
+            desc: "High-strength thrie beam crash barriers manufacturers delivering superior impact resistance and road safety protection for highways, bridges, and infrastructure projects worldwide.",
+            image: "/assets/YNM Safety Highways and Expressways (4).png",
+            heroImage: "/assets/YNM Safety Highways and Expressways (4).png",
+            specs: ["Thrie-beam profile", "Hot-dip galvanized", "High energy absorption", "MoRTH compliant", "High tensile strength", "55 Kg/RM"],
+            overview: "YNM Safety is one of the leading thrie beam crash barriers manufacturers in India, delivering high-impact road safety solutions for highways, bridges, and expressways. As trusted metal beam crash barriers manufacturers and experienced barriers manufacturers, we design and produce crash barriers that offer superior strength and energy absorption during vehicle impact.\n\nOur thrie beam crash barriers provide enhanced protection compared to conventional W-beam systems, making them ideal for high-speed corridors and heavy vehicle routes. Being reputed ynm safety manufacturers, we ensure strict compliance with IRC 119, MoRTH 803, EN 1317, and ISO 9001:2015 standards.\n\nThe thrie beam profile offers improved structural stability and better vehicle redirection, reducing accident severity and infrastructure damage.",
+            detailedDescription: "YNM Safety is one of the leading thrie beam crash barriers manufacturers in India, delivering high-impact road safety solutions for highways, bridges, and expressways. As trusted metal beam crash barriers manufacturers and experienced barriers manufacturers, we design and produce crash barriers that offer superior strength and energy absorption during vehicle impact.\n\nOur thrie beam crash barriers provide enhanced protection compared to conventional W-beam systems, making them ideal for high-speed corridors and heavy vehicle routes. Being reputed ynm safety manufacturers, we ensure strict compliance with IRC 119, MoRTH 803, EN 1317, and ISO 9001:2015 standards.\n\nThe thrie beam profile offers improved structural stability and better vehicle redirection, reducing accident severity and infrastructure damage.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Thrie Beam Crash Barrier" },
+              { label: "Material Grade", value: "High Strength Galvanized Steel" },
+              { label: "Thickness", value: "As per IRC / MoRTH Specification" },
+              { label: "Coating", value: "Hot Dip Galvanized" },
+              { label: "Impact Resistance", value: "High Energy Absorption" },
+              { label: "Net Weight", value: "55 Kg/RM" },
+              { label: "Compliance", value: "IRC 119, MoRTH 803, EN 1317" },
+              { label: "Application Area", value: "Highways, Bridges, Expressways" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "55 Kg/RM",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "IRC 119, MoRTH 803, ISO 9001:2015, EN 1317",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "Project Based",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "73089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Thrie Beam Crash Barrier",
+                "Material Grade: High Strength Galvanized Steel",
+                "Thickness: As per IRC / MoRTH Specification",
+                "Coating: Hot Dip Galvanized",
+                "Impact Resistance: High Energy Absorption",
+                "Net Weight: 55 Kg/RM",
+                "Compliance: IRC 119, MoRTH 803, EN 1317",
+                "Quality Standards: ISO 9001:2015",
+                "HSN Code: 73089090"
+              ],
+              keyFeatures: [
+                "Superior impact resistance compared to W-beam",
+                "High energy absorption capacity",
+                "Hot dip galvanized corrosion protection",
+                "Long service life in extreme climates",
+                "Compliant with international safety standards",
+                "Manufactured by trusted thrie beam crash barriers manufacturers"
+              ],
+              advantages: [
+                "Enhances highway and expressway safety",
+                "Suitable for heavy vehicle corridors",
+                "Reduces accident severity and vehicle rollover",
+                "Low maintenance and long-term durability",
+                "Preferred choice among metal beam crash barriers manufacturers"
+              ]
+            },
+            
+            features: [
+              "Superior impact resistance compared to W-beam",
+              "High energy absorption capacity",
+              "Hot dip galvanized corrosion protection",
+              "Long service life in extreme climates",
+              "Compliant with international safety standards",
+              "Manufactured by trusted thrie beam crash barriers manufacturers"
+            ],
+            advantages: [
+              "Enhances highway and expressway safety",
+              "Suitable for heavy vehicle corridors",
+              "Reduces accident severity and vehicle rollover",
+              "Low maintenance and long-term durability",
+              "Preferred choice among metal beam crash barriers manufacturers"
+            ],
+            technicalSpecs: {
+              "Product Type": "Thrie Beam Crash Barrier",
+              "Material Grade": "High Strength Galvanized Steel",
+              "Thickness": "As per IRC / MoRTH Specification",
+              "Coating": "Hot Dip Galvanized",
+              "Impact Resistance": "High Energy Absorption",
+              "Net Weight": "55 Kg/RM",
+              "Compliance": "IRC 119, MoRTH 803, EN 1317",
+              "Country of Origin": "India",
+              "Manufacturing Location": "Hyderabad",
+              "Quality Standards": "IRC 119, MoRTH 803, ISO 9001:2015, EN 1317",
+              "MOQ": "Project Based",
+              "HSN Code": "73089090",
+              "Packing Type": "Standard"
+            },
+            
+            // Application Areas with images
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Highways & Expressways",
+                description: "Thrie beam crash barriers are widely installed on highways and expressways to improve road safety.",
+                image: "/assets/YNM Safety Highways and Expressways (4).png",
+                details: "As leading thrie beam crash barriers manufacturers, YNM Safety provides high-strength barriers designed to absorb impact and safely redirect vehicles at high speeds, reducing accident severity."
+              },
+              {
+                id: "app2",
+                title: "Urban Roads & Streets",
+                description: "Thrie beam barriers provide controlled vehicle containment in urban road networks.",
+                image: "/assets/YNM Safety Urban Roads and streets (2).png",
+                details: "Manufactured by trusted barriers manufacturers, these systems offer enhanced protection near intersections, medians, and pedestrian zones while maintaining structural stability."
+              },
+              {
+                id: "app3",
+                title: "Bridges & Flyovers",
+                description: "Thrie beam crash barriers ensure safety on bridges and elevated corridors.",
+                image: "/assets/YNM Safety Bridges and flyovers (3).png",
+                details: "The high energy-absorbing design prevents vehicles from breaching bridge edges, making them essential for flyovers and elevated road sections."
+              },
+              {
+                id: "app4",
+                title: "Industrial Areas",
+                description: "Crash barriers protect industrial zones and logistics corridors.",
+                image: "/assets/YNM Safety Industrial areas (2).png",
+                details: "Our metal beam crash barriers manufacturers solutions safeguard heavy vehicle movement areas and protect infrastructure assets in industrial environments."
+              },
+              {
+                id: "app5",
+                title: "Airports & Runways",
+                description: "Thrie beam barriers provide perimeter and safety protection in airports.",
+                image: "/assets/YNM Safety Airports and Runways.png",
+                details: "Engineered for high-impact resistance, these barriers enhance security and prevent unauthorized vehicle intrusion in sensitive aviation zones."
+              },
+              {
+                id: "app6",
+                title: "Coastal & Mountain Roads",
+                description: "Thrie beam crash barriers are ideal for coastal and hilly terrains.",
+                image: "/assets/YNM Safety Coastal and Mountain roads.png",
+                details: "With galvanized corrosion resistance and structural durability, these barriers perform reliably under extreme weather and challenging terrain conditions."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Highways & Expressways",
+                short: "Thrie beam crash barriers are widely installed on highways and expressways to improve road safety.",
+                hover: "As leading thrie beam crash barriers manufacturers, YNM Safety provides high-strength barriers designed to absorb impact and safely redirect vehicles at high speeds, reducing accident severity.",
+                image: "/assets/YNM Safety Highways and Expressways (4).png"
+              },
+              {
+                title: "Urban Roads & Streets",
+                short: "Thrie beam barriers provide controlled vehicle containment in urban road networks.",
+                hover: "Manufactured by trusted barriers manufacturers, these systems offer enhanced protection near intersections, medians, and pedestrian zones while maintaining structural stability.",
+                image: "/assets/YNM Safety Urban Roads and streets (2).png"
+              },
+              {
+                title: "Bridges & Flyovers",
+                short: "Thrie beam crash barriers ensure safety on bridges and elevated corridors.",
+                hover: "The high energy-absorbing design prevents vehicles from breaching bridge edges, making them essential for flyovers and elevated road sections.",
+                image: "/assets/YNM Safety Bridges and flyovers (3).png"
+              },
+              {
+                title: "Industrial Areas",
+                short: "Crash barriers protect industrial zones and logistics corridors.",
+                hover: "Our metal beam crash barriers manufacturers solutions safeguard heavy vehicle movement areas and protect infrastructure assets in industrial environments.",
+                image: "/assets/YNM Safety Industrial areas (2).png"
+              },
+              {
+                title: "Airports & Runways",
+                short: "Thrie beam barriers provide perimeter and safety protection in airports.",
+                hover: "Engineered for high-impact resistance, these barriers enhance security and prevent unauthorized vehicle intrusion in sensitive aviation zones.",
+                image: "/assets/YNM Safety Airports and Runways.png"
+              },
+              {
+                title: "Coastal & Mountain Roads",
+                short: "Thrie beam crash barriers are ideal for coastal and hilly terrains.",
+                hover: "With galvanized corrosion resistance and structural durability, these barriers perform reliably under extreme weather and challenging terrain conditions.",
+                image: "/assets/YNM Safety Coastal and Mountain roads.png"
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 2500,
+              currency: "INR",
+              unit: "per running meter",
+              thickness: "As per IRC/MoRTH",
+              displayPrice: "₹2,500 per running meter",
+              packageSizes: [
+                { size: "100 meters", priceINR: 2500, moq: 100 },
+                { size: "500 meters", priceINR: 2400, moq: 500 },
+                { size: "1000 meters", priceINR: 2300, moq: 1000 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 500, discount: 4 },
+                { minQuantity: 1000, discount: 8 },
+                { minQuantity: 5000, discount: 10 },
+                { minQuantity: 10000, discount: 12 }
+              ]
+            },
+            
+            gallery: [
+              "/assets/YNM Safety Highways and Expressways (4).png",
+              "/assets/YNM Safety Urban Roads and streets (2).png",
+              "/assets/YNM Safety Bridges and flyovers (3).png",
+              "/assets/YNM Safety Industrial areas (2).png",
+              "/assets/YNM Safety Airports and Runways.png",
+              "/assets/YNM Safety Coastal and Mountain roads.png"
+            ],
+            
+            // Our Projects / Clients
+            projects: [
+              {
+                id: "proj1",
+                title: "Anusha Projects Private Limited - Hyderabad Highway Project",
+                client: "Anusha Projects Private Limited",
+                location: "Hyderabad",
+                description: "Supplied 5000 RM of Thrie Beam Crash Barriers for highway safety infrastructure development project in Hyderabad. Our high-quality galvanized steel barriers provided excellent impact resistance and long-term durability for this critical road safety installation.",
+                quantity: "5,000 RM",
+                year: "2024"
+              }
+            ],
+            
+            meta: {
+              title: "Thrie Beam Crash Barrier Manufacturers | Metal Beam Crash Barriers | YNM Safety",
+              description: "YNM Safety manufactures high-performance thrie beam crash barriers for highways, bridges, and expressways. Trusted thrie beam crash barriers manufacturers and metal beam crash barriers manufacturers compliant with IRC, MoRTH 803 & EN 1317 standards.",
+              slug: "/thrie-beam-crash-barrier-manufacturers"
+            },
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Thrie Beam Crash Barrier Market Growth – Global Outlook",
+              description: "The global thrie beam crash barrier market has grown from around USD 1.5 billion in 2024 and is projected to reach nearly USD 2.5 billion by 2033. This reflects strong long-term growth driven by increasing investments in highway infrastructure, road modernization programs, and stricter road safety regulations worldwide.",
+              cagr: "5-7%",
+              growthFactors: [
+                "Increasing Highway & Expressway Development",
+                "Stricter Road Safety Regulations",
+                "Rising Heavy Vehicle & Freight Traffic",
+                "Government Infrastructure Spending Programs",
+                "Superior Impact Resistance Compared to W-Beam"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.5B",
+                projectedMarketSize: "$2.5B",
+                currentYear: "2024",
+                projectedYear: "2033",
+                highwayKmGlobal: "70M+",
+                annualInstallations: "15,000+",
+                roadsafetySpending: "$200B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 24, color: "#9A1B2E" },
+                { region: "Europe", value: 19, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 7, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2024", value: 1.5 },
+                { year: "2025", value: 1.6 },
+                { year: "2026", value: 1.7 },
+                { year: "2027", value: 1.9 },
+                { year: "2028", value: 2.1 },
+                { year: "2033", value: 2.5 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia",
+                  countries: ["China", "India", "Philippines", "Malaysia", "UAE", "Saudi Arabia", "Turkey", "Iran", "Kazakhstan", "Uzbekistan"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa", "Algeria", "Mozambique", "Ghana", "Egypt", "Nigeria"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "France", "Italy", "Spain", "United Kingdom", "Poland", "Czechia", "Russia"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "South America",
+                  countries: ["Brazil", "Argentina", "Chile", "Peru"]
+                },
+                {
+                  name: "Oceania",
+                  countries: ["Australia", "New Zealand"]
+                }
+              ]
+            },
+            
+            performanceMetrics: {
+              monthly: "5,00,000 RM",
+              annually: "6,000,000 RM"
+            },
+            
+            statistics: {
+              annualCapacity: "6,000,000 RM",
+              exportCountries: "20+",
+              qualityStandards: "ISO 9001:2015",
+              productionSpeed: "5,00,000 RM"
+            },
+            
+            // Manufacturing Process
+            manufacturingProcessIntro: "YNM Safety is a leading Thrie Beam crash barrier manufacturer in India, delivering high-strength, precision-engineered road safety solutions. Our Thrie Beam metal crash barriers are manufactured using advanced roll forming technology and hot-dip galvanization to ensure maximum durability, corrosion resistance, and superior impact performance for highways and high-speed corridors.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Selection of High-Grade Steel Raw Material",
+                description: "The manufacturing process begins with procurement of premium quality hot rolled steel coils that comply with IS and ASTM standards. Each batch of steel is tested for tensile strength, yield strength, chemical composition, and surface quality. Using high-grade steel ensures structural integrity and long-term road safety performance."
+              },
+              {
+                step: "02",
+                title: "Coil Slitting and Sheet Cutting",
+                description: "The steel coils are processed through automatic slitting machines to achieve the required width. The sheets are then cut to standard lengths as per Thrie Beam crash barrier specifications. This stage ensures uniform thickness and dimensional precision for consistent barrier performance."
+              },
+              {
+                step: "03",
+                title: "Roll Forming into Thrie Beam Profile",
+                description: "The cut steel sheets pass through a multi-stage roll forming machine, where they are gradually shaped into the distinctive three-wave (Thrie Beam) profile. This process ensures accurate wave geometry, increased strength over W-beam barriers, improved vehicle containment, and high impact absorption capacity."
+              },
+              {
+                step: "04",
+                title: "Precision Punching & Hole Making",
+                description: "After profiling, automated punching machines create precisely aligned holes for bolting joints, spacer systems, and post connections. Accurate punching ensures seamless installation and proper alignment during on-site assembly."
+              },
+              {
+                step: "05",
+                title: "Deburring and Surface Preparation",
+                description: "Sharp edges and burrs are removed to ensure safe handling and smooth finishing. The beams are cleaned and prepared for galvanization to enhance corrosion resistance."
+              },
+              {
+                step: "06",
+                title: "Hot-Dip Galvanization",
+                description: "To provide long-lasting protection against rust and environmental damage, the beams undergo hot-dip galvanization as per IS 4759 / ASTM A123 standards. The galvanizing process includes degreasing and pickling, flux treatment, and dipping in molten zinc. This creates a thick, uniform zinc coating that significantly increases the service life of the Thrie Beam metal crash barrier system."
+              },
+              {
+                step: "07",
+                title: "Quality Control & Testing",
+                description: "Every batch undergoes strict quality inspection to ensure compliance with safety and infrastructure standards. Testing includes dimensional accuracy verification, zinc coating thickness test, impact resistance compliance, mechanical strength testing, and visual surface inspection. YNM Safety maintains high-quality standards to meet national highway project requirements."
+              },
+              {
+                step: "08",
+                title: "Packing, Storage & Dispatch",
+                description: "Finished Thrie Beam crash barriers are bundled securely for safe transportation. Proper labeling and batch tracking ensure efficient dispatch to infrastructure projects across India. As a trusted Thrie Beam crash barrier manufacturer, YNM Safety ensures timely delivery for government, highway, bridge, and expressway projects."
+              }
+            ]
+          },
+          {
             id: "cb2",
             slug: "double-w-beam-crash-barriers-manufacturers",
             name: "Double W Beam Crash Barriers",
-            shortDesc: "High-strength double W beam crash barrier manufactures delivering superior impact resistance, durability, and enhanced road safety for global infrastructure projects.",
-            desc: "High-strength double W beam crash barrier manufactures delivering superior impact resistance, durability, and enhanced road safety for global infrastructure projects.",
+            shortDesc: "High-strength double W beam crash barrier manufacturers delivering superior impact resistance, durability, and enhanced road safety for global infrastructure projects.",
+            desc: "High-strength double W beam crash barrier manufacturers delivering superior impact resistance, durability, and enhanced road safety for global infrastructure projects.",
             image: "/assets/double-beam-highways-expressways.jpg",
             heroImage: "/assets/double-beam-highways-expressways.jpg",
             specs: ["Double W-beam profile", "Hot-dip galvanized", "IS 5986 certified", "MoRTH compliant", "High tensile strength", "2.7mm/3.0mm thickness"],
-            overview: "YNM Safety is one of the leading double W beam manufactures, delivering robust and reliable metal beam crash barriers engineered for maximum road safety and long-term performance. As trusted YNM Safety manufactures, our double W beam crash barriers are designed to absorb high-impact collisions, prevent vehicle crossovers, and reduce accident severity on highways and expressways. Manufactured using premium galvanized steel, our W beam barriers offer excellent corrosion resistance and structural strength. Our products are widely supplied to government projects, EPC contractors, and private infrastructure developers, making YNM Safety a preferred name among metal beam manufactures and w beam barrier manufactures across domestic and international markets.",
-            detailedDescription: "YNM Safety is one of the leading double W beam manufactures, delivering robust and reliable metal beam crash barriers engineered for maximum road safety and long-term performance. As trusted YNM Safety manufactures, our double W beam crash barriers are designed to absorb high-impact collisions, prevent vehicle crossovers, and reduce accident severity on highways and expressways. Manufactured using premium galvanized steel, our W beam barriers offer excellent corrosion resistance and structural strength. Our products are widely supplied to government projects, EPC contractors, and private infrastructure developers, making YNM Safety a preferred name among metal beam manufactures and w beam barrier manufactures across domestic and international markets.",
+            overview: "YNM Safety is one of the leading double W beam manufacturers, delivering robust and reliable metal beam crash barriers engineered for maximum road safety and long-term performance. As trusted YNM Safety manufacturers, our double W beam crash barriers are designed to absorb high-impact collisions, prevent vehicle crossovers, and reduce accident severity on highways and expressways. Manufactured using premium galvanized steel, our W beam barriers offer excellent corrosion resistance and structural strength. Our products are widely supplied to government projects, EPC contractors, and private infrastructure developers, making YNM Safety a preferred name among metal beam manufacturers and w beam barrier manufacturers across domestic and international markets.",
+            detailedDescription: "YNM Safety is one of the leading double W beam manufacturers, delivering robust and reliable metal beam crash barriers engineered for maximum road safety and long-term performance. As trusted YNM Safety manufacturers, our double W beam crash barriers are designed to absorb high-impact collisions, prevent vehicle crossovers, and reduce accident severity on highways and expressways. Manufactured using premium galvanized steel, our W beam barriers offer excellent corrosion resistance and structural strength. Our products are widely supplied to government projects, EPC contractors, and private infrastructure developers, making YNM Safety a preferred name among metal beam manufacturers and w beam barrier manufacturers across domestic and international markets.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -3722,7 +4495,7 @@ export const productsData = {
                 "Reduces fatal crash severity",
                 "Easy installation & replacement",
                 "Cost-effective long-term safety solution",
-                "Trusted double w beam manufactures – YNM Safety"
+                "Trusted double w beam manufacturers – YNM Safety"
               ]
             },
             
@@ -3739,7 +4512,7 @@ export const productsData = {
               "Reduces fatal crash severity",
               "Easy installation & replacement",
               "Cost-effective long-term safety solution",
-              "Trusted double w beam manufactures – YNM Safety"
+              "Trusted double w beam manufacturers – YNM Safety"
             ],
             
             technicalSpecs: {
@@ -3775,35 +4548,35 @@ export const productsData = {
                 title: "Urban Roads & Arterial Streets",
                 description: "Double W beam barriers improve traffic discipline and road safety on busy urban roads and arterial streets.",
                 image: "/assets/double-beam-urban-roads.jpg",
-                details: "YNM Safety metal beam manufactures supply crash barriers that protect vehicles and pedestrians in high-traffic city environments. These W beam barriers reduce accident severity and maintain structural stability under frequent impact conditions."
+                details: "YNM Safety metal beam manufacturers supply crash barriers that protect vehicles and pedestrians in high-traffic city environments. These W beam barriers reduce accident severity and maintain structural stability under frequent impact conditions."
               },
               {
                 id: "app3",
                 title: "Bridges & Flyovers",
                 description: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
                 image: "/assets/double-beam-bridges-flyovers.jpg",
-                details: "YNM Safety manufactures corrosion-resistant double W beam crash barriers ideal for elevated structures. Our W beam barrier manufactures ensure controlled vehicle deflection and long service life in demanding bridge conditions."
+                details: "YNM Safety manufactures corrosion-resistant double W beam crash barriers ideal for elevated structures. Our W beam barrier manufacturers ensure controlled vehicle deflection and long service life in demanding bridge conditions."
               },
               {
                 id: "app4",
                 title: "Curves, Ramps & Interchanges",
                 description: "Double W beam barriers guide vehicles safely through sharp curves, ramps, and interchanges.",
                 image: "/assets/double-beam-curves-ramps.jpg",
-                details: "YNM Safety double W beam manufactures design barriers that effectively absorb collision impact at high-risk curve locations. These metal beam crash barriers enhance vehicle stability and reduce run-off-road accidents."
+                details: "YNM Safety double W beam manufacturers design barriers that effectively absorb collision impact at high-risk curve locations. These metal beam crash barriers enhance vehicle stability and reduce run-off-road accidents."
               },
               {
                 id: "app5",
                 title: "Road Medians & Central Dividers",
                 description: "W beam crash barriers prevent vehicle cross-overs and enhance median safety.",
                 image: "/assets/double-beam-medians-dividers.jpg",
-                details: "YNM Safety manufactures double W beam barriers for medians and central dividers to improve traffic separation. Our metal beam manufactures deliver high-strength barriers that minimize head-on collision risks."
+                details: "YNM Safety manufactures double W beam barriers for medians and central dividers to improve traffic separation. Our metal beam manufacturers deliver high-strength barriers that minimize head-on collision risks."
               },
               {
                 id: "app6",
                 title: "Embankments, Slopes & Roadside Hazards",
                 description: "Double W beam crash barriers protect vehicles from roadside hazards and steep embankments.",
                 image: "/assets/double-beam-embankments-slopes.jpg",
-                details: "YNM Safety metal beam manufactures supply robust crash barriers for slope protection and hazard containment. These W beam barriers reduce vehicle roll-over risks and enhance overall roadside safety."
+                details: "YNM Safety metal beam manufacturers supply robust crash barriers for slope protection and hazard containment. These W beam barriers reduce vehicle roll-over risks and enhance overall roadside safety."
               }
             ],
             
@@ -3817,31 +4590,31 @@ export const productsData = {
               {
                 title: "Urban Roads & Arterial Streets",
                 short: "Double W beam barriers improve traffic discipline and road safety on busy urban roads and arterial streets.",
-                hover: "YNM Safety metal beam manufactures supply crash barriers that protect vehicles and pedestrians in high-traffic city environments. These W beam barriers reduce accident severity and maintain structural stability under frequent impact conditions.",
+                hover: "YNM Safety metal beam manufacturers supply crash barriers that protect vehicles and pedestrians in high-traffic city environments. These W beam barriers reduce accident severity and maintain structural stability under frequent impact conditions.",
                 image: "/assets/double-beam-urban-roads.jpg"
               },
               {
                 title: "Bridges & Flyovers",
                 short: "Metal beam crash barriers provide reliable edge protection on bridges and flyovers.",
-                hover: "YNM Safety manufactures corrosion-resistant double W beam crash barriers ideal for elevated structures. Our W beam barrier manufactures ensure controlled vehicle deflection and long service life in demanding bridge conditions.",
+                hover: "YNM Safety manufactures corrosion-resistant double W beam crash barriers ideal for elevated structures. Our W beam barrier manufacturers ensure controlled vehicle deflection and long service life in demanding bridge conditions.",
                 image: "/assets/double-beam-bridges-flyovers.jpg"
               },
               {
                 title: "Curves, Ramps & Interchanges",
                 short: "Double W beam barriers guide vehicles safely through sharp curves, ramps, and interchanges.",
-                hover: "YNM Safety double W beam manufactures design barriers that effectively absorb collision impact at high-risk curve locations. These metal beam crash barriers enhance vehicle stability and reduce run-off-road accidents.",
+                hover: "YNM Safety double W beam manufacturers design barriers that effectively absorb collision impact at high-risk curve locations. These metal beam crash barriers enhance vehicle stability and reduce run-off-road accidents.",
                 image: "/assets/double-beam-curves-ramps.jpg"
               },
               {
                 title: "Road Medians & Central Dividers",
                 short: "W beam crash barriers prevent vehicle cross-overs and enhance median safety.",
-                hover: "YNM Safety manufactures double W beam barriers for medians and central dividers to improve traffic separation. Our metal beam manufactures deliver high-strength barriers that minimize head-on collision risks.",
+                hover: "YNM Safety manufactures double W beam barriers for medians and central dividers to improve traffic separation. Our metal beam manufacturers deliver high-strength barriers that minimize head-on collision risks.",
                 image: "/assets/double-beam-medians-dividers.jpg"
               },
               {
                 title: "Embankments, Slopes & Roadside Hazards",
                 short: "Double W beam crash barriers protect vehicles from roadside hazards and steep embankments.",
-                hover: "YNM Safety metal beam manufactures supply robust crash barriers for slope protection and hazard containment. These W beam barriers reduce vehicle roll-over risks and enhance overall roadside safety.",
+                hover: "YNM Safety metal beam manufacturers supply robust crash barriers for slope protection and hazard containment. These W beam barriers reduce vehicle roll-over risks and enhance overall roadside safety.",
                 image: "/assets/double-beam-embankments-slopes.jpg"
               }
             ],
@@ -4439,391 +5212,6 @@ export const productsData = {
             ]
           },
           {
-            id: "cb4",
-            slug: "thrie-beam-crash-barrier-manufacturers",
-            name: "Thrie Beam Crash Barrier",
-            shortDesc: "High-strength thrie beam crash barriers manufactures delivering superior impact resistance and road safety protection for highways, bridges, and infrastructure projects worldwide.",
-            desc: "High-strength thrie beam crash barriers manufactures delivering superior impact resistance and road safety protection for highways, bridges, and infrastructure projects worldwide.",
-            image: "/assets/YNM Safety Highways and Expressways (4).png",
-            heroImage: "/assets/YNM Safety Highways and Expressways (4).png",
-            specs: ["Thrie-beam profile", "Hot-dip galvanized", "High energy absorption", "MoRTH compliant", "High tensile strength", "55 Kg/RM"],
-            overview: "YNM Safety is one of the leading thrie beam crash barriers manufactures in India, delivering high-impact road safety solutions for highways, bridges, and expressways. As trusted metal beam crash barriers manufactures and experienced barriers manufactures, we design and produce crash barriers that offer superior strength and energy absorption during vehicle impact.\n\nOur thrie beam crash barriers provide enhanced protection compared to conventional W-beam systems, making them ideal for high-speed corridors and heavy vehicle routes. Being reputed ynm safety manufactures, we ensure strict compliance with IRC 119, MoRTH 803, EN 1317, and ISO 9001:2015 standards.\n\nThe thrie beam profile offers improved structural stability and better vehicle redirection, reducing accident severity and infrastructure damage.",
-            detailedDescription: "YNM Safety is one of the leading thrie beam crash barriers manufactures in India, delivering high-impact road safety solutions for highways, bridges, and expressways. As trusted metal beam crash barriers manufactures and experienced barriers manufactures, we design and produce crash barriers that offer superior strength and energy absorption during vehicle impact.\n\nOur thrie beam crash barriers provide enhanced protection compared to conventional W-beam systems, making them ideal for high-speed corridors and heavy vehicle routes. Being reputed ynm safety manufactures, we ensure strict compliance with IRC 119, MoRTH 803, EN 1317, and ISO 9001:2015 standards.\n\nThe thrie beam profile offers improved structural stability and better vehicle redirection, reducing accident severity and infrastructure damage.",
-            
-            // Overview Technical Points (displayed below overview paragraph)
-            overviewPoints: [
-              { label: "Product Type", value: "Thrie Beam Crash Barrier" },
-              { label: "Material Grade", value: "High Strength Galvanized Steel" },
-              { label: "Thickness", value: "As per IRC / MoRTH Specification" },
-              { label: "Coating", value: "Hot Dip Galvanized" },
-              { label: "Impact Resistance", value: "High Energy Absorption" },
-              { label: "Net Weight", value: "55 Kg/RM" },
-              { label: "Compliance", value: "IRC 119, MoRTH 803, EN 1317" },
-              { label: "Application Area", value: "Highways, Bridges, Expressways" }
-            ],
-            
-            // Detailed Specifications for spec table
-            detailedSpecs: [
-              {
-                label: "Country of Origin",
-                value: "India",
-                icon: "location"
-              },
-              {
-                label: "Manufacturing Location",
-                value: "Hyderabad",
-                icon: "location"
-              },
-              {
-                label: "Net Weight",
-                value: "55 Kg/RM",
-                icon: "weight"
-              },
-              {
-                label: "Quality Standards",
-                value: "IRC 119, MoRTH 803, ISO 9001:2015, EN 1317",
-                icon: "standard"
-              },
-              {
-                label: "Minimum Order Quantity (MOQ)",
-                value: "Project Based",
-                icon: "package"
-              },
-              {
-                label: "HSN Code",
-                value: "73089090",
-                icon: "standard"
-              },
-              {
-                label: "Packing Type",
-                value: "Standard",
-                icon: "package"
-              }
-            ],
-            
-            // Specifications for tabs
-            specifications: {
-              technical: [
-                "Product Type: Thrie Beam Crash Barrier",
-                "Material Grade: High Strength Galvanized Steel",
-                "Thickness: As per IRC / MoRTH Specification",
-                "Coating: Hot Dip Galvanized",
-                "Impact Resistance: High Energy Absorption",
-                "Net Weight: 55 Kg/RM",
-                "Compliance: IRC 119, MoRTH 803, EN 1317",
-                "Quality Standards: ISO 9001:2015",
-                "HSN Code: 73089090"
-              ],
-              keyFeatures: [
-                "Superior impact resistance compared to W-beam",
-                "High energy absorption capacity",
-                "Hot dip galvanized corrosion protection",
-                "Long service life in extreme climates",
-                "Compliant with international safety standards",
-                "Manufactured by trusted thrie beam crash barriers manufactures"
-              ],
-              advantages: [
-                "Enhances highway and expressway safety",
-                "Suitable for heavy vehicle corridors",
-                "Reduces accident severity and vehicle rollover",
-                "Low maintenance and long-term durability",
-                "Preferred choice among metal beam crash barriers manufactures"
-              ]
-            },
-            
-            features: [
-              "Superior impact resistance compared to W-beam",
-              "High energy absorption capacity",
-              "Hot dip galvanized corrosion protection",
-              "Long service life in extreme climates",
-              "Compliant with international safety standards",
-              "Manufactured by trusted thrie beam crash barriers manufactures"
-            ],
-            advantages: [
-              "Enhances highway and expressway safety",
-              "Suitable for heavy vehicle corridors",
-              "Reduces accident severity and vehicle rollover",
-              "Low maintenance and long-term durability",
-              "Preferred choice among metal beam crash barriers manufactures"
-            ],
-            technicalSpecs: {
-              "Product Type": "Thrie Beam Crash Barrier",
-              "Material Grade": "High Strength Galvanized Steel",
-              "Thickness": "As per IRC / MoRTH Specification",
-              "Coating": "Hot Dip Galvanized",
-              "Impact Resistance": "High Energy Absorption",
-              "Net Weight": "55 Kg/RM",
-              "Compliance": "IRC 119, MoRTH 803, EN 1317",
-              "Country of Origin": "India",
-              "Manufacturing Location": "Hyderabad",
-              "Quality Standards": "IRC 119, MoRTH 803, ISO 9001:2015, EN 1317",
-              "MOQ": "Project Based",
-              "HSN Code": "73089090",
-              "Packing Type": "Standard"
-            },
-            
-            // Application Areas with images
-            applicationAreas: [
-              {
-                id: "app1",
-                title: "Highways & Expressways",
-                description: "Thrie beam crash barriers are widely installed on highways and expressways to improve road safety.",
-                image: "/assets/YNM Safety Highways and Expressways (4).png",
-                details: "As leading thrie beam crash barriers manufactures, YNM Safety provides high-strength barriers designed to absorb impact and safely redirect vehicles at high speeds, reducing accident severity."
-              },
-              {
-                id: "app2",
-                title: "Urban Roads & Streets",
-                description: "Thrie beam barriers provide controlled vehicle containment in urban road networks.",
-                image: "/assets/YNM Safety Urban Roads and streets (2).png",
-                details: "Manufactured by trusted barriers manufactures, these systems offer enhanced protection near intersections, medians, and pedestrian zones while maintaining structural stability."
-              },
-              {
-                id: "app3",
-                title: "Bridges & Flyovers",
-                description: "Thrie beam crash barriers ensure safety on bridges and elevated corridors.",
-                image: "/assets/YNM Safety Bridges and flyovers (3).png",
-                details: "The high energy-absorbing design prevents vehicles from breaching bridge edges, making them essential for flyovers and elevated road sections."
-              },
-              {
-                id: "app4",
-                title: "Industrial Areas",
-                description: "Crash barriers protect industrial zones and logistics corridors.",
-                image: "/assets/YNM Safety Industrial areas (2).png",
-                details: "Our metal beam crash barriers manufactures solutions safeguard heavy vehicle movement areas and protect infrastructure assets in industrial environments."
-              },
-              {
-                id: "app5",
-                title: "Airports & Runways",
-                description: "Thrie beam barriers provide perimeter and safety protection in airports.",
-                image: "/assets/YNM Safety Airports and Runways.png",
-                details: "Engineered for high-impact resistance, these barriers enhance security and prevent unauthorized vehicle intrusion in sensitive aviation zones."
-              },
-              {
-                id: "app6",
-                title: "Coastal & Mountain Roads",
-                description: "Thrie beam crash barriers are ideal for coastal and hilly terrains.",
-                image: "/assets/YNM Safety Coastal and Mountain roads.png",
-                details: "With galvanized corrosion resistance and structural durability, these barriers perform reliably under extreme weather and challenging terrain conditions."
-              }
-            ],
-            
-            applications: [
-              {
-                title: "Highways & Expressways",
-                short: "Thrie beam crash barriers are widely installed on highways and expressways to improve road safety.",
-                hover: "As leading thrie beam crash barriers manufactures, YNM Safety provides high-strength barriers designed to absorb impact and safely redirect vehicles at high speeds, reducing accident severity.",
-                image: "/assets/YNM Safety Highways and Expressways (4).png"
-              },
-              {
-                title: "Urban Roads & Streets",
-                short: "Thrie beam barriers provide controlled vehicle containment in urban road networks.",
-                hover: "Manufactured by trusted barriers manufactures, these systems offer enhanced protection near intersections, medians, and pedestrian zones while maintaining structural stability.",
-                image: "/assets/YNM Safety Urban Roads and streets (2).png"
-              },
-              {
-                title: "Bridges & Flyovers",
-                short: "Thrie beam crash barriers ensure safety on bridges and elevated corridors.",
-                hover: "The high energy-absorbing design prevents vehicles from breaching bridge edges, making them essential for flyovers and elevated road sections.",
-                image: "/assets/YNM Safety Bridges and flyovers (3).png"
-              },
-              {
-                title: "Industrial Areas",
-                short: "Crash barriers protect industrial zones and logistics corridors.",
-                hover: "Our metal beam crash barriers manufactures solutions safeguard heavy vehicle movement areas and protect infrastructure assets in industrial environments.",
-                image: "/assets/YNM Safety Industrial areas (2).png"
-              },
-              {
-                title: "Airports & Runways",
-                short: "Thrie beam barriers provide perimeter and safety protection in airports.",
-                hover: "Engineered for high-impact resistance, these barriers enhance security and prevent unauthorized vehicle intrusion in sensitive aviation zones.",
-                image: "/assets/YNM Safety Airports and Runways.png"
-              },
-              {
-                title: "Coastal & Mountain Roads",
-                short: "Thrie beam crash barriers are ideal for coastal and hilly terrains.",
-                hover: "With galvanized corrosion resistance and structural durability, these barriers perform reliably under extreme weather and challenging terrain conditions.",
-                image: "/assets/YNM Safety Coastal and Mountain roads.png"
-              }
-            ],
-            
-            // Pricing Information
-            pricing: {
-              basePriceINR: 2500,
-              currency: "INR",
-              unit: "per running meter",
-              thickness: "As per IRC/MoRTH",
-              displayPrice: "₹2,500 per running meter",
-              packageSizes: [
-                { size: "100 meters", priceINR: 2500, moq: 100 },
-                { size: "500 meters", priceINR: 2400, moq: 500 },
-                { size: "1000 meters", priceINR: 2300, moq: 1000 }
-              ],
-              bulkDiscounts: [
-                { minQuantity: 500, discount: 4 },
-                { minQuantity: 1000, discount: 8 },
-                { minQuantity: 5000, discount: 10 },
-                { minQuantity: 10000, discount: 12 }
-              ]
-            },
-            
-            gallery: [
-              "/assets/YNM Safety Highways and Expressways (4).png",
-              "/assets/YNM Safety Urban Roads and streets (2).png",
-              "/assets/YNM Safety Bridges and flyovers (3).png",
-              "/assets/YNM Safety Industrial areas (2).png",
-              "/assets/YNM Safety Airports and Runways.png",
-              "/assets/YNM Safety Coastal and Mountain roads.png"
-            ],
-            
-            // Our Projects / Clients
-            projects: [
-              {
-                id: "proj1",
-                title: "Anusha Projects Private Limited - Hyderabad Highway Project",
-                client: "Anusha Projects Private Limited",
-                location: "Hyderabad",
-                description: "Supplied 5000 RM of Thrie Beam Crash Barriers for highway safety infrastructure development project in Hyderabad. Our high-quality galvanized steel barriers provided excellent impact resistance and long-term durability for this critical road safety installation.",
-                quantity: "5,000 RM",
-                year: "2024"
-              }
-            ],
-            
-            meta: {
-              title: "Thrie Beam Crash Barrier Manufacturers | Metal Beam Crash Barriers | YNM Safety",
-              description: "YNM Safety manufactures high-performance thrie beam crash barriers for highways, bridges, and expressways. Trusted thrie beam crash barriers manufactures and metal beam crash barriers manufactures compliant with IRC, MoRTH 803 & EN 1317 standards.",
-              slug: "/thrie-beam-crash-barrier-manufacturers"
-            },
-            
-            // Market Growth Information
-            marketGrowth: {
-              title: "Thrie Beam Crash Barrier Market Growth – Global Outlook",
-              description: "The global thrie beam crash barrier market has grown from around USD 1.5 billion in 2024 and is projected to reach nearly USD 2.5 billion by 2033. This reflects strong long-term growth driven by increasing investments in highway infrastructure, road modernization programs, and stricter road safety regulations worldwide.",
-              cagr: "5-7%",
-              growthFactors: [
-                "Increasing Highway & Expressway Development",
-                "Stricter Road Safety Regulations",
-                "Rising Heavy Vehicle & Freight Traffic",
-                "Government Infrastructure Spending Programs",
-                "Superior Impact Resistance Compared to W-Beam"
-              ],
-              // Market Statistics
-              marketStats: {
-                currentMarketSize: "$1.5B",
-                projectedMarketSize: "$2.5B",
-                currentYear: "2024",
-                projectedYear: "2033",
-                highwayKmGlobal: "70M+",
-                annualInstallations: "15,000+",
-                roadsafetySpending: "$200B"
-              },
-              // Regional Distribution for Pie Chart
-              regionalDistribution: [
-                { region: "Asia Pacific", value: 38, color: "#74060D" },
-                { region: "North America", value: 24, color: "#9A1B2E" },
-                { region: "Europe", value: 19, color: "#C9A24D" },
-                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
-                { region: "Latin America", value: 7, color: "#E8C97A" }
-              ],
-              // Year-wise Growth Data for Bar Chart
-              yearlyGrowth: [
-                { year: "2024", value: 1.5 },
-                { year: "2025", value: 1.6 },
-                { year: "2026", value: 1.7 },
-                { year: "2027", value: 1.9 },
-                { year: "2028", value: 2.1 },
-                { year: "2033", value: 2.5 }
-              ]
-            },
-            
-            // Global Availability - Structured by Region
-            globalAvailability: {
-              regions: [
-                {
-                  name: "Asia",
-                  countries: ["China", "India", "Philippines", "Malaysia", "UAE", "Saudi Arabia", "Turkey", "Iran", "Kazakhstan", "Uzbekistan"]
-                },
-                {
-                  name: "Africa",
-                  countries: ["South Africa", "Algeria", "Mozambique", "Ghana", "Egypt", "Nigeria"]
-                },
-                {
-                  name: "Europe",
-                  countries: ["Germany", "France", "Italy", "Spain", "United Kingdom", "Poland", "Czechia", "Russia"]
-                },
-                {
-                  name: "North America",
-                  countries: ["United States", "Canada", "Mexico"]
-                },
-                {
-                  name: "South America",
-                  countries: ["Brazil", "Argentina", "Chile", "Peru"]
-                },
-                {
-                  name: "Oceania",
-                  countries: ["Australia", "New Zealand"]
-                }
-              ]
-            },
-            
-            performanceMetrics: {
-              monthly: "5,00,000 RM",
-              annually: "6,000,000 RM"
-            },
-            
-            statistics: {
-              annualCapacity: "6,000,000 RM",
-              exportCountries: "20+",
-              qualityStandards: "ISO 9001:2015",
-              productionSpeed: "5,00,000 RM"
-            },
-            
-            // Manufacturing Process
-            manufacturingProcessIntro: "YNM Safety is a leading Thrie Beam crash barrier manufacturer in India, delivering high-strength, precision-engineered road safety solutions. Our Thrie Beam metal crash barriers are manufactured using advanced roll forming technology and hot-dip galvanization to ensure maximum durability, corrosion resistance, and superior impact performance for highways and high-speed corridors.",
-            manufacturingProcess: [
-              {
-                step: "01",
-                title: "Selection of High-Grade Steel Raw Material",
-                description: "The manufacturing process begins with procurement of premium quality hot rolled steel coils that comply with IS and ASTM standards. Each batch of steel is tested for tensile strength, yield strength, chemical composition, and surface quality. Using high-grade steel ensures structural integrity and long-term road safety performance."
-              },
-              {
-                step: "02",
-                title: "Coil Slitting and Sheet Cutting",
-                description: "The steel coils are processed through automatic slitting machines to achieve the required width. The sheets are then cut to standard lengths as per Thrie Beam crash barrier specifications. This stage ensures uniform thickness and dimensional precision for consistent barrier performance."
-              },
-              {
-                step: "03",
-                title: "Roll Forming into Thrie Beam Profile",
-                description: "The cut steel sheets pass through a multi-stage roll forming machine, where they are gradually shaped into the distinctive three-wave (Thrie Beam) profile. This process ensures accurate wave geometry, increased strength over W-beam barriers, improved vehicle containment, and high impact absorption capacity."
-              },
-              {
-                step: "04",
-                title: "Precision Punching & Hole Making",
-                description: "After profiling, automated punching machines create precisely aligned holes for bolting joints, spacer systems, and post connections. Accurate punching ensures seamless installation and proper alignment during on-site assembly."
-              },
-              {
-                step: "05",
-                title: "Deburring and Surface Preparation",
-                description: "Sharp edges and burrs are removed to ensure safe handling and smooth finishing. The beams are cleaned and prepared for galvanization to enhance corrosion resistance."
-              },
-              {
-                step: "06",
-                title: "Hot-Dip Galvanization",
-                description: "To provide long-lasting protection against rust and environmental damage, the beams undergo hot-dip galvanization as per IS 4759 / ASTM A123 standards. The galvanizing process includes degreasing and pickling, flux treatment, and dipping in molten zinc. This creates a thick, uniform zinc coating that significantly increases the service life of the Thrie Beam metal crash barrier system."
-              },
-              {
-                step: "07",
-                title: "Quality Control & Testing",
-                description: "Every batch undergoes strict quality inspection to ensure compliance with safety and infrastructure standards. Testing includes dimensional accuracy verification, zinc coating thickness test, impact resistance compliance, mechanical strength testing, and visual surface inspection. YNM Safety maintains high-quality standards to meet national highway project requirements."
-              },
-              {
-                step: "08",
-                title: "Packing, Storage & Dispatch",
-                description: "Finished Thrie Beam crash barriers are bundled securely for safe transportation. Proper labeling and batch tracking ensure efficient dispatch to infrastructure projects across India. As a trusted Thrie Beam crash barrier manufacturer, YNM Safety ensures timely delivery for government, highway, bridge, and expressway projects."
-              }
-            ]
-          },
-          {
             id: "cb5",
             slug: "attenuator-manufacture-ynm-safety",
             name: "Attenuator",
@@ -4832,8 +5220,8 @@ export const productsData = {
             image: "/assets/YNM Safety Highways exits and entrances.png",
             heroImage: "/assets/YNM Safety Toll plazas (2).png",
             specs: ["IRC SP 99:2013", "MoRTH Compliant", "High Energy Absorption", "80/100/110 Kmph Design Speed", "Galvanized Steel", "Bolt & Anchor Installation"],
-            overview: "YNM Safety is a leading Attenuator manufacture in India specializing in high-performance impact attenuation systems designed to reduce collision severity and protect motorists.\n\nOur Attenuator YNM manufactures systems are engineered as energy-absorbing safety devices that work seamlessly with metal beam crash barrier installations. These systems are tested and compliant with IRC SP 99:2013 and MoRTH guidelines, ensuring reliable performance in high-speed highway environments.\n\nAs a reputed YNM Safety manufactures road safety systems, we deliver durable, corrosion-resistant, and structurally strong attenuators suitable for national highways, expressways, urban corridors, and infrastructure projects worldwide.",
-            detailedDescription: "YNM Safety is a leading Attenuator manufacture in India specializing in high-performance impact attenuation systems designed to reduce collision severity and protect motorists.\n\nOur Attenuator YNM manufactures systems are engineered as energy-absorbing safety devices that work seamlessly with metal beam crash barrier installations. These systems are tested and compliant with IRC SP 99:2013 and MoRTH guidelines, ensuring reliable performance in high-speed highway environments.\n\nAs a reputed YNM Safety manufactures road safety systems, we deliver durable, corrosion-resistant, and structurally strong attenuators suitable for national highways, expressways, urban corridors, and infrastructure projects worldwide.",
+            overview: "YNM Safety is a leading Attenuator manufacturer in India specializing in high-performance impact attenuation systems designed to reduce collision severity and protect motorists.\n\nOur Attenuator YNM manufactured systems are engineered as energy-absorbing safety devices that work seamlessly with metal beam crash barrier installations. These systems are tested and compliant with IRC SP 99:2013 and MoRTH guidelines, ensuring reliable performance in high-speed highway environments.\n\nAs a reputed YNM Safety manufacturer of road safety systems, we deliver durable, corrosion-resistant, and structurally strong attenuators suitable for national highways, expressways, urban corridors, and infrastructure projects worldwide.",
+            detailedDescription: "YNM Safety is a leading Attenuator manufacturer in India specializing in high-performance impact attenuation systems designed to reduce collision severity and protect motorists.\n\nOur Attenuator YNM manufactured systems are engineered as energy-absorbing safety devices that work seamlessly with metal beam crash barrier installations. These systems are tested and compliant with IRC SP 99:2013 and MoRTH guidelines, ensuring reliable performance in high-speed highway environments.\n\nAs a reputed YNM Safety manufacturer of road safety systems, we deliver durable, corrosion-resistant, and structurally strong attenuators suitable for national highways, expressways, urban corridors, and infrastructure projects worldwide.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -4971,7 +5359,7 @@ export const productsData = {
                 title: "Toll Plazas",
                 description: "Designed to safeguard toll booths and vehicle lanes.",
                 image: "/assets/YNM Safety Toll plazas (2).png",
-                details: "Attenuator YNM manufactures systems prevent severe damage by absorbing vehicle collision energy, protecting both toll infrastructure and passengers."
+                details: "Attenuator YNM manufactured systems prevent severe damage by absorbing vehicle collision energy, protecting both toll infrastructure and passengers."
               },
               {
                 id: "app3",
@@ -5013,7 +5401,7 @@ export const productsData = {
               {
                 title: "Toll Plazas",
                 short: "Designed to safeguard toll booths and vehicle lanes.",
-                hover: "Attenuator YNM manufactures systems prevent severe damage by absorbing vehicle collision energy, protecting both toll infrastructure and passengers.",
+                hover: "Attenuator YNM manufactured systems prevent severe damage by absorbing vehicle collision energy, protecting both toll infrastructure and passengers.",
                 image: "/assets/YNM Safety Toll plazas (2).png"
               },
               {
@@ -5090,7 +5478,7 @@ export const productsData = {
             
             meta: {
               title: "Attenuator Manufacture | Metal Beam Crash Barrier | YNM Safety",
-              description: "YNM Safety is a leading Attenuator manufacture in India offering IRC SP 99:2013 & MoRTH compliant impact attenuators and metal beam crash barrier systems for highways, toll plazas, and bridge safety worldwide.",
+              description: "YNM Safety is a leading Attenuator manufacturer in India offering IRC SP 99:2013 & MoRTH compliant impact attenuators and metal beam crash barrier systems for highways, toll plazas, and bridge safety worldwide.",
               slug: "/attenuator-manufacture-ynm-safety"
             },
             
@@ -5179,7 +5567,7 @@ export const productsData = {
             },
             
             // Manufacturing Process
-            manufacturingProcessIntro: "YNM Safety is a leading Attenuator manufacture in India, delivering high-performance impact attenuation systems designed to reduce collision severity and protect motorists. Our attenuators are manufactured using advanced engineering processes and high-strength galvanized steel to ensure maximum durability, corrosion resistance, and superior impact absorption performance for highways, toll plazas, and bridge approaches.",
+            manufacturingProcessIntro: "YNM Safety is a leading Attenuator manufacturer in India, delivering high-performance impact attenuation systems designed to reduce collision severity and protect motorists. Our attenuators are manufactured using advanced engineering processes and high-strength galvanized steel to ensure maximum durability, corrosion resistance, and superior impact absorption performance for highways, toll plazas, and bridge approaches.",
             manufacturingProcess: [
               {
                 step: "01",
@@ -5232,9 +5620,9 @@ export const productsData = {
         products: [
           {
             id: "sg5",
-            slug: "retro-reflective-gantry-signage-manufactures",
+            slug: "retro-reflective-gantry-signage-manufacturers",
             name: "Retro Reflective Gantry Signage",
-            shortDesc: "High-visibility retro reflective gantry signage manufactures for highways, expressways & advanced traffic guidance systems.",
+            shortDesc: "High-visibility retro reflective gantry signage manufacturers for highways, expressways & advanced traffic guidance systems.",
             desc: "Premium retro reflective gantry signage for highways and expressways. Excellent long-distance visibility and weather-resistant overhead signboard solutions.",
             image: "/assets/Ynm safety signages.png",
             heroImage: "/assets/Ynm safety signages.png",
@@ -5242,14 +5630,14 @@ export const productsData = {
             
             // SEO Meta Information
             meta: {
-              title: "Retro Reflective Gantry Signage Manufactures | YNM Safety",
-              description: "Retro reflective gantry signage manufactures delivering high-visibility overhead road sign solutions. YNM Safety manufactures gantry signboards for highways, expressways & urban traffic safety.",
-              slug: "/retro-reflective-gantry-signage-manufactures"
+              title: "Retro Reflective Gantry Signage Manufacturers | YNM Safety",
+              description: "Retro reflective gantry signage manufacturers delivering high-visibility overhead road sign solutions. YNM Safety manufactures gantry signboards for highways, expressways & urban traffic safety.",
+              slug: "/retro-reflective-gantry-signage-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is one of the trusted retro reflective gantry signage manufactures, offering premium-quality overhead signboard solutions for modern road infrastructure. We manufacture retro reflective gantry signages designed for long-distance visibility, lane guidance, and effective traffic communication on highways, expressways, flyovers, and major junctions.\n\nOur retro reflective gantry signboards are manufactured using high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures. YNM Safety manufactures gantry signages that provide excellent day and night visibility, weather resistance, and long service life.\n\nAs experienced gantry signage manufactures, YNM Safety follows strict quality control processes and manufactures products compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
-            detailedDescription: "YNM Safety is one of the trusted retro reflective gantry signage manufactures, offering premium-quality overhead signboard solutions for modern road infrastructure. We manufacture retro reflective gantry signages designed for long-distance visibility, lane guidance, and effective traffic communication on highways, expressways, flyovers, and major junctions.\n\nOur retro reflective gantry signboards are manufactured using high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures. YNM Safety manufactures gantry signages that provide excellent day and night visibility, weather resistance, and long service life.\n\nAs experienced gantry signage manufactures, YNM Safety follows strict quality control processes and manufactures products compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
+            overview: "YNM Safety is one of the trusted retro reflective gantry signage manufacturers, offering premium-quality overhead signboard solutions for modern road infrastructure. We manufacture retro reflective gantry signages designed for long-distance visibility, lane guidance, and effective traffic communication on highways, expressways, flyovers, and major junctions.\n\nOur retro reflective gantry signboards are manufactured using high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures. YNM Safety manufactures gantry signages that provide excellent day and night visibility, weather resistance, and long service life.\n\nAs experienced gantry signage manufacturers, YNM Safety follows strict quality control processes and manufactures products compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
+            detailedDescription: "YNM Safety is one of the trusted retro reflective gantry signage manufacturers, offering premium-quality overhead signboard solutions for modern road infrastructure. We manufacture retro reflective gantry signages designed for long-distance visibility, lane guidance, and effective traffic communication on highways, expressways, flyovers, and major junctions.\n\nOur retro reflective gantry signboards are manufactured using high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures. YNM Safety manufactures gantry signages that provide excellent day and night visibility, weather resistance, and long service life.\n\nAs experienced gantry signage manufacturers, YNM Safety follows strict quality control processes and manufactures products compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -5660,13 +6048,13 @@ export const productsData = {
             // SEO Meta Information
             meta: {
               title: "Cantilever Signage Manufacturers | Worldwide Supply | YNM Safety",
-              description: "Leading Cantilever signages manufactures delivering durable highway and road safety signages worldwide. YNM Safety manufactures high-quality cantilever signages compliant with international standards.",
+              description: "Leading Cantilever signages manufacturers delivering durable highway and road safety signages worldwide. YNM Safety manufactures high-quality cantilever signages compliant with international standards.",
               slug: "/cantilever-signage-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is one of the trusted Cantilever signages manufactures, delivering robust and high-visibility overhead signage solutions for highways, expressways, and major road corridors across global markets. Cantilever signages are designed to provide advance traffic information without obstructing road movement, ensuring maximum visibility and improved driver response.\n\nAs YNM Safety manufactures premium-quality signages, our cantilever structures are engineered to withstand high wind loads, extreme weather conditions, and long-term outdoor exposure. These signages are widely used for lane guidance, directional information, exit identification, and regulatory traffic control.\n\nAll cantilever signages are manufactured with strict quality control and comply with international road safety standards, making them suitable for government, EPC, and private infrastructure projects worldwide.",
-            detailedDescription: "YNM Safety is one of the trusted Cantilever signages manufactures, delivering robust and high-visibility overhead signage solutions for highways, expressways, and major road corridors across global markets. Cantilever signages are designed to provide advance traffic information without obstructing road movement, ensuring maximum visibility and improved driver response.\n\nAs YNM Safety manufactures premium-quality signages, our cantilever structures are engineered to withstand high wind loads, extreme weather conditions, and long-term outdoor exposure. These signages are widely used for lane guidance, directional information, exit identification, and regulatory traffic control.\n\nAll cantilever signages are manufactured with strict quality control and comply with international road safety standards, making them suitable for government, EPC, and private infrastructure projects worldwide.",
+            overview: "YNM Safety is one of the trusted Cantilever signages manufacturers, delivering robust and high-visibility overhead signage solutions for highways, expressways, and major road corridors across global markets. Cantilever signages are designed to provide advance traffic information without obstructing road movement, ensuring maximum visibility and improved driver response.\n\nAs YNM Safety manufactures premium-quality signages, our cantilever structures are engineered to withstand high wind loads, extreme weather conditions, and long-term outdoor exposure. These signages are widely used for lane guidance, directional information, exit identification, and regulatory traffic control.\n\nAll cantilever signages are manufactured with strict quality control and comply with international road safety standards, making them suitable for government, EPC, and private infrastructure projects worldwide.",
+            detailedDescription: "YNM Safety is one of the trusted Cantilever signages manufacturers, delivering robust and high-visibility overhead signage solutions for highways, expressways, and major road corridors across global markets. Cantilever signages are designed to provide advance traffic information without obstructing road movement, ensuring maximum visibility and improved driver response.\n\nAs YNM Safety manufactures premium-quality signages, our cantilever structures are engineered to withstand high wind loads, extreme weather conditions, and long-term outdoor exposure. These signages are widely used for lane guidance, directional information, exit identification, and regulatory traffic control.\n\nAll cantilever signages are manufactured with strict quality control and comply with international road safety standards, making them suitable for government, EPC, and private infrastructure projects worldwide.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -5793,16 +6181,16 @@ export const productsData = {
               },
               {
                 id: "app4",
-                title: "Industrial Areas",
-                description: "Cantilever signages support safe traffic movement in industrial areas.",
-                image: "/assets/YNM Safety Cantilever Industrial areas.png",
+                title: "Industrial Roads",
+                description: "Cantilever signages support safe traffic movement on industrial roads.",
+                image: "/assets/YNM Safety Cantilever Industrial Roads.jpg",
                 details: "Cantilever signages provide clear directional and warning information for heavy vehicles. Their robust construction withstands harsh industrial environments. This improves navigation and reduces accident risks within industrial zones."
               },
               {
                 id: "app5",
-                title: "Ports & Logistics Hubs",
+                title: "Port & Logistics",
                 description: "Cantilever signages are suitable for ports and logistics hubs with heavy vehicle traffic.",
-                image: "/assets/YNM Safety Cantilever Ports and Logistics Hubs.png",
+                image: "/assets/YNM Safety Cantilever Port Logistics.jpg",
                 details: "Overhead cantilever signages offer high visibility in large cargo and logistics areas. They guide vehicles through complex routes and loading zones. This ensures smooth traffic flow and improved safety operations."
               },
               {
@@ -5834,16 +6222,16 @@ export const productsData = {
                 image: "/assets/YNM Safety Cantilever Toll Plazas.png"
               },
               {
-                title: "Industrial Areas",
-                short: "Cantilever signages support safe traffic movement in industrial areas.",
+                title: "Industrial Roads",
+                short: "Cantilever signages support safe traffic movement on industrial roads.",
                 hover: "Cantilever signages provide clear directional and warning information for heavy vehicles. Their robust construction withstands harsh industrial environments. This improves navigation and reduces accident risks within industrial zones.",
-                image: "/assets/YNM Safety Cantilever Industrial areas.png"
+                image: "/assets/YNM Safety Cantilever Industrial Roads.jpg"
               },
               {
-                title: "Ports & Logistics Hubs",
+                title: "Port & Logistics",
                 short: "Cantilever signages are suitable for ports and logistics hubs with heavy vehicle traffic.",
                 hover: "Overhead cantilever signages offer high visibility in large cargo and logistics areas. They guide vehicles through complex routes and loading zones. This ensures smooth traffic flow and improved safety operations.",
-                image: "/assets/YNM Safety Cantilever Ports and Logistics Hubs.png"
+                image: "/assets/YNM Safety Cantilever Port Logistics.jpg"
               },
               {
                 title: "Smart / Intelligent Transportation Systems (ITS)",
@@ -5928,7 +6316,7 @@ export const productsData = {
             },
             
             // Manufacturing Process - 10 Steps
-            manufacturingProcessIntro: "As one of the leading Cantilever signages manufacturers, YNM Safety Manufactures follows a precision-driven and quality-controlled production process to deliver durable, high-visibility signages for highway, road, and infrastructure projects worldwide. Below is the complete manufacturing workflow from raw material selection to final dispatch.",
+            manufacturingProcessIntro: "As one of the leading Cantilever signages manufacturers, YNM Safety follows a precision-driven and quality-controlled production process to deliver durable, high-visibility signages for highway, road, and infrastructure projects worldwide. Below is the complete manufacturing workflow from raw material selection to final dispatch.",
             manufacturingProcess: [
               {
                 step: "01",
@@ -6038,13 +6426,6 @@ export const productsData = {
                 description: "Indian Roads Congress Standard for Road Signs",
                 pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
                 icon: "check"
-              },
-              {
-                id: "morth",
-                title: "MoRTH",
-                description: "Ministry of Road Transport & Highways Specifications",
-                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
-                icon: "check"
               }
             ],
             
@@ -6054,9 +6435,8 @@ export const productsData = {
               "/assets/YNM Safety Cantilever Highways and Expressways.png",
               "/assets/YNM Safety Cantilever Urban Roads and Streets.png",
               "/assets/YNM Safety Cantilever Toll Plazas.png",
-              "/assets/YNM Safety Cantilever Industrial areas.png",
-              "/assets/YNM Safety Cantilever Ports and Logistics Hubs.png",
-              "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
+              "/assets/YNM Safety Cantilever Industrial Roads.jpg",
+              "/assets/YNM Safety Cantilever Port Logistics.jpg"
             ]
           }
         ]
@@ -6071,30 +6451,65 @@ export const productsData = {
           {
             id: "fab1",
             name: "Solar Panel Structures / Frames",
-            desc: "Mounting structures and frames for solar panels.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Solar Mounting", "Tilt Adjustable", "Corrosion Resistant"]
+            desc: "Ground and rooftop mounting structures for solar PV installations.",
+            image: "/assets/fabrication/solar-panel-frame-1.png",
+            specs: ["Fixed/Tracking", "Aluminum/GI steel", "Wind certified", "Quick mount"]
           },
           {
             id: "fab2",
             name: "Railway Structures",
-            desc: "Steel structures for railway infrastructure.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Railway Grade", "Heavy Duty", "Safety Certified"]
+            desc: "Platform shelters, canopies, and railway infrastructure fabrication.",
+            image: "/assets/railway-fab.png",
+            specs: ["RDSO approved", "Long span roofs", "Integrated drainage", "Fire resistant"]
           },
           {
             id: "fab3",
             name: "GI Dustbins",
-            desc: "Galvanized iron dustbins for public spaces.",
-            image: "/assets/product-structural-steel.png",
-            specs: ["Galvanized", "Durable", "Easy Clean"]
+            desc: "Galvanized iron dustbins for public spaces and municipal use.",
+            image: "/assets/fabrication/gi-dustbin-1.jpg",
+            specs: ["Corrosion proof", "Multiple sizes", "Lid options", "Easy emptying"]
           },
           {
             id: "fab4",
-            name: "Rickshaw",
-            desc: "Custom fabricated rickshaw frames and parts.",
-            image: "/assets/product-custom-metal-enclosure.png",
-            specs: ["Custom Design", "Lightweight", "Sturdy Frame"]
+            name: "E-Rickshaw",
+            desc: "E-rickshaw and cycle rickshaw body fabrication and frames.",
+            image: "/assets/fabrication/e-rickshaw-1.webp",
+            specs: ["Lightweight design", "Rust protected", "Custom branding", "Durable finish"]
+          },
+          {
+            id: "fab5",
+            name: "Camera Poles",
+            desc: "Sturdy metal poles for CCTV cameras, traffic monitoring, and surveillance systems.",
+            image: "/assets/fabrication/camera-pole-1.png",
+            specs: ["Hot-dip galvanized", "Multi-height options", "Weather resistant", "Easy installation"]
+          },
+          {
+            id: "fab6",
+            name: "Cantilever Structures",
+            desc: "Heavy-duty cantilever structures for highway signages, gantries, and overhead systems.",
+            image: "/assets/ynm safety cantilever.png",
+            specs: ["High load capacity", "Corrosion resistant", "Custom spans", "NHAI compliant"]
+          },
+          {
+            id: "fab7",
+            name: "Parking Signages",
+            desc: "Durable parking lot signages and directional boards for malls, airports, and public areas.",
+            image: "/assets/fabrication/parking-signage-1.png",
+            specs: ["Reflective coating", "Rust proof", "Custom designs", "UV resistant"]
+          },
+          {
+            id: "fab8",
+            name: "Gantry Structures",
+            desc: "Heavy-duty gantry structures for highway overhead signages and traffic management systems.",
+            image: "/assets/Ynm safety signages.png",
+            specs: ["High load capacity", "Corrosion resistant", "Wide span designs", "MoRTH compliant"]
+          },
+          {
+            id: "fab9",
+            name: "Slotted Angle Racks",
+            desc: "Versatile slotted angle storage racks for warehouses, workshops, and industrial storage.",
+            image: "/assets/fabrication/slotted-angle-rack-1.png",
+            specs: ["Adjustable shelves", "Heavy duty", "Powder coated", "Easy assembly"]
           }
         ]
       }

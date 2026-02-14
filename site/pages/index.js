@@ -263,18 +263,22 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
   return (
     <>
       <Head>
-        <title>YNM SAFETY MANUFACTURE</title>
+        <title>Hot Thermoplastic Paint Manufacturers | YNM Safety</title>
         <meta 
           name="description" 
-          content="YNM Safety manufactures hot thermoplastic paints, cold plastic paints, metal beam crash barriers, bitumen, road signages, road studs and complete road safety products for highways, expressways and urban roads across India."
+          content="YNM Safety is a leading hot thermoplastic paint manufacturer offering cold plastic paint, hot thermoplastic paints, road signages, and metal beam crash barrier manufacturers for complete road safety solutions."
+        />
+        <meta 
+          name="keywords" 
+          content="YNM Safety, Hot thermoplastic paint manufacturers, Cold plastic paint manufacturer, Road marking paint manufacturers, Thermoplastic road marking paint, Road safety signages manufacturer, Metal beam crash barrier manufacturer, Highway safety products manufacturer, Reflective road paint supplier, Road safety solutions company"
         />
         <link rel="canonical" href="https://www.ynmsafety.com/" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ynmsafety.com/" />
-        <meta property="og:title" content="YNM SAFETY MANUFACTURE" />
-        <meta property="og:description" content="YNM Safety manufactures hot thermoplastic paints, cold plastic paints, metal beam crash barriers, bitumen, road signages, road studs and complete road safety products for highways, expressways and urban roads across India." />
+        <meta property="og:title" content="Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta property="og:description" content="YNM Safety is a leading hot thermoplastic paint manufacturer offering cold plastic paint, hot thermoplastic paints, road signages, and metal beam crash barrier manufacturers for complete road safety solutions." />
         <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
@@ -283,8 +287,8 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="YNM SAFETY MANUFACTURE" />
-        <meta name="twitter:description" content="YNM Safety manufactures hot thermoplastic paints, cold plastic paints, metal beam crash barriers, bitumen, road signages, road studs and complete road safety products for highways, expressways and urban roads across India." />
+        <meta name="twitter:title" content="Hot Thermoplastic Paint Manufacturers | YNM Safety" />
+        <meta name="twitter:description" content="YNM Safety is a leading hot thermoplastic paint manufacturer offering cold plastic paint, hot thermoplastic paints, road signages, and metal beam crash barrier manufacturers for complete road safety solutions." />
         <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - Organization */}

@@ -6,12 +6,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
 
-// Fabrication products data - 4 products with photos available
+// Fabrication products data - 10 products with photos available
 const fabricationProducts = [
   { 
     id: "fab1", 
     name: "Solar Panel Structures / Frames", 
-    images: ["/assets/solar-fab-2.png", "/assets/solar-fab.png"], 
+    images: ["/assets/fabrication/solar-panel-frame-1.png", "/assets/solar-fab-2.png", "/assets/solar-fab.png"], 
     category: "Solar",
     description: "Ground and rooftop mounting structures for solar PV installations.",
     specs: ["Fixed/Tracking", "Aluminum/GI steel", "Wind certified", "Quick mount"]
@@ -27,23 +27,63 @@ const fabricationProducts = [
   { 
     id: "fab3", 
     name: "GI Dustbins", 
-    image: "/assets/dustbin-fab.png", 
+    images: ["/assets/fabrication/gi-dustbin-1.jpg", "/assets/fabrication/gi-dustbin-2.png", "/assets/dustbin-fab.png"], 
     category: "Urban",
     description: "Galvanized iron dustbins for public spaces and municipal use.",
     specs: ["Corrosion proof", "Multiple sizes", "Lid options", "Easy emptying"]
   },
   { 
     id: "fab4", 
-    name: "Rickshaw", 
-    image: "/assets/rickshaw-fab.png", 
+    name: "E-Rickshaw", 
+    images: ["/assets/fabrication/e-rickshaw-1.webp", "/assets/fabrication/e-rickshaw-2.webp", "/assets/rickshaw-fab.png"], 
     category: "Urban",
     description: "E-rickshaw and cycle rickshaw body fabrication and frames.",
     specs: ["Lightweight design", "Rust protected", "Custom branding", "Durable finish"]
   },
+  { 
+    id: "fab5", 
+    name: "Camera Poles", 
+    images: ["/assets/fabrication/camera-pole-1.png", "/assets/fabrication/camera-pole-2.png", "/assets/fabrication/camera-pole-3.png"], 
+    category: "Infrastructure",
+    description: "Sturdy metal poles for CCTV cameras, traffic monitoring, and surveillance systems.",
+    specs: ["Hot-dip galvanized", "Multi-height options", "Weather resistant", "Easy installation"]
+  },
+  { 
+    id: "fab6", 
+    name: "Cantilever Structures", 
+    images: ["/assets/ynm safety cantilever.png", "/assets/YNM Safety Cantilever Highways and Expressways.png", "/assets/YNM Safety Cantilever Urban Roads and Streets.png"], 
+    category: "Infrastructure",
+    description: "Heavy-duty cantilever structures for highway signages, gantries, and overhead systems.",
+    specs: ["High load capacity", "Corrosion resistant", "Custom spans", "NHAI compliant"]
+  },
+  { 
+    id: "fab7", 
+    name: "Parking Signages", 
+    images: ["/assets/fabrication/parking-signage-1.png", "/assets/fabrication/parking-signage-2.png", "/assets/fabrication/parking-signage-3.png"], 
+    category: "Urban",
+    description: "Durable parking lot signages and directional boards for malls, airports, and public areas.",
+    specs: ["Reflective coating", "Rust proof", "Custom designs", "UV resistant"]
+  },
+  { 
+    id: "fab8", 
+    name: "Gantry Structures", 
+    images: ["/assets/Ynm safety signages.png", "/assets/Ynm safety Highways and Expressways.png", "/assets/Ynm safety Urban Roads and City streets.png"], 
+    category: "Infrastructure",
+    description: "Heavy-duty gantry structures for highway overhead signages and traffic management systems.",
+    specs: ["High load capacity", "Corrosion resistant", "Wide span designs", "MoRTH compliant"]
+  },
+  { 
+    id: "fab9", 
+    name: "Slotted Angle Racks", 
+    images: ["/assets/fabrication/slotted-angle-rack-1.png", "/assets/fabrication/slotted-angle-rack-2.jpg", "/assets/fabrication/slotted-angle-rack-3.jpg"], 
+    category: "Industrial",
+    description: "Versatile slotted angle storage racks for warehouses, workshops, and industrial storage.",
+    specs: ["Adjustable shelves", "Heavy duty", "Powder coated", "Easy assembly"]
+  },
 ];
 
 // Flag to show coming soon message
-const showComingSoon = true;
+const showComingSoon = false;
 
 // Get unique categories
 const categories = ["All", ...new Set(fabricationProducts.map(p => p.category))];
@@ -181,7 +221,7 @@ export default function FabricationPage() {
             <p>Custom steel and metal fabrication solutions for infrastructure, construction, and industrial applications</p>
             <div className="fabrication-hero-stats">
               <div className="fabrication-stat">
-                <span className="fabrication-stat-number">4+</span>
+                <span className="fabrication-stat-number">9+</span>
                 <span className="fabrication-stat-label">Products</span>
               </div>
               <div className="fabrication-stat">
@@ -700,7 +740,7 @@ export default function FabricationPage() {
             <div className="testimonials-grid">
               <div className="testimonial-card featured">
                 <div className="testimonial-quote">&ldquo;</div>
-                <p className="testimonial-text">YNM&apos;s fabrication quality exceeded our expectations. Their sign board structures for our highway project were delivered on time and met all international standards. Highly recommended!</p>
+                <p className="testimonial-text">YNM&apos;s fabrication quality exceeded our expectations. Their gantry structures for our highway project were delivered on time and met all international standards. Highly recommended!</p>
                 <div className="testimonial-author">
                   <div className="author-avatar">RK</div>
                   <div className="author-info">
