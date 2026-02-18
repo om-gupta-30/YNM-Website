@@ -89,24 +89,24 @@ export const faqData = [
 // Product catalog data (matches actual product categories on the website)
 export const productCatalog = {
   paints: [
-    { id: "p1", name: "Hot Thermoplastic Road Marking Paint", image: "/assets/hot thermoplastci ynm safety.png", desc: "YNM Safety hot thermoplastic paints manufacturer - leading hot thermoplastic paint manufacturers in India for highways and expressways" },
-    { id: "p2", name: "Waterborne Airfield Marking Paints", image: "/assets/YNM Safety Runways.png", desc: "ICAO/FAA compliant airport marking paints for runways and taxiways - YNM Safety" },
+    { id: "p1", name: "Hot Thermoplastic Road Marking Paint", image: "/assets/hot-thermoplastci-ynm-safety.png", desc: "YNM Safety hot thermoplastic paints manufacturer - leading hot thermoplastic paint manufacturers in India for highways and expressways" },
+    { id: "p2", name: "Waterborne Airfield Marking Paints", image: "/assets/ynm-safety-runways.png", desc: "ICAO/FAA compliant airport marking paints for runways and taxiways - YNM Safety" },
     { id: "p3", name: "Cold Plastic Paints", image: "/assets/ynm-safety-cold-plastic-airports.png", desc: "YNM Safety cold thermoplastic paints manufacturer - MMA cold plastic road marking paint for high-wear areas" },
     { id: "p4", name: "Oil Kerb Base Paint", image: "/assets/ynm-safety-kerbs-road-edges.png", desc: "YNM Safety oil base kerb paint manufacturer - high-visibility kerb and road edge marking paint" },
     { id: "p5", name: "Water Kerb Base Paint", image: "/assets/ynm-safety-curbs-gutters.png", desc: "YNM Safety water base kerb paint manufacturer - eco-friendly water-based kerb paint" },
     { id: "p6", name: "Enamel Paint", image: "/assets/product-industrial-paint.png", desc: "Industrial and decorative enamel paint - YNM Safety" }
   ],
   bitumen: [
-    { id: "b1", name: "Bitumen VG 40", image: "/assets/Ynm safety bitumen manufactures.png", desc: "High-grade viscosity bitumen for highway construction" }
+    { id: "b1", name: "Bitumen VG 40", image: "/assets/ynm-safety-bitumen-manufactures.png", desc: "High-grade viscosity bitumen for highway construction" }
   ],
   crashBarriers: [
-    { id: "cb1", name: "W Beam Crash Barrier", image: "/assets/metal beam crash barrier ynm safety.png", desc: "Most widely used highway guardrail system" },
+    { id: "cb1", name: "W Beam Crash Barrier", image: "/assets/metal-beam-crash-barrier-ynm-safety.png", desc: "Most widely used highway guardrail system" },
     { id: "cb2", name: "Double W Beam Crash Barriers", image: "/assets/double-beam-highways-expressways.jpg", desc: "Enhanced protection for heavy traffic corridors" },
     { id: "cb3", name: "Roller Beam Crash Barriers", image: "/assets/roller-beam-highways-expressways.jpg", desc: "Rotating barrel system for sharp curves and accident zones" }
   ],
   signages: [
-    { id: "s1", name: "Retro Reflective Gantry Signage", image: "/assets/ynm safety manufactures of gantry signages.png", desc: "Large overhead highway signage with high visibility" },
-    { id: "s2", name: "Cantilever Signage", image: "/assets/ynm safety cantilever.png", desc: "Single-arm mounted expressway signage" }
+    { id: "s1", name: "Retro Reflective Gantry Signage", image: "/assets/ynm-safety-manufactures-of-gantry-signages.png", desc: "Large overhead highway signage with high visibility" },
+    { id: "s2", name: "Cantilever Signage", image: "/assets/ynm-safety-cantilever.png", desc: "Single-arm mounted expressway signage" }
   ],
   fabrication: [
     { id: "f1", name: "Solar Panel Structures", image: "/assets/solar-fab.png", desc: "YNM Safety fabrication - structural frames for solar panel installations" },

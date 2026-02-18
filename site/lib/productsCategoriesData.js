@@ -16,8 +16,8 @@ export const productsData = {
             name: "Hot Thermoplastic Road Marking Paint",
             shortDesc: "YNM Safety - Leading hot thermoplastic road marking paint manufacturers providing high-performance thermoplastic paint for highways, expressways & urban road safety. ISO certified manufacturers.",
             desc: "YNM Safety manufactures premium hot thermoplastic road marking paint for highways and roads. As leading hot thermoplastic paint manufacturers, we provide excellent durability, retro-reflective properties and road safety solutions.",
-            image: "/assets/hot thermoplastci ynm safety.png",
-            heroImage: "/assets/hot thermoplastci ynm safety.png",
+            image: "/assets/hot-thermoplastci-ynm-safety.png",
+            heroImage: "/assets/hot-thermoplastci-ynm-safety.png",
             specs: ["High durability", "Retro-reflective", "Weather resistant", "Long service life"],
             price: "85",
             priceUnit: "per kg",
@@ -139,42 +139,42 @@ export const productsData = {
                 id: "app1",
                 title: "Highways & Expressways",
                 description: "YNM Hot Thermoplastic Paints deliver durable and high-visibility road markings for highways and expressways.",
-                image: "/assets/ynm safety hot thermoplastic highway and expressways marking paints.png",
+                image: "/assets/ynm-safety-hot-thermoplastic-highway-and-expressways-marking-paints.png",
                 details: "YNM Safety is a trusted name among hot thermoplastic paints manufacturers for long-lasting highway road markings. YNM thermoplastic paints provide excellent adhesion, skid resistance, and night-time visibility under heavy traffic."
               },
               {
                 id: "app2",
                 title: "City Roads & Streets",
                 description: "YNM thermoplastic paints ensure clear and long-lasting markings for city roads and streets.",
-                image: "/assets/YNM Safety hot thermoplastic street and city roads marking paints.jpeg",
+                image: "/assets/ynm-safety-hot-thermoplastic-street-and-city-roads-marking-paints.jpeg",
                 details: "YNM Safety manufactures high-quality YNM hot thermoplastic paints for urban road applications. These thermoplastic paints improve lane discipline, traffic flow, and visibility in busy city environments."
               },
               {
                 id: "app3",
                 title: "Pedestrian Crossings",
                 description: "YNM hot thermoplastic paints enhance visibility and safety at pedestrian crossings.",
-                image: "/assets/ynm safety hot thermoplastic pedestian crossings marking paints.jpeg",
+                image: "/assets/ynm-safety-hot-thermoplastic-pedestian-crossings-marking-paints.jpeg",
                 details: "YNM Safety, one of the leading hot thermoplastic paints manufacturers, supplies durable road marking solutions for pedestrian crossings. YNM thermoplastic paints offer reflective and anti-skid surfaces for safer pedestrian movement."
               },
               {
                 id: "app4",
                 title: "Parking Areas",
                 description: "YNM thermoplastic paints provide durable and organized parking area markings.",
-                image: "/assets/ynm safety hot thermoplastic parking areas marking .jpeg",
+                image: "/assets/ynm-safety-hot-thermoplastic-parking-areas-marking.jpeg",
                 details: "YNM hot thermoplastic paints are widely used for parking bay lines, arrows, and symbols. Manufactured by YNM Safety, these thermoplastic paints resist abrasion and maintain long-term visibility."
               },
               {
                 id: "app5",
                 title: "Industrial Roads & Runways",
                 description: "YNM thermoplastic paints deliver heavy-duty performance for industrial roads and runways.",
-                image: "/assets/ynm safety hot thermoplastic runway marking paints.jpeg",
+                image: "/assets/ynm-safety-hot-thermoplastic-runway-marking-paints.jpeg",
                 details: "YNM Safety is among the reliable hot thermoplastic paints manufacturers for industrial and runway applications. YNM hot thermoplastic paints offer superior durability, chemical resistance, and performance under heavy vehicle loads."
               },
               {
                 id: "app6",
                 title: "Zebra Crossings & Junctions",
                 description: "YNM thermoplastic paints ensure bold and highly visible markings at junctions and zebra crossings.",
-                image: "/assets/ynm safety hot thermoplastic zebra crossing and junctions marking paints.jpeg",
+                image: "/assets/ynm-safety-hot-thermoplastic-zebra-crossing-and-junctions-marking-paints.jpeg",
                 details: "YNM Safety manufactures YNM hot thermoplastic paints designed for critical traffic control areas. These thermoplastic paints improve road safety with thick, reflective markings and long service life."
               }
             ],
@@ -184,37 +184,37 @@ export const productsData = {
                 title: "Highways & Expressways",
                 short: "YNM Hot Thermoplastic Paints deliver durable and high-visibility road markings for highways and expressways.",
                 hover: "YNM Safety is a trusted name among hot thermoplastic paints manufacturers for long-lasting highway road markings. YNM thermoplastic paints provide excellent adhesion, skid resistance, and night-time visibility under heavy traffic.",
-                image: "/assets/ynm safety hot thermoplastic highway and expressways marking paints.png"
+                image: "/assets/ynm-safety-hot-thermoplastic-highway-and-expressways-marking-paints.png"
               },
               {
                 title: "City Roads & Streets",
                 short: "YNM thermoplastic paints ensure clear and long-lasting markings for city roads and streets.",
                 hover: "YNM Safety manufactures high-quality YNM hot thermoplastic paints for urban road applications. These thermoplastic paints improve lane discipline, traffic flow, and visibility in busy city environments.",
-                image: "/assets/YNM Safety hot thermoplastic street and city roads marking paints.jpeg"
+                image: "/assets/ynm-safety-hot-thermoplastic-street-and-city-roads-marking-paints.jpeg"
               },
               {
                 title: "Pedestrian Crossings",
                 short: "YNM hot thermoplastic paints enhance visibility and safety at pedestrian crossings.",
                 hover: "YNM Safety, one of the leading hot thermoplastic paints manufacturers, supplies durable road marking solutions for pedestrian crossings. YNM thermoplastic paints offer reflective and anti-skid surfaces for safer pedestrian movement.",
-                image: "/assets/ynm safety hot thermoplastic pedestian crossings marking paints.jpeg"
+                image: "/assets/ynm-safety-hot-thermoplastic-pedestian-crossings-marking-paints.jpeg"
               },
               {
                 title: "Parking Areas",
                 short: "YNM thermoplastic paints provide durable and organized parking area markings.",
                 hover: "YNM hot thermoplastic paints are widely used for parking bay lines, arrows, and symbols. Manufactured by YNM Safety, these thermoplastic paints resist abrasion and maintain long-term visibility.",
-                image: "/assets/ynm safety hot thermoplastic parking areas marking .jpeg"
+                image: "/assets/ynm-safety-hot-thermoplastic-parking-areas-marking.jpeg"
               },
               {
                 title: "Industrial Roads & Runways",
                 short: "YNM thermoplastic paints deliver heavy-duty performance for industrial roads and runways.",
                 hover: "YNM Safety is among the reliable hot thermoplastic paints manufacturers for industrial and runway applications. YNM hot thermoplastic paints offer superior durability, chemical resistance, and performance under heavy vehicle loads.",
-                image: "/assets/ynm safety hot thermoplastic runway marking paints.jpeg"
+                image: "/assets/ynm-safety-hot-thermoplastic-runway-marking-paints.jpeg"
               },
               {
                 title: "Zebra Crossings & Junctions",
                 short: "YNM thermoplastic paints ensure bold and highly visible markings at junctions and zebra crossings.",
                 hover: "YNM Safety manufactures YNM hot thermoplastic paints designed for critical traffic control areas. These thermoplastic paints improve road safety with thick, reflective markings and long service life.",
-                image: "/assets/ynm safety hot thermoplastic zebra crossing and junctions marking paints.jpeg"
+                image: "/assets/ynm-safety-hot-thermoplastic-zebra-crossing-and-junctions-marking-paints.jpeg"
               }
             ],
             
@@ -230,7 +230,7 @@ export const productsData = {
                 year: "2024",
                 highlight: "100%",
                 highlightLabel: "On-Time Delivery",
-                logo: "/assets/ynm safety manufactures of gantry signages.png"
+                logo: "/assets/ynm-safety-manufactures-of-gantry-signages.png"
               },
               {
                 id: "proj2",
@@ -254,7 +254,7 @@ export const productsData = {
                 year: "2024",
                 highlight: "Zero",
                 highlightLabel: "Defects",
-                logo: "/assets/gmr logoo.jpg"
+                logo: "/assets/gmr-logoo.jpg"
               }
             ],
             
@@ -441,11 +441,11 @@ export const productsData = {
             
             // Gallery Images
             gallery: [
-              "/assets/hot thermoplastci ynm safety.png",
-              "/assets/ynm safety hot themoplastic paints manufacture.png",
-              "/assets/ynm safety hot thermo plastic paints manufactures.png",
-              "/assets/ynm safety thermoplastic paints.png",
-              "/assets/Bag Design Mockup.jpg"
+              "/assets/hot-thermoplastci-ynm-safety.png",
+              "/assets/ynm-safety-hot-themoplastic-paints-manufacture.png",
+              "/assets/ynm-safety-hot-thermo-plastic-paints-manufactures.png",
+              "/assets/ynm-safety-thermoplastic-paints.png",
+              "/assets/bag-design-mockup.jpg"
             ]
           },
           {
@@ -663,7 +663,7 @@ export const productsData = {
                 year: "2024",
                 highlight: "100%",
                 highlightLabel: "Quality Delivered",
-                logo: "/assets/ynm safety manufactures of gantry signages.png"
+                logo: "/assets/ynm-safety-manufactures-of-gantry-signages.png"
               },
               {
                 id: "proj2",
@@ -675,7 +675,7 @@ export const productsData = {
                 year: "2024",
                 highlight: "Premium",
                 highlightLabel: "Quality Grade",
-                logo: "/assets/ynm safety manufactures of gantry signages.png"
+                logo: "/assets/ynm-safety-manufactures-of-gantry-signages.png"
               }
             ],
             
@@ -846,8 +846,8 @@ export const productsData = {
             name: "Waterborne Airfield Marking Paints",
             shortDesc: "YNM Safety manufactures premium waterborne airfield marking paints engineered for superior visibility, fast drying, and long-lasting performance across airport and aviation infrastructure.",
             desc: "YNM Safety manufactures premium waterborne airfield marking paints engineered for superior visibility, fast drying, and long-lasting performance across airport and aviation infrastructure.",
-            image: "/assets/YNM Safety Runways.png",
-            heroImage: "/assets/YNM Safety Runways.png",
+            image: "/assets/ynm-safety-runways.png",
+            heroImage: "/assets/ynm-safety-runways.png",
             specs: ["Waterborne base", "Fast drying", "High visibility", "Weather resistant", "Strong adhesion", "Low VOC"],
             
             // SEO Meta Information
@@ -983,7 +983,7 @@ export const productsData = {
                 id: "app1",
                 title: "Runways",
                 description: "YNM Safety waterborne airfield marking paints deliver high-visibility runway markings for safe aircraft landing and take-off.",
-                image: "/assets/YNM Safety Runways.png",
+                image: "/assets/ynm-safety-runways.png",
                 details: "YNM Safety manufactures waterborne airfield marking paints designed to withstand heavy aircraft loads and extreme weather conditions. Our runway marking paints ensure long-lasting visibility and compliance with aviation safety standards."
               },
               {
@@ -997,28 +997,28 @@ export const productsData = {
                 id: "app3",
                 title: "Aprons",
                 description: "Waterborne airfield marking paints support safe aircraft servicing and ground operations on aprons.",
-                image: "/assets/YNM Safety Aprons.png",
+                image: "/assets/ynm-safety-aprons.png",
                 details: "YNM Safety manufactures durable waterborne airfield marking paints resistant to surface wear and operational stress. Ideal for high-traffic apron zones requiring consistent marking clarity."
               },
               {
                 id: "app4",
                 title: "Aircraft Parking Bays",
                 description: "Clear aircraft parking bay markings ensure accurate positioning and safety.",
-                image: "/assets/YNM Safety Aircraft Parking Bays.png",
+                image: "/assets/ynm-safety-aircraft-parking-bays.png",
                 details: "YNM Safety waterborne airfield marking paints manufacturers supply high-contrast paints for aircraft parking areas. Designed for long-lasting visibility in busy airport environments."
               },
               {
                 id: "app5",
                 title: "Holding Position Markings",
                 description: "Holding position markings improve runway safety and aircraft control.",
-                image: "/assets/YNM Safety Holding position markings.png",
+                image: "/assets/ynm-safety-holding-position-markings.png",
                 details: "YNM Safety manufactures waterborne airfield marking paints for precise holding position identification. These markings reduce runway incursion risks and enhance pilot awareness."
               },
               {
                 id: "app6",
                 title: "Helipads",
                 description: "Waterborne airfield marking paints provide durable and highly visible helipad markings.",
-                image: "/assets/YNM Safety Helipads.png",
+                image: "/assets/ynm-safety-helipads.png",
                 details: "YNM Safety waterborne paints deliver excellent adhesion and clarity for rooftop and ground helipads. Manufactured to support safe helicopter landing and take-off operations."
               }
             ],
@@ -1028,7 +1028,7 @@ export const productsData = {
                 title: "Runways",
                 short: "YNM Safety waterborne airfield marking paints deliver high-visibility runway markings for safe aircraft landing and take-off.",
                 hover: "YNM Safety manufactures waterborne airfield marking paints designed to withstand heavy aircraft loads and extreme weather conditions. Our runway marking paints ensure long-lasting visibility and compliance with aviation safety standards.",
-                image: "/assets/YNM Safety Runways.png"
+                image: "/assets/ynm-safety-runways.png"
               },
               {
                 title: "Taxiways",
@@ -1040,25 +1040,25 @@ export const productsData = {
                 title: "Aprons",
                 short: "Waterborne airfield marking paints support safe aircraft servicing and ground operations on aprons.",
                 hover: "YNM Safety manufactures durable waterborne airfield marking paints resistant to surface wear and operational stress. Ideal for high-traffic apron zones requiring consistent marking clarity.",
-                image: "/assets/YNM Safety Aprons.png"
+                image: "/assets/ynm-safety-aprons.png"
               },
               {
                 title: "Aircraft Parking Bays",
                 short: "Clear aircraft parking bay markings ensure accurate positioning and safety.",
                 hover: "YNM Safety waterborne airfield marking paints manufacturers supply high-contrast paints for aircraft parking areas. Designed for long-lasting visibility in busy airport environments.",
-                image: "/assets/YNM Safety Aircraft Parking Bays.png"
+                image: "/assets/ynm-safety-aircraft-parking-bays.png"
               },
               {
                 title: "Holding Position Markings",
                 short: "Holding position markings improve runway safety and aircraft control.",
                 hover: "YNM Safety manufactures waterborne airfield marking paints for precise holding position identification. These markings reduce runway incursion risks and enhance pilot awareness.",
-                image: "/assets/YNM Safety Holding position markings.png"
+                image: "/assets/ynm-safety-holding-position-markings.png"
               },
               {
                 title: "Helipads",
                 short: "Waterborne airfield marking paints provide durable and highly visible helipad markings.",
                 hover: "YNM Safety waterborne paints deliver excellent adhesion and clarity for rooftop and ground helipads. Manufactured to support safe helicopter landing and take-off operations.",
-                image: "/assets/YNM Safety Helipads.png"
+                image: "/assets/ynm-safety-helipads.png"
               }
             ],
             
@@ -1082,12 +1082,12 @@ export const productsData = {
             },
             
             gallery: [
-              "/assets/YNM Safety Runways.png",
+              "/assets/ynm-safety-runways.png",
               "/assets/ynm-safety-taxiways.png",
-              "/assets/YNM Safety Aprons.png",
-              "/assets/YNM Safety Aircraft Parking Bays.png",
-              "/assets/YNM Safety Holding position markings.png",
-              "/assets/YNM Safety Helipads.png"
+              "/assets/ynm-safety-aprons.png",
+              "/assets/ynm-safety-aircraft-parking-bays.png",
+              "/assets/ynm-safety-holding-position-markings.png",
+              "/assets/ynm-safety-helipads.png"
             ],
             
             // Our Projects / Clients
@@ -1449,7 +1449,7 @@ export const productsData = {
                 year: "2024",
                 highlight: "100%",
                 highlightLabel: "Quality Delivered",
-                logo: "/assets/ynm safety manufactures of gantry signages.png"
+                logo: "/assets/ynm-safety-manufactures-of-gantry-signages.png"
               },
               {
                 id: "proj2",
@@ -1461,7 +1461,7 @@ export const productsData = {
                 year: "2024",
                 highlight: "Premium",
                 highlightLabel: "Quality Grade",
-                logo: "/assets/ynm safety manufactures of gantry signages.png"
+                logo: "/assets/ynm-safety-manufactures-of-gantry-signages.png"
               }
             ],
             
@@ -1630,8 +1630,8 @@ export const productsData = {
             name: "Water Kerb Base Paint",
             shortDesc: "High-performance water kerb base paint manufacturers delivering eco-friendly, durable, and high-visibility curb and road marking paints for highways, urban roads, and infrastructure projects worldwide.",
             desc: "YNM Safety manufactures premium-quality water base paints designed for long-lasting curb and road edge markings with excellent adhesion on concrete and asphalt surfaces.",
-            image: "/assets/YNM Safety Kerbs and Road Edges.png",
-            heroImage: "/assets/YNM Safety Kerbs and Road Edges.png",
+            image: "/assets/ynm-safety-kerbs-and-road-edges.png",
+            heroImage: "/assets/ynm-safety-kerbs-and-road-edges.png",
             specs: ["Acrylic Water Based Resin", "Brush/Roller/Spray Application", "Surface Dry - 20-30 Minutes", "Smooth Matte/Semi-Gloss Finish", "IS164:2023 Compliant", "Low VOC Eco-friendly"],
             
             // SEO Meta Information
@@ -1752,42 +1752,42 @@ export const productsData = {
                 id: "app1",
                 title: "Kerbs and Road Edges",
                 description: "Water kerb base paint ensures sharp, high-visibility markings for kerbs and road edges.",
-                image: "/assets/YNM Safety Kerbs and Road Edges.png",
+                image: "/assets/ynm-safety-kerbs-and-road-edges.png",
                 details: "Manufactured by leading water kerb paint manufacturers, this eco-friendly coating provides excellent adhesion on concrete surfaces. YNM Safety water base paints manufacturers deliver durable, weather-resistant finishes that maintain colour stability under heavy traffic and UV exposure."
               },
               {
                 id: "app2",
                 title: "Parking Lots",
                 description: "Water paints manufacturers supply durable markings for parking lot boundaries and curb sections.",
-                image: "/assets/YNM Safety parking lots (1).png",
+                image: "/assets/ynm-safety-parking-lots-1.png",
                 details: "YNM Safety water kerb base paint offers fast drying and smooth application for commercial and residential parking areas. As trusted paints manufacturers, we ensure long-lasting visibility even under continuous vehicle movement and environmental wear."
               },
               {
                 id: "app3",
                 title: "Pedestrian Crossings",
                 description: "Water kerb base paint enhances pedestrian crossing visibility and road safety.",
-                image: "/assets/YNM Safety Pedestrian Crossings.png",
+                image: "/assets/ynm-safety-pedestrian-crossings.png",
                 details: "Our ynm safety water base paints manufacturers products provide strong adhesion and bright colour contrast for zebra crossings and safety zones. The low-VOC, fast-curing formula ensures minimal traffic disruption during application."
               },
               {
                 id: "app4",
                 title: "Road Markings",
                 description: "Water kerb paint is suitable for durable and eco-friendly road marking applications.",
-                image: "/assets/YNM Safety road markings.png",
+                image: "/assets/ynm-safety-road-markings.png",
                 details: "As experienced water paints manufacturers, YNM Safety ensures consistent finish, excellent reflectivity, and long-term durability. The water-based formulation complies with environmental standards while maintaining superior marking performance."
               },
               {
                 id: "app5",
                 title: "Industrial & Warehouse Floors",
                 description: "Water kerb base paint defines safety lines and boundaries in industrial facilities.",
-                image: "/assets/YNM Safety Industrial and Warehouse Floors.png",
+                image: "/assets/ynm-safety-industrial-and-warehouse-floors.png",
                 details: "Manufactured by reliable water kerb paint manufacturers, this paint resists abrasion, dust, and light chemical exposure. It provides clear demarcation for forklift paths, loading zones, and pedestrian walkways inside warehouses."
               },
               {
                 id: "app6",
                 title: "Public Spaces & Recreational Areas",
                 description: "Water paints manufacturers provide vibrant markings for public and recreational spaces.",
-                image: "/assets/YNM Safety Public Spaces and Recreational Areas.png",
+                image: "/assets/ynm-safety-public-spaces-and-recreational-areas.png",
                 details: "YNM Safety manufactures water kerb base paint that delivers durable, low-odor, and environmentally safe coatings for parks, playgrounds, and community areas. The paint maintains colour brightness and surface integrity even under outdoor exposure."
               }
             ],
@@ -1797,37 +1797,37 @@ export const productsData = {
                 title: "Kerbs and Road Edges",
                 short: "Water kerb base paint ensures sharp, high-visibility markings for kerbs and road edges.",
                 hover: "Manufactured by leading water kerb paint manufacturers, this eco-friendly coating provides excellent adhesion on concrete surfaces. YNM Safety water base paints manufacturers deliver durable, weather-resistant finishes that maintain colour stability under heavy traffic and UV exposure.",
-                image: "/assets/YNM Safety Kerbs and Road Edges.png"
+                image: "/assets/ynm-safety-kerbs-and-road-edges.png"
               },
               {
                 title: "Parking Lots",
                 short: "Water paints manufacturers supply durable markings for parking lot boundaries and curb sections.",
                 hover: "YNM Safety water kerb base paint offers fast drying and smooth application for commercial and residential parking areas. As trusted paints manufacturers, we ensure long-lasting visibility even under continuous vehicle movement and environmental wear.",
-                image: "/assets/YNM Safety parking lots (1).png"
+                image: "/assets/ynm-safety-parking-lots-1.png"
               },
               {
                 title: "Pedestrian Crossings",
                 short: "Water kerb base paint enhances pedestrian crossing visibility and road safety.",
                 hover: "Our ynm safety water base paints manufacturers products provide strong adhesion and bright colour contrast for zebra crossings and safety zones. The low-VOC, fast-curing formula ensures minimal traffic disruption during application.",
-                image: "/assets/YNM Safety Pedestrian Crossings.png"
+                image: "/assets/ynm-safety-pedestrian-crossings.png"
               },
               {
                 title: "Road Markings",
                 short: "Water kerb paint is suitable for durable and eco-friendly road marking applications.",
                 hover: "As experienced water paints manufacturers, YNM Safety ensures consistent finish, excellent reflectivity, and long-term durability. The water-based formulation complies with environmental standards while maintaining superior marking performance.",
-                image: "/assets/YNM Safety road markings.png"
+                image: "/assets/ynm-safety-road-markings.png"
               },
               {
                 title: "Industrial & Warehouse Floors",
                 short: "Water kerb base paint defines safety lines and boundaries in industrial facilities.",
                 hover: "Manufactured by reliable water kerb paint manufacturers, this paint resists abrasion, dust, and light chemical exposure. It provides clear demarcation for forklift paths, loading zones, and pedestrian walkways inside warehouses.",
-                image: "/assets/YNM Safety Industrial and Warehouse Floors.png"
+                image: "/assets/ynm-safety-industrial-and-warehouse-floors.png"
               },
               {
                 title: "Public Spaces & Recreational Areas",
                 short: "Water paints manufacturers provide vibrant markings for public and recreational spaces.",
                 hover: "YNM Safety manufactures water kerb base paint that delivers durable, low-odor, and environmentally safe coatings for parks, playgrounds, and community areas. The paint maintains colour brightness and surface integrity even under outdoor exposure.",
-                image: "/assets/YNM Safety Public Spaces and Recreational Areas.png"
+                image: "/assets/ynm-safety-public-spaces-and-recreational-areas.png"
               }
             ],
             
@@ -2006,12 +2006,12 @@ export const productsData = {
             
             // Gallery Images - Using wkbp folder images for carousel
             gallery: [
-              "/assets/YNM Safety Kerbs and Road Edges.png",
-              "/assets/YNM Safety parking lots (1).png",
-              "/assets/YNM Safety Pedestrian Crossings.png",
-              "/assets/YNM Safety road markings.png",
-              "/assets/YNM Safety Industrial and Warehouse Floors.png",
-              "/assets/YNM Safety Public Spaces and Recreational Areas.png"
+              "/assets/ynm-safety-kerbs-and-road-edges.png",
+              "/assets/ynm-safety-parking-lots-1.png",
+              "/assets/ynm-safety-pedestrian-crossings.png",
+              "/assets/ynm-safety-road-markings.png",
+              "/assets/ynm-safety-industrial-and-warehouse-floors.png",
+              "/assets/ynm-safety-public-spaces-and-recreational-areas.png"
             ]
           },
           {
@@ -2020,8 +2020,8 @@ export const productsData = {
             name: "Enamel Paint",
             shortDesc: "Premium quality enamel paint manufacturers delivering durable, high-gloss, weather-resistant coatings for architectural, industrial, automotive, and protective applications worldwide.",
             desc: "YNM Safety manufactures high-performance enamel paint for architectural, industrial, automotive, and metal applications. Trusted enamel paint manufacturers compliant with IS164:2023 standards.",
-            image: "/assets/YNM Safety Industrial coatings.png",
-            heroImage: "/assets/YNM Safety Industrial coatings.png",
+            image: "/assets/ynm-safety-industrial-coatings.png",
+            heroImage: "/assets/ynm-safety-industrial-coatings.png",
             specs: ["Synthetic / Alkyd Based", "High Gloss / Semi Gloss Finish", "Brush/Roller/Spray Application", "Surface Dry - 6-8 Hours", "IS164:2023 Compliant", "Excellent Metal & Wood Adhesion"],
             
             // SEO Meta Information
@@ -2140,42 +2140,42 @@ export const productsData = {
                 id: "app1",
                 title: "Architectural & Decorative Coatings",
                 description: "Enamel paint is widely used for decorative finishes in residential and commercial buildings.",
-                image: "/assets/enamel/YNM Safety Architectural and Decorative coatings.png",
+                image: "/assets/enamel/ynm-safety-architectural-and-decorative-coatings.png",
                 details: "As leading enamel paint manufacturers, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection."
               },
               {
                 id: "app2",
                 title: "Industrial Coatings",
                 description: "Industrial enamel paint provides durable protection for machinery and equipment.",
-                image: "/assets/YNM Safety Industrial coatings.png",
+                image: "/assets/ynm-safety-industrial-coatings.png",
                 details: "Our ynm safety paints manufacturers products offer corrosion resistance and mechanical durability for factories, plants, and heavy industrial structures."
               },
               {
                 id: "app3",
                 title: "Automotive Coatings",
                 description: "Enamel paint is used in automotive refinishing and metal surface coating.",
-                image: "/assets/YNM Safety Automative Coatings.png",
+                image: "/assets/ynm-safety-automative-coatings.png",
                 details: "Manufactured under IS164:2023 standards, our enamel paint ensures high gloss, scratch resistance, and long-lasting performance in automotive applications."
               },
               {
                 id: "app4",
                 title: "Wood Coatings",
                 description: "Enamel paint enhances the durability and finish of wooden surfaces.",
-                image: "/assets/enamel/YNM Safety Wood coatings.png",
+                image: "/assets/enamel/ynm-safety-wood-coatings.png",
                 details: "YNM Safety enamel paint manufacturers provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures."
               },
               {
                 id: "app5",
                 title: "Marine & Protective Coatings",
                 description: "Enamel paint is suitable for marine and protective coating applications.",
-                image: "/assets/YNM Safety Marine and Protective Coatings.png",
+                image: "/assets/ynm-safety-marine-and-protective-coatings.png",
                 details: "The corrosion-resistant formulation protects metal surfaces from salt spray, humidity, and harsh weather, making it ideal for marine and coastal environments."
               },
               {
                 id: "app6",
                 title: "Metal Fabrication",
                 description: "Enamel paint provides protective coating for fabricated metal components.",
-                image: "/assets/YNM Safety Metal fabrication.png",
+                image: "/assets/ynm-safety-metal-fabrication.png",
                 details: "As trusted paints manufacturers, we deliver enamel coatings that prevent rust formation and extend the life of fabricated steel and structural components."
               }
             ],
@@ -2185,37 +2185,37 @@ export const productsData = {
                 title: "Architectural & Decorative Coatings",
                 short: "Enamel paint is widely used for decorative finishes in residential and commercial buildings.",
                 hover: "As leading enamel paint manufacturers, YNM Safety provides smooth, glossy coatings for doors, windows, grills, and structural surfaces, ensuring long-lasting aesthetic appeal and protection.",
-                image: "/assets/enamel/YNM Safety Architectural and Decorative coatings.png"
+                image: "/assets/enamel/ynm-safety-architectural-and-decorative-coatings.png"
               },
               {
                 title: "Industrial Coatings",
                 short: "Industrial enamel paint provides durable protection for machinery and equipment.",
                 hover: "Our ynm safety paints manufacturers products offer corrosion resistance and mechanical durability for factories, plants, and heavy industrial structures.",
-                image: "/assets/YNM Safety Industrial coatings.png"
+                image: "/assets/ynm-safety-industrial-coatings.png"
               },
               {
                 title: "Automotive Coatings",
                 short: "Enamel paint is used in automotive refinishing and metal surface coating.",
                 hover: "Manufactured under IS164:2023 standards, our enamel paint ensures high gloss, scratch resistance, and long-lasting performance in automotive applications.",
-                image: "/assets/YNM Safety Automative Coatings.png"
+                image: "/assets/ynm-safety-automative-coatings.png"
               },
               {
                 title: "Wood Coatings",
                 short: "Enamel paint enhances the durability and finish of wooden surfaces.",
                 hover: "YNM Safety enamel paint manufacturers provide smooth application and moisture protection for furniture, doors, cabinets, and wooden fixtures.",
-                image: "/assets/enamel/YNM Safety Wood coatings.png"
+                image: "/assets/enamel/ynm-safety-wood-coatings.png"
               },
               {
                 title: "Marine & Protective Coatings",
                 short: "Enamel paint is suitable for marine and protective coating applications.",
                 hover: "The corrosion-resistant formulation protects metal surfaces from salt spray, humidity, and harsh weather, making it ideal for marine and coastal environments.",
-                image: "/assets/YNM Safety Marine and Protective Coatings.png"
+                image: "/assets/ynm-safety-marine-and-protective-coatings.png"
               },
               {
                 title: "Metal Fabrication",
                 short: "Enamel paint provides protective coating for fabricated metal components.",
                 hover: "As trusted paints manufacturers, we deliver enamel coatings that prevent rust formation and extend the life of fabricated steel and structural components.",
-                image: "/assets/YNM Safety Metal fabrication.png"
+                image: "/assets/ynm-safety-metal-fabrication.png"
               }
             ],
             
@@ -2382,12 +2382,12 @@ export const productsData = {
             
             // Gallery Images - Using enamel folder images for carousel
             gallery: [
-              "/assets/enamel/YNM Safety Architectural and Decorative coatings.png",
-              "/assets/YNM Safety Industrial coatings.png",
-              "/assets/YNM Safety Automative Coatings.png",
-              "/assets/enamel/YNM Safety Wood coatings.png",
-              "/assets/YNM Safety Marine and Protective Coatings.png",
-              "/assets/YNM Safety Metal fabrication.png"
+              "/assets/enamel/ynm-safety-architectural-and-decorative-coatings.png",
+              "/assets/ynm-safety-industrial-coatings.png",
+              "/assets/ynm-safety-automative-coatings.png",
+              "/assets/enamel/ynm-safety-wood-coatings.png",
+              "/assets/ynm-safety-marine-and-protective-coatings.png",
+              "/assets/ynm-safety-metal-fabrication.png"
             ]
           },
           {
@@ -2816,8 +2816,8 @@ export const productsData = {
             name: "Bitumen VG 40",
             shortDesc: "High-viscosity paving grade bitumen manufacturers for heavy traffic roads, highways & expressways.",
             desc: "Premium paving grade bitumen VG 40 designed for high-temperature regions and heavy traffic load conditions.",
-            image: "/assets/Ynm safety bitumen manufactures.png",
-            heroImage: "/assets/Ynm safety bitumen manufactures.png",
+            image: "/assets/ynm-safety-bitumen-manufactures.png",
+            heroImage: "/assets/ynm-safety-bitumen-manufactures.png",
             specs: ["VG 40 Grade", "IS 73 Compliant", "ASTM Standards", "High Viscosity", "Heavy Traffic Roads"],
             
             // SEO Meta Information
@@ -2934,42 +2934,42 @@ export const productsData = {
                 id: "app1",
                 title: "National Highways & Expressways",
                 description: "Bitumen VG 40 is widely used for national highways and expressways due to its high load-bearing capacity and durability.",
-                image: "/assets/YNM Safety National Highways and Expressways.png",
+                image: "/assets/ynm-safety-national-highways-and-expressways.png",
                 details: "VG 40 bitumen is specially designed for high-traffic highways exposed to heavy axle loads and varying climatic conditions. It provides excellent resistance to rutting, deformation, and moisture damage. This makes it ideal for long-life highway pavements and expressway construction."
               },
               {
                 id: "app2",
                 title: "Heavy-Traffic Corridors & Freight Routes",
                 description: "Bitumen VG 40 is ideal for heavy-traffic corridors and freight routes carrying continuous commercial vehicle movement.",
-                image: "/assets/YNM saftey Heavy-traffic corridors and freight routes.png",
+                image: "/assets/ynm-saftey-heavy-traffic-corridors-and-freight-routes.png",
                 details: "VG 40 bitumen offers superior stiffness and stability required for roads with high truck and container traffic. It minimizes cracking and permanent deformation under repetitive loads. This ensures longer pavement life and reduced maintenance costs on freight corridors."
               },
               {
                 id: "app3",
                 title: "Toll Plazas & Intersections",
                 description: "Bitumen VG 40 is preferred for toll plazas and intersections where roads face extreme braking and turning stress.",
-                image: "/assets/YNM Safety Toll Plazas and Intersections.png",
+                image: "/assets/ynm-safety-toll-plazas-and-intersections.png",
                 details: "High-stress zones demand a bitumen grade with excellent resistance to shear forces and surface wear. VG 40 bitumen maintains structural integrity under frequent stop-and-go traffic conditions. It helps prevent rutting, shoving, and surface failures at critical junctions."
               },
               {
                 id: "app4",
                 title: "Industrial Roads & Corridors",
                 description: "Bitumen VG 40 is extensively used in industrial roads designed for heavy machinery and loaded vehicles.",
-                image: "/assets/YNM safety Industrial roads and Corridors.png",
+                image: "/assets/ynm-safety-industrial-roads-and-corridors.png",
                 details: "Industrial corridors require pavements that can withstand heavy axle loads and slow-moving traffic. VG 40 bitumen provides strong binding and high temperature stability. It ensures reliable performance in industrial zones and manufacturing hubs."
               },
               {
                 id: "app5",
                 title: "Port Roads & Container Yards",
                 description: "Bitumen VG 40 is suitable for port roads and container yards handling constant heavy container movement.",
-                image: "/assets/YNM Safety Port roads and Container yards.png",
+                image: "/assets/ynm-safety-port-roads-and-container-yards.png",
                 details: "Port infrastructure demands high-performance bitumen capable of resisting deformation under extreme loads. VG 40 bitumen delivers excellent strength and durability for container terminals. It supports long-term pavement performance in coastal and high-load environments."
               },
               {
                 id: "app6",
                 title: "Airport Runways, Taxiways & Aprons",
                 description: "Bitumen VG 40 is used in airport runways, taxiways, and aprons requiring high structural strength.",
-                image: "/assets/YNM safety Airport runways taxiways and aprons.png",
+                image: "/assets/ynm-safety-airport-runways-taxiways-and-aprons.png",
                 details: "Airport pavements are subjected to very high static and dynamic loads from aircraft operations. VG 40 bitumen offers superior stability, adhesion, and temperature resistance. It ensures safe, durable, and long-lasting airside pavement performance."
               }
             ],
@@ -2979,37 +2979,37 @@ export const productsData = {
                 title: "National Highways & Expressways",
                 short: "Bitumen VG 40 is widely used for national highways and expressways due to its high load-bearing capacity and durability.",
                 hover: "VG 40 bitumen is specially designed for high-traffic highways exposed to heavy axle loads and varying climatic conditions. It provides excellent resistance to rutting, deformation, and moisture damage. This makes it ideal for long-life highway pavements and expressway construction.",
-                image: "/assets/YNM Safety National Highways and Expressways.png"
+                image: "/assets/ynm-safety-national-highways-and-expressways.png"
               },
               {
                 title: "Heavy-Traffic Corridors & Freight Routes",
                 short: "Bitumen VG 40 is ideal for heavy-traffic corridors and freight routes carrying continuous commercial vehicle movement.",
                 hover: "VG 40 bitumen offers superior stiffness and stability required for roads with high truck and container traffic. It minimizes cracking and permanent deformation under repetitive loads. This ensures longer pavement life and reduced maintenance costs on freight corridors.",
-                image: "/assets/YNM saftey Heavy-traffic corridors and freight routes.png"
+                image: "/assets/ynm-saftey-heavy-traffic-corridors-and-freight-routes.png"
               },
               {
                 title: "Toll Plazas & Intersections",
                 short: "Bitumen VG 40 is preferred for toll plazas and intersections where roads face extreme braking and turning stress.",
                 hover: "High-stress zones demand a bitumen grade with excellent resistance to shear forces and surface wear. VG 40 bitumen maintains structural integrity under frequent stop-and-go traffic conditions. It helps prevent rutting, shoving, and surface failures at critical junctions.",
-                image: "/assets/YNM Safety Toll Plazas and Intersections.png"
+                image: "/assets/ynm-safety-toll-plazas-and-intersections.png"
               },
               {
                 title: "Industrial Roads & Corridors",
                 short: "Bitumen VG 40 is extensively used in industrial roads designed for heavy machinery and loaded vehicles.",
                 hover: "Industrial corridors require pavements that can withstand heavy axle loads and slow-moving traffic. VG 40 bitumen provides strong binding and high temperature stability. It ensures reliable performance in industrial zones and manufacturing hubs.",
-                image: "/assets/YNM safety Industrial roads and Corridors.png"
+                image: "/assets/ynm-safety-industrial-roads-and-corridors.png"
               },
               {
                 title: "Port Roads & Container Yards",
                 short: "Bitumen VG 40 is suitable for port roads and container yards handling constant heavy container movement.",
                 hover: "Port infrastructure demands high-performance bitumen capable of resisting deformation under extreme loads. VG 40 bitumen delivers excellent strength and durability for container terminals. It supports long-term pavement performance in coastal and high-load environments.",
-                image: "/assets/YNM Safety Port roads and Container yards.png"
+                image: "/assets/ynm-safety-port-roads-and-container-yards.png"
               },
               {
                 title: "Airport Runways, Taxiways & Aprons",
                 short: "Bitumen VG 40 is used in airport runways, taxiways, and aprons requiring high structural strength.",
                 hover: "Airport pavements are subjected to very high static and dynamic loads from aircraft operations. VG 40 bitumen offers superior stability, adhesion, and temperature resistance. It ensures safe, durable, and long-lasting airside pavement performance.",
-                image: "/assets/YNM safety Airport runways taxiways and aprons.png"
+                image: "/assets/ynm-safety-airport-runways-taxiways-and-aprons.png"
               }
             ],
             
@@ -3197,13 +3197,13 @@ export const productsData = {
             
             // Gallery Images
             gallery: [
-              "/assets/Ynm safety bitumen manufactures.png",
-              "/assets/YNM Safety National Highways and Expressways.png",
-              "/assets/YNM saftey Heavy-traffic corridors and freight routes.png",
-              "/assets/YNM Safety Toll Plazas and Intersections.png",
-              "/assets/YNM safety Industrial roads and Corridors.png",
-              "/assets/YNM Safety Port roads and Container yards.png",
-              "/assets/YNM safety Airport runways taxiways and aprons.png"
+              "/assets/ynm-safety-bitumen-manufactures.png",
+              "/assets/ynm-safety-national-highways-and-expressways.png",
+              "/assets/ynm-saftey-heavy-traffic-corridors-and-freight-routes.png",
+              "/assets/ynm-safety-toll-plazas-and-intersections.png",
+              "/assets/ynm-safety-industrial-roads-and-corridors.png",
+              "/assets/ynm-safety-port-roads-and-container-yards.png",
+              "/assets/ynm-safety-airport-runways-taxiways-and-aprons.png"
             ]
           },
           {
@@ -3607,8 +3607,8 @@ export const productsData = {
             name: "W Beam Crash Barrier",
             shortDesc: "High-performance metal beam crash barriers engineered for highways, expressways & critical road safety applications.",
             desc: "High-performance metal beam crash barriers engineered for highways, expressways & critical road safety applications.",
-            image: "/assets/metal beam crash barrier ynm safety.png",
-            heroImage: "/assets/metal beam crash barrier for highway ynm safety.png",
+            image: "/assets/metal-beam-crash-barrier-ynm-safety.png",
+            heroImage: "/assets/metal-beam-crash-barrier-for-highway-ynm-safety.png",
             specs: ["W-beam profile", "Hot-dip galvanized", "IS 5986 certified", "MoRTH compliant", "High tensile strength", "2.7mm/3.0mm thickness"],
             overview: "YNM Safety is a trusted W beam crash barrier manufacturer delivering high-quality metal beam crash barriers designed to provide maximum roadside safety and impact resistance. Our W beam crash barriers are widely installed on highways, expressways, bridges, medians, and sharp curves to prevent vehicles from veering off the roadway and to minimize collision severity. Manufactured using premium-grade galvanized steel, YNM Safety's metal beam crash barriers comply with national and international road safety standards. The unique W-profile absorbs and dissipates kinetic energy during impact, reducing vehicle damage and safeguarding passengers. As one of the leading W beam crash barrier manufacturers in India, we ensure consistent quality, long service life, and corrosion resistance even in harsh weather conditions. Our metal beam crash barrier manufacturing process follows strict quality control norms, making YNM Safety a preferred choice for government projects, infrastructure developers, and EPC contractors seeking reliable and cost-effective road safety solutions.",
             detailedDescription: "YNM Safety is a trusted W beam crash barrier manufacturer delivering high-quality metal beam crash barriers designed to provide maximum roadside safety and impact resistance. Our W beam crash barriers are widely installed on highways, expressways, bridges, medians, and sharp curves to prevent vehicles from veering off the roadway and to minimize collision severity. Manufactured using premium-grade galvanized steel, YNM Safety's metal beam crash barriers comply with national and international road safety standards. The unique W-profile absorbs and dissipates kinetic energy during impact, reducing vehicle damage and safeguarding passengers. As one of the leading W beam crash barrier manufacturers in India, we ensure consistent quality, long service life, and corrosion resistance even in harsh weather conditions. Our metal beam crash barrier manufacturing process follows strict quality control norms, making YNM Safety a preferred choice for government projects, infrastructure developers, and EPC contractors seeking reliable and cost-effective road safety solutions.",
@@ -3740,42 +3740,42 @@ export const productsData = {
                 id: "app1",
                 title: "Highways & Expressways",
                 description: "High-performance W beam crash barriers by YNM Safety ensure maximum safety on high-speed highways and expressways.",
-                image: "/assets/metal beam crash barrier for highway ynm safety.png",
+                image: "/assets/metal-beam-crash-barrier-for-highway-ynm-safety.png",
                 details: "YNM Safety, a trusted metal beam crash barrier manufacturer, supplies durable W beam crash barriers designed to withstand high-impact collisions. These barriers enhance road safety and reduce accident severity on national and international highways."
               },
               {
                 id: "app2",
                 title: "Curves & Sharp Bends",
                 description: "YNM Safety W beam crash barriers provide reliable protection at dangerous curves and sharp bends.",
-                image: "/assets/metal beam crash barrier Sharp Bends and corners ynm safey.png",
+                image: "/assets/metal-beam-crash-barrier-sharp-bends-and-corners-ynm-safey.png",
                 details: "Engineered for impact absorption, our galvanized W beam crash barriers help control vehicle deviation on accident-prone curves. They significantly improve driver safety in sharp turns and hilly terrains."
               },
               {
                 id: "app3",
                 title: "Bridges & Flyovers",
                 description: "Robust W beam crash barriers from YNM Safety safeguard vehicles on bridges and flyovers.",
-                image: "/assets/metal beam crash barrier s ynm safety at Bridges.png",
+                image: "/assets/metal-beam-crash-barrier-s-ynm-safety-at-bridges.png",
                 details: "As leading W beam crash barrier manufacturers in India, we deliver strong edge protection systems for elevated roads. Our barriers prevent vehicle fall-offs and ensure long-term structural safety."
               },
               {
                 id: "app4",
                 title: "Roadside Hazards & Embankments",
                 description: "YNM Safety's metal beam crash barriers protect vehicles from roadside hazards and embankments.",
-                image: "/assets/metal beam crash barrier Hazards at ynm safety.png",
+                image: "/assets/metal-beam-crash-barrier-hazards-at-ynm-safety.png",
                 details: "Our W beam crash barriers are widely installed near culverts, slopes, and embankments to reduce accident impact. They act as a reliable safety shield in high-risk roadside zones."
               },
               {
                 id: "app5",
                 title: "Medians & Central Dividers",
                 description: "YNM Safety W beam crash barriers are ideal for medians and central dividers.",
-                image: "/assets/metal beam crash barrier Central Dividers from ynm safety.jpeg",
+                image: "/assets/metal-beam-crash-barrier-central-dividers-from-ynm-safety.jpeg",
                 details: "Designed to prevent cross-median collisions, our galvanized W beam crash barriers improve traffic separation and road discipline. They are commonly used on multi-lane highways and urban roads."
               },
               {
                 id: "app6",
                 title: "Mountain & Ghat Roads",
                 description: "YNM Safety provides W beam crash barriers for safe travel on mountain and ghat roads.",
-                image: "/assets/ghat road w beam barrier ynm safety.png",
+                image: "/assets/ghat-road-w-beam-barrier-ynm-safety.png",
                 details: "Built for extreme terrain, our metal beam crash barriers perform reliably on steep slopes and narrow roads. They enhance safety on winding ghat sections and high-altitude routes."
               }
             ],
@@ -3785,37 +3785,37 @@ export const productsData = {
                 title: "Highways & Expressways",
                 short: "High-performance W beam crash barriers by YNM Safety ensure maximum safety on high-speed highways and expressways.",
                 hover: "YNM Safety, a trusted metal beam crash barrier manufacturer, supplies durable W beam crash barriers designed to withstand high-impact collisions. These barriers enhance road safety and reduce accident severity on national and international highways.",
-                image: "/assets/metal beam crash barrier for highway ynm safety.png"
+                image: "/assets/metal-beam-crash-barrier-for-highway-ynm-safety.png"
               },
               {
                 title: "Curves & Sharp Bends",
                 short: "YNM Safety W beam crash barriers provide reliable protection at dangerous curves and sharp bends.",
                 hover: "Engineered for impact absorption, our galvanized W beam crash barriers help control vehicle deviation on accident-prone curves. They significantly improve driver safety in sharp turns and hilly terrains.",
-                image: "/assets/metal beam crash barrier Sharp Bends and corners ynm safey.png"
+                image: "/assets/metal-beam-crash-barrier-sharp-bends-and-corners-ynm-safey.png"
               },
               {
                 title: "Bridges & Flyovers",
                 short: "Robust W beam crash barriers from YNM Safety safeguard vehicles on bridges and flyovers.",
                 hover: "As leading W beam crash barrier manufacturers in India, we deliver strong edge protection systems for elevated roads. Our barriers prevent vehicle fall-offs and ensure long-term structural safety.",
-                image: "/assets/metal beam crash barrier s ynm safety at Bridges.png"
+                image: "/assets/metal-beam-crash-barrier-s-ynm-safety-at-bridges.png"
               },
               {
                 title: "Roadside Hazards & Embankments",
                 short: "YNM Safety's metal beam crash barriers protect vehicles from roadside hazards and embankments.",
                 hover: "Our W beam crash barriers are widely installed near culverts, slopes, and embankments to reduce accident impact. They act as a reliable safety shield in high-risk roadside zones.",
-                image: "/assets/metal beam crash barrier Hazards at ynm safety.png"
+                image: "/assets/metal-beam-crash-barrier-hazards-at-ynm-safety.png"
               },
               {
                 title: "Medians & Central Dividers",
                 short: "YNM Safety W beam crash barriers are ideal for medians and central dividers.",
                 hover: "Designed to prevent cross-median collisions, our galvanized W beam crash barriers improve traffic separation and road discipline. They are commonly used on multi-lane highways and urban roads.",
-                image: "/assets/metal beam crash barrier Central Dividers from ynm safety.jpeg"
+                image: "/assets/metal-beam-crash-barrier-central-dividers-from-ynm-safety.jpeg"
               },
               {
                 title: "Mountain & Ghat Roads",
                 short: "YNM Safety provides W beam crash barriers for safe travel on mountain and ghat roads.",
                 hover: "Built for extreme terrain, our metal beam crash barriers perform reliably on steep slopes and narrow roads. They enhance safety on winding ghat sections and high-altitude routes.",
-                image: "/assets/ghat road w beam barrier ynm safety.png"
+                image: "/assets/ghat-road-w-beam-barrier-ynm-safety.png"
               }
             ],
             
@@ -3840,15 +3840,15 @@ export const productsData = {
             },
             
             gallery: [
-              "/assets/metal beam crash barrier ynm safety.png",
-              "/assets/w beam crash barries ynm safety.webp",
-              "/assets/ynm safety metal beam crash barriers.png",
-              "/assets/metal beam crash barrier for highway ynm safety.png",
-              "/assets/metal beam crash barrier Central Dividers from ynm safety.jpeg",
-              "/assets/metal beam crash barrier Hazards at ynm safety.png",
-              "/assets/metal beam crash barrier s ynm safety at Bridges.png",
-              "/assets/metal beam crash barrier Sharp Bends and corners ynm safey.png",
-              "/assets/ghat road w beam barrier ynm safety.png"
+              "/assets/metal-beam-crash-barrier-ynm-safety.png",
+              "/assets/w-beam-crash-barries-ynm-safety.webp",
+              "/assets/ynm-safety-metal-beam-crash-barriers.png",
+              "/assets/metal-beam-crash-barrier-for-highway-ynm-safety.png",
+              "/assets/metal-beam-crash-barrier-central-dividers-from-ynm-safety.jpeg",
+              "/assets/metal-beam-crash-barrier-hazards-at-ynm-safety.png",
+              "/assets/metal-beam-crash-barrier-s-ynm-safety-at-bridges.png",
+              "/assets/metal-beam-crash-barrier-sharp-bends-and-corners-ynm-safey.png",
+              "/assets/ghat-road-w-beam-barrier-ynm-safety.png"
             ],
             
             // Our Projects / Clients
@@ -4026,8 +4026,8 @@ export const productsData = {
             name: "Thrie Beam Crash Barrier",
             shortDesc: "High-strength thrie beam crash barriers manufacturers delivering superior impact resistance and road safety protection for highways, bridges, and infrastructure projects worldwide.",
             desc: "High-strength thrie beam crash barriers manufacturers delivering superior impact resistance and road safety protection for highways, bridges, and infrastructure projects worldwide.",
-            image: "/assets/YNM Safety Highways and Expressways (4).png",
-            heroImage: "/assets/YNM Safety Highways and Expressways (4).png",
+            image: "/assets/ynm-safety-highways-and-expressways-4.png",
+            heroImage: "/assets/ynm-safety-highways-and-expressways-4.png",
             specs: ["Thrie-beam profile", "Hot-dip galvanized", "High energy absorption", "MoRTH compliant", "High tensile strength", "55 Kg/RM"],
             overview: "YNM Safety is one of the leading thrie beam crash barriers manufacturers in India, delivering high-impact road safety solutions for highways, bridges, and expressways. As trusted metal beam crash barriers manufacturers and experienced barriers manufacturers, we design and produce crash barriers that offer superior strength and energy absorption during vehicle impact.\n\nOur thrie beam crash barriers provide enhanced protection compared to conventional W-beam systems, making them ideal for high-speed corridors and heavy vehicle routes. Being reputed ynm safety manufacturers, we ensure strict compliance with IRC 119, MoRTH 803, EN 1317, and ISO 9001:2015 standards.\n\nThe thrie beam profile offers improved structural stability and better vehicle redirection, reducing accident severity and infrastructure damage.",
             detailedDescription: "YNM Safety is one of the leading thrie beam crash barriers manufacturers in India, delivering high-impact road safety solutions for highways, bridges, and expressways. As trusted metal beam crash barriers manufacturers and experienced barriers manufacturers, we design and produce crash barriers that offer superior strength and energy absorption during vehicle impact.\n\nOur thrie beam crash barriers provide enhanced protection compared to conventional W-beam systems, making them ideal for high-speed corridors and heavy vehicle routes. Being reputed ynm safety manufacturers, we ensure strict compliance with IRC 119, MoRTH 803, EN 1317, and ISO 9001:2015 standards.\n\nThe thrie beam profile offers improved structural stability and better vehicle redirection, reducing accident severity and infrastructure damage.",
@@ -4150,42 +4150,42 @@ export const productsData = {
                 id: "app1",
                 title: "Highways & Expressways",
                 description: "Thrie beam crash barriers are widely installed on highways and expressways to improve road safety.",
-                image: "/assets/YNM Safety Highways and Expressways (4).png",
+                image: "/assets/ynm-safety-highways-and-expressways-4.png",
                 details: "As leading thrie beam crash barriers manufacturers, YNM Safety provides high-strength barriers designed to absorb impact and safely redirect vehicles at high speeds, reducing accident severity."
               },
               {
                 id: "app2",
                 title: "Urban Roads & Streets",
                 description: "Thrie beam barriers provide controlled vehicle containment in urban road networks.",
-                image: "/assets/YNM Safety Urban Roads and streets (2).png",
+                image: "/assets/ynm-safety-urban-roads-and-streets-2.png",
                 details: "Manufactured by trusted barriers manufacturers, these systems offer enhanced protection near intersections, medians, and pedestrian zones while maintaining structural stability."
               },
               {
                 id: "app3",
                 title: "Bridges & Flyovers",
                 description: "Thrie beam crash barriers ensure safety on bridges and elevated corridors.",
-                image: "/assets/YNM Safety Bridges and flyovers (3).png",
+                image: "/assets/ynm-safety-bridges-and-flyovers-3.png",
                 details: "The high energy-absorbing design prevents vehicles from breaching bridge edges, making them essential for flyovers and elevated road sections."
               },
               {
                 id: "app4",
                 title: "Industrial Areas",
                 description: "Crash barriers protect industrial zones and logistics corridors.",
-                image: "/assets/YNM Safety Industrial areas (2).png",
+                image: "/assets/ynm-safety-industrial-areas-2.png",
                 details: "Our metal beam crash barriers manufacturers solutions safeguard heavy vehicle movement areas and protect infrastructure assets in industrial environments."
               },
               {
                 id: "app5",
                 title: "Airports & Runways",
                 description: "Thrie beam barriers provide perimeter and safety protection in airports.",
-                image: "/assets/YNM Safety Airports and Runways.png",
+                image: "/assets/ynm-safety-airports-and-runways.png",
                 details: "Engineered for high-impact resistance, these barriers enhance security and prevent unauthorized vehicle intrusion in sensitive aviation zones."
               },
               {
                 id: "app6",
                 title: "Coastal & Mountain Roads",
                 description: "Thrie beam crash barriers are ideal for coastal and hilly terrains.",
-                image: "/assets/YNM Safety Coastal and Mountain roads.png",
+                image: "/assets/ynm-safety-coastal-and-mountain-roads.png",
                 details: "With galvanized corrosion resistance and structural durability, these barriers perform reliably under extreme weather and challenging terrain conditions."
               }
             ],
@@ -4195,37 +4195,37 @@ export const productsData = {
                 title: "Highways & Expressways",
                 short: "Thrie beam crash barriers are widely installed on highways and expressways to improve road safety.",
                 hover: "As leading thrie beam crash barriers manufacturers, YNM Safety provides high-strength barriers designed to absorb impact and safely redirect vehicles at high speeds, reducing accident severity.",
-                image: "/assets/YNM Safety Highways and Expressways (4).png"
+                image: "/assets/ynm-safety-highways-and-expressways-4.png"
               },
               {
                 title: "Urban Roads & Streets",
                 short: "Thrie beam barriers provide controlled vehicle containment in urban road networks.",
                 hover: "Manufactured by trusted barriers manufacturers, these systems offer enhanced protection near intersections, medians, and pedestrian zones while maintaining structural stability.",
-                image: "/assets/YNM Safety Urban Roads and streets (2).png"
+                image: "/assets/ynm-safety-urban-roads-and-streets-2.png"
               },
               {
                 title: "Bridges & Flyovers",
                 short: "Thrie beam crash barriers ensure safety on bridges and elevated corridors.",
                 hover: "The high energy-absorbing design prevents vehicles from breaching bridge edges, making them essential for flyovers and elevated road sections.",
-                image: "/assets/YNM Safety Bridges and flyovers (3).png"
+                image: "/assets/ynm-safety-bridges-and-flyovers-3.png"
               },
               {
                 title: "Industrial Areas",
                 short: "Crash barriers protect industrial zones and logistics corridors.",
                 hover: "Our metal beam crash barriers manufacturers solutions safeguard heavy vehicle movement areas and protect infrastructure assets in industrial environments.",
-                image: "/assets/YNM Safety Industrial areas (2).png"
+                image: "/assets/ynm-safety-industrial-areas-2.png"
               },
               {
                 title: "Airports & Runways",
                 short: "Thrie beam barriers provide perimeter and safety protection in airports.",
                 hover: "Engineered for high-impact resistance, these barriers enhance security and prevent unauthorized vehicle intrusion in sensitive aviation zones.",
-                image: "/assets/YNM Safety Airports and Runways.png"
+                image: "/assets/ynm-safety-airports-and-runways.png"
               },
               {
                 title: "Coastal & Mountain Roads",
                 short: "Thrie beam crash barriers are ideal for coastal and hilly terrains.",
                 hover: "With galvanized corrosion resistance and structural durability, these barriers perform reliably under extreme weather and challenging terrain conditions.",
-                image: "/assets/YNM Safety Coastal and Mountain roads.png"
+                image: "/assets/ynm-safety-coastal-and-mountain-roads.png"
               }
             ],
             
@@ -4250,12 +4250,12 @@ export const productsData = {
             },
             
             gallery: [
-              "/assets/YNM Safety Highways and Expressways (4).png",
-              "/assets/YNM Safety Urban Roads and streets (2).png",
-              "/assets/YNM Safety Bridges and flyovers (3).png",
-              "/assets/YNM Safety Industrial areas (2).png",
-              "/assets/YNM Safety Airports and Runways.png",
-              "/assets/YNM Safety Coastal and Mountain roads.png"
+              "/assets/ynm-safety-highways-and-expressways-4.png",
+              "/assets/ynm-safety-urban-roads-and-streets-2.png",
+              "/assets/ynm-safety-bridges-and-flyovers-3.png",
+              "/assets/ynm-safety-industrial-areas-2.png",
+              "/assets/ynm-safety-airports-and-runways.png",
+              "/assets/ynm-safety-coastal-and-mountain-roads.png"
             ],
             
             // Our Projects / Clients
@@ -5219,8 +5219,8 @@ export const productsData = {
             name: "Attenuator",
             shortDesc: "High-performance impact attenuator manufactured by YNM Safety, a trusted Attenuator manufacture delivering advanced metal beam crash barrier safety systems for global highway infrastructure.",
             desc: "High-performance impact attenuator manufactured by YNM Safety, a trusted Attenuator manufacture delivering advanced metal beam crash barrier safety systems for global highway infrastructure.",
-            image: "/assets/YNM Safety Highways exits and entrances.png",
-            heroImage: "/assets/YNM Safety Toll plazas (2).png",
+            image: "/assets/ynm-safety-highways-exits-and-entrances.png",
+            heroImage: "/assets/ynm-safety-toll-plazas-2.png",
             specs: ["IRC SP 99:2013", "MoRTH Compliant", "High Energy Absorption", "80/100/110 Kmph Design Speed", "Galvanized Steel", "Bolt & Anchor Installation"],
             overview: "YNM Safety is a leading Attenuator manufacturer in India specializing in high-performance impact attenuation systems designed to reduce collision severity and protect motorists.\n\nOur Attenuator YNM manufactured systems are engineered as energy-absorbing safety devices that work seamlessly with metal beam crash barrier installations. These systems are tested and compliant with IRC SP 99:2013 and MoRTH guidelines, ensuring reliable performance in high-speed highway environments.\n\nAs a reputed YNM Safety manufacturer of road safety systems, we deliver durable, corrosion-resistant, and structurally strong attenuators suitable for national highways, expressways, urban corridors, and infrastructure projects worldwide.",
             detailedDescription: "YNM Safety is a leading Attenuator manufacturer in India specializing in high-performance impact attenuation systems designed to reduce collision severity and protect motorists.\n\nOur Attenuator YNM manufactured systems are engineered as energy-absorbing safety devices that work seamlessly with metal beam crash barrier installations. These systems are tested and compliant with IRC SP 99:2013 and MoRTH guidelines, ensuring reliable performance in high-speed highway environments.\n\nAs a reputed YNM Safety manufacturer of road safety systems, we deliver durable, corrosion-resistant, and structurally strong attenuators suitable for national highways, expressways, urban corridors, and infrastructure projects worldwide.",
@@ -5353,42 +5353,42 @@ export const productsData = {
                 id: "app1",
                 title: "Highway Exits and Entrances",
                 description: "Attenuator systems protect motorists at highway entry and exit points.",
-                image: "/assets/YNM Safety Highways exits and entrances.png",
+                image: "/assets/ynm-safety-highways-exits-and-entrances.png",
                 details: "Installed at gore areas and diverging lanes, YNM Safety attenuator manufacture solutions absorb frontal impacts and reduce crash severity at high-speed merging zones."
               },
               {
                 id: "app2",
                 title: "Toll Plazas",
                 description: "Designed to safeguard toll booths and vehicle lanes.",
-                image: "/assets/YNM Safety Toll plazas (2).png",
+                image: "/assets/ynm-safety-toll-plazas-2.png",
                 details: "Attenuator YNM manufactured systems prevent severe damage by absorbing vehicle collision energy, protecting both toll infrastructure and passengers."
               },
               {
                 id: "app3",
                 title: "Bridge Approaches",
                 description: "Critical protection for bridge ends and approach zones.",
-                image: "/assets/YNM Safety Bridges approches.png",
+                image: "/assets/ynm-safety-bridges-approches.png",
                 details: "The attenuator works in combination with metal beam crash barrier systems to reduce impact force and prevent structural damage at vulnerable bridge points."
               },
               {
                 id: "app4",
                 title: "Work Zones and Construction Areas",
                 description: "Ensures safety in temporary traffic management zones.",
-                image: "/assets/YNM Safety Work zones and Construction areas.png",
+                image: "/assets/ynm-safety-work-zones-and-construction-areas.png",
                 details: "In high-risk construction areas, attenuator systems minimize accident impact and improve worker safety by absorbing vehicle collision energy efficiently."
               },
               {
                 id: "app5",
                 title: "Sharp Curves on Roads",
                 description: "Installed at dangerous curved sections.",
-                image: "/assets/YNM Safety Sharp curves.png",
+                image: "/assets/ynm-safety-sharp-curves.png",
                 details: "Attenuator manufacture systems reduce crash intensity at sharp bends where vehicles may lose control, enhancing overall highway safety."
               },
               {
                 id: "app6",
                 title: "Intersections and Junctions",
                 description: "Provides impact protection at busy road intersections.",
-                image: "/assets/YNM Safety Intersections and Junctions.png",
+                image: "/assets/ynm-safety-intersections-and-junctions.png",
                 details: "YNM Safety attenuator systems protect fixed roadside hazards and reduce injury risks at high-traffic junctions."
               }
             ],
@@ -5398,37 +5398,37 @@ export const productsData = {
                 title: "Highway Exits and Entrances",
                 short: "Attenuator systems protect motorists at highway entry and exit points.",
                 hover: "Installed at gore areas and diverging lanes, YNM Safety attenuator manufacture solutions absorb frontal impacts and reduce crash severity at high-speed merging zones.",
-                image: "/assets/YNM Safety Highways exits and entrances.png"
+                image: "/assets/ynm-safety-highways-exits-and-entrances.png"
               },
               {
                 title: "Toll Plazas",
                 short: "Designed to safeguard toll booths and vehicle lanes.",
                 hover: "Attenuator YNM manufactured systems prevent severe damage by absorbing vehicle collision energy, protecting both toll infrastructure and passengers.",
-                image: "/assets/YNM Safety Toll plazas (2).png"
+                image: "/assets/ynm-safety-toll-plazas-2.png"
               },
               {
                 title: "Bridge Approaches",
                 short: "Critical protection for bridge ends and approach zones.",
                 hover: "The attenuator works in combination with metal beam crash barrier systems to reduce impact force and prevent structural damage at vulnerable bridge points.",
-                image: "/assets/YNM Safety Bridges approches.png"
+                image: "/assets/ynm-safety-bridges-approches.png"
               },
               {
                 title: "Work Zones and Construction Areas",
                 short: "Ensures safety in temporary traffic management zones.",
                 hover: "In high-risk construction areas, attenuator systems minimize accident impact and improve worker safety by absorbing vehicle collision energy efficiently.",
-                image: "/assets/YNM Safety Work zones and Construction areas.png"
+                image: "/assets/ynm-safety-work-zones-and-construction-areas.png"
               },
               {
                 title: "Sharp Curves on Roads",
                 short: "Installed at dangerous curved sections.",
                 hover: "Attenuator manufacture systems reduce crash intensity at sharp bends where vehicles may lose control, enhancing overall highway safety.",
-                image: "/assets/YNM Safety Sharp curves.png"
+                image: "/assets/ynm-safety-sharp-curves.png"
               },
               {
                 title: "Intersections and Junctions",
                 short: "Provides impact protection at busy road intersections.",
                 hover: "YNM Safety attenuator systems protect fixed roadside hazards and reduce injury risks at high-traffic junctions.",
-                image: "/assets/YNM Safety Intersections and Junctions.png"
+                image: "/assets/ynm-safety-intersections-and-junctions.png"
               }
             ],
             
@@ -5448,12 +5448,12 @@ export const productsData = {
             },
             
             gallery: [
-              "/assets/YNM Safety Highways exits and entrances.png",
-              "/assets/YNM Safety Toll plazas (2).png",
-              "/assets/YNM Safety Bridges approches.png",
-              "/assets/YNM Safety Work zones and Construction areas.png",
-              "/assets/YNM Safety Sharp curves.png",
-              "/assets/YNM Safety Intersections and Junctions.png"
+              "/assets/ynm-safety-highways-exits-and-entrances.png",
+              "/assets/ynm-safety-toll-plazas-2.png",
+              "/assets/ynm-safety-bridges-approches.png",
+              "/assets/ynm-safety-work-zones-and-construction-areas.png",
+              "/assets/ynm-safety-sharp-curves.png",
+              "/assets/ynm-safety-intersections-and-junctions.png"
             ],
             
             // Our Projects / Clients
@@ -5626,8 +5626,8 @@ export const productsData = {
             name: "Retro Reflective Gantry Signage",
             shortDesc: "High-visibility retro reflective gantry signage manufacturers for highways, expressways & advanced traffic guidance systems.",
             desc: "Premium retro reflective gantry signage for highways and expressways. Excellent long-distance visibility and weather-resistant overhead signboard solutions.",
-            image: "/assets/Ynm safety signages.png",
-            heroImage: "/assets/Ynm safety signages.png",
+            image: "/assets/ynm-safety-signages.png",
+            heroImage: "/assets/ynm-safety-signages.png",
             specs: ["Long-distance visibility", "Overhead gantry", "Weather resistant", "MoRTH compliant"],
             
             // SEO Meta Information
@@ -5747,49 +5747,49 @@ export const productsData = {
                 id: "app1",
                 title: "Highways & Expressways",
                 description: "Retro reflective gantry signages provide clear overhead guidance on highways and expressways.",
-                image: "/assets/Ynm safety Highways and Expressways.png",
+                image: "/assets/ynm-safety-highways-and-expressways.png",
                 details: "YNM Safety manufactures retro reflective gantry signages for highways and expressways to ensure long-distance visibility at high speeds. As trusted gantry signage manufacturers, we deliver durable overhead signboards that improve lane discipline and road safety."
               },
               {
                 id: "app2",
                 title: "Urban Roads & City Streets",
                 description: "Gantry signages support organized traffic movement on urban roads and city streets.",
-                image: "/assets/Ynm safety Urban Roads and City streets.png",
+                image: "/assets/ynm-safety-urban-roads-and-city-streets.png",
                 details: "YNM Safety manufactures gantry signboards for urban roads and city streets with high retro reflectivity. These overhead gantry signages help reduce driver confusion and improve traffic flow in busy city environments."
               },
               {
                 id: "app3",
                 title: "Toll Plazas & Bridges",
                 description: "Gantry signages improve lane identification at toll plazas and bridge approaches.",
-                image: "/assets/Ynm safety Toll ways and Bridges.png",
+                image: "/assets/ynm-safety-toll-ways-and-bridges.png",
                 details: "YNM Safety manufactures retro reflective gantry signages for toll plazas and bridges to ensure clear lane guidance and visibility. Our overhead gantry signboards are designed for durability and continuous operation in high-traffic zones."
               },
               {
                 id: "app4",
                 title: "Airports & Railway Stations",
                 description: "Gantry signages provide effective traffic guidance in transport hubs.",
-                image: "/assets/ynm safety Airports and Railway Stations.png",
+                image: "/assets/ynm-safety-airports-and-railway-stations.png",
                 details: "YNM Safety manufactures overhead gantry signages for airports and railway stations to manage vehicle movement efficiently. These retro reflective gantry signboards enhance navigation and safety in high-traffic transport areas."
               },
               {
                 id: "app5",
                 title: "Industrial Sites & Ports",
                 description: "Gantry signages ensure controlled traffic movement in industrial areas.",
-                image: "/assets/Ynm safety Industrial sites and port areas.png",
+                image: "/assets/ynm-safety-industrial-sites-and-port-areas.png",
                 details: "YNM Safety manufactures heavy-duty gantry signboards for industrial sites and ports. These retro reflective overhead signages support safe vehicle routing and operational efficiency."
               },
               {
                 id: "app6",
                 title: "Commercial & Advertising",
                 description: "Gantry structures support commercial signage and advertising displays.",
-                image: "/assets/Ynm safety Commercial and Advertising.png",
+                image: "/assets/ynm-safety-commercial-and-advertising.png",
                 details: "YNM Safety manufactures gantry structures suitable for commercial signage and advertising applications. Our overhead gantry signboards offer high visibility and long-term performance."
               },
               {
                 id: "app7",
                 title: "Smart / Intelligent Transportation Systems (ITS)",
                 description: "Gantry signages integrate seamlessly with smart traffic systems.",
-                image: "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png",
+                image: "/assets/ynm-safety-smart-intelligent-transportation-systems-its.png",
                 details: "YNM Safety manufactures gantry signages compatible with Intelligent Transportation Systems (ITS). These retro reflective gantry signboards support real-time traffic information and modern road management solutions."
               }
             ],
@@ -5799,43 +5799,43 @@ export const productsData = {
                 title: "Highways & Expressways",
                 short: "Retro reflective gantry signages provide clear overhead guidance on highways and expressways.",
                 hover: "YNM Safety manufactures retro reflective gantry signages for highways and expressways to ensure long-distance visibility at high speeds. As trusted gantry signage manufacturers, we deliver durable overhead signboards that improve lane discipline and road safety.",
-                image: "/assets/Ynm safety Highways and Expressways.png"
+                image: "/assets/ynm-safety-highways-and-expressways.png"
               },
               {
                 title: "Urban Roads & City Streets",
                 short: "Gantry signages support organized traffic movement on urban roads and city streets.",
                 hover: "YNM Safety manufactures gantry signboards for urban roads and city streets with high retro reflectivity. These overhead gantry signages help reduce driver confusion and improve traffic flow in busy city environments.",
-                image: "/assets/Ynm safety Urban Roads and City streets.png"
+                image: "/assets/ynm-safety-urban-roads-and-city-streets.png"
               },
               {
                 title: "Toll Plazas & Bridges",
                 short: "Gantry signages improve lane identification at toll plazas and bridge approaches.",
                 hover: "YNM Safety manufactures retro reflective gantry signages for toll plazas and bridges to ensure clear lane guidance and visibility. Our overhead gantry signboards are designed for durability and continuous operation in high-traffic zones.",
-                image: "/assets/Ynm safety Toll ways and Bridges.png"
+                image: "/assets/ynm-safety-toll-ways-and-bridges.png"
               },
               {
                 title: "Airports & Railway Stations",
                 short: "Gantry signages provide effective traffic guidance in transport hubs.",
                 hover: "YNM Safety manufactures overhead gantry signages for airports and railway stations to manage vehicle movement efficiently. These retro reflective gantry signboards enhance navigation and safety in high-traffic transport areas.",
-                image: "/assets/ynm safety Airports and Railway Stations.png"
+                image: "/assets/ynm-safety-airports-and-railway-stations.png"
               },
               {
                 title: "Industrial Sites & Ports",
                 short: "Gantry signages ensure controlled traffic movement in industrial areas.",
                 hover: "YNM Safety manufactures heavy-duty gantry signboards for industrial sites and ports. These retro reflective overhead signages support safe vehicle routing and operational efficiency.",
-                image: "/assets/Ynm safety Industrial sites and port areas.png"
+                image: "/assets/ynm-safety-industrial-sites-and-port-areas.png"
               },
               {
                 title: "Commercial & Advertising",
                 short: "Gantry structures support commercial signage and advertising displays.",
                 hover: "YNM Safety manufactures gantry structures suitable for commercial signage and advertising applications. Our overhead gantry signboards offer high visibility and long-term performance.",
-                image: "/assets/Ynm safety Commercial and Advertising.png"
+                image: "/assets/ynm-safety-commercial-and-advertising.png"
               },
               {
                 title: "Smart / Intelligent Transportation Systems (ITS)",
                 short: "Gantry signages integrate seamlessly with smart traffic systems.",
                 hover: "YNM Safety manufactures gantry signages compatible with Intelligent Transportation Systems (ITS). These retro reflective gantry signboards support real-time traffic information and modern road management solutions.",
-                image: "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
+                image: "/assets/ynm-safety-smart-intelligent-transportation-systems-its.png"
               }
             ],
             
@@ -6027,14 +6027,14 @@ export const productsData = {
             
             // Gallery Images
             gallery: [
-              "/assets/Ynm safety signages.png",
-              "/assets/Ynm safety Highways and Expressways.png",
-              "/assets/Ynm safety Urban Roads and City streets.png",
-              "/assets/Ynm safety Toll ways and Bridges.png",
-              "/assets/ynm safety Airports and Railway Stations.png",
-              "/assets/Ynm safety Industrial sites and port areas.png",
-              "/assets/Ynm safety Commercial and Advertising.png",
-              "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
+              "/assets/ynm-safety-signages.png",
+              "/assets/ynm-safety-highways-and-expressways.png",
+              "/assets/ynm-safety-urban-roads-and-city-streets.png",
+              "/assets/ynm-safety-toll-ways-and-bridges.png",
+              "/assets/ynm-safety-airports-and-railway-stations.png",
+              "/assets/ynm-safety-industrial-sites-and-port-areas.png",
+              "/assets/ynm-safety-commercial-and-advertising.png",
+              "/assets/ynm-safety-smart-intelligent-transportation-systems-its.png"
             ]
           },
           {
@@ -6043,8 +6043,8 @@ export const productsData = {
             name: "Cantilever Signage",
             shortDesc: "High-visibility cantilever signages manufactures for highways, expressways, and global road safety infrastructure.",
             desc: "Robust and high-visibility overhead cantilever signage solutions for highways, expressways, and major road corridors. Single-pole mounted structures for advance traffic information.",
-            image: "/assets/ynm safety cantilever.png",
-            heroImage: "/assets/ynm safety cantilever.png",
+            image: "/assets/ynm-safety-cantilever.png",
+            heroImage: "/assets/ynm-safety-cantilever.png",
             specs: ["Single-Pole Cantilever", "High visibility", "15-20 Years Design Life", "IRC 67 compliant"],
             
             // SEO Meta Information
@@ -6164,42 +6164,42 @@ export const productsData = {
                 id: "app1",
                 title: "Highways & Expressways",
                 description: "Cantilever signages provide clear overhead traffic guidance on highways and expressways.",
-                image: "/assets/YNM Safety Cantilever Highways and Expressways.png",
+                image: "/assets/ynm-safety-cantilever-highways-and-expressways.png",
                 details: "Cantilever signages ensure maximum visibility across multiple lanes without obstructing traffic flow. They are designed to withstand high wind loads and high-speed vehicle conditions. This improves driver response time and overall road safety."
               },
               {
                 id: "app2",
                 title: "Urban Roads & Streets",
                 description: "Cantilever signages are ideal for urban roads and busy city streets.",
-                image: "/assets/YNM Safety Cantilever Urban Roads and Streets.png",
+                image: "/assets/ynm-safety-cantilever-urban-roads-and-streets.png",
                 details: "Elevated cantilever signages remain clearly visible even in congested traffic conditions. They deliver advance directional and lane information to drivers. This helps reduce confusion and improves traffic movement in urban areas."
               },
               {
                 id: "app3",
                 title: "Toll Plazas",
                 description: "Cantilever signages are widely used at toll plazas for clear lane and regulatory guidance.",
-                image: "/assets/YNM Safety Cantilever Toll Plazas.png",
+                image: "/assets/ynm-safety-cantilever-toll-plazas.png",
                 details: "At toll plazas, cantilever signages display lane usage, toll instructions, and regulatory messages. Their strong structural design ensures reliability in high-stress zones. This enhances safety and operational efficiency."
               },
               {
                 id: "app4",
                 title: "Industrial Roads",
                 description: "Cantilever signages support safe traffic movement on industrial roads.",
-                image: "/assets/YNM Safety Cantilever Industrial Roads.jpg",
+                image: "/assets/ynm-safety-cantilever-industrial-roads.jpg",
                 details: "Cantilever signages provide clear directional and warning information for heavy vehicles. Their robust construction withstands harsh industrial environments. This improves navigation and reduces accident risks within industrial zones."
               },
               {
                 id: "app5",
                 title: "Port & Logistics",
                 description: "Cantilever signages are suitable for ports and logistics hubs with heavy vehicle traffic.",
-                image: "/assets/YNM Safety Cantilever Port Logistics.jpg",
+                image: "/assets/ynm-safety-cantilever-port-logistics.jpg",
                 details: "Overhead cantilever signages offer high visibility in large cargo and logistics areas. They guide vehicles through complex routes and loading zones. This ensures smooth traffic flow and improved safety operations."
               },
               {
                 id: "app6",
                 title: "Smart / Intelligent Transportation Systems (ITS)",
                 description: "Cantilever signages play a key role in smart and intelligent transportation systems.",
-                image: "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png",
+                image: "/assets/ynm-safety-smart-intelligent-transportation-systems-its.png",
                 details: "Cantilever signages integrate effectively with ITS infrastructure for traffic management. Their elevated positioning supports clear data visibility and driver communication. This contributes to efficient and modern road management systems."
               }
             ],
@@ -6209,37 +6209,37 @@ export const productsData = {
                 title: "Highways & Expressways",
                 short: "Cantilever signages provide clear overhead traffic guidance on highways and expressways.",
                 hover: "Cantilever signages ensure maximum visibility across multiple lanes without obstructing traffic flow. They are designed to withstand high wind loads and high-speed vehicle conditions. This improves driver response time and overall road safety.",
-                image: "/assets/YNM Safety Cantilever Highways and Expressways.png"
+                image: "/assets/ynm-safety-cantilever-highways-and-expressways.png"
               },
               {
                 title: "Urban Roads & Streets",
                 short: "Cantilever signages are ideal for urban roads and busy city streets.",
                 hover: "Elevated cantilever signages remain clearly visible even in congested traffic conditions. They deliver advance directional and lane information to drivers. This helps reduce confusion and improves traffic movement in urban areas.",
-                image: "/assets/YNM Safety Cantilever Urban Roads and Streets.png"
+                image: "/assets/ynm-safety-cantilever-urban-roads-and-streets.png"
               },
               {
                 title: "Toll Plazas",
                 short: "Cantilever signages are widely used at toll plazas for clear lane and regulatory guidance.",
                 hover: "At toll plazas, cantilever signages display lane usage, toll instructions, and regulatory messages. Their strong structural design ensures reliability in high-stress zones. This enhances safety and operational efficiency.",
-                image: "/assets/YNM Safety Cantilever Toll Plazas.png"
+                image: "/assets/ynm-safety-cantilever-toll-plazas.png"
               },
               {
                 title: "Industrial Roads",
                 short: "Cantilever signages support safe traffic movement on industrial roads.",
                 hover: "Cantilever signages provide clear directional and warning information for heavy vehicles. Their robust construction withstands harsh industrial environments. This improves navigation and reduces accident risks within industrial zones.",
-                image: "/assets/YNM Safety Cantilever Industrial Roads.jpg"
+                image: "/assets/ynm-safety-cantilever-industrial-roads.jpg"
               },
               {
                 title: "Port & Logistics",
                 short: "Cantilever signages are suitable for ports and logistics hubs with heavy vehicle traffic.",
                 hover: "Overhead cantilever signages offer high visibility in large cargo and logistics areas. They guide vehicles through complex routes and loading zones. This ensures smooth traffic flow and improved safety operations.",
-                image: "/assets/YNM Safety Cantilever Port Logistics.jpg"
+                image: "/assets/ynm-safety-cantilever-port-logistics.jpg"
               },
               {
                 title: "Smart / Intelligent Transportation Systems (ITS)",
                 short: "Cantilever signages play a key role in smart and intelligent transportation systems.",
                 hover: "Cantilever signages integrate effectively with ITS infrastructure for traffic management. Their elevated positioning supports clear data visibility and driver communication. This contributes to efficient and modern road management systems.",
-                image: "/assets/Ynm safety Smart  Intelligent Transportation Systems (ITS).png"
+                image: "/assets/ynm-safety-smart-intelligent-transportation-systems-its.png"
               }
             ],
             
@@ -6433,12 +6433,12 @@ export const productsData = {
             
             // Gallery Images
             gallery: [
-              "/assets/ynm safety cantilever.png",
-              "/assets/YNM Safety Cantilever Highways and Expressways.png",
-              "/assets/YNM Safety Cantilever Urban Roads and Streets.png",
-              "/assets/YNM Safety Cantilever Toll Plazas.png",
-              "/assets/YNM Safety Cantilever Industrial Roads.jpg",
-              "/assets/YNM Safety Cantilever Port Logistics.jpg"
+              "/assets/ynm-safety-cantilever.png",
+              "/assets/ynm-safety-cantilever-highways-and-expressways.png",
+              "/assets/ynm-safety-cantilever-urban-roads-and-streets.png",
+              "/assets/ynm-safety-cantilever-toll-plazas.png",
+              "/assets/ynm-safety-cantilever-industrial-roads.jpg",
+              "/assets/ynm-safety-cantilever-port-logistics.jpg"
             ]
           }
         ]
@@ -6489,7 +6489,7 @@ export const productsData = {
             id: "fab6",
             name: "Cantilever Structures",
             desc: "Heavy-duty cantilever structures for highway signages, gantries, and overhead systems.",
-            image: "/assets/ynm safety cantilever.png",
+            image: "/assets/ynm-safety-cantilever.png",
             specs: ["High load capacity", "Corrosion resistant", "Custom spans", "NHAI compliant"]
           },
           {
@@ -6503,7 +6503,7 @@ export const productsData = {
             id: "fab8",
             name: "Gantry Structures",
             desc: "Heavy-duty gantry structures for highway overhead signages and traffic management systems.",
-            image: "/assets/Ynm safety signages.png",
+            image: "/assets/ynm-safety-signages.png",
             specs: ["High load capacity", "Corrosion resistant", "Wide span designs", "MoRTH compliant"]
           },
           {

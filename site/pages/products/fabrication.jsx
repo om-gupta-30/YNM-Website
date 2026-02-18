@@ -84,7 +84,7 @@ const fabricationProducts = [
   { 
     id: "fab8", 
     name: "Gantry Structures", 
-    images: ["/assets/Ynm safety signages.png", "/assets/Ynm safety Highways and Expressways.png", "/assets/Ynm safety Urban Roads and City streets.png"], 
+    images: ["/assets/ynm-safety-signages.png", "/assets/ynm-safety-highways-and-expressways.png", "/assets/ynm-safety-urban-roads-and-city-streets.png"], 
     category: "Infrastructure",
     description: "Heavy-duty gantry structures for highway overhead signages and traffic management systems.",
     specs: ["High load capacity", "Corrosion resistant", "Wide span designs", "MoRTH compliant"]
@@ -92,7 +92,7 @@ const fabricationProducts = [
   { 
     id: "fab6", 
     name: "Cantilever Structures", 
-    images: ["/assets/ynm safety cantilever.png", "/assets/YNM Safety Cantilever Highways and Expressways.png", "/assets/YNM Safety Cantilever Urban Roads and Streets.png"], 
+    images: ["/assets/ynm-safety-cantilever.png", "/assets/ynm-safety-cantilever-highways-and-expressways.png", "/assets/ynm-safety-cantilever-urban-roads-and-streets.png"], 
     category: "Infrastructure",
     description: "Heavy-duty cantilever structures for highway signages, gantries, and overhead systems.",
     specs: ["High load capacity", "Corrosion resistant", "Custom spans", "NHAI compliant"]

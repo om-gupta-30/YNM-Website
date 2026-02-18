@@ -17,7 +17,7 @@ const employeesData = [
     role: "Operations Manager",
     department: "OPERATIONS",
     text: "My experience at YNM Safety has been very positive. The organization follows structured processes and promotes teamwork across departments. This makes operations efficient and allows us to consistently meet quality and delivery commitments.",
-    photo: "/assets/employeephotos/ravi%20image.jpg",
+    photo: "/assets/employeephotos/ravi-image.jpg",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const employeesData = [
     role: "Product Head",
     department: "PRODUCTION",
     text: "Working as Product Head at YNM Safety has been a fulfilling journey. The company prioritizes quality, innovation, and continuous improvement, which allows us to deliver reliable and durable products with confidence.",
-    photo: "/assets/employeephotos/pradeep%20image.jpg",
+    photo: "/assets/employeephotos/pradeep-image.jpg",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const employeesData = [
     role: "Business Development Manager",
     department: "SALES",
     text: "YNM Safety provides a supportive and growth-oriented work environment. I have had the opportunity to build strong client relationships and contribute to business expansion. The leadership encourages innovation and professional development.",
-    photo: "/assets/employeephotos/shweta%20image.jpg",
+    photo: "/assets/employeephotos/shweta-image.jpg",
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const employeesData = [
     role: "Digital Marketing Specialist",
     department: "MARKETING",
     text: "YNM Safety encourages creativity and data-driven marketing strategies. I enjoy working in an environment where ideas are valued and digital innovation supports the company's global presence.",
-    photo: "/assets/employeephotos/shiva%20image.png",
+    photo: "/assets/employeephotos/shiva-image.png",
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ const employeesData = [
     role: "Purchase Manager",
     department: "PURCHASE",
     text: "At YNM Safety, I have experienced a professional and transparent work culture. The procurement team is trusted and supported, enabling us to source quality materials and contribute directly to the company's manufacturing excellence.",
-    photo: "/assets/employeephotos/harikanth%20image.jpg",
+    photo: "/assets/employeephotos/harikanth-image.jpg",
   },
   {
     id: 8,
@@ -65,7 +65,7 @@ const employeesData = [
     role: "Chief Financial Officer (CFO)",
     department: "ACCOUNTS",
     text: "I value the professionalism and integrity practiced at YNM Safety. The company follows strong financial discipline and ethical standards, making it a stable and trustworthy organization to work with.",
-    photo: "/assets/employeephotos/ramakrishna%20image.jpeg",
+    photo: "/assets/employeephotos/ramakrishna-image.jpeg",
   },
   {
     id: 9,
@@ -73,7 +73,7 @@ const employeesData = [
     role: "Sr. Human Resource Generalist",
     department: "HUMAN RESOURCES",
     text: "Working at YNM Safety has been a great experience due to its people-focused culture. The organization supports employee well-being, career growth, and collaboration, which creates a healthy and productive workplace.",
-    photo: "/assets/employeephotos/divya%20image.jpg",
+    photo: "/assets/employeephotos/divya-image.jpg",
   },
 ];
 

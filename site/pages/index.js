@@ -166,24 +166,24 @@ const fallbackServicesData = [
 ];
 
 const fallbackBrandsData = [
-  { id: "1", name: "IndianOil", logo: "/assets/brand-logos/indiaoil%20png.jpg" },
-  { id: "2", name: "Ramoji Film City", logo: "/assets/brand-logos/Ramoji%20Film%20City%20logo.png" },
-  { id: "3", name: "Prestige Group", logo: "/assets/brand-logos/prestige%20logo.webp" },
-  { id: "4", name: "Tech Mahindra", logo: "/assets/brand-logos/Tech%20Mahindra%20logo.jpg" },
+  { id: "1", name: "IndianOil", logo: "/assets/brand-logos/indiaoil-png.jpg" },
+  { id: "2", name: "Ramoji Film City", logo: "/assets/brand-logos/ramoji-film-city-logo.png" },
+  { id: "3", name: "Prestige Group", logo: "/assets/brand-logos/prestige-logo.webp" },
+  { id: "4", name: "Tech Mahindra", logo: "/assets/brand-logos/tech-mahindra-logo.jpg" },
   { id: "5", name: "GMR", logo: "/assets/brand-logos/GMR-Group-Logo-Pngsource-RK4JM0FN.png" },
-  { id: "6", name: "Tom Tailor", logo: "/assets/brand-logos/tom-tailor-sportswear%20logo.png" },
-  { id: "7", name: "NCC Limited", logo: "/assets/brand-logos/ncc%20logo.png" },
-  { id: "8", name: "NSL Group", logo: "/assets/brand-logos/NSL%20logo.png" },
-  { id: "9", name: "HCL", logo: "/assets/brand-logos/hcl%20logo.png" },
+  { id: "6", name: "Tom Tailor", logo: "/assets/brand-logos/tom-tailor-sportswear-logo.png" },
+  { id: "7", name: "NCC Limited", logo: "/assets/brand-logos/ncc-logo.png" },
+  { id: "8", name: "NSL Group", logo: "/assets/brand-logos/nsl-logo.png" },
+  { id: "9", name: "HCL", logo: "/assets/brand-logos/hcl-logo.png" },
   { id: "10", name: "Alekhya Homes", logo: "/assets/brand-logos/alekhya-homes-2023-logo.png" },
   { id: "11", name: "GVK EMRI", logo: "/assets/brand-logos/gvk-logo.png" },
-  { id: "12", name: "NTPC", logo: "/assets/brand-logos/ntpc%20logo.png" },
-  { id: "13", name: "Power Grid", logo: "/assets/brand-logos/POWERGRID%20logo.png" },
+  { id: "12", name: "NTPC", logo: "/assets/brand-logos/ntpc-logo.png" },
+  { id: "13", name: "Power Grid", logo: "/assets/brand-logos/powergrid-logo.png" },
   { id: "14", name: "Hyundai Glovis", logo: "/assets/brand-logos/Hyundai_Glovis_logo.png" },
   { id: "15", name: "NPCI International", logo: "/assets/brand-logos/NPCI_logo.png" },
   { id: "16", name: "BSCPL Infrastructure", logo: "/assets/brand-logos/bscpl-logo.png" },
   { id: "17", name: "AT&T", logo: "/assets/brand-logos/att-logo-transparent.png" },
-  { id: "18", name: "Aparna Constructions", logo: "/assets/brand-logos/aparna%20constructions.png" },
+  { id: "18", name: "Aparna Constructions", logo: "/assets/brand-logos/aparna-constructions.png" },
 ];
 
 const fallbackTestimonialsData = [
@@ -444,7 +444,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
               "@type": "Product",
               "name": "Hot Thermoplastic Road Marking Paint by YNM Safety",
               "description": "YNM Safety manufactures premium hot thermoplastic road marking paint for highways, expressways, and city roads. Our hot thermoplastic paint offers high durability, retro-reflective glass beads, weather resistance, and excellent road safety performance. MoRTH and IRC compliant thermoplastic paint from leading manufacturers in India.",
-              "image": "https://www.ynmsafety.com/assets/hot thermoplastci ynm safety.png",
+              "image": "https://www.ynmsafety.com/assets/hot-thermoplastci-ynm-safety.png",
               "brand": {
                 "@type": "Brand",
                 "name": "YNM Safety"

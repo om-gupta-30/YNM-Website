@@ -13,7 +13,7 @@ function getProductCount(categoryId) {
 const productConfig = [
   { 
     id: "paints", 
-    image: "/assets/ynm safety thermoplastic paints.png", 
+    image: "/assets/ynm-safety-thermoplastic-paints.png", 
     link: "/products#paints", 
     title: "Paints", 
     description: "Hot thermoplastic road marking paints for highways, expressways & urban road safety applications.",
@@ -21,7 +21,7 @@ const productConfig = [
   },
   { 
     id: "bitumen", 
-    image: "/assets/Ynm safety bitumen manufactures.png", 
+    image: "/assets/ynm-safety-bitumen-manufactures.png", 
     link: "/products#bitumen", 
     title: "Bitumen", 
     description: "High-performance VG 40 paving grade bitumen for highways, expressways and heavy traffic roads.",
@@ -29,7 +29,7 @@ const productConfig = [
   },
   { 
     id: "crash-barriers", 
-    image: "/assets/metal beam crash barrier ynm safety.png", 
+    image: "/assets/metal-beam-crash-barrier-ynm-safety.png", 
     link: "/products#crash-barriers", 
     title: "Metal Beam Crash Barriers", 
     description: "High-strength W-beam crash barriers engineered for highways and expressways safety.",
@@ -37,7 +37,7 @@ const productConfig = [
   },
   { 
     id: "signages", 
-    image: "/assets/Ynm safety signages.png", 
+    image: "/assets/ynm-safety-signages.png", 
     link: "/products#signages", 
     title: "Signages", 
     description: "Retro-reflective gantry signages and cantilever signages for high visibility traffic guidance.",
