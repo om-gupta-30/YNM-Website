@@ -741,7 +741,7 @@ export const productsData = {
                 },
                 {
                   name: "Middle East & Africa",
-                  countries: ["Saudi Arabia", "United Arab Emirates (UAE)", "South Africa", "Rest of Middle East & Africa"]
+                  countries: ["Saudi Arabia", "United Arab Emirates", "South Africa", "Rest of Middle East & Africa"]
                 }
               ]
             },
@@ -1092,12 +1092,6 @@ export const productsData = {
             
             // Our Projects / Clients
             projects: [],
-            
-            meta: {
-              title: "Waterborne Airfield Marking Paints Manufacturers | Airport Marking Paints | YNM Safety",
-              description: "YNM Safety manufactures high-quality waterborne airfield marking paints for runways, taxiways, aprons, and helipads, offering durable, fast-drying, and high-visibility airport marking solutions.",
-              slug: "/waterborne-airfield-marking-paints-manufacturers"
-            },
             
             // Market Growth Information
             marketGrowth: {
@@ -2284,7 +2278,7 @@ export const productsData = {
                 },
                 {
                   name: "Middle East & Africa",
-                  countries: ["United Arab Emirates (UAE)", "Saudi Arabia", "South Africa", "Egypt", "Nigeria"]
+                  countries: ["United Arab Emirates", "Saudi Arabia", "South Africa", "Egypt", "Nigeria"]
                 }
               ]
             },
@@ -2659,7 +2653,7 @@ export const productsData = {
                 },
                 {
                   name: "Middle East & Africa",
-                  countries: ["United Arab Emirates (UAE)", "Saudi Arabia", "South Africa"]
+                  countries: ["United Arab Emirates", "Saudi Arabia", "South Africa"]
                 }
               ]
             },
@@ -3088,7 +3082,7 @@ export const productsData = {
                 },
                 {
                   name: "Middle East & Africa",
-                  countries: ["United Arab Emirates (UAE)", "Saudi Arabia", "South Africa", "Nigeria", "Egypt"]
+                  countries: ["United Arab Emirates", "Saudi Arabia", "South Africa", "Nigeria", "Egypt"]
                 },
                 {
                   name: "South America",
@@ -6439,6 +6433,2742 @@ export const productsData = {
               "/assets/ynm-safety-cantilever-toll-plazas.png",
               "/assets/ynm-safety-cantilever-industrial-roads.jpg",
               "/assets/ynm-safety-cantilever-port-logistics.jpg"
+            ]
+          },
+          {
+            id: "sg7",
+            slug: "mandatory-sign-board-manufacturers",
+            name: "Mandatory Sign Board (Octagonal)",
+            shortDesc: "High-visibility octagonal mandatory sign boards manufactured by YNM Safety, a trusted Sign Boards Manufacturer delivering durable and reflective safety signage solutions worldwide.",
+            desc: "Premium octagonal mandatory sign boards for road, industrial, and infrastructure projects. High reflective visibility and weather-resistant for optimal safety compliance.",
+            image: "/assets/ynm-safety-osmsb-road-traffic-management.jpg",
+            heroImage: "/assets/ynm-safety-osmsb-road-traffic-management.jpg",
+            specs: ["Octagonal Shape", "High Reflective", "7-10 Years Durability", "MORTH & IRC 67 Compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Mandatory Sign Board Manufacturers | YNM Safety",
+              description: "YNM Safety is a leading Mandatory Sign Board Manufacturers YNM Safety brand delivering high-quality octagonal traffic and safety sign boards for road, industrial, and infrastructure projects worldwide.",
+              keywords: "mandatory sign board manufacturers ynm safety, sign boards manufacturer, octagonal sign board manufacturers, road safety sign board supplier, reflective traffic sign boards, ynm safety, ynm manufactures, traffic sign board manufacturer India, safety signage supplier",
+              slug: "/mandatory-sign-board-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading Mandatory Sign Board Manufacturers YNM Safety brand specializing in octagonal traffic and regulatory sign boards. As a professional Sign Boards Manufacturer, YNM Safety delivers high-visibility, weather-resistant, and long-lasting mandatory signage for highways, industrial zones, construction projects, and public infrastructure.\n\nOur octagonal mandatory sign boards are designed to ensure maximum visibility during day and night conditions. Being trusted YNM manufactures, we provide customized sizes, reflective grades, and project-based production solutions to meet government and infrastructure requirements.",
+            detailedDescription: "YNM Safety is one of the leading Mandatory Sign Board Manufacturers YNM Safety brand specializing in octagonal traffic and regulatory sign boards. As a professional Sign Boards Manufacturer, YNM Safety delivers high-visibility, weather-resistant, and long-lasting mandatory signage for highways, industrial zones, construction projects, and public infrastructure.\n\nOur octagonal mandatory sign boards are designed to ensure maximum visibility during day and night conditions. Being trusted YNM manufactures, we provide customized sizes, reflective grades, and project-based production solutions to meet government and infrastructure requirements.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Mandatory Sign Board (Octagonal)" },
+              { label: "Shape", value: "Octagonal" },
+              { label: "Base Material", value: "ACP / Aluminium / GI Sheet" },
+              { label: "Reflective Grade", value: "Engineer Grade / HIP / DG" },
+              { label: "Printing Type", value: "UV Digital / Screen Printing" },
+              { label: "Mounting", value: "Pole Mounted / Wall Mounted" },
+              { label: "Durability", value: "7-10 Years Outdoor" },
+              { label: "Compliance", value: "MORTH & IRC 67" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable (As Per Size & Thickness)",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard Protective Packaging",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "MORTH, IRC 67",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Requirement",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Mandatory Sign Board (Octagonal)",
+                "Shape: Octagonal",
+                "Base Material: ACP / Aluminium / GI Sheet",
+                "Reflective Grade: Engineer Grade / HIP / DG",
+                "Printing Type: UV Digital / Screen Printing",
+                "Mounting: Pole Mounted / Wall Mounted",
+                "Durability: 7-10 Years Outdoor",
+                "Compliance: MORTH & IRC 67",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "High reflective visibility",
+                "Strong outdoor durability",
+                "Weather & UV resistant",
+                "Corrosion-resistant material",
+                "Custom size availability",
+                "Long service life"
+              ],
+              advantages: [
+                "Improves traffic discipline and road safety",
+                "Enhances industrial safety compliance",
+                "Cost-effective long-term signage solution",
+                "Suitable for highways and smart city projects",
+                "Trusted Mandatory Sign Board Manufacturers YNM Safety"
+              ]
+            },
+            
+            features: [
+              "High reflective visibility",
+              "Strong outdoor durability",
+              "Weather & UV resistant",
+              "Corrosion-resistant material",
+              "Custom size availability",
+              "Long service life"
+            ],
+            
+            advantages: [
+              "Improves traffic discipline and road safety",
+              "Enhances industrial safety compliance",
+              "Cost-effective long-term signage solution",
+              "Suitable for highways and smart city projects",
+              "Trusted Mandatory Sign Board Manufacturers YNM Safety"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Road & Traffic Management",
+                description: "Octagonal mandatory sign boards ensure clear traffic control and regulatory compliance on highways and urban roads.",
+                image: "/assets/ynm-safety-osmsb-road-traffic-management.jpg",
+                details: "Manufactured by leading Sign Boards Manufacturer YNM Safety, these reflective boards provide excellent visibility and durability, helping reduce accidents and improve road discipline."
+              },
+              {
+                id: "app2",
+                title: "Industrial Facilities",
+                description: "Mandatory sign boards enforce safety instructions within industrial zones.",
+                image: "/assets/ynm-safety-osmsb-industrial-facilities.jpg",
+                details: "YNM Safety manufactures high-visibility sign boards that clearly communicate mandatory PPE and operational safety rules in factories and warehouses."
+              },
+              {
+                id: "app3",
+                title: "Construction Sites",
+                description: "Mandatory sign boards improve safety awareness at construction locations.",
+                image: "/assets/ynm-safety-osmsb-construction-sites.jpg",
+                details: "Designed for outdoor durability, these octagonal sign boards withstand harsh weather while ensuring clear instruction visibility at project sites."
+              },
+              {
+                id: "app4",
+                title: "Commercial & Public Areas",
+                description: "Octagonal sign boards provide guidance and safety instructions in public spaces.",
+                image: "/assets/ynm-safety-osmsb-commercial-public-areas.jpg",
+                details: "YNM Safety sign boards manufacturer solutions enhance compliance in malls, airports, transport hubs, and commercial buildings."
+              },
+              {
+                id: "app5",
+                title: "Educational Institutions",
+                description: "Mandatory sign boards improve safety and traffic regulation within campuses.",
+                image: "/assets/ynm-safety-osmsb-educational-institutions.jpg",
+                details: "High-visibility signage ensures safe pedestrian movement and clear vehicle instructions inside school and college premises."
+              },
+              {
+                id: "app6",
+                title: "Residential & Gated Communities",
+                description: "Mandatory sign boards regulate traffic inside residential complexes.",
+                image: "/assets/ynm-safety-osmsb-residential-gated-communities.jpg",
+                details: "Reflective octagonal boards ensure safe driving, speed control, and compliance with community safety rules."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Road & Traffic Management",
+                short: "Octagonal mandatory sign boards ensure clear traffic control and regulatory compliance on highways and urban roads.",
+                hover: "Manufactured by leading Sign Boards Manufacturer YNM Safety, these reflective boards provide excellent visibility and durability, helping reduce accidents and improve road discipline.",
+                image: "/assets/ynm-safety-osmsb-road-traffic-management.jpg"
+              },
+              {
+                title: "Industrial Facilities",
+                short: "Mandatory sign boards enforce safety instructions within industrial zones.",
+                hover: "YNM Safety manufactures high-visibility sign boards that clearly communicate mandatory PPE and operational safety rules in factories and warehouses.",
+                image: "/assets/ynm-safety-osmsb-industrial-facilities.jpg"
+              },
+              {
+                title: "Construction Sites",
+                short: "Mandatory sign boards improve safety awareness at construction locations.",
+                hover: "Designed for outdoor durability, these octagonal sign boards withstand harsh weather while ensuring clear instruction visibility at project sites.",
+                image: "/assets/ynm-safety-osmsb-construction-sites.jpg"
+              },
+              {
+                title: "Commercial & Public Areas",
+                short: "Octagonal sign boards provide guidance and safety instructions in public spaces.",
+                hover: "YNM Safety sign boards manufacturer solutions enhance compliance in malls, airports, transport hubs, and commercial buildings.",
+                image: "/assets/ynm-safety-osmsb-commercial-public-areas.jpg"
+              },
+              {
+                title: "Educational Institutions",
+                short: "Mandatory sign boards improve safety and traffic regulation within campuses.",
+                hover: "High-visibility signage ensures safe pedestrian movement and clear vehicle instructions inside school and college premises.",
+                image: "/assets/ynm-safety-osmsb-educational-institutions.jpg"
+              },
+              {
+                title: "Residential & Gated Communities",
+                short: "Mandatory sign boards regulate traffic inside residential complexes.",
+                hover: "Reflective octagonal boards ensure safe driving, speed control, and compliance with community safety rules.",
+                image: "/assets/ynm-safety-osmsb-residential-gated-communities.jpg"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder - can be updated later)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Mandatory Sign Board (Octagonal) Market Growth | YNM Safety",
+              description: "The global mandatory sign board (octagonal) market continues to grow steadily as infrastructure development and safety awareness increase worldwide. Stronger workplace and road safety regulations are driving demand for high-quality sign boards.\n\nThe market is projected to grow at a CAGR of approximately 4.5–5.8% over the coming years, supported by expanding road networks, smart city development, and industrial safety compliance.",
+              cagr: "4.5-5.8%",
+              growthFactors: [
+                "Regulatory Requirements",
+                "Road Safety & Traffic Control Needs",
+                "Infrastructure Expansion",
+                "Industrial Safety Compliance",
+                "Advances in Materials & Visibility"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.8B",
+                projectedMarketSize: "$2.6B",
+                currentYear: "2024",
+                projectedYear: "2030",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "30,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 1.4 },
+                { year: "2022", value: 1.5 },
+                { year: "2023", value: 1.65 },
+                { year: "2024", value: 1.8 },
+                { year: "2025", value: 2.0 },
+                { year: "2026", value: 2.2 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "France", "United Kingdom", "Italy", "Spain"]
+                },
+                {
+                  name: "Asia-Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Indonesia"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates", "Saudi Arabia", "South Africa", "Nigeria", "Egypt"]
+                },
+                {
+                  name: "South America",
+                  countries: ["Brazil", "Argentina", "Chile", "Ecuador", "Venezuela"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures octagonal mandatory sign boards through a controlled, quality-driven process to ensure high visibility, durability, and compliance with road safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Selection",
+                description: "High-quality aluminium sheets (2mm–3mm thickness) are selected for durability and corrosion resistance. For long life, rust-proof materials are preferred as per IRC / MoRTH standards."
+              },
+              {
+                step: "02",
+                title: "Cutting into Octagonal Shape",
+                description: "The aluminium sheet is cut into an accurate octagonal shape using CNC cutting or hydraulic shearing machines to ensure precise dimensions."
+              },
+              {
+                step: "03",
+                title: "Edge Bending / Flanging",
+                description: "Edges are bent (usually 25mm border) using a bending machine to improve strength and avoid sharp edges."
+              },
+              {
+                step: "04",
+                title: "Surface Cleaning & Pre-Treatment",
+                description: "The board surface is cleaned with chemicals to remove oil, dust, and impurities. This ensures better adhesion of reflective sheeting."
+              },
+              {
+                step: "05",
+                title: "Application of Retro-Reflective Sheeting",
+                description: "High-intensity or engineering grade retro-reflective sheeting is pasted on the surface using roller lamination machines for strong bonding and night visibility."
+              },
+              {
+                step: "06",
+                title: "Printing / Symbol Pasting",
+                description: "Mandatory symbols (as per traffic regulations) are printed using UV printing or screen-printing method. Standard colours like red, white, and black are used."
+              },
+              {
+                step: "07",
+                title: "Curing & Drying",
+                description: "The board is kept for proper curing to ensure ink bonding and long-lasting finish."
+              },
+              {
+                step: "08",
+                title: "Back Support & Mounting Clamp Fixing",
+                description: "GI clamps or MS brackets are fixed at the backside for pole mounting."
+              },
+              {
+                step: "09",
+                title: "Quality Inspection",
+                description: "Each sign board is inspected for reflectivity, size accuracy, colour standards, and adhesion strength."
+              },
+              {
+                step: "10",
+                title: "Packing & Dispatch",
+                description: "Boards are packed carefully with protective covering to avoid scratches during transportation."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              hasToggle: false,
+              basePriceINR: 350,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹350 per sq. ft",
+              bulkDiscounts: [
+                { minQuantity: 10, discount: 3 },
+                { minQuantity: 25, discount: 5 },
+                { minQuantity: 50, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "18,000 Units",
+              productionSpeed: "1,500 Units",
+              qualityStandards: "ISO 9001:2015",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "morth",
+                title: "MORTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-osmsb-road-traffic-management.jpg",
+              "/assets/ynm-safety-osmsb-industrial-facilities.jpg",
+              "/assets/ynm-safety-osmsb-construction-sites.jpg",
+              "/assets/ynm-safety-osmsb-commercial-public-areas.jpg",
+              "/assets/ynm-safety-osmsb-educational-institutions.jpg",
+              "/assets/ynm-safety-osmsb-residential-gated-communities.jpg"
+            ]
+          },
+          {
+            id: "sg8",
+            slug: "mandatory-sign-board-circular-manufacturers",
+            name: "Mandatory Sign Board (Circular)",
+            shortDesc: "High-visibility circular mandatory sign boards manufactured by YNM Safety, trusted Signages Manufacturers delivering durable and reflective traffic and industrial safety signage solutions globally.",
+            desc: "Premium circular mandatory sign boards for roads, industries, and infrastructure projects. High reflective visibility and weather-resistant signage solutions.",
+            image: "/assets/ynm-safety-csmsb-construction-sites.jpg",
+            heroImage: "/assets/ynm-safety-csmsb-roads-highways.jpg",
+            specs: ["High reflectivity", "Weather resistant", "MORTH & IRC 67 compliant", "7-10 years durability"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Circular Sign Board Manufacturers | YNM Safety",
+              description: "YNM Safety is a leading Mandatory Sign Board Manufacturers brand delivering high-visibility circular signages for roads, industries, and infrastructure projects worldwide. Trusted YNM Safety signages manufacturers and traffic sign board suppliers.",
+              keywords: "mandatory sign board manufacturers, circular sign board manufacturers, signages manufacturers, ynm safety, ynm, ynm safety signages manufacturers, traffic sign board manufacturer, reflective sign board supplier, road safety signages manufacturers, industrial safety sign boards, circular traffic sign manufacturers india",
+              slug: "/mandatory-sign-board-circular-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading Mandatory Sign Board Manufacturers and trusted Signages Manufacturers specializing in circular traffic and industrial safety sign boards. As a professional YNM Safety signages manufacturers, we deliver high-visibility and weather-resistant circular mandatory sign boards designed for long-term outdoor durability.\n\nOur circular sign boards are widely used for traffic control, industrial compliance, and public safety management. Being experienced YNM manufactures, we provide project-based customization in size, reflective grade, and mounting options to meet infrastructure and government requirements.",
+            detailedDescription: "YNM Safety is one of the leading Mandatory Sign Board Manufacturers and trusted Signages Manufacturers specializing in circular traffic and industrial safety sign boards. As a professional YNM Safety signages manufacturers, we deliver high-visibility and weather-resistant circular mandatory sign boards designed for long-term outdoor durability.\n\nOur circular sign boards are widely used for traffic control, industrial compliance, and public safety management. Being experienced YNM manufactures, we provide project-based customization in size, reflective grade, and mounting options to meet infrastructure and government requirements.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Mandatory Sign Board (Circular)" },
+              { label: "Shape", value: "Circular" },
+              { label: "Base Material", value: "ACP / Aluminium / GI Sheet" },
+              { label: "Reflective Grade", value: "Engineer Grade / HIP / DG" },
+              { label: "Printing Type", value: "UV Digital / Screen Printing" },
+              { label: "Mounting", value: "Pole Mounted / Wall Mounted" },
+              { label: "Durability", value: "7-10 Years Outdoor" },
+              { label: "Compliance", value: "MORTH & IRC 67" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable (Based on Size & Thickness)",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard Protective Packaging",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "MORTH, IRC 67",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Requirement",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Mandatory Sign Board (Circular)",
+                "Shape: Circular",
+                "Base Material: ACP / Aluminium / GI Sheet",
+                "Reflective Grade: Engineer Grade / HIP / DG",
+                "Printing Type: UV Digital / Screen Printing",
+                "Mounting: Pole Mounted / Wall Mounted",
+                "Durability: 7-10 Years Outdoor",
+                "Compliance: MORTH & IRC 67",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "High reflective visibility (day & night performance)",
+                "Strong weather resistance",
+                "Corrosion-resistant material",
+                "Clear and precise symbol printing",
+                "Long service life",
+                "Customizable sizes"
+              ],
+              advantages: [
+                "Improves traffic safety and compliance",
+                "Enhances industrial hazard communication",
+                "Reduces accident risks",
+                "Low maintenance and durable signage solution",
+                "Trusted Mandatory Sign Board Manufacturers – YNM Safety"
+              ]
+            },
+            
+            features: [
+              "High reflective visibility (day & night performance)",
+              "Strong weather resistance",
+              "Corrosion-resistant material",
+              "Clear and precise symbol printing",
+              "Long service life",
+              "Customizable sizes"
+            ],
+            
+            advantages: [
+              "Improves traffic safety and compliance",
+              "Enhances industrial hazard communication",
+              "Reduces accident risks",
+              "Low maintenance and durable signage solution",
+              "Trusted Mandatory Sign Board Manufacturers – YNM Safety"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Construction Sites",
+                description: "Circular mandatory sign boards ensure safety awareness at construction sites.",
+                image: "/assets/ynm-safety-csmsb-construction-sites.jpg",
+                details: "Manufactured by leading YNM Safety signages manufacturers, these boards provide clear safety instructions and withstand harsh outdoor conditions."
+              },
+              {
+                id: "app2",
+                title: "Industrial & Manufacturing Units",
+                description: "Mandatory circular sign boards enforce safety rules in industrial facilities.",
+                image: "/assets/ynm-safety-csmsb-electrical-power-plants.jpg",
+                details: "As trusted Signages Manufacturers, YNM Safety produces durable boards indicating PPE requirements, restricted areas, and operational instructions."
+              },
+              {
+                id: "app3",
+                title: "Roads & Highways",
+                description: "Circular sign boards regulate traffic flow and mandatory instructions on roads.",
+                image: "/assets/ynm-safety-csmsb-roads-highways.jpg",
+                details: "High-reflective traffic sign boards manufactured by YNM Safety ensure visibility during day and night driving conditions."
+              },
+              {
+                id: "app4",
+                title: "Commercial Buildings & Offices",
+                description: "Mandatory signages improve safety compliance in commercial premises.",
+                image: "/assets/ynm-safety-csmsb-commercial-buildings-offices.jpg",
+                details: "YNM circular sign boards enhance awareness of entry rules, safety protocols, and restricted access zones."
+              },
+              {
+                id: "app5",
+                title: "Hospitals & Healthcare Facilities",
+                description: "Circular sign boards guide safety instructions in healthcare environments.",
+                image: "/assets/ynm-safety-csmsb-hospitals-healthcare.jpg",
+                details: "Durable and clear signage ensures compliance with safety and operational guidelines within medical facilities."
+              },
+              {
+                id: "app6",
+                title: "Electrical & Power Plants",
+                description: "Mandatory circular sign boards enhance safety in power generation facilities.",
+                image: "/assets/ynm-safety-csmsb-electrical-power-plants.jpg",
+                details: "Reflective and durable signages from YNM Safety manufacturers ensure high visibility in hazardous environments."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Construction Sites",
+                short: "Circular mandatory sign boards ensure safety awareness at construction sites.",
+                hover: "Manufactured by leading YNM Safety signages manufacturers, these boards provide clear safety instructions and withstand harsh outdoor conditions.",
+                image: "/assets/ynm-safety-csmsb-construction-sites.jpg"
+              },
+              {
+                title: "Industrial & Manufacturing Units",
+                short: "Mandatory circular sign boards enforce safety rules in industrial facilities.",
+                hover: "As trusted Signages Manufacturers, YNM Safety produces durable boards indicating PPE requirements, restricted areas, and operational instructions.",
+                image: "/assets/ynm-safety-csmsb-electrical-power-plants.jpg"
+              },
+              {
+                title: "Roads & Highways",
+                short: "Circular sign boards regulate traffic flow and mandatory instructions on roads.",
+                hover: "High-reflective traffic sign boards manufactured by YNM Safety ensure visibility during day and night driving conditions.",
+                image: "/assets/ynm-safety-csmsb-roads-highways.jpg"
+              },
+              {
+                title: "Commercial Buildings & Offices",
+                short: "Mandatory signages improve safety compliance in commercial premises.",
+                hover: "YNM circular sign boards enhance awareness of entry rules, safety protocols, and restricted access zones.",
+                image: "/assets/ynm-safety-csmsb-commercial-buildings-offices.jpg"
+              },
+              {
+                title: "Hospitals & Healthcare Facilities",
+                short: "Circular sign boards guide safety instructions in healthcare environments.",
+                hover: "Durable and clear signage ensures compliance with safety and operational guidelines within medical facilities.",
+                image: "/assets/ynm-safety-csmsb-hospitals-healthcare.jpg"
+              },
+              {
+                title: "Electrical & Power Plants",
+                short: "Mandatory circular sign boards enhance safety in power generation facilities.",
+                hover: "Reflective and durable signages from YNM Safety manufacturers ensure high visibility in hazardous environments.",
+                image: "/assets/ynm-safety-csmsb-electrical-power-plants.jpg"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder - can be updated later)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Mandatory Sign Board (Circular) Market Growth | YNM Safety",
+              description: "The global mandatory sign board (circular) market was valued at approximately USD 2.5-4.5 billion in 2023-2024, reflecting steady growth driven by infrastructure expansion and industrial safety compliance.\n\nThe market is projected to reach around USD 3.8-7.2 billion by the early 2030s. The expected CAGR of 4-5.5% indicates stable and sustained financial growth supported by stricter safety regulations and increasing urbanization worldwide.",
+              cagr: "4-5.5%",
+              growthFactors: [
+                "Strict Government Safety Regulations",
+                "Infrastructure Development",
+                "Industrial & Construction Expansion",
+                "Rising Road Safety Awareness",
+                "Urbanization & Smart City Projects"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$3.5B",
+                projectedMarketSize: "$5.5B",
+                currentYear: "2024",
+                projectedYear: "2030",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 2.8 },
+                { year: "2022", value: 3.0 },
+                { year: "2023", value: 3.2 },
+                { year: "2024", value: 3.5 },
+                { year: "2025", value: 3.9 },
+                { year: "2026", value: 4.3 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States of America", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["United Kingdom", "France", "Germany", "Ireland", "Italy", "Netherlands"]
+                },
+                {
+                  name: "Asia",
+                  countries: ["India", "Philippines", "Singapore", "United Arab Emirates"]
+                },
+                {
+                  name: "Oceania",
+                  countries: ["Australia", "New Zealand"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures circular mandatory sign boards through a controlled, quality-driven process to ensure high visibility, durability, and compliance with MORTH & IRC 67 standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Selection",
+                description: "High-quality aluminium sheets (2mm or 3mm thickness) are selected as per IRC 67 and MoRTH standards. Premium grade retro-reflective sheeting is also sourced to ensure durability and high night visibility performance."
+              },
+              {
+                step: "02",
+                title: "Cutting into Circular Shape",
+                description: "The aluminium sheet is cut into accurate circular dimensions using CNC or hydraulic cutting machines to maintain precise size and smooth edges."
+              },
+              {
+                step: "03",
+                title: "Edge Bending (Flanging)",
+                description: "The edges of the circular board are flanged using a bending machine to increase strength, improve wind resistance, and enhance structural durability."
+              },
+              {
+                step: "04",
+                title: "Surface Cleaning and Pretreatment",
+                description: "The board surface is cleaned and chemically treated to remove dust, oil, and moisture, ensuring strong adhesion of reflective sheeting."
+              },
+              {
+                step: "05",
+                title: "Retro-Reflective Sheeting Application",
+                description: "High-intensity retro-reflective sheeting is laminated onto the aluminium surface using roller or vacuum application methods for superior reflectivity."
+              },
+              {
+                step: "06",
+                title: "Printing of Mandatory Symbol",
+                description: "The required circular mandatory symbol is printed using screen printing or UV digital printing as per standard design specifications."
+              },
+              {
+                step: "07",
+                title: "Drying and Curing",
+                description: "The printed board is oven dried to enhance weather resistance, colour stability, and long-term performance."
+              },
+              {
+                step: "08",
+                title: "Backside Clamp Fixing",
+                description: "MS or GI clamps and mounting brackets are securely fixed at the back of the sign board for easy pole installation."
+              },
+              {
+                step: "09",
+                title: "Quality Inspection",
+                description: "Each board undergoes strict quality checks for reflectivity, colour accuracy, dimension tolerance, and overall finish before dispatch."
+              },
+              {
+                step: "10",
+                title: "Packing and Dispatch",
+                description: "The finished mandatory sign boards are carefully packed with protective covering and dispatched to project sites."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              hasToggle: false,
+              basePriceINR: 350,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹350 per sq. ft",
+              bulkDiscounts: [
+                { minQuantity: 10, discount: 3 },
+                { minQuantity: 25, discount: 5 },
+                { minQuantity: 50, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "18,000 Units",
+              productionSpeed: "1,500 Units",
+              qualityStandards: "MORTH & IRC 67",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "morth",
+                title: "MORTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-csmsb-construction-sites.jpg",
+              "/assets/ynm-safety-csmsb-roads-highways.jpg",
+              "/assets/ynm-safety-csmsb-commercial-buildings-offices.jpg",
+              "/assets/ynm-safety-csmsb-hospitals-healthcare.jpg",
+              "/assets/ynm-safety-csmsb-electrical-power-plants.jpg"
+            ]
+          },
+          {
+            id: "sg9",
+            slug: "cautionary-sign-boards-triangle-manufacturers",
+            name: "Cautionary Sign Boards (Triangle)",
+            shortDesc: "High-visibility triangular cautionary sign boards manufactured by YNM Safety, trusted Signages Manufacturers delivering durable and reflective warning signage solutions for global road and infrastructure projects.",
+            desc: "Premium triangular cautionary sign boards for roads, highways, and industrial projects. High reflective visibility and weather-resistant warning signage solutions.",
+            image: "/assets/ynm-safety-tscsb-roads-highways.jpg",
+            heroImage: "/assets/ynm-safety-tscsb-roads-highways.jpg",
+            specs: ["Triangular Shape", "High Reflective", "7-10 Years Durability", "MORTH & IRC 67 Compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Cautionary Sign Boards Manufacturers | YNM Safety",
+              description: "YNM Safety is a leading Cautionary Sign Boards Manufacturers brand delivering high-visibility triangular warning signages for roads, highways, and industrial projects worldwide. Trusted YNM Safety signages manufacturers and traffic safety sign board suppliers.",
+              keywords: "cautionary sign boards manufacturers, triangular sign board manufacturers, warning sign board manufacturers, ynm safety, ynm, ynm safety signages manufacturers, signages manufacturers, road safety sign board supplier, reflective triangle sign board, traffic warning sign manufacturers, highway caution sign board manufacturers, industrial warning sign board supplier, triangle traffic sign manufacturers, safety signage manufacturers india",
+              slug: "/cautionary-sign-boards-triangle-manufacturers"
+            },
+
+            // Product Overview
+            overview: "YNM Safety is one of the leading Cautionary Sign Boards Manufacturers and professional Signages Manufacturers specializing in triangular warning sign boards. Our triangular cautionary sign boards are designed to alert drivers and pedestrians about potential hazards, ensuring improved traffic discipline and accident prevention.\n\nAs trusted YNM Safety signages manufacturers, we supply reflective triangle warning boards for highways, construction zones, industrial projects, smart cities, and public infrastructure worldwide. Our manufacturing facility in Hyderabad supports customized production as per project requirements and global safety standards.",
+            detailedDescription: "YNM Safety is one of the leading Cautionary Sign Boards Manufacturers and professional Signages Manufacturers specializing in triangular warning sign boards. Our triangular cautionary sign boards are designed to alert drivers and pedestrians about potential hazards, ensuring improved traffic discipline and accident prevention.\n\nAs trusted YNM Safety signages manufacturers, we supply reflective triangle warning boards for highways, construction zones, industrial projects, smart cities, and public infrastructure worldwide. Our manufacturing facility in Hyderabad supports customized production as per project requirements and global safety standards.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Cautionary Sign Board (Triangle)" },
+              { label: "Shape", value: "Triangular" },
+              { label: "Base Material", value: "ACP / Aluminium / GI Sheet" },
+              { label: "Reflective Grade", value: "Engineer Grade / HIP / DG" },
+              { label: "Printing Type", value: "UV Digital / Screen Printing" },
+              { label: "Mounting", value: "Pole Mounted / Wall Mounted" },
+              { label: "Durability", value: "7-10 Years Outdoor" },
+              { label: "Compliance", value: "MORTH & IRC 67" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard Protective Packaging",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "MORTH, IRC 67",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Requirement",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Cautionary Sign Board (Triangle)",
+                "Shape: Triangular",
+                "Base Material: ACP / Aluminium / GI Sheet",
+                "Reflective Grade: Engineer Grade / HIP / DG",
+                "Printing Type: UV Digital / Screen Printing",
+                "Mounting: Pole Mounted / Wall Mounted",
+                "Durability: 7-10 Years Outdoor",
+                "Compliance: MORTH & IRC 67",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "High-intensity reflective visibility",
+                "Clear and bold hazard symbols",
+                "Weather-resistant and UV-protected surface",
+                "Corrosion-resistant metal base",
+                "Long service life in outdoor environments",
+                "Custom sizes and reflective grades available"
+              ],
+              advantages: [
+                "Enhances driver awareness of road hazards",
+                "Reduces accident risks on highways",
+                "Improves compliance with road safety regulations",
+                "Suitable for urban, rural, and industrial environments",
+                "Trusted Cautionary Sign Boards Manufacturers – YNM Safety",
+                "Meets government and international road safety standards"
+              ]
+            },
+            
+            features: [
+              "High-intensity reflective visibility",
+              "Clear and bold hazard symbols",
+              "Weather-resistant and UV-protected surface",
+              "Corrosion-resistant metal base",
+              "Long service life in outdoor environments",
+              "Custom sizes and reflective grades available"
+            ],
+            
+            advantages: [
+              "Enhances driver awareness of road hazards",
+              "Reduces accident risks on highways",
+              "Improves compliance with road safety regulations",
+              "Suitable for urban, rural, and industrial environments",
+              "Trusted Cautionary Sign Boards Manufacturers – YNM Safety",
+              "Meets government and international road safety standards"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Roads & Highways",
+                description: "Triangular cautionary sign boards warn drivers about curves, intersections, speed breakers, and other hazards.",
+                image: "/assets/ynm-safety-tscsb-roads-highways.jpg",
+                details: "Reflective warning sign boards manufactured by YNM Safety ensure maximum visibility in day and night driving conditions, improving road safety compliance."
+              },
+              {
+                id: "app2",
+                title: "Construction Sites",
+                description: "Cautionary sign boards improve awareness of construction risks.",
+                image: "/assets/ynm-safety-tscsb-construction-sites.jpg",
+                details: "Durable triangular warning boards withstand harsh site conditions while clearly communicating hazard alerts."
+              },
+              {
+                id: "app3",
+                title: "Industrial & Manufacturing Areas",
+                description: "Warning sign boards indicate danger zones within industrial facilities.",
+                image: "/assets/ynm-safety-tscsb-industrial-manufacturing.jpg",
+                details: "As professional Signages Manufacturers, YNM Safety provides long-lasting cautionary signage solutions for factories and heavy machinery areas."
+              },
+              {
+                id: "app4",
+                title: "Educational Institutions",
+                description: "Triangular sign boards enhance safety near school and campus zones.",
+                image: "/assets/ynm-safety-tscsb-educational-institutions.jpg",
+                details: "High-visibility cautionary signages alert drivers to pedestrian crossings and speed restrictions."
+              },
+              {
+                id: "app5",
+                title: "Residential & Gated Communities",
+                description: "Cautionary sign boards regulate internal traffic safety.",
+                image: "/assets/ynm-safety-tscsb-residential-gated-communities.jpg",
+                details: "YNM Safety triangular sign boards reduce accident risks and promote safe driving practices."
+              },
+              {
+                id: "app6",
+                title: "Commercial & Public Areas",
+                description: "Warning sign boards improve public safety awareness.",
+                image: "/assets/ynm-safety-tscsb-commercial-public-areas.jpg",
+                details: "Reflective cautionary signage ensures clear hazard communication in malls, parking zones, and public infrastructure areas."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Roads & Highways",
+                short: "Triangular cautionary sign boards warn drivers about curves, intersections, speed breakers, and other hazards.",
+                hover: "Reflective warning sign boards manufactured by YNM Safety ensure maximum visibility in day and night driving conditions, improving road safety compliance.",
+                image: "/assets/ynm-safety-tscsb-roads-highways.jpg"
+              },
+              {
+                title: "Construction Sites",
+                short: "Cautionary sign boards improve awareness of construction risks.",
+                hover: "Durable triangular warning boards withstand harsh site conditions while clearly communicating hazard alerts.",
+                image: "/assets/ynm-safety-tscsb-construction-sites.jpg"
+              },
+              {
+                title: "Industrial & Manufacturing Areas",
+                short: "Warning sign boards indicate danger zones within industrial facilities.",
+                hover: "As professional Signages Manufacturers, YNM Safety provides long-lasting cautionary signage solutions for factories and heavy machinery areas.",
+                image: "/assets/ynm-safety-tscsb-industrial-manufacturing.jpg"
+              },
+              {
+                title: "Educational Institutions",
+                short: "Triangular sign boards enhance safety near school and campus zones.",
+                hover: "High-visibility cautionary signages alert drivers to pedestrian crossings and speed restrictions.",
+                image: "/assets/ynm-safety-tscsb-educational-institutions.jpg"
+              },
+              {
+                title: "Residential & Gated Communities",
+                short: "Cautionary sign boards regulate internal traffic safety.",
+                hover: "YNM Safety triangular sign boards reduce accident risks and promote safe driving practices.",
+                image: "/assets/ynm-safety-tscsb-residential-gated-communities.jpg"
+              },
+              {
+                title: "Commercial & Public Areas",
+                short: "Warning sign boards improve public safety awareness.",
+                hover: "Reflective cautionary signage ensures clear hazard communication in malls, parking zones, and public infrastructure areas.",
+                image: "/assets/ynm-safety-tscsb-commercial-public-areas.jpg"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Cautionary Sign Boards Market Growth | YNM Safety",
+              description: "The global market for cautionary and safety sign boards has shown consistent financial growth in recent years. The safety signage market historically grew from approximately USD 1.96–2.05 billion in the mid-2020s, reflecting increased workplace safety and regulatory compliance requirements.\n\nForecasts indicate the market will continue expanding, reaching around USD 3.3–3.9 billion by the early 2030s. Expected annual growth rates range between 4–8% CAGR, driven by infrastructure expansion, industrial growth, and stricter global safety regulations.",
+              cagr: "4-8%",
+              growthFactors: [
+                "Stricter safety regulations and compliance",
+                "Rising safety awareness across industries",
+                "Industrialization, infrastructure, and construction growth",
+                "Technological innovation in reflective materials",
+                "Rapid expansion of global road networks"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$2.05B",
+                projectedMarketSize: "$3.9B",
+                currentYear: "2024",
+                projectedYear: "2032",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 1.9 },
+                { year: "2022", value: 2.0 },
+                { year: "2023", value: 2.1 },
+                { year: "2024", value: 2.2 },
+                { year: "2025", value: 2.5 },
+                { year: "2026", value: 2.8 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Indonesia", "Vietnam"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Russia"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates", "Saudi Arabia", "South Africa"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures triangular cautionary sign boards through a controlled, quality-driven process to ensure high visibility, durability, and compliance with national and international road safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Selection",
+                description: "High-grade aluminium sheets (2mm–3mm thick) are selected for strength, corrosion resistance, and long durability. Material must comply with IRC / MoRTH standards."
+              },
+              {
+                step: "02",
+                title: "Cutting into Triangular Shape",
+                description: "The aluminium sheet is cut into an accurate equilateral triangular shape with rounded corners using CNC cutting or hydraulic shearing machines."
+              },
+              {
+                step: "03",
+                title: "Edge Bending / Flanging",
+                description: "Edges are bent (typically 25mm border) using a bending machine to increase rigidity and prevent sharp edges."
+              },
+              {
+                step: "04",
+                title: "Surface Cleaning & Chemical Treatment",
+                description: "The board surface is cleaned using degreasing chemicals to remove oil and dust. Proper pre-treatment ensures strong bonding of reflective sheeting."
+              },
+              {
+                step: "05",
+                title: "Application of Retro-Reflective Sheeting",
+                description: "High-intensity or engineering-grade retro-reflective sheeting is laminated onto the surface using pressure roller machines to ensure night visibility."
+              },
+              {
+                step: "06",
+                title: "Printing of Symbols & Borders",
+                description: "Hazard symbols (curve, speed breaker, school ahead, etc.) are printed using UV printing, screen printing, or plotter-cut vinyl pasting. Standard red border and black symbols are applied as per traffic norms."
+              },
+              {
+                step: "07",
+                title: "Curing & Drying",
+                description: "Boards are kept under controlled conditions for ink curing and adhesive bonding to ensure long life."
+              },
+              {
+                step: "08",
+                title: "Fixing of Back Support & Clamps",
+                description: "GI / MS brackets and clamps are fixed at the backside for mounting on poles or structures."
+              },
+              {
+                step: "09",
+                title: "Quality Inspection",
+                description: "Each cautionary sign board is checked for reflectivity level, proper dimensions, color accuracy, adhesion strength, and surface finish."
+              },
+              {
+                step: "10",
+                title: "Packing & Dispatch",
+                description: "Boards are wrapped with protective sheets and packed carefully to prevent damage during transportation."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              hasToggle: true,
+              pricingTypes: [
+                {
+                  id: "reflective",
+                  name: "Reflective Part",
+                  description: "Retro reflective sheeting on aluminium panels",
+                  basePriceINR: 420,
+                  unit: "per sq. ft",
+                  icon: "✨"
+                },
+                {
+                  id: "ms-part",
+                  name: "MS Part (Mild Steel)",
+                  description: "Support structure and steel components",
+                  basePriceINR: 110,
+                  unit: "per kg",
+                  icon: "🔩"
+                }
+              ],
+              basePriceINR: 420,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹420 per sq. ft (Reflective Part)",
+              bulkDiscounts: [
+                { minQuantity: 5, discount: 3 },
+                { minQuantity: 10, discount: 5 },
+                { minQuantity: 20, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "18,000 Units",
+              productionSpeed: "1,500 Units",
+              qualityStandards: "MORTH & IRC 67",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "morth",
+                title: "MoRTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-tscsb-roads-highways.jpg",
+              "/assets/ynm-safety-tscsb-construction-sites.jpg",
+              "/assets/ynm-safety-tscsb-industrial-manufacturing.jpg",
+              "/assets/ynm-safety-tscsb-educational-institutions.jpg",
+              "/assets/ynm-safety-tscsb-residential-gated-communities.jpg",
+              "/assets/ynm-safety-tscsb-commercial-public-areas.jpg"
+            ]
+          },
+          {
+            id: "sg10",
+            slug: "canopy-manufacturers",
+            name: "Canopy",
+            shortDesc: "High-strength and durable canopy structures manufactured by YNM Safety, trusted Signages Manufacturers and canopy solution providers for commercial, retail, and infrastructure projects worldwide.",
+            desc: "Premium canopy structures for fuel stations, retail outlets, commercial complexes, hotels, and industrial facilities. Weather-resistant and durable canopy fabrication solutions.",
+            image: "/assets/ynm-safety-canopy-fuel-stations.webp",
+            heroImage: "/assets/ynm-safety-canopy-fuel-stations.webp",
+            specs: ["High structural strength", "Weather resistant", "Custom fabrication", "MORTH & IRC 67 compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Canopy Manufacturers | YNM Safety",
+              description: "YNM Safety is a leading Canopy Manufacturers brand delivering durable and high-quality canopy structures for retail stores, fuel stations, commercial complexes, and infrastructure projects worldwide. Trusted YNM Safety signages manufacturers and canopy solution providers.",
+              keywords: "canopy manufacturers, canopy structure manufacturers, ynm safety, ynm, signages manufacturers, ynm safety canopy manufacturers, commercial canopy manufacturers, fuel station canopy manufacturer, retail canopy structures, exterior canopy supplier, industrial canopy manufacturer, canopy fabrication manufacturers india",
+              slug: "/canopy-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the trusted Canopy Manufacturers and professional Signages Manufacturers specializing in high-quality canopy fabrication for commercial and infrastructure projects. Our canopy structures are engineered to provide weather protection, branding support, and structural durability in demanding outdoor environments.\n\nAs experienced YNM Safety manufacturers, we design and fabricate canopy systems for fuel stations, retail outlets, commercial complexes, hotels, and industrial facilities. Our Hyderabad-based facility supports customized canopy production based on project requirements and global safety standards.",
+            detailedDescription: "YNM Safety is one of the trusted Canopy Manufacturers and professional Signages Manufacturers specializing in high-quality canopy fabrication for commercial and infrastructure projects. Our canopy structures are engineered to provide weather protection, branding support, and structural durability in demanding outdoor environments.\n\nAs experienced YNM Safety manufacturers, we design and fabricate canopy systems for fuel stations, retail outlets, commercial complexes, hotels, and industrial facilities. Our Hyderabad-based facility supports customized canopy production based on project requirements and global safety standards.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Canopy Structure" },
+              { label: "Material", value: "MS / GI / Aluminium / ACP" },
+              { label: "Surface Finish", value: "Powder Coated / Painted" },
+              { label: "Structure Type", value: "Fabricated Frame Structure" },
+              { label: "Installation", value: "On-Site Installation Support" },
+              { label: "Durability", value: "Long-Term Outdoor Performance" },
+              { label: "Application Area", value: "Commercial & Infrastructure Projects" },
+              { label: "Compliance", value: "MORTH & IRC 67" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard Protective Packaging",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "MORTH, IRC 67",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Requirement",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Canopy Structure",
+                "Material: MS / GI / Aluminium / ACP",
+                "Surface Finish: Powder Coated / Painted",
+                "Structure Type: Fabricated Frame Structure",
+                "Installation: On-Site Installation Support",
+                "Durability: Long-Term Outdoor Performance",
+                "Application: Commercial & Infrastructure Projects",
+                "Compliance: MORTH & IRC 67",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "High structural strength",
+                "Weather and UV resistance",
+                "Corrosion-resistant materials",
+                "Custom design and fabrication",
+                "Long outdoor durability",
+                "Low maintenance structure"
+              ],
+              advantages: [
+                "Provides effective weather protection",
+                "Enhances architectural appearance",
+                "Improves commercial branding presence",
+                "Suitable for large-scale infrastructure projects",
+                "Trusted Canopy Manufacturers – YNM Safety",
+                "Manufactured as per government safety standards"
+              ]
+            },
+            
+            features: [
+              "High structural strength",
+              "Weather and UV resistance",
+              "Corrosion-resistant materials",
+              "Custom design and fabrication",
+              "Long outdoor durability",
+              "Low maintenance structure"
+            ],
+            
+            advantages: [
+              "Provides effective weather protection",
+              "Enhances architectural appearance",
+              "Improves commercial branding presence",
+              "Suitable for large-scale infrastructure projects",
+              "Trusted Canopy Manufacturers – YNM Safety",
+              "Manufactured as per government safety standards"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Retail Stores & Showrooms",
+                description: "Canopy structures enhance storefront appearance and customer protection.",
+                image: "/assets/ynm-safety-canopy-retail-stores-showrooms.webp",
+                details: "YNM Safety canopy systems provide durable and visually appealing exterior coverage for retail branding and customer comfort."
+              },
+              {
+                id: "app2",
+                title: "Fuel Stations",
+                description: "Canopy structures provide coverage for fueling areas.",
+                image: "/assets/ynm-safety-canopy-fuel-stations.webp",
+                details: "Strong and weather-resistant canopy systems support branding and operational safety in high-traffic fuel station environments."
+              },
+              {
+                id: "app3",
+                title: "Hotels & Restaurants",
+                description: "Canopies enhance outdoor seating and entrance areas.",
+                image: "/assets/ynm-safety-canopy-hotels-restaurants.webp",
+                details: "YNM canopy solutions combine structural strength with aesthetic appeal for hospitality spaces."
+              },
+              {
+                id: "app4",
+                title: "Hospitals & Healthcare Facilities",
+                description: "Canopy structures protect patient entry points.",
+                image: "/assets/ynm-safety-canopy-hospitals-healthcare.webp",
+                details: "Durable canopy fabrication ensures reliable coverage in healthcare environments."
+              },
+              {
+                id: "app5",
+                title: "Industrial Facilities",
+                description: "Canopies provide weather protection for loading and operational zones.",
+                image: "/assets/ynm-safety-canopy-industrial-facilities.webp",
+                details: "YNM Safety canopy manufacturers deliver heavy-duty structural solutions for industrial infrastructure."
+              },
+              {
+                id: "app6",
+                title: "Educational Institutions",
+                description: "Canopies improve campus infrastructure and entry coverage.",
+                image: "/assets/ynm-safety-canopy-educational-institutions.webp",
+                details: "High-quality canopy structures ensure safety and protection in school and college premises."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Retail Stores & Showrooms",
+                short: "Canopy structures enhance storefront appearance and customer protection.",
+                hover: "YNM Safety canopy systems provide durable and visually appealing exterior coverage for retail branding and customer comfort.",
+                image: "/assets/ynm-safety-canopy-retail-stores-showrooms.png"
+              },
+              {
+                title: "Fuel Stations",
+                short: "Canopy structures provide coverage for fueling areas.",
+                hover: "Strong and weather-resistant canopy systems support branding and operational safety in high-traffic fuel station environments.",
+                image: "/assets/ynm-safety-canopy-fuel-stations.webp"
+              },
+              {
+                title: "Hotels & Restaurants",
+                short: "Canopies enhance outdoor seating and entrance areas.",
+                hover: "YNM canopy solutions combine structural strength with aesthetic appeal for hospitality spaces.",
+                image: "/assets/ynm-safety-canopy-hotels-restaurants.webp"
+              },
+              {
+                title: "Hospitals & Healthcare Facilities",
+                short: "Canopy structures protect patient entry points.",
+                hover: "Durable canopy fabrication ensures reliable coverage in healthcare environments.",
+                image: "/assets/ynm-safety-canopy-hospitals-healthcare.webp"
+              },
+              {
+                title: "Industrial Facilities",
+                short: "Canopies provide weather protection for loading and operational zones.",
+                hover: "YNM Safety canopy manufacturers deliver heavy-duty structural solutions for industrial infrastructure.",
+                image: "/assets/ynm-safety-canopy-industrial-facilities.webp"
+              },
+              {
+                title: "Educational Institutions",
+                short: "Canopies improve campus infrastructure and entry coverage.",
+                hover: "High-quality canopy structures ensure safety and protection in school and college premises.",
+                image: "/assets/ynm-safety-canopy-educational-institutions.webp"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder - can be updated later)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Canopy Product Market Growth | YNM Safety",
+              description: "The global canopy product market is experiencing steady growth. Research indicates expansion from approximately USD 2.0–2.15 billion in the mid-2020s to around USD 2.7–2.9 billion by the early-to-mid-2030s.\n\nThis reflects a compound annual growth rate (CAGR) of approximately 3%–4.5%, driven by increased adoption of outdoor infrastructure, commercial development, and rising demand for protective structures worldwide.",
+              cagr: "3-4.5%",
+              growthFactors: [
+                "Rapid Infrastructure Development",
+                "Growth in Commercial & Retail Spaces",
+                "Rising Vehicle Ownership",
+                "Urbanization & Smart City Projects",
+                "Industrial Expansion",
+                "Increasing Weather Protection Requirements"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$2.15B",
+                projectedMarketSize: "$2.9B",
+                currentYear: "2025",
+                projectedYear: "2033",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "120+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 1.85 },
+                { year: "2022", value: 1.95 },
+                { year: "2023", value: 2.05 },
+                { year: "2024", value: 2.15 },
+                { year: "2025", value: 2.30 },
+                { year: "2026", value: 2.45 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States of America", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["United Kingdom", "France", "Germany", "Ireland", "Italy", "Netherlands"]
+                },
+                {
+                  name: "Asia",
+                  countries: ["India", "Philippines", "Singapore", "United Arab Emirates"]
+                },
+                {
+                  name: "Oceania",
+                  countries: ["Australia", "New Zealand"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 8 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures canopy structures through a controlled, quality-driven process to ensure structural strength, weather resistance, durability, and compliance with national and international safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Design & Size Finalization",
+                description: "The canopy signage design is prepared according to brand guidelines, including logo placement, color scheme, dimensions, and lighting requirements. Structural load and wind resistance factors are also considered before production."
+              },
+              {
+                step: "02",
+                title: "Raw Material Selection",
+                description: "High-quality materials such as MS/GI pipes for the frame, ACP (Aluminium Composite Panel) sheets for cladding, acrylic sheets for letters, LED modules, and electrical accessories are selected to ensure durability and weather resistance."
+              },
+              {
+                step: "03",
+                title: "Frame Fabrication",
+                description: "MS/GI pipes are cut to required dimensions and welded to create a strong support structure. After fabrication, anti-rust primer and protective paint coating are applied to prevent corrosion."
+              },
+              {
+                step: "04",
+                title: "ACP Sheet Cutting & Fixing",
+                description: "ACP sheets are cut accurately using CNC routers and fixed onto the metal frame using rivets or screws. Proper alignment and finishing are ensured for a smooth surface appearance."
+              },
+              {
+                step: "05",
+                title: "Letter Fabrication & Branding",
+                description: "Acrylic letters are laser cut or 3D channel letters are fabricated as per design. Vinyl graphics are plotted and pasted carefully to maintain brand consistency and clarity."
+              },
+              {
+                step: "06",
+                title: "LED Lighting Installation",
+                description: "Waterproof LED modules or strip lights are installed inside the canopy structure. Electrical wiring and power supply units are connected safely, ensuring uniform brightness and energy efficiency."
+              },
+              {
+                step: "07",
+                title: "Quality Inspection & Testing",
+                description: "The completed canopy signage undergoes inspection for structural strength, surface finish, lighting uniformity, electrical safety, and overall durability."
+              },
+              {
+                step: "08",
+                title: "Packing & Site Installation",
+                description: "After approval, the signage is packed with protective materials and transported to the site. It is installed using anchor fasteners and tested again to ensure proper functioning."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              hasToggle: true,
+              pricingTypes: [
+                {
+                  id: "canopy-structure",
+                  name: "Canopy Structure",
+                  description: "Complete canopy fabrication with cladding",
+                  basePriceINR: 850,
+                  unit: "per sq. ft",
+                  icon: "🏗️"
+                },
+                {
+                  id: "ms-part",
+                  name: "MS Part (Mild Steel)",
+                  description: "Frame structure and steel components",
+                  basePriceINR: 110,
+                  unit: "per kg",
+                  icon: "🔩"
+                }
+              ],
+              basePriceINR: 850,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹850 per sq. ft (Canopy Structure)",
+              bulkDiscounts: [
+                { minQuantity: 5, discount: 3 },
+                { minQuantity: 10, discount: 5 },
+                { minQuantity: 20, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "120 Units",
+              productionSpeed: "10 Units",
+              qualityStandards: "MORTH & IRC 67",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "morth",
+                title: "MoRTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-canopy-fuel-stations.webp",
+              "/assets/ynm-safety-canopy-retail-stores-showrooms.webp",
+              "/assets/ynm-safety-canopy-hotels-restaurants.webp",
+              "/assets/ynm-safety-canopy-hospitals-healthcare.webp",
+              "/assets/ynm-safety-canopy-industrial-facilities.webp",
+              "/assets/ynm-safety-canopy-educational-institutions.webp"
+            ]
+          },
+          {
+            id: "sg11",
+            slug: "informatory-sign-board-manufacturers",
+            name: "Informatory Sign Board",
+            shortDesc: "High-visibility and durable informatory sign boards manufactured by YNM Safety, trusted Signages Manufacturers delivering reliable traffic guidance, wayfinding, and public information signage solutions globally.",
+            desc: "High-visibility informatory sign boards for highways, transportation hubs, commercial spaces, and infrastructure projects. Reliable traffic guidance and wayfinding signage solutions.",
+            image: "/assets/ynm-safety-informatory-roads-highways.jpg",
+            heroImage: "/assets/ynm-safety-informatory-roads-highways.jpg",
+            specs: ["High-intensity reflective visibility", "Weather-resistant materials", "7-10 years outdoor durability", "MORTH & IRC 67 compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Informatory Sign Board Manufacturers | YNM Safety",
+              description: "YNM Safety is a leading Informatory Sign Board Manufacturers brand delivering high-visibility traffic and wayfinding signages for highways, transportation hubs, commercial spaces, and infrastructure projects worldwide. Trusted YNM Safety manufacturers and signages manufacturers in India.",
+              keywords: "informatory sign board manufacturers, informatory traffic sign manufacturers, ynm safety, ynm, ynm safety manufacturers, signages manufacturers, highway direction sign board manufacturers, reflective informatory sign board supplier, road guidance sign manufacturers, wayfinding signage manufacturers india, transportation signage suppliers, infrastructure sign board exporter",
+              slug: "/informatory-sign-board-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading Informatory Sign Board Manufacturers and professional Signages Manufacturers specializing in high-visibility traffic guidance and wayfinding signage solutions. Our informatory sign boards are designed to provide clear navigation, directional information, and public guidance across highways, urban roads, transportation hubs, and commercial infrastructure.\n\nAs trusted YNM Safety manufacturers, we produce reflective informatory sign boards that ensure excellent visibility during both day and night conditions. Our Hyderabad-based manufacturing facility supports customized production for government projects, smart city initiatives, and international infrastructure developments.",
+            detailedDescription: "YNM Safety is one of the leading Informatory Sign Board Manufacturers and professional Signages Manufacturers specializing in high-visibility traffic guidance and wayfinding signage solutions. Our informatory sign boards are designed to provide clear navigation, directional information, and public guidance across highways, urban roads, transportation hubs, and commercial infrastructure.\n\nAs trusted YNM Safety manufacturers, we produce reflective informatory sign boards that ensure excellent visibility during both day and night conditions. Our Hyderabad-based manufacturing facility supports customized production for government projects, smart city initiatives, and international infrastructure developments.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Informatory Sign Board" },
+              { label: "Shape", value: "Rectangular / Custom" },
+              { label: "Base Material", value: "ACP / Aluminium / GI Sheet" },
+              { label: "Reflective Grade", value: "Engineer Grade / HIP / DG" },
+              { label: "Printing Type", value: "UV Digital / Screen Printing" },
+              { label: "Mounting", value: "Pole Mounted / Overhead Structure" },
+              { label: "Durability", value: "7-10 Years Outdoor" },
+              { label: "Compliance", value: "MORTH & IRC 67" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard Protective Packaging",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "MORTH & IRC 67",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Requirement",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Informatory Sign Board",
+                "Shape: Rectangular / Custom",
+                "Base Material: ACP / Aluminium / GI Sheet",
+                "Reflective Grade: Engineer Grade / HIP / DG",
+                "Printing Type: UV Digital / Screen Printing",
+                "Mounting: Pole Mounted / Overhead Structure",
+                "Durability: 7-10 Years Outdoor",
+                "Compliance: MORTH & IRC 67",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "High-intensity reflective visibility",
+                "Clear and legible directional content",
+                "Weather-resistant and UV-protected materials",
+                "Corrosion-resistant metal structure",
+                "Long outdoor durability",
+                "Custom sizes and mounting options"
+              ],
+              advantages: [
+                "Improves road navigation and traffic flow",
+                "Enhances public wayfinding efficiency",
+                "Supports infrastructure and smart city development",
+                "Reduces congestion and confusion",
+                "Trusted Informatory Sign Board Manufacturers – YNM Safety",
+                "Meets government and international road safety standards"
+              ]
+            },
+            
+            features: [
+              "High-intensity reflective visibility",
+              "Clear and legible directional content",
+              "Weather-resistant and UV-protected materials",
+              "Corrosion-resistant metal structure",
+              "Long outdoor durability",
+              "Custom sizes and mounting options"
+            ],
+            
+            advantages: [
+              "Improves road navigation and traffic flow",
+              "Enhances public wayfinding efficiency",
+              "Supports infrastructure and smart city development",
+              "Reduces congestion and confusion",
+              "Trusted Informatory Sign Board Manufacturers – YNM Safety",
+              "Meets government and international road safety standards"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Roads & Highways",
+                description: "Informatory sign boards provide clear route and destination guidance.",
+                image: "/assets/ynm-safety-informatory-roads-highways.jpg",
+                details: "Reflective traffic guidance boards manufactured by YNM Safety ensure high visibility and improved highway safety compliance."
+              },
+              {
+                id: "app2",
+                title: "Transportation Hubs",
+                description: "Informatory sign boards guide passengers within airports, metro stations, and bus terminals.",
+                image: "/assets/ynm-safety-informatory-transportation-hubs.jpg",
+                details: "As experienced Signages Manufacturers, YNM Safety delivers durable wayfinding signage for efficient passenger movement."
+              },
+              {
+                id: "app3",
+                title: "Commercial Spaces",
+                description: "Informatory sign boards enhance navigation in malls and office complexes.",
+                image: "/assets/ynm-safety-informatory-commercial-spaces.jpg",
+                details: "High-quality signage improves visitor experience and public information access."
+              },
+              {
+                id: "app4",
+                title: "Educational Institutions",
+                description: "Directional sign boards improve campus navigation.",
+                image: "/assets/ynm-safety-informatory-educational-institutions.jpg",
+                details: "Reflective informatory signage ensures safe and organized movement inside school and university premises."
+              },
+              {
+                id: "app5",
+                title: "Hospitals & Healthcare Facilities",
+                description: "Informatory sign boards guide patients and visitors efficiently.",
+                image: "/assets/ynm-safety-informatory-hospitals-healthcare-centers.jpg",
+                details: "Clear and durable signage enhances operational efficiency in healthcare environments."
+              },
+              {
+                id: "app6",
+                title: "Public & Government Buildings",
+                description: "Informatory sign boards support public guidance and compliance.",
+                image: "/assets/ynm-safety-informatory-public-government-buildings.jpg",
+                details: "YNM Safety manufactures long-lasting signage solutions for civic and administrative infrastructure."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Roads & Highways",
+                short: "Informatory sign boards provide clear route and destination guidance.",
+                hover: "Reflective traffic guidance boards manufactured by YNM Safety ensure high visibility and improved highway safety compliance.",
+                image: "/assets/ynm-safety-informatory-roads-highways.jpg"
+              },
+              {
+                title: "Transportation Hubs",
+                short: "Informatory sign boards guide passengers within airports, metro stations, and bus terminals.",
+                hover: "As experienced Signages Manufacturers, YNM Safety delivers durable wayfinding signage for efficient passenger movement.",
+                image: "/assets/ynm-safety-informatory-transportation-hubs.jpg"
+              },
+              {
+                title: "Commercial Spaces",
+                short: "Informatory sign boards enhance navigation in malls and office complexes.",
+                hover: "High-quality signage improves visitor experience and public information access.",
+                image: "/assets/ynm-safety-informatory-commercial-spaces.jpg"
+              },
+              {
+                title: "Educational Institutions",
+                short: "Directional sign boards improve campus navigation.",
+                hover: "Reflective informatory signage ensures safe and organized movement inside school and university premises.",
+                image: "/assets/ynm-safety-informatory-educational-institutions.jpg"
+              },
+              {
+                title: "Hospitals & Healthcare Facilities",
+                short: "Informatory sign boards guide patients and visitors efficiently.",
+                hover: "Clear and durable signage enhances operational efficiency in healthcare environments.",
+                image: "/assets/ynm-safety-informatory-hospitals-healthcare-centers.jpg"
+              },
+              {
+                title: "Public & Government Buildings",
+                short: "Informatory sign boards support public guidance and compliance.",
+                hover: "YNM Safety manufactures long-lasting signage solutions for civic and administrative infrastructure.",
+                image: "/assets/ynm-safety-informatory-public-government-buildings.jpg"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder - can be updated later)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Informatory Sign Board Market Growth | YNM Safety",
+              description: "The global signage market — which includes informational sign boards used for wayfinding, directions, and public information — was valued at over USD ~50 billion around 2025. This reflects strong historical growth driven by expanding urban infrastructure and commercial development.\n\nIn recent years, increasing investments in retail development, transportation hubs, and smart city initiatives have significantly boosted demand for informational signage. Looking ahead, the global signage market is projected to nearly double to approximately USD ~97 billion by 2035, growing at an estimated CAGR of ~6.3%. This indicates strong long-term financial growth and increasing global demand for informatory sign boards.",
+              cagr: "6.3%",
+              growthFactors: [
+                "Urbanization & Infrastructure Development",
+                "Rising Public Safety & Compliance Requirements",
+                "Growth in Retail & Commercial Spaces",
+                "Tourism & Hospitality Sector Expansion",
+                "Technological Advancements in Signage Materials",
+                "Expansion of Educational & Healthcare Facilities"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$50B",
+                projectedMarketSize: "$97B",
+                currentYear: "2025",
+                projectedYear: "2035",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2025", value: 50 },
+                { year: "2027", value: 56 },
+                { year: "2029", value: 63 },
+                { year: "2031", value: 71 },
+                { year: "2033", value: 84 },
+                { year: "2035", value: 97 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States of America", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["United Kingdom", "France", "Germany", "Ireland", "Italy", "Netherlands"]
+                },
+                {
+                  name: "Asia",
+                  countries: ["India", "Philippines", "Singapore", "United Arab Emirates"]
+                },
+                {
+                  name: "Oceania",
+                  countries: ["Australia", "New Zealand"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures informatory sign boards through a controlled, quality-driven process to ensure high visibility, structural strength, durability, and compliance with national and international road safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Design & Artwork Preparation",
+                description: "The process begins with preparing the design layout as per IRC guidelines. The size, font style, colour combination, arrow marks, and symbols are finalized. The artwork is created using design software to ensure proper spacing, readability, and compliance with traffic standards."
+              },
+              {
+                step: "02",
+                title: "Selection of Raw Materials",
+                description: "High-quality aluminium sheets (2mm–3mm thickness) are selected for manufacturing. Aluminium is preferred due to its lightweight nature, corrosion resistance, and long service life. Retro-reflective sheeting of engineering grade or high-intensity grade is also chosen based on project requirements."
+              },
+              {
+                step: "03",
+                title: "Cutting of Aluminium Sheet",
+                description: "The aluminium sheet is cut into the required rectangular or square size using CNC cutting machines or hydraulic shearing machines. Accurate cutting ensures proper dimensions and uniform shape."
+              },
+              {
+                step: "04",
+                title: "Edge Bending / Flanging",
+                description: "After cutting, the edges of the sign board are bent (usually 25mm border) using a bending machine. This flanging process increases structural strength and removes sharp edges for safety."
+              },
+              {
+                step: "05",
+                title: "Surface Cleaning & Pre-Treatment",
+                description: "The surface of the aluminium sheet is cleaned using degreasing chemicals to remove oil, dust, and impurities. Proper surface preparation ensures strong adhesion of reflective sheeting and long-lasting performance."
+              },
+              {
+                step: "06",
+                title: "Application of Retro-Reflective Sheeting",
+                description: "Retro-reflective sheeting is laminated onto the aluminium surface using roller lamination machines. The sheeting provides high visibility during nighttime and low-light conditions."
+              },
+              {
+                step: "07",
+                title: "Printing of Text & Symbols",
+                description: "Directional arrows, place names, facility symbols, and other information are printed using UV printing, screen printing, or plotter-cut vinyl pasting. Standard colours such as white text on blue/green background are applied as per traffic norms."
+              },
+              {
+                step: "08",
+                title: "Curing & Finishing",
+                description: "The board is kept for proper curing to allow inks and adhesives to bond firmly. Final finishing ensures smooth surface appearance and clean edges."
+              },
+              {
+                step: "09",
+                title: "Fixing of Back Support & Clamps",
+                description: "MS/GI brackets and clamps are fixed on the backside of the sign board for pole mounting. Proper alignment ensures stability after installation."
+              },
+              {
+                step: "10",
+                title: "Quality Inspection & Dispatch",
+                description: "Each informatory sign board is checked for reflectivity, colour accuracy, dimensional precision, adhesion strength, and overall finishing. After quality approval, the boards are packed carefully with protective covering and dispatched to the site."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              hasToggle: false,
+              basePriceINR: 350,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹350 per sq. ft",
+              bulkDiscounts: [
+                { minQuantity: 5, discount: 3 },
+                { minQuantity: 10, discount: 5 },
+                { minQuantity: 20, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "18,000 Units",
+              productionSpeed: "1,500 Units",
+              qualityStandards: "MORTH & IRC 67",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "morth",
+                title: "MoRTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-informatory-roads-highways.jpg",
+              "/assets/ynm-safety-informatory-transportation-hubs.jpg",
+              "/assets/ynm-safety-informatory-commercial-spaces.jpg",
+              "/assets/ynm-safety-informatory-educational-institutions.jpg",
+              "/assets/ynm-safety-informatory-hospitals-healthcare-centers.jpg",
+              "/assets/ynm-safety-informatory-public-government-buildings.jpg"
+            ]
+          },
+          {
+            id: "sg12",
+            slug: "place-identification-boards-manufacturers",
+            name: "Place Identification Boards",
+            shortDesc: "High-visibility and durable place identification boards manufactured by YNM Safety, trusted Signages Manufacturers delivering reliable landmark naming, navigation, and infrastructure signage solutions globally.",
+            desc: "High-visibility place identification boards for highways, transportation hubs, commercial spaces, and public infrastructure. Reliable landmark naming and navigation signage solutions.",
+            image: "/assets/ynm-safety-place-roads-highways.jpg",
+            heroImage: "/assets/ynm-safety-place-roads-highways.jpg",
+            specs: ["High-intensity reflective visibility", "Weather-resistant materials", "7-10 years outdoor durability", "MORTH & IRC 67 compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Place Identification Boards Manufacturers | YNM Safety",
+              description: "YNM Safety is a leading Place Identification Boards Manufacturers brand delivering high-visibility landmark, location, and navigation signages for highways, transportation hubs, commercial spaces, and public infrastructure worldwide. Trusted YNM Safety manufacturers and signages manufacturers in India.",
+              keywords: "place identification boards manufacturers, place identification sign board manufacturers, ynm safety, ynm, ynm safety manufacturers, signages manufacturers, landmark sign board manufacturers, road place identification board supplier, navigation signage manufacturers india, public place name board manufacturers, reflective place sign board exporter, infrastructure signage manufacturers",
+              slug: "/place-identification-boards-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading Place Identification Boards Manufacturers and professional Signages Manufacturers specializing in high-visibility landmark naming and navigation signage solutions. Our place identification boards are designed to clearly identify locations, landmarks, institutions, commercial properties, and public infrastructure.\n\nAs trusted YNM Safety manufacturers, we produce reflective and weather-resistant place identification sign boards that ensure maximum visibility in day and night conditions. Our Hyderabad-based manufacturing facility supports customized production for highways, transportation hubs, smart city initiatives, and international infrastructure projects.",
+            detailedDescription: "YNM Safety is one of the leading Place Identification Boards Manufacturers and professional Signages Manufacturers specializing in high-visibility landmark naming and navigation signage solutions. Our place identification boards are designed to clearly identify locations, landmarks, institutions, commercial properties, and public infrastructure.\n\nAs trusted YNM Safety manufacturers, we produce reflective and weather-resistant place identification sign boards that ensure maximum visibility in day and night conditions. Our Hyderabad-based manufacturing facility supports customized production for highways, transportation hubs, smart city initiatives, and international infrastructure projects.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Place Identification Boards" },
+              { label: "Shape", value: "Rectangular / Custom" },
+              { label: "Base Material", value: "ACP / Aluminium / GI Sheet" },
+              { label: "Reflective Grade", value: "Engineer Grade / HIP / DG" },
+              { label: "Printing Type", value: "UV Digital / Screen Printing" },
+              { label: "Mounting", value: "Pole Mounted / Structure Mounted" },
+              { label: "Durability", value: "7-10 Years Outdoor" },
+              { label: "Compliance", value: "MORTH & IRC 67" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard Protective Packaging",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "MORTH & IRC 67",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Requirement",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Place Identification Boards",
+                "Shape: Rectangular / Custom",
+                "Base Material: ACP / Aluminium / GI Sheet",
+                "Reflective Grade: Engineer Grade / HIP / DG",
+                "Printing Type: UV Digital / Screen Printing",
+                "Mounting: Pole Mounted / Structure Mounted",
+                "Durability: 7-10 Years Outdoor",
+                "Compliance: MORTH & IRC 67",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "High-intensity reflective visibility",
+                "Clear and legible location naming",
+                "Weather-resistant and UV-protected surface",
+                "Corrosion-resistant metal structure",
+                "Long outdoor service life",
+                "Custom size and mounting options"
+              ],
+              advantages: [
+                "Enhances public navigation and wayfinding",
+                "Improves landmark visibility and identification",
+                "Supports urban infrastructure development",
+                "Reduces confusion in public and commercial areas",
+                "Trusted Place Identification Boards Manufacturers – YNM Safety",
+                "Meets government and international road safety standards"
+              ]
+            },
+            
+            features: [
+              "High-intensity reflective visibility",
+              "Clear and legible location naming",
+              "Weather-resistant and UV-protected surface",
+              "Corrosion-resistant metal structure",
+              "Long outdoor service life",
+              "Custom size and mounting options"
+            ],
+            
+            advantages: [
+              "Enhances public navigation and wayfinding",
+              "Improves landmark visibility and identification",
+              "Supports urban infrastructure development",
+              "Reduces confusion in public and commercial areas",
+              "Trusted Place Identification Boards Manufacturers – YNM Safety",
+              "Meets government and international road safety standards"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Roads & Highways",
+                description: "Place identification boards provide clear landmark and location naming on highways.",
+                image: "/assets/ynm-safety-place-roads-highways.jpg",
+                details: "Reflective location sign boards manufactured by YNM Safety ensure high visibility and improved road navigation compliance."
+              },
+              {
+                id: "app2",
+                title: "Transportation Hubs",
+                description: "Place identification boards guide passengers in airports, metro stations, and bus terminals.",
+                image: "/assets/ynm-safety-place-transportation-hubs.jpg",
+                details: "As experienced Signages Manufacturers, YNM Safety delivers durable wayfinding signage for efficient passenger movement."
+              },
+              {
+                id: "app3",
+                title: "Commercial & Retail Spaces",
+                description: "Place identification boards enhance visibility for commercial buildings and shopping complexes.",
+                image: "/assets/ynm-safety-place-commercial-retail-spaces.jpg",
+                details: "High-quality signage improves brand recognition and location clarity."
+              },
+              {
+                id: "app4",
+                title: "Educational Institutions",
+                description: "Place identification boards support campus identification and navigation.",
+                image: "/assets/ynm-safety-place-educational-institutions.jpg",
+                details: "Reflective signage ensures clear visibility of institutional names and buildings."
+              },
+              {
+                id: "app5",
+                title: "Hospitals & Healthcare Facilities",
+                description: "Place identification boards improve hospital navigation and building identification.",
+                image: "/assets/ynm-safety-place-hospitals-healthcare-facilities.jpg",
+                details: "Durable signage enhances visitor experience and operational efficiency."
+              },
+              {
+                id: "app6",
+                title: "Tourism & Hospitality",
+                description: "Place identification boards highlight landmarks and hospitality establishments.",
+                image: "/assets/ynm-safety-place-tourism-hospitality.jpg",
+                details: "YNM Safety manufacturers provide visually clear signage for tourism destinations and hotels."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Roads & Highways",
+                short: "Place identification boards provide clear landmark and location naming on highways.",
+                hover: "Reflective location sign boards manufactured by YNM Safety ensure high visibility and improved road navigation compliance.",
+                image: "/assets/ynm-safety-place-roads-highways.jpg"
+              },
+              {
+                title: "Transportation Hubs",
+                short: "Place identification boards guide passengers in airports, metro stations, and bus terminals.",
+                hover: "As experienced Signages Manufacturers, YNM Safety delivers durable wayfinding signage for efficient passenger movement.",
+                image: "/assets/ynm-safety-place-transportation-hubs.jpg"
+              },
+              {
+                title: "Commercial & Retail Spaces",
+                short: "Place identification boards enhance visibility for commercial buildings and shopping complexes.",
+                hover: "High-quality signage improves brand recognition and location clarity.",
+                image: "/assets/ynm-safety-place-commercial-retail-spaces.jpg"
+              },
+              {
+                title: "Educational Institutions",
+                short: "Place identification boards support campus identification and navigation.",
+                hover: "Reflective signage ensures clear visibility of institutional names and buildings.",
+                image: "/assets/ynm-safety-place-educational-institutions.jpg"
+              },
+              {
+                title: "Hospitals & Healthcare Facilities",
+                short: "Place identification boards improve hospital navigation and building identification.",
+                hover: "Durable signage enhances visitor experience and operational efficiency.",
+                image: "/assets/ynm-safety-place-hospitals-healthcare-facilities.jpg"
+              },
+              {
+                title: "Tourism & Hospitality",
+                short: "Place identification boards highlight landmarks and hospitality establishments.",
+                hover: "YNM Safety manufacturers provide visually clear signage for tourism destinations and hotels.",
+                image: "/assets/ynm-safety-place-tourism-hospitality.jpg"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder - can be updated later)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Place Identification Boards Market Growth | YNM Safety",
+              description: "The global signage market — which includes place identification boards used for landmark naming, directions, and navigation — was valued at approximately USD 45–52 billion during 2023–2025. This reflects steady historical growth driven by expanding commercial spaces, urban infrastructure development, and increasing public communication needs.\n\nLooking ahead, the overall signage market is projected to grow to approximately USD 68–97 billion by the early 2030s. This growth is supported by smart city initiatives, enhanced wayfinding systems, and rising global infrastructure investments.",
+              cagr: "6.5%",
+              growthFactors: [
+                "Tourism & Hospitality Growth",
+                "Retail & Commercial Space Expansion",
+                "Government & Educational Infrastructure Development",
+                "Technological Advancements in Reflective Materials",
+                "Public Awareness & Safety Compliance",
+                "Transportation & Public Space Expansion"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$50B",
+                projectedMarketSize: "$85B",
+                currentYear: "2025",
+                projectedYear: "2032",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2023", value: 45 },
+                { year: "2025", value: 52 },
+                { year: "2027", value: 60 },
+                { year: "2029", value: 70 },
+                { year: "2031", value: 80 },
+                { year: "2032", value: 85 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Indonesia", "Vietnam"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Russia"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates (UAE)", "Saudi Arabia", "South Africa"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures place identification boards through a controlled, quality-driven process to ensure high visibility, structural strength, durability, and compliance with national and international road safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Design & Layout Preparation",
+                description: "The process begins with preparing the artwork as per IRC standards. The board size, font style, letter height, spacing, bilingual or trilingual text, and color combination (green/blue background with white letters) are finalized to ensure clear readability from long distances."
+              },
+              {
+                step: "02",
+                title: "Selection of Raw Materials",
+                description: "High-quality aluminum sheets (2mm–3mm thickness) are selected for durability and corrosion resistance. Retro-reflective sheeting (engineering grade or high-intensity grade) is chosen to provide excellent night-time visibility."
+              },
+              {
+                step: "03",
+                title: "Cutting of Aluminum Sheet",
+                description: "The aluminum sheet is cut into the required rectangular size using CNC cutting or hydraulic shearing machines. Precision cutting ensures uniform dimensions and smooth edges."
+              },
+              {
+                step: "04",
+                title: "Edge Bending / Flanging",
+                description: "The edges of the board are bent (usually 25mm border) using a bending machine. This flanging process improves structural strength and prevents sharp edges."
+              },
+              {
+                step: "05",
+                title: "Surface Cleaning & Pre-Treatment",
+                description: "The aluminum surface is cleaned using degreasing chemicals to remove dust, oil, and impurities. Proper surface preparation ensures strong adhesion of reflective sheeting and long-lasting performance."
+              },
+              {
+                step: "06",
+                title: "Application of Retro-Reflective Sheeting",
+                description: "Retro-reflective sheeting is laminated onto the aluminum surface using a roller lamination machine. This step ensures high reflectivity for better visibility during night driving and adverse weather conditions."
+              },
+              {
+                step: "07",
+                title: "Printing of Place Names & Borders",
+                description: "Place names, arrows, and additional information are printed using UV printing, screen printing, or plotter-cut vinyl pasting. Multilingual text is carefully aligned to maintain clarity and readability."
+              },
+              {
+                step: "08",
+                title: "Curing & Finishing",
+                description: "The board is kept for proper curing to allow adhesives and inks to bond firmly. Final finishing ensures a smooth surface and professional appearance."
+              },
+              {
+                step: "09",
+                title: "Fixing of Back Support & Mounting Clamps",
+                description: "GI/MS brackets and clamps are fixed at the backside for pole mounting. Proper reinforcement ensures stability in high-wind areas."
+              },
+              {
+                step: "10",
+                title: "Quality Inspection & Dispatch",
+                description: "Each place identification board is inspected for reflectivity, color accuracy, size precision, adhesion strength, and overall finish. After approval, boards are packed with protective covering and dispatched safely."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              hasToggle: false,
+              basePriceINR: 380,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹380 per sq. ft",
+              bulkDiscounts: [
+                { minQuantity: 5, discount: 3 },
+                { minQuantity: 10, discount: 5 },
+                { minQuantity: 20, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "3,600 Units",
+              productionSpeed: "300 Units",
+              qualityStandards: "MORTH & IRC 67",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "morth",
+                title: "MoRTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-place-roads-highways.jpg",
+              "/assets/ynm-safety-place-transportation-hubs.jpg",
+              "/assets/ynm-safety-place-commercial-retail-spaces.jpg",
+              "/assets/ynm-safety-place-educational-institutions.jpg",
+              "/assets/ynm-safety-place-hospitals-healthcare-facilities.jpg",
+              "/assets/ynm-safety-place-tourism-hospitality.jpg"
+            ]
+          },
+          {
+            id: "sg13",
+            slug: "advance-direction-boards-manufacturers",
+            name: "Advance Direction Boards",
+            shortDesc: "High-visibility and durable advance direction boards manufactured by YNM Safety, trusted Signages Manufacturers delivering reliable highway arrow guidance and traffic navigation signage solutions globally.",
+            desc: "High-visibility advance direction boards for highways, expressways, toll plazas, and smart city infrastructure. Reliable highway arrow guidance and traffic navigation signage solutions.",
+            image: "/assets/ynm-safety-adb-highways-expressways.webp",
+            heroImage: "/assets/ynm-safety-adb-highways-expressways.webp",
+            specs: ["High-intensity reflective", "Weather-resistant", "7-10 years durability", "MORTH & IRC 67 compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Advance Direction Boards Manufacturers | YNM Safety",
+              description: "YNM Safety is a leading Advance Direction Boards Manufacturers brand delivering high-visibility highway arrow and overhead direction signages for expressways, toll plazas, and smart city infrastructure worldwide. Trusted YNM Safety manufacturers and signages manufacturers in India.",
+              keywords: "advance direction boards manufacturers, advance direction arrow board manufacturers, ynm safety, ynm, ynm safety manufacturers, signages manufacturers, highway direction board supplier, overhead gantry sign board manufacturers, reflective advance direction boards, traffic arrow board manufacturers india, expressway direction signage supplier, infrastructure signage exporters",
+              slug: "/advance-direction-boards-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading Advance Direction Boards Manufacturers and professional Signages Manufacturers specializing in highway arrow boards and overhead traffic direction signage. Advance direction boards provide early route guidance, lane positioning instructions, and directional information for drivers approaching junctions, toll plazas, and major intersections.\n\nAs trusted YNM Safety manufacturers, we produce reflective advance direction boards engineered for maximum visibility in both daytime and nighttime driving conditions. Our Hyderabad-based manufacturing facility supports customized production for highways, expressways, airport connectivity roads, and international infrastructure projects.",
+            detailedDescription: "YNM Safety is one of the leading Advance Direction Boards Manufacturers and professional Signages Manufacturers specializing in highway arrow boards and overhead traffic direction signage. Advance direction boards provide early route guidance, lane positioning instructions, and directional information for drivers approaching junctions, toll plazas, and major intersections.\n\nAs trusted YNM Safety manufacturers, we produce reflective advance direction boards engineered for maximum visibility in both daytime and nighttime driving conditions. Our Hyderabad-based manufacturing facility supports customized production for highways, expressways, airport connectivity roads, and international infrastructure projects.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Advance Direction Boards" },
+              { label: "Shape", value: "Rectangular / Arrow / Gantry Mounted" },
+              { label: "Base Material", value: "ACP / Aluminium / GI Sheet" },
+              { label: "Reflective Grade", value: "Engineer Grade / HIP / DG" },
+              { label: "Printing Type", value: "UV Digital / Screen Printing" },
+              { label: "Mounting", value: "Pole Mounted / Overhead Structure" },
+              { label: "Durability", value: "7-10 Years Outdoor" },
+              { label: "Compliance", value: "MORTH & IRC 67" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard Protective Packaging",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "MORTH, IRC 67",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Requirement",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Advance Direction Boards",
+                "Shape: Rectangular / Arrow / Gantry Mounted",
+                "Base Material: ACP / Aluminium / GI Sheet",
+                "Reflective Grade: Engineer Grade / HIP / DG",
+                "Printing Type: UV Digital / Screen Printing",
+                "Mounting: Pole Mounted / Overhead Structure",
+                "Durability: 7-10 Years Outdoor",
+                "Compliance: MORTH & IRC 67",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "High-intensity reflective visibility",
+                "Clear arrow and directional guidance",
+                "Weather-resistant and UV-protected surface",
+                "Corrosion-resistant metal structure",
+                "Long outdoor durability",
+                "Custom sizes and gantry mounting options"
+              ],
+              advantages: [
+                "Improves traffic flow and lane discipline",
+                "Reduces sudden lane changes and accident risks",
+                "Enhances navigation efficiency on highways",
+                "Supports smart transportation systems",
+                "Trusted Advance Direction Boards Manufacturers – YNM Safety",
+                "Meets government and international road safety standards"
+              ]
+            },
+            
+            features: [
+              "High-intensity reflective visibility",
+              "Clear arrow and directional guidance",
+              "Weather-resistant and UV-protected surface",
+              "Corrosion-resistant metal structure",
+              "Long outdoor durability",
+              "Custom sizes and gantry mounting options"
+            ],
+            
+            advantages: [
+              "Improves traffic flow and lane discipline",
+              "Reduces sudden lane changes and accident risks",
+              "Enhances navigation efficiency on highways",
+              "Supports smart transportation systems",
+              "Trusted Advance Direction Boards Manufacturers – YNM Safety",
+              "Meets government and international road safety standards"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Highways & Expressways",
+                description: "Advance direction boards provide early exit and route guidance.",
+                image: "/assets/ynm-safety-adb-highways-expressways.webp",
+                details: "Reflective arrow boards manufactured by YNM Safety ensure clear long-distance visibility for high-speed traffic conditions."
+              },
+              {
+                id: "app2",
+                title: "Urban Roads & City Junctions",
+                description: "Advance direction boards assist in city traffic management.",
+                image: "/assets/ynm-safety-adb-urban-roads-city-junctions.webp",
+                details: "Durable signage improves lane positioning and reduces congestion at busy intersections."
+              },
+              {
+                id: "app3",
+                title: "Toll Plazas",
+                description: "Advance direction boards guide vehicles into appropriate toll lanes.",
+                image: "/assets/ynm-safety-adb-toll-plazas.webp",
+                details: "Clear arrow signage enhances smooth toll operations and traffic discipline."
+              },
+              {
+                id: "app4",
+                title: "Industrial Areas",
+                description: "Advance direction boards regulate internal vehicle movement.",
+                image: "/assets/ynm-safety-adb-industrial-areas.webp",
+                details: "High-visibility signage improves logistics flow and operational safety."
+              },
+              {
+                id: "app5",
+                title: "Airport & Port Connectivity Roads",
+                description: "Advance direction boards guide vehicles toward terminals and cargo areas.",
+                image: "/assets/ynm-safety-adb-airport-port-connectivity-roads.webp",
+                details: "Overhead signage solutions ensure efficient traffic movement in high-volume connectivity zones."
+              },
+              {
+                id: "app6",
+                title: "Ring Roads & Bypasses",
+                description: "Advance direction boards assist long-distance drivers.",
+                image: "/assets/ynm-safety-adb-ring-roads-bypasses.webp",
+                details: "Reflective gantry-mounted boards improve navigation accuracy on high-speed bypass corridors."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Highways & Expressways",
+                short: "Advance direction boards provide early exit and route guidance.",
+                hover: "Reflective arrow boards manufactured by YNM Safety ensure clear long-distance visibility for high-speed traffic conditions.",
+                image: "/assets/ynm-safety-adb-highways-expressways.webp"
+              },
+              {
+                title: "Urban Roads & City Junctions",
+                short: "Advance direction boards assist in city traffic management.",
+                hover: "Durable signage improves lane positioning and reduces congestion at busy intersections.",
+                image: "/assets/ynm-safety-adb-urban-roads-city-junctions.webp"
+              },
+              {
+                title: "Toll Plazas",
+                short: "Advance direction boards guide vehicles into appropriate toll lanes.",
+                hover: "Clear arrow signage enhances smooth toll operations and traffic discipline.",
+                image: "/assets/ynm-safety-adb-toll-plazas.webp"
+              },
+              {
+                title: "Industrial Areas",
+                short: "Advance direction boards regulate internal vehicle movement.",
+                hover: "High-visibility signage improves logistics flow and operational safety.",
+                image: "/assets/ynm-safety-adb-industrial-areas.webp"
+              },
+              {
+                title: "Airport & Port Connectivity Roads",
+                short: "Advance direction boards guide vehicles toward terminals and cargo areas.",
+                hover: "Overhead signage solutions ensure efficient traffic movement in high-volume connectivity zones.",
+                image: "/assets/ynm-safety-adb-airport-port-connectivity-roads.webp"
+              },
+              {
+                title: "Ring Roads & Bypasses",
+                short: "Advance direction boards assist long-distance drivers.",
+                hover: "Reflective gantry-mounted boards improve navigation accuracy on high-speed bypass corridors.",
+                image: "/assets/ynm-safety-adb-ring-roads-bypasses.webp"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder - can be updated later)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Advance Direction Boards Market Growth | YNM Safety",
+              description: "The Advance Direction (Arrow) Boards market has shown steady financial growth, with global revenue reaching approximately USD 1.02 billion in 2024. Growth has been supported by infrastructure expansion, increasing road safety regulations, and strong demand from traffic management and construction sectors.\n\nLooking ahead, industry forecasts project the market to expand at a CAGR of approximately 5.2%–7% into the early 2030s. By 2033, total market valuation is expected to reach approximately USD 1.5–2 billion+, reflecting stronger future financial growth driven by smart, IoT-enabled traffic solutions and rising infrastructure investments worldwide.",
+              cagr: "5.2-7%",
+              growthFactors: [
+                "Urbanization & Smart City Development",
+                "Transportation Expansion",
+                "Increased Road Safety Regulations",
+                "Tourism & Hospitality Growth",
+                "Technological Advancements in Traffic Management"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.02B",
+                projectedMarketSize: "$1.5-2B+",
+                currentYear: "2024",
+                projectedYear: "2033",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "50,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 0.85 },
+                { year: "2022", value: 0.90 },
+                { year: "2023", value: 0.96 },
+                { year: "2024", value: 1.02 },
+                { year: "2025", value: 1.10 },
+                { year: "2026", value: 1.20 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Indonesia", "Vietnam"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Russia"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates", "Saudi Arabia", "South Africa"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 11 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures advance direction boards through a controlled, quality-driven process to ensure high visibility, structural strength, durability, and compliance with MORTH and IRC 67 standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Design & Layout Planning",
+                description: "The process begins with preparing the artwork according to IRC guidelines. The board size, letter height, arrow positioning, bilingual/trilingual text, and spacing are carefully designed to ensure readability from long distances at high speeds."
+              },
+              {
+                step: "02",
+                title: "Selection of Raw Materials",
+                description: "High-grade aluminium sheets (2mm–3mm thickness) are selected for panel fabrication due to their lightweight and corrosion-resistant properties. For large ADB boards, multiple aluminium panels may be joined together. Retro-reflective sheeting (engineering grade, high-intensity grade, or diamond grade) is chosen based on project requirements."
+              },
+              {
+                step: "03",
+                title: "Cutting of Aluminium Panels",
+                description: "Aluminium sheets are cut into required rectangular sizes using CNC cutting or shearing machines. For large boards, multiple sheets are precisely cut to allow proper alignment during panel joining."
+              },
+              {
+                step: "04",
+                title: "Edge Bending / Flanging",
+                description: "The edges of each panel are bent (usually 25mm–30mm border) using a bending machine. This flanging process increases strength and eliminates sharp edges."
+              },
+              {
+                step: "05",
+                title: "Frame Fabrication & Panel Joining",
+                description: "For large Advance Direction Boards, a strong MS/GI support frame is fabricated. Aluminium panels are riveted or bolted onto the frame to create a single large signage structure capable of withstanding wind loads."
+              },
+              {
+                step: "06",
+                title: "Surface Cleaning & Pre-Treatment",
+                description: "The aluminium surface is cleaned using chemical degreasers to remove dust, oil, and impurities. Proper pre-treatment ensures strong bonding of reflective sheeting."
+              },
+              {
+                step: "07",
+                title: "Application of Retro-Reflective Sheeting",
+                description: "Retro-reflective sheeting is laminated onto the aluminium panels using roller lamination machines. This ensures high visibility during nighttime and adverse weather conditions."
+              },
+              {
+                step: "08",
+                title: "Printing of Directional Information",
+                description: "Place names, route numbers, arrows, exit symbols, and distances are printed using UV printing, screen printing, or plotter-cut reflective vinyl. Standard white text on green/blue background is applied as per highway norms."
+              },
+              {
+                step: "09",
+                title: "Curing & Finishing",
+                description: "The board is allowed to cure properly to ensure ink adhesion and long-lasting finish. Final surface inspection is conducted for smoothness and uniform appearance."
+              },
+              {
+                step: "10",
+                title: "Fixing of Mounting Brackets",
+                description: "Heavy-duty GI/MS clamps and brackets are fixed at the backside for pole or gantry mounting. Structural reinforcement is ensured for highway installations."
+              },
+              {
+                step: "11",
+                title: "Quality Inspection & Dispatch",
+                description: "Each Advance Direction Board is checked for reflectivity level, dimensional accuracy, colour standards, adhesion strength, structural stability, and overall finishing. After quality approval, the boards are packed securely and dispatched for installation."
+              }
+            ],
+            
+            // Pricing Information - Toggle between Reflective Part and MS Part
+            pricing: {
+              hasToggle: true,
+              pricingTypes: [
+                {
+                  id: "reflective",
+                  name: "Reflective Part",
+                  description: "Retro reflective sheeting on aluminium panels",
+                  basePriceINR: 420,
+                  unit: "per sq. ft",
+                  icon: "✨"
+                },
+                {
+                  id: "ms-part",
+                  name: "MS Part (Mild Steel)",
+                  description: "Frame structure and steel components",
+                  basePriceINR: 110,
+                  unit: "per kg",
+                  icon: "🔩"
+                }
+              ],
+              // Default pricing for backwards compatibility
+              basePriceINR: 420,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹420 per sq. ft (Reflective Part)",
+              bulkDiscounts: [
+                { minQuantity: 5, discount: 3 },
+                { minQuantity: 10, discount: 5 },
+                { minQuantity: 20, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "3,600 units",
+              productionSpeed: "300 units",
+              qualityStandards: "MORTH & IRC 67",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "morth",
+                title: "MORTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-adb-highways-expressways.webp",
+              "/assets/ynm-safety-adb-urban-roads-city-junctions.webp",
+              "/assets/ynm-safety-adb-toll-plazas.webp",
+              "/assets/ynm-safety-adb-industrial-areas.webp",
+              "/assets/ynm-safety-adb-airport-port-connectivity-roads.webp",
+              "/assets/ynm-safety-adb-ring-roads-bypasses.webp"
             ]
           }
         ]

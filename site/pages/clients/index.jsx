@@ -34,21 +34,21 @@ export default function ClientsPage() {
       <Head>
         <title>Our Clients - YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Trusted by leading companies and institutions across India and globally. See our client portfolio and partnerships." />
-        <link rel="canonical" href="https://www.ynmsafety.com/clients" />
+        <link rel="canonical" href="https://ynmsafety.com/clients" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ynmsafety.com/clients" />
+        <meta property="og:url" content="https://ynmsafety.com/clients" />
         <meta property="og:title" content="Our Clients - YNM Safety Pan Global Trade Pvt Ltd" />
         <meta property="og:description" content="Trusted by leading companies and institutions across India and globally. See our client portfolio and partnerships." />
-        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Our Clients - YNM Safety Pan Global Trade Pvt Ltd" />
         <meta name="twitter:description" content="Trusted by leading companies and institutions across India and globally." />
-        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta name="twitter:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - BreadcrumbList */}
         <script
@@ -62,13 +62,13 @@ export default function ClientsPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.ynmsafety.com"
+                  "item": "https://ynmsafety.com"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Clients",
-                  "item": "https://www.ynmsafety.com/clients"
+                  "item": "https://ynmsafety.com/clients"
                 }
               ]
             })

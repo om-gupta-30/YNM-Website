@@ -332,21 +332,21 @@ export default function FabricationPage() {
         <title>Fabrication Products | Hot Thermoplastic Paint Manufacturers | YNM Safety</title>
         <meta name="description" content="YNM Safety manufactures custom steel & metal fabrication products: Solar panel structures, ITMS structures, VMS structures, street light poles, gantry structures, heavy-duty racks, sign board structures. ISO certified manufacturer, exports to 50+ countries." />
         <meta name="keywords" content="metal fabrication, steel fabrication, solar panel structures, ITMS structures, VMS structures, street light poles, gantry structures, cantilever structures, heavy duty racks, sign board structures, camera poles, fabrication manufacturers" />
-        <link rel="canonical" href="https://www.ynmsafety.com/products/fabrication" />
+        <link rel="canonical" href="https://ynmsafety.com/products/fabrication" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ynmsafety.com/products/fabrication" />
+        <meta property="og:url" content="https://ynmsafety.com/products/fabrication" />
         <meta property="og:title" content="Fabrication Products | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
         <meta property="og:description" content="YNM Safety manufactures custom steel & metal fabrication products: Solar panel structures, ITMS structures, VMS structures, street light poles, gantry structures, heavy-duty racks." />
-        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Fabrication Products | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
         <meta name="twitter:description" content="Custom steel & metal fabrication: Solar structures, ITMS, VMS, street light poles, gantry structures, heavy-duty racks." />
-        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta name="twitter:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - BreadcrumbList */}
         <script
@@ -360,19 +360,19 @@ export default function FabricationPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.ynmsafety.com"
+                  "item": "https://ynmsafety.com"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Products",
-                  "item": "https://www.ynmsafety.com/products"
+                  "item": "https://ynmsafety.com/products"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Fabrication",
-                  "item": "https://www.ynmsafety.com/products/fabrication"
+                  "item": "https://ynmsafety.com/products/fabrication"
                 }
               ]
             })
@@ -388,7 +388,7 @@ export default function FabricationPage() {
               "@type": "ItemList",
               "name": "YNM Safety Fabrication Products",
               "description": "Custom steel and metal fabrication products for infrastructure, solar, and industrial applications",
-              "url": "https://www.ynmsafety.com/products/fabrication",
+              "url": "https://ynmsafety.com/products/fabrication",
               "numberOfItems": 34,
               "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Solar Panel Structures"},
@@ -1173,7 +1173,7 @@ export default function FabricationPage() {
 
       {/* Floating Contact Button */}
       <div className="floating-contact">
-        <Link href="/get-quote" className="floating-btn pulse">
+        <Link href="/contact" className="floating-btn pulse">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
           </svg>

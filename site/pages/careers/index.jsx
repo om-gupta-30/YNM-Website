@@ -352,21 +352,21 @@ export default function CareersPage() {
       <Head>
         <title>Careers | YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Join YNM Safety. Explore career opportunities in manufacturing, quality control, export, and sales. Build your career with us." />
-        <link rel="canonical" href="https://www.ynmsafety.com/careers" />
+        <link rel="canonical" href="https://ynmsafety.com/careers" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ynmsafety.com/careers" />
+        <meta property="og:url" content="https://ynmsafety.com/careers" />
         <meta property="og:title" content="Careers | YNM Safety Pan Global Trade Pvt Ltd" />
         <meta property="og:description" content="Join YNM Safety. Explore career opportunities in manufacturing, quality control, export, and sales. Build your career with us." />
-        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Careers | YNM Safety Pan Global Trade Pvt Ltd" />
         <meta name="twitter:description" content="Join YNM Safety. Explore career opportunities in manufacturing, quality control, export, and sales." />
-        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta name="twitter:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - JobPosting */}
         <script
@@ -377,7 +377,7 @@ export default function CareersPage() {
               "@type": "WebPage",
               "name": "Careers at YNM Safety",
               "description": "Explore career opportunities at YNM Safety Pan Global Trade Pvt Ltd",
-              "url": "https://www.ynmsafety.com/careers",
+              "url": "https://ynmsafety.com/careers",
               "mainEntity": {
                 "@type": "ItemList",
                 "name": "Open Positions",
@@ -418,13 +418,13 @@ export default function CareersPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.ynmsafety.com"
+                  "item": "https://ynmsafety.com"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Careers",
-                  "item": "https://www.ynmsafety.com/careers"
+                  "item": "https://ynmsafety.com/careers"
                 }
               ]
             })

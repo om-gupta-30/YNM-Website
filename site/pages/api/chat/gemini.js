@@ -39,8 +39,9 @@ function cleanupCache() {
   }
 }
 
-// Run cleanup every 5 minutes
-setInterval(cleanupCache, 5 * 60 * 1000);
+// Run cleanup every 5 minutes (.unref() so it doesn't block next build from exiting)
+const cleanupTimer = setInterval(cleanupCache, 5 * 60 * 1000);
+if (cleanupTimer.unref) cleanupTimer.unref();
 
 export default async function handler(req, res) {
   // Set CORS headers
@@ -214,7 +215,6 @@ CONTACT:
 WEBSITE PAGES:
 - /products - all products
 - /products/fabrication - 34 fabrication products
-- /get-quote - request quotation
 - /contact - contact form
 - /careers - job applications
 - /about - company story

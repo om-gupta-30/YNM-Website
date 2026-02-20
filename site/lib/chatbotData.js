@@ -2,11 +2,11 @@
 export const faqData = [
   {
     question: "What products do you manufacture?",
-    answer: "YNM Safety is a leading manufacturer and exporter of road safety and infrastructure products:\n\n**1. Road Marking Paints** (We are top thermoplastic road marking paint manufacturers in India)\n- Hot Thermoplastic Road Marking Paint - YNM Safety hot thermoplastic paints manufacturer\n- Cold Plastic Road Marking Paint - YNM Safety cold thermoplastic paints manufacturer\n- Waterborne Airfield Marking Paints (ICAO/FAA compliant)\n- Water Base Kerb Paint - YNM Safety water base kerb paint manufacturer\n- Oil Base Kerb Paint - YNM Safety oil base kerb paint manufacturer\n- Enamel Paint for industrial applications\n\n**2. Bitumen**\n- Bitumen VG 40 for highway construction\n\n**3. Metal Beam Crash Barriers**\n- W Beam Crash Barrier\n- Double W Beam Crash Barriers\n- Thrie Beam Crash Barriers\n- Roller Beam Crash Barriers\n- End Terminals & Crash Attenuators\n\n**4. Signages**\n- Retro Reflective Gantry Signage\n- Cantilever Signage\n- Canopy Signage\n- Informatory Signage\n\n**5. YNM Safety Fabrication (34+ products)**\n- Solar Panel Structures & Frames\n- Railway Structures\n- GI Dustbins\n- High Mast Poles\n- Bridge Bearings\n- And 30+ more custom fabrication products\n\nAll products are manufactured in-house with strict quality control and exported to 50+ countries."
+    answer: "YNM Safety manufactures a comprehensive range of road safety and infrastructure products:\n\n**🎨 Road Marking Paints** (Top Manufacturer in India)\n• Hot Thermoplastic Road Marking Paint\n• Cold Plastic Paint (MMA-based)\n• Waterborne Airfield Marking Paints (ICAO/FAA compliant)\n• Oil & Water Base Kerb Paints\n• Enamel Paints\n\n**🛡️ Metal Beam Crash Barriers**\n• W Beam Crash Barrier\n• Double W Beam Crash Barriers\n• Thrie Beam Crash Barriers\n• Roller Beam Crash Barriers\n• End Terminals & Crash Attenuators\n\n**🚧 Highway Signages**\n• Retro Reflective Gantry Signage\n• Cantilever Signage\n• Mandatory Sign Boards (Octagonal/Circular)\n• Cautionary Sign Boards (Triangle)\n\n**⚙️ Bitumen Products**\n• Bitumen VG 40 (IS 73:2013 compliant)\n\n**🏭 Custom Fabrication (34+ Products)**\n• Solar Panel Structures\n• Railway Structures\n• High Mast Poles\n• Bridge Bearings & more\n\n✅ All products are ISO 9001:2015 certified and exported to 50+ countries."
   },
   {
     question: "What is your contact information?",
-    answer: "**Contact YNM Safety:**\n\nPhone: +91 96765 75770 / +91 90002 62013\nEmail: sales@ynmsafety.com\n\n**Office Address:**\nSurvey, 84P, Gowra Fountain Head, 4th Floor,\nSuite 401 A, Patrika Nagar, Madhapur,\nHyderabad, Telangana 500081\n\n**Business Hours:** Monday to Saturday, 10 AM to 6 PM IST\n\n**Social Media:**\n- LinkedIn: linkedin.com/company/ynmsafety\n- Instagram: @ynm.safety\n- Facebook: YNM Safety"
+    answer: "**📞 Contact YNM Safety:**\n\n**Phone:**\n• +91 96765 75770\n• +91 90002 62013\n\n**Email:** sales@ynmsafety.com\n\n**🏢 Office Address:**\nSurvey 84P, Gowra Fountain Head, 4th Floor,\nSuite 401 A, Patrika Nagar, Madhapur,\nHyderabad, Telangana 500081, India\n\n**🕐 Business Hours:**\nMonday to Saturday: 10 AM - 6 PM IST\nSunday: Closed\n\n**🌐 Website:** https://ynmsafety.com\n\n**Follow Us:**\n• LinkedIn: linkedin.com/company/ynmsafety\n• Instagram: @ynm.safety\n• Facebook: YNM Safety\n\nWe typically respond within 24 hours on business days."
   },
   {
     question: "What are your business hours?",
@@ -26,7 +26,7 @@ export const faqData = [
   },
   {
     question: "How can I get a quote?",
-    answer: "You can get a quote in multiple ways:\n\n1. **Email:** sales@ynmsafety.com\n2. **Phone:** +91 96765 75770 / +91 90002 62013\n3. **Website:** Fill out the Get Quote form at ynmsafety.com/get-quote\n4. **WhatsApp:** Coming soon!\n\nWe offer competitive **FOB & CIF pricing** for all products with export documentation support."
+    answer: "You can get a quote in multiple ways:\n\n1. **Email:** sales@ynmsafety.com\n2. **Phone:** +91 96765 75770 / +91 90002 62013\n3. **Website:** Fill out the Contact form at ynmsafety.com/contact\n4. **WhatsApp:** Coming soon!\n\nWe offer competitive **FOB & CIF pricing** for all products with export documentation support."
   },
   {
     question: "Who is the director of YNM Safety?",
@@ -34,7 +34,7 @@ export const faqData = [
   },
   {
     question: "Tell me about YNM Safety",
-    answer: "**YNM Safety Pan Global Trade Pvt Ltd** is India's leading manufacturer and exporter of road safety and infrastructure products.\n\n**Founded:** 2013\n**Headquarters:** Hyderabad, Telangana, India\n**Team Size:** 200+ members\n\n**What We Manufacture:**\n- YNM Safety hot thermoplastic paints manufacturer - top hot thermoplastic paint manufacturers in India\n- YNM Safety cold thermoplastic paints manufacturer - leading cold plastic paint manufacturers in India\n- YNM Safety water base kerb paint manufacturer\n- YNM Safety oil base kerb paint manufacturer\n- YNM Safety fabrication - custom steel & metal fabrication\n- Metal beam crash barriers, signages, bitumen\n\n**Why Choose YNM Safety:**\n- Best thermoplastic paint price per kg\n- Thermoplastic paint vendor with 50+ export countries\n- Thermoplastic road marking paint manufacturers in India with ISO 9001:2015 certification\n\n**Key Milestones:**\n- 2013: Foundation\n- 2015: ISO 9001:2015 Certification\n- 2018: Global expansion to 50+ countries\n- 2023: 10 years of excellence, 500+ projects\n- 2026: PAN India expansion\n\n**Our Focus:** Quality, compliance, innovation, and customer satisfaction."
+    answer: "**YNM Safety Pan Global Trade Pvt Ltd** is India's leading manufacturer and exporter of road safety and infrastructure products.\n\n**Founded:** 2013 (13+ Years of Excellence)\n**Headquarters:** Hyderabad, Telangana, India\n**Managing Director:** Mr. Rishuu Jaiin\n**Team Size:** 200+ professionals\n\n**What We Manufacture:**\n- Hot Thermoplastic Road Marking Paint (Top manufacturer in India)\n- Cold Plastic Paint (MMA-based, high durability)\n- Waterborne Airfield Marking Paints (ICAO/FAA compliant)\n- Metal Beam Crash Barriers (W Beam, Thrie Beam, Roller)\n- Highway Signages (Gantry, Cantilever, Mandatory, Cautionary)\n- Custom Metal Fabrication (34+ products)\n\n**Why Choose YNM Safety:**\n✅ ISO 9001:2015 Certified\n✅ Exported to 50+ countries worldwide\n✅ 500+ projects successfully completed\n✅ MoRTH, IRC, AASHTO compliant products\n✅ Competitive FOB & CIF pricing\n\n**Key Milestones:**\n- 2013: Company Foundation\n- 2015: ISO 9001:2015 Certification\n- 2018: Global expansion to 50+ countries\n- 2023: 10 years of excellence\n- 2026: PAN India expansion\n\n**Our Focus:** Quality, compliance, innovation, and customer satisfaction."
   },
   {
     question: "Tell me about your crash barriers",
@@ -50,7 +50,7 @@ export const faqData = [
   },
   {
     question: "What signages do you manufacture?",
-    answer: "YNM Safety manufactures **road and highway signages:**\n\n**1. Retro Reflective Gantry Signage**\n- Large overhead signs for highways\n- High-grade retro-reflective sheeting\n- Complies with IRC 67 and MoRTH standards\n\n**2. Cantilever Signage**\n- Single-arm mounted signs for expressways\n- Space-efficient design\n- High visibility\n\n**Also Available:**\n- Canopy Signage\n- Informatory Signage (direction boards)\n- Warning Signs\n- Regulatory Signs\n\n**Applications:**\n- National highways & expressways\n- Urban roads & city streets\n- Toll plazas\n- Industrial areas\n- Airports & railway stations"
+    answer: "YNM Safety manufactures **road and highway signages:**\n\n**1. Retro Reflective Gantry Signage**\n- Large overhead signs for highways\n- High-grade retro-reflective sheeting\n- Complies with IRC 67 and MoRTH standards\n\n**2. Cantilever Signage**\n- Single-arm mounted signs for expressways\n- Space-efficient design\n- High visibility\n\n**3. Mandatory Sign Board (Octagonal)**\n- High-visibility octagonal mandatory sign boards\n- ACP / Aluminium / GI Sheet base material\n- Engineer Grade / HIP / DG reflective grades\n- 7-10 years outdoor durability\n- MORTH & IRC 67 compliant\n\n**4. Mandatory Sign Board (Circular)**\n- High-visibility circular mandatory sign boards\n- Durable and reflective traffic signage\n- MORTH & IRC 67 compliant\n\n**5. Cautionary Sign Boards (Triangle)**\n- Triangular warning sign boards\n- Alert drivers about curves, speed breakers, and hazards\n- High-intensity reflective visibility\n- 7-10 years outdoor durability\n- MORTH & IRC 67 compliant\n\n**Also Available:**\n- Canopy Signage\n- Informatory Signage (direction boards)\n- Warning Signs\n- Regulatory Signs\n\n**Applications:**\n- National highways & expressways\n- Urban roads & city streets\n- Toll plazas\n- Industrial areas\n- Airports & railway stations\n- Construction sites\n- Educational institutions\n- Residential complexes"
   },
   {
     question: "What is bitumen VG 40?",
@@ -58,11 +58,11 @@ export const faqData = [
   },
   {
     question: "What are your key clients?",
-    answer: "YNM Safety works with **leading organizations** including:\n\n**Infrastructure & Construction:**\n- GMR Group\n- GVK\n- NCC Limited\n- BSCPL Infrastructure\n- Navayuga Group\n- GVPR Engineers\n\n**Energy & Power:**\n- NTPC\n- PowerGrid Corporation\n- IndianOil Corporation\n\n**Real Estate:**\n- Prestige Group\n- Aparna Constructions\n- Alekhya Homes\n\n**Corporate & IT:**\n- Tech Mahindra\n- Hyundai Glovis\n- NPCI\n\n**Entertainment:**\n- Ramoji Film City\n\n...and many more government bodies and private developers."
+    answer: "YNM Safety partners with **leading organizations** across India:\n\n**🏗️ Infrastructure & Construction:**\n• GMR Group\n• NCC Limited\n• Navayuga Group\n• BSCPL Infrastructure\n• GVPR Engineers\n\n**⚡ Energy & Power:**\n• NTPC\n• PowerGrid Corporation\n• IndianOil Corporation\n\n**🏢 Real Estate:**\n• Prestige Group\n• Aparna Constructions\n• Alekhya Homes\n\n**💼 Corporate & IT:**\n• Tech Mahindra\n• HCL\n• NPCI\n\n**🎬 Entertainment:**\n• Ramoji Film City\n\n...and many more government bodies, highway authorities, and private developers across 50+ countries."
   },
   {
     question: "Are you hiring?",
-    answer: "Yes! YNM Safety is always looking for talented individuals.\n\n**Open Departments:**\n- Operations & Production\n- Sales & Marketing\n- IT & Technology\n- Purchase & Procurement\n- Accounts & Finance\n- HR & Administration\n\n**How to Apply:**\n1. Visit our Careers page: ynmsafety.com/careers\n2. Submit your resume (PDF format)\n3. We'll contact you for interviews\n\n**Benefits:**\n- Competitive salary\n- Growth opportunities\n- Learning environment\n- Work with industry leaders"
+    answer: "**Yes!** YNM Safety is growing and always looking for talented professionals.\n\n**🏢 Open Departments:**\n• Operations & Production\n• Sales & Marketing\n• IT & Technology\n• Purchase & Procurement\n• Accounts & Finance\n• HR & Administration\n\n**📝 How to Apply:**\n1. Visit: ynmsafety.com/careers\n2. Submit your resume (PDF format)\n3. Our HR team will contact you\n\n**✨ Benefits:**\n• Competitive salary packages\n• Career growth opportunities\n• Learning & development programs\n• Work with industry leaders\n• Collaborative work environment\n\nJoin our team of 200+ professionals!"
   },
   {
     question: "Do you work with foreign companies?",
@@ -83,6 +83,30 @@ export const faqData = [
   {
     question: "What is kerb paint?",
     answer: "YNM Safety manufactures **two types of kerb paints:**\n\n**1. Oil Kerb Base Paint:**\n- Solvent-based formulation\n- High durability\n- Excellent adhesion\n- Weather resistant\n\n**2. Water Kerb Base Paint:**\n- Water-based, eco-friendly\n- Low-VOC\n- Fast-drying\n- Easy application\n\n**Applications:**\n- Kerbs & road edges\n- Traffic islands\n- Loading/unloading zones\n- Bus stops & terminals\n- Factories & warehouses\n- Public spaces\n\n**Colors:** Yellow, White, Black-Yellow stripes\n\nKerb paints improve visibility and traffic safety at road boundaries."
+  },
+  {
+    question: "What is the minimum order quantity?",
+    answer: "**Minimum Order Quantities (MOQ)** vary by product:\n\n**Road Marking Paints:**\n- Hot Thermoplastic: 1 MT (Metric Ton) minimum\n- Cold Plastic: 500 kg minimum\n- Kerb Paint: 200 liters minimum\n\n**Metal Beam Crash Barriers:**\n- W Beam: 100 meters minimum\n- Other barriers: Contact us for MOQ\n\n**Signages:**\n- Flexible MOQ based on project requirements\n\n**Fabrication Products:**\n- Varies by product type\n\n**For Export Orders:**\nWe offer flexible terms for bulk orders with competitive FOB/CIF pricing.\n\nContact us at sales@ynmsafety.com for custom requirements and bulk discounts."
+  },
+  {
+    question: "What is your delivery time?",
+    answer: "**Delivery Timelines:**\n\n**Domestic (India):**\n- Road Marking Paints: 7-15 days\n- Crash Barriers: 15-25 days (depends on quantity)\n- Signages: 10-20 days\n- Fabrication: 15-30 days (custom products)\n\n**International Exports:**\n- FOB Delivery: 15-25 days from order confirmation\n- CIF Delivery: 25-45 days (includes shipping)\n\n**Factors Affecting Delivery:**\n- Order quantity\n- Product customization\n- Destination location\n- Current production schedule\n\nWe provide tracking information and regular updates throughout the delivery process."
+  },
+  {
+    question: "Do you provide installation services?",
+    answer: "**Yes!** YNM Safety offers comprehensive installation support:\n\n**For Crash Barriers:**\n- Site survey and planning\n- Professional installation team\n- Post-installation inspection\n\n**For Road Marking:**\n- Application guidance and training\n- Equipment recommendations\n- On-site supervision (on request)\n\n**For Signages:**\n- Complete installation service\n- Foundation and mounting solutions\n\n**Technical Support:**\n- Product application training\n- Installation manuals\n- Video tutorials\n- On-call technical assistance\n\nContact us for installation quotes and project-specific requirements."
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer: "**Payment Methods Accepted:**\n\n**Domestic Orders:**\n- Bank Transfer (NEFT/RTGS/IMPS)\n- Cheque\n- Demand Draft\n- Letter of Credit (LC)\n\n**Export Orders:**\n- Letter of Credit (LC)\n- Telegraphic Transfer (TT)\n- Wire Transfer\n- Advance Payment\n\n**Payment Terms:**\n- Standard: 50% advance, 50% before dispatch\n- LC: As per LC terms\n- Established clients: Credit terms available\n\n**Currency:**\n- INR for domestic\n- USD/EUR for international\n\nContact our finance team for customized payment arrangements."
+  },
+  {
+    question: "Do you provide product samples?",
+    answer: "**Yes, we provide samples!**\n\n**Sample Availability:**\n- Road marking paint samples (small quantities)\n- Color cards and specification sheets\n- Crash barrier material samples\n- Signage material samples\n\n**Sample Policy:**\n- Small samples: Free of charge\n- Larger samples: Nominal charges may apply\n- Shipping: Customer bears shipping costs for international samples\n\n**How to Request:**\n1. Email: sales@ynmsafety.com\n2. Subject: Sample Request - [Product Name]\n3. Include: Company name, address, quantity needed\n\nSamples are typically dispatched within 3-5 business days."
+  },
+  {
+    question: "What warranty do you offer?",
+    answer: "**YNM Safety Product Warranties:**\n\n**Hot Thermoplastic Paint:**\n- Service life: 2-3 years (depending on traffic)\n- Warranty: Performance as per MoRTH/IRC specs\n\n**Cold Plastic Paint:**\n- Service life: 5-7 years\n- Warranty: As per product specifications\n\n**Metal Beam Crash Barriers:**\n- Hot-dip galvanizing warranty: 15+ years\n- Structural warranty as per IRC 119/IS 15465\n\n**Signages:**\n- Reflective sheeting: 7-10 years (grade dependent)\n- Structure: Manufacturing defect warranty\n\n**Our Commitment:**\n- All products comply with Indian and international standards\n- Quality testing certificates provided\n- Technical support throughout product lifecycle"
   }
 ];
 
@@ -106,7 +130,10 @@ export const productCatalog = {
   ],
   signages: [
     { id: "s1", name: "Retro Reflective Gantry Signage", image: "/assets/ynm-safety-manufactures-of-gantry-signages.png", desc: "Large overhead highway signage with high visibility" },
-    { id: "s2", name: "Cantilever Signage", image: "/assets/ynm-safety-cantilever.png", desc: "Single-arm mounted expressway signage" }
+    { id: "s2", name: "Cantilever Signage", image: "/assets/ynm-safety-cantilever.png", desc: "Single-arm mounted expressway signage" },
+    { id: "s3", name: "Mandatory Sign Board (Octagonal)", image: "/assets/ynm-safety-osmsb-road-traffic-management.jpg", desc: "High-visibility octagonal mandatory sign boards for road and industrial safety" },
+    { id: "s4", name: "Mandatory Sign Board (Circular)", image: "/assets/ynm-safety-csmsb-construction-sites.jpg", desc: "High-visibility circular mandatory sign boards for roads and industries" },
+    { id: "s5", name: "Cautionary Sign Boards (Triangle)", image: "/assets/ynm-safety-tscsb-roads-highways.jpg", desc: "Triangular warning sign boards for road hazards, curves, and speed breakers" }
   ],
   fabrication: [
     { id: "f1", name: "Solar Panel Structures", image: "/assets/solar-fab.png", desc: "YNM Safety fabrication - structural frames for solar panel installations" },
@@ -137,10 +164,27 @@ export const companyInfo = {
   teamSize: "200+",
   countriesExported: "50+",
   projectsCompleted: "500+",
+  yearsExperience: "13+",
   certifications: ["ISO 9001:2015"],
   standards: ["MoRTH", "IRC", "IS", "ASTM", "BS", "AASHTO", "ICAO", "FAA", "DGCA"],
   workingHours: "Monday to Saturday, 10 AM to 6 PM IST",
   address: "Survey, 84P, Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081",
   phone: ["+91 96765 75770", "+91 90002 62013"],
-  email: "sales@ynmsafety.com"
+  email: "sales@ynmsafety.com",
+  website: "https://ynmsafety.com",
+  tagline: "Manufacturing & Export Excellence Since 2013",
+  keyProducts: [
+    "Hot Thermoplastic Road Marking Paint",
+    "Cold Plastic Paint (MMA)",
+    "Waterborne Airfield Marking Paints",
+    "W Beam & Thrie Beam Crash Barriers",
+    "Retro Reflective Signages",
+    "Bitumen VG 40",
+    "Custom Metal Fabrication (34+ products)"
+  ],
+  keyClients: [
+    "GMR Group", "NTPC", "PowerGrid", "IndianOil", 
+    "Tech Mahindra", "Prestige Group", "NCC Limited",
+    "Ramoji Film City", "Aparna Constructions"
+  ]
 };

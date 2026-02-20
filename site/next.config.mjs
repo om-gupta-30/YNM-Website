@@ -25,8 +25,8 @@ const nextConfig = {
   experimental: {
     // Optimize CSS loading
     optimizeCss: false, // Keep false to avoid crashing
-    // Optimize package imports for smaller bundles (reduces unused JS)
-    optimizePackageImports: ['framer-motion', 'lucide-react', '@heroicons/react'],
+    // Temporarily disabled optimizePackageImports to test build
+    // optimizePackageImports: ['framer-motion', 'lucide-react', '@heroicons/react'],
   },
   
   // Efficient cache lifetimes for static assets (PageSpeed: "Use efficient cache lifetimes")
@@ -38,11 +38,12 @@ const nextConfig = {
         key: 'Content-Security-Policy',
         value: [
           "default-src 'self'",
-          "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://maps.googleapis.com",
+          "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://maps.googleapis.com https://www.google.com https://www.gstatic.com https://googleads.g.doubleclick.net https://*.doubleclick.net",
           "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
           "img-src 'self' data: blob: https: http:",
           "font-src 'self' https://fonts.gstatic.com",
-          "connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com https://flagcdn.com",
+          "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://generativelanguage.googleapis.com https://flagcdn.com https://www.google.com https://googleads.g.doubleclick.net https://*.doubleclick.net",
+          "frame-src 'self' https://www.google.com https://www.googletagmanager.com https://*.doubleclick.net",
           "frame-ancestors 'self'",
           "base-uri 'self'",
           "form-action 'self'",
@@ -68,8 +69,11 @@ const nextConfig = {
         source: '/:path((?!_next|assets|fonts|api).*)',
         headers: [
           // max-age=300 (5 min browser cache for SEO), s-maxage=0 (no CDN cache for instant deploy)
-          { key: 'Cache-Control', value: 'public, max-age=300, s-maxage=0, stale-while-revalidate=60' },
+          // must-revalidate forces browsers to check with server when cache expires
+          { key: 'Cache-Control', value: 'public, max-age=300, s-maxage=0, must-revalidate, stale-while-revalidate=60' },
           { key: 'Link', value: '</assets/hero-image.webp>; rel=preload; as=image; type=image/webp; fetchpriority=high' },
+          // Vary ensures different browsers/encodings get appropriate cached versions
+          { key: 'Vary', value: 'Accept-Encoding, Accept' },
           ...securityHeaders,
         ],
       },
@@ -125,6 +129,91 @@ const nextConfig = {
         source: '/products/hot-thermoplastic-paint/hot-thermoplastic-paint',
         destination: '/products/hot-thermoplastic-road-marking-paint-manufacturers',
         permanent: true, // 301 redirect - Fix Google indexed incorrect URL
+      },
+      {
+        source: '/get-quote',
+        destination: '/contact',
+        permanent: true, // 301 redirect - Page removed, redirect to contact
+      },
+      {
+        source: '/solution/reflective-signages',
+        destination: '/products/retro-reflective-gantry-signage-manufacturers',
+        permanent: true, // 301 redirect - Old URL structure
+      },
+      {
+        source: '/solution/road-safety-furniture',
+        destination: '/products/w-beam-crash-barrier-manufacturers',
+        permanent: true, // 301 redirect - Old URL structure
+      },
+      {
+        source: '/solution/:path*',
+        destination: '/products',
+        permanent: true, // 301 redirect - Catch all old /solution/ URLs
+      },
+      {
+        source: '/products/road-furniture/median-markers',
+        destination: '/products/fabrication',
+        permanent: true, // 301 redirect - Old product URL
+      },
+      {
+        source: '/products/road-furniture/solar-blinkers',
+        destination: '/products/fabrication',
+        permanent: true, // 301 redirect - Old product URL
+      },
+      {
+        source: '/products/road-furniture/bull-nose-barrier',
+        destination: '/products/w-beam-crash-barrier-manufacturers',
+        permanent: true, // 301 redirect - Old product URL
+      },
+      {
+        source: '/products/road-furniture/anti-glare-screen',
+        destination: '/products/fabrication',
+        permanent: true, // 301 redirect - Old product URL
+      },
+      {
+        source: '/products/road-furniture/:path*',
+        destination: '/products/fabrication',
+        permanent: true, // 301 redirect - Catch all old road-furniture URLs
+      },
+      {
+        source: '/products/retro-reflective-gantry-signage-manufactures',
+        destination: '/products/retro-reflective-gantry-signage-manufacturers',
+        permanent: true, // 301 redirect - Fix typo (manufactures -> manufacturers)
+      },
+      {
+        source: '/products/hot-thermoplastic-road-marking-paint-manufactures',
+        destination: '/products/hot-thermoplastic-road-marking-paint-manufacturers',
+        permanent: true, // 301 redirect - Fix typo (manufactures -> manufacturers)
+      },
+      {
+        source: '/products/parking-safety/cold-applied-plastic-paint',
+        destination: '/products/cold-plastic-paints-manufacturers',
+        permanent: true, // 301 redirect - Old product URL
+      },
+      {
+        source: '/products/parking-safety',
+        destination: '/products/retro-reflective-gantry-signage-manufacturers',
+        permanent: true, // 301 redirect - Old product URL
+      },
+      {
+        source: '/products/parking-safety/:path*',
+        destination: '/products',
+        permanent: true, // 301 redirect - Catch all old parking-safety URLs
+      },
+      {
+        source: '/products/preformed-hot-thermoplastic-paint',
+        destination: '/products/hot-thermoplastic-road-marking-paint-manufacturers',
+        permanent: true, // 301 redirect - Old product URL
+      },
+      {
+        source: '/products/cold-plastic-rumble-marking-paint',
+        destination: '/products/cold-plastic-paints-manufacturers',
+        permanent: true, // 301 redirect - Old product URL
+      },
+      {
+        source: '/products/thrie-beam-metal-crash-barrier',
+        destination: '/products/thrie-beam-crash-barrier-manufacturers',
+        permanent: true, // 301 redirect - Old product URL
       },
     ];
   },

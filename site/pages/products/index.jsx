@@ -102,21 +102,21 @@ export default function ProductsPage() {
         <title>Road Safety Products | Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety - Premium Cold Plastic Paint & Metal Beam Crash Barrier Telangana</title>
         <meta name="description" content="YNM Safety - Best hot thermoplastic paint manufacturers in Hyderabad, Telangana, India. Explore our complete range of road safety products: hot thermoplastic paint, cold plastic paint, metal beam crash barriers (W-beam, Thrie-beam), retro-reflective signages, bitumen. ISO certified hot thermoplastic paint manufacturers in Hyderabad, exporting road safety products to 50+ countries. Top road marking paint suppliers in Telangana." />
         <meta name="keywords" content="best hot thermoplastic paint manufacturers in Hyderabad, hot thermoplastic paint manufacturers in India, hot thermoplastic paint Hyderabad, YNM Safety, YNM, cold plastic paint manufacturers Hyderabad, cold plastic paint manufacturers India, metal beam crash barrier Hyderabad, metal beam crash barrier manufacturers Telangana, w beam crash barrier Hyderabad, thrie beam crash barrier India, road safety products Hyderabad, road signages manufacturers India, retro reflective signages Hyderabad, thermoplastic road marking paint Telangana, highway safety products India, road marking paint manufacturers Hyderabad, crash barrier manufacturers Telangana" />
-        <link rel="canonical" href="https://www.ynmsafety.com/products" />
+        <link rel="canonical" href="https://ynmsafety.com/products" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ynmsafety.com/products" />
+        <meta property="og:url" content="https://ynmsafety.com/products" />
         <meta property="og:title" content="Road Safety Products | Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety Telangana" />
         <meta property="og:description" content="YNM Safety - Best hot thermoplastic paint manufacturers in Hyderabad, Telangana, India. Explore road safety products: hot thermoplastic paint, cold plastic paint, metal beam crash barriers, retro-reflective signages. ISO certified manufacturers exporting to 50+ countries." />
-        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Road Safety Products | Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety Telangana" />
         <meta name="twitter:description" content="YNM Safety - Best hot thermoplastic paint manufacturers in Hyderabad, Telangana, India. Premium hot thermoplastic paint, cold plastic paint, metal beam crash barriers & road safety products. ISO certified, exporting to 50+ countries." />
-        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta name="twitter:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - ItemList for Products */}
         <script
@@ -127,7 +127,7 @@ export default function ProductsPage() {
               "@type": "ItemList",
               "name": "YNM Safety Road Safety Products",
               "description": "Complete range of hot thermoplastic paints, cold plastic paints, metal beam crash barriers, and road signages manufactured by YNM Safety",
-              "url": "https://www.ynmsafety.com/products",
+              "url": "https://ynmsafety.com/products",
               "numberOfItems": 16,
               "itemListElement": [
                 {
@@ -135,49 +135,49 @@ export default function ProductsPage() {
                   "position": 1,
                   "name": "Hot Thermoplastic Road Marking Paint",
                   "description": "Premium hot thermoplastic paint for highway road markings",
-                  "url": "https://www.ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufacturers"
+                  "url": "https://ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufacturers"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Cold Plastic Paint",
                   "description": "High-quality cold plastic paint for road marking applications",
-                  "url": "https://www.ynmsafety.com/products/cold-plastic-paints-manufacturers"
+                  "url": "https://ynmsafety.com/products/cold-plastic-paints-manufacturers"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "W Beam Metal Crash Barrier",
                   "description": "W-beam metal crash barriers for highway safety",
-                  "url": "https://www.ynmsafety.com/products/w-beam-crash-barrier-manufacturers"
+                  "url": "https://ynmsafety.com/products/w-beam-crash-barrier-manufacturers"
                 },
                 {
                   "@type": "ListItem",
                   "position": 4,
                   "name": "Thrie Beam Crash Barrier",
                   "description": "Thrie-beam crash barriers for enhanced road protection",
-                  "url": "https://www.ynmsafety.com/products/thrie-beam-crash-barrier-manufacturers"
+                  "url": "https://ynmsafety.com/products/thrie-beam-crash-barrier-manufacturers"
                 },
                 {
                   "@type": "ListItem",
                   "position": 5,
                   "name": "Double W Beam Crash Barrier",
                   "description": "Double W-beam metal crash barriers for maximum protection",
-                  "url": "https://www.ynmsafety.com/products/double-w-beam-crash-barriers-manufacturers"
+                  "url": "https://ynmsafety.com/products/double-w-beam-crash-barriers-manufacturers"
                 },
                 {
                   "@type": "ListItem",
                   "position": 6,
                   "name": "Retro Reflective Gantry Signage",
                   "description": "Retro-reflective signages for highway gantries",
-                  "url": "https://www.ynmsafety.com/products/retro-reflective-gantry-signage-manufacturers"
+                  "url": "https://ynmsafety.com/products/retro-reflective-gantry-signage-manufacturers"
                 },
                 {
                   "@type": "ListItem",
                   "position": 7,
                   "name": "Cantilever Signage",
                   "description": "Cantilever road signages for traffic guidance",
-                  "url": "https://www.ynmsafety.com/products/cantilever-signage-manufacturers"
+                  "url": "https://ynmsafety.com/products/cantilever-signage-manufacturers"
                 }
               ]
             })
@@ -193,7 +193,7 @@ export default function ProductsPage() {
               "@type": "CollectionPage",
               "name": "Road Safety Products by YNM Safety",
               "description": "Browse our complete collection of hot thermoplastic paints, cold plastic paints, metal beam crash barriers, and road signages",
-              "url": "https://www.ynmsafety.com/products",
+              "url": "https://ynmsafety.com/products",
               "mainEntity": {
                 "@type": "ItemList",
                 "name": "Product Categories",
@@ -221,13 +221,13 @@ export default function ProductsPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.ynmsafety.com"
+                  "item": "https://ynmsafety.com"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Products",
-                  "item": "https://www.ynmsafety.com/products"
+                  "item": "https://ynmsafety.com/products"
                 }
               ]
             })

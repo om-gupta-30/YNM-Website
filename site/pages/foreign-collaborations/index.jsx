@@ -256,21 +256,21 @@ export default function ForeignCollaborationsPage() {
       <Head>
         <title>Global Partnerships | YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Explore partnership opportunities with YNM Safety. Open to international collaborations in manufacturing, distribution, and technology." />
-        <link rel="canonical" href="https://www.ynmsafety.com/foreign-collaborations" />
+        <link rel="canonical" href="https://ynmsafety.com/foreign-collaborations" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ynmsafety.com/foreign-collaborations" />
+        <meta property="og:url" content="https://ynmsafety.com/foreign-collaborations" />
         <meta property="og:title" content="Global Partnerships | YNM Safety Pan Global Trade Pvt Ltd" />
         <meta property="og:description" content="Explore partnership opportunities with YNM Safety. Open to international collaborations in manufacturing, distribution, and technology." />
-        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Global Partnerships | YNM Safety Pan Global Trade Pvt Ltd" />
         <meta name="twitter:description" content="Explore partnership opportunities with YNM Safety. Open to international collaborations." />
-        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta name="twitter:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - BreadcrumbList */}
         <script
@@ -284,13 +284,13 @@ export default function ForeignCollaborationsPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.ynmsafety.com"
+                  "item": "https://ynmsafety.com"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Foreign Collaborations",
-                  "item": "https://www.ynmsafety.com/foreign-collaborations"
+                  "item": "https://ynmsafety.com/foreign-collaborations"
                 }
               ]
             })

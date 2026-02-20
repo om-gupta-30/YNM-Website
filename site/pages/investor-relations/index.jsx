@@ -215,21 +215,21 @@ export default function InvestorRelationsPage() {
       <Head>
         <title>Investor Relations | YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Explore investment opportunities with YNM Safety. Selectively open to partnerships aligned with our vision." />
-        <link rel="canonical" href="https://www.ynmsafety.com/investor-relations" />
+        <link rel="canonical" href="https://ynmsafety.com/investor-relations" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ynmsafety.com/investor-relations" />
+        <meta property="og:url" content="https://ynmsafety.com/investor-relations" />
         <meta property="og:title" content="Investor Relations | YNM Safety Pan Global Trade Pvt Ltd" />
         <meta property="og:description" content="Explore investment opportunities with YNM Safety. Selectively open to partnerships aligned with our vision." />
-        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Investor Relations | YNM Safety Pan Global Trade Pvt Ltd" />
         <meta name="twitter:description" content="Explore investment opportunities with YNM Safety. Selectively open to partnerships." />
-        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta name="twitter:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - BreadcrumbList */}
         <script
@@ -243,13 +243,13 @@ export default function InvestorRelationsPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.ynmsafety.com"
+                  "item": "https://ynmsafety.com"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Investor Relations",
-                  "item": "https://www.ynmsafety.com/investor-relations"
+                  "item": "https://ynmsafety.com/investor-relations"
                 }
               ]
             })

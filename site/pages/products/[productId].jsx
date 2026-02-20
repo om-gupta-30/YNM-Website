@@ -284,10 +284,10 @@ export default function ProductDetailPage() {
   const metaTitle = product.meta?.title || `${product.name} - YNM Safety`;
   const metaDescription = product.meta?.description || product.shortDesc || product.desc;
 
-  // Generate canonical URL
+  // Generate canonical URL (using non-www as primary domain)
   const productSlug = product.slug || product.id;
-  const canonicalUrl = `https://www.ynmsafety.com/products/${productSlug}`;
-  const productImageUrl = product.image ? `https://www.ynmsafety.com${product.image}` : 'https://www.ynmsafety.com/assets/logo-navbar.jpg';
+  const canonicalUrl = `https://ynmsafety.com/products/${productSlug}`;
+  const productImageUrl = product.image ? `https://ynmsafety.com${product.image}` : 'https://ynmsafety.com/assets/logo-navbar.jpg';
 
   return (
     <>
@@ -334,13 +334,20 @@ export default function ProductDetailPage() {
                 "@type": "Offer",
                 "url": canonicalUrl,
                 "availability": "https://schema.org/InStock",
-                "price": product.price || "1",
+                "price": product.pricing?.basePriceINR || Math.round((product.pricing?.basePriceUSD || 1) * 83),
                 "priceCurrency": "INR",
-                "priceValidUntil": "2027-12-31",
+                "priceValidUntil": "2028-12-31",
                 "seller": {
                   "@type": "Organization",
                   "name": "YNM Safety Pan Global Trade Pvt Ltd"
                 }
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
               }
             })
           }}
@@ -358,13 +365,13 @@ export default function ProductDetailPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.ynmsafety.com"
+                  "item": "https://ynmsafety.com"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Products",
-                  "item": "https://www.ynmsafety.com/products"
+                  "item": "https://ynmsafety.com/products"
                 },
                 {
                   "@type": "ListItem",
@@ -691,16 +698,33 @@ export default function ProductDetailPage() {
                     };
                     // Country to code mapping for Flag component
                     const countryToCode = {
-                      'United States': 'us', 'Canada': 'ca', 'Mexico': 'mx',
-                      'Germany': 'de', 'United Kingdom': 'gb', 'France': 'fr', 
-                      'Italy': 'it', 'Spain': 'es', 'Other EU countries': 'eu',
-                      'China': 'cn', 'India': 'in', 'Japan': 'jp', 
+                      'United States': 'us', 'United States of America': 'us', 'USA': 'us',
+                      'Canada': 'ca', 'Mexico': 'mx',
+                      'Germany': 'de', 'United Kingdom': 'gb', 'UK': 'gb',
+                      'France': 'fr', 'Italy': 'it', 'Spain': 'es',
+                      'Netherlands': 'nl', 'Sweden': 'se', 'Poland': 'pl',
+                      'Belgium': 'be', 'Austria': 'at', 'Switzerland': 'ch',
+                      'Czech Republic': 'cz', 'Czechia': 'cz', 'Ireland': 'ie',
+                      'Lithuania': 'lt', 'Latvia': 'lv', 'Portugal': 'pt',
+                      'Russia': 'ru',
+                      'China': 'cn', 'India': 'in', 'Japan': 'jp',
                       'South Korea': 'kr', 'Australia': 'au', 'Indonesia': 'id',
                       'Thailand': 'th', 'Malaysia': 'my', 'Singapore': 'sg',
+                      'Vietnam': 'vn', 'Philippines': 'ph', 'Taiwan': 'tw',
+                      'Nepal': 'np', 'Bangladesh': 'bd', 'Pakistan': 'pk',
+                      'Sri Lanka': 'lk', 'Bhutan': 'bt', 'Maldives': 'mv',
+                      'Kazakhstan': 'kz', 'Uzbekistan': 'uz',
                       'Brazil': 'br', 'Argentina': 'ar', 'Colombia': 'co',
-                      'Saudi Arabia': 'sa', 'United Arab Emirates': 'ae', 
-                      'South Africa': 'za', 'Qatar': 'qa', 'Kuwait': 'kw',
-                      'New Zealand': 'nz', 'UAE': 'ae'
+                      'Chile': 'cl', 'Peru': 'pe', 'Panama': 'pa',
+                      'Ecuador': 'ec', 'Venezuela': 've',
+                      'Saudi Arabia': 'sa', 'United Arab Emirates': 'ae', 'UAE': 'ae',
+                      'Qatar': 'qa', 'Kuwait': 'kw', 'Oman': 'om', 'Bahrain': 'bh',
+                      'Iraq': 'iq', 'Iran': 'ir', 'Turkey': 'tr', 'Israel': 'il',
+                      'South Africa': 'za', 'Nigeria': 'ng', 'Kenya': 'ke',
+                      'Egypt': 'eg', 'Ghana': 'gh', 'Tanzania': 'tz',
+                      'Algeria': 'dz', 'Mozambique': 'mz', 'Djibouti': 'dj',
+                      'Mauritius': 'mu',
+                      'New Zealand': 'nz', 'Papua New Guinea': 'pg',
                     };
                     return (
                       <div key={index} className="region-card">

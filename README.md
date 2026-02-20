@@ -4,22 +4,24 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
+[![Security](https://img.shields.io/badge/Security-Gitleaks-green)](https://github.com/gitleaks/gitleaks)
 
 Modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd** - India's leading manufacturer and exporter of road safety products, hot thermoplastic paints, metal beam crash barriers, highway signages, and precision metal fabrication.
 
-🌐 **Live Website:** [www.ynmsafety.com](https://www.ynmsafety.com)
+**Live Website:** [www.ynmsafety.com](https://www.ynmsafety.com)
 
 ---
 
 ## Features
 
-- **AI-Powered Chatbot** - Google Gemini with company knowledge base
+- **AI-Powered Chatbot** - Google Gemini 2.0 Flash with comprehensive company knowledge base
 - **5 Integrated Forms** - Contact, Careers, Director Appointment, Investor Relations, Foreign Collaborations
-- **Google Sheets Integration** - Automatic data storage
-- **Career Portal** - PDF resume upload with email notifications
-- **50+ Product Catalog** - Road marking paints, crash barriers, signages, 34 fabrication products
+- **Google Sheets Integration** - Automatic form data storage with structured sheets
+- **Career Portal** - PDF resume upload with email notifications to HR
+- **50+ Product Catalog** - Road marking paints, crash barriers, signages, 30+ fabrication products
 - **SEO Optimized** - Schema.org structured data, sitemap, robots.txt
-- **Fully Responsive** - Mobile, tablet, and desktop optimized
+- **Fully Responsive** - Mobile-first design optimized for all devices
+- **Security First** - Gitleaks integration, comprehensive .gitignore, secret scanning
 
 ---
 
@@ -27,22 +29,37 @@ Modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd**
 
 ```
 YNM-website/
-├── .github/workflows/      # GitHub Actions (security scanning)
-├── .gitignore              # Comprehensive ignore rules
-├── .gitleaks.toml          # Security scanning config
-├── deploy-gcp.sh           # GCP Cloud Run deployment script
-├── pre-push-check.sh       # Pre-commit security check
+├── .github/workflows/       # GitHub Actions (security scanning)
+├── .gitignore               # Comprehensive ignore rules
+├── .gitleaks.toml           # Gitleaks secret scanning config
+├── deploy-gcp.sh            # GCP Cloud Run deployment script
+├── pre-push-check.sh        # Pre-push security check
 ├── LICENSE
 ├── README.md
-└── site/                   # Next.js application (deploy root)
-    ├── components/         # React components
-    ├── lib/                # Data & utilities
-    ├── pages/              # Routes & API endpoints
-    │   └── api/            # Backend API routes
-    ├── public/             # Static assets & images
-    ├── styles/             # CSS styles
-    ├── .env.example        # Environment template (safe to commit)
-    ├── Dockerfile          # Docker configuration
+└── site/                    # Next.js application (deploy root)
+    ├── components/          # 18 React UI components
+    ├── contexts/            # React context providers (Language)
+    ├── lib/                 # Data files & utilities
+    │   ├── chatbotData.js   # AI chatbot knowledge base
+    │   ├── productsData.js  # Product catalog data
+    │   └── translations.js  # Multi-language support
+    ├── pages/               # Next.js routes
+    │   ├── api/             # 7 Backend API routes
+    │   ├── about/           # Company information
+    │   ├── careers/         # Job applications
+    │   ├── clients/         # Client showcase
+    │   ├── contact/         # Contact form
+    │   ├── products/        # Product catalog
+    │   └── ...              # Other pages
+    ├── public/              # Static assets
+    │   ├── assets/          # 200+ images (all <100KB)
+    │   ├── certificates/    # Company certificates
+    │   └── fonts/           # Custom fonts
+    ├── styles/              # Global CSS (Tailwind)
+    ├── .env.example         # Environment template (safe)
+    ├── .env.gcp.example     # GCP-specific template (safe)
+    ├── Dockerfile           # Docker configuration
+    ├── cloudbuild.yaml      # GCP Cloud Build config
     └── package.json
 ```
 
@@ -50,16 +67,16 @@ YNM-website/
 
 ## Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| Next.js 15 | React Framework |
-| React 19 | UI Library |
-| Tailwind CSS | Styling |
-| Google Gemini API | AI Chatbot |
-| Google Sheets API | Form Data Storage |
-| Nodemailer | Email Services |
-| Google Analytics | Analytics |
-| reCAPTCHA v2 | Bot Protection |
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Next.js | 15.5 | React Framework (Pages Router) |
+| React | 19.0 | UI Library |
+| Tailwind CSS | 3.4 | Utility-first Styling |
+| Google Gemini | 2.0 Flash | AI Chatbot |
+| Google Sheets API | v4 | Form Data Storage |
+| Nodemailer | 6.x | Email Services |
+| Google Analytics | GA4 | Analytics |
+| reCAPTCHA | v2 | Bot Protection |
 
 ---
 
@@ -73,7 +90,7 @@ YNM-website/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/ynm-website.git
+git clone https://github.com/yourusername/ynm-website.git
 cd ynm-website/site
 
 # Install dependencies
@@ -81,7 +98,7 @@ npm install
 
 # Set up environment variables
 cp .env.example .env
-# Edit .env with your credentials
+# Edit .env with your credentials (see Environment Variables section)
 
 # Run development server
 npm run dev
@@ -126,19 +143,27 @@ Copy `site/.env.example` to `site/.env` and fill in your credentials.
 
 ## Security
 
+This project follows strict security practices to prevent credential leaks.
+
 ### Protected Files (Never Committed)
 
 | Pattern | Status |
 |---------|--------|
-| `.env`, `.env.*` (except .example) | ✓ Gitignored |
-| `*.pem`, `*.key`, `*.p12` | ✓ Gitignored |
-| `credentials.json`, `*-key.json` | ✓ Gitignored |
-| `service-account*.json` | ✓ Gitignored |
+| `.env`, `.env.*` (except .example) | Gitignored |
+| `*.pem`, `*.key`, `*.p12` | Gitignored |
+| `credentials.json`, `*-key.json` | Gitignored |
+| `service-account*.json` | Gitignored |
+
+### Security Tools
+
+- **Gitleaks** - Automated secret scanning (configured in `.gitleaks.toml`)
+- **Pre-push Hook** - Security checks before every push (`./pre-push-check.sh`)
+- **GitHub Actions** - CI/CD security scanning (`.github/workflows/`)
 
 ### Before Pushing to GitHub
 
 ```bash
-# Run security check
+# Run comprehensive security check
 ./pre-push-check.sh
 
 # Verify .env is ignored
@@ -147,6 +172,14 @@ git check-ignore site/.env
 # Check tracked env files (should only show .example files)
 git ls-files | grep '\.env'
 ```
+
+### Deployment Security (Vercel/GCP)
+
+When deploying, **never** commit secrets to git. Instead:
+
+1. **Vercel**: Add environment variables in Project Settings > Environment Variables
+2. **GCP Cloud Run**: Use `--set-env-vars` or Secret Manager
+3. **GitHub Actions**: Use repository secrets for CI/CD
 
 ---
 
@@ -197,7 +230,7 @@ gcloud run deploy ynm-website \
 2. **Bitumen** - VG 40 for highway construction
 3. **Crash Barriers** - W Beam, Double W Beam, Roller Beam
 4. **Signages** - Gantry, Cantilever, Canopy, Informatory
-5. **Fabrication** - 34 products including solar structures, bridge components, scaffolding
+5. **Fabrication** - 30+ products including solar structures, bridge components, scaffolding
 
 ---
 

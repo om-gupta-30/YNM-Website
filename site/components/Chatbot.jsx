@@ -75,7 +75,7 @@ const isOffTopic = (query) => {
   return false; // Default: let API handle it
 };
 
-const OFF_TOPIC_RESPONSE = "I'm the YNM Safety assistant and can only help with questions about our company, products, and services. I can assist you with:\n\n• Road marking paints (thermoplastic, cold plastic, airfield paints)\n• Metal beam crash barriers\n• Highway signages\n• Bitumen products\n• Metal fabrication (34+ products)\n• Export inquiries\n• Quotes and pricing\n• Company information\n\nHow can I help you with YNM Safety today?";
+const OFF_TOPIC_RESPONSE = "I'm specialized in helping with YNM Safety products and services. Here's what I can assist you with:\n\n🎨 **Products:**\n• Road marking paints (Hot Thermoplastic, Cold Plastic)\n• Metal beam crash barriers\n• Highway & traffic signages\n• Bitumen VG 40\n• Custom fabrication (34+ products)\n\n💼 **Services:**\n• Product inquiries & specifications\n• Quotes and pricing\n• Export to 50+ countries\n• Certifications & compliance\n• Installation support\n\nPlease ask me about any of these topics!";
 
 export default function Chatbot() {
   const language = 'en';
@@ -95,14 +95,14 @@ export default function Chatbot() {
   const chatSessionId = useRef(`chat_${Date.now()}`);
   const abortControllerRef = useRef(null);
 
-  // Quick action options
+  // Quick action options - organized by priority
   const quickActions = [
-    { label: "Our Products", query: "What products do you manufacture?", action: null },
-    { label: "Contact Info", query: "What is your contact information?", action: null },
-    { label: "Get Quote", query: "How can I get a quote or pricing?", action: 'quote' },
-    { label: "Export Services", query: "Which countries do you export to?", action: null },
-    { label: "Certifications", query: "What certifications do you have?", action: null },
-    { label: "Location", query: "Where is your office located?", action: null },
+    { label: "🎨 Our Products", query: "What products do you manufacture?", action: null },
+    { label: "💰 Get Quote", query: "How can I get a quote or pricing?", action: 'quote' },
+    { label: "🌍 Export Countries", query: "Which countries do you export to?", action: null },
+    { label: "📞 Contact Us", query: "What is your contact information?", action: null },
+    { label: "✅ Certifications", query: "What certifications do you have?", action: null },
+    { label: "🏭 About YNM", query: "Tell me about YNM Safety", action: null },
   ];
 
   // Cleanup abort controller on unmount
@@ -120,7 +120,7 @@ export default function Chatbot() {
       const savedMessages = localStorage.getItem(`chatbot_messages_${chatSessionId.current}`);
       const initialMessage = {
         id: 1,
-        text: "Hello! 👋 I'm your YNM Safety assistant. I can help you with questions about our products, services, and more. How can I assist you today?",
+        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety products since 2013.\n\nI can help you with:\n• Road marking paints (Hot Thermoplastic, Cold Plastic)\n• Metal Beam Crash Barriers\n• Highway Signages\n• Custom Fabrication\n• Export inquiries to 50+ countries\n\nHow can I assist you today?",
         sender: "bot",
         timestamp: new Date()
       };
@@ -335,7 +335,7 @@ export default function Chatbot() {
       chatSessionId.current = `chat_${Date.now()}`;
       const initialMessage = {
         id: 1,
-        text: "Hello! 👋 I'm your YNM Safety assistant. I can help you with questions about our products, services, and more. How can I assist you today?",
+        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety products since 2013.\n\nI can help you with:\n• Road marking paints (Hot Thermoplastic, Cold Plastic)\n• Metal Beam Crash Barriers\n• Highway Signages\n• Custom Fabrication\n• Export inquiries to 50+ countries\n\nHow can I assist you today?",
         sender: "bot",
         timestamp: new Date()
       };
@@ -767,7 +767,8 @@ export default function Chatbot() {
                 />
               </div>
               <div>
-                <h3>YNM AI Assistant</h3>
+                <h3>YNM Safety Assistant</h3>
+                <p style={{ margin: '2px 0 0', fontSize: '11px', opacity: 0.85 }}>Online • Typically replies instantly</p>
               </div>
             </div>
             <div className="chatbot-header-actions">
@@ -954,7 +955,7 @@ export default function Chatbot() {
             {/* Quick Action Buttons */}
             {showQuickActions && !isTyping && messages.length > 0 && (
               <div className="chatbot-quick-actions">
-                <p className="chatbot-quick-actions-label">Quick questions:</p>
+                <p className="chatbot-quick-actions-label">Popular topics:</p>
                 <div className="chatbot-quick-actions-grid">
                   {quickActions.map((action, index) => (
                     <button

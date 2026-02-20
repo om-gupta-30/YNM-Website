@@ -8,13 +8,27 @@ import { google } from 'googleapis';
 // ==============================================
 // GOOGLE SHEETS CONFIGURATION
 // ==============================================
-const getConfig = () => ({
-  spreadsheetId: process.env.GOOGLE_SHEET_ID,
-  credentials: {
-    client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-  },
-});
+const getConfig = () => {
+  let privateKey = process.env.GOOGLE_PRIVATE_KEY || '';
+  
+  // Handle various formats of private key
+  // Cloud Run might pass it with literal \n or actual newlines
+  if (privateKey.includes('\\n')) {
+    privateKey = privateKey.replace(/\\n/g, '\n');
+  }
+  // Also handle double-escaped newlines
+  if (privateKey.includes('\\\\n')) {
+    privateKey = privateKey.replace(/\\\\n/g, '\n');
+  }
+  
+  return {
+    spreadsheetId: process.env.GOOGLE_SHEET_ID,
+    credentials: {
+      client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+      private_key: privateKey,
+    },
+  };
+};
 
 /**
  * Save form data to a specific sheet tab in the Google Sheet

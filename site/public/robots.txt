@@ -10,4 +10,4 @@ Disallow: /_next/static/
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://www.ynmsafety.com/sitemap.xml
+Sitemap: https://ynmsafety.com/sitemap.xml

@@ -165,21 +165,21 @@ export default function OurDirectorPage() {
       <Head>
         <title>Our Director - YNM Safety Pan Global Trade Pvt Ltd</title>
         <meta name="description" content="Meet Rishuu Jaiin, Managing Director of YNM Safety - leading manufacturer and exporter with a vision for excellence and global expansion." />
-        <link rel="canonical" href="https://www.ynmsafety.com/our-director" />
+        <link rel="canonical" href="https://ynmsafety.com/our-director" />
         
         {/* Open Graph Tags */}
         <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://www.ynmsafety.com/our-director" />
+        <meta property="og:url" content="https://ynmsafety.com/our-director" />
         <meta property="og:title" content="Our Director - YNM Safety Pan Global Trade Pvt Ltd" />
         <meta property="og:description" content="Meet Rishuu Jaiin, Managing Director of YNM Safety - leading manufacturer and exporter with a vision for excellence and global expansion." />
-        <meta property="og:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta property="og:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Our Director - YNM Safety Pan Global Trade Pvt Ltd" />
         <meta name="twitter:description" content="Meet Rishuu Jaiin, Managing Director of YNM Safety - leading manufacturer and exporter." />
-        <meta name="twitter:image" content="https://www.ynmsafety.com/assets/logo-navbar.jpg" />
+        <meta name="twitter:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - Person */}
         <script
@@ -189,7 +189,7 @@ export default function OurDirectorPage() {
               "@context": "https://schema.org",
               "@type": "ProfilePage",
               "name": "Our Director",
-              "url": "https://www.ynmsafety.com/our-director",
+              "url": "https://ynmsafety.com/our-director",
               "mainEntity": {
                 "@type": "Person",
                 "name": "Rishuu Jaiin",
@@ -215,13 +215,13 @@ export default function OurDirectorPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.ynmsafety.com"
+                  "item": "https://ynmsafety.com"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Our Team",
-                  "item": "https://www.ynmsafety.com/our-director"
+                  "item": "https://ynmsafety.com/our-director"
                 }
               ]
             })

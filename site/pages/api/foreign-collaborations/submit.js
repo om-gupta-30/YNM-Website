@@ -13,16 +13,25 @@ export default async function handler(req, res) {
   try {
     const { companyName, contactName, email, country, collaborationType, message, recaptchaToken } = req.body;
 
-    // Verify reCAPTCHA only if token is provided
-    // Token is only sent from allowed production domains
-    if (recaptchaToken && process.env.RECAPTCHA_SECRET_KEY) {
+    // Verify reCAPTCHA - REQUIRED in production
+    if (process.env.RECAPTCHA_SECRET_KEY) {
+      if (!recaptchaToken) {
+        console.log('[ForeignCollab API] reCAPTCHA token missing');
+        return res.status(400).json({ 
+          error: 'Please complete the reCAPTCHA verification.',
+        });
+      }
+      console.log('[ForeignCollab API] Verifying reCAPTCHA token...');
       const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
+      console.log('[ForeignCollab API] reCAPTCHA result:', recaptchaResult.success ? 'success' : 'failed');
       if (!recaptchaResult.success) {
         return res.status(400).json({ 
           error: 'reCAPTCHA verification failed. Please try again.',
           details: recaptchaResult.error 
         });
       }
+    } else {
+      console.log('[ForeignCollab API] RECAPTCHA_SECRET_KEY not set, skipping verification');
     }
 
     // Validation
