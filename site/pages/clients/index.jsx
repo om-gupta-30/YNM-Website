@@ -150,18 +150,18 @@ export default function ClientsPage() {
         .clients-page {
           min-height: 100vh;
           background: linear-gradient(180deg, #F7F3EA 0%, #E6D3A3 100%);
-          padding-top: 100px;
         }
 
         /* Hero Section */
         .clients-hero {
           position: relative;
-          height: 50vh;
           min-height: 400px;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          padding-top: 100px;
+          padding-bottom: 60px;
         }
 
         .clients-hero-bg {
@@ -385,8 +385,17 @@ export default function ClientsPage() {
 
         @media (max-width: 600px) {
           .clients-hero {
-            height: 40vh;
-            min-height: 300px;
+            min-height: auto;
+            padding-top: 80px;
+            padding-bottom: 40px;
+          }
+
+          .clients-hero-content h1 {
+            font-size: clamp(28px, 6vw, 40px);
+          }
+
+          .clients-hero-content p {
+            font-size: 15px;
           }
 
           .clients-grid-section {

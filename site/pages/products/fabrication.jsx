@@ -2124,7 +2124,7 @@ export default function FabricationPage() {
 
         .bento-wide-content {
           flex: 1;
-          min-width: 200px;
+          min-width: 0;
         }
 
         .bento-wide h3 {

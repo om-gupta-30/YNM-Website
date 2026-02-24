@@ -681,18 +681,18 @@ export default function CareersPage() {
         .careers-page {
           min-height: 100vh;
           background: linear-gradient(180deg, #F7F3EA 0%, #E6D3A3 100%);
-          padding-top: 100px;
         }
 
         /* Hero Section */
         .careers-hero {
           position: relative;
-          height: 45vh;
-          min-height: 350px;
+          min-height: 300px;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          padding-top: 100px;
+          padding-bottom: 50px;
         }
 
         .careers-hero-bg {
@@ -1180,6 +1180,20 @@ export default function CareersPage() {
         }
 
         @media (max-width: 768px) {
+          .careers-hero {
+            min-height: auto;
+            padding-top: 80px;
+            padding-bottom: 40px;
+          }
+
+          .careers-hero-content h1 {
+            font-size: clamp(26px, 6vw, 36px);
+          }
+
+          .careers-hero-content p {
+            font-size: 14px;
+          }
+
           .careers-main {
             padding: 40px 16px;
           }

@@ -1664,6 +1664,7 @@ export default function ProductDetailPage({ serverProduct }) {
           position: relative;
           min-height: 500px;
           margin-bottom: 60px;
+          padding-top: 100px;
         }
 
         .product-hero-container {
@@ -2975,6 +2976,7 @@ export default function ProductDetailPage({ serverProduct }) {
           padding: 80px 0;
           background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
           color: white;
+          overflow: hidden;
         }
 
         .product-market-section .product-section-title {
@@ -2994,6 +2996,7 @@ export default function ProductDetailPage({ serverProduct }) {
           grid-template-columns: repeat(4, 1fr);
           gap: 20px;
           margin-bottom: 40px;
+          max-width: 100%;
         }
 
         .market-stat-card {
@@ -3004,6 +3007,8 @@ export default function ProductDetailPage({ serverProduct }) {
           text-align: center;
           border: 2px solid rgba(201, 162, 77, 0.2);
           transition: all 0.3s ease;
+          box-sizing: border-box;
+          overflow: hidden;
         }
 
         .market-stat-card:hover {
@@ -3047,6 +3052,9 @@ export default function ProductDetailPage({ serverProduct }) {
           padding: 30px;
           margin-bottom: 40px;
           border-left: 4px solid #C9A24D;
+          box-sizing: border-box;
+          max-width: 100%;
+          overflow: hidden;
         }
 
         .market-description-box p {
@@ -3054,6 +3062,8 @@ export default function ProductDetailPage({ serverProduct }) {
           line-height: 1.8;
           color: #E6D3A3;
           margin: 0;
+          word-break: break-word;
+          overflow-wrap: break-word;
         }
 
         /* Visualizations Grid */
@@ -3062,6 +3072,8 @@ export default function ProductDetailPage({ serverProduct }) {
           grid-template-columns: repeat(2, 1fr);
           gap: 30px;
           margin-bottom: 40px;
+          max-width: 100%;
+          overflow: hidden;
         }
 
         .viz-card {
@@ -3070,6 +3082,9 @@ export default function ProductDetailPage({ serverProduct }) {
           border-radius: 20px;
           padding: 30px;
           border: 2px solid rgba(201, 162, 77, 0.2);
+          box-sizing: border-box;
+          max-width: 100%;
+          overflow: hidden;
         }
 
         .viz-card h3 {
@@ -3259,6 +3274,81 @@ export default function ProductDetailPage({ serverProduct }) {
 
           .market-stat-card .stat-value {
             font-size: 24px;
+          }
+
+          .product-market-section {
+            padding: 50px 0;
+          }
+
+          .viz-card {
+            padding: 18px 14px;
+            border-radius: 14px;
+          }
+
+          .viz-card h3 {
+            font-size: 15px;
+            margin-bottom: 16px;
+          }
+
+          .pie-chart {
+            width: 140px;
+            height: 140px;
+          }
+
+          .pie-legend .legend-item {
+            gap: 8px;
+            font-size: 12px;
+          }
+
+          .pie-legend .legend-color {
+            width: 10px;
+            height: 10px;
+          }
+
+          .bar-chart-container {
+            height: 160px;
+            padding: 0 4px;
+          }
+
+          .bar-item {
+            max-width: 36px;
+          }
+
+          .bar-fill {
+            width: 24px;
+            padding-top: 4px;
+          }
+
+          .bar-fill .bar-value {
+            font-size: 7px;
+          }
+
+          .bar-item .bar-label {
+            font-size: 9px;
+            margin-top: 6px;
+          }
+
+          .market-viz-grid {
+            gap: 20px;
+          }
+
+          .market-description-box {
+            padding: 18px 14px;
+          }
+
+          .growth-factors h3 {
+            font-size: 17px;
+          }
+
+          .factor-item {
+            padding: 14px 12px;
+            font-size: 13px;
+            gap: 10px;
+          }
+
+          .factor-number {
+            font-size: 15px;
+            min-width: 24px;
           }
         }
 
@@ -4938,6 +5028,8 @@ export default function ProductDetailPage({ serverProduct }) {
         @media (max-width: 768px) {
           .product-hero-section {
             margin-bottom: 40px;
+            padding-top: 70px;
+            min-height: auto;
           }
 
           .product-hero-image {
@@ -5111,11 +5203,32 @@ export default function ProductDetailPage({ serverProduct }) {
 
           .stats-dashboard-grid {
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 14px;
           }
 
           .stat-card {
-            padding: 30px 20px;
+            padding: 20px 12px;
+          }
+
+          .stat-card-icon {
+            width: 52px;
+            height: 52px;
+          }
+
+          .stat-card-icon svg {
+            width: 26px;
+            height: 26px;
+          }
+
+          .stat-card .stat-value {
+            font-size: clamp(18px, 5vw, 26px);
+            word-break: break-word;
+            overflow-wrap: break-word;
+          }
+
+          .stat-card .stat-label {
+            font-size: 10px;
+            letter-spacing: 0.05em;
           }
 
           .success-stories-grid {
@@ -5187,6 +5300,68 @@ export default function ProductDetailPage({ serverProduct }) {
 
           .availability-stats {
             grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .product-section-container {
+            padding: 0 14px;
+          }
+
+          .stats-dashboard-grid {
+            gap: 10px;
+          }
+
+          .stat-card {
+            padding: 16px 10px;
+            border-radius: 14px;
+          }
+
+          .stat-card-icon {
+            width: 44px;
+            height: 44px;
+          }
+
+          .stat-card-icon svg {
+            width: 22px;
+            height: 22px;
+          }
+
+          .stat-card .stat-value {
+            font-size: clamp(16px, 4.5vw, 22px);
+          }
+
+          .stat-card .stat-label {
+            font-size: 9px;
+          }
+
+          .featured-price-card {
+            padding: 28px 18px;
+            border-radius: 16px;
+          }
+
+          .market-visual {
+            padding: 24px 14px;
+          }
+
+          .pie-chart-container {
+            padding: 0 10px;
+          }
+
+          .currency-selector {
+            padding: 20px 14px;
+          }
+
+          .factory-coming-soon {
+            padding: 30px 16px;
+          }
+
+          .certificate-card {
+            padding: 24px 14px;
+          }
+
+          .product-cta-section {
+            padding: 40px 16px;
           }
         }
       `}</style>

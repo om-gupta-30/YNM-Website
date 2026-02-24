@@ -1299,7 +1299,7 @@ export default function RoadSafetyFurnituresPage() {
           flex-wrap: wrap;
         }
 
-        .bento-wide-content { flex: 1; min-width: 200px; }
+        .bento-wide-content { flex: 1; min-width: 0; }
         .bento-wide h3 { font-size: 20px; font-weight: 700; color: #74060D; margin: 0 0 6px; }
         .bento-wide p { font-size: 14px; color: #6a5a5a; margin: 0; }
         .export-flags { font-size: 24px; letter-spacing: 8px; }

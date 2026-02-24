@@ -445,12 +445,13 @@ export default function ProductsPage() {
         /* Hero Section */
         .products-hero {
           position: relative;
-          height: 50vh;
           min-height: 400px;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          padding-top: 100px;
+          padding-bottom: 60px;
         }
 
         .products-hero-bg {
@@ -888,8 +889,9 @@ export default function ProductsPage() {
 
         @media (max-width: 768px) {
           .products-hero {
-            height: 40vh;
-            min-height: 300px;
+            min-height: auto;
+            padding-top: 90px;
+            padding-bottom: 40px;
           }
 
           .products-categories-section {
@@ -937,8 +939,8 @@ export default function ProductsPage() {
 
         @media (max-width: 480px) {
           .products-hero {
-            height: 35vh;
-            min-height: 250px;
+            padding-top: 80px;
+            padding-bottom: 30px;
           }
 
           .products-hero-content h1 {
@@ -962,6 +964,15 @@ export default function ProductsPage() {
 
           .tab-icon {
             font-size: 16px;
+          }
+
+          .products-grid-section {
+            padding-left: 14px;
+            padding-right: 14px;
+          }
+
+          .product-card-content {
+            padding: 16px;
           }
         }
       `}</style>

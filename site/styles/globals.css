@@ -32,8 +32,14 @@ html {
 
 /* Prevent horizontal overflow globally */
 html, body {
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
+}
+
+#app-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* ========================================
@@ -6642,15 +6648,115 @@ div > canvas:only-child {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .ft-content {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 16px 12px 14px;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 10px;
+    padding: 16px 14px 14px;
   }
-  
+
+  .ft-brand {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .ft-logo-wrap-new {
+    margin-bottom: 8px;
+  }
+
+  .ft-logo-new {
+    max-width: 80px;
+    height: auto;
+  }
+
+  .ft-tagline {
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ft-social {
+    gap: 8px;
+    margin: 4px 0;
+  }
+
+  .ft-social-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ft-social-link svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .ft-copyright {
+    font-size: 0.5rem;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
   .ft-mascot {
-    grid-column: 1;
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 0;
+  }
+
+  .ft-mascot-image-nobg {
+    max-width: 36px;
+    height: auto;
+  }
+
+  .ft-mascot-text {
+    font-size: 11px;
+  }
+
+  .ft-col {
+    min-width: 0;
+  }
+
+  .ft-heading {
+    font-size: 0.5625rem;
+    margin-bottom: 6px;
+  }
+
+  .ft-heading-line {
+    width: 20px;
+  }
+
+  .ft-links li {
+    margin-bottom: 2px;
+  }
+
+  .ft-link {
+    font-size: 0.6875rem;
+  }
+
+  .ft-contact-item {
+    font-size: 0.6875rem;
+    word-break: break-word;
+    line-height: 1.4;
+  }
+
+  .ft-contact {
+    gap: 3px;
+  }
+
+  .ft-contact-phone-row {
+    font-size: 0.6875rem;
+  }
+
+  .ft-call-button {
+    padding: 4px 10px;
+    font-size: 0.5625rem;
+    margin-top: 4px;
   }
 }
 
@@ -14131,26 +14237,11 @@ img {
 }
 
 /* Ensure no horizontal overflow at any viewport */
-@media (max-width: 1920px) {
-  html, body {
-    max-width: 100vw;
-    overflow-x: hidden;
-  }
-  
-  main, article, section, header, footer, nav, aside {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  
-  /* Prevent any element from causing horizontal scroll */
-  * {
-    max-width: 100vw;
-  }
-  
-  /* Except for elements that need to overflow (like marquees) */
-  .marquee-content,
-  .brands-marquee-track,
-  [class*="marquee"] {
-    max-width: none;
-  }
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+main, article, section, header, footer, aside {
+  max-width: 100%;
 }

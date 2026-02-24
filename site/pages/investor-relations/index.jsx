@@ -1460,6 +1460,7 @@ export default function InvestorRelationsPage() {
         .ir-connect {
           padding: 120px 5%;
           background: linear-gradient(180deg, #1A1614 0%, #0F0D0C 100%);
+          overflow: hidden;
         }
 
         .ir-connect-container {
@@ -1533,6 +1534,7 @@ export default function InvestorRelationsPage() {
           background: rgba(201, 162, 77, 0.08);
           border: 1px solid rgba(201, 162, 77, 0.2);
           border-radius: 8px;
+          overflow: hidden;
         }
 
         .ir-email-card svg {
@@ -1557,6 +1559,8 @@ export default function InvestorRelationsPage() {
           padding: 40px;
           border: 1px solid rgba(201, 162, 77, 0.2);
           box-shadow: 0 32px 64px rgba(0, 0, 0, 0.3);
+          max-width: 100%;
+          overflow: hidden;
         }
 
         .ir-form-header {
@@ -1614,6 +1618,7 @@ export default function InvestorRelationsPage() {
           color: #1A1614;
           transition: all 0.3s ease;
           font-family: inherit;
+          box-sizing: border-box;
         }
 
         .ir-field input::placeholder,
@@ -1652,6 +1657,8 @@ export default function InvestorRelationsPage() {
           display: flex;
           justify-content: center;
           margin: 12px 0;
+          overflow: hidden;
+          max-width: 100%;
         }
 
         .ir-recaptcha-group small {
@@ -1785,12 +1792,47 @@ export default function InvestorRelationsPage() {
           .ir-form-grid {
             grid-template-columns: 1fr;
           }
+          .ir-connect {
+            padding: 80px 16px;
+          }
           .ir-connect-form-box {
-            padding: 28px 24px;
+            padding: 24px 18px;
+          }
+          .ir-email-card {
+            padding: 16px;
+          }
+          .ir-email-card a {
+            font-size: 15px;
+            word-break: break-all;
+          }
+          .ir-faq-question {
+            padding: 18px 16px;
+            gap: 12px;
+          }
+          .ir-faq-answer p {
+            padding: 0 16px 20px 40px;
           }
           .ir-funds-chart {
             flex-direction: column;
             gap: 32px;
+          }
+          .ir-philosophy {
+            padding: 36px 16px;
+          }
+          .ir-journey {
+            padding: 80px 16px;
+          }
+          .ir-thesis {
+            padding: 80px 16px;
+          }
+          .ir-funds {
+            padding: 80px 16px;
+          }
+          .ir-faq {
+            padding: 80px 16px;
+          }
+          .ir-recaptcha-group {
+            padding: 14px;
           }
         }
       `}</style>

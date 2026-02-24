@@ -332,18 +332,18 @@ export default function AboutPage() {
         .about-page {
           min-height: 100vh;
           background: linear-gradient(180deg, #F7F3EA 0%, #E6D3A3 100%);
-          padding-top: 100px;
         }
 
         /* Hero Section */
         .about-hero {
           position: relative;
-          height: 60vh;
-          min-height: 500px;
+          min-height: 400px;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          padding-top: 100px;
+          padding-bottom: 60px;
         }
 
         .about-hero-bg {
@@ -863,8 +863,17 @@ export default function AboutPage() {
 
         @media (max-width: 600px) {
           .about-hero {
-            height: 50vh;
-            min-height: 400px;
+            min-height: auto;
+            padding-top: 80px;
+            padding-bottom: 40px;
+          }
+
+          .about-hero-content h1 {
+            font-size: clamp(28px, 6vw, 40px);
+          }
+
+          .about-hero-content p {
+            font-size: 15px;
           }
 
           .about-story,
@@ -907,6 +916,41 @@ export default function AboutPage() {
 
           .mission-card {
             padding: 40px 24px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .about-hero {
+            padding-top: 70px;
+            padding-bottom: 30px;
+          }
+
+          .about-story,
+          .about-timeline,
+          .about-values,
+          .about-gallery,
+          .about-mission {
+            padding: 40px 14px;
+          }
+
+          .about-story-content h2,
+          .timeline-container h2,
+          .values-container h2,
+          .gallery-container h2 {
+            font-size: 26px;
+          }
+
+          .about-story-content p {
+            font-size: 14px;
+          }
+
+          .mission-card {
+            padding: 30px 16px;
+          }
+
+          .gallery-coming-soon {
+            max-width: 100%;
+            padding: 30px 16px;
           }
         }
       `}</style>

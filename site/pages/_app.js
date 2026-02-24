@@ -127,10 +127,12 @@ export default function App({ Component, pageProps }) {
       {/* Google Analytics - Only load if GA_ID is configured */}
       {analytics}
       
-      <Component {...pageProps} />
-      <Mascot />
-      <FloatingSocialMedia />
-      <Chatbot />
+      <div id="app-wrapper">
+        <Component {...pageProps} />
+        <Mascot />
+        <FloatingSocialMedia />
+        <Chatbot />
+      </div>
     </>
   );
 }

@@ -654,18 +654,18 @@ export default function OurDirectorPage() {
         .our-director-page {
           min-height: 100vh;
           background: linear-gradient(180deg, #F7F3EA 0%, #E6D3A3 100%);
-          padding-top: 100px;
         }
 
         /* Hero Section */
         .our-director-hero {
           position: relative;
-          height: 50vh;
-          min-height: 400px;
+          min-height: 350px;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          padding-top: 100px;
+          padding-bottom: 60px;
         }
 
         .our-director-hero-bg {
@@ -1392,11 +1392,13 @@ export default function OurDirectorPage() {
         }
 
         .appointment-info h2 {
-          font-size: 42px;
+          font-size: clamp(28px, 6vw, 42px);
           font-weight: 800;
           color: #74060D;
           margin: 0 0 20px;
           line-height: 1.2;
+          overflow-wrap: break-word;
+          word-wrap: break-word;
         }
 
         .appointment-info > p {
@@ -1404,6 +1406,8 @@ export default function OurDirectorPage() {
           line-height: 1.8;
           color: #5a4a4a;
           margin: 0 0 40px;
+          overflow-wrap: break-word;
+          word-wrap: break-word;
         }
 
         .appointment-benefits {
@@ -1442,6 +1446,8 @@ export default function OurDirectorPage() {
           padding: 50px;
           box-shadow: 0 25px 80px rgba(116, 6, 13, 0.15);
           border: 3px solid #C9A24D;
+          max-width: 100%;
+          overflow: hidden;
         }
 
         .appointment-form h3 {
@@ -1483,6 +1489,8 @@ export default function OurDirectorPage() {
           background: #F7F3EA;
           color: #74060D;
           transition: all 0.3s ease;
+          box-sizing: border-box;
+          max-width: 100%;
           font-family: inherit;
         }
 
@@ -1522,6 +1530,8 @@ export default function OurDirectorPage() {
           display: flex;
           justify-content: center;
           margin: 12px 0;
+          overflow: hidden;
+          max-width: 100%;
         }
 
         .recaptcha-group small {
@@ -1780,8 +1790,13 @@ export default function OurDirectorPage() {
 
         @media (max-width: 768px) {
           .our-director-hero {
-            height: 40vh;
-            min-height: 300px;
+            min-height: auto;
+            padding-top: 80px;
+            padding-bottom: 40px;
+          }
+
+          .our-director-hero-content h1 {
+            font-size: clamp(28px, 6vw, 40px);
           }
 
           .director-profile-container {
@@ -1871,7 +1886,7 @@ export default function OurDirectorPage() {
           }
 
           .appointment-info h2 {
-            font-size: 32px;
+            font-size: 28px;
           }
 
           .appointment-form h3 {
@@ -1881,6 +1896,56 @@ export default function OurDirectorPage() {
           .appointment-form .form-row {
             grid-template-columns: 1fr;
             gap: 0;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .director-appointment-section {
+            padding: 60px 14px;
+          }
+
+          .appointment-info h2 {
+            font-size: 26px;
+          }
+
+          .appointment-info > p {
+            font-size: 14px;
+            margin: 0 0 28px;
+          }
+
+          .appointment-form-wrapper {
+            padding: 24px 14px;
+            border-radius: 16px;
+            border-width: 2px;
+          }
+
+          .appointment-form h3 {
+            font-size: 20px;
+            margin: 0 0 20px;
+          }
+
+          .appointment-form .form-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+          }
+
+          .appointment-form input,
+          .appointment-form select,
+          .appointment-form textarea {
+            padding: 12px 14px;
+            font-size: 14px;
+          }
+
+          .director-profile-container {
+            padding: 30px 14px;
+          }
+
+          .philosophy-content {
+            padding: 30px 14px;
+          }
+
+          .director-quote-container {
+            padding: 30px 14px;
           }
         }
       `}</style>

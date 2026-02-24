@@ -1605,6 +1605,7 @@ export default function ForeignCollaborationsPage() {
           color: #1A1614;
           transition: all 0.3s ease;
           font-family: inherit;
+          box-sizing: border-box;
         }
 
         .fc-field input::placeholder,
@@ -1643,6 +1644,8 @@ export default function ForeignCollaborationsPage() {
           display: flex;
           justify-content: center;
           margin: 12px 0;
+          overflow: hidden;
+          max-width: 100%;
         }
 
         .fc-recaptcha-group small {
@@ -1762,7 +1765,7 @@ export default function ForeignCollaborationsPage() {
 
         @media (max-width: 640px) {
           .fc-hero {
-            padding: 120px 20px 60px;
+            padding: 120px 16px 60px;
           }
           .fc-hero-stats {
             grid-template-columns: repeat(2, 1fr);
@@ -1784,29 +1787,61 @@ export default function ForeignCollaborationsPage() {
           .fc-cap-item {
             font-size: 11px;
           }
+          .fc-philosophy {
+            padding: 80px 16px;
+          }
+          .fc-areas {
+            padding: 80px 16px;
+          }
           .fc-areas-grid {
             grid-template-columns: 1fr;
+          }
+          .fc-regions {
+            padding: 80px 16px;
           }
           .fc-regions-tabs {
             flex-wrap: wrap;
           }
           .fc-region-tab {
             flex: 1 1 50%;
+            padding: 16px 12px;
           }
           .fc-region-content {
-            padding: 30px 20px;
+            padding: 24px 16px;
           }
           .fc-countries-grid {
             grid-template-columns: 1fr;
           }
+          .fc-process {
+            padding: 80px 16px;
+          }
           .fc-process-track {
             grid-template-columns: 1fr;
+          }
+          .fc-inquiry {
+            padding: 80px 16px;
           }
           .fc-form-grid {
             grid-template-columns: 1fr;
           }
           .fc-inquiry-form-wrapper {
-            padding: 32px 24px;
+            padding: 24px 18px;
+          }
+          .fc-email-direct {
+            padding: 18px 16px;
+          }
+          .fc-email-direct a {
+            font-size: 15px;
+            word-break: break-all;
+          }
+          .fc-recaptcha-group {
+            padding: 14px;
+          }
+          .fc-phil-card-inner {
+            padding: 36px 24px;
+          }
+          .fc-phil-card blockquote {
+            font-size: 18px;
           }
         }
       `}</style>

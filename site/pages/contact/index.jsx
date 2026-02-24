@@ -572,18 +572,18 @@ export default function ContactPage() {
         .contact-page {
           min-height: 100vh;
           background: linear-gradient(180deg, #F7F3EA 0%, #E6D3A3 100%);
-          padding-top: 100px; /* Account for fixed navbar */
         }
 
         /* Hero Section */
         .contact-hero {
           position: relative;
-          height: 45vh;
-          min-height: 350px;
+          min-height: 300px;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          padding-top: 100px;
+          padding-bottom: 50px;
         }
 
         .contact-hero-bg {
@@ -657,6 +657,8 @@ export default function ContactPage() {
           padding: 48px;
           box-shadow: 0 20px 60px rgba(116, 6, 13, 0.1);
           border: 2px solid #E6D3A3;
+          max-width: 100%;
+          overflow: hidden;
         }
 
         .contact-form-header h2 {
@@ -710,6 +712,9 @@ export default function ContactPage() {
           color: #74060D;
           transition: all 0.3s ease;
           font-family: inherit;
+          box-sizing: border-box;
+          width: 100%;
+          max-width: 100%;
         }
 
         .form-group input:focus,
@@ -749,6 +754,8 @@ export default function ContactPage() {
           display: flex;
           justify-content: center;
           margin: 12px 0;
+          overflow: hidden;
+          max-width: 100%;
         }
 
         .contact-btn {
@@ -906,6 +913,7 @@ export default function ContactPage() {
           padding: 32px;
           box-shadow: 0 10px 40px rgba(116, 6, 13, 0.08);
           border: 2px solid #E6D3A3;
+          overflow: hidden;
         }
 
         .call-button {
@@ -974,6 +982,8 @@ export default function ContactPage() {
           color: #74060D;
           margin: 0;
           font-weight: 500;
+          word-break: break-word;
+          overflow-wrap: break-word;
         }
 
         /* Social Section - Full width centered */
@@ -1128,24 +1138,58 @@ export default function ContactPage() {
 
         @media (max-width: 600px) {
           .contact-hero {
-            height: 40vh;
-            min-height: 300px;
+            min-height: auto;
+            padding-top: 80px;
+            padding-bottom: 40px;
+          }
+
+          .contact-hero-content h1 {
+            font-size: clamp(26px, 6vw, 36px);
+          }
+
+          .contact-hero-content p {
+            font-size: 14px;
           }
 
           .contact-main {
-            padding: 40px 16px;
+            padding: 40px 14px;
           }
 
           .contact-form-wrapper {
-            padding: 24px;
+            padding: 20px 16px;
+            border-radius: 16px;
           }
 
           .company-card {
-            padding: 28px;
+            padding: 24px 18px;
+            border-radius: 16px;
+          }
+
+          .company-card h3 {
+            font-size: 20px;
+          }
+
+          .contact-details {
+            padding: 20px 16px;
+            border-radius: 16px;
+          }
+
+          .detail-content p {
+            font-size: 14px;
+          }
+
+          .social-section {
+            padding: 24px 16px;
+            margin: 40px 14px 0;
+            max-width: 100%;
+          }
+
+          .recaptcha-group {
+            padding: 14px;
           }
           
           .india-map-section {
-            padding: 40px 16px 60px;
+            padding: 40px 14px 60px;
           }
           
           .india-map-header h2 {
