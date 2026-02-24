@@ -11,10 +11,16 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Configuration
-PROJECT_ID="gen-lang-client-0473608308"
-SERVICE_NAME="ynm-website"
-REGION="asia-south1"
+# Configuration (override with env vars or edit here)
+PROJECT_ID="${GCP_PROJECT_ID:-your-gcp-project-id}"
+SERVICE_NAME="${GCP_SERVICE_NAME:-ynm-website}"
+REGION="${GCP_REGION:-asia-south1}"
+
+if [ "$PROJECT_ID" = "your-gcp-project-id" ]; then
+    echo -e "${RED}ERROR: Set GCP_PROJECT_ID environment variable first.${NC}"
+    echo "  export GCP_PROJECT_ID=your-actual-project-id"
+    exit 1
+fi
 
 # Public env vars: set in GCP Cloud Run or export before running this script.
 # Do not commit real values. Use: export NEXT_PUBLIC_RECAPTCHA_SITE_KEY=... NEXT_PUBLIC_GA_ID=...

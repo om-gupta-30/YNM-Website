@@ -9,7 +9,7 @@ import Flag from "@/components/Flag";
 import { getProductById, getAllProducts } from "@/lib/productsCategoriesData";
 import { getProductById as getLegacyProduct } from "./index";
 
-export default function ProductDetailPage() {
+export default function ProductDetailPage({ serverProduct }) {
   const router = useRouter();
   const { productId } = router.query;
   const [activeSpecTab, setActiveSpecTab] = useState("keyFeatures");
@@ -34,95 +34,16 @@ export default function ProductDetailPage() {
   const carouselIntervalRef = useRef(null);
   const statsRef = useRef(null);
   
-  // Try enhanced data first, fallback to legacy
-  let product = null;
-  if (router.isReady && productId) {
+  // Use server-rendered product (SSR) for initial render, fallback to client-side lookup
+  let product = serverProduct || null;
+  if (!product && router.isReady && productId) {
     product = getProductById(productId);
-    // If product found but missing detailedDescription, use overview or desc
-    if (product && !product.detailedDescription) {
-      product.detailedDescription = product.overview || product.desc;
-    }
-    // Ensure statistics object exists (don't overwrite if it already exists)
-    if (product && !product.statistics) {
-      product.statistics = {};
-    }
-    if (!product) {
-      const legacyProduct = getLegacyProduct(productId);
-      if (legacyProduct) {
-        // Convert legacy product to enhanced format
-        product = {
-          ...legacyProduct,
-          detailedDescription: legacyProduct.detailedDescription || legacyProduct.overview || legacyProduct.desc,
-          heroImage: legacyProduct.image,
-          specifications: {
-            technical: legacyProduct.specs || [],
-            keyFeatures: legacyProduct.specs || [],
-            advantages: legacyProduct.specs || []
-          },
-          detailedSpecs: [
-            {
-              label: "Country of Origin",
-              value: "India",
-              icon: "location"
-            },
-            {
-              label: "Manufacturing Location",
-              value: "Hyderabad, Telangana, India",
-              icon: "location"
-            },
-            {
-              label: "Package Dimensions",
-              value: "Varies by product type",
-              icon: "dimensions"
-            },
-            {
-              label: "Net Weight",
-              value: "Varies by package size",
-              icon: "weight"
-            },
-            {
-              label: "Packaging Type",
-              value: "Standard industrial packaging",
-              icon: "package"
-            },
-            {
-              label: "Quality Standards",
-              value: "ISO 9001:2015 Certified",
-              icon: "standard"
-            },
-            {
-              label: "Minimum Order Quantity",
-              value: "Contact for details",
-              icon: "package"
-            }
-          ],
-          pricing: {
-            basePriceUSD: 7.00,
-            currency: "USD",
-            packageSizes: [
-              { size: "1L", priceUSD: 8.50, moq: 100 },
-              { size: "5L", priceUSD: 7.00, moq: 50 },
-              { size: "20L", priceUSD: 6.50, moq: 20 }
-            ],
-            bulkDiscounts: [
-              { minQuantity: 1000, discount: 5 },
-              { minQuantity: 5000, discount: 10 },
-              { minQuantity: 10000, discount: 15 }
-            ],
-            shippingCosts: {
-              domestic: 0.50,
-              international: 1.20
-            }
-          },
-          applicationAreas: [],
-          projects: [],
-          marketGrowth: legacyProduct.marketGrowth || null,
-          manufacturingProcess: [],
-          importingProcess: [],
-          statistics: legacyProduct.statistics || {}
-        };
-      }
-    }
+  }
+  if (product && !product.detailedDescription) {
+    product.detailedDescription = product.overview || product.desc;
+  }
+  if (product && !product.statistics) {
+    product.statistics = {};
   }
 
   // Get all images for carousel
@@ -232,7 +153,7 @@ export default function ProductDetailPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productId]);
   
-  if (!router.isReady) {
+  if (!product && !router.isReady) {
     return (
       <>
         <Head>
@@ -5271,4 +5192,38 @@ export default function ProductDetailPage() {
       `}</style>
     </>
   );
+}
+
+export async function getServerSideProps({ params }) {
+  const { productId } = params;
+
+  let product = getProductById(productId);
+  if (!product) {
+    const legacyProduct = getLegacyProduct(productId);
+    if (!legacyProduct) {
+      return { notFound: true };
+    }
+    product = {
+      ...legacyProduct,
+      detailedDescription: legacyProduct.detailedDescription || legacyProduct.overview || legacyProduct.desc,
+      heroImage: legacyProduct.image,
+      specifications: {
+        technical: legacyProduct.specs || [],
+        keyFeatures: legacyProduct.specs || [],
+        advantages: legacyProduct.specs || [],
+      },
+      applicationAreas: [],
+      projects: [],
+      marketGrowth: legacyProduct.marketGrowth || null,
+      manufacturingProcess: [],
+      importingProcess: [],
+      statistics: legacyProduct.statistics || {},
+    };
+  }
+
+  return {
+    props: {
+      serverProduct: JSON.parse(JSON.stringify(product)),
+    },
+  };
 }

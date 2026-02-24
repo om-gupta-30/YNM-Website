@@ -111,118 +111,129 @@ STRICT RULES - FOLLOW THESE EXACTLY:
 
 COMPANY OVERVIEW:
 - Name: YNM Safety Pan Global Trade Pvt Ltd
-- Established: 2013 (12+ years experience)
+- Established: 2013 (13+ years experience)
 - Tagline: "Road Safety & Infrastructure Excellence Since 2013"
-- Business: Manufacturer & exporter of road safety products, road marking paints, crash barriers, signages, bitumen, metal fabrication
+- Business: Manufacturer & exporter of road safety products, road marking paints, crash barriers, signages, bitumen, metal fabrication, road safety furnitures
 - Headquarters: Hyderabad, Telangana, India
-- Managing Director: Mr. Rishuu Jaiin (Founder, B.E. Mechanical, MBA)
+- Factory: Sy No 74, Kothur Village, Shabad Mandal, Rangareddy, Telangana 509217
+- Managing Director: Mr. Rishuu Jaiin (Founder, B.E. Mechanical Engineering 2008, MBA Operations & International Business 2010)
+- Director Awards: Export Excellence Award - FIEO (2023), Manufacturing Excellence Award - CII (2022), Entrepreneur of the Year - Hyderabad Chamber (2021), Quality Leadership Award - IQC (2020)
 
 STATISTICS:
-- 12+ Years Experience | 500+ Projects | 50+ Export Countries | 1000+ Clients | 200+ Team Members
+- 13+ Years Experience | 500+ Projects | 50+ Export Countries | 1000+ Clients | 200+ Team Members
 
-PRODUCTS (5 Categories):
+COMPANY MILESTONES:
+- 2013: Foundation
+- 2015: ISO 9001:2015 Certification
+- 2018: Global Expansion to 50+ countries (Asia, Africa, Middle East)
+- 2023: 10 Years of Excellence
+- 2026: PAN India Expansion - opening new factories across India
 
-1. ROAD MARKING PAINTS (6 types):
-   • Hot Thermoplastic Road Marking Paint - high-performance paint for highways, MoRTH/IRC/IS 164/BS 3262 compliant, retro-reflective glass beads, ₹85/kg approx
-   • Waterborne Airfield Marking Paints - for airports, ICAO/FAA/DGCA compliant, eco-friendly
-   • Cold Plastic Paints (MMA) - solvent-free, 5-7 year life, for airports, race tracks, parking
-   • Oil Kerb Base Paint - for road edges, traffic islands
-   • Water Kerb Base Paint - eco-friendly, low-VOC
-   • Enamel Paint - industrial applications
+PRODUCTS (6 Categories):
+
+1. ROAD MARKING PAINTS (8 types):
+   • Hot Thermoplastic Road Marking Paint - high-performance paint for highways, MoRTH/IRC/IS 164/BS 3262/AASHTO M249 compliant, retro-reflective glass beads, Rs.80-85/kg, Annual capacity: 96,000 MT, 25 kg bag packing
+   • Cold Plastic Paints (MMA/Acrylic) - fast drying, anti-skid, 2-5 year design life, MORTH 803.7/IRC 35, 16 Kg MS Container, for airports, F1 tracks, parking lots, sport areas
+   • Waterborne Airfield Marking Paints - for airport runways, taxiways, helipads, military airfields, ICAO/FAA/DGCA compliant, eco-friendly, low-VOC
+   • Oil Kerb Base Paint - Synthetic Resin/Alkyd Oil Base, surface dry 30 min, IS164-2023
+   • Water Kerb Base Paint - Acrylic Water Based, surface dry 20-30 min, low-VOC, IS164:2023
+   • Enamel Paint - Synthetic/Alkyd Based, High Gloss/Semi Gloss, surface dry 6-8 hours, IS164:2023
+   • Red Oxide Paint - High durability, excellent corrosion resistance, strong colour stability, IS:2074 compliant
+   • Profile Marking Paint - High retro-reflective, weather resistant, superior abrasion resistance, MoRT&H 803 compliant
 
 2. BITUMEN:
-   • Bitumen VG 40 - for heavy-traffic highways, IS 73/ASTM compliant
+   • Bitumen VG 40 - IS 73, ASTM, high viscosity, for heavy traffic roads & high-temperature regions, 200 kg drums, export ready
+   • Bitumen VG 30 - IS 73, ASTM, for road construction, waterproofing, heavy-duty infrastructure, 200 kg drums, export ready
 
-3. METAL BEAM CRASH BARRIERS:
-   • W Beam Crash Barrier - most common, hot-dip galvanized
-   • Double W Beam - for bridges, flyovers
-   • Roller Beam - for sharp curves, mountain roads
-   • Accessories: End Terminals, Crash Attenuators, Posts
-   • Standards: MoRTH, IRC 119, IS 15465, AASHTO M180
+3. METAL BEAM CRASH BARRIERS (5 types):
+   • W Beam Crash Barrier - most common, hot-dip galvanized, 2.7mm/3.0mm thickness, IS 5986, MoRTH, IRC 119, IS 15465, AASHTO M180
+   • Thrie Beam Crash Barrier - for bridges, elevated sections, high-risk zones
+   • Double W Beam Crash Barriers - maximum protection, bridges, flyovers, medians, dividers, highways, embankments, sharp curves
+   • Roller Beam Crash Barriers - rotating barrel system, sharp curves, mountain roads, rotational energy absorption
+   • Attenuator - impact absorption at toll plazas, highway exits
+   • Accessories: End Terminals, Fish Tail End Sections, Posts, Hardware
 
-4. SIGNAGES:
-   • Retro Reflective Gantry Signage - overhead highway signs
-   • Cantilever Signage - single-arm mounted
-   • Canopy Signage - for toll plazas
-   • Informatory Signage - direction boards
-   • Standards: IRC 67, MoRTH
+4. SIGNAGES (10 types):
+   • Retro Reflective Gantry Signage - overhead highway signs, IRC 67, MoRTH
+   • Cantilever Signage - single-arm mounted expressway signs
+   • Mandatory Sign Board (Octagonal) - ACP/Aluminium/GI Sheet, Engineer Grade/HIP/DG reflective, 7-10 year durability, MORTH & IRC 67
+   • Mandatory Sign Board (Circular) - MORTH & IRC 67 compliant
+   • Cautionary Sign Boards (Triangle) - warning signs for curves, speed breakers, hazards, 7-10 year durability
+   • Canopy - structures for toll plazas, fuel stations, retail stores, hotels, industrial facilities
+   • Informatory Sign Board - direction and information boards for roads, commercial spaces, hospitals, transportation hubs
+   • Place Identification Boards - location/area identification for roads, tourism, retail, hospitals, transportation hubs
+   • Advance Direction Boards - route guidance signage
+   • Toll Boards & Facia - toll plaza signage and facia boards
 
-5. FABRICATION (34 products):
-   • Solar Panel Structures & Frames
-   • Railway Structures & Platform Components
-   • GI Dustbins & Waste Management
-   • Rickshaw Bodies
-   • High Mast Poles (15-40m)
-   • Street Light Poles
-   • Solar Light Poles
-   • Bridge Bearings
-   • Expansion Joints
-   • Gantry Structures
-   • Sign Board Structures
-   • Slotted Angle Racks
-   • Heavy Duty Racks
-   • ITMS Structures (traffic management)
-   • VMS Structures (variable message signs)
-   • Adjustable Prop Jack
-   • Base Jack
-   • Cup Lock scaffolding
-   • Ledger (scaffolding)
-   • Scaffolding Parts
-   • Shuttering Materials
-   • Barricading Boards
-   • I-Girders (bridge construction)
-   • RE Panel Moulds (retaining walls)
-   • Foot Over Bridges
-   • Noise Barriers
-   • Pedestrian Guardrails
-   • Modular Pontoon
-   • Open Web Bridge Girders
-   • Gabion Wire Mesh
-   • Anchor Cones
-   • Bus Stop Shelters
-   • Toll Plaza Equipment
-   • Custom Metal Fabrication
+5. FABRICATION (34+ products, organized by subcategory):
+   Infrastructure: Pedestrian Guardrails, Noise Barriers, Foot Over Bridges, High Mast Poles (15-40m), Sign Board Structures, ITMS Structures, Barricading Boards, Gantry Structures, Cantilever Structures, Camera Poles, VMS Structures, I-Girders, Expansion Joints, Bridge Bearings, Modular Pontoon, Open Web Bridge Girders, Gabion Wire Mesh, Anchor Cones
+   Solar: Solar Panel Structures/Frames, Solar Light Poles
+   Urban: Street Light Poles, Parking Signages, GI Dustbins, E-Rickshaw, Ledger
+   Industrial: Slotted Angle Racks, Heavy Duty Racks, Adjustable Prop Jack, RE Panel Moulds, Base Jack, Cup Lock, Scaffolding Parts, Shuttering Materials
+   Railway: Railway Structures (RDSO approved)
+
+6. ROAD SAFETY FURNITURES (19 products):
+   Road Studs: Twin Shank, ABS, Aluminium
+   Solar Studs: Twin Shank, ABS, Circular, Square, Aluminium
+   Delineators: IRC Delineator (NHAI approved), Spring Post 750mm, Spring Post 1000mm, Spring Post Anchor Fasteners
+   Traffic Control: Solar Blinker, Traffic Cone 750mm, Traffic Cone 1000mm, Antiglare Screen 600mm, Antiglare Screen 900mm, Water Barricade 1000mm, Water Barricade 2000mm
+   Road Safety: Reflective Tapes, Flexible Median Marker, Box Type Median Marker, Highway Speed Breaker
 
 EXPORT REGIONS (50+ Countries):
 - Middle East: UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain
-- East Asia: Hong Kong, China, Taiwan, South Korea, Japan
-- Africa: Kenya, Nigeria, South Africa, Egypt, Tanzania, Ghana
-- Southeast Asia: Singapore, Malaysia, Indonesia, Thailand, Vietnam
+- East Asia: Hong Kong, China (Shanghai, Shenzhen), Taiwan, South Korea, Japan
+- Africa: Kenya, Nigeria, South Africa, Egypt, Tanzania, Ghana, Ethiopia, Morocco
+- Southeast Asia: Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines
 - South Asia: Sri Lanka, Bangladesh, Nepal, Bhutan, Maldives
+- Europe: Germany, UK, France, Italy, Spain, Netherlands, Sweden, Poland, Belgium
+- Americas: United States, Canada, Mexico, Brazil, Argentina, Chile, Colombia, Peru
 - Pricing: FOB & CIF with export documentation
 
 KEY TEAM:
-- Mr. Rishuu Jaiin - Managing Director
+- Mr. Rishuu Jaiin - Managing Director (Founder, leads 6 companies, 17+ countries reached)
 - Ravi Kanneganti - Operations Manager
 - Pradeep Kumar - Product Head
 - Shweta Rai - Business Development
 - Bussa Rama Krishna - CFO
 - Divya Sekhar - Sr. HR Generalist
+- Harikanth - Team Member
 - Om Gupta - Software Engineer
 - Gokari Shiva Kumar Reddy - Digital Marketing
 
-CERTIFICATIONS: ISO 9001:2015, MoRTH, IRC, IS, ASTM, BS, AASHTO
+CERTIFICATIONS & STANDARDS: ISO 9001:2015, MoRTH, IRC, IS, ASTM, BS, AASHTO, ICAO, FAA, DGCA, RDSO, NHAI
 
-KEY CLIENTS: GMR, NTPC, IndianOil, PowerGrid, Hyundai Glovis, Tech Mahindra, NCC, BSCPL, GVK, Prestige, Aparna Constructions, Ramoji Film City, NPCI
+KEY CLIENTS (18 major clients): IndianOil, Ramoji Film City, Prestige Group, Tech Mahindra, GMR Group, Tom Tailor, NCC Limited, NSL Group, HCL, Alekhya Homes, GVK EMRI, NTPC, PowerGrid, Hyundai Glovis, NPCI International, BSCPL Infrastructure, AT&T, Aparna Constructions
 
 CONTACT:
 - Phone: +91 96765 75770 / +91 90002 62013
 - Email: sales@ynmsafety.com
-- HR: ynm.hr@ynmsafety.com
-- Address: Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad 500081
+- HR: hr@ynmsafety.com
+- Office: Survey 84P, Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081
+- Factory: Sy No 74, Kothur Village, Shabad Mandal, Rangareddy, Telangana 509217
 - Hours: Mon-Sat, 10 AM - 6 PM IST
+- LinkedIn: linkedin.com/company/ynmsafety
+- Instagram: @ynm.safety
+- Facebook: YNM Safety
 
 WEBSITE PAGES:
-- /products - all products
-- /products/fabrication - 34 fabrication products
-- /contact - contact form
-- /careers - job applications
-- /about - company story
-- /our-director - leadership
-- /clients - our clients
-- /foreign-collaborations - partnerships
+- / - home page with overview, products, testimonials, client logos
+- /products - all product categories with filterable grid
+- /products/[productId] - individual product detail pages
+- /products/fabrication - 34+ fabrication products with image galleries
+- /products/road-safety-furnitures - 19 road safety furniture products
+- /about - company story, timeline, values, gallery, mission/vision
+- /our-director - Mr. Rishuu Jaiin's profile, ventures, achievements
+- /clients - 18 detailed client/partner profiles
+- /careers - job openings and application form
+- /contact - contact form, company info, social links
+- /investor-relations - investment thesis, milestones, fund allocation
+- /foreign-collaborations - collaboration areas, global regions, partnership process
 
-CAREERS: Open positions in Operations, Sales, Marketing, IT, Purchase, Accounts, HR. Apply at /careers
+CAREERS: Positions in Operations & Production, Sales & Marketing, IT, Purchase & Procurement, Accounts & Finance, HR & Administration. Apply at /careers with resume (PDF, max 5MB). HR email: hr@ynmsafety.com
+
+INVESTOR RELATIONS: Open to equity investment, strategic partnerships, joint ventures. Fund allocation: 40% Capacity Expansion, 25% Technology Upgrade, 20% Market Development, 15% Working Capital. Visit /investor-relations
+
+FOREIGN COLLABORATIONS: Manufacturing Partnerships, Distribution Networks, R&D, Quality & Compliance. Target: Middle East, East Asia, Africa, Southeast Asia, Europe. Visit /foreign-collaborations
 
 ${languageInstruction}`;
 

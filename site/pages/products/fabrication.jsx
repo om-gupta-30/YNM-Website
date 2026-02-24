@@ -1171,16 +1171,6 @@ export default function FabricationPage() {
 
       <Footer />
 
-      {/* Floating Contact Button */}
-      <div className="floating-contact">
-        <Link href="/contact" className="floating-btn pulse">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-          </svg>
-          <span>Get Quote</span>
-        </Link>
-      </div>
-
       {/* Animated Background Particles */}
       <div className="particles-container">
         <div className="particle p1" />
@@ -1194,44 +1184,6 @@ export default function FabricationPage() {
         .fabrication-page {
           min-height: 100vh;
           background: linear-gradient(180deg, #f5efe9 0%, #e8e0d5 100%);
-        }
-
-        /* Floating Contact Button */
-        .floating-contact {
-          position: fixed;
-          bottom: 30px;
-          right: 30px;
-          z-index: 1000;
-        }
-
-        .floating-btn {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          background: linear-gradient(135deg, #74060D 0%, #9A1B2E 100%);
-          color: #fff;
-          padding: 16px 24px;
-          border-radius: 50px;
-          font-size: 15px;
-          font-weight: 700;
-          text-decoration: none;
-          box-shadow: 0 10px 40px rgba(116, 6, 13, 0.4);
-          transition: all 0.3s ease;
-        }
-
-        .floating-btn:hover {
-          transform: translateY(-5px) scale(1.05);
-          box-shadow: 0 15px 50px rgba(116, 6, 13, 0.5);
-        }
-
-        .floating-btn.pulse {
-          animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-          0% { box-shadow: 0 10px 40px rgba(116, 6, 13, 0.4); }
-          50% { box-shadow: 0 10px 40px rgba(116, 6, 13, 0.6), 0 0 0 10px rgba(116, 6, 13, 0.1); }
-          100% { box-shadow: 0 10px 40px rgba(116, 6, 13, 0.4); }
         }
 
         /* Animated Particles */
@@ -3781,26 +3733,6 @@ export default function FabricationPage() {
           .hover-spec-tag {
             font-size: 9px;
             padding: 3px 6px;
-          }
-
-          /* Floating Button Responsive */
-          .floating-contact {
-            bottom: 20px;
-            right: 20px;
-          }
-
-          .floating-btn {
-            padding: 14px 20px;
-            font-size: 14px;
-          }
-
-          .floating-btn span {
-            display: none;
-          }
-
-          .floating-btn {
-            padding: 14px;
-            border-radius: 50%;
           }
 
           /* Hide particles on mobile */

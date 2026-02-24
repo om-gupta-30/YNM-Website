@@ -57,6 +57,9 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
+# Ensure all public assets are readable by non-root user
+RUN chmod -R a+r ./public
+
 # Set correct ownership
 USER nextjs
 

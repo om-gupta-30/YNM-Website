@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState, Fragment } from "react";
+import { useEffect, useRef, useState, useCallback, Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 // Use string path instead of static import for Cloud Run compatibility
 // WebP for better performance, PNG fallback handled by browser
 const heroImageDefault = "/assets/hero-image.webp";
@@ -26,6 +27,7 @@ const statsData = [
 ];
 
 export default function Hero({ heroData: propHeroData, navLinks: propNavLinks }) {
+  const router = useRouter();
   const [heroData, setHeroData] = useState(propHeroData || null);
   const [navLinks, setNavLinks] = useState(propNavLinks || null);
   const heroRef = useRef(null);
@@ -34,6 +36,24 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
   const heroTextRef = useRef(null);
   const subtitleRef = useRef(null);
   const [currentTagline, setCurrentTagline] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = useCallback(() => setMobileMenuOpen(false), []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    const handleRouteChange = () => closeMobileMenu();
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => router.events.off("routeChangeStart", handleRouteChange);
+  }, [router.events, closeMobileMenu]);
 
   const taglines = heroData?.taglines && Array.isArray(heroData.taglines) && heroData.taglines.length > 0
     ? heroData.taglines
@@ -134,7 +154,8 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
     if (!hero || !wrapper) return;
 
     const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-    if (prefersReducedMotion) return;
+    const isTouchDevice = window.matchMedia?.("(pointer: coarse)")?.matches;
+    if (prefersReducedMotion || isTouchDevice) return;
 
     const target = wrapper.querySelector("#hero-image-safe");
     if (!target) return;
@@ -377,7 +398,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
             </div>
           </Link>
 
-          <div className="nav-links">
+          <div className="nav-links nav-links-desktop">
             {navigationLinks.map((link, index) => {
               const isExternal = link.href && (link.href.startsWith("http://") || link.href.startsWith("https://"));
               const target = link.target || (isExternal ? "_blank" : undefined);
@@ -385,7 +406,6 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
               const isPageLink = link.href && link.href.startsWith("/") && !link.href.startsWith("/#");
               const sep = index > 0 ? <span className="nav-sep" aria-hidden="true" /> : null;
 
-              // Links with dropdown
               if (link.hasDropdown && link.dropdownItems) {
                 return (
                   <Fragment key={link.id || index}>
@@ -450,8 +470,60 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
             })}
           </div>
 
+          <button
+            className="nav-hamburger"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            <span className={`hamburger-line ${mobileMenuOpen ? "open" : ""}`} />
+            <span className={`hamburger-line ${mobileMenuOpen ? "open" : ""}`} />
+            <span className={`hamburger-line ${mobileMenuOpen ? "open" : ""}`} />
+          </button>
+
           <div id="scroll-progress" />
         </nav>
+
+        {mobileMenuOpen && (
+          <div className="mobile-menu-overlay" onClick={closeMobileMenu} style={{ zIndex: 99998 }}>
+            <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
+              <div className="mobile-menu-header">
+                <Link href="/" className="mobile-menu-brand" onClick={closeMobileMenu}>
+                  <Image
+                    src="/assets/logo-navbar.jpg"
+                    alt="YNM Safety"
+                    width={40}
+                    height={40}
+                    className="nav-logo-new"
+                  />
+                  <span>YNM SAFETY</span>
+                </Link>
+                <button className="mobile-menu-close" onClick={closeMobileMenu} aria-label="Close menu">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div className="mobile-menu-links">
+                {navigationLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href || "#"}
+                    className="mobile-menu-link"
+                    onClick={closeMobileMenu}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+              <div className="mobile-menu-footer">
+                <a href="tel:+919676575770" className="mobile-menu-cta">
+                  Call Us: +91 96765 75770
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* HERO IMAGE */}
         <div id="hero-image-wrapper" ref={heroImageWrapperRef}>

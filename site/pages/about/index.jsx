@@ -767,7 +767,7 @@ export default function AboutPage() {
           max-width: 1200px;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
           gap: 40px;
         }
 
@@ -857,7 +857,7 @@ export default function AboutPage() {
           }
 
           .gallery-grid {
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
           }
         }
 

@@ -53,6 +53,12 @@ const ON_TOPIC_PATTERNS = [
   /\b(iso|morth|irc|aashto|standard|certification|quality)\b/i,
   /\b(order|buy|purchase|supplier|vendor|client|project)\b/i,
   /\b(steel|metal|galvanized|pole|mast|scaffold|bridge|railway)\b/i,
+  /\b(stud|solar stud|delineator|cone|blinker|reflective|median|speed breaker)\b/i,
+  /\b(road safety furniture|antiglare|barricade|spring post|attenuator)\b/i,
+  /\b(enamel|red oxide|profile marking|kerb|airfield|waterborne|cold plastic)\b/i,
+  /\b(investor|investment|collaboration|partnership|foreign)\b/i,
+  /\b(gantry|cantilever|canopy|cautionary|mandatory|informatory|toll board)\b/i,
+  /\b(rishuu|jaiin|ncc|ntpc|gmr|prestige|indianoil|powergrid)\b/i,
 ];
 
 const isOffTopic = (query) => {
@@ -75,7 +81,7 @@ const isOffTopic = (query) => {
   return false; // Default: let API handle it
 };
 
-const OFF_TOPIC_RESPONSE = "I'm specialized in helping with YNM Safety products and services. Here's what I can assist you with:\n\n🎨 **Products:**\n• Road marking paints (Hot Thermoplastic, Cold Plastic)\n• Metal beam crash barriers\n• Highway & traffic signages\n• Bitumen VG 40\n• Custom fabrication (34+ products)\n\n💼 **Services:**\n• Product inquiries & specifications\n• Quotes and pricing\n• Export to 50+ countries\n• Certifications & compliance\n• Installation support\n\nPlease ask me about any of these topics!";
+const OFF_TOPIC_RESPONSE = "I'm specialized in helping with YNM Safety products and services. Here's what I can assist you with:\n\n🎨 **Products (6 Categories):**\n• Road marking paints (8 types - Hot Thermoplastic, Cold Plastic, Airfield, Kerb, Enamel, Red Oxide, Profile Marking)\n• Metal beam crash barriers (W Beam, Thrie Beam, Double W, Roller Beam, Attenuators)\n• Highway signages (10 types - Gantry, Cantilever, Mandatory, Cautionary, Canopy, and more)\n• Bitumen (VG 40 & VG 30)\n• Custom fabrication (34+ products)\n• Road safety furnitures (19 products - studs, solar studs, delineators, cones, blinkers)\n\n💼 **Services:**\n• Product inquiries & specifications\n• Quotes and pricing\n• Export to 50+ countries\n• Certifications & compliance\n• Installation support\n• Foreign collaborations & investor relations\n\nPlease ask me about any of these topics!";
 
 export default function Chatbot() {
   const language = 'en';
@@ -98,10 +104,9 @@ export default function Chatbot() {
   // Quick action options - organized by priority
   const quickActions = [
     { label: "🎨 Our Products", query: "What products do you manufacture?", action: null },
-    { label: "💰 Get Quote", query: "How can I get a quote or pricing?", action: 'quote' },
+    { label: "🔶 Road Safety Furnitures", query: "What road safety furniture do you sell?", action: null },
     { label: "🌍 Export Countries", query: "Which countries do you export to?", action: null },
     { label: "📞 Contact Us", query: "What is your contact information?", action: null },
-    { label: "✅ Certifications", query: "What certifications do you have?", action: null },
     { label: "🏭 About YNM", query: "Tell me about YNM Safety", action: null },
   ];
 
@@ -120,7 +125,7 @@ export default function Chatbot() {
       const savedMessages = localStorage.getItem(`chatbot_messages_${chatSessionId.current}`);
       const initialMessage = {
         id: 1,
-        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety products since 2013.\n\nI can help you with:\n• Road marking paints (Hot Thermoplastic, Cold Plastic)\n• Metal Beam Crash Barriers\n• Highway Signages\n• Custom Fabrication\n• Export inquiries to 50+ countries\n\nHow can I assist you today?",
+        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety & infrastructure products since 2013.\n\nI can help you with:\n• Road marking paints (8 types)\n• Metal Beam Crash Barriers (5 types)\n• Highway Signages (10 types)\n• Bitumen (VG 40 & VG 30)\n• Custom Fabrication (34+ products)\n• Road Safety Furnitures (19 products)\n• Export inquiries to 50+ countries\n• Careers, Investor Relations & Collaborations\n\nHow can I assist you today?",
         sender: "bot",
         timestamp: new Date()
       };
@@ -263,7 +268,7 @@ export default function Chatbot() {
     if (lowerText.includes('product')) {
       followUps.push("Tell me more about your paints");
       followUps.push("What about metal fabrication?");
-      followUps.push("Show me school furniture options");
+      followUps.push("What road safety furniture do you sell?");
     }
     if (lowerText.includes('contact') || lowerText.includes('phone') || lowerText.includes('email')) {
       followUps.push("Can I visit your office?");
@@ -271,14 +276,38 @@ export default function Chatbot() {
     }
     if (lowerText.includes('price') || lowerText.includes('quote') || lowerText.includes('cost')) {
       followUps.push("I need a quote for bulk order");
-      followUps.push("Do you offer discounts?");
+      followUps.push("What is the minimum order quantity?");
     }
     if (lowerText.includes('export')) {
       followUps.push("What documents are needed for export?");
       followUps.push("What is the minimum order quantity?");
     }
+    if (lowerText.includes('barrier') || lowerText.includes('crash')) {
+      followUps.push("What signages do you manufacture?");
+      followUps.push("Tell me about road safety furnitures");
+    }
+    if (lowerText.includes('paint') || lowerText.includes('thermoplastic')) {
+      followUps.push("What is the difference between hot and cold plastic?");
+      followUps.push("Do you make airport paints?");
+    }
+    if (lowerText.includes('fabrication')) {
+      followUps.push("Tell me about your crash barriers");
+      followUps.push("What signages do you manufacture?");
+    }
+    if (lowerText.includes('stud') || lowerText.includes('delineator') || lowerText.includes('road safety furniture')) {
+      followUps.push("What crash barriers do you make?");
+      followUps.push("Tell me about your signages");
+    }
+    if (lowerText.includes('career') || lowerText.includes('hiring') || lowerText.includes('job')) {
+      followUps.push("What is YNM Safety about?");
+      followUps.push("Who is the director?");
+    }
+    if (lowerText.includes('investor') || lowerText.includes('collaboration')) {
+      followUps.push("Tell me about YNM Safety");
+      followUps.push("What are your key clients?");
+    }
 
-    return followUps.slice(0, 3); // Max 3 follow-ups
+    return followUps.slice(0, 3);
   };
 
   // Copy message to clipboard
@@ -335,7 +364,7 @@ export default function Chatbot() {
       chatSessionId.current = `chat_${Date.now()}`;
       const initialMessage = {
         id: 1,
-        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety products since 2013.\n\nI can help you with:\n• Road marking paints (Hot Thermoplastic, Cold Plastic)\n• Metal Beam Crash Barriers\n• Highway Signages\n• Custom Fabrication\n• Export inquiries to 50+ countries\n\nHow can I assist you today?",
+        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety & infrastructure products since 2013.\n\nI can help you with:\n• Road marking paints (8 types)\n• Metal Beam Crash Barriers (5 types)\n• Highway Signages (10 types)\n• Bitumen (VG 40 & VG 30)\n• Custom Fabrication (34+ products)\n• Road Safety Furnitures (19 products)\n• Export inquiries to 50+ countries\n• Careers, Investor Relations & Collaborations\n\nHow can I assist you today?",
         sender: "bot",
         timestamp: new Date()
       };
@@ -385,12 +414,6 @@ export default function Chatbot() {
   // Handle quick action click
   const handleQuickAction = useCallback(async (query, action = null) => {
     setShowQuickActions(false);
-    
-    // Handle special actions
-    if (action === 'quote') {
-      setShowLeadForm(true);
-      return;
-    }
     
     const userMessage = {
       id: Date.now(),
@@ -663,16 +686,6 @@ export default function Chatbot() {
       };
 
       setMessages(prev => [...prev, botMessage]);
-      
-      // Show lead form if user asks about quotes/pricing
-      if (currentInput.toLowerCase().includes('quote') || 
-          currentInput.toLowerCase().includes('price') || 
-          currentInput.toLowerCase().includes('pricing') ||
-          currentInput.toLowerCase().includes('cost')) {
-        setTimeout(() => {
-          setShowLeadForm(true);
-        }, 1000);
-      }
       
       setShowQuickActions(true);
     } catch (err) {

@@ -215,6 +215,21 @@ const nextConfig = {
         destination: '/products/thrie-beam-crash-barrier-manufacturers',
         permanent: true, // 301 redirect - Old product URL
       },
+      {
+        source: '/road-furniture-manufacturers/plastic-car-stoppers-manufacturers',
+        destination: '/products/fabrication',
+        permanent: true, // 301 redirect - Old URL structure from previous site
+      },
+      {
+        source: '/road-furniture-manufacturers/:path*',
+        destination: '/products/fabrication',
+        permanent: true, // 301 redirect - Catch all old /road-furniture-manufacturers/ URLs
+      },
+      {
+        source: '/enquiry',
+        destination: '/contact',
+        permanent: true, // 301 redirect - Old enquiry page, redirect to contact
+      },
     ];
   },
   

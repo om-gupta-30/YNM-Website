@@ -69,6 +69,11 @@ export default function ProductsPage() {
       router.push('/products/fabrication');
       return;
     }
+    // Redirect to dedicated road safety furnitures page
+    if (categoryKey === "roadSafetyFurnitures") {
+      router.push('/products/road-safety-furnitures');
+      return;
+    }
     
     setActiveCategory(categoryKey);
     if (categoryKey === "all") {
@@ -202,7 +207,8 @@ export default function ProductsPage() {
                   {"@type": "ListItem", "position": 2, "name": "Crash Barriers", "description": "W-beam, Thrie-beam, Double W-beam metal crash barriers"},
                   {"@type": "ListItem", "position": 3, "name": "Signages", "description": "Retro-reflective signages, gantry signages, cantilever signages"},
                   {"@type": "ListItem", "position": 4, "name": "Bitumen", "description": "VG-40, VG-30 bitumen products"},
-                  {"@type": "ListItem", "position": 5, "name": "Fabrication", "description": "Solar structures, ITMS, VMS, street light poles"}
+                  {"@type": "ListItem", "position": 5, "name": "Fabrication", "description": "Solar structures, ITMS, VMS, street light poles"},
+                  {"@type": "ListItem", "position": 6, "name": "Road Safety Furnitures", "description": "Road studs, solar studs, delineators, traffic cones, speed breakers, water barricades"}
                 ]
               }
             })
@@ -246,7 +252,6 @@ export default function ProductsPage() {
             <span className="products-hero-tag">Our Products</span>
             <h1>Quality Products for Every Need</h1>
             <p>Explore our comprehensive range of premium paints, metal fabrication, and road safety products</p>
-            <p className="products-coming-soon">More products coming soon...</p>
           </div>
         </section>
 
@@ -282,8 +287,8 @@ export default function ProductsPage() {
               <>
                 {/* Show all products in a single grid */}
                 <div className="products-grid">
-                  {/* All products from non-fabrication categories */}
-                  {categories.filter(([categoryKey]) => categoryKey !== "fabrication").flatMap(([categoryKey, category]) =>
+                  {/* All products from non-fabrication and non-road-safety-furnitures categories */}
+                  {categories.filter(([categoryKey]) => categoryKey !== "fabrication" && categoryKey !== "roadSafetyFurnitures").flatMap(([categoryKey, category]) =>
                     category.products.map((product) => (
                       <div
                         key={product.id}
@@ -337,6 +342,34 @@ export default function ProductsPage() {
                       <div className="product-card-specs">
                         <span className="spec-tag">30+ Products</span>
                         <span className="spec-tag">Custom Solutions</span>
+                      </div>
+                      <div className="product-card-footer">
+                        <span className="product-card-cta">
+                          View All
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Road Safety Furnitures card linking to dedicated page */}
+                  <div className="product-card fabrication-card" onClick={() => router.push('/products/road-safety-furnitures')}>
+                    <div className="product-card-image" style={{ background: 'linear-gradient(135deg, #1a5c2e 0%, #2d8a4e 100%)' }}>
+                      <div className="fabrication-card-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#C9A24D" strokeWidth="1.5">
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                      </div>
+                      <div className="product-card-badge">Road Safety</div>
+                    </div>
+                    <div className="product-card-content">
+                      <h3>Road Safety Furnitures</h3>
+                      <p>Road Studs, Solar Studs, Delineators, Traffic Cones, Speed Breakers, Water Barricades & more...</p>
+                      <div className="product-card-specs">
+                        <span className="spec-tag">19 Products</span>
+                        <span className="spec-tag">IRC Compliant</span>
                       </div>
                       <div className="product-card-footer">
                         <span className="product-card-cta">
@@ -589,7 +622,7 @@ export default function ProductsPage() {
 
         .products-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
           gap: 30px;
         }
 
@@ -859,22 +892,76 @@ export default function ProductsPage() {
             min-height: 300px;
           }
 
+          .products-categories-section {
+            top: 60px;
+            padding: 20px 12px;
+          }
+
           .products-categories-container {
             flex-direction: column;
             align-items: stretch;
+            gap: 8px;
           }
 
           .category-tab {
             width: 100%;
             justify-content: center;
+            padding: 10px 16px;
+            font-size: 13px;
           }
 
           .products-grid {
             grid-template-columns: 1fr;
           }
 
+          .products-grid-section {
+            padding: 30px 12px;
+          }
+
           .category-group-header h2 {
             font-size: 24px;
+          }
+
+          .product-card-image {
+            height: 200px;
+          }
+
+          .product-card-content {
+            padding: 20px;
+          }
+
+          .product-card-content h3 {
+            font-size: 18px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .products-hero {
+            height: 35vh;
+            min-height: 250px;
+          }
+
+          .products-hero-content h1 {
+            font-size: clamp(24px, 6vw, 36px);
+          }
+
+          .products-hero-content p {
+            font-size: 14px;
+          }
+
+          .products-categories-section {
+            top: 54px;
+            padding: 16px 8px;
+          }
+
+          .category-tab {
+            padding: 8px 12px;
+            font-size: 12px;
+            gap: 6px;
+          }
+
+          .tab-icon {
+            font-size: 16px;
           }
         }
       `}</style>

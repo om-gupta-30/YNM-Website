@@ -102,6 +102,12 @@ export default function App({ Component, pageProps }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${gaId}');
+          gtag('config', 'AW-17963850555');
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17963850555/uWuFCKznp_sbELu26vVC',
+            'value': 1.0,
+            'currency': 'INR'
+          });
         `}
       </Script>
     </>

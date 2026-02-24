@@ -1,4 +1,4 @@
-import { useMemo, useState, Fragment } from "react";
+import { useMemo, useState, useEffect, useCallback, Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -30,105 +30,176 @@ export default function Navbar() {
     href 
   })), []);
   const [logoError, setLogoError] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = useCallback(() => setMobileMenuOpen(false), []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    const handleRouteChange = () => closeMobileMenu();
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => router.events.off("routeChangeStart", handleRouteChange);
+  }, [router.events, closeMobileMenu]);
 
   return (
-    <nav id="navbar" className="standalone-navbar">
-      <Link href="/" className="nav-brand" aria-label="Home">
-        <div className="nav-logo-wrapper hero-logo-heartbeat">
-          {!logoError ? (
-            <Image
-              src="/assets/logo-navbar.jpg"
-              alt="YNM Safety - Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | Premium Cold Plastic Paint Manufacturers Telangana"
-              width={50}
-              height={50}
-              className="nav-logo-new"
-              priority
-              onError={() => setLogoError(true)}
-            />
-          ) : (
-            <div className="nav-logo-fallback" style={{
-              width: '50px',
-              height: '50px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'linear-gradient(135deg, #C9A24D 0%, #E6D3A3 100%)',
-              borderRadius: '8px',
-              color: '#74060D',
-              fontWeight: 700,
-              fontSize: '14px',
-              border: '2px solid #74060D'
-            }}>
-              YNM
-            </div>
-          )}
-        </div>
-      </Link>
+    <>
+      <nav id="navbar" className="standalone-navbar">
+        <Link href="/" className="nav-brand" aria-label="Home">
+          <div className="nav-logo-wrapper hero-logo-heartbeat">
+            {!logoError ? (
+              <Image
+                src="/assets/logo-navbar.jpg"
+                alt="YNM Safety - Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | Premium Cold Plastic Paint Manufacturers Telangana"
+                width={50}
+                height={50}
+                className="nav-logo-new"
+                priority
+                onError={() => setLogoError(true)}
+              />
+            ) : (
+              <div className="nav-logo-fallback" style={{
+                width: '50px',
+                height: '50px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: 'linear-gradient(135deg, #C9A24D 0%, #E6D3A3 100%)',
+                borderRadius: '8px',
+                color: '#74060D',
+                fontWeight: 700,
+                fontSize: '14px',
+                border: '2px solid #74060D'
+              }}>
+                YNM
+              </div>
+            )}
+          </div>
+        </Link>
 
-      <div className="nav-links">
-        {navLinks.map((link, index) => {
-          const isExternal =
-            link.href &&
-            (link.href.startsWith("http://") || link.href.startsWith("https://"));
-          const target = link.target || (isExternal ? "_blank" : undefined);
-          const sep = index > 0 ? <span className="nav-sep" aria-hidden="true" /> : null;
+        <div className="nav-links nav-links-desktop">
+          {navLinks.map((link, index) => {
+            const isExternal =
+              link.href &&
+              (link.href.startsWith("http://") || link.href.startsWith("https://"));
+            const target = link.target || (isExternal ? "_blank" : undefined);
+            const sep = index > 0 ? <span className="nav-sep" aria-hidden="true" /> : null;
 
-          // Links with dropdown
-          if (link.hasDropdown && link.dropdownItems) {
-            return (
-              <Fragment key={link.id || index}>
-                {sep}
-                <div className="nav-dropdown-wrapper">
-                  <Link
+            if (link.hasDropdown && link.dropdownItems) {
+              return (
+                <Fragment key={link.id || index}>
+                  {sep}
+                  <div className="nav-dropdown-wrapper">
+                    <Link
+                      href={link.href || "#"}
+                      className="nav-link nav-link-dropdown"
+                    >
+                      {link.label}
+                      <svg className="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </Link>
+                    <div className="nav-dropdown">
+                      {link.dropdownItems.map((item, idx) => (
+                        <Link key={idx} href={item.href} className="nav-dropdown-item">
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </Fragment>
+              );
+            }
+
+            if (isExternal || target === "_blank") {
+              return (
+                <Fragment key={link.id || index}>
+                  {sep}
+                  <a
                     href={link.href || "#"}
-                    className="nav-link nav-link-dropdown"
+                    className="nav-link"
+                    target={target}
+                    rel={target === "_blank" ? "noopener noreferrer" : undefined}
                   >
                     {link.label}
-                    <svg className="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                      <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </Link>
-                  <div className="nav-dropdown">
-                    {link.dropdownItems.map((item, idx) => (
-                      <Link key={idx} href={item.href} className="nav-dropdown-item">
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </Fragment>
-            );
-          }
+                  </a>
+                </Fragment>
+              );
+            }
 
-          if (isExternal || target === "_blank") {
             return (
               <Fragment key={link.id || index}>
                 {sep}
-                <a
+                <Link
                   href={link.href || "#"}
                   className="nav-link"
-                  target={target}
-                  rel={target === "_blank" ? "noopener noreferrer" : undefined}
                 >
                   {link.label}
-                </a>
+                </Link>
               </Fragment>
             );
-          }
+          })}
+        </div>
 
-          return (
-            <Fragment key={link.id || index}>
-              {sep}
-              <Link
-                href={link.href || "#"}
-                className="nav-link"
-              >
-                {link.label}
+        <button
+          className="nav-hamburger"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={mobileMenuOpen}
+        >
+          <span className={`hamburger-line ${mobileMenuOpen ? "open" : ""}`} />
+          <span className={`hamburger-line ${mobileMenuOpen ? "open" : ""}`} />
+          <span className={`hamburger-line ${mobileMenuOpen ? "open" : ""}`} />
+        </button>
+      </nav>
+
+      {mobileMenuOpen && (
+        <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
+          <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
+            <div className="mobile-menu-header">
+              <Link href="/" className="mobile-menu-brand" onClick={closeMobileMenu}>
+                <Image
+                  src="/assets/logo-navbar.jpg"
+                  alt="YNM Safety"
+                  width={40}
+                  height={40}
+                  className="nav-logo-new"
+                />
+                <span>YNM SAFETY</span>
               </Link>
-            </Fragment>
-          );
-        })}
-      </div>
-    </nav>
+              <button className="mobile-menu-close" onClick={closeMobileMenu} aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="mobile-menu-links">
+              {navLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href || "#"}
+                  className={`mobile-menu-link ${router.pathname === link.href ? "active" : ""}`}
+                  onClick={closeMobileMenu}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <div className="mobile-menu-footer">
+              <a href="tel:+919676575770" className="mobile-menu-cta">
+                Call Us: +91 96765 75770
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

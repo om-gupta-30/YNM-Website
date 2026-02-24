@@ -1,8 +1,14 @@
 import Link from "next/link";
+import Head from "next/head";
 
 function Error({ statusCode }) {
   return (
-    <div style={{
+    <>
+      <Head>
+        <title>{statusCode ? `Error ${statusCode}` : 'Error'} - YNM Safety</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <div style={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -34,7 +40,8 @@ function Error({ statusCode }) {
       >
         Go Home
       </Link>
-    </div>
+      </div>
+    </>
   );
 }
 

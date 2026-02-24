@@ -1,8 +1,14 @@
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Custom404() {
   return (
-    <div style={{
+    <>
+      <Head>
+        <title>Page Not Found - YNM Safety</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <div style={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -28,6 +34,7 @@ export default function Custom404() {
       >
         Go Home
       </Link>
-    </div>
+      </div>
+    </>
   );
 }

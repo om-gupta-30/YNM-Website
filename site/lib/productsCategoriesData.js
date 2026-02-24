@@ -2796,6 +2796,437 @@ export const productsData = {
                 answer: "When properly applied and top-coated, YNM Safety Red Oxide Paint provides long-lasting corrosion protection and reduces maintenance frequency."
               }
             ]
+          },
+          {
+            id: "p5",
+            slug: "profile-marking-paint-manufacturers",
+            name: "Profile Marking Paint",
+            shortDesc: "High-performance Profile Marking Paint manufactured by YNM Safety, trusted Paint Manufacturers delivering premium road marking paints and hot thermoplastic paint solutions for global infrastructure projects.",
+            desc: "YNM Safety is one of the leading Profile Marking Paint Manufacturers and trusted Paint Manufacturers in India, specializing in high-durability road marking paints and hot thermoplastic paint for highways, airports, and industrial infrastructure.",
+            image: "/assets/ynm-safety-profile-roads-highways.jpg",
+            heroImage: "/assets/ynm-safety-profile-roads-highways.jpg",
+            specs: ["High Retro-Reflective", "Weather Resistant", "Superior Abrasion Resistance", "Long Service Life", "MoRT&H 803 Compliant"],
+            price: "85",
+            priceUnit: "per kg",
+            
+            // SEO Meta Information
+            meta: {
+              title: "Profile Marking Paint Manufacturers India | Road Marking Paints | YNM Safety",
+              description: "YNM Safety is a leading Profile Marking Paint Manufacturers and road marking paints supplier in India. We manufacture hot thermoplastic paint and high-performance profile marking paint as per MoRT&H 803, BS 3262, IRC 35, and AASHTO M249 standards for highways, airports, and infrastructure projects worldwide.",
+              keywords: "profile marking paint manufacturers, road marking paints, hot thermoplastic paint manufacturers, ynm safety, ynm safety manufacturers, paint manufacturers in india, thermoplastic road marking paint supplier, reflective road marking paint, infrastructure marking paint, highway marking paint manufacturers, airport runway marking paint, industrial floor marking paint, moRTH 803 paint manufacturers, BS 3262 road paint",
+              slug: "/profile-marking-paint-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading Profile Marking Paint Manufacturers and trusted Paint Manufacturers in India, specializing in high-durability road marking paints and hot thermoplastic paint for highways, airports, and industrial infrastructure.\n\nOur advanced manufacturing facility in Hyderabad produces 900 MT monthly capacity of premium thermoplastic profile marking paint designed for high reflectivity, superior skid resistance, and long service life. As recognized YNM Safety manufacturers, we strictly follow MoRT&H 803, BS 3262, IRC 35, and AASHTO M249 standards to ensure global compliance and performance.",
+            detailedDescription: "YNM Safety is one of the leading Profile Marking Paint Manufacturers and trusted Paint Manufacturers in India, specializing in high-durability road marking paints and hot thermoplastic paint for highways, airports, and industrial infrastructure.\n\nOur advanced manufacturing facility in Hyderabad produces 900 MT monthly capacity of premium thermoplastic profile marking paint designed for high reflectivity, superior skid resistance, and long service life. As recognized YNM Safety manufacturers, we strictly follow MoRT&H 803, BS 3262, IRC 35, and AASHTO M249 standards to ensure global compliance and performance.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Profile Marking Paint" },
+              { label: "Material Type", value: "Thermoplastic Road Marking Compound" },
+              { label: "Application Method", value: "Hot Applied" },
+              { label: "Packaging", value: "25 Kg Bag" },
+              { label: "Durability", value: "High Abrasion & Weather Resistance" },
+              { label: "Reflectivity", value: "High Retro-Reflective Performance" },
+              { label: "Compliance", value: "MoRT&H 803, AASHTO M249, BS 3262, IRC 35" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "25 Kg Bag",
+                icon: "weight"
+              },
+              {
+                label: "Quality Standards",
+                value: "MoRT&H 803, ISO 9001:2015, AASHTO M249, BS 3262, IRC 35",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "Project Based",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "32089090",
+                icon: "standard"
+              },
+              {
+                label: "Packing Type",
+                value: "25 Kg Bag",
+                icon: "package"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Profile Marking Paint",
+                "Material Type: Thermoplastic Road Marking Compound",
+                "Application Method: Hot Applied",
+                "Packaging: 25 Kg Bag",
+                "Durability: High Abrasion & Weather Resistance",
+                "Reflectivity: High Retro-Reflective Performance",
+                "Compliance: MoRT&H 803, AASHTO M249, BS 3262, IRC 35",
+                "HSN Code: 32089090"
+              ],
+              keyFeatures: [
+                "High retro-reflective performance",
+                "Excellent night visibility",
+                "Superior abrasion resistance",
+                "Strong adhesion to asphalt & concrete",
+                "Weather-resistant formulation",
+                "Long service life under heavy traffic"
+              ],
+              advantages: [
+                "Enhanced road safety & traffic guidance",
+                "Reduced maintenance frequency",
+                "Cost-effective lifecycle performance",
+                "International quality compliance",
+                "Trusted profile marking paint manufacturers with 20+ export countries"
+              ]
+            },
+            
+            features: [
+              "High retro-reflective performance",
+              "Excellent night visibility",
+              "Superior abrasion resistance",
+              "Strong adhesion to asphalt & concrete",
+              "Weather-resistant formulation",
+              "Long service life under heavy traffic"
+            ],
+            
+            advantages: [
+              "Enhanced road safety & traffic guidance",
+              "Reduced maintenance frequency",
+              "Cost-effective lifecycle performance",
+              "International quality compliance",
+              "Trusted profile marking paint manufacturers with 20+ export countries"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Roads & Highways",
+                description: "Profile marking paint ensures clear lane demarcation and long-lasting road visibility.",
+                image: "/assets/ynm-safety-profile-roads-highways.jpg",
+                details: "High-performance hot thermoplastic paint improves night visibility and traffic safety compliance."
+              },
+              {
+                id: "app2",
+                title: "Railways & Metro Infrastructure",
+                description: "Used for platform markings and rail infrastructure safety lines.",
+                image: "/assets/ynm-safety-profile-railways-metro.jpg",
+                details: "Durable and abrasion-resistant paint withstands heavy passenger and freight traffic."
+              },
+              {
+                id: "app3",
+                title: "Airports & Runways",
+                description: "Provides high-visibility runway and taxiway markings.",
+                image: "/assets/ynm-safety-profile-airports-runways.jpg",
+                details: "Complies with international marking standards for aviation safety."
+              },
+              {
+                id: "app4",
+                title: "Industrial & Logistics Areas",
+                description: "Ensures safe movement pathways within warehouses and industrial zones.",
+                image: "/assets/ynm-safety-profile-industrial-logistics.jpg",
+                details: "High adhesion and wear resistance support heavy-duty operations."
+              },
+              {
+                id: "app5",
+                title: "Parking Areas & Commercial Complexes",
+                description: "Clear parking slot demarcation and directional markings.",
+                image: "/assets/ynm-safety-profile-parking-commercial.jpg",
+                details: "Long-lasting reflective performance enhances night-time safety."
+              },
+              {
+                id: "app6",
+                title: "Bridges, Tunnels & High-Risk Zones",
+                description: "Improves hazard marking and traffic control.",
+                image: "/assets/ynm-safety-profile-bridges-tunnels.jpg",
+                details: "Weather-resistant thermoplastic composition ensures long-term durability."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Roads & Highways",
+                short: "Profile marking paint ensures clear lane demarcation and long-lasting road visibility.",
+                hover: "High-performance hot thermoplastic paint improves night visibility and traffic safety compliance.",
+                image: "/assets/ynm-safety-profile-roads-highways.jpg"
+              },
+              {
+                title: "Railways & Metro Infrastructure",
+                short: "Used for platform markings and rail infrastructure safety lines.",
+                hover: "Durable and abrasion-resistant paint withstands heavy passenger and freight traffic.",
+                image: "/assets/ynm-safety-profile-railways-metro.jpg"
+              },
+              {
+                title: "Airports & Runways",
+                short: "Provides high-visibility runway and taxiway markings.",
+                hover: "Complies with international marking standards for aviation safety.",
+                image: "/assets/ynm-safety-profile-airports-runways.jpg"
+              },
+              {
+                title: "Industrial & Logistics Areas",
+                short: "Ensures safe movement pathways within warehouses and industrial zones.",
+                hover: "High adhesion and wear resistance support heavy-duty operations.",
+                image: "/assets/ynm-safety-profile-industrial-logistics.jpg"
+              },
+              {
+                title: "Parking Areas & Commercial Complexes",
+                short: "Clear parking slot demarcation and directional markings.",
+                hover: "Long-lasting reflective performance enhances night-time safety.",
+                image: "/assets/ynm-safety-profile-parking-commercial.jpg"
+              },
+              {
+                title: "Bridges, Tunnels & High-Risk Zones",
+                short: "Improves hazard marking and traffic control.",
+                hover: "Weather-resistant thermoplastic composition ensures long-term durability.",
+                image: "/assets/ynm-safety-profile-bridges-tunnels.jpg"
+              }
+            ],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Profile Marking Paint Market Growth | YNM Safety",
+              description: "The profile marking paint market has shown steady historical growth at an estimated CAGR of 2–4% in recent years. With increasing global infrastructure projects and smart city development, the market is projected to expand at approximately 3–5% CAGR through 2032–2035.\n\nRising demand for durable, reflective, and eco-compliant road marking paints and hot thermoplastic paint solutions is expected to significantly increase overall market valuation in the coming decade.",
+              cagr: "3-5%",
+              growthFactors: [
+                "Infrastructure Development",
+                "Industrial Expansion",
+                "Safety & Regulatory Standards",
+                "Corrosion Protection Requirements",
+                "Technological Advancements",
+                "Environmental & Sustainability Trends"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$1.0B",
+                projectedMarketSize: "$1.5B",
+                currentYear: "2024",
+                projectedYear: "2032",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "40,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 0.8 },
+                { year: "2022", value: 0.85 },
+                { year: "2023", value: 0.9 },
+                { year: "2024", value: 1.0 },
+                { year: "2025", value: 1.1 },
+                { year: "2026", value: 1.2 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada", "Mexico"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Netherlands", "Sweden", "Poland", "Russia", "Belgium"]
+                },
+                {
+                  name: "Asia-Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Australia", "Singapore", "Thailand", "Indonesia", "Malaysia", "Vietnam"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina", "Chile", "Colombia", "Peru"]
+                },
+                {
+                  name: "Middle East",
+                  countries: ["United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Oman", "Egypt"]
+                },
+                {
+                  name: "Africa",
+                  countries: ["South Africa", "Nigeria", "Kenya", "Egypt", "Algeria"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 9 Steps
+            manufacturingProcessIntro: "YNM Safety manufactures Profile Marking Paint through a controlled, quality-driven process to ensure excellent durability, adhesion, reflectivity, and compliance with road safety standards.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Raw Material Selection & Inspection",
+                description: "The manufacturing of Profile Marking Paint begins with the careful selection of high-quality raw materials. These include premium grade resins (binder), pigments (white/yellow), fillers, additives, and solvents. Each material is tested for purity, viscosity, moisture content, and compatibility to ensure durability, high visibility, and long-lasting road performance."
+              },
+              {
+                step: "02",
+                title: "Resin Preparation (Binder Processing)",
+                description: "The selected resin is heated and processed in a controlled mixing tank. This binder acts as the backbone of the profile marking paint, providing adhesion, flexibility, and resistance against harsh weather conditions, traffic load, and UV exposure."
+              },
+              {
+                step: "03",
+                title: "Pigment & Filler Blending",
+                description: "High-reflective pigments and mineral fillers are gradually added to the resin under continuous stirring. This ensures uniform colour strength, brightness, and opacity. The blending process is done using high-speed dispersers to achieve a smooth and consistent texture."
+              },
+              {
+                step: "04",
+                title: "Additives Incorporation",
+                description: "Special additives such as anti-settling agents, plasticizers, stabilizers, and drying agents are added. These improve flow properties, enhance drying time, increase durability, and prevent cracking or peeling of the marking paint."
+              },
+              {
+                step: "05",
+                title: "Grinding & Dispersion Process",
+                description: "The mixture is transferred to a bead mill or sand mill for fine grinding. This step ensures that pigments are evenly dispersed, improving reflectivity and smooth application on road surfaces. Proper grinding enhances the overall performance and lifespan of profile road markings."
+              },
+              {
+                step: "06",
+                title: "Quality Testing & Lab Evaluation",
+                description: "The prepared batch undergoes strict quality control tests including viscosity test, density test, drying time test, adhesion test, retro-reflectivity test, and weather resistance test. This ensures the profile marking paint meets industry and road safety standards."
+              },
+              {
+                step: "07",
+                title: "Filtration & Final Mixing",
+                description: "The paint is filtered to remove any impurities or particles. Final adjustments in viscosity and color consistency are made to ensure smooth spray or extrusion application during road marking."
+              },
+              {
+                step: "08",
+                title: "Packaging & Labeling",
+                description: "The finished Profile Marking Paint is filled into MS drums or HDPE containers using automated filling machines. Each container is labeled with batch number, manufacturing date, and technical specifications for traceability."
+              },
+              {
+                step: "09",
+                title: "Storage & Dispatch",
+                description: "The packaged product is stored in a controlled environment to maintain quality. Proper palletizing and safe dispatch ensure damage-free delivery to road marking contractors and infrastructure projects."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              basePriceINR: 85,
+              currency: "INR",
+              unit: "per kg",
+              displayPrice: "₹85 per kg",
+              packageSizes: [
+                { size: "25 kg bag", priceINR: 85, moq: 500 },
+                { size: "500 kg", priceINR: 82, moq: 500 },
+                { size: "1000 kg", priceINR: 80, moq: 1000 }
+              ],
+              bulkDiscounts: [
+                { minQuantity: 1000, discount: 3 },
+                { minQuantity: 5000, discount: 5 },
+                { minQuantity: 10000, discount: 8 },
+                { minQuantity: 25000, discount: 10 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "10,800 MT",
+              productionSpeed: "900 MT",
+              qualityStandards: "ISO 9001:2015",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "iso-9001",
+                title: "ISO 9001:2015",
+                description: "Quality Management System Certification",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "shield"
+              },
+              {
+                id: "morth-803",
+                title: "MoRT&H 803",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "bs-3262",
+                title: "BS 3262",
+                description: "British Standard for Thermoplastic Road Marking Materials",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "layers"
+              },
+              {
+                id: "aashto-m249",
+                title: "AASHTO M249",
+                description: "American Standard for Thermoplastic Pavement Marking Materials",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "irc-35",
+                title: "IRC 35",
+                description: "Indian Roads Congress Code of Practice",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-profile-roads-highways.jpg",
+              "/assets/ynm-safety-profile-railways-metro.jpg",
+              "/assets/ynm-safety-profile-airports-runways.jpg",
+              "/assets/ynm-safety-profile-industrial-logistics.jpg",
+              "/assets/ynm-safety-profile-parking-commercial.jpg",
+              "/assets/ynm-safety-profile-bridges-tunnels.jpg"
+            ],
+            
+            // FAQs
+            faqs: [
+              {
+                question: "What is Profile Marking Paint used for?",
+                answer: "YNM Safety Profile Marking Paint is used for road markings on highways, airports, railways, industrial areas, and parking zones. It provides high visibility, superior durability, and long-lasting performance under heavy traffic conditions."
+              },
+              {
+                question: "Why choose YNM Safety Profile Marking Paint?",
+                answer: "YNM Safety is a trusted Profile Marking Paint manufacturer offering high-performance road marking solutions with excellent retro-reflective properties, weather resistance, and compliance with international standards like MoRT&H 803, BS 3262, and AASHTO M249."
+              },
+              {
+                question: "What standards does YNM Profile Marking Paint comply with?",
+                answer: "Our Profile Marking Paint complies with MoRT&H 803, BS 3262, IRC 35, AASHTO M249, and ISO 9001:2015 quality standards, ensuring global compliance and performance for infrastructure projects."
+              },
+              {
+                question: "Can Profile Marking Paint be used on airport runways?",
+                answer: "Yes, YNM Safety Profile Marking Paint is ideal for airport runways and taxiways. It provides high-visibility markings that comply with international aviation safety standards."
+              },
+              {
+                question: "What is the application method for Profile Marking Paint?",
+                answer: "Profile Marking Paint is hot-applied using specialized road marking equipment. The thermoplastic compound is heated and applied to road surfaces for durable, long-lasting markings."
+              },
+              {
+                question: "What is the production capacity for Profile Marking Paint?",
+                answer: "YNM Safety has a monthly production capacity of 900 MT and annual capacity of 10,800 MT for Profile Marking Paint. We export to 20+ countries worldwide."
+              }
+            ]
           }
         ]
       },
@@ -3206,8 +3637,8 @@ export const productsData = {
             name: "Bitumen VG 30",
             shortDesc: "High-performance Bitumen VG 30 manufacturers delivering premium paving grade bitumen for airport runways, industrial flooring, bridge decking & marine infrastructure.",
             desc: "Premium paving grade bitumen VG 30 designed for road construction, waterproofing, and heavy-duty infrastructure applications.",
-            image: "/assets/bitumen/YNM-Safety-Airport-Runways.png",
-            heroImage: "/assets/bitumen/YNM-Safety-Airport-Runways.png",
+            image: "/assets/bitumen/ynm-safety-airport-runways.png",
+            heroImage: "/assets/bitumen/ynm-safety-airport-runways.png",
             specs: ["VG 30 Grade", "IS 73 Compliant", "ASTM Standards", "200 Kg Drums", "Export Ready"],
             
             // SEO Meta Information
@@ -3326,42 +3757,42 @@ export const productsData = {
                 id: "app1",
                 title: "Airport Runways",
                 description: "Bitumen VG 30 is widely used for airport runway construction and surfacing.",
-                image: "/assets/bitumen/YNM-Safety-Airport-Runways.png",
+                image: "/assets/bitumen/ynm-safety-airport-runways.png",
                 details: "Manufactured by leading bitumen manufacturers, VG30 provides high load-bearing capacity and thermal stability required for aircraft movement and continuous stress conditions."
               },
               {
                 id: "app2",
                 title: "Roofing & Waterproofing",
                 description: "Bitumen VG30 is ideal for roofing membranes and waterproofing systems.",
-                image: "/assets/bitumen/YNM-Safety-Roofing-and-Waterproofing.png",
+                image: "/assets/bitumen/ynm-safety-roofing-and-waterproofing.png",
                 details: "Its excellent binding and moisture resistance properties make it suitable for protecting buildings, basements, and structural foundations from water damage."
               },
               {
                 id: "app3",
                 title: "Industrial Flooring",
                 description: "Bitumen VG 30 supports heavy-duty industrial flooring applications.",
-                image: "/assets/bitumen/YNM-Safety-Industrial-Flooring.png",
+                image: "/assets/bitumen/ynm-safety-industrial-flooring.png",
                 details: "As trusted ynm safety manufacturers, we supply Bitumen VG30 that withstands mechanical stress, chemical exposure, and heavy equipment loads."
               },
               {
                 id: "app4",
                 title: "Bridge Decking",
                 description: "VG30 bitumen enhances bridge deck surfacing durability.",
-                image: "/assets/bitumen/YNM-Safety-Bridge-Decking.png",
+                image: "/assets/bitumen/ynm-safety-bridge-decking.png",
                 details: "Its strong adhesion and crack resistance reduce water infiltration and structural damage in elevated road and bridge structures."
               },
               {
                 id: "app5",
                 title: "Marine & Port Infrastructure",
                 description: "Bitumen VG 30 is used in marine and port construction projects.",
-                image: "/assets/bitumen/YNM-Safety-Marine-and-Port-Infrastructure.png",
+                image: "/assets/bitumen/ynm-safety-marine-and-port-infrastructure.png",
                 details: "The corrosion-resistant and waterproof properties ensure long-term performance in coastal and high-humidity environments."
               },
               {
                 id: "app6",
                 title: "Dam & Reservoir Construction",
                 description: "Bitumen VG30 is suitable for dam and reservoir waterproof lining.",
-                image: "/assets/bitumen/YNM-Safety-Dam-and-Reservoir-Construction.png",
+                image: "/assets/bitumen/ynm-safety-dam-and-reservoir-construction.png",
                 details: "Its high binding strength and moisture resistance make it ideal for large-scale hydraulic and water containment projects."
               }
             ],
@@ -3371,37 +3802,37 @@ export const productsData = {
                 title: "Airport Runways",
                 short: "Bitumen VG 30 is widely used for airport runway construction and surfacing.",
                 hover: "Manufactured by leading bitumen manufacturers, VG30 provides high load-bearing capacity and thermal stability required for aircraft movement and continuous stress conditions.",
-                image: "/assets/bitumen/YNM-Safety-Airport-Runways.png"
+                image: "/assets/bitumen/ynm-safety-airport-runways.png"
               },
               {
                 title: "Roofing & Waterproofing",
                 short: "Bitumen VG30 is ideal for roofing membranes and waterproofing systems.",
                 hover: "Its excellent binding and moisture resistance properties make it suitable for protecting buildings, basements, and structural foundations from water damage.",
-                image: "/assets/bitumen/YNM-Safety-Roofing-and-Waterproofing.png"
+                image: "/assets/bitumen/ynm-safety-roofing-and-waterproofing.png"
               },
               {
                 title: "Industrial Flooring",
                 short: "Bitumen VG 30 supports heavy-duty industrial flooring applications.",
                 hover: "As trusted ynm safety manufacturers, we supply Bitumen VG30 that withstands mechanical stress, chemical exposure, and heavy equipment loads.",
-                image: "/assets/bitumen/YNM-Safety-Industrial-Flooring.png"
+                image: "/assets/bitumen/ynm-safety-industrial-flooring.png"
               },
               {
                 title: "Bridge Decking",
                 short: "VG30 bitumen enhances bridge deck surfacing durability.",
                 hover: "Its strong adhesion and crack resistance reduce water infiltration and structural damage in elevated road and bridge structures.",
-                image: "/assets/bitumen/YNM-Safety-Bridge-Decking.png"
+                image: "/assets/bitumen/ynm-safety-bridge-decking.png"
               },
               {
                 title: "Marine & Port Infrastructure",
                 short: "Bitumen VG 30 is used in marine and port construction projects.",
                 hover: "The corrosion-resistant and waterproof properties ensure long-term performance in coastal and high-humidity environments.",
-                image: "/assets/bitumen/YNM-Safety-Marine-and-Port-Infrastructure.png"
+                image: "/assets/bitumen/ynm-safety-marine-and-port-infrastructure.png"
               },
               {
                 title: "Dam & Reservoir Construction",
                 short: "Bitumen VG30 is suitable for dam and reservoir waterproof lining.",
                 hover: "Its high binding strength and moisture resistance make it ideal for large-scale hydraulic and water containment projects.",
-                image: "/assets/bitumen/YNM-Safety-Dam-and-Reservoir-Construction.png"
+                image: "/assets/bitumen/ynm-safety-dam-and-reservoir-construction.png"
               }
             ],
             
@@ -3417,7 +3848,7 @@ export const productsData = {
                 year: "2024",
                 highlight: "100%",
                 highlightLabel: "Quality Compliance",
-                logo: "/assets/bitumen/YNM-Safety-Airport-Runways.png"
+                logo: "/assets/bitumen/ynm-safety-airport-runways.png"
               }
             ],
             
@@ -3580,12 +4011,12 @@ export const productsData = {
             
             // Gallery Images
             gallery: [
-              "/assets/bitumen/YNM-Safety-Airport-Runways.png",
-              "/assets/bitumen/YNM-Safety-Roofing-and-Waterproofing.png",
-              "/assets/bitumen/YNM-Safety-Industrial-Flooring.png",
-              "/assets/bitumen/YNM-Safety-Bridge-Decking.png",
-              "/assets/bitumen/YNM-Safety-Marine-and-Port-Infrastructure.png",
-              "/assets/bitumen/YNM-Safety-Dam-and-Reservoir-Construction.png"
+              "/assets/bitumen/ynm-safety-airport-runways.png",
+              "/assets/bitumen/ynm-safety-roofing-and-waterproofing.png",
+              "/assets/bitumen/ynm-safety-industrial-flooring.png",
+              "/assets/bitumen/ynm-safety-bridge-decking.png",
+              "/assets/bitumen/ynm-safety-marine-and-port-infrastructure.png",
+              "/assets/bitumen/ynm-safety-dam-and-reservoir-construction.png"
             ]
           }
         ]
@@ -7781,7 +8212,7 @@ export const productsData = {
                 title: "Retail Stores & Showrooms",
                 short: "Canopy structures enhance storefront appearance and customer protection.",
                 hover: "YNM Safety canopy systems provide durable and visually appealing exterior coverage for retail branding and customer comfort.",
-                image: "/assets/ynm-safety-canopy-retail-stores-showrooms.png"
+                image: "/assets/ynm-safety-canopy-retail-stores-showrooms.webp"
               },
               {
                 title: "Fuel Stations",
@@ -9170,6 +9601,387 @@ export const productsData = {
               "/assets/ynm-safety-adb-airport-port-connectivity-roads.webp",
               "/assets/ynm-safety-adb-ring-roads-bypasses.webp"
             ]
+          },
+          {
+            id: "sg14",
+            slug: "toll-boards-facia-manufacturers",
+            name: "Toll Boards & Facia",
+            shortDesc: "Durable and high-performance Toll Boards & Facia manufactured by YNM Safety, trusted Signages Manufacturers delivering reliable industrial display boards and commercial signage solutions globally.",
+            desc: "Premium toll boards and facia signage for industrial facilities, commercial spaces, and infrastructure projects. High-quality display boards with weather-resistant and long-lasting performance.",
+            image: "/assets/ynm-safety-toll-industrial-manufacturing.jpg",
+            heroImage: "/assets/ynm-safety-toll-industrial-manufacturing.jpg",
+            specs: ["ACP / Aluminium / MS Sheet", "Powder Coated / UV Printed", "Long-Term Durability", "MORTH & IRC 67 Compliant"],
+            
+            // SEO Meta Information
+            meta: {
+              title: "Toll Boards & Facia Manufacturers | YNM Safety",
+              description: "YNM Safety is a leading Toll Boards & Facia Manufacturers brand delivering high-quality industrial tool boards, facia sign boards, and display signage solutions for commercial, infrastructure, and industrial projects worldwide. Trusted YNM Safety manufacturers and signages manufacturers in India.",
+              keywords: "toll boards manufacturers, facia sign board manufacturers, toll boards & facia manufacturers, ynm safety, ynm, ynm safety manufacturers, signages manufacturers, industrial tool board supplier, facia signage manufacturers india, retail display board manufacturers, warehouse signage suppliers, infrastructure sign board exporters",
+              slug: "/toll-boards-facia-manufacturers"
+            },
+            
+            // Product Overview
+            overview: "YNM Safety is one of the leading Toll Boards & Facia Manufacturers and professional Signages Manufacturers specializing in industrial display boards and facia signage solutions. Our toll boards and facia boards are designed for effective visual communication, tool identification, branding display, and operational organization across various industries.\n\nAs trusted YNM Safety manufacturers, we produce durable and weather-resistant boards suitable for industrial facilities, retail stores, warehouses, and infrastructure projects. Our Hyderabad-based manufacturing facility supports customized production based on project requirements and industry standards.",
+            detailedDescription: "YNM Safety is one of the leading Toll Boards & Facia Manufacturers and professional Signages Manufacturers specializing in industrial display boards and facia signage solutions. Our toll boards and facia boards are designed for effective visual communication, tool identification, branding display, and operational organization across various industries.\n\nAs trusted YNM Safety manufacturers, we produce durable and weather-resistant boards suitable for industrial facilities, retail stores, warehouses, and infrastructure projects. Our Hyderabad-based manufacturing facility supports customized production based on project requirements and industry standards.",
+            
+            // Overview Technical Points (displayed below overview paragraph)
+            overviewPoints: [
+              { label: "Product Type", value: "Toll Boards & Facia" },
+              { label: "Material", value: "ACP / Aluminium / MS Sheet" },
+              { label: "Surface Finish", value: "Powder Coated / UV Printed" },
+              { label: "Display Type", value: "Fixed / Wall Mounted" },
+              { label: "Mounting", value: "Wall Mounted / Frame Mounted" },
+              { label: "Durability", value: "Long-Term Outdoor & Indoor" },
+              { label: "Application Area", value: "Industrial & Commercial Projects" },
+              { label: "Compliance", value: "MORTH & IRC 67" }
+            ],
+            
+            // Detailed Specifications for spec table
+            detailedSpecs: [
+              {
+                label: "Country of Origin",
+                value: "India",
+                icon: "location"
+              },
+              {
+                label: "Manufacturing Location",
+                value: "Hyderabad",
+                icon: "location"
+              },
+              {
+                label: "Net Weight",
+                value: "Variable",
+                icon: "weight"
+              },
+              {
+                label: "Packing Type",
+                value: "Standard Protective Packaging",
+                icon: "package"
+              },
+              {
+                label: "Quality Standards",
+                value: "MORTH, IRC 67",
+                icon: "standard"
+              },
+              {
+                label: "Minimum Order Quantity (MOQ)",
+                value: "As Per Project Requirement",
+                icon: "package"
+              },
+              {
+                label: "HSN Code",
+                value: "831000",
+                icon: "standard"
+              }
+            ],
+            
+            // Specifications for tabs
+            specifications: {
+              technical: [
+                "Product Type: Toll Boards & Facia",
+                "Material: ACP / Aluminium / MS Sheet",
+                "Surface Finish: Powder Coated / UV Printed",
+                "Display Type: Fixed / Wall Mounted",
+                "Mounting: Wall Mounted / Frame Mounted",
+                "Durability: Long-Term Outdoor & Indoor",
+                "Performance Compliance: MORTH & IRC 67",
+                "HSN Code: 831000"
+              ],
+              keyFeatures: [
+                "High structural durability",
+                "Clear and organized display layout",
+                "Weather-resistant and corrosion-resistant materials",
+                "UV-stable surface finishing",
+                "Custom design and size options",
+                "Long service life"
+              ],
+              advantages: [
+                "Improves tool and equipment organization",
+                "Enhances brand visibility and professional appearance",
+                "Supports safety compliance and operational efficiency",
+                "Suitable for industrial and commercial applications",
+                "Trusted Toll Boards & Facia Manufacturers – YNM Safety",
+                "Manufactured as per government safety standards"
+              ]
+            },
+            
+            features: [
+              "High structural durability",
+              "Clear and organized display layout",
+              "Weather-resistant and corrosion-resistant materials",
+              "UV-stable surface finishing",
+              "Custom design and size options",
+              "Long service life"
+            ],
+            
+            advantages: [
+              "Improves tool and equipment organization",
+              "Enhances brand visibility and professional appearance",
+              "Supports safety compliance and operational efficiency",
+              "Suitable for industrial and commercial applications",
+              "Trusted Toll Boards & Facia Manufacturers – YNM Safety",
+              "Manufactured as per government safety standards"
+            ],
+            
+            // Application Areas with images and hover effects
+            applicationAreas: [
+              {
+                id: "app1",
+                title: "Industrial & Manufacturing Units",
+                description: "Toll boards and facia signage improve equipment organization and identification.",
+                image: "/assets/ynm-safety-toll-industrial-manufacturing.jpg",
+                details: "Durable boards manufactured by YNM Safety enhance operational efficiency and workplace safety compliance."
+              },
+              {
+                id: "app2",
+                title: "Automotive Service Centres & Garages",
+                description: "Toll boards assist in tool management and workflow organization.",
+                image: "/assets/ynm-safety-toll-automotive-service-centres.jpg",
+                details: "Clear and structured display boards improve maintenance efficiency and professional presentation."
+              },
+              {
+                id: "app3",
+                title: "Construction Sites",
+                description: "Facia boards support project branding and safety communication.",
+                image: "/assets/ynm-safety-toll-construction-sites.jpg",
+                details: "Weather-resistant signage ensures durability in demanding outdoor environments."
+              },
+              {
+                id: "app4",
+                title: "Retail & Hardware Stores",
+                description: "Facia signage enhances storefront branding and display organization.",
+                image: "/assets/ynm-safety-toll-retail-hardware-stores.jpg",
+                details: "High-quality facia boards manufactured by YNM Safety improve customer engagement and product visibility."
+              },
+              {
+                id: "app5",
+                title: "Warehouses & Logistics Parks",
+                description: "Toll boards assist in structured equipment and storage identification.",
+                image: "/assets/ynm-safety-toll-warehouses-logistics.jpg",
+                details: "Clear signage improves workflow management and operational safety."
+              },
+              {
+                id: "app6",
+                title: "Airports, Ports & Infrastructure Projects",
+                description: "Facia boards support infrastructure branding and operational display.",
+                image: "/assets/ynm-safety-toll-airports-ports-infrastructure.jpg",
+                details: "Durable signage solutions ensure long-term visibility in high-traffic environments."
+              }
+            ],
+            
+            applications: [
+              {
+                title: "Industrial & Manufacturing Units",
+                short: "Toll boards and facia signage improve equipment organization and identification.",
+                hover: "Durable boards manufactured by YNM Safety enhance operational efficiency and workplace safety compliance.",
+                image: "/assets/ynm-safety-toll-industrial-manufacturing.jpg"
+              },
+              {
+                title: "Automotive Service Centres & Garages",
+                short: "Toll boards assist in tool management and workflow organization.",
+                hover: "Clear and structured display boards improve maintenance efficiency and professional presentation.",
+                image: "/assets/ynm-safety-toll-automotive-service-centres.jpg"
+              },
+              {
+                title: "Construction Sites",
+                short: "Facia boards support project branding and safety communication.",
+                hover: "Weather-resistant signage ensures durability in demanding outdoor environments.",
+                image: "/assets/ynm-safety-toll-construction-sites.jpg"
+              },
+              {
+                title: "Retail & Hardware Stores",
+                short: "Facia signage enhances storefront branding and display organization.",
+                hover: "High-quality facia boards manufactured by YNM Safety improve customer engagement and product visibility.",
+                image: "/assets/ynm-safety-toll-retail-hardware-stores.jpg"
+              },
+              {
+                title: "Warehouses & Logistics Parks",
+                short: "Toll boards assist in structured equipment and storage identification.",
+                hover: "Clear signage improves workflow management and operational safety.",
+                image: "/assets/ynm-safety-toll-warehouses-logistics.jpg"
+              },
+              {
+                title: "Airports, Ports & Infrastructure Projects",
+                short: "Facia boards support infrastructure branding and operational display.",
+                hover: "Durable signage solutions ensure long-term visibility in high-traffic environments.",
+                image: "/assets/ynm-safety-toll-airports-ports-infrastructure.jpg"
+              }
+            ],
+            
+            // Customer Success Stories / Projects (placeholder - can be updated later)
+            projects: [],
+            
+            // Market Growth Information
+            marketGrowth: {
+              title: "Toll Boards & Facia Market Growth | YNM Safety",
+              description: "The broader global sign board market, which includes toll boards, facia signage, and related display boards, was valued at approximately USD 42–46 billion in recent years (around 2023). The market has shown steady historical growth driven by expansion in commercial, retail, and infrastructure sectors.\n\nLooking ahead, the global sign board market is projected to reach approximately USD 68–97 billion by the early 2030s. Growth is supported by increasing urbanization, infrastructure investments, and integration of advanced display and branding solutions.",
+              cagr: "6.3%",
+              growthFactors: [
+                "Expansion of Retail & Hardware Stores",
+                "Rising Industrial & Manufacturing Activities",
+                "Increased Focus on Branding & Visual Identity",
+                "Adoption of Durable & Weather-Resistant Materials",
+                "Government Safety & Compliance Regulations"
+              ],
+              // Market Statistics
+              marketStats: {
+                currentMarketSize: "$46B",
+                projectedMarketSize: "$97B",
+                currentYear: "2023",
+                projectedYear: "2030",
+                highwayKmGlobal: "65M+",
+                annualInstallations: "40,000+",
+                roadsafetySpending: "$180B"
+              },
+              // Regional Distribution for Pie Chart
+              regionalDistribution: [
+                { region: "Asia Pacific", value: 38, color: "#74060D" },
+                { region: "North America", value: 22, color: "#9A1B2E" },
+                { region: "Europe", value: 20, color: "#C9A24D" },
+                { region: "Middle East & Africa", value: 12, color: "#D4A853" },
+                { region: "Latin America", value: 8, color: "#E8C97A" }
+              ],
+              // Year-wise Growth Data for Bar Chart
+              yearlyGrowth: [
+                { year: "2021", value: 40 },
+                { year: "2022", value: 43 },
+                { year: "2023", value: 46 },
+                { year: "2024", value: 52 },
+                { year: "2025", value: 60 },
+                { year: "2026", value: 68 }
+              ]
+            },
+            
+            // Global Availability - Structured by Region
+            globalAvailability: {
+              regions: [
+                {
+                  name: "Asia Pacific",
+                  countries: ["China", "India", "Japan", "South Korea", "Indonesia", "Vietnam"]
+                },
+                {
+                  name: "North America",
+                  countries: ["United States", "Canada"]
+                },
+                {
+                  name: "Europe",
+                  countries: ["Germany", "United Kingdom", "France", "Italy", "Spain", "Russia"]
+                },
+                {
+                  name: "Latin America",
+                  countries: ["Brazil", "Argentina"]
+                },
+                {
+                  name: "Middle East & Africa",
+                  countries: ["United Arab Emirates", "Saudi Arabia", "South Africa"]
+                }
+              ]
+            },
+            
+            // Manufacturing Process - 10 Steps
+            manufacturingProcessIntro: "As one of the leading Toll Boards & Facia manufacturers, YNM Safety follows a precision-driven and quality-controlled production process to deliver durable, high-visibility signages for toll plazas, commercial, and infrastructure projects worldwide. Below is the complete manufacturing workflow from design to final installation.",
+            manufacturingProcess: [
+              {
+                step: "01",
+                title: "Design & Layout Finalization",
+                description: "The process begins with preparing the signage layout as per toll plaza guidelines. Lane markings, tariff details, arrows, vehicle icons, and branding elements are designed with proper font size and spacing to ensure visibility from a distance."
+              },
+              {
+                step: "02",
+                title: "Material Selection",
+                description: "High-quality materials are selected such as aluminum sheets for boards, MS/GI steel for structural frames, ACP (Aluminium Composite Panel) sheets for fascia cladding, reflective sheeting, acrylic letters, and waterproof LED lighting components."
+              },
+              {
+                step: "03",
+                title: "Frame Fabrication",
+                description: "MS/GI pipes and channels are cut and welded to create a strong structural frame. Anti-rust primer and protective paint coating are applied to prevent corrosion and ensure long service life."
+              },
+              {
+                step: "04",
+                title: "Panel Cutting & Cladding",
+                description: "Aluminum sheets or ACP panels are cut into required dimensions using CNC routers. These panels are fixed to the fabricated frame using rivets, screws, or bolts for secure attachment."
+              },
+              {
+                step: "05",
+                title: "Surface Preparation",
+                description: "The panel surface is cleaned to remove dust and oil. Proper surface preparation ensures strong adhesion of reflective sheeting and vinyl graphics."
+              },
+              {
+                step: "06",
+                title: "Application of Reflective Sheeting / Graphics",
+                description: "Retro-reflective sheeting is laminated onto toll boards for night visibility. Text, symbols, tariff charts, and lane indicators are printed using UV printing or applied using plotter-cut vinyl."
+              },
+              {
+                step: "07",
+                title: "LED & Electrical Installation",
+                description: "Waterproof LED modules or strip lights are installed for illuminated toll signage. Electrical wiring is connected with power supply units, ensuring proper insulation and safety compliance."
+              },
+              {
+                step: "08",
+                title: "Finishing & Sealing",
+                description: "Edges are sealed properly to prevent water entry. Final surface cleaning and polishing are done for a professional finish."
+              },
+              {
+                step: "09",
+                title: "Quality Inspection",
+                description: "Each Toll Board & Fascia signage is inspected for structural strength, reflectivity, color accuracy, electrical safety, lighting uniformity, and overall durability."
+              },
+              {
+                step: "10",
+                title: "Transportation & Installation",
+                description: "After approval, signage components are securely packed and transported to the toll plaza site. Installation is carried out using cranes and anchor fasteners, followed by final testing of illumination and stability."
+              }
+            ],
+            
+            // Pricing Information
+            pricing: {
+              hasToggle: false,
+              basePriceINR: 420,
+              currency: "INR",
+              unit: "per sq. ft",
+              displayPrice: "₹420 per sq. ft",
+              bulkDiscounts: [
+                { minQuantity: 5, discount: 3 },
+                { minQuantity: 10, discount: 5 },
+                { minQuantity: 20, discount: 8 }
+              ]
+            },
+            
+            // Statistics
+            statistics: {
+              annualCapacity: "360 Units",
+              productionSpeed: "30 Units",
+              qualityStandards: "MORTH & IRC 67",
+              exportCountries: "20+"
+            },
+            
+            // Quality Certificates
+            certificates: [
+              {
+                id: "morth",
+                title: "MORTH",
+                description: "Ministry of Road Transport & Highways Specifications",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              },
+              {
+                id: "irc-67",
+                title: "IRC 67",
+                description: "Indian Roads Congress Standard for Road Signs",
+                pdfPath: "/certificates/ynm-safety-iso-9001-2015.pdf",
+                icon: "check"
+              }
+            ],
+            
+            // Gallery Images
+            gallery: [
+              "/assets/ynm-safety-toll-industrial-manufacturing.jpg",
+              "/assets/ynm-safety-toll-automotive-service-centres.jpg",
+              "/assets/ynm-safety-toll-construction-sites.jpg",
+              "/assets/ynm-safety-toll-retail-hardware-stores.jpg",
+              "/assets/ynm-safety-toll-warehouses-logistics.jpg",
+              "/assets/ynm-safety-toll-airports-ports-infrastructure.jpg"
+            ]
           }
         ]
       },
@@ -9418,6 +10230,33 @@ export const productsData = {
             image: "/assets/fabrication/anchor-cones-1.jpg",
             specs: ["High tensile strength", "Reusable design", "Easy installation", "Accurate positioning"]
           }
+        ]
+      },
+      roadSafetyFurnitures: {
+        title: "Road Safety Furnitures",
+        description: "Complete range of road safety furniture including road studs, solar studs, delineators, traffic cones, speed breakers, water barricades, and more.",
+        icon: "🛡️",
+        simpleDisplay: true,
+        products: [
+          { id: "rsf-road-stud-twin-shank", name: "Road Stud - Twin Shank", desc: "High-visibility twin shank road studs for lane demarcation and road edge marking.", image: "/assets/product-structural-steel.png", specs: ["Twin shank design", "High reflectivity", "Weather resistant", "IRC compliant"] },
+          { id: "rsf-road-stud-abs", name: "Road Stud - ABS", desc: "Durable ABS plastic road studs with excellent impact resistance.", image: "/assets/product-structural-steel.png", specs: ["ABS body", "Impact resistant", "UV stabilized", "Cost effective"] },
+          { id: "rsf-road-stud-aluminium", name: "Road Stud - Aluminium", desc: "Premium aluminium road studs for expressways and highways.", image: "/assets/product-structural-steel.png", specs: ["Aluminium body", "Long life", "Corrosion resistant", "Heavy duty"] },
+          { id: "rsf-solar-stud-twin-shank", name: "Solar Stud - Twin Shank", desc: "Solar-powered twin shank road studs with LED illumination.", image: "/assets/product-structural-steel.png", specs: ["Solar powered", "LED illumination", "Twin shank mount", "Auto on/off"] },
+          { id: "rsf-solar-stud-abs", name: "Solar Stud - ABS", desc: "ABS body solar road studs with integrated solar panel and LED.", image: "/assets/product-structural-steel.png", specs: ["ABS construction", "Solar charged", "High intensity LED", "Waterproof"] },
+          { id: "rsf-irc-delineator", name: "IRC Delineator", desc: "IRC-standard delineator posts for road edge marking and curves.", image: "/assets/product-structural-steel.png", specs: ["IRC compliant", "Retro-reflective", "UV resistant", "NHAI approved"] },
+          { id: "rsf-spring-post-750", name: "Spring Post (750 mm)", desc: "Flexible 750mm spring post delineator for lane separation.", image: "/assets/product-structural-steel.png", specs: ["750mm height", "Spring back", "High visibility", "Flexible design"] },
+          { id: "rsf-spring-post-1000", name: "Spring Post (1000 mm)", desc: "Tall 1000mm spring post delineator for enhanced visibility.", image: "/assets/product-structural-steel.png", specs: ["1000mm height", "Spring back", "Reflective strip", "Durable base"] },
+          { id: "rsf-solar-blinker", name: "Solar Blinker", desc: "Solar-powered LED blinker lights for hazard warning.", image: "/assets/product-structural-steel.png", specs: ["Solar powered", "LED flash", "Auto on/off", "High visibility"] },
+          { id: "rsf-reflective-tapes", name: "Reflective Tapes", desc: "High-intensity retro-reflective tapes for vehicle and barrier marking.", image: "/assets/product-structural-steel.png", specs: ["High intensity", "Retro-reflective", "Weather proof", "Multiple colors"] },
+          { id: "rsf-antiglare-600", name: "Antiglare Screen (600 mm)", desc: "600mm antiglare screens for highway medians.", image: "/assets/product-structural-steel.png", specs: ["600mm height", "Glare reduction", "UV stabilized", "Easy mount"] },
+          { id: "rsf-antiglare-900", name: "Antiglare Screen (900 mm)", desc: "900mm antiglare screens for elevated highway sections.", image: "/assets/product-structural-steel.png", specs: ["900mm height", "Full glare block", "Wind resistant", "Low maintenance"] },
+          { id: "rsf-flexible-median-marker", name: "Flexible Median Marker", desc: "Flexible PU-based median markers for lane separation.", image: "/assets/product-structural-steel.png", specs: ["Flexible PU", "Impact resistant", "Reflective panel", "Easy install"] },
+          { id: "rsf-box-median-marker", name: "Box Type Median Marker", desc: "Rigid box-type median markers for permanent lane separation.", image: "/assets/product-structural-steel.png", specs: ["Box profile", "High visibility", "Durable plastic", "Bolt-down mount"] },
+          { id: "rsf-highway-speed-breaker", name: "Highway Speed Breaker", desc: "Modular rubber speed breakers for highways and toll plazas.", image: "/assets/product-structural-steel.png", specs: ["Modular design", "Rubber material", "Reflective strips", "Easy install"] },
+          { id: "rsf-traffic-cone-750", name: "Traffic Cone (750 mm)", desc: "Standard 750mm traffic safety cone with reflective bands.", image: "/assets/product-structural-steel.png", specs: ["750mm height", "Reflective bands", "PVC material", "Stackable"] },
+          { id: "rsf-traffic-cone-1000", name: "Traffic Cone (1000 mm)", desc: "Tall 1000mm traffic cone for highway construction zones.", image: "/assets/product-structural-steel.png", specs: ["1000mm height", "High visibility", "Weighted base", "Reflective collar"] },
+          { id: "rsf-water-barricade-2000", name: "Water Barricade (2000 mm)", desc: "Large 2000mm water-filled road barricade for construction zones.", image: "/assets/product-structural-steel.png", specs: ["2000mm length", "Water filled", "Interlocking", "High visibility"] },
+          { id: "rsf-water-barricade-1000", name: "Water Barricade (1000 mm)", desc: "Compact 1000mm water-filled barricade for urban road works.", image: "/assets/product-structural-steel.png", specs: ["1000mm length", "Portable", "Water filled", "Reflective strips"] }
         ]
       }
     }

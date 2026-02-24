@@ -51,6 +51,15 @@ const productConfig = [
     description: "Custom steel fabrication including solar structures, railway structures, and industrial products.",
     altText: "Best Custom Steel Fabrication Manufacturers in Hyderabad India | YNM Safety Metal Fabrication | Solar Structures & Railway Structures Telangana"
   },
+  { 
+    id: "roadSafetyFurnitures", 
+    image: "/assets/roadsafety/traffic-cone-750mm-1.jpg", 
+    link: "/products/road-safety-furnitures", 
+    title: "Road Safety Furnitures", 
+    description: "Road studs, solar studs, delineators, traffic cones, speed breakers, water barricades & more.",
+    altText: "Best Road Safety Furniture Manufacturers in Hyderabad India | YNM Safety Road Studs Solar Studs Delineators Traffic Cones | Highway Safety Equipment Telangana",
+    productCount: 19
+  },
 ];
 
 export default function ProductsSection() {
@@ -70,7 +79,7 @@ export default function ProductsSection() {
         <div className="ps-bar" />
       </div>
 
-      {/* Products Grid - 5 product categories */}
+      {/* Products Grid - 6 product categories */}
       <div className="ps-products-grid-container">
         <div className="ps-products-grid">
           {productConfig.map((product, index) => (
@@ -91,7 +100,7 @@ export default function ProductsSection() {
                 <p>{product.description}</p>
                 <div className="ps-product-actions">
                   <div className="ps-product-count">
-                    {getProductCount(product.id)} Types
+                    {product.productCount || getProductCount(product.id)} Types
                   </div>
                   <Link href={product.link} className="ps-product-cta">
                     Explore
