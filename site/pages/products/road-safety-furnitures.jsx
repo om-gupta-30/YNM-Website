@@ -101,20 +101,20 @@ const roadSafetyProducts = [
     specs: ["1000mm height", "High visibility", "Weighted base", "Reflective collar"]
   },
   {
-    id: "rsf-antiglare-600",
+    id: "rsf-noise-barriers",
     name: "Noise Barriers",
-    images: ["/assets/roadsafety/antiglare-screen-600mm-1.jpg", "/assets/roadsafety/antiglare-screen-600mm-2.jpg", "/assets/roadsafety/antiglare-screen-600mm-3.jpg"],
+    images: ["/assets/roadsafety/noise-barriers-1.jpg", "/assets/roadsafety/noise-barriers-2.jpg", "/assets/roadsafety/noise-barriers-3.jpg"],
     category: "Traffic Control",
-    description: "600mm antiglare screens for highway medians to prevent headlight glare from oncoming vehicles at night.",
-    specs: ["600mm height", "Glare reduction", "UV stabilized", "Easy mount"]
+    description: "Acoustic noise barriers for highways, railways, and industrial areas to reduce traffic and environmental noise pollution.",
+    specs: ["Sound absorption", "Weather resistant", "Durable panels", "Easy installation"]
   },
   {
-    id: "rsf-antiglare-900",
+    id: "rsf-antiglare-screen",
     name: "Antiglare Screen (600 mm and 900 mm)",
-    images: ["/assets/roadsafety/antiglare-screen-900mm-1.jpg", "/assets/roadsafety/antiglare-screen-900mm-2.jpg", "/assets/roadsafety/antiglare-screen-900mm-3.jpg"],
+    images: ["/assets/roadsafety/antiglare-screen-600mm-1.jpg", "/assets/roadsafety/antiglare-screen-600mm-2.jpg", "/assets/roadsafety/antiglare-screen-600mm-3.jpg"],
     category: "Traffic Control",
-    description: "900mm antiglare screens for elevated highway sections and express corridors to block headlight dazzle.",
-    specs: ["900mm height", "Full glare block", "Wind resistant", "Low maintenance"]
+    description: "Antiglare screens in 600mm and 900mm heights for highway medians to prevent headlight glare from oncoming vehicles at night.",
+    specs: ["600mm & 900mm heights", "Glare reduction", "UV stabilized", "Easy mount"]
   },
   {
     id: "rsf-water-barricade-2000",

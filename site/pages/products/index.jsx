@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,19 +40,19 @@ export function getAllProductsCombined() {
 export default function ProductsPage() {
   const router = useRouter();
   const { category } = router.query;
-  const [activeCategory, setActiveCategory] = useState(category || "all");
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  // Handle both query params (legacy) and hash navigation (SEO-friendly)
+  // Handle initial category from query params or hash
   useEffect(() => {
+    if (!router.isReady) return;
+    
+    // Priority: query param > hash > default
     if (category) {
       setActiveCategory(category);
-    }
-    // Handle hash-based navigation
-    if (typeof window !== 'undefined' && window.location.hash) {
-      const hash = window.location.hash.slice(1); // Remove #
+    } else if (typeof window !== 'undefined' && window.location.hash) {
+      const hash = window.location.hash.slice(1);
       if (hash) {
         setActiveCategory(hash);
-        // Scroll to products section smoothly
         setTimeout(() => {
           const productsSection = document.querySelector('.products-grid');
           if (productsSection) {
@@ -61,7 +61,22 @@ export default function ProductsPage() {
         }, 100);
       }
     }
-  }, [category]);
+  }, [router.isReady, category]);
+
+  // Handle hashchange events for browser back/forward navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        setActiveCategory(hash);
+      } else {
+        setActiveCategory("all");
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const handleCategoryChange = (categoryKey) => {
     // Redirect to dedicated fabrication page
@@ -96,10 +111,15 @@ export default function ProductsPage() {
   // Get all products
   const allProducts = getAllProducts();
   
-  // Filter products by category
-  const filteredProducts = activeCategory === "all" 
-    ? allProducts 
-    : categories.find(([key]) => key === activeCategory)?.[1]?.products || [];
+  // Filter products by category - directly access from object for reliable filtering
+  const filteredProducts = useMemo(() => {
+    if (activeCategory === "all") {
+      return allProducts;
+    }
+    // Direct object access is more reliable than find()
+    const categoryData = productsData.manufacturing.categories[activeCategory];
+    return categoryData?.products || [];
+  }, [activeCategory, allProducts]);
 
   return (
     <>
@@ -384,12 +404,11 @@ export default function ProductsPage() {
                 </div>
               </>
             ) : (
-              // Show filtered products
-              <div className="products-grid">
+              // Show filtered products - key forces re-render on category change
+              <div className="products-grid" key={activeCategory}>
                 {filteredProducts.map((product) => {
-                  const category = categories.find(([_, cat]) => 
-                    cat.products.some(p => p.id === product.id)
-                  )?.[1];
+                  // Get the active category title for the badge
+                  const activeCategoryData = productsData.manufacturing.categories[activeCategory];
                   
                   return (
                     <div
@@ -405,7 +424,7 @@ export default function ProductsPage() {
                           style={{ objectFit: "cover" }}
                         />
                         <div className="product-card-overlay" />
-                        <div className="product-card-badge">{category?.title}</div>
+                        <div className="product-card-badge">{activeCategoryData?.title}</div>
                       </div>
                       <div className="product-card-content">
                         <h3>{product.name}</h3>

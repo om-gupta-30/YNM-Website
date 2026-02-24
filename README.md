@@ -39,20 +39,22 @@ YNM-website/
 ├── LICENSE
 ├── README.md
 └── site/                    # Next.js application (deploy root)
-    ├── components/          # 16 React UI components
+    ├── components/          # 16 React components
     ├── contexts/            # React context providers (Language)
     ├── lib/                 # Data files & utilities
-    │   ├── chatbotData.js   # AI chatbot knowledge base & FAQ
-    │   ├── productsData.js  # Product catalog data
-    │   ├── productsCategoriesData.js  # Category-based product data
-    │   ├── directorData.js  # Director profile & ventures
-    │   ├── employeesData.js # Team member profiles
-    │   ├── googleSheets.js  # Google Sheets API client
-    │   ├── recaptchaUtils.js # reCAPTCHA verification
-    │   ├── translations.js  # Multi-language support
-    │   └── ...
-    ├── pages/               # Next.js routes
-    │   ├── api/             # 7 Backend API routes
+    │   ├── chatbotData.js         # AI chatbot knowledge base & FAQ
+    │   ├── productsData.js        # Product catalog data
+    │   ├── productsCategoriesData.js  # Category product data
+    │   ├── directorData.js        # Director profile & ventures
+    │   ├── employeesData.js       # Team member profiles
+    │   ├── googleSheets.js        # Google Sheets API client
+    │   ├── recaptchaUtils.js      # reCAPTCHA verification
+    │   ├── translations.js        # Multi-language support
+    │   ├── imageLoader.js         # Image optimization
+    │   ├── indiaContacts.js       # Contact data by region
+    │   └── indiaMapPaths.js       # India map SVG paths
+    ├── pages/               # Next.js routes (12 pages)
+    │   ├── api/             # 7 API routes
     │   ├── about/           # Company information
     │   ├── careers/         # Job applications
     │   ├── clients/         # Client showcase (18 clients)
@@ -62,7 +64,7 @@ YNM-website/
     │   ├── investor-relations/
     │   └── foreign-collaborations/
     ├── public/              # Static assets
-    │   ├── assets/          # 412 optimized images (all < 100KB)
+    │   ├── assets/          # 415+ optimized images (all < 100KB)
     │   ├── certificates/    # Company certificates (PDF)
     │   └── fonts/           # Custom fonts (Montserrat)
     ├── styles/              # Global CSS (Tailwind)
@@ -284,7 +286,7 @@ make deploy
 | 3 | **Metal Beam Crash Barriers** | 5 types | W Beam, Double W, Thrie Beam, Roller Beam, Attenuators |
 | 4 | **Highway Signages** | 10 types | Gantry, Cantilever, Mandatory (Octagonal/Circular), Cautionary, Canopy, Informatory, Place ID, Direction, Toll Boards |
 | 5 | **Fabrication** | 34+ | Solar structures, bridge bearings, high mast poles, railway structures, scaffolding, and more |
-| 6 | **Road Safety Furnitures** | 19 | Road studs, solar studs, IRC delineators, spring posts, traffic cones, solar blinkers, antiglare screens, water barricades, speed breakers, reflective tapes, median markers |
+| 6 | **Road Safety Furnitures** | 20 | Road studs, solar studs, IRC delineators, spring posts, traffic cones, solar blinkers, antiglare screens, water barricades, speed breakers, reflective tapes, median markers, noise barriers |
 
 ---
 
