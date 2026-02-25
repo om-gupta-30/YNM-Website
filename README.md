@@ -5,6 +5,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D20-339933?logo=node.js)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/om-gupta-30/website-name-/ci.yml?label=CI&logo=github)](https://github.com/om-gupta-30/website-name-/actions/workflows/ci.yml)
 [![Security](https://img.shields.io/badge/Security-Gitleaks-green)](https://github.com/gitleaks/gitleaks)
 
 Modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd** -- India's leading manufacturer and exporter of road safety products, road marking paints, metal beam crash barriers, highway signages, bitumen, road safety furniture, and precision metal fabrication.
@@ -22,7 +23,7 @@ Modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd**
 - **6 Product Categories, 80+ Products** -- Road marking paints (8), crash barriers (5), signages (10), bitumen (2), fabrication (34+), road safety furnitures (19)
 - **SEO Optimized** -- Schema.org structured data, sitemap, robots.txt, Google Search Console verification
 - **Fully Responsive** -- Mobile-first design optimized for all screen sizes
-- **Security First** -- Gitleaks integration, GitHub Actions secret scanning, pre-push security checks, reCAPTCHA v2 bot protection
+- **Security First** -- Gitleaks integration, GitHub Actions CI/CD, pre-push security checks, reCAPTCHA v2 bot protection
 
 ---
 
@@ -30,7 +31,9 @@ Modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd**
 
 ```
 YNM-website/
-├── .github/workflows/       # GitHub Actions (security scanning)
+├── .github/workflows/       # GitHub Actions (CI + security scanning)
+│   ├── ci.yml               # Lint, build, security checks, Docker build
+│   └── security-scan.yml    # Gitleaks secret scanning
 ├── .gitignore               # Comprehensive ignore rules
 ├── .gitleaks.toml           # Gitleaks secret scanning config
 ├── Makefile                 # Project shortcuts (make dev, make build, etc.)
@@ -55,16 +58,16 @@ YNM-website/
     │   └── indiaMapPaths.js       # India map SVG paths
     ├── pages/               # Next.js routes (12 pages)
     │   ├── api/             # 7 API routes
-    │   ├── about/           # Company information
-    │   ├── careers/         # Job applications
-    │   ├── clients/         # Client showcase (18 clients)
-    │   ├── contact/         # Contact form
-    │   ├── products/        # Product catalog, fabrication & road safety furnitures
-    │   ├── our-director/    # Director profile
+    │   ├── about/
+    │   ├── careers/
+    │   ├── clients/
+    │   ├── contact/
+    │   ├── products/
+    │   ├── our-director/
     │   ├── investor-relations/
     │   └── foreign-collaborations/
     ├── public/              # Static assets
-    │   ├── assets/          # 415+ optimized images (all < 100KB)
+    │   ├── assets/          # 410+ optimized images
     │   ├── certificates/    # Company certificates (PDF)
     │   └── fonts/           # Custom fonts (Montserrat)
     ├── styles/              # Global CSS (Tailwind)
@@ -84,7 +87,7 @@ YNM-website/
 | Next.js | 15.5 | React Framework (Pages Router) |
 | React | 19.0 | UI Library |
 | Tailwind CSS | 3.4 | Utility-first Styling |
-| Google Gemini | 2.0 Flash Lite | AI Chatbot (with fallback chain) |
+| Google Gemini | 2.0 Flash | AI Chatbot (with fallback chain) |
 | Google Sheets API | v4 | Form Data Storage |
 | Nodemailer | 7.x | Email Services (Gmail SMTP) |
 | Google Analytics | GA4 | Analytics |
@@ -103,19 +106,18 @@ YNM-website/
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-org/ynm-website.git
-cd ynm-website/site
+git clone https://github.com/om-gupta-30/website-name-.git
+cd website-name-
 
 # Install dependencies
-npm install
+make install
 
 # Set up environment variables
-cp .env.example .env
-# Edit .env with your credentials (see Environment Variables section)
+make setup
+# Edit site/.env with your credentials (see Environment Variables section)
 
 # Run development server
-npm run dev
+make dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000)
@@ -125,28 +127,37 @@ Open [http://localhost:3000](http://localhost:3000)
 From the project root (not `site/`):
 
 ```bash
-make install    # Install dependencies
-make dev        # Start dev server
-make build      # Production build
-make start      # Start production server
-make lint       # Run ESLint
-make clean      # Remove .next and node_modules
-make deploy     # Deploy to GCP Cloud Run
+make help         # Show all available commands
+make install      # Install dependencies
+make dev          # Start dev server (http://localhost:3000)
+make build        # Production build
+make start        # Start production server
+make lint         # Run ESLint
+make clean        # Remove .next and node_modules
+make setup        # Copy .env.example to .env
+make check        # Run pre-push security checks
+make deploy       # Deploy to GCP Cloud Run
+make docker-build # Build Docker image locally
+make docker-run   # Build and run Docker container locally
 ```
 
 ### Production Build
 
 ```bash
 cd site
-npm run build    # Build for production
-npm start        # Start production server
+npm run build
+npm start
 ```
 
 ---
 
 ## Environment Variables
 
-Copy `site/.env.example` to `site/.env` and fill in your credentials.
+Copy `site/.env.example` to `site/.env` and fill in your credentials:
+
+```bash
+make setup
+```
 
 > **Important:** Never commit `.env` files with real values. Only `.env.example` and `.env.gcp.example` (templates with placeholders) are safe to commit.
 
@@ -170,7 +181,26 @@ Copy `site/.env.example` to `site/.env` and fill in your credentials.
 | `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA v2 site key |
 | `RECAPTCHA_SECRET_KEY` | reCAPTCHA v2 secret key |
 | `CAREERS_NOREPLY_FROM` | No-reply sender for career confirmation emails |
-| `VERIFY_BASE_URL` | Base URL for integration tests (default: `http://localhost:3000`) |
+
+---
+
+## CI/CD
+
+Two GitHub Actions workflows run automatically on every push and PR to `main`/`master`/`develop`:
+
+### CI Pipeline (`.github/workflows/ci.yml`)
+
+| Job | What it checks |
+|-----|---------------|
+| **Install** | Installs dependencies with `npm ci`, caches `node_modules` |
+| **ESLint** | Runs `next lint` for code quality |
+| **Production Build** | Runs `next build` and verifies standalone output |
+| **Security Checks** | Verifies `.env` is gitignored, no secrets tracked, no credential files |
+| **Docker Build** | Builds the full multi-stage Docker image |
+
+### Security Scan (`.github/workflows/security-scan.yml`)
+
+Runs [Gitleaks](https://github.com/gitleaks/gitleaks) to detect any accidentally committed secrets.
 
 ---
 
@@ -191,22 +221,23 @@ This project follows strict security practices to prevent credential leaks.
 
 - **Gitleaks** -- Automated secret scanning (`.gitleaks.toml`)
 - **Pre-push Script** -- Comprehensive security checks before every push (`./pre-push-check.sh`)
-- **GitHub Actions** -- CI/CD secret scanning on push and PRs (`.github/workflows/security-scan.yml`)
+- **GitHub Actions CI** -- Lint, build, security checks, Docker build on every push/PR
+- **GitHub Actions Security Scan** -- Gitleaks secret scanning on push/PR
 - **Docker** -- Non-root user in production container, multi-stage build
 - **reCAPTCHA v2** -- Bot protection on all public forms
 
-### Before Pushing to GitHub
+### Before Pushing
 
 ```bash
 # Run the comprehensive security check
-./pre-push-check.sh
+make check
 
 # Or verify manually:
 git check-ignore site/.env          # Should print "site/.env"
 git ls-files | grep '\.env'         # Should only show .env.example and .env.gcp.example
 ```
 
-### Deployment Security (Vercel / GCP / GitHub)
+### Deployment Security
 
 Never commit secrets to git. Instead:
 
@@ -218,7 +249,7 @@ Never commit secrets to git. Instead:
 
 ## Deployment
 
-### Vercel (Recommended)
+### Vercel
 
 1. Push to GitHub
 2. Import repository on [vercel.com](https://vercel.com)
@@ -229,17 +260,14 @@ Never commit secrets to git. Instead:
 ### Google Cloud Platform (Cloud Run)
 
 ```bash
-# Set your GCP project ID
 export GCP_PROJECT_ID=your-gcp-project-id
-
-# Deploy using the script
-./deploy-gcp.sh
+make deploy
 ```
 
-Or use the Makefile:
+### Docker (Local)
 
 ```bash
-make deploy
+make docker-run
 ```
 
 ---
@@ -248,45 +276,32 @@ make deploy
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/api/contact/submit` | POST | Contact form submission (saves to Google Sheets + sends email) |
+| `/api/contact/submit` | POST | Contact form submission (Google Sheets + email) |
 | `/api/careers/submit` | POST | Career application with PDF resume upload |
 | `/api/director-appointment/submit` | POST | Director appointment requests |
 | `/api/investor-relations/submit` | POST | Investor inquiries |
 | `/api/foreign-collaborations/submit` | POST | Foreign partnership forms |
-| `/api/chat/gemini` | POST | AI chatbot (Gemini 2.0 Flash with model fallback chain) |
+| `/api/chat/gemini` | POST | AI chatbot (Gemini 2.0 Flash with model fallback) |
 | `/api/health` | GET | Health check (verifies env vars are configured) |
 
 ---
 
 ## Pages
 
-| Route | Page | Description |
-|-------|------|-------------|
-| `/` | Home | Hero, products overview, client logos, director section, testimonials |
-| `/products` | Products | All product categories with filterable grid |
-| `/products/[productId]` | Product Detail | Individual product pages (dynamic) |
-| `/products/fabrication` | Fabrication | 34+ fabrication products with image galleries |
-| `/products/road-safety-furnitures` | Road Safety Furnitures | 19 road safety products |
-| `/about` | About Us | Company story, timeline, values, gallery, mission/vision |
-| `/our-director` | Our Director | Director profile, ventures, achievements |
-| `/clients` | Clients | 18 client/partner profiles |
-| `/careers` | Careers | Job openings and application form |
-| `/contact` | Contact | Contact form, company info, India presence map |
-| `/investor-relations` | Investor Relations | Investment thesis, milestones, fund allocation |
-| `/foreign-collaborations` | Foreign Collaborations | Collaboration areas, global regions, partnership process |
-
----
-
-## Product Categories
-
-| # | Category | Count | Highlights |
-|---|----------|-------|------------|
-| 1 | **Road Marking Paints** | 8 types | Hot Thermoplastic, Cold Plastic (MMA), Waterborne Airfield, Oil/Water Kerb, Enamel, Red Oxide, Profile Marking |
-| 2 | **Bitumen** | 2 grades | VG 40 & VG 30 (IS 73, ASTM compliant) |
-| 3 | **Metal Beam Crash Barriers** | 5 types | W Beam, Double W, Thrie Beam, Roller Beam, Attenuators |
-| 4 | **Highway Signages** | 10 types | Gantry, Cantilever, Mandatory (Octagonal/Circular), Cautionary, Canopy, Informatory, Place ID, Direction, Toll Boards |
-| 5 | **Fabrication** | 34+ | Solar structures, bridge bearings, high mast poles, railway structures, scaffolding, and more |
-| 6 | **Road Safety Furnitures** | 20 | Road studs, solar studs, IRC delineators, spring posts, traffic cones, solar blinkers, antiglare screens, water barricades, speed breakers, reflective tapes, median markers, noise barriers |
+| Route | Description |
+|-------|-------------|
+| `/` | Home -- hero, products overview, client logos, director section, testimonials |
+| `/products` | All product categories with filterable grid |
+| `/products/[productId]` | Individual product pages (dynamic routes) |
+| `/products/fabrication` | 34+ fabrication products with image galleries |
+| `/products/road-safety-furnitures` | 19 road safety furniture products |
+| `/about` | Company story, timeline, values, gallery, mission/vision |
+| `/our-director` | Director profile, ventures, achievements |
+| `/clients` | 18 client/partner profiles |
+| `/careers` | Job openings and application form |
+| `/contact` | Contact form, company info, India presence map |
+| `/investor-relations` | Investment thesis, milestones, fund allocation |
+| `/foreign-collaborations` | Collaboration areas, global regions, partnership process |
 
 ---
 
