@@ -21,12 +21,13 @@ const nextConfig = {
   // Enable compression for better performance
   compress: true,
   
+  // Packages that Turbopack should not bundle (use native require)
+  serverExternalPackages: ['googleapis', 'google-auth-library', 'pdf-parse'],
+
   // Experimental performance features
   experimental: {
     // Optimize CSS loading
     optimizeCss: false, // Keep false to avoid crashing
-    // Temporarily disabled optimizePackageImports to test build
-    // optimizePackageImports: ['framer-motion', 'lucide-react', '@heroicons/react'],
   },
   
   // Efficient cache lifetimes for static assets (PageSpeed: "Use efficient cache lifetimes")
@@ -38,7 +39,7 @@ const nextConfig = {
         key: 'Content-Security-Policy',
         value: [
           "default-src 'self'",
-          "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://maps.googleapis.com https://www.google.com https://www.gstatic.com https://googleads.g.doubleclick.net https://*.doubleclick.net",
+          "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com https://googleads.g.doubleclick.net https://*.doubleclick.net",
           "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
           "img-src 'self' data: blob: https: http:",
           "font-src 'self' https://fonts.gstatic.com",
@@ -108,10 +109,13 @@ const nextConfig = {
           ...securityHeaders,
         ],
       },
-      // API routes - also need security headers
+      // API routes - no caching, security headers
       {
         source: '/api/:path*',
-        headers: securityHeaders,
+        headers: [
+          { key: 'Cache-Control', value: 'no-store, no-cache, must-revalidate, proxy-revalidate' },
+          ...securityHeaders,
+        ],
       },
     ];
   },
@@ -130,11 +134,7 @@ const nextConfig = {
         destination: '/products/hot-thermoplastic-road-marking-paint-manufacturers',
         permanent: true, // 301 redirect - Fix Google indexed incorrect URL
       },
-      {
-        source: '/get-quote',
-        destination: '/contact',
-        permanent: true, // 301 redirect - Page removed, redirect to contact
-      },
+      // /get-quote is now a live page — removed redirect
       {
         source: '/solution/reflective-signages',
         destination: '/products/retro-reflective-gantry-signage-manufacturers',

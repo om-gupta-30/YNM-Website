@@ -179,8 +179,8 @@ const fallbackBrandsData = [
   { id: "11", name: "GVK EMRI", logo: "/assets/brand-logos/gvk-logo.png" },
   { id: "12", name: "NTPC", logo: "/assets/brand-logos/ntpc-logo.png" },
   { id: "13", name: "Power Grid", logo: "/assets/brand-logos/powergrid-logo.png" },
-  { id: "14", name: "Hyundai Glovis", logo: "/assets/brand-logos/hyundai_glovis_logo.png" },
-  { id: "15", name: "NPCI International", logo: "/assets/brand-logos/npci_logo.png" },
+  { id: "14", name: "Hyundai Glovis", logo: "/assets/brand-logos/hyundai-glovis-logo.png" },
+  { id: "15", name: "NPCI International", logo: "/assets/brand-logos/npci-logo.png" },
   { id: "16", name: "BSCPL Infrastructure", logo: "/assets/brand-logos/bscpl-logo.png" },
   { id: "17", name: "AT&T", logo: "/assets/brand-logos/att-logo-transparent.png" },
   { id: "18", name: "Aparna Constructions", logo: "/assets/brand-logos/aparna-constructions.png" },
@@ -312,14 +312,14 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
               "contactPoint": [
                 {
                   "@type": "ContactPoint",
-                  "telephone": "+91-9100009638",
+                  "telephone": "+91-9676575770",
                   "contactType": "sales",
                   "areaServed": ["IN", "AE", "NG", "KE", "ZA", "GH", "TZ", "UG"],
                   "availableLanguage": ["English", "Hindi"]
                 },
                 {
                   "@type": "ContactPoint",
-                  "telephone": "+91-9100009638",
+                  "telephone": "+91-9676575770",
                   "contactType": "customer service",
                   "areaServed": "Worldwide"
                 }
@@ -381,7 +381,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
               "name": "YNM Safety Pan Global Trade Pvt Ltd",
               "image": "https://ynmsafety.com/assets/logo-navbar.jpg",
               "url": "https://ynmsafety.com",
-              "telephone": "+91-9100009638",
+              "telephone": "+91-9676575770",
               "priceRange": "$$",
               "description": "Hot thermoplastic paint manufacturers. We manufacture cold plastic paints, metal beam crash barriers, and road safety signages.",
               "address": {

@@ -7,24 +7,20 @@ import Link from "next/link";
 
 // Simple response cache to prevent duplicate API calls
 const responseCache = new Map();
-const CACHE_TTL = 10 * 60 * 1000; // 10 minutes (increased)
+const CACHE_TTL = 15 * 60 * 1000; // 15 minutes
 
-// Rate limiting - more restrictive
+// Rate limiting — sliding window per client session
 const RATE_LIMIT_WINDOW = 60000; // 1 minute
-const MAX_REQUESTS_PER_WINDOW = 8; // Reduced from 10
-let requestCount = 0;
-let windowStart = Date.now();
+const MAX_REQUESTS_PER_WINDOW = 20; // Generous limit to avoid user-facing errors
+let requestTimestamps = [];
 
 const checkRateLimit = () => {
   const now = Date.now();
-  if (now - windowStart > RATE_LIMIT_WINDOW) {
-    windowStart = now;
-    requestCount = 0;
-  }
-  if (requestCount >= MAX_REQUESTS_PER_WINDOW) {
+  requestTimestamps = requestTimestamps.filter(t => now - t < RATE_LIMIT_WINDOW);
+  if (requestTimestamps.length >= MAX_REQUESTS_PER_WINDOW) {
     return false;
   }
-  requestCount++;
+  requestTimestamps.push(now);
   return true;
 };
 
@@ -59,6 +55,9 @@ const ON_TOPIC_PATTERNS = [
   /\b(investor|investment|collaboration|partnership|foreign)\b/i,
   /\b(gantry|cantilever|canopy|cautionary|mandatory|informatory|toll board)\b/i,
   /\b(rishuu|jaiin|ncc|ntpc|gmr|prestige|indianoil|powergrid)\b/i,
+  /\b(get.?quote|appointment|meeting|language|hindi|telugu|bengali|tamil)\b/i,
+  /\b(whatsapp|wa\.me|delivery|sample|warranty|installation|payment)\b/i,
+  /\b(maharashtra|karnataka|gujarat|rajasthan|delhi|pan.?india)\b/i,
 ];
 
 const isOffTopic = (query) => {
@@ -81,7 +80,20 @@ const isOffTopic = (query) => {
   return false; // Default: let API handle it
 };
 
-const OFF_TOPIC_RESPONSE = "I'm specialized in helping with YNM Safety products and services. Here's what I can assist you with:\n\n🎨 **Products (6 Categories):**\n• Road marking paints (8 types - Hot Thermoplastic, Cold Plastic, Airfield, Kerb, Enamel, Red Oxide, Profile Marking)\n• Metal beam crash barriers (W Beam, Thrie Beam, Double W, Roller Beam, Attenuators)\n• Highway signages (10 types - Gantry, Cantilever, Mandatory, Cautionary, Canopy, and more)\n• Bitumen (VG 40 & VG 30)\n• Custom fabrication (34+ products)\n• Road safety furnitures (19 products - studs, solar studs, delineators, cones, blinkers)\n\n💼 **Services:**\n• Product inquiries & specifications\n• Quotes and pricing\n• Export to 50+ countries\n• Certifications & compliance\n• Installation support\n• Foreign collaborations & investor relations\n\nPlease ask me about any of these topics!";
+// Static quick actions — defined outside component to avoid re-creation
+const QUICK_ACTIONS = [
+  { label: "🎨 Our Products", query: "What products do you manufacture?" },
+  { label: "💰 Get a Quote", query: "How can I get a quote?" },
+  { label: "🔶 Road Safety Furnitures", query: "What road safety furniture do you sell?" },
+  { label: "🌍 Export Countries", query: "Which countries do you export to?" },
+  { label: "📞 Contact Us", query: "What is your contact information?" },
+  { label: "🏭 About YNM", query: "Tell me about YNM Safety" },
+];
+
+// Static product cards — precomputed to avoid re-creation on render
+const TOP_PRODUCTS = Object.values(productCatalog).flat().slice(0, 3);
+
+const OFF_TOPIC_RESPONSE = "I'm specialized in helping with YNM Safety products and services. Here's what I can assist you with:\n\n🎨 **Products (6 Categories):**\n• Road marking paints (8 types - Hot Thermoplastic, Cold Plastic, Airfield, Kerb, Enamel, Red Oxide, Profile Marking)\n• Metal beam crash barriers (W Beam, Thrie Beam, Double W, Roller Beam, Attenuators)\n• Highway signages (10 types - Gantry, Cantilever, Mandatory, Cautionary, Canopy, and more)\n• Bitumen (VG 40 & VG 30)\n• Custom fabrication (34+ products)\n• Road safety furnitures (19 products - studs, solar studs, delineators, cones, blinkers)\n\n💼 **Services & Features:**\n• Get a Quote (ynmsafety.com/get-quote)\n• Product inquiries & specifications\n• Export to 50+ countries\n• Certifications & compliance\n• Installation support\n• Director appointment booking\n• Foreign collaborations & investor relations\n• Careers (6 open positions)\n\n🌐 Website available in 12 Indian languages!\n\nPlease ask me about any of these topics!";
 
 export default function Chatbot() {
   const language = 'en';
@@ -100,15 +112,12 @@ export default function Chatbot() {
   const inputRef = useRef(null);
   const chatSessionId = useRef(`chat_${Date.now()}`);
   const abortControllerRef = useRef(null);
+  const messagesRef = useRef(messages);
 
-  // Quick action options - organized by priority
-  const quickActions = [
-    { label: "🎨 Our Products", query: "What products do you manufacture?", action: null },
-    { label: "🔶 Road Safety Furnitures", query: "What road safety furniture do you sell?", action: null },
-    { label: "🌍 Export Countries", query: "Which countries do you export to?", action: null },
-    { label: "📞 Contact Us", query: "What is your contact information?", action: null },
-    { label: "🏭 About YNM", query: "Tell me about YNM Safety", action: null },
-  ];
+  // Keep messagesRef in sync without triggering re-renders of callbacks
+  useEffect(() => {
+    messagesRef.current = messages;
+  }, [messages]);
 
   // Cleanup abort controller on unmount
   useEffect(() => {
@@ -125,7 +134,7 @@ export default function Chatbot() {
       const savedMessages = localStorage.getItem(`chatbot_messages_${chatSessionId.current}`);
       const initialMessage = {
         id: 1,
-        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety & infrastructure products since 2013.\n\nI can help you with:\n• Road marking paints (8 types)\n• Metal Beam Crash Barriers (5 types)\n• Highway Signages (10 types)\n• Bitumen (VG 40 & VG 30)\n• Custom Fabrication (34+ products)\n• Road Safety Furnitures (19 products)\n• Export inquiries to 50+ countries\n• Careers, Investor Relations & Collaborations\n\nHow can I assist you today?",
+        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety & infrastructure products since 2013.\n\nI can help you with:\n• Road marking paints (8 types)\n• Metal Beam Crash Barriers (5 types)\n• Highway Signages (10 types)\n• Bitumen (VG 40 & VG 30)\n• Custom Fabrication (34+ products)\n• Road Safety Furnitures (19 products)\n• Export inquiries to 50+ countries\n• Get a Quote, Careers & Appointments\n• Investor Relations & Foreign Collaborations\n\n🌐 Available in 12 Indian languages!\n\nHow can I assist you today?",
         sender: "bot",
         timestamp: new Date()
       };
@@ -149,11 +158,13 @@ export default function Chatbot() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Save conversation history to localStorage
+  // Save conversation history to localStorage (debounced)
   useEffect(() => {
-    if (typeof window !== 'undefined' && messages.length > 0) {
+    if (typeof window === 'undefined' || messages.length === 0) return;
+    const timer = setTimeout(() => {
       localStorage.setItem(`chatbot_messages_${chatSessionId.current}`, JSON.stringify(messages));
-    }
+    }, 500);
+    return () => clearTimeout(timer);
   }, [messages]);
 
   // Auto-scroll to bottom when new messages arrive
@@ -364,7 +375,7 @@ export default function Chatbot() {
       chatSessionId.current = `chat_${Date.now()}`;
       const initialMessage = {
         id: 1,
-        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety & infrastructure products since 2013.\n\nI can help you with:\n• Road marking paints (8 types)\n• Metal Beam Crash Barriers (5 types)\n• Highway Signages (10 types)\n• Bitumen (VG 40 & VG 30)\n• Custom Fabrication (34+ products)\n• Road Safety Furnitures (19 products)\n• Export inquiries to 50+ countries\n• Careers, Investor Relations & Collaborations\n\nHow can I assist you today?",
+        text: "Hello! 👋 Welcome to YNM Safety - India's leading manufacturer of road safety & infrastructure products since 2013.\n\nI can help you with:\n• Road marking paints (8 types)\n• Metal Beam Crash Barriers (5 types)\n• Highway Signages (10 types)\n• Bitumen (VG 40 & VG 30)\n• Custom Fabrication (34+ products)\n• Road Safety Furnitures (19 products)\n• Export inquiries to 50+ countries\n• Get a Quote, Careers & Appointments\n• Investor Relations & Foreign Collaborations\n\n🌐 Available in 12 Indian languages!\n\nHow can I assist you today?",
         sender: "bot",
         timestamp: new Date()
       };
@@ -411,301 +422,156 @@ export default function Chatbot() {
     setLeadFormData({ name: "", email: "", phone: "" });
   };
 
-  // Handle quick action click
-  const handleQuickAction = useCallback(async (query, action = null) => {
+  // Shared API call logic — used by both handleQuickAction and handleSend
+  const sendToAPI = useCallback(async (query) => {
+    // Check for FAQ match first (no API call needed)
+    const faqAnswer = checkFAQ(query);
+    if (faqAnswer) {
+      responseCache.set(query.toLowerCase().trim(), { response: faqAnswer, timestamp: Date.now() });
+      const botMessage = {
+        id: Date.now() + 1,
+        text: faqAnswer,
+        sender: "bot",
+        timestamp: new Date(),
+        followUpQuestions: generateFollowUpQuestions(faqAnswer)
+      };
+      setMessages(prev => [...prev, botMessage]);
+      setShowQuickActions(true);
+      return;
+    }
+
+    // Check for off-topic questions (saves API calls)
+    if (isOffTopic(query)) {
+      setMessages(prev => [...prev, {
+        id: Date.now() + 1,
+        text: OFF_TOPIC_RESPONSE,
+        sender: "bot",
+        timestamp: new Date(),
+        followUpQuestions: ["What products do you manufacture?", "How can I get a quote?", "Contact information"]
+      }]);
+      setShowQuickActions(true);
+      return;
+    }
+
+    // Check cache
+    const cacheKey = query.toLowerCase().trim();
+    const cachedResponse = responseCache.get(cacheKey);
+    if (cachedResponse && (Date.now() - cachedResponse.timestamp < CACHE_TTL)) {
+      setMessages(prev => [...prev, {
+        id: Date.now() + 1,
+        text: cachedResponse.response,
+        sender: "bot",
+        timestamp: new Date(),
+        followUpQuestions: generateFollowUpQuestions(cachedResponse.response)
+      }]);
+      setShowQuickActions(true);
+      return;
+    }
+
+    // Check rate limit
+    if (!checkRateLimit()) {
+      setMessages(prev => [...prev, {
+        id: Date.now() + 1,
+        text: "You're sending messages too quickly. Please wait a moment before trying again.",
+        sender: "bot",
+        timestamp: new Date()
+      }]);
+      setShowQuickActions(true);
+      return;
+    }
+
+    setIsTyping(true);
+    setError(null);
+
+    if (abortControllerRef.current) abortControllerRef.current.abort();
+    abortControllerRef.current = new AbortController();
+
+    try {
+      const currentMessages = messagesRef.current;
+      const conversationHistory = currentMessages
+        .filter(msg => msg && msg.id !== 1 && msg.text && msg.sender)
+        .slice(-4)
+        .map(msg => ({ sender: msg.sender, text: String(msg.text).trim().slice(0, 300) }))
+        .filter(msg => msg.text.length > 0);
+
+      const response = await fetch('/api/chat/gemini', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: query.trim(),
+          conversationHistory,
+          language: language || 'en'
+        }),
+        signal: abortControllerRef.current.signal
+      });
+
+      if (!response.ok) {
+        let errorData;
+        try { errorData = await response.json(); } catch { errorData = {}; }
+        throw new Error(errorData.error || errorData.message || `API error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (!data?.response || typeof data.response !== 'string') {
+        throw new Error('Invalid response from AI');
+      }
+
+      responseCache.set(cacheKey, { response: data.response, timestamp: Date.now() });
+
+      setMessages(prev => [...prev, {
+        id: Date.now() + 1,
+        text: data.response,
+        sender: "bot",
+        timestamp: new Date(),
+        followUpQuestions: generateFollowUpQuestions(data.response)
+      }]);
+      setShowQuickActions(true);
+    } catch (err) {
+      if (err.name === 'AbortError') return;
+      console.error('Error getting AI response:', err);
+      setError(err.message || 'Failed to get response.');
+
+      setMessages(prev => [...prev, {
+        id: Date.now() + 1,
+        text: `I'm sorry, I'm having trouble connecting right now. Please try again in a moment, or contact us directly at sales@ynmsafety.com or +91 96765 75770.`,
+        sender: "bot",
+        timestamp: new Date()
+      }]);
+      setShowQuickActions(true);
+    } finally {
+      setIsTyping(false);
+    }
+  }, [language]);
+
+  // Handle quick action click — no `messages` dependency
+  const handleQuickAction = useCallback(async (query) => {
     setShowQuickActions(false);
-    
-    const userMessage = {
+    setMessages(prev => [...prev, {
       id: Date.now(),
       text: query,
       sender: "user",
       timestamp: new Date()
-    };
-    setMessages(prev => [...prev, userMessage]);
-    
-    // Check for off-topic questions first (saves API calls)
-    if (isOffTopic(query)) {
-      const offTopicMessage = {
-        id: Date.now() + 1,
-        text: OFF_TOPIC_RESPONSE,
-        sender: "bot",
-        timestamp: new Date(),
-        followUpQuestions: ["What products do you manufacture?", "How can I get a quote?", "Contact information"]
-      };
-      setMessages(prev => [...prev, offTopicMessage]);
-      setShowQuickActions(true);
-      return;
-    }
-    
-    // Check rate limit
-    if (!checkRateLimit()) {
-      const rateLimitMessage = {
-        id: Date.now() + 1,
-        text: "You're sending messages too quickly. Please wait a moment before trying again.",
-        sender: "bot",
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, rateLimitMessage]);
-      setShowQuickActions(true);
-      return;
-    }
-    
-    // Check cache first
-    const cacheKey = query.toLowerCase().trim();
-    const cachedResponse = responseCache.get(cacheKey);
-    if (cachedResponse && (Date.now() - cachedResponse.timestamp < CACHE_TTL)) {
-      const botMessage = {
-        id: Date.now() + 1,
-        text: cachedResponse.response,
-        sender: "bot",
-        timestamp: new Date(),
-        followUpQuestions: generateFollowUpQuestions(cachedResponse.response)
-      };
-      setMessages(prev => [...prev, botMessage]);
-      setShowQuickActions(true);
-      return;
-    }
-    
-    setIsTyping(true);
-    setError(null);
-    
-    // Cancel any pending request
-    if (abortControllerRef.current) {
-      abortControllerRef.current.abort();
-    }
-    abortControllerRef.current = new AbortController();
-    
-    try {
-      const conversationHistory = messages
-        .filter(msg => msg && msg.id !== 1 && msg.text && msg.sender)
-        .slice(-6) // Reduced from 10 to 6 for faster responses
-        .map(msg => ({
-          sender: msg.sender,
-          text: String(msg.text).trim()
-        }))
-        .filter(msg => msg.text.length > 0);
+    }]);
+    await sendToAPI(query);
+  }, [sendToAPI]);
 
-      const response = await fetch('/api/chat/gemini', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: query.trim(),
-          conversationHistory: conversationHistory,
-          language: language || 'en'
-        }),
-        signal: abortControllerRef.current.signal
-      });
-
-      if (!response.ok) {
-        let errorData;
-        try {
-          errorData = await response.json();
-        } catch {
-          errorData = { error: `HTTP ${response.status}: ${response.statusText}` };
-        }
-        throw new Error(errorData.error || errorData.message || `API error: ${response.status}`);
-      }
-
-      let data;
-      try {
-        data = await response.json();
-      } catch (parseError) {
-        console.error('Failed to parse response:', parseError);
-        throw new Error('Invalid response format from server');
-      }
-
-      if (!data || !data.response || typeof data.response !== 'string') {
-        throw new Error('Invalid response from AI');
-      }
-
-      // Cache the response
-      responseCache.set(cacheKey, {
-        response: data.response,
-        timestamp: Date.now()
-      });
-
-      const botMessage = {
-        id: Date.now() + 1,
-        text: data.response,
-        sender: "bot",
-        timestamp: new Date(),
-        followUpQuestions: generateFollowUpQuestions(data.response)
-      };
-
-      setMessages(prev => [...prev, botMessage]);
-      setShowQuickActions(true);
-    } catch (err) {
-      if (err.name === 'AbortError') return; // Ignore abort errors
-      
-      console.error('Error getting AI response:', err);
-      setError(err.message || 'Failed to get response. Please try again.');
-      
-      const errorMessage = {
-        id: Date.now() + 1,
-        text: `I'm sorry, I'm having trouble connecting right now. ${err.message ? `Error: ${err.message}. ` : ''}Please try again in a moment, or contact us directly at sales@ynmsafety.com or +91 96765 75770.`,
-        sender: "bot",
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, errorMessage]);
-      setShowQuickActions(true);
-    } finally {
-      setIsTyping(false);
-    }
-  }, [messages, language]);
-
-  // Handle sending message with Gemini API
+  // Handle form submit — no `messages` dependency
   const handleSend = useCallback(async (e) => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
-    
-    const messageToSend = inputValue.trim();
 
-    const userMessage = {
+    const messageToSend = inputValue.trim();
+    setMessages(prev => [...prev, {
       id: Date.now(),
       text: messageToSend,
       sender: "user",
       timestamp: new Date()
-    };
-
-    setMessages(prev => [...prev, userMessage]);
-    const currentInput = messageToSend;
+    }]);
     setInputValue("");
     setShowQuickActions(false);
-    
-    // Check for off-topic questions first (saves API calls)
-    if (isOffTopic(currentInput)) {
-      const offTopicMessage = {
-        id: Date.now() + 1,
-        text: OFF_TOPIC_RESPONSE,
-        sender: "bot",
-        timestamp: new Date(),
-        followUpQuestions: ["What products do you manufacture?", "How can I get a quote?", "Contact information"]
-      };
-      setMessages(prev => [...prev, offTopicMessage]);
-      setShowQuickActions(true);
-      return;
-    }
-    
-    // Check rate limit
-    if (!checkRateLimit()) {
-      const rateLimitMessage = {
-        id: Date.now() + 1,
-        text: "You're sending messages too quickly. Please wait a moment before trying again.",
-        sender: "bot",
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, rateLimitMessage]);
-      setShowQuickActions(true);
-      return;
-    }
-    
-    // Check cache first before API call
-    const cacheKey = currentInput.toLowerCase().trim();
-    const cachedResponse = responseCache.get(cacheKey);
-    if (cachedResponse && (Date.now() - cachedResponse.timestamp < CACHE_TTL)) {
-      const botMessage = {
-        id: Date.now() + 1,
-        text: cachedResponse.response,
-        sender: "bot",
-        timestamp: new Date(),
-        followUpQuestions: generateFollowUpQuestions(cachedResponse.response)
-      };
-      setMessages(prev => [...prev, botMessage]);
-      setShowQuickActions(true);
-      return;
-    }
-    
-    setIsTyping(true);
-    setError(null);
-    
-    // Cancel any pending request
-    if (abortControllerRef.current) {
-      abortControllerRef.current.abort();
-    }
-    abortControllerRef.current = new AbortController();
 
-    try {
-      const conversationHistory = messages
-        .filter(msg => msg && msg.id !== 1 && msg.text && msg.sender)
-        .slice(-4) // Reduced to 4 for faster responses and lower token usage
-        .map(msg => ({
-          sender: msg.sender,
-          text: String(msg.text).trim().slice(0, 300) // Limit message length
-        }))
-        .filter(msg => msg.text.length > 0);
-
-      const response = await fetch('/api/chat/gemini', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: currentInput.trim(),
-          conversationHistory: conversationHistory,
-          language: language || 'en'
-        }),
-        signal: abortControllerRef.current.signal
-      });
-
-      if (!response.ok) {
-        let errorData;
-        try {
-          errorData = await response.json();
-        } catch {
-          errorData = { error: `HTTP ${response.status}: ${response.statusText}` };
-        }
-        throw new Error(errorData.error || errorData.message || `API error: ${response.status}`);
-      }
-
-      let data;
-      try {
-        data = await response.json();
-      } catch (parseError) {
-        console.error('Failed to parse response:', parseError);
-        throw new Error('Invalid response format from server');
-      }
-
-      if (!data || !data.response || typeof data.response !== 'string') {
-        throw new Error('Invalid response from AI');
-      }
-
-      // Cache the response for future identical queries
-      responseCache.set(cacheKey, {
-        response: data.response,
-        timestamp: Date.now()
-      });
-
-      const botMessage = {
-        id: Date.now(),
-        text: data.response,
-        sender: "bot",
-        timestamp: new Date(),
-        followUpQuestions: generateFollowUpQuestions(data.response)
-      };
-
-      setMessages(prev => [...prev, botMessage]);
-      
-      setShowQuickActions(true);
-    } catch (err) {
-      if (err.name === 'AbortError') return; // Ignore abort errors
-      
-      console.error('Error getting AI response:', err);
-      setError(err.message || 'Failed to get response. Please try again.');
-      
-      const errorMessage = {
-        id: Date.now(),
-        text: `I'm sorry, I'm having trouble connecting right now. ${err.message ? `Error: ${err.message}. ` : ''}Please try again in a moment, or contact us directly at sales@ynmsafety.com or +91 96765 75770.`,
-        sender: "bot",
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, errorMessage]);
-      setShowQuickActions(true);
-    } finally {
-      setIsTyping(false);
-    }
-  }, [inputValue, isTyping, messages, language]);
+    await sendToAPI(messageToSend);
+  }, [inputValue, isTyping, sendToAPI]);
 
   // Toggle chat
   const toggleChat = (e) => {
@@ -849,9 +715,9 @@ export default function Chatbot() {
                     })}
                     
                     {/* Product cards if message mentions products */}
-                    {message.text.toLowerCase().includes('product') && message.sender === 'bot' && (
+                    {message.sender === 'bot' && message.text.includes('product') && (
                       <div className="chatbot-product-cards">
-                        {Object.values(productCatalog).flat().slice(0, 3).map((product) => (
+                        {TOP_PRODUCTS.map((product) => (
                           <div key={product.id} className="chatbot-product-card">
                             <div className="chatbot-product-card-image">
                               <Image src={product.image} alt={`${product.name} - YNM Safety Products India`} width={80} height={80} />
@@ -866,7 +732,7 @@ export default function Chatbot() {
                     )}
                     
                     {/* Social media links if message mentions contact/social */}
-                    {(message.text.toLowerCase().includes('contact') || message.text.toLowerCase().includes('social') || message.text.toLowerCase().includes('linkedin') || message.text.toLowerCase().includes('facebook')) && message.sender === 'bot' && (
+                    {message.sender === 'bot' && /contact|social|linkedin|facebook/i.test(message.text) && (
                       <div className="chatbot-social-links">
                         <p style={{ marginBottom: '8px', fontSize: '12px', fontWeight: 600 }}>
                           Follow us:
@@ -970,11 +836,11 @@ export default function Chatbot() {
               <div className="chatbot-quick-actions">
                 <p className="chatbot-quick-actions-label">Popular topics:</p>
                 <div className="chatbot-quick-actions-grid">
-                  {quickActions.map((action, index) => (
+                  {QUICK_ACTIONS.map((action, index) => (
                     <button
                       key={index}
                       className="chatbot-quick-action-btn"
-                      onClick={() => handleQuickAction(action.query, action.action)}
+                      onClick={() => handleQuickAction(action.query)}
                       disabled={isTyping}
                     >
                       {action.label}
@@ -1030,7 +896,7 @@ export default function Chatbot() {
             )}
             
             {/* Appointment Booking - Show when user asks about visiting/meeting */}
-            {messages.some(m => m.text.toLowerCase().includes('visit') || m.text.toLowerCase().includes('meeting') || m.text.toLowerCase().includes('appointment')) && !showLeadForm && (
+            {!showLeadForm && messages.length > 1 && messages.some(m => /visit|meeting|appointment/i.test(m.text)) && (
               <div className="chatbot-appointment-cta">
                 <p>Want to schedule a visit?</p>
                 <button 

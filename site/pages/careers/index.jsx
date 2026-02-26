@@ -2,16 +2,19 @@ import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { isAllowedDomain } from "@/lib/recaptchaUtils";
+
+const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 
 // Company details
 const companyInfo = {
   name: "YNM Safety Pan Global Trade Pvt Ltd",
   tagline: "Manufacturing & Export Excellence Since 2013",
   email: "hr@ynmsafety.com",
-  phone: "+91 96765 75770 / +91 90002 62013",
+  phone: "+91 96765 75770 / +91 88850 02183",
 };
 
 // Available positions
@@ -88,6 +91,7 @@ export default function CareersPage() {
     coverLetter: "",
     captchaAnswer: "",
   });
+  const [fieldErrors, setFieldErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
@@ -258,8 +262,19 @@ export default function CareersPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
-    
-    // Validate reCAPTCHA (only when shown on allowed domains)
+    const errs = {};
+
+    if (!formData.name.trim()) errs.name = "Full name is required.";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) errs.email = "Email is required.";
+    else if (!emailRegex.test(formData.email)) errs.email = "Enter a valid email (must contain @).";
+    const phoneDigits = formData.phone.replace(/\D/g, "");
+    if (!formData.phone.trim()) errs.phone = "Phone number is required.";
+    else if (phoneDigits.length < 10) errs.phone = "Enter a valid 10-digit phone number.";
+
+    setFieldErrors(errs);
+    if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
+
     if (showRecaptcha && !recaptchaToken) {
       setError('Please complete the "I\'m not a robot" verification.');
       setIsSubmitting(false);
@@ -490,43 +505,22 @@ export default function CareersPage() {
                   
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="name">Full Name *</label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="John Doe"
-                      />
+                      <label htmlFor="name">Full Name <span className="ynm-required">*</span></label>
+                      <input type="text" id="name" name="name" value={formData.name} onChange={(e) => { handleChange(e); if (fieldErrors.name) setFieldErrors((p) => ({ ...p, name: "" })); }} required placeholder="John Doe" className={fieldErrors.name ? "ynm-input-error" : ""} />
+                      {fieldErrors.name && <span className="ynm-field-error">{fieldErrors.name}</span>}
                     </div>
                     <div className="form-group">
-                      <label htmlFor="email">Email Address *</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="john@example.com"
-                      />
+                      <label htmlFor="email">Email Address <span className="ynm-required">*</span></label>
+                      <input type="email" id="email" name="email" value={formData.email} onChange={(e) => { handleChange(e); if (fieldErrors.email) setFieldErrors((p) => ({ ...p, email: "" })); }} required placeholder="john@example.com" className={fieldErrors.email ? "ynm-input-error" : ""} />
+                      {fieldErrors.email && <span className="ynm-field-error">{fieldErrors.email}</span>}
                     </div>
                   </div>
 
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="phone">Phone Number *</label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        placeholder="+91 98765 43210"
-                      />
+                      <label htmlFor="phone">Phone Number <span className="ynm-required">*</span></label>
+                      <PhoneInput id="phone" value={formData.phone} onChange={(val) => { setFormData((prev) => ({ ...prev, phone: val })); if (fieldErrors.phone) setFieldErrors((p) => ({ ...p, phone: "" })); }} required className={fieldErrors.phone ? "ynm-input-error" : ""} />
+                      {fieldErrors.phone && <span className="ynm-field-error">{fieldErrors.phone}</span>}
                     </div>
                     <div className="form-group">
                       <label htmlFor="position">Position Applied For *</label>

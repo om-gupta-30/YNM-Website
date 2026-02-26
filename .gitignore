@@ -190,7 +190,11 @@ app.yaml.bak
 # ==============================================
 # Source image folders that were imported into site/public/assets/
 # Use /folder to only match at repo root (not in site/public/assets/)
+/canopy*/
 /cantilever*/
+/cautionary*/
+/circular*/
+/octagonal*/
 /fabrication*/
 /testimonials/
 /aboutus.png
@@ -208,3 +212,6 @@ app.yaml.bak
 /slotted*/
 /gantry*/
 /roadsafety/
+/*.png
+/*.jpg
+/*.jpeg

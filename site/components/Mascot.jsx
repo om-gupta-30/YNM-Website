@@ -95,7 +95,7 @@ function Mascot() {
           width={140}
           height={140}
           className="mascot-image"
-          priority
+          loading="lazy"
         />
         {isMinimized && (
           <div className="mascot-badge">

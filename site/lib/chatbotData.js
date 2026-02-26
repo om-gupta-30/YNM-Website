@@ -6,7 +6,7 @@ export const faqData = [
   },
   {
     question: "What is your contact information?",
-    answer: "**📞 Contact YNM Safety:**\n\n**Phone:**\n• +91 96765 75770\n• +91 90002 62013\n\n**Email:** sales@ynmsafety.com\n**HR Email:** hr@ynmsafety.com\n\n**🏢 Office Address:**\nSurvey 84P, Gowra Fountain Head, 4th Floor,\nSuite 401 A, Patrika Nagar, Madhapur,\nHyderabad, Telangana 500081, India\n\n**🏭 Factory Address:**\nSy No 74, Kothur Village, Shabad Mandal,\nRangareddy, Telangana 509217\n\n**🕐 Business Hours:**\nMonday to Saturday: 10 AM - 6 PM IST\nSunday: Closed\n\n**🌐 Website:** https://ynmsafety.com\n\n**Follow Us:**\n• LinkedIn: linkedin.com/company/ynmsafety\n• Instagram: @ynm.safety\n• Facebook: YNM Safety\n\nWe typically respond within 24 hours on business days."
+    answer: "**📞 Contact YNM Safety:**\n\n**Phone:**\n• +91 96765 75770\n• +91 88850 02183\n\n**Email:**\n• Sales: sales@ynmsafety.com\n• HR: hr@ynmsafety.com\n• Partnerships: partnership@ynmsafety.com\n• Investors: invest@ynmsafety.com\n\n**🏢 Office Address:**\nSurvey 84P, Gowra Fountain Head, 4th Floor,\nSuite 401 A, Patrika Nagar, Madhapur,\nHyderabad, Telangana 500081, India\n\n**🏭 Factory Address:**\nSy No 74, Kothur Village, Shabad Mandal,\nRangareddy, Telangana 509217\n\n**🕐 Business Hours:**\nMonday to Saturday: 10 AM - 6 PM IST\nSunday: Closed\n\n**🌐 Website:** https://ynmsafety.com\n**💬 WhatsApp:** wa.me/918885002183\n\n**Follow Us:**\n• LinkedIn: linkedin.com/company/ynmsafety\n• Instagram: @ynm.safety\n• Facebook: YNM Safety\n\n**Quick Links:**\n• Get a Quote: ynmsafety.com/get-quote\n• Contact Form: ynmsafety.com/contact\n• India Presence Map: Available on the Contact page\n\nWe typically respond within 24 hours on business days."
   },
   {
     question: "What are your business hours?",
@@ -26,11 +26,11 @@ export const faqData = [
   },
   {
     question: "How can I get a quote?",
-    answer: "You can get a quote in multiple ways:\n\n1. **Email:** sales@ynmsafety.com\n2. **Phone:** +91 96765 75770 / +91 90002 62013\n3. **Website:** Fill out the Contact form at ynmsafety.com/contact\n4. **WhatsApp:** Coming soon!\n\nWe offer competitive **FOB & CIF pricing** for all products with export documentation support."
+    answer: "You can get a quote in multiple ways:\n\n1. **🌐 Get Quote Page:** Visit ynmsafety.com/get-quote — our dedicated quote request form with product selection, quantity, timeline, delivery location, and file attachment support\n2. **Email:** sales@ynmsafety.com\n3. **Phone:** +91 96765 75770 / +91 88850 02183\n4. **WhatsApp:** +91 88850 02183 (wa.me/918885002183)\n5. **Contact Page:** Fill out the general form at ynmsafety.com/contact\n\nThe **/get-quote** page lets you:\n• Select from all product categories (Paints, Crash Barriers, Signage, Fabrication & more)\n• Specify quantity, unit (Kg, MT, Pieces, Meters, Sets, Sq.m), and timeline\n• Attach technical specification documents (PDF)\n• Provide delivery location and project details\n\nWe offer competitive **FOB & CIF pricing** for all products with export documentation support."
   },
   {
     question: "Who is the director of YNM Safety?",
-    answer: "**Mr. Rishuu Jaiin** is the Managing Director of YNM Safety Pan Global Trade Pvt Ltd.\n\n**About Mr. Rishuu Jaiin:**\n- First-generation entrepreneur\n- B.E. in Mechanical Engineering (2008)\n- MBA in Operations & International Business (2010)\n- Founded YNM Safety in 2013\n- 10+ years experience, 6 companies led\n\n**Under his leadership:**\n- Company serves 50+ countries across 17+ nations\n- 500+ projects delivered\n- 200+ team members\n- PAN India expansion in 2026\n\n**Awards:**\n- Export Excellence Award - FIEO (2023)\n- Manufacturing Excellence Award - CII (2022)\n- Entrepreneur of the Year - Hyderabad Chamber of Commerce (2021)\n- Quality Leadership Award - Indian Quality Council (2020)\n\nVisit ynmsafety.com/our-director for more details."
+    answer: "**Mr. Rishuu Jaiin** is the Managing Director of YNM Safety Pan Global Trade Pvt Ltd.\n\n**About Mr. Rishuu Jaiin:**\n- First-generation entrepreneur\n- B.E. in Mechanical Engineering (2008)\n- MBA in Operations & International Business (2010)\n- Founded YNM Safety in 2013\n- 10+ years experience, 6 companies led\n\n**Ventures Under His Leadership:**\n1. YNM Safety Pan Global Trade Pvt Ltd (2013 - Present)\n2. YNM Global Exports (2015 - Present)\n3. YNM Infrastructure Solutions (2018 - Present)\n4. YNM Safety & Compliance (2019 - Present)\n5. YNM Educational Solutions (2020 - Present)\n6. YNM Research & Development (2021 - Present)\n\n**Key Achievements:**\n- 50+ export countries, 500+ projects, 200+ team members\n- PAN India expansion in 2026\n\n**Awards:**\n- Export Excellence Award - FIEO (2023)\n- Manufacturing Excellence Award - CII (2022)\n- Entrepreneur of the Year - Hyderabad Chamber of Commerce (2021)\n- Quality Leadership Award - Indian Quality Council (2020)\n\n**📅 Book an Appointment:** Visit ynmsafety.com/our-director to request a meeting with the director.\n\nVisit ynmsafety.com/our-director for more details."
   },
   {
     question: "Tell me about YNM Safety",
@@ -62,11 +62,11 @@ export const faqData = [
   },
   {
     question: "Are you hiring?",
-    answer: "**Yes!** YNM Safety is growing and always looking for talented professionals.\n\n**🏢 Open Departments:**\n• Operations & Production\n• Sales & Marketing\n• IT & Technology\n• Purchase & Procurement\n• Accounts & Finance\n• HR & Administration\n\n**📝 How to Apply:**\n1. Visit: ynmsafety.com/careers\n2. Submit your resume (PDF only, max 5MB)\n3. Our HR team will contact you\n\n**HR Email:** hr@ynmsafety.com\n\n**✨ Why Join YNM:**\n• Growth opportunities & career advancement\n• Global exposure across 50+ countries\n• Quality-focused culture (ISO standards)\n• Collaborative team environment\n• Learning & development programs\n\nJoin our team of 200+ professionals!"
+    answer: "**Yes!** YNM Safety is growing and always looking for talented professionals.\n\n**🏢 Current Open Positions:**\n1. **Production Manager** — Manufacturing (Full-time, Hyderabad)\n2. **Quality Control Engineer** — Quality Assurance (Full-time, Hyderabad)\n3. **Export Coordinator** — International Trade (Full-time, Hyderabad)\n4. **Sales Executive** — Sales & Marketing (Full-time, Hyderabad)\n5. **Warehouse Supervisor** — Operations (Full-time, Hyderabad)\n6. **Accounts Executive** — Finance (Full-time, Hyderabad)\n\n**📝 How to Apply:**\n1. Visit: ynmsafety.com/careers\n2. Select your position & fill in your details\n3. Upload your resume (PDF only, max 5MB)\n4. Complete the math CAPTCHA verification\n5. Our HR team will contact you\n\n**HR Email:** hr@ynmsafety.com\n\n**✨ Why Join YNM:**\n• Growth opportunities & career advancement\n• Global exposure across 50+ countries\n• Quality-focused culture (ISO standards)\n• Collaborative team environment\n• Learning & development programs\n\nJoin our team of 200+ professionals!"
   },
   {
     question: "Do you work with foreign companies?",
-    answer: "Yes! YNM Safety actively seeks **foreign collaborations** for:\n\n**Collaboration Areas:**\n1. **Manufacturing Partnerships** - Technology transfer, shared R&D, quality systems, co-manufacturing\n2. **Distribution Networks** - Market access, local expertise, supply chain partnerships\n3. **Research & Development** - Product innovation, testing labs, IP sharing\n4. **Quality & Compliance** - ISO standards implementation, certifications, audit support\n\n**Target Regions:**\n- Middle East (UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain)\n- East Asia (Hong Kong, Shanghai, Taiwan, South Korea, Japan)\n- Africa (Kenya, Nigeria, South Africa, Egypt, Tanzania, Ghana, Ethiopia, Morocco)\n- Southeast Asia (Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines)\n- Europe (Germany, UK, Netherlands, France)\n\n**Partnership Process:** Initial Contact → Discovery → Evaluation → Agreement → Launch\n\nVisit ynmsafety.com/foreign-collaborations to submit a partnership inquiry."
+    answer: "Yes! YNM Safety actively seeks **foreign collaborations** for:\n\n**Collaboration Areas:**\n1. **Manufacturing Partnerships** - Technology transfer, shared R&D, quality systems, co-manufacturing\n2. **Distribution Networks** - Market access, local expertise, supply chain partnerships\n3. **Research & Development** - Product innovation, testing labs, IP sharing\n4. **Quality & Compliance** - ISO standards implementation, certifications, audit support\n\n**Target Regions:**\n- Middle East (UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain)\n- East Asia (Hong Kong, Shanghai, Shenzhen, Taiwan, South Korea, Japan)\n- Africa (Kenya, Nigeria, South Africa, Egypt, Tanzania, Ghana, Ethiopia, Morocco)\n- Southeast Asia (Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines)\n- Europe (Germany, UK, Netherlands, France)\n\n**Partnership Process:** Initial Contact → Discovery → Evaluation → Partnership\n\n**📧 Email:** partnership@ynmsafety.com\nVisit ynmsafety.com/foreign-collaborations to submit a partnership inquiry."
   },
   {
     question: "What is cold plastic paint?",
@@ -105,6 +105,18 @@ export const faqData = [
     answer: "**Payment Methods Accepted:**\n\n**Domestic Orders:**\n- Bank Transfer (NEFT/RTGS/IMPS)\n- Cheque\n- Demand Draft\n- Letter of Credit (LC)\n\n**Export Orders:**\n- Letter of Credit (LC)\n- Telegraphic Transfer (TT)\n- Wire Transfer\n- Advance Payment\n\n**Payment Terms:**\n- Standard: 50% advance, 50% before dispatch\n- LC: As per LC terms\n- Established clients: Credit terms available\n\n**Currency:**\n- INR for domestic\n- USD/EUR for international\n\nContact our finance team for customized payment arrangements."
   },
   {
+    question: "What languages does your website support?",
+    answer: "YNM Safety website is available in **12 Indian languages** for a truly inclusive experience:\n\n1. 🇬🇧 **English** (en)\n2. 🇮🇳 **Hindi** (hi) — हिंदी\n3. 🇮🇳 **Bengali** (bn) — বাংলা\n4. 🇮🇳 **Telugu** (te) — తెలుగు\n5. 🇮🇳 **Marathi** (mr) — मराठी\n6. 🇮🇳 **Tamil** (ta) — தமிழ்\n7. 🇮🇳 **Gujarati** (gu) — ગુજરાતી\n8. 🇮🇳 **Kannada** (kn) — ಕನ್ನಡ\n9. 🇮🇳 **Malayalam** (ml) — മലയാളം\n10. 🇮🇳 **Punjabi** (pa) — ਪੰਜਾਬੀ\n11. 🇮🇳 **Odia** (or) — ଓଡ଼ିଆ\n12. 🇮🇳 **Urdu** (ur) — اردو\n\nYou can select your preferred language using the language selector in the navigation bar. A language selection popup also appears on your first visit."
+  },
+  {
+    question: "Do you have offices across India?",
+    answer: "YNM Safety has **PAN India presence** with contacts across multiple states!\n\n**Headquarters:** Hyderabad, Telangana\n**Factory:** Kothur Village, Shabad Mandal, Rangareddy, Telangana\n\n**State Contacts:**\n• **Maharashtra** — Rajesh Kumar, Priya Sharma, Sanjay Deshmukh\n• **Delhi** — Amit Singh\n• **Karnataka** — Sneha Reddy, Vikram Nair, Lakshmi Iyer\n• **Tamil Nadu** — Karthik Sundaram, Meenakshi Rajan\n• **Gujarat** — Dilip Patel, Pooja Shah, Rakesh Mehta\n• **Uttar Pradesh** — Anil Verma, Sunita Devi\n• **Rajasthan** — Vikram Singh Rathore\n• **Telangana** — Srinivas Reddy, Kavitha Malladi\n• **West Bengal** — Debashish Banerjee\n\nVisit our **Contact page** (ynmsafety.com/contact) to view the **interactive India Presence Map** — click on any state to see local contacts and details.\n\n2026 marks our PAN India manufacturing expansion."
+  },
+  {
+    question: "Can I book an appointment with the director?",
+    answer: "**Yes!** You can request an appointment with **Mr. Rishuu Jaiin**, Managing Director of YNM Safety.\n\n**How to Book:**\n1. Visit ynmsafety.com/our-director\n2. Scroll to the appointment booking section\n3. Fill in your details:\n   • Full Name\n   • Email\n   • Phone (with country code)\n   • Company/Organization\n   • Purpose of Meeting\n   • Preferred Date & Time\n   • Additional Message\n4. Complete reCAPTCHA verification\n5. Submit your request\n\nOur team will confirm your appointment via email.\n\n**Note:** Appointments are subject to the director's availability."
+  },
+  {
     question: "Do you provide product samples?",
     answer: "**Yes, we provide samples!**\n\n**Sample Availability:**\n- Road marking paint samples (small quantities)\n- Color cards and specification sheets\n- Crash barrier material samples\n- Signage material samples\n- Road safety furniture samples\n\n**Sample Policy:**\n- Small samples: Free of charge\n- Larger samples: Nominal charges may apply\n- Shipping: Customer bears shipping costs for international samples\n\n**How to Request:**\n1. Email: sales@ynmsafety.com\n2. Subject: Sample Request - [Product Name]\n3. Include: Company name, address, quantity needed\n\nSamples are typically dispatched within 3-5 business days."
   },
@@ -114,11 +126,11 @@ export const faqData = [
   },
   {
     question: "Do you have investor relations?",
-    answer: "Yes! YNM Safety welcomes investment inquiries.\n\n**Investment Thesis:**\n- Proven track record (13+ years)\n- Export infrastructure (multi-continent, 50+ countries)\n- Scalable operations (3x capacity)\n- Diversified portfolio (3 verticals)\n\n**Fund Allocation:**\n- 40% Capacity Expansion\n- 25% Technology Upgrade\n- 20% Market Development\n- 15% Working Capital\n\n**Open to:** Equity investment, strategic partnerships, joint ventures\n\nVisit ynmsafety.com/investor-relations to submit an investment inquiry."
+    answer: "Yes! YNM Safety welcomes investment inquiries.\n\n**Investment Thesis:**\n- Proven track record (10+ years of consistent growth)\n- Export infrastructure (multi-continent, 50+ countries)\n- Scalable operations (3x capacity)\n- Diversified portfolio (3 verticals)\n\n**Fund Allocation:**\n- 40% Capacity Expansion\n- 25% Technology Upgrade\n- 20% Market Development\n- 15% Working Capital\n\n**Company Milestones:**\n2013: Foundation → 2015: First Export → 2018: ISO Certified → 2021: Expansion → 2024: PAN India → 2025: Contracting → 2026: PAN India Manufacturing\n\n**Open to:** Equity investment, strategic partnerships, joint ventures\n**Investor Types Welcome:** Individual, Angel, VC, PE, Strategic, Family Office\n\n**📧 Email:** invest@ynmsafety.com\nVisit ynmsafety.com/investor-relations to submit an investment inquiry."
   },
   {
     question: "What pages does your website have?",
-    answer: "**YNM Safety Website Pages:**\n\n• **Home** (ynmsafety.com) - Overview, products, testimonials\n• **Products** (/products) - All product categories\n• **Fabrication** (/products/fabrication) - 34+ fabrication products\n• **Road Safety Furnitures** (/products/road-safety-furnitures) - 19 products\n• **About Us** (/about) - Company story, timeline, values\n• **Our Director** (/our-director) - Mr. Rishuu Jaiin's profile\n• **Clients** (/clients) - 18 major client profiles\n• **Careers** (/careers) - Job openings and application\n• **Contact** (/contact) - Contact form and details\n• **Investor Relations** (/investor-relations) - Investment information\n• **Foreign Collaborations** (/foreign-collaborations) - Partnership inquiries"
+    answer: "**YNM Safety Website Pages:**\n\n• **Home** (ynmsafety.com) - Overview, products, testimonials, client logos\n• **Products** (/products) - All product categories with filterable grid\n• **Product Details** (/products/[productId]) - Individual product pages with specs, applications, pricing\n• **Fabrication** (/products/fabrication) - 34+ fabrication products with image galleries\n• **Road Safety Furnitures** (/products/road-safety-furnitures) - 19 road safety products\n• **About Us** (/about) - Company story, timeline, values, mission & vision\n• **Our Director** (/our-director) - Mr. Rishuu Jaiin's profile, ventures & appointment booking\n• **Clients** (/clients) - 18 major client profiles\n• **Get a Quote** (/get-quote) - Dedicated quote request form with product selection & file upload\n• **Careers** (/careers) - 6 open positions and application form\n• **Contact** (/contact) - Contact form, India presence map with state contacts, social links\n• **Investor Relations** (/investor-relations) - Investment thesis, milestones, fund allocation\n• **Foreign Collaborations** (/foreign-collaborations) - Partnership inquiry with global region map\n\n**Additional Features:**\n• AI-powered chatbot for instant help\n• Available in 12 Indian languages\n• Floating 'Get a Quote' button on all pages"
   }
 ];
 
@@ -148,13 +160,14 @@ export const productCatalog = {
   signages: [
     { id: "s1", name: "Retro Reflective Gantry Signage", image: "/assets/ynm-safety-manufactures-of-gantry-signages.png", desc: "Large overhead highway signage with high visibility" },
     { id: "s2", name: "Cantilever Signage", image: "/assets/ynm-safety-cantilever.png", desc: "Single-arm mounted expressway signage" },
-    { id: "s3", name: "Mandatory Sign Board (Octagonal)", image: "/assets/ynm-safety-osmsb-road-traffic-management.jpg", desc: "High-visibility octagonal mandatory sign boards, 7-10 years durability" },
-    { id: "s4", name: "Mandatory Sign Board (Circular)", image: "/assets/ynm-safety-csmsb-construction-sites.jpg", desc: "Circular mandatory sign boards for roads and industries" },
-    { id: "s5", name: "Cautionary Sign Boards (Triangle)", image: "/assets/ynm-safety-tscsb-roads-highways.jpg", desc: "Triangular warning sign boards for road hazards and curves" },
+    { id: "s3", name: "Mandatory Sign Board (Octagonal)", image: "/assets/ynm-safety-osmsb-high-speed-highway.png", desc: "High-visibility octagonal mandatory sign boards, 7-10 years durability" },
+    { id: "s4", name: "Mandatory Sign Board (Circular)", image: "/assets/ynm-safety-csmsb-no-uturn-expressway-highways.jpg", desc: "Circular mandatory sign boards for roads and industries" },
+    { id: "s5", name: "Cautionary Sign Boards", image: "/assets/ynm-safety-tscsb-roads-highways.jpg", desc: "Warning sign boards for road hazards and curves" },
     { id: "s6", name: "Canopy", image: "/assets/ynm-safety-canopy-fuel-stations.webp", desc: "Canopy structures for toll plazas, fuel stations, retail stores" },
     { id: "s7", name: "Informatory Sign Board", image: "/assets/ynm-safety-informatory-roads-highways.jpg", desc: "Direction and information sign boards" },
     { id: "s8", name: "Place Identification Boards", image: "/assets/ynm-safety-place-roads-highways.jpg", desc: "Location and area identification signage" },
-    { id: "s9", name: "Toll Boards & Facia", image: "/assets/ynm-safety-toll-plazas-2.png", desc: "Toll plaza signage and facia boards" }
+    { id: "s9", name: "Advance Direction Boards", image: "/assets/ynm-safety-informatory-roads-highways.jpg", desc: "Route guidance signage for highways and expressways" },
+    { id: "s10", name: "Toll Boards & Facia", image: "/assets/ynm-safety-toll-plazas-2.png", desc: "Toll plaza signage and facia boards" }
   ],
   fabrication: [
     { id: "f1", name: "Solar Panel Structures", image: "/assets/fabrication/solar-panel-frame-1.png", desc: "Structural frames for solar panel installations" },
@@ -177,13 +190,18 @@ export const productCatalog = {
 // Contact links
 export const contactLinks = {
   email: "mailto:sales@ynmsafety.com?subject=Inquiry from Website",
+  hrEmail: "mailto:hr@ynmsafety.com?subject=Career Inquiry",
+  partnershipEmail: "mailto:partnership@ynmsafety.com?subject=Partnership Inquiry",
+  investorEmail: "mailto:invest@ynmsafety.com?subject=Investment Inquiry",
   phone: "tel:+919676575770",
-  phone2: "tel:+919000262013",
+  phone2: "tel:+918885002183",
+  whatsapp: "https://wa.me/918885002183",
   linkedin: "https://www.linkedin.com/company/ynmsafety/",
   facebook: "https://www.facebook.com/profile.php?id=61583507530283",
   instagram: "https://www.instagram.com/ynm.safety/",
   maps: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29",
-  website: "https://ynmsafety.com"
+  website: "https://ynmsafety.com",
+  getQuote: "https://ynmsafety.com/get-quote"
 };
 
 // Company info for AI context
@@ -202,11 +220,15 @@ export const companyInfo = {
   standards: ["MoRTH", "IRC", "IS", "ASTM", "BS", "AASHTO", "ICAO", "FAA", "DGCA", "RDSO", "NHAI"],
   workingHours: "Monday to Saturday, 10 AM to 6 PM IST",
   address: "Survey, 84P, Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081",
-  phone: ["+91 96765 75770", "+91 90002 62013"],
+  phone: ["+91 96765 75770", "+91 88850 02183"],
   email: "sales@ynmsafety.com",
   hrEmail: "hr@ynmsafety.com",
+  partnershipEmail: "partnership@ynmsafety.com",
+  investorEmail: "invest@ynmsafety.com",
+  whatsapp: "https://wa.me/918885002183",
   website: "https://ynmsafety.com",
   tagline: "Road Safety & Infrastructure Excellence Since 2013",
+  languages: ["English", "Hindi", "Bengali", "Telugu", "Marathi", "Tamil", "Gujarati", "Kannada", "Malayalam", "Punjabi", "Odia", "Urdu"],
   productCategories: [
     "Road Marking Paints (8 types)",
     "Bitumen (VG 40 & VG 30)",
@@ -235,16 +257,30 @@ export const companyInfo = {
     "Ramoji Film City", "Aparna Constructions", "Alekhya Homes",
     "Hyundai Glovis", "Tom Tailor", "GVK EMRI", "NSL Group"
   ],
+  openPositions: [
+    "Production Manager", "Quality Control Engineer", "Export Coordinator",
+    "Sales Executive", "Warehouse Supervisor", "Accounts Executive"
+  ],
+  directorVentures: [
+    "YNM Safety Pan Global Trade Pvt Ltd",
+    "YNM Global Exports",
+    "YNM Infrastructure Solutions",
+    "YNM Safety & Compliance",
+    "YNM Educational Solutions",
+    "YNM Research & Development"
+  ],
   websitePages: [
     { path: "/", name: "Home" },
     { path: "/products", name: "Products" },
+    { path: "/products/[productId]", name: "Product Details" },
     { path: "/products/fabrication", name: "Fabrication Products (34+)" },
     { path: "/products/road-safety-furnitures", name: "Road Safety Furnitures (19)" },
     { path: "/about", name: "About Us" },
-    { path: "/our-director", name: "Our Director" },
+    { path: "/our-director", name: "Our Director (with Appointment Booking)" },
     { path: "/clients", name: "Clients" },
-    { path: "/careers", name: "Careers" },
-    { path: "/contact", name: "Contact" },
+    { path: "/get-quote", name: "Get a Quote" },
+    { path: "/careers", name: "Careers (6 Open Positions)" },
+    { path: "/contact", name: "Contact (with India Presence Map)" },
     { path: "/investor-relations", name: "Investor Relations" },
     { path: "/foreign-collaborations", name: "Foreign Collaborations" }
   ]

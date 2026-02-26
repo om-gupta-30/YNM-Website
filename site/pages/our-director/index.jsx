@@ -3,9 +3,12 @@ import { isAllowedDomain } from "@/lib/recaptchaUtils";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import directorData from "@/lib/directorData";
+
+const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 
 export default function OurDirectorPage() {
   const [appointmentForm, setAppointmentForm] = useState({
@@ -18,6 +21,7 @@ export default function OurDirectorPage() {
     preferredTime: "",
     message: "",
   });
+  const [fieldErrors, setFieldErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -109,9 +113,20 @@ export default function OurDirectorPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
-    
+    const errs = {};
+
+    if (!appointmentForm.name.trim()) errs.name = "Full name is required.";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!appointmentForm.email.trim()) errs.email = "Email is required.";
+    else if (!emailRegex.test(appointmentForm.email)) errs.email = "Enter a valid email (must contain @).";
+    const phoneDigits = appointmentForm.phone.replace(/\D/g, "");
+    if (!appointmentForm.phone.trim()) errs.phone = "Phone number is required.";
+    else if (phoneDigits.length < 10) errs.phone = "Enter a valid 10-digit phone number.";
+
+    setFieldErrors(errs);
+    if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
+
     try {
-      // Validate reCAPTCHA (only when shown on allowed domains)
       if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
@@ -493,43 +508,22 @@ export default function OurDirectorPage() {
                   
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="apt-name">Full Name *</label>
-                      <input
-                        type="text"
-                        id="apt-name"
-                        name="name"
-                        value={appointmentForm.name}
-                        onChange={handleAppointmentChange}
-                        required
-                        placeholder="Your full name"
-                      />
+                      <label htmlFor="apt-name">Full Name <span className="ynm-required">*</span></label>
+                      <input type="text" id="apt-name" name="name" value={appointmentForm.name} onChange={(e) => { handleAppointmentChange(e); if (fieldErrors.name) setFieldErrors((p) => ({ ...p, name: "" })); }} required placeholder="Your full name" className={fieldErrors.name ? "ynm-input-error" : ""} />
+                      {fieldErrors.name && <span className="ynm-field-error">{fieldErrors.name}</span>}
                     </div>
                     <div className="form-group">
-                      <label htmlFor="apt-email">Email *</label>
-                      <input
-                        type="email"
-                        id="apt-email"
-                        name="email"
-                        value={appointmentForm.email}
-                        onChange={handleAppointmentChange}
-                        required
-                        placeholder="your@email.com"
-                      />
+                      <label htmlFor="apt-email">Email <span className="ynm-required">*</span></label>
+                      <input type="email" id="apt-email" name="email" value={appointmentForm.email} onChange={(e) => { handleAppointmentChange(e); if (fieldErrors.email) setFieldErrors((p) => ({ ...p, email: "" })); }} required placeholder="your@email.com" className={fieldErrors.email ? "ynm-input-error" : ""} />
+                      {fieldErrors.email && <span className="ynm-field-error">{fieldErrors.email}</span>}
                     </div>
                   </div>
 
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="apt-phone">Phone *</label>
-                      <input
-                        type="tel"
-                        id="apt-phone"
-                        name="phone"
-                        value={appointmentForm.phone}
-                        onChange={handleAppointmentChange}
-                        required
-                        placeholder="+91 98765 43210"
-                      />
+                      <label htmlFor="apt-phone">Phone <span className="ynm-required">*</span></label>
+                      <PhoneInput id="apt-phone" value={appointmentForm.phone} onChange={(val) => { setAppointmentForm((prev) => ({ ...prev, phone: val })); if (fieldErrors.phone) setFieldErrors((p) => ({ ...p, phone: "" })); }} required className={fieldErrors.phone ? "ynm-input-error" : ""} />
+                      {fieldErrors.phone && <span className="ynm-field-error">{fieldErrors.phone}</span>}
                     </div>
                     <div className="form-group">
                       <label htmlFor="apt-company">Company Name</label>

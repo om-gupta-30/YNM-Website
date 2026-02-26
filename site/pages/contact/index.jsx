@@ -2,17 +2,20 @@ import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import IndiaPresenceMap from "@/components/IndiaPresenceMap";
 import { isAllowedDomain } from "@/lib/recaptchaUtils";
+
+const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 
 // Company details
 const companyInfo = {
   name: "YNM Safety Pan Global Trade Pvt Ltd",
   tagline: "Manufacturing & Export Excellence Since 2013",
   address: "Survey, 84P, Gowra Fountain Head, 4th Floor, Suite, 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081",
-  phone: "+91 96765 75770 / +91 90002 62013",
+  phone: "+91 96765 75770 / +91 88850 02183",
   email: "sales@ynmsafety.com",
   workingHours: "Monday to Saturday 10 am to 6 pm IST",
 };
@@ -22,7 +25,7 @@ const socialLinks = [
   { name: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/company/ynmsafety/", color: "#0A66C2" },
   { name: "Facebook", icon: "facebook", href: "https://www.facebook.com/profile.php?id=61583507530283", color: "#1877F2" },
   { name: "Instagram", icon: "instagram", href: "https://www.instagram.com/ynm.safety/", color: "#E4405F" },
-  { name: "WhatsApp", icon: "whatsapp", href: "#", color: "#25D366", isComingSoon: true },
+  { name: "WhatsApp", icon: "whatsapp", href: "https://wa.me/918885002183", color: "#25D366" },
   { name: "Google Maps", icon: "maps", href: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29", color: "#EA4335" },
 ];
 
@@ -35,6 +38,7 @@ export default function ContactPage() {
     subject: "",
     message: "",
   });
+  const [fieldErrors, setFieldErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
@@ -129,9 +133,26 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
-    
+    const errs = {};
+
+    if (!formData.name.trim()) errs.name = "Full name is required.";
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) errs.email = "Email is required.";
+    else if (!emailRegex.test(formData.email)) errs.email = "Enter a valid email (must contain @).";
+
+    if (formData.phone) {
+      const digits = formData.phone.replace(/\D/g, "");
+      if (digits.length > 0 && digits.length < 10) errs.phone = "Enter a valid 10-digit phone number.";
+    }
+
+    if (!formData.subject) errs.subject = "Subject is required.";
+    if (!formData.message.trim()) errs.message = "Message is required.";
+
+    setFieldErrors(errs);
+    if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
+
     try {
-      // Validate reCAPTCHA (only when shown on allowed domains)
       if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
@@ -250,7 +271,7 @@ export default function ContactPage() {
 
       <Head>
         <title>Contact Us | Hot Thermoplastic Paint Manufacturers | YNM Safety</title>
-        <meta name="description" content="Contact YNM Safety - Hot thermoplastic paint manufacturers. Get quotes for cold plastic paints, metal beam crash barriers, road signages. Call +91-9100009638 or email sales@ynmsafety.com. Export inquiries welcome." />
+        <meta name="description" content="Contact YNM Safety - Hot thermoplastic paint manufacturers. Get quotes for cold plastic paints, metal beam crash barriers, road signages. Call +91-9676575770 or email sales@ynmsafety.com. Export inquiries welcome." />
         <meta name="keywords" content="contact YNM Safety, hot thermoplastic paint quote, cold plastic paint supplier, metal crash barrier manufacturers contact, road safety products quote" />
         <link rel="canonical" href="https://ynmsafety.com/contact" />
         
@@ -258,14 +279,14 @@ export default function ContactPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ynmsafety.com/contact" />
         <meta property="og:title" content="Contact Us | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
-        <meta property="og:description" content="Contact YNM Safety for hot thermoplastic paints, cold plastic paints, metal beam crash barriers, road signages. Call +91-9100009638 or email sales@ynmsafety.com." />
+        <meta property="og:description" content="Contact YNM Safety for hot thermoplastic paints, cold plastic paints, metal beam crash barriers, road signages. Call +91-9676575770 or email sales@ynmsafety.com." />
         <meta property="og:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         <meta property="og:site_name" content="YNM Safety Pan Global Trade Pvt Ltd" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact Us | Hot Thermoplastic Paint Manufacturers | YNM Safety" />
-        <meta name="twitter:description" content="Contact YNM Safety for hot thermoplastic paints, cold plastic paints, metal beam crash barriers. Call +91-9100009638." />
+        <meta name="twitter:description" content="Contact YNM Safety for hot thermoplastic paints, cold plastic paints, metal beam crash barriers. Call +91-9676575770." />
         <meta name="twitter:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
         
         {/* Schema Markup - ContactPage */}
@@ -366,53 +387,26 @@ export default function ContactPage() {
                   
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="name">Full Name *</label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="John Doe"
-                      />
+                      <label htmlFor="name">Full Name <span className="ynm-required">*</span></label>
+                      <input type="text" id="name" name="name" value={formData.name} onChange={(e) => { handleChange(e); if (fieldErrors.name) setFieldErrors((p) => ({ ...p, name: "" })); }} required placeholder="John Doe" className={fieldErrors.name ? "ynm-input-error" : ""} />
+                      {fieldErrors.name && <span className="ynm-field-error">{fieldErrors.name}</span>}
                     </div>
                     <div className="form-group">
-                      <label htmlFor="email">Email Address *</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="john@example.com"
-                      />
+                      <label htmlFor="email">Email Address <span className="ynm-required">*</span></label>
+                      <input type="email" id="email" name="email" value={formData.email} onChange={(e) => { handleChange(e); if (fieldErrors.email) setFieldErrors((p) => ({ ...p, email: "" })); }} required placeholder="john@example.com" className={fieldErrors.email ? "ynm-input-error" : ""} />
+                      {fieldErrors.email && <span className="ynm-field-error">{fieldErrors.email}</span>}
                     </div>
                   </div>
 
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="phone">Phone Number</label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+91 98765 43210"
-                      />
+                      <PhoneInput id="phone" value={formData.phone} onChange={(val) => { setFormData((prev) => ({ ...prev, phone: val })); if (fieldErrors.phone) setFieldErrors((p) => ({ ...p, phone: "" })); }} className={fieldErrors.phone ? "ynm-input-error" : ""} />
+                      {fieldErrors.phone && <span className="ynm-field-error">{fieldErrors.phone}</span>}
                     </div>
                     <div className="form-group">
                       <label htmlFor="company">Company Name</label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        placeholder="Your Company"
-                      />
+                      <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Your Company" />
                     </div>
                   </div>
 

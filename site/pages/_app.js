@@ -6,6 +6,7 @@ import Script from "next/script";
 
 // Lazy-load below-the-fold / non-critical UI to reduce initial JS (PageSpeed: unused JS)
 const Mascot = dynamic(() => import("@/components/Mascot"), { ssr: false });
+const FloatingGetQuote = dynamic(() => import("@/components/FloatingGetQuote"), { ssr: false });
 const FloatingSocialMedia = dynamic(() => import("@/components/FloatingSocialMedia"), { ssr: false });
 const Chatbot = dynamic(() => import("@/components/Chatbot"), { ssr: false });
 
@@ -150,6 +151,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="app-wrapper">
         <Component {...pageProps} />
         <Mascot />
+        <FloatingGetQuote />
         <FloatingSocialMedia />
         <Chatbot />
       </div>

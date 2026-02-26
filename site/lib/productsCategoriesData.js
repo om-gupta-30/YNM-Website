@@ -6610,7 +6610,7 @@ export const productsData = {
                 id: "app4",
                 title: "Industrial Roads",
                 description: "Cantilever signages support safe traffic movement on industrial roads.",
-                image: "/assets/ynm-safety-cantilever-industrial-roads.jpg",
+                image: "/assets/ynm-safety-cantilever-industrial-area.png",
                 details: "Cantilever signages provide clear directional and warning information for heavy vehicles. Their robust construction withstands harsh industrial environments. This improves navigation and reduces accident risks within industrial zones."
               },
               {
@@ -6652,7 +6652,7 @@ export const productsData = {
                 title: "Industrial Roads",
                 short: "Cantilever signages support safe traffic movement on industrial roads.",
                 hover: "Cantilever signages provide clear directional and warning information for heavy vehicles. Their robust construction withstands harsh industrial environments. This improves navigation and reduces accident risks within industrial zones.",
-                image: "/assets/ynm-safety-cantilever-industrial-roads.jpg"
+                image: "/assets/ynm-safety-cantilever-industrial-area.png"
               },
               {
                 title: "Port & Logistics",
@@ -6862,7 +6862,7 @@ export const productsData = {
               "/assets/ynm-safety-cantilever-highways-and-expressways.png",
               "/assets/ynm-safety-cantilever-urban-roads-and-streets.png",
               "/assets/ynm-safety-cantilever-toll-plazas.png",
-              "/assets/ynm-safety-cantilever-industrial-roads.jpg",
+              "/assets/ynm-safety-cantilever-industrial-area.png",
               "/assets/ynm-safety-cantilever-port-logistics.jpg"
             ]
           },
@@ -6872,8 +6872,8 @@ export const productsData = {
             name: "Mandatory Sign Board (Octagonal)",
             shortDesc: "High-visibility octagonal mandatory sign boards manufactured by YNM Safety, a trusted Sign Boards Manufacturer delivering durable and reflective safety signage solutions worldwide.",
             desc: "Premium octagonal mandatory sign boards for road, industrial, and infrastructure projects. High reflective visibility and weather-resistant for optimal safety compliance.",
-            image: "/assets/ynm-safety-osmsb-road-traffic-management.jpg",
-            heroImage: "/assets/ynm-safety-osmsb-road-traffic-management.jpg",
+            image: "/assets/ynm-safety-osmsb-high-speed-highway.png",
+            heroImage: "/assets/ynm-safety-osmsb-high-speed-highway.png",
             specs: ["Octagonal Shape", "High Reflective", "7-10 Years Durability", "MORTH & IRC 67 Compliant"],
             
             // SEO Meta Information
@@ -6990,84 +6990,84 @@ export const productsData = {
             applicationAreas: [
               {
                 id: "app1",
-                title: "Road & Traffic Management",
-                description: "Octagonal mandatory sign boards ensure clear traffic control and regulatory compliance on highways and urban roads.",
-                image: "/assets/ynm-safety-osmsb-road-traffic-management.jpg",
-                details: "Manufactured by leading Sign Boards Manufacturer YNM Safety, these reflective boards provide excellent visibility and durability, helping reduce accidents and improve road discipline."
+                title: "High-Speed Highway",
+                description: "Mandatory Stop octagonal sign board by YNM Safety for high-speed highway entry and exit points.",
+                image: "/assets/ynm-safety-osmsb-high-speed-highway.png",
+                details: "High-visibility octagonal STOP sign by YNM Safety for controlling traffic at high-speed highway junctions and merges."
               },
               {
                 id: "app2",
-                title: "Industrial Facilities",
-                description: "Mandatory sign boards enforce safety instructions within industrial zones.",
-                image: "/assets/ynm-safety-osmsb-industrial-facilities.jpg",
-                details: "YNM Safety manufactures high-visibility sign boards that clearly communicate mandatory PPE and operational safety rules in factories and warehouses."
+                title: "Main Arterial Roads",
+                description: "Mandatory Stop octagonal sign board by YNM Safety for busy main arterial roads and intersections.",
+                image: "/assets/ynm-safety-osmsb-main-arterial-roads.png",
+                details: "Reflective octagonal STOP sign by YNM Safety to manage heavy traffic flow on main arterial roads."
               },
               {
                 id: "app3",
-                title: "Construction Sites",
-                description: "Mandatory sign boards improve safety awareness at construction locations.",
-                image: "/assets/ynm-safety-osmsb-construction-sites.jpg",
-                details: "Designed for outdoor durability, these octagonal sign boards withstand harsh weather while ensuring clear instruction visibility at project sites."
+                title: "Road Junctions",
+                description: "Mandatory Stop octagonal sign board by YNM Safety for controlling traffic at road junctions.",
+                image: "/assets/ynm-safety-osmsb-road-junctions.png",
+                details: "Durable octagonal STOP sign by YNM Safety for improved safety at road junctions and crossings."
               },
               {
                 id: "app4",
-                title: "Commercial & Public Areas",
-                description: "Octagonal sign boards provide guidance and safety instructions in public spaces.",
-                image: "/assets/ynm-safety-osmsb-commercial-public-areas.jpg",
-                details: "YNM Safety sign boards manufacturer solutions enhance compliance in malls, airports, transport hubs, and commercial buildings."
+                title: "Suburban Traffic Intersections",
+                description: "Mandatory Stop octagonal sign board by YNM Safety for suburban traffic intersections and residential roads.",
+                image: "/assets/ynm-safety-osmsb-suburban-traffic-intersections.png",
+                details: "Weather-resistant octagonal STOP sign by YNM Safety to enhance safety at suburban intersections and pedestrian zones."
               },
               {
                 id: "app5",
-                title: "Educational Institutions",
-                description: "Mandatory sign boards improve safety and traffic regulation within campuses.",
-                image: "/assets/ynm-safety-osmsb-educational-institutions.jpg",
-                details: "High-visibility signage ensures safe pedestrian movement and clear vehicle instructions inside school and college premises."
+                title: "Wide Rural Highways",
+                description: "Mandatory Stop octagonal sign board by YNM Safety for wide rural highways and village road crossings.",
+                image: "/assets/ynm-safety-osmsb-wide-rural-highways.png",
+                details: "Long-lasting octagonal STOP sign by YNM Safety for safer crossings on wide rural highways and rural junctions."
               },
               {
                 id: "app6",
-                title: "Residential & Gated Communities",
-                description: "Mandatory sign boards regulate traffic inside residential complexes.",
-                image: "/assets/ynm-safety-osmsb-residential-gated-communities.jpg",
-                details: "Reflective octagonal boards ensure safe driving, speed control, and compliance with community safety rules."
+                title: "Crossover Points",
+                description: "Mandatory Stop octagonal sign board by YNM Safety for crossover points and median openings.",
+                image: "/assets/ynm-safety-osmsb-crossover-points.png",
+                details: "High-visibility octagonal STOP sign by YNM Safety for safe vehicle control at crossover points and U-turn gaps."
               }
             ],
             
             applications: [
               {
-                title: "Road & Traffic Management",
-                short: "Octagonal mandatory sign boards ensure clear traffic control and regulatory compliance on highways and urban roads.",
-                hover: "Manufactured by leading Sign Boards Manufacturer YNM Safety, these reflective boards provide excellent visibility and durability, helping reduce accidents and improve road discipline.",
-                image: "/assets/ynm-safety-osmsb-road-traffic-management.jpg"
+                title: "High-Speed Highway",
+                short: "Mandatory Stop octagonal sign board by YNM Safety for high-speed highway entry and exit points.",
+                hover: "High-visibility octagonal STOP sign by YNM Safety for controlling traffic at high-speed highway junctions and merges.",
+                image: "/assets/ynm-safety-osmsb-high-speed-highway.png"
               },
               {
-                title: "Industrial Facilities",
-                short: "Mandatory sign boards enforce safety instructions within industrial zones.",
-                hover: "YNM Safety manufactures high-visibility sign boards that clearly communicate mandatory PPE and operational safety rules in factories and warehouses.",
-                image: "/assets/ynm-safety-osmsb-industrial-facilities.jpg"
+                title: "Main Arterial Roads",
+                short: "Mandatory Stop octagonal sign board by YNM Safety for busy main arterial roads and intersections.",
+                hover: "Reflective octagonal STOP sign by YNM Safety to manage heavy traffic flow on main arterial roads.",
+                image: "/assets/ynm-safety-osmsb-main-arterial-roads.png"
               },
               {
-                title: "Construction Sites",
-                short: "Mandatory sign boards improve safety awareness at construction locations.",
-                hover: "Designed for outdoor durability, these octagonal sign boards withstand harsh weather while ensuring clear instruction visibility at project sites.",
-                image: "/assets/ynm-safety-osmsb-construction-sites.jpg"
+                title: "Road Junctions",
+                short: "Mandatory Stop octagonal sign board by YNM Safety for controlling traffic at road junctions.",
+                hover: "Durable octagonal STOP sign by YNM Safety for improved safety at road junctions and crossings.",
+                image: "/assets/ynm-safety-osmsb-road-junctions.png"
               },
               {
-                title: "Commercial & Public Areas",
-                short: "Octagonal sign boards provide guidance and safety instructions in public spaces.",
-                hover: "YNM Safety sign boards manufacturer solutions enhance compliance in malls, airports, transport hubs, and commercial buildings.",
-                image: "/assets/ynm-safety-osmsb-commercial-public-areas.jpg"
+                title: "Suburban Traffic Intersections",
+                short: "Mandatory Stop octagonal sign board by YNM Safety for suburban traffic intersections and residential roads.",
+                hover: "Weather-resistant octagonal STOP sign by YNM Safety to enhance safety at suburban intersections and pedestrian zones.",
+                image: "/assets/ynm-safety-osmsb-suburban-traffic-intersections.png"
               },
               {
-                title: "Educational Institutions",
-                short: "Mandatory sign boards improve safety and traffic regulation within campuses.",
-                hover: "High-visibility signage ensures safe pedestrian movement and clear vehicle instructions inside school and college premises.",
-                image: "/assets/ynm-safety-osmsb-educational-institutions.jpg"
+                title: "Wide Rural Highways",
+                short: "Mandatory Stop octagonal sign board by YNM Safety for wide rural highways and village road crossings.",
+                hover: "Long-lasting octagonal STOP sign by YNM Safety for safer crossings on wide rural highways and rural junctions.",
+                image: "/assets/ynm-safety-osmsb-wide-rural-highways.png"
               },
               {
-                title: "Residential & Gated Communities",
-                short: "Mandatory sign boards regulate traffic inside residential complexes.",
-                hover: "Reflective octagonal boards ensure safe driving, speed control, and compliance with community safety rules.",
-                image: "/assets/ynm-safety-osmsb-residential-gated-communities.jpg"
+                title: "Crossover Points",
+                short: "Mandatory Stop octagonal sign board by YNM Safety for crossover points and median openings.",
+                hover: "High-visibility octagonal STOP sign by YNM Safety for safe vehicle control at crossover points and U-turn gaps.",
+                image: "/assets/ynm-safety-osmsb-crossover-points.png"
               }
             ],
             
@@ -7245,12 +7245,12 @@ export const productsData = {
             
             // Gallery Images
             gallery: [
-              "/assets/ynm-safety-osmsb-road-traffic-management.jpg",
-              "/assets/ynm-safety-osmsb-industrial-facilities.jpg",
-              "/assets/ynm-safety-osmsb-construction-sites.jpg",
-              "/assets/ynm-safety-osmsb-commercial-public-areas.jpg",
-              "/assets/ynm-safety-osmsb-educational-institutions.jpg",
-              "/assets/ynm-safety-osmsb-residential-gated-communities.jpg"
+              "/assets/ynm-safety-osmsb-high-speed-highway.png",
+              "/assets/ynm-safety-osmsb-main-arterial-roads.png",
+              "/assets/ynm-safety-osmsb-road-junctions.png",
+              "/assets/ynm-safety-osmsb-suburban-traffic-intersections.png",
+              "/assets/ynm-safety-osmsb-wide-rural-highways.png",
+              "/assets/ynm-safety-osmsb-crossover-points.png"
             ]
           },
           {
@@ -7259,8 +7259,8 @@ export const productsData = {
             name: "Mandatory Sign Board (Circular)",
             shortDesc: "High-visibility circular mandatory sign boards manufactured by YNM Safety, trusted Signages Manufacturers delivering durable and reflective traffic and industrial safety signage solutions globally.",
             desc: "Premium circular mandatory sign boards for roads, industries, and infrastructure projects. High reflective visibility and weather-resistant signage solutions.",
-            image: "/assets/ynm-safety-csmsb-construction-sites.jpg",
-            heroImage: "/assets/ynm-safety-csmsb-roads-highways.jpg",
+            image: "/assets/ynm-safety-csmsb-no-uturn-expressway-highways.jpg",
+            heroImage: "/assets/ynm-safety-csmsb-no-uturn-expressway-highways.jpg",
             specs: ["High reflectivity", "Weather resistant", "MORTH & IRC 67 compliant", "7-10 years durability"],
             
             // SEO Meta Information
@@ -7377,84 +7377,84 @@ export const productsData = {
             applicationAreas: [
               {
                 id: "app1",
-                title: "Construction Sites",
-                description: "Circular mandatory sign boards ensure safety awareness at construction sites.",
-                image: "/assets/ynm-safety-csmsb-construction-sites.jpg",
-                details: "Manufactured by leading YNM Safety signages manufacturers, these boards provide clear safety instructions and withstand harsh outdoor conditions."
+                title: "No U-Turn Sign on Expressway & Highways",
+                description: "Prohibits U-turns on expressways and high-speed highways to prevent accidents and ensure smooth traffic flow.",
+                image: "/assets/ynm-safety-csmsb-no-uturn-expressway-highways.jpg",
+                details: "This retro reflective No U-Turn sign board is installed on expressways and national highways to restrict median crossings, reduce collision risks, and ensure safe high-speed vehicle movement as per IRC traffic safety norms."
               },
               {
                 id: "app2",
-                title: "Industrial & Manufacturing Units",
-                description: "Mandatory circular sign boards enforce safety rules in industrial facilities.",
-                image: "/assets/ynm-safety-csmsb-electrical-power-plants.jpg",
-                details: "As trusted Signages Manufacturers, YNM Safety produces durable boards indicating PPE requirements, restricted areas, and operational instructions."
+                title: "No Right Turn Sign on One-Way Streets",
+                description: "Restricts right turns on one-way streets to maintain safe and controlled traffic movement.",
+                image: "/assets/ynm-safety-csmsb-no-right-turn-one-way-streets.png",
+                details: "Used at urban intersections and one-way roads, this circular regulatory sign prevents wrong turns, reduces congestion, and enhances pedestrian and vehicle safety in commercial and residential areas."
               },
               {
                 id: "app3",
-                title: "Roads & Highways",
-                description: "Circular sign boards regulate traffic flow and mandatory instructions on roads.",
-                image: "/assets/ynm-safety-csmsb-roads-highways.jpg",
-                details: "High-reflective traffic sign boards manufactured by YNM Safety ensure visibility during day and night driving conditions."
+                title: "No Parking Sign on Industrial Premises",
+                description: "Prevents unauthorized parking inside industrial premises and restricted zones.",
+                image: "/assets/ynm-safety-csmsb-no-parking-industrial-premises.png",
+                details: "Installed in factories, warehouses, and logistic hubs, this high-durability No Parking sign board ensures clear pathways for emergency vehicles, loading operations, and smooth internal traffic circulation."
               },
               {
                 id: "app4",
-                title: "Commercial Buildings & Offices",
-                description: "Mandatory signages improve safety compliance in commercial premises.",
-                image: "/assets/ynm-safety-csmsb-commercial-buildings-offices.jpg",
-                details: "YNM circular sign boards enhance awareness of entry rules, safety protocols, and restricted access zones."
+                title: "No Left Turn Sign on One-Way Roads",
+                description: "Prohibits left turns on designated one-way roads for safe traffic control.",
+                image: "/assets/ynm-safety-csmsb-no-left-turn-one-way-roads.png",
+                details: "Placed at busy junctions and restricted turns, this retro reflective circular sign board controls directional flow, minimizes traffic conflicts, and ensures compliance with urban traffic regulations."
               },
               {
                 id: "app5",
-                title: "Hospitals & Healthcare Facilities",
-                description: "Circular sign boards guide safety instructions in healthcare environments.",
-                image: "/assets/ynm-safety-csmsb-hospitals-healthcare.jpg",
-                details: "Durable and clear signage ensures compliance with safety and operational guidelines within medical facilities."
+                title: "No Two-Wheeler Entry Sign on Outer Ring Roads (ORR)",
+                description: "Restricts entry of two-wheelers on high-speed outer ring roads and express corridors.",
+                image: "/assets/ynm-safety-csmsb-no-two-wheeler-entry-orr.png",
+                details: "Installed on ORR and expressways, this regulatory traffic sign prevents two-wheeler access to high-speed lanes, improving road safety and reducing accident risks in heavy vehicle corridors."
               },
               {
                 id: "app6",
-                title: "Electrical & Power Plants",
-                description: "Mandatory circular sign boards enhance safety in power generation facilities.",
-                image: "/assets/ynm-safety-csmsb-electrical-power-plants.jpg",
-                details: "Reflective and durable signages from YNM Safety manufacturers ensure high visibility in hazardous environments."
+                title: "No Heavy Vehicles on City Centers",
+                description: "Restricts entry of heavy vehicles in city centers and congested areas.",
+                image: "/assets/ynm-safety-csmsb-no-heavy-vehicles-city-centers.png",
+                details: "Used in urban zones, market areas, and narrow roads, this mandatory circular sign board limits truck and heavy vehicle entry to reduce congestion, protect infrastructure, and enhance pedestrian safety."
               }
             ],
             
             applications: [
               {
-                title: "Construction Sites",
-                short: "Circular mandatory sign boards ensure safety awareness at construction sites.",
-                hover: "Manufactured by leading YNM Safety signages manufacturers, these boards provide clear safety instructions and withstand harsh outdoor conditions.",
-                image: "/assets/ynm-safety-csmsb-construction-sites.jpg"
+                title: "No U-Turn Sign on Expressway & Highways",
+                short: "Prohibits U-turns on expressways and high-speed highways to prevent accidents and ensure smooth traffic flow.",
+                hover: "This retro reflective No U-Turn sign board is installed on expressways and national highways to restrict median crossings, reduce collision risks, and ensure safe high-speed vehicle movement as per IRC traffic safety norms.",
+                image: "/assets/ynm-safety-csmsb-no-uturn-expressway-highways.jpg"
               },
               {
-                title: "Industrial & Manufacturing Units",
-                short: "Mandatory circular sign boards enforce safety rules in industrial facilities.",
-                hover: "As trusted Signages Manufacturers, YNM Safety produces durable boards indicating PPE requirements, restricted areas, and operational instructions.",
-                image: "/assets/ynm-safety-csmsb-electrical-power-plants.jpg"
+                title: "No Right Turn Sign on One-Way Streets",
+                short: "Restricts right turns on one-way streets to maintain safe and controlled traffic movement.",
+                hover: "Used at urban intersections and one-way roads, this circular regulatory sign prevents wrong turns, reduces congestion, and enhances pedestrian and vehicle safety in commercial and residential areas.",
+                image: "/assets/ynm-safety-csmsb-no-right-turn-one-way-streets.png"
               },
               {
-                title: "Roads & Highways",
-                short: "Circular sign boards regulate traffic flow and mandatory instructions on roads.",
-                hover: "High-reflective traffic sign boards manufactured by YNM Safety ensure visibility during day and night driving conditions.",
-                image: "/assets/ynm-safety-csmsb-roads-highways.jpg"
+                title: "No Parking Sign on Industrial Premises",
+                short: "Prevents unauthorized parking inside industrial premises and restricted zones.",
+                hover: "Installed in factories, warehouses, and logistic hubs, this high-durability No Parking sign board ensures clear pathways for emergency vehicles, loading operations, and smooth internal traffic circulation.",
+                image: "/assets/ynm-safety-csmsb-no-parking-industrial-premises.png"
               },
               {
-                title: "Commercial Buildings & Offices",
-                short: "Mandatory signages improve safety compliance in commercial premises.",
-                hover: "YNM circular sign boards enhance awareness of entry rules, safety protocols, and restricted access zones.",
-                image: "/assets/ynm-safety-csmsb-commercial-buildings-offices.jpg"
+                title: "No Left Turn Sign on One-Way Roads",
+                short: "Prohibits left turns on designated one-way roads for safe traffic control.",
+                hover: "Placed at busy junctions and restricted turns, this retro reflective circular sign board controls directional flow, minimizes traffic conflicts, and ensures compliance with urban traffic regulations.",
+                image: "/assets/ynm-safety-csmsb-no-left-turn-one-way-roads.png"
               },
               {
-                title: "Hospitals & Healthcare Facilities",
-                short: "Circular sign boards guide safety instructions in healthcare environments.",
-                hover: "Durable and clear signage ensures compliance with safety and operational guidelines within medical facilities.",
-                image: "/assets/ynm-safety-csmsb-hospitals-healthcare.jpg"
+                title: "No Two-Wheeler Entry Sign on Outer Ring Roads (ORR)",
+                short: "Restricts entry of two-wheelers on high-speed outer ring roads and express corridors.",
+                hover: "Installed on ORR and expressways, this regulatory traffic sign prevents two-wheeler access to high-speed lanes, improving road safety and reducing accident risks in heavy vehicle corridors.",
+                image: "/assets/ynm-safety-csmsb-no-two-wheeler-entry-orr.png"
               },
               {
-                title: "Electrical & Power Plants",
-                short: "Mandatory circular sign boards enhance safety in power generation facilities.",
-                hover: "Reflective and durable signages from YNM Safety manufacturers ensure high visibility in hazardous environments.",
-                image: "/assets/ynm-safety-csmsb-electrical-power-plants.jpg"
+                title: "No Heavy Vehicles on City Centers",
+                short: "Restricts entry of heavy vehicles in city centers and congested areas.",
+                hover: "Used in urban zones, market areas, and narrow roads, this mandatory circular sign board limits truck and heavy vehicle entry to reduce congestion, protect infrastructure, and enhance pedestrian safety.",
+                image: "/assets/ynm-safety-csmsb-no-heavy-vehicles-city-centers.png"
               }
             ],
             
@@ -7632,17 +7632,18 @@ export const productsData = {
             
             // Gallery Images
             gallery: [
-              "/assets/ynm-safety-csmsb-construction-sites.jpg",
-              "/assets/ynm-safety-csmsb-roads-highways.jpg",
-              "/assets/ynm-safety-csmsb-commercial-buildings-offices.jpg",
-              "/assets/ynm-safety-csmsb-hospitals-healthcare.jpg",
-              "/assets/ynm-safety-csmsb-electrical-power-plants.jpg"
+              "/assets/ynm-safety-csmsb-no-uturn-expressway-highways.jpg",
+              "/assets/ynm-safety-csmsb-no-right-turn-one-way-streets.png",
+              "/assets/ynm-safety-csmsb-no-parking-industrial-premises.png",
+              "/assets/ynm-safety-csmsb-no-left-turn-one-way-roads.png",
+              "/assets/ynm-safety-csmsb-no-two-wheeler-entry-orr.png",
+              "/assets/ynm-safety-csmsb-no-heavy-vehicles-city-centers.png"
             ]
           },
           {
             id: "sg9",
             slug: "cautionary-sign-boards-triangle-manufacturers",
-            name: "Cautionary Sign Boards (Triangle)",
+            name: "Cautionary Sign Boards",
             shortDesc: "High-visibility triangular cautionary sign boards manufactured by YNM Safety, trusted Signages Manufacturers delivering durable and reflective warning signage solutions for global road and infrastructure projects.",
             desc: "Premium triangular cautionary sign boards for roads, highways, and industrial projects. High reflective visibility and weather-resistant warning signage solutions.",
             image: "/assets/ynm-safety-tscsb-roads-highways.jpg",
@@ -7772,38 +7773,38 @@ export const productsData = {
               },
               {
                 id: "app2",
-                title: "Construction Sites",
-                description: "Cautionary sign boards improve awareness of construction risks.",
-                image: "/assets/ynm-safety-tscsb-construction-sites.jpg",
-                details: "Durable triangular warning boards withstand harsh site conditions while clearly communicating hazard alerts."
+                title: "Right Curve Ahead",
+                description: "Right Curve Ahead cautionary sign board by YNM Safety for alerting drivers about sharp right turns on roads and highways.",
+                image: "/assets/ynm-safety-tscsb-right-curve-ahead.png",
+                details: "Durable Right Curve Ahead traffic sign by YNM Safety to improve road safety on highways, hill roads, and accident-prone curves."
               },
               {
                 id: "app3",
-                title: "Industrial & Manufacturing Areas",
-                description: "Warning sign boards indicate danger zones within industrial facilities.",
-                image: "/assets/ynm-safety-tscsb-industrial-manufacturing.jpg",
-                details: "As professional Signages Manufacturers, YNM Safety provides long-lasting cautionary signage solutions for factories and heavy machinery areas."
+                title: "Left Curve Ahead",
+                description: "Left Curve Ahead warning sign by YNM Safety for safer driving on curved roads and winding highways.",
+                image: "/assets/ynm-safety-tscsb-left-curve-ahead.png",
+                details: "High-visibility Left Curve Ahead sign from YNM Safety, ideal for village roads, forest routes, and sharp bends."
               },
               {
                 id: "app4",
-                title: "Educational Institutions",
-                description: "Triangular sign boards enhance safety near school and campus zones.",
-                image: "/assets/ynm-safety-tscsb-educational-institutions.jpg",
-                details: "High-visibility cautionary signages alert drivers to pedestrian crossings and speed restrictions."
+                title: "Pedestrian Crossing Ahead",
+                description: "Pedestrian Crossing Ahead cautionary sign by YNM Safety for schools, residential areas, and busy streets.",
+                image: "/assets/ynm-safety-tscsb-pedestrian-crossing-ahead.png",
+                details: "Reflective Pedestrian Crossing Ahead sign by YNM Safety to enhance safety near schools, parks, and crosswalk zones."
               },
               {
                 id: "app5",
-                title: "Residential & Gated Communities",
-                description: "Cautionary sign boards regulate internal traffic safety.",
-                image: "/assets/ynm-safety-tscsb-residential-gated-communities.jpg",
-                details: "YNM Safety triangular sign boards reduce accident risks and promote safe driving practices."
+                title: "Accident-Prone Area",
+                description: "Accident-Prone Area warning sign by YNM Safety to alert drivers in high-risk traffic zones.",
+                image: "/assets/ynm-safety-tscsb-accident-prone-area.png",
+                details: "Heavy-duty Accident-Prone Area sign from YNM Safety for highways, junctions, and blind curve locations."
               },
               {
                 id: "app6",
-                title: "Commercial & Public Areas",
-                description: "Warning sign boards improve public safety awareness.",
-                image: "/assets/ynm-safety-tscsb-commercial-public-areas.jpg",
-                details: "Reflective cautionary signage ensures clear hazard communication in malls, parking zones, and public infrastructure areas."
+                title: "U-Turn Ahead",
+                description: "U-Turn Ahead cautionary sign board by YNM Safety for sharp turns on highways and hill roads.",
+                image: "/assets/ynm-safety-tscsb-uturn-ahead.png",
+                details: "Weather-resistant U-Turn Ahead traffic sign by YNM Safety for ghat roads, mountain routes, and dangerous bends."
               }
             ],
             
@@ -7815,34 +7816,34 @@ export const productsData = {
                 image: "/assets/ynm-safety-tscsb-roads-highways.jpg"
               },
               {
-                title: "Construction Sites",
-                short: "Cautionary sign boards improve awareness of construction risks.",
-                hover: "Durable triangular warning boards withstand harsh site conditions while clearly communicating hazard alerts.",
-                image: "/assets/ynm-safety-tscsb-construction-sites.jpg"
+                title: "Right Curve Ahead",
+                short: "Right Curve Ahead cautionary sign board by YNM Safety for alerting drivers about sharp right turns on roads and highways.",
+                hover: "Durable Right Curve Ahead traffic sign by YNM Safety to improve road safety on highways, hill roads, and accident-prone curves.",
+                image: "/assets/ynm-safety-tscsb-right-curve-ahead.png"
               },
               {
-                title: "Industrial & Manufacturing Areas",
-                short: "Warning sign boards indicate danger zones within industrial facilities.",
-                hover: "As professional Signages Manufacturers, YNM Safety provides long-lasting cautionary signage solutions for factories and heavy machinery areas.",
-                image: "/assets/ynm-safety-tscsb-industrial-manufacturing.jpg"
+                title: "Left Curve Ahead",
+                short: "Left Curve Ahead warning sign by YNM Safety for safer driving on curved roads and winding highways.",
+                hover: "High-visibility Left Curve Ahead sign from YNM Safety, ideal for village roads, forest routes, and sharp bends.",
+                image: "/assets/ynm-safety-tscsb-left-curve-ahead.png"
               },
               {
-                title: "Educational Institutions",
-                short: "Triangular sign boards enhance safety near school and campus zones.",
-                hover: "High-visibility cautionary signages alert drivers to pedestrian crossings and speed restrictions.",
-                image: "/assets/ynm-safety-tscsb-educational-institutions.jpg"
+                title: "Pedestrian Crossing Ahead",
+                short: "Pedestrian Crossing Ahead cautionary sign by YNM Safety for schools, residential areas, and busy streets.",
+                hover: "Reflective Pedestrian Crossing Ahead sign by YNM Safety to enhance safety near schools, parks, and crosswalk zones.",
+                image: "/assets/ynm-safety-tscsb-pedestrian-crossing-ahead.png"
               },
               {
-                title: "Residential & Gated Communities",
-                short: "Cautionary sign boards regulate internal traffic safety.",
-                hover: "YNM Safety triangular sign boards reduce accident risks and promote safe driving practices.",
-                image: "/assets/ynm-safety-tscsb-residential-gated-communities.jpg"
+                title: "Accident-Prone Area",
+                short: "Accident-Prone Area warning sign by YNM Safety to alert drivers in high-risk traffic zones.",
+                hover: "Heavy-duty Accident-Prone Area sign from YNM Safety for highways, junctions, and blind curve locations.",
+                image: "/assets/ynm-safety-tscsb-accident-prone-area.png"
               },
               {
-                title: "Commercial & Public Areas",
-                short: "Warning sign boards improve public safety awareness.",
-                hover: "Reflective cautionary signage ensures clear hazard communication in malls, parking zones, and public infrastructure areas.",
-                image: "/assets/ynm-safety-tscsb-commercial-public-areas.jpg"
+                title: "U-Turn Ahead",
+                short: "U-Turn Ahead cautionary sign board by YNM Safety for sharp turns on highways and hill roads.",
+                hover: "Weather-resistant U-Turn Ahead traffic sign by YNM Safety for ghat roads, mountain routes, and dangerous bends.",
+                image: "/assets/ynm-safety-tscsb-uturn-ahead.png"
               }
             ],
             
@@ -8032,11 +8033,11 @@ export const productsData = {
             // Gallery Images
             gallery: [
               "/assets/ynm-safety-tscsb-roads-highways.jpg",
-              "/assets/ynm-safety-tscsb-construction-sites.jpg",
-              "/assets/ynm-safety-tscsb-industrial-manufacturing.jpg",
-              "/assets/ynm-safety-tscsb-educational-institutions.jpg",
-              "/assets/ynm-safety-tscsb-residential-gated-communities.jpg",
-              "/assets/ynm-safety-tscsb-commercial-public-areas.jpg"
+              "/assets/ynm-safety-tscsb-right-curve-ahead.png",
+              "/assets/ynm-safety-tscsb-left-curve-ahead.png",
+              "/assets/ynm-safety-tscsb-pedestrian-crossing-ahead.png",
+              "/assets/ynm-safety-tscsb-accident-prone-area.png",
+              "/assets/ynm-safety-tscsb-uturn-ahead.png"
             ]
           },
           {
@@ -8045,8 +8046,8 @@ export const productsData = {
             name: "Canopy",
             shortDesc: "High-strength and durable canopy structures manufactured by YNM Safety, trusted Signages Manufacturers and canopy solution providers for commercial, retail, and infrastructure projects worldwide.",
             desc: "Premium canopy structures for fuel stations, retail outlets, commercial complexes, hotels, and industrial facilities. Weather-resistant and durable canopy fabrication solutions.",
-            image: "/assets/ynm-safety-canopy-fuel-stations.webp",
-            heroImage: "/assets/ynm-safety-canopy-fuel-stations.webp",
+            image: "/assets/ynm-safety-canopy-toll-plazas.jpg",
+            heroImage: "/assets/ynm-safety-canopy-toll-plazas.jpg",
             specs: ["High structural strength", "Weather resistant", "Custom fabrication", "MORTH & IRC 67 compliant"],
             
             // SEO Meta Information
@@ -8165,84 +8166,84 @@ export const productsData = {
             applicationAreas: [
               {
                 id: "app1",
-                title: "Retail Stores & Showrooms",
-                description: "Canopy structures enhance storefront appearance and customer protection.",
-                image: "/assets/ynm-safety-canopy-retail-stores-showrooms.webp",
-                details: "YNM Safety canopy systems provide durable and visually appealing exterior coverage for retail branding and customer comfort."
+                title: "Toll Plazas",
+                description: "Canopy signages by YNM Safety for clear lane guidance and branding at toll plazas.",
+                image: "/assets/ynm-safety-canopy-toll-plazas.jpg",
+                details: "High-visibility canopy sign boards by YNM Safety for toll plaza lane identification, FASTag lanes, and smooth traffic flow."
               },
               {
                 id: "app2",
-                title: "Fuel Stations",
-                description: "Canopy structures provide coverage for fueling areas.",
-                image: "/assets/ynm-safety-canopy-fuel-stations.webp",
-                details: "Strong and weather-resistant canopy systems support branding and operational safety in high-traffic fuel station environments."
+                title: "Highway Toll Booths",
+                description: "Canopy signages by YNM Safety for highway toll booths and entry lanes.",
+                image: "/assets/ynm-safety-canopy-highway-toll-booths.jpg",
+                details: "Durable toll booth canopy signages by YNM Safety for FASTag, ETC, and cash lane display on highways."
               },
               {
                 id: "app3",
-                title: "Hotels & Restaurants",
-                description: "Canopies enhance outdoor seating and entrance areas.",
-                image: "/assets/ynm-safety-canopy-hotels-restaurants.webp",
-                details: "YNM canopy solutions combine structural strength with aesthetic appeal for hospitality spaces."
+                title: "Expressway Toll Gates",
+                description: "Canopy signages by YNM Safety for expressway toll gates and multi-lane toll points.",
+                image: "/assets/ynm-safety-canopy-expressway-toll-gates.jpg",
+                details: "Weather-resistant canopy sign boards by YNM Safety for expressway toll gate lane marking and vehicle guidance."
               },
               {
                 id: "app4",
-                title: "Hospitals & Healthcare Facilities",
-                description: "Canopy structures protect patient entry points.",
-                image: "/assets/ynm-safety-canopy-hospitals-healthcare.webp",
-                details: "Durable canopy fabrication ensures reliable coverage in healthcare environments."
+                title: "FASTag / ETC Lane Canopies",
+                description: "Canopy signages by YNM Safety for FASTag and ETC lanes at toll plazas.",
+                image: "/assets/ynm-safety-canopy-fastag-etc-lane-canopies.jpg",
+                details: "Reflective FASTag canopy sign boards by YNM Safety for clear electronic toll collection lane identification."
               },
               {
                 id: "app5",
-                title: "Industrial Facilities",
-                description: "Canopies provide weather protection for loading and operational zones.",
-                image: "/assets/ynm-safety-canopy-industrial-facilities.webp",
-                details: "YNM Safety canopy manufacturers deliver heavy-duty structural solutions for industrial infrastructure."
+                title: "Multi-Lane Toll Collection Points",
+                description: "Canopy signages by YNM Safety for multi-lane toll collection points and vehicle classification lanes.",
+                image: "/assets/ynm-safety-canopy-multi-lane-toll-collection-point.jpg",
+                details: "Custom canopy sign boards by YNM Safety for organized traffic movement at multi-lane toll collection areas."
               },
               {
                 id: "app6",
-                title: "Educational Institutions",
-                description: "Canopies improve campus infrastructure and entry coverage.",
-                image: "/assets/ynm-safety-canopy-educational-institutions.webp",
-                details: "High-quality canopy structures ensure safety and protection in school and college premises."
+                title: "National Highway Entry / Exit Toll Points",
+                description: "Canopy signages by YNM Safety for national highway entry and exit toll points.",
+                image: "/assets/ynm-safety-canopy-national-highway-entry-exit-toll-points.jpg",
+                details: "Heavy-duty canopy sign boards by YNM Safety for highway toll gates, lane direction, and traffic control."
               }
             ],
             
             applications: [
               {
-                title: "Retail Stores & Showrooms",
-                short: "Canopy structures enhance storefront appearance and customer protection.",
-                hover: "YNM Safety canopy systems provide durable and visually appealing exterior coverage for retail branding and customer comfort.",
-                image: "/assets/ynm-safety-canopy-retail-stores-showrooms.webp"
+                title: "Toll Plazas",
+                short: "Canopy signages by YNM Safety for clear lane guidance and branding at toll plazas.",
+                hover: "High-visibility canopy sign boards by YNM Safety for toll plaza lane identification, FASTag lanes, and smooth traffic flow.",
+                image: "/assets/ynm-safety-canopy-toll-plazas.jpg"
               },
               {
-                title: "Fuel Stations",
-                short: "Canopy structures provide coverage for fueling areas.",
-                hover: "Strong and weather-resistant canopy systems support branding and operational safety in high-traffic fuel station environments.",
-                image: "/assets/ynm-safety-canopy-fuel-stations.webp"
+                title: "Highway Toll Booths",
+                short: "Canopy signages by YNM Safety for highway toll booths and entry lanes.",
+                hover: "Durable toll booth canopy signages by YNM Safety for FASTag, ETC, and cash lane display on highways.",
+                image: "/assets/ynm-safety-canopy-highway-toll-booths.jpg"
               },
               {
-                title: "Hotels & Restaurants",
-                short: "Canopies enhance outdoor seating and entrance areas.",
-                hover: "YNM canopy solutions combine structural strength with aesthetic appeal for hospitality spaces.",
-                image: "/assets/ynm-safety-canopy-hotels-restaurants.webp"
+                title: "Expressway Toll Gates",
+                short: "Canopy signages by YNM Safety for expressway toll gates and multi-lane toll points.",
+                hover: "Weather-resistant canopy sign boards by YNM Safety for expressway toll gate lane marking and vehicle guidance.",
+                image: "/assets/ynm-safety-canopy-expressway-toll-gates.jpg"
               },
               {
-                title: "Hospitals & Healthcare Facilities",
-                short: "Canopy structures protect patient entry points.",
-                hover: "Durable canopy fabrication ensures reliable coverage in healthcare environments.",
-                image: "/assets/ynm-safety-canopy-hospitals-healthcare.webp"
+                title: "FASTag / ETC Lane Canopies",
+                short: "Canopy signages by YNM Safety for FASTag and ETC lanes at toll plazas.",
+                hover: "Reflective FASTag canopy sign boards by YNM Safety for clear electronic toll collection lane identification.",
+                image: "/assets/ynm-safety-canopy-fastag-etc-lane-canopies.jpg"
               },
               {
-                title: "Industrial Facilities",
-                short: "Canopies provide weather protection for loading and operational zones.",
-                hover: "YNM Safety canopy manufacturers deliver heavy-duty structural solutions for industrial infrastructure.",
-                image: "/assets/ynm-safety-canopy-industrial-facilities.webp"
+                title: "Multi-Lane Toll Collection Points",
+                short: "Canopy signages by YNM Safety for multi-lane toll collection points and vehicle classification lanes.",
+                hover: "Custom canopy sign boards by YNM Safety for organized traffic movement at multi-lane toll collection areas.",
+                image: "/assets/ynm-safety-canopy-multi-lane-toll-collection-point.jpg"
               },
               {
-                title: "Educational Institutions",
-                short: "Canopies improve campus infrastructure and entry coverage.",
-                hover: "High-quality canopy structures ensure safety and protection in school and college premises.",
-                image: "/assets/ynm-safety-canopy-educational-institutions.webp"
+                title: "National Highway Entry / Exit Toll Points",
+                short: "Canopy signages by YNM Safety for national highway entry and exit toll points.",
+                hover: "Heavy-duty canopy sign boards by YNM Safety for highway toll gates, lane direction, and traffic control.",
+                image: "/assets/ynm-safety-canopy-national-highway-entry-exit-toll-points.jpg"
               }
             ],
             
@@ -8422,12 +8423,12 @@ export const productsData = {
             
             // Gallery Images
             gallery: [
-              "/assets/ynm-safety-canopy-fuel-stations.webp",
-              "/assets/ynm-safety-canopy-retail-stores-showrooms.webp",
-              "/assets/ynm-safety-canopy-hotels-restaurants.webp",
-              "/assets/ynm-safety-canopy-hospitals-healthcare.webp",
-              "/assets/ynm-safety-canopy-industrial-facilities.webp",
-              "/assets/ynm-safety-canopy-educational-institutions.webp"
+              "/assets/ynm-safety-canopy-toll-plazas.jpg",
+              "/assets/ynm-safety-canopy-highway-toll-booths.jpg",
+              "/assets/ynm-safety-canopy-expressway-toll-gates.jpg",
+              "/assets/ynm-safety-canopy-fastag-etc-lane-canopies.jpg",
+              "/assets/ynm-safety-canopy-multi-lane-toll-collection-point.jpg",
+              "/assets/ynm-safety-canopy-national-highway-entry-exit-toll-points.jpg"
             ]
           },
           {

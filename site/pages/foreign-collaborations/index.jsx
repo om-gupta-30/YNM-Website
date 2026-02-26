@@ -3,9 +3,12 @@
 import { useState, useEffect, useRef } from "react";
 import { isAllowedDomain } from "@/lib/recaptchaUtils";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
+
+const PlacesAutocomplete = dynamic(() => import("@/components/PlacesAutocomplete"), { ssr: false });
 
 const collaborationAreas = [
   {
@@ -112,6 +115,7 @@ export default function ForeignCollaborationsPage() {
   const [formData, setFormData] = useState({
     companyName: "", country: "", contactName: "", email: "", collaborationType: "", message: ""
   });
+  const [fieldErrors, setFieldErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -209,9 +213,19 @@ export default function ForeignCollaborationsPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
+    const errs = {};
+
+    if (!formData.companyName.trim()) errs.companyName = "Company name is required.";
+    if (!formData.country.trim()) errs.country = "Country is required.";
+    if (!formData.contactName.trim()) errs.contactName = "Contact person is required.";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) errs.email = "Email is required.";
+    else if (!emailRegex.test(formData.email)) errs.email = "Enter a valid email (must contain @).";
+
+    setFieldErrors(errs);
+    if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
 
     try {
-      // Validate reCAPTCHA (only when shown on allowed domains)
       if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
@@ -591,19 +605,23 @@ export default function ForeignCollaborationsPage() {
                   <div className="fc-form-grid">
                     <div className="fc-field">
                       <label>Company Name <span>*</span></label>
-                      <input type="text" name="companyName" value={formData.companyName} onChange={handleChange} required placeholder="Your company name" />
+                      <input type="text" name="companyName" value={formData.companyName} onChange={(e) => { handleChange(e); if (fieldErrors.companyName) setFieldErrors((p) => ({ ...p, companyName: "" })); }} required placeholder="Your company name" className={fieldErrors.companyName ? "ynm-input-error" : ""} />
+                      {fieldErrors.companyName && <span className="ynm-field-error">{fieldErrors.companyName}</span>}
                     </div>
                     <div className="fc-field">
                       <label>Country <span>*</span></label>
-                      <input type="text" name="country" value={formData.country} onChange={handleChange} required placeholder="Country of operation" />
+                      <PlacesAutocomplete type="country" value={formData.country} onChange={(val) => { setFormData((prev) => ({ ...prev, country: val })); if (fieldErrors.country) setFieldErrors((p) => ({ ...p, country: "" })); }} required placeholder="Start typing country..." className={fieldErrors.country ? "ynm-input-error" : ""} />
+                      {fieldErrors.country && <span className="ynm-field-error">{fieldErrors.country}</span>}
                     </div>
                     <div className="fc-field">
                       <label>Contact Person <span>*</span></label>
-                      <input type="text" name="contactName" value={formData.contactName} onChange={handleChange} required placeholder="Full name" />
+                      <input type="text" name="contactName" value={formData.contactName} onChange={(e) => { handleChange(e); if (fieldErrors.contactName) setFieldErrors((p) => ({ ...p, contactName: "" })); }} required placeholder="Full name" className={fieldErrors.contactName ? "ynm-input-error" : ""} />
+                      {fieldErrors.contactName && <span className="ynm-field-error">{fieldErrors.contactName}</span>}
                     </div>
                     <div className="fc-field">
                       <label>Email <span>*</span></label>
-                      <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Business email" />
+                      <input type="email" name="email" value={formData.email} onChange={(e) => { handleChange(e); if (fieldErrors.email) setFieldErrors((p) => ({ ...p, email: "" })); }} required placeholder="Business email" className={fieldErrors.email ? "ynm-input-error" : ""} />
+                      {fieldErrors.email && <span className="ynm-field-error">{fieldErrors.email}</span>}
                     </div>
                   </div>
                   <div className="fc-field">

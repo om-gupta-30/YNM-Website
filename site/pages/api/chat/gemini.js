@@ -5,7 +5,7 @@ const SERVER_CACHE_TTL = 10 * 60 * 1000; // 10 minutes
 // Server-side rate limiting per IP
 const ipRateLimits = new Map();
 const IP_RATE_LIMIT_WINDOW = 60000; // 1 minute
-const IP_MAX_REQUESTS = 15; // 15 requests per minute per IP
+const IP_MAX_REQUESTS = 30; // 30 requests per minute per IP (generous to avoid user-facing errors)
 
 function checkIpRateLimit(ip) {
   const now = Date.now();
@@ -205,9 +205,12 @@ CERTIFICATIONS & STANDARDS: ISO 9001:2015, MoRTH, IRC, IS, ASTM, BS, AASHTO, ICA
 KEY CLIENTS (18 major clients): IndianOil, Ramoji Film City, Prestige Group, Tech Mahindra, GMR Group, Tom Tailor, NCC Limited, NSL Group, HCL, Alekhya Homes, GVK EMRI, NTPC, PowerGrid, Hyundai Glovis, NPCI International, BSCPL Infrastructure, AT&T, Aparna Constructions
 
 CONTACT:
-- Phone: +91 96765 75770 / +91 90002 62013
+- Phone: +91 96765 75770 / +91 88850 02183
 - Email: sales@ynmsafety.com
 - HR: hr@ynmsafety.com
+- Partnerships: partnership@ynmsafety.com
+- Investors: invest@ynmsafety.com
+- WhatsApp: wa.me/918885002183
 - Office: Survey 84P, Gowra Fountain Head, 4th Floor, Suite 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081
 - Factory: Sy No 74, Kothur Village, Shabad Mandal, Rangareddy, Telangana 509217
 - Hours: Mon-Sat, 10 AM - 6 PM IST
@@ -218,22 +221,31 @@ CONTACT:
 WEBSITE PAGES:
 - / - home page with overview, products, testimonials, client logos
 - /products - all product categories with filterable grid
-- /products/[productId] - individual product detail pages
+- /products/[productId] - individual product detail pages with specs, applications, pricing
 - /products/fabrication - 34+ fabrication products with image galleries
 - /products/road-safety-furnitures - 19 road safety furniture products
 - /about - company story, timeline, values, gallery, mission/vision
-- /our-director - Mr. Rishuu Jaiin's profile, ventures, achievements
+- /our-director - Mr. Rishuu Jaiin's profile, ventures, achievements, appointment booking form
 - /clients - 18 detailed client/partner profiles
-- /careers - job openings and application form
-- /contact - contact form, company info, social links
-- /investor-relations - investment thesis, milestones, fund allocation
-- /foreign-collaborations - collaboration areas, global regions, partnership process
+- /get-quote - dedicated quote request form with product selection, quantity, timeline, delivery location, file attachment (PDF)
+- /careers - 6 open positions (Production Manager, QC Engineer, Export Coordinator, Sales Executive, Warehouse Supervisor, Accounts Executive) and application form
+- /contact - contact form, company info, social links, interactive India presence map with state-wise contacts
+- /investor-relations - investment thesis, milestones, fund allocation, inquiry form
+- /foreign-collaborations - collaboration areas, global regions with flags, partnership process, inquiry form
 
-CAREERS: Positions in Operations & Production, Sales & Marketing, IT, Purchase & Procurement, Accounts & Finance, HR & Administration. Apply at /careers with resume (PDF, max 5MB). HR email: hr@ynmsafety.com
+LANGUAGE SUPPORT: Website available in 12 Indian languages: English, Hindi, Bengali, Telugu, Marathi, Tamil, Gujarati, Kannada, Malayalam, Punjabi, Odia, Urdu. Language selector in navbar.
 
-INVESTOR RELATIONS: Open to equity investment, strategic partnerships, joint ventures. Fund allocation: 40% Capacity Expansion, 25% Technology Upgrade, 20% Market Development, 15% Working Capital. Visit /investor-relations
+GET A QUOTE: Dedicated page at /get-quote. Users can select products (Paints, Crash Barriers, Signage, Fabrication categories), specify quantity/unit/timeline, attach technical specs (PDF), provide delivery location and project details. Also accessible via floating "Get a Quote" button on all pages.
 
-FOREIGN COLLABORATIONS: Manufacturing Partnerships, Distribution Networks, R&D, Quality & Compliance. Target: Middle East, East Asia, Africa, Southeast Asia, Europe. Visit /foreign-collaborations
+DIRECTOR APPOINTMENT: Users can book a meeting with Mr. Rishuu Jaiin via /our-director page. Form fields: name, email, phone, company, purpose, preferred date/time, message.
+
+CAREERS: 6 open positions - Production Manager (Manufacturing), Quality Control Engineer (QA), Export Coordinator (International Trade), Sales Executive (Sales & Marketing), Warehouse Supervisor (Operations), Accounts Executive (Finance). All full-time in Hyderabad. Apply at /careers with resume (PDF, max 5MB). HR email: hr@ynmsafety.com
+
+INVESTOR RELATIONS: Open to equity investment, strategic partnerships, joint ventures. Investor types: Individual, Angel, VC, PE, Strategic, Family Office. Fund allocation: 40% Capacity Expansion, 25% Technology Upgrade, 20% Market Development, 15% Working Capital. Milestones: 2013 Foundation → 2015 First Export → 2018 ISO Certified → 2021 Expansion → 2024 PAN India → 2025 Contracting → 2026 PAN India Mfg. Email: invest@ynmsafety.com. Visit /investor-relations
+
+FOREIGN COLLABORATIONS: Manufacturing Partnerships, Distribution Networks, R&D, Quality & Compliance. Target: Middle East, East Asia, Africa, Southeast Asia, Europe. Email: partnership@ynmsafety.com. Visit /foreign-collaborations
+
+INDIA PRESENCE: PAN India contacts in Maharashtra, Delhi, Karnataka, Tamil Nadu, Gujarat, Uttar Pradesh, Rajasthan, Telangana, West Bengal. Interactive map on /contact page.
 
 ${languageInstruction}`;
 

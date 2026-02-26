@@ -79,6 +79,7 @@ const companyStats = [
 export default function InvestorRelationsPage() {
   const [activeFaq, setActiveFaq] = useState(null);
   const [formData, setFormData] = useState({ name: "", organization: "", email: "", investorType: "", message: "" });
+  const [fieldErrors, setFieldErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -168,9 +169,17 @@ export default function InvestorRelationsPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
+    const errs = {};
+
+    if (!formData.name.trim()) errs.name = "Name is required.";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) errs.email = "Email is required.";
+    else if (!emailRegex.test(formData.email)) errs.email = "Enter a valid email (must contain @).";
+
+    setFieldErrors(errs);
+    if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
 
     try {
-      // Validate reCAPTCHA (only when shown on allowed domains)
       if (showRecaptcha && !recaptchaToken) {
         throw new Error('Please complete the "I\'m not a robot" verification');
       }
@@ -614,7 +623,8 @@ export default function InvestorRelationsPage() {
                   <div className="ir-form-grid">
                     <div className="ir-field">
                       <label>Your Name <span>*</span></label>
-                      <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Full name" />
+                      <input type="text" name="name" value={formData.name} onChange={(e) => { handleChange(e); if (fieldErrors.name) setFieldErrors((p) => ({ ...p, name: "" })); }} required placeholder="Full name" className={fieldErrors.name ? "ynm-input-error" : ""} />
+                      {fieldErrors.name && <span className="ynm-field-error">{fieldErrors.name}</span>}
                     </div>
                     <div className="ir-field">
                       <label>Organization</label>
@@ -623,7 +633,8 @@ export default function InvestorRelationsPage() {
                   </div>
                   <div className="ir-field">
                     <label>Email <span>*</span></label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Business email" />
+                    <input type="email" name="email" value={formData.email} onChange={(e) => { handleChange(e); if (fieldErrors.email) setFieldErrors((p) => ({ ...p, email: "" })); }} required placeholder="Business email" className={fieldErrors.email ? "ynm-input-error" : ""} />
+                    {fieldErrors.email && <span className="ynm-field-error">{fieldErrors.email}</span>}
                   </div>
                   <div className="ir-field">
                     <label>Investor Type</label>

@@ -1,4 +1,10 @@
-import { google } from 'googleapis';
+let _google = null;
+function getGoogle() {
+  if (!_google) {
+    _google = require('googleapis').google;
+  }
+  return _google;
+}
 
 /**
  * Shared Google Sheets utility for all form submissions
@@ -43,7 +49,8 @@ export async function saveToGoogleSheet(sheetName, rowData) {
     throw new Error('Google Sheets is not configured. Check GOOGLE_SHEET_ID, GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY.');
   }
 
-  // Authenticate with Google Sheets API
+  const google = getGoogle();
+
   const auth = new google.auth.JWT({
     email: config.credentials.client_email,
     key: config.credentials.private_key,
