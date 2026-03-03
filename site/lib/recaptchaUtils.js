@@ -1,62 +1,26 @@
 /**
  * Shared reCAPTCHA utilities
+ *
+ * Domain validation is handled by Google's reCAPTCHA admin console.
+ * No client-side domain restriction is needed — it would block
+ * Cloud Run preview URLs and other legitimate deployment origins.
  */
 
 /**
- * Check if current domain is allowed for reCAPTCHA
- * reCAPTCHA should ONLY work on production domains
+ * @deprecated Domain validation is handled by Google's reCAPTCHA admin console.
+ * Kept for backward compatibility — always returns true.
  */
 export function isAllowedDomain() {
-  if (typeof window === 'undefined') return false;
-  
-  const hostname = window.location.hostname.toLowerCase().replace(/\.$/, ''); // normalize: lowercase, remove trailing dot
-  
-  // Allowed production domains
-  const allowedDomains = [
-    'ynmsafety.com',
-    'www.ynmsafety.com',
-  ];
-  
-  // Check exact match first
-  if (allowedDomains.includes(hostname)) {
-    console.log('[reCAPTCHA] Domain allowed:', hostname);
-    return true;
-  }
-  
-  // Check if it's a subdomain of allowed domains (e.g., for GCP Cloud Run staging URLs)
-  const isSubdomain = allowedDomains.some(domain => hostname.endsWith('.' + domain));
-  if (isSubdomain) {
-    console.log('[reCAPTCHA] Subdomain allowed:', hostname);
-    return true;
-  }
-  
-  console.log('[reCAPTCHA] Domain NOT allowed:', hostname, '- Allowed domains:', allowedDomains.join(', '));
-  return false;
-}
-
-/**
- * Get the current hostname for debugging
- */
-export function getCurrentHostname() {
-  if (typeof window === 'undefined') return 'server-side';
-  return window.location.hostname;
+  return true;
 }
 
 /**
  * Load Google reCAPTCHA script
  * Call this once when the form component mounts
- * ONLY loads on allowed domains (ynmsafety.com, www.ynmsafety.com)
  */
 export function loadRecaptchaScript(callback) {
   if (typeof window === 'undefined') return;
-  
-  // STRICT: Only load reCAPTCHA on production domains
-  if (!isAllowedDomain()) {
-    console.log('[reCAPTCHA] Not loading - domain not allowed:', window.location.hostname);
-    if (callback) callback(false); // Pass false to indicate not loaded
-    return;
-  }
-  
+
   // Check if already loaded
   if (window.grecaptcha && window.grecaptcha.render) {
     console.log('[reCAPTCHA] Already loaded');

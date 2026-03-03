@@ -2,7 +2,7 @@ import { IncomingForm } from 'formidable';
 import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
-import { saveToGoogleSheet, isValidEmail } from '@/lib/googleSheets';
+import { isValidEmail } from '@/lib/googleSheets';
 import { verifyRecaptchaToken } from '@/lib/recaptchaUtils';
 
 let pdfParseModule = null;
@@ -180,9 +180,11 @@ export default async function handler(req, res) {
 
     console.log('[Quote API] Request received:', { name: d.name, email: d.email, product: d.product, hasFile: !!specFile });
 
-    // reCAPTCHA — only verify when a token is actually provided
-    // (client only loads reCAPTCHA on production domains)
-    if (process.env.RECAPTCHA_SECRET_KEY && recaptchaToken) {
+    if (process.env.RECAPTCHA_SECRET_KEY) {
+      if (!recaptchaToken) {
+        cleanupFile(specFile?.filepath);
+        return res.status(400).json({ error: 'Please complete the reCAPTCHA verification.' });
+      }
       try {
         const r = await verifyRecaptchaToken(recaptchaToken);
         if (!r.success) { cleanupFile(specFile?.filepath); return res.status(400).json({ error: 'reCAPTCHA verification failed. Please try again.' }); }
@@ -218,19 +220,7 @@ export default async function handler(req, res) {
       }
     }
 
-    // 1. Save to Google Sheets
-    const hasSheets = process.env.GOOGLE_SHEET_ID && process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL && process.env.GOOGLE_PRIVATE_KEY;
-    if (hasSheets) {
-      try {
-        await saveToGoogleSheet('quote requests', [
-          d.name, d.email, d.phone, d.designation, d.company, d.country, d.city,
-          d.product, d.quantity, d.unit, d.urgency, d.projectName, d.deliveryLocation,
-          d.specifications, d.message, specFile ? specFile.originalFilename : '',
-        ]);
-      } catch (e) { console.error('[Quote API] Sheets error:', e.message); }
-    }
-
-    // 2. Send email to sales@ynmsafety.com
+    // Send email to sales@ynmsafety.com
     const transporter = getEmailTransporter();
     if (transporter) {
       const sender = process.env.SMTP_USER || process.env.GMAIL_USER || 'noreply@ynmsafety.com';

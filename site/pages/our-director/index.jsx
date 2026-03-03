@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { isAllowedDomain } from "@/lib/recaptchaUtils";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -31,12 +30,9 @@ export default function OurDirectorPage() {
   const recaptchaWidgetId = useRef(null);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-  // Check if reCAPTCHA should be shown (only on allowed domains)
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const allowed = isAllowedDomain();
-      const shouldShow = allowed && !!siteKey;
-      setShowRecaptcha(shouldShow);
+      setShowRecaptcha(!!siteKey);
     }
   }, [siteKey]);
 

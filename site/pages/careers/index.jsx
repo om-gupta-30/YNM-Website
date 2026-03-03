@@ -5,7 +5,6 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { isAllowedDomain } from "@/lib/recaptchaUtils";
 
 const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 
@@ -110,13 +109,9 @@ export default function CareersPage() {
     }
   }, [captchaInitialized]);
 
-  // Check if reCAPTCHA should be shown (only on allowed domains)
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const allowed = isAllowedDomain();
-      const shouldShow = allowed && !!siteKey;
-      setShowRecaptcha(shouldShow);
-      console.log('[Careers] reCAPTCHA check - allowed:', allowed, 'siteKey:', !!siteKey, 'showRecaptcha:', shouldShow);
+      setShowRecaptcha(!!siteKey);
     }
   }, [siteKey]);
 

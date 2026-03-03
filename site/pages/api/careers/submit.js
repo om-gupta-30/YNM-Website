@@ -2,7 +2,8 @@ import { IncomingForm } from 'formidable';
 import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
-// Dynamic import for pdf-parse to handle CommonJS module
+import { verifyRecaptchaToken } from '@/lib/recaptchaUtils';
+
 let pdfParseModule = null;
 
 // Disable default body parser to handle file uploads
@@ -31,38 +32,6 @@ function checkRateLimit(ip) {
   recentRequests.push(now);
   rateLimitStore.set(ip, recentRequests);
   return true;
-}
-
-// Validate reCAPTCHA
-async function validateRecaptcha(token) {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-
-  // When no secret key is set (e.g. local dev), skip verification entirely.
-  // Use .env.local with Google's reCAPTCHA test keys for local testing.
-  if (!secretKey) {
-    console.log('RECAPTCHA_SECRET_KEY not set; skipping verification');
-    return true;
-  }
-
-  if (!token) {
-    return false;
-  }
-
-  try {
-    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: `secret=${secretKey}&response=${token}`,
-    });
-
-    const data = await response.json();
-    return data.success === true;
-  } catch (error) {
-    console.error('reCAPTCHA verification error:', error);
-    return false;
-  }
 }
 
 // Validate CAPTCHA
@@ -278,6 +247,7 @@ const getNoReplyFrom = () =>
   `"YNM Careers (Do Not Reply)" <${process.env.CAREERS_NOREPLY_FROM || 'noreply@ynmsafety.com'}>`;
 
 const hrEmail = () => process.env.HR_EMAIL || 'ynm.hr@ynmsafety.com';
+
 
 // Send confirmation email to applicant (no-reply) with resume PDF attached
 async function sendConfirmationEmail(formData, resumeFile) {
@@ -510,18 +480,14 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'All required fields must be filled.' });
     }
 
-    // Validate reCAPTCHA (only if configured)
     if (process.env.RECAPTCHA_SECRET_KEY) {
       if (!formData.recaptchaToken) {
         return res.status(400).json({ error: 'Please complete the "I\'m not a robot" verification.' });
       }
-
-      const recaptchaValid = await validateRecaptcha(formData.recaptchaToken);
-      if (!recaptchaValid) {
+      const recaptchaResult = await verifyRecaptchaToken(formData.recaptchaToken);
+      if (!recaptchaResult.success) {
         return res.status(400).json({ error: 'reCAPTCHA verification failed. Please try again.' });
       }
-    } else {
-      console.log('RECAPTCHA_SECRET_KEY not set; skipping reCAPTCHA check for careers form');
     }
 
     // Validate CAPTCHA

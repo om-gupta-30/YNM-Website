@@ -6,7 +6,6 @@ import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import IndiaPresenceMap from "@/components/IndiaPresenceMap";
-import { isAllowedDomain } from "@/lib/recaptchaUtils";
 
 const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 
@@ -49,12 +48,9 @@ export default function ContactPage() {
   const recaptchaWidgetId = useRef(null);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-  // Check if reCAPTCHA should be shown (only on allowed domains)
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const allowed = isAllowedDomain();
-      const shouldShow = allowed && !!siteKey;
-      setShowRecaptcha(shouldShow);
+      setShowRecaptcha(!!siteKey);
     }
   }, [siteKey]);
 

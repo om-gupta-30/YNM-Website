@@ -225,10 +225,56 @@ const nextConfig = {
         destination: '/products/fabrication',
         permanent: true, // 301 redirect - Catch all old /road-furniture-manufacturers/ URLs
       },
+      // ── Root-level product URLs (old site structure) ──
+      // Google indexed these without the /products/ prefix
+      // Typo variant first (specific before catch-all)
+      {
+        source: '/retro-reflective-gantry-signage-manufactures',
+        destination: '/products/retro-reflective-gantry-signage-manufacturers',
+        permanent: true,
+      },
+      // Catch-all: any root URL ending with -manufacturers → /products/slug
+      {
+        source: '/:slug(.+-manufacturers)',
+        destination: '/products/:slug',
+        permanent: true,
+      },
+      // ── Old nested product URLs ──
+      {
+        source: '/products/w-beam-crash-barrier/single-w-beam-crash-barrier',
+        destination: '/products/w-beam-crash-barrier-manufacturers',
+        permanent: true,
+      },
+      {
+        source: '/products/w-beam-crash-barrier/:path*',
+        destination: '/products/w-beam-crash-barrier-manufacturers',
+        permanent: true,
+      },
+      {
+        source: '/products/retro-reflective-signage/aluminium-backed-flexible-prismatic-sheeting',
+        destination: '/products/retro-reflective-gantry-signage-manufacturers',
+        permanent: true,
+      },
+      {
+        source: '/products/retro-reflective-signage/:path*',
+        destination: '/products/retro-reflective-gantry-signage-manufacturers',
+        permanent: true,
+      },
+      {
+        source: '/products/cold-plastic-paint/:path*',
+        destination: '/products/cold-plastic-paints-manufacturers',
+        permanent: true,
+      },
+      {
+        source: '/products/octogonal-poles/:path*',
+        destination: '/products/road-safety-furnitures',
+        permanent: true,
+      },
+      // ── Old enquiry page → Get Quote ──
       {
         source: '/enquiry',
-        destination: '/contact',
-        permanent: true, // 301 redirect - Old enquiry page, redirect to contact
+        destination: '/get-quote',
+        permanent: true,
       },
     ];
   },

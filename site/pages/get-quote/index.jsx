@@ -3,7 +3,6 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { isAllowedDomain } from "@/lib/recaptchaUtils";
 
 const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 const PlacesAutocomplete = dynamic(() => import("@/components/PlacesAutocomplete"), { ssr: false });
@@ -112,7 +111,7 @@ export default function GetQuotePage() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setShowRecaptcha(isAllowedDomain() && !!siteKey);
+      setShowRecaptcha(!!siteKey);
     }
   }, [siteKey]);
 
