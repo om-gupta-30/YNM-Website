@@ -69,7 +69,7 @@ export async function saveToGoogleSheet(sheetName, rowData) {
   const response = await sheets.spreadsheets.values.append({
     spreadsheetId: config.spreadsheetId,
     range,
-    valueInputOption: 'USER_ENTERED',
+    valueInputOption: 'RAW',
     resource: { values },
   });
 

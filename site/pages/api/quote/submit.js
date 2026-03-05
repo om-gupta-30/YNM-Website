@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
 import { isValidEmail } from '@/lib/googleSheets';
-import { verifyRecaptchaToken } from '@/lib/recaptchaUtils';
 
 let pdfParseModule = null;
 
@@ -175,24 +174,9 @@ export default async function handler(req, res) {
       projectName: g('projectName'), specifications: g('specifications'),
       message: g('message'),
     };
-    const recaptchaToken = g('recaptchaToken');
     specFile = files.specification?.[0] || null;
 
     console.log('[Quote API] Request received:', { name: d.name, email: d.email, product: d.product, hasFile: !!specFile });
-
-    if (process.env.RECAPTCHA_SECRET_KEY) {
-      if (!recaptchaToken) {
-        cleanupFile(specFile?.filepath);
-        return res.status(400).json({ error: 'Please complete the reCAPTCHA verification.' });
-      }
-      try {
-        const r = await verifyRecaptchaToken(recaptchaToken);
-        if (!r.success) { cleanupFile(specFile?.filepath); return res.status(400).json({ error: 'reCAPTCHA verification failed. Please try again.' }); }
-      } catch (e) {
-        cleanupFile(specFile?.filepath);
-        return res.status(400).json({ error: 'reCAPTCHA error. Please refresh and try again.' });
-      }
-    }
 
     // Validate required fields
     if (!d.name || !d.email || !d.phone || !d.product) {

@@ -1,5 +1,4 @@
 import { saveToGoogleSheet, isValidEmail } from '@/lib/googleSheets';
-import { verifyRecaptchaToken } from '@/lib/recaptchaUtils';
 
 /**
  * API endpoint for Investor Relations form
@@ -11,28 +10,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, organization, email, investorType, message, recaptchaToken } = req.body;
-
-    // Verify reCAPTCHA - REQUIRED in production
-    if (process.env.RECAPTCHA_SECRET_KEY) {
-      if (!recaptchaToken) {
-        console.log('[Investor API] reCAPTCHA token missing');
-        return res.status(400).json({ 
-          error: 'Please complete the reCAPTCHA verification.',
-        });
-      }
-      console.log('[Investor API] Verifying reCAPTCHA token...');
-      const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
-      console.log('[Investor API] reCAPTCHA result:', recaptchaResult.success ? 'success' : 'failed');
-      if (!recaptchaResult.success) {
-        return res.status(400).json({ 
-          error: 'reCAPTCHA verification failed. Please try again.',
-          details: recaptchaResult.error 
-        });
-      }
-    } else {
-      console.log('[Investor API] RECAPTCHA_SECRET_KEY not set, skipping verification');
-    }
+    const { name, organization, email, investorType, message } = req.body;
 
     // Validation
     if (!name || !email || !message) {

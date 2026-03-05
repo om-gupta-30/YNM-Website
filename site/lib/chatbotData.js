@@ -200,6 +200,7 @@ export const contactLinks = {
   facebook: "https://www.facebook.com/profile.php?id=61583507530283",
   instagram: "https://www.instagram.com/ynm.safety/",
   maps: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29",
+  factoryMaps: "https://maps.app.goo.gl/84mogdQ3ue9tAmig7",
   website: "https://ynmsafety.com",
   getQuote: "https://ynmsafety.com/get-quote"
 };
@@ -210,7 +211,7 @@ export const companyInfo = {
   founded: "2013",
   director: "Mr. Rishuu Jaiin",
   headquarters: "Hyderabad, Telangana, India",
-  factoryAddress: "Sy No 74, Kothur Village, Shabad Mandal, Rangareddy, Telangana 509217",
+  factoryAddress: "Mankhal Industrial Development Area, Malikdanguda, Telangana 501359",
   teamSize: "200+",
   countriesExported: "50+",
   projectsCompleted: "500+",

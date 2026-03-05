@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
@@ -102,66 +102,6 @@ export default function GetQuotePage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  // reCAPTCHA
-  const [showRecaptcha, setShowRecaptcha] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-  const recaptchaRef = useRef(null);
-  const recaptchaWidgetId = useRef(null);
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setShowRecaptcha(!!siteKey);
-    }
-  }, [siteKey]);
-
-  const initRecaptcha = useCallback(() => {
-    if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && recaptchaWidgetId.current === null) {
-      try {
-        recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-          sitekey: siteKey,
-          callback: (token) => setRecaptchaToken(token),
-          "expired-callback": () => setRecaptchaToken(null),
-          "error-callback": () => setRecaptchaToken(null),
-        });
-      } catch (err) {
-        console.error("[GetQuote] reCAPTCHA render error:", err);
-      }
-    }
-  }, [siteKey]);
-
-  useEffect(() => {
-    if (!showRecaptcha || !siteKey || !recaptchaRef.current) return;
-
-    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
-
-    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
-      initRecaptcha();
-      return;
-    }
-
-    const callbackName = `recaptchaCallback_quote_${Math.floor(Math.random() * 1000000)}`;
-    window[callbackName] = () => {
-      initRecaptcha();
-      delete window[callbackName];
-    };
-
-    const script = document.createElement("script");
-    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
-    script.async = true;
-    script.defer = true;
-    script.onerror = () => { delete window[callbackName]; };
-    document.body.appendChild(script);
-
-    return () => {
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        try { window.grecaptcha.reset(recaptchaWidgetId.current); } catch (_) {}
-      }
-      recaptchaWidgetId.current = null;
-      if (window[callbackName]) delete window[callbackName];
-    };
-  }, [showRecaptcha, siteKey, initRecaptcha]);
-
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     if (error) setError("");
@@ -210,16 +150,10 @@ export default function GetQuotePage() {
       return;
     }
 
-    if (showRecaptcha && !recaptchaToken) {
-      setError('Please complete the "I\'m not a robot" verification.');
-      return;
-    }
-
     setSubmitting(true);
     try {
       const fd = new FormData();
       Object.entries(formData).forEach(([key, val]) => fd.append(key, val));
-      fd.append("recaptchaToken", recaptchaToken || "");
       if (pdfFile) fd.append("specification", pdfFile);
 
       const res = await fetch("/api/quote/submit", { method: "POST", body: fd });
@@ -229,10 +163,6 @@ export default function GetQuotePage() {
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", company: "", designation: "", country: "", city: "", product: "", quantity: "", unit: "Kg", deliveryLocation: "", urgency: "", projectName: "", specifications: "", message: "" });
       setPdfFile(null);
-      setRecaptchaToken(null);
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        try { window.grecaptcha.reset(recaptchaWidgetId.current); } catch (_) {}
-      }
     } catch (err) {
       setError(err.message || "Failed to submit. Please try again.");
     } finally {
@@ -420,14 +350,8 @@ export default function GetQuotePage() {
                   </div>
                 </div>
 
-                {/* --- reCAPTCHA & Submit --- */}
+                {/* --- Submit --- */}
                 <div className="gq-section gq-section-submit">
-                  {showRecaptcha && (
-                    <div className="gq-recaptcha-wrap">
-                      <div ref={recaptchaRef}></div>
-                    </div>
-                  )}
-
                   {error && (
                     <div className="gq-error-msg">
                       <span>⚠️</span>
@@ -495,9 +419,6 @@ export default function GetQuotePage() {
         .gq-field-error { margin-top: 5px; font-size: 0.78rem; color: #c0392b; }
 
         .gq-section-submit { text-align: center; background: #fff; border-radius: 14px; padding: 28px 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border: 1px solid rgba(201,162,77,0.15); }
-
-        .gq-recaptcha-wrap { display: flex; justify-content: center; margin-bottom: 20px; overflow: hidden; max-width: 100%; transform-origin: left top; }
-        @media (max-width: 350px) { .gq-recaptcha-wrap { transform: scale(0.85); margin-bottom: 10px; } }
 
         .gq-error-msg { display: flex; align-items: flex-start; gap: 10px; padding: 12px 16px; margin-bottom: 16px; background: #fdf0ef; border: 1px solid #f5c6cb; border-radius: 8px; text-align: left; }
         .gq-error-msg p { margin: 0; font-size: 0.85rem; color: #c0392b; }

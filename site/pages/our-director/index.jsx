@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,82 +24,6 @@ export default function OurDirectorPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
-  const [showRecaptcha, setShowRecaptcha] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-  const recaptchaRef = useRef(null);
-  const recaptchaWidgetId = useRef(null);
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setShowRecaptcha(!!siteKey);
-    }
-  }, [siteKey]);
-
-  // Load reCAPTCHA script and render widget explicitly
-  useEffect(() => {
-    if (!siteKey) return;
-    if (!showRecaptcha) return;
-    if (!recaptchaRef.current) return;
-
-    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
-    
-    const initRecaptcha = () => {
-      if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && recaptchaWidgetId.current === null) {
-        try {
-          recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-            sitekey: siteKey,
-            callback: (token) => {
-              setRecaptchaToken(token);
-            },
-            'expired-callback': () => {
-              setRecaptchaToken(null);
-            },
-            'error-callback': () => {
-              setRecaptchaToken(null);
-            }
-          });
-        } catch (error) {
-          console.error('[Our Director] reCAPTCHA render error:', error);
-        }
-      }
-    };
-
-    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
-      initRecaptcha();
-      return;
-    }
-
-    const callbackName = `recaptchaCallback_director_${Math.floor(Math.random() * 1000000)}`;
-    
-    window[callbackName] = () => {
-      initRecaptcha();
-      delete window[callbackName];
-    };
-
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
-    script.async = true;
-    script.defer = true;
-    script.onerror = () => {
-      delete window[callbackName];
-    };
-
-    document.body.appendChild(script);
-
-    return () => {
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        try {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        } catch (error) {
-          // Ignore cleanup errors
-        }
-      }
-      if (window[callbackName]) {
-        delete window[callbackName];
-      }
-    };
-  }, [showRecaptcha, siteKey]);
 
   const handleAppointmentChange = (e) => {
     setAppointmentForm({ ...appointmentForm, [e.target.name]: e.target.value });
@@ -118,22 +42,16 @@ export default function OurDirectorPage() {
     const phoneDigits = appointmentForm.phone.replace(/\D/g, "");
     if (!appointmentForm.phone.trim()) errs.phone = "Phone number is required.";
     else if (phoneDigits.length < 10) errs.phone = "Enter a valid 10-digit phone number.";
+    if (!appointmentForm.purpose) errs.purpose = "Purpose of meeting is required.";
 
     setFieldErrors(errs);
     if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
 
     try {
-      if (showRecaptcha && !recaptchaToken) {
-        throw new Error('Please complete the "I\'m not a robot" verification');
-      }
-
       const response = await fetch('/api/director-appointment/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...appointmentForm,
-          recaptchaToken: recaptchaToken || '',
-        }),
+        body: JSON.stringify(appointmentForm),
       });
 
       const data = await response.json();
@@ -150,22 +68,12 @@ export default function OurDirectorPage() {
           preferredTime: "",
           message: "",
         });
-        setRecaptchaToken(null);
-        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        }
         setTimeout(() => setSubmitted(false), 8000);
       } else {
         setError(data.error || 'Something went wrong. Please try again.');
-        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        }
       }
     } catch (err) {
       setError(err.message || 'Network error. Please check your connection and try again.');
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        window.grecaptcha.reset(recaptchaWidgetId.current);
-      }
     } finally {
       setIsSubmitting(false);
     }
@@ -540,8 +448,9 @@ export default function OurDirectorPage() {
                       id="apt-purpose"
                       name="purpose"
                       value={appointmentForm.purpose}
-                      onChange={handleAppointmentChange}
+                      onChange={(e) => { handleAppointmentChange(e); if (fieldErrors.purpose) setFieldErrors((p) => ({ ...p, purpose: "" })); }}
                       required
+                      className={fieldErrors.purpose ? "ynm-input-error" : ""}
                     >
                       <option value="">Select purpose</option>
                       <option value="Business Partnership">Business Partnership</option>
@@ -551,6 +460,7 @@ export default function OurDirectorPage() {
                       <option value="General Meeting">General Meeting</option>
                       <option value="Other">Other</option>
                     </select>
+                    {fieldErrors.purpose && <span className="ynm-field-error">{fieldErrors.purpose}</span>}
                   </div>
 
                   <div className="form-row">
@@ -598,14 +508,6 @@ export default function OurDirectorPage() {
                       placeholder="Tell us more about what you'd like to discuss..."
                     />
                   </div>
-
-                  {showRecaptcha && (
-                    <div className="recaptcha-group">
-                      <label>Security Verification *</label>
-                      <div ref={recaptchaRef} className="recaptcha-container"></div>
-                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
-                    </div>
-                  )}
 
                   <button type="submit" className="appointment-submit-btn" disabled={isSubmitting}>
                     {isSubmitting ? (
@@ -1496,39 +1398,6 @@ export default function OurDirectorPage() {
         .appointment-form textarea {
           resize: vertical;
           min-height: 100px;
-        }
-
-        .recaptcha-group {
-          background: #F7F3EA;
-          padding: 20px;
-          border-radius: 12px;
-          border: 2px solid #E6D3A3;
-          margin-bottom: 20px;
-        }
-
-        .recaptcha-group label {
-          display: block;
-          font-size: 13px;
-          font-weight: 600;
-          color: #74060D;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          margin-bottom: 12px;
-        }
-
-        .recaptcha-container {
-          display: flex;
-          justify-content: center;
-          margin: 12px 0;
-          overflow: hidden;
-          max-width: 100%;
-        }
-
-        .recaptcha-group small {
-          display: block;
-          font-size: 12px;
-          color: #9A1B2E;
-          text-align: center;
         }
 
         .appointment-submit-btn {

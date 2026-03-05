@@ -1,5 +1,4 @@
 import { saveToGoogleSheet, isValidEmail } from '@/lib/googleSheets';
-import { verifyRecaptchaToken } from '@/lib/recaptchaUtils';
 
 // ==============================================
 // API HANDLER
@@ -11,37 +10,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, company, subject, message, recaptchaToken } = req.body;
+    const { name, email, phone, company, subject, message } = req.body;
     
-    console.log('[Contact API] Request received:', { name, email, hasToken: !!recaptchaToken });
-
-    // Verify reCAPTCHA - REQUIRED in production
-    if (process.env.RECAPTCHA_SECRET_KEY) {
-      if (!recaptchaToken) {
-        console.log('[Contact API] reCAPTCHA token missing');
-        return res.status(400).json({ 
-          error: 'Please complete the reCAPTCHA verification.',
-        });
-      }
-      console.log('[Contact API] Verifying reCAPTCHA token...');
-      try {
-        const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
-        console.log('[Contact API] reCAPTCHA result:', recaptchaResult.success ? 'success' : 'failed', recaptchaResult.errorCodes || '');
-        if (!recaptchaResult.success) {
-          return res.status(400).json({ 
-            error: 'reCAPTCHA verification failed. Please try again.',
-            details: recaptchaResult.error 
-          });
-        }
-      } catch (recaptchaError) {
-        console.error('[Contact API] reCAPTCHA error:', recaptchaError.message);
-        return res.status(400).json({ 
-          error: 'reCAPTCHA verification error. Please refresh and try again.',
-        });
-      }
-    } else {
-      console.log('[Contact API] RECAPTCHA_SECRET_KEY not set, skipping verification');
-    }
+    console.log('[Contact API] Request received:', { name, email });
 
     // Validation
     if (!name || !email || !subject || !message) {

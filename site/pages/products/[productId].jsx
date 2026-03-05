@@ -7,7 +7,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
 import { getProductById, getAllProducts } from "@/lib/productsCategoriesData";
-import { getProductById as getLegacyProduct } from "./index";
 
 export default function ProductDetailPage({ serverProduct }) {
   const router = useRouter();
@@ -5372,28 +5371,13 @@ export default function ProductDetailPage({ serverProduct }) {
 export async function getServerSideProps({ params }) {
   const { productId } = params;
 
-  let product = getProductById(productId);
+  // Only match by slug — never by internal id (p1, bit1, rsf-*, etc.)
+  // This prevents duplicate-content URLs like /products/p1 from returning 200
+  const allProducts = getAllProducts();
+  const product = allProducts.find((p) => p.slug === productId);
+
   if (!product) {
-    const legacyProduct = getLegacyProduct(productId);
-    if (!legacyProduct) {
-      return { notFound: true };
-    }
-    product = {
-      ...legacyProduct,
-      detailedDescription: legacyProduct.detailedDescription || legacyProduct.overview || legacyProduct.desc,
-      heroImage: legacyProduct.image,
-      specifications: {
-        technical: legacyProduct.specs || [],
-        keyFeatures: legacyProduct.specs || [],
-        advantages: legacyProduct.specs || [],
-      },
-      applicationAreas: [],
-      projects: [],
-      marketGrowth: legacyProduct.marketGrowth || null,
-      manufacturingProcess: [],
-      importingProcess: [],
-      statistics: legacyProduct.statistics || {},
-    };
+    return { notFound: true };
   }
 
   return {

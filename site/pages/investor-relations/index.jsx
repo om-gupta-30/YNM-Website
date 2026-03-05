@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -82,82 +82,6 @@ export default function InvestorRelationsPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
-  const [showRecaptcha, setShowRecaptcha] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-  const recaptchaRef = useRef(null);
-  const recaptchaWidgetId = useRef(null);
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setShowRecaptcha(!!siteKey);
-    }
-  }, [siteKey]);
-
-  // Load reCAPTCHA script and render widget explicitly
-  useEffect(() => {
-    if (!siteKey) return;
-    if (!showRecaptcha) return;
-    if (!recaptchaRef.current) return;
-
-    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
-    
-    const initRecaptcha = () => {
-      if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && recaptchaWidgetId.current === null) {
-        try {
-          recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-            sitekey: siteKey,
-            callback: (token) => {
-              setRecaptchaToken(token);
-            },
-            'expired-callback': () => {
-              setRecaptchaToken(null);
-            },
-            'error-callback': () => {
-              setRecaptchaToken(null);
-            }
-          });
-        } catch (error) {
-          console.error('[Investor Relations] reCAPTCHA render error:', error);
-        }
-      }
-    };
-
-    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
-      initRecaptcha();
-      return;
-    }
-
-    const callbackName = `recaptchaCallback_investor_${Math.floor(Math.random() * 1000000)}`;
-    
-    window[callbackName] = () => {
-      initRecaptcha();
-      delete window[callbackName];
-    };
-
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
-    script.async = true;
-    script.defer = true;
-    script.onerror = () => {
-      delete window[callbackName];
-    };
-
-    document.body.appendChild(script);
-
-    return () => {
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        try {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        } catch (error) {
-          // Ignore cleanup errors
-        }
-      }
-      if (window[callbackName]) {
-        delete window[callbackName];
-      }
-    };
-  }, [showRecaptcha, siteKey]);
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -171,22 +95,16 @@ export default function InvestorRelationsPage() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) errs.email = "Email is required.";
     else if (!emailRegex.test(formData.email)) errs.email = "Enter a valid email (must contain @).";
+    if (!formData.message.trim()) errs.message = "Message is required.";
 
     setFieldErrors(errs);
     if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
 
     try {
-      if (showRecaptcha && !recaptchaToken) {
-        throw new Error('Please complete the "I\'m not a robot" verification');
-      }
-
       const response = await fetch('/api/investor-relations/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          recaptchaToken: recaptchaToken || '',
-        }),
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
@@ -194,22 +112,12 @@ export default function InvestorRelationsPage() {
       if (response.ok && data.success) {
         setSubmitted(true);
         setFormData({ name: "", organization: "", email: "", investorType: "", message: "" });
-        setRecaptchaToken(null);
-        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        }
         setTimeout(() => setSubmitted(false), 8000);
       } else {
         setError(data.error || 'Something went wrong. Please try again.');
-        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        }
       }
     } catch (err) {
       setError(err.message || 'Network error. Please check your connection and try again.');
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        window.grecaptcha.reset(recaptchaWidgetId.current);
-      }
     } finally {
       setIsSubmitting(false);
     }
@@ -645,16 +553,10 @@ export default function InvestorRelationsPage() {
                     </select>
                   </div>
                   <div className="ir-field">
-                    <label>Message</label>
-                    <textarea name="message" value={formData.message} onChange={handleChange} rows={3} placeholder="Tell us about your interest..." />
+                    <label>Message <span>*</span></label>
+                    <textarea name="message" value={formData.message} onChange={(e) => { handleChange(e); if (fieldErrors.message) setFieldErrors((p) => ({ ...p, message: "" })); }} rows={3} placeholder="Tell us about your interest..." className={fieldErrors.message ? "ynm-input-error" : ""} />
+                    {fieldErrors.message && <span className="ynm-field-error">{fieldErrors.message}</span>}
                   </div>
-                  {showRecaptcha && (
-                    <div className="ir-recaptcha-group">
-                      <label>Security Verification *</label>
-                      <div ref={recaptchaRef} className="ir-recaptcha-container"></div>
-                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
-                    </div>
-                  )}
                   <button type="submit" disabled={isSubmitting} className="ir-submit">
                     {isSubmitting ? "Sending..." : "Send Message"}
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -1642,39 +1544,6 @@ export default function InvestorRelationsPage() {
           box-shadow: 0 0 0 3px rgba(201, 162, 77, 0.1);
         }
 
-        .ir-recaptcha-group {
-          background: #FDFBF7;
-          padding: 20px;
-          border-radius: 8px;
-          border: 1px solid #E0DCD4;
-          margin-bottom: 20px;
-        }
-
-        .ir-recaptcha-group label {
-          display: block;
-          font-size: 12px;
-          font-weight: 700;
-          color: #1A1614;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          margin-bottom: 12px;
-        }
-
-        .ir-recaptcha-container {
-          display: flex;
-          justify-content: center;
-          margin: 12px 0;
-          overflow: hidden;
-          max-width: 100%;
-        }
-
-        .ir-recaptcha-group small {
-          display: block;
-          font-size: 12px;
-          color: #666;
-          text-align: center;
-        }
-
         .ir-submit {
           width: 100%;
           padding: 18px 28px;
@@ -1837,9 +1706,6 @@ export default function InvestorRelationsPage() {
           }
           .ir-faq {
             padding: 80px 16px;
-          }
-          .ir-recaptcha-group {
-            padding: 14px;
           }
         }
       `}</style>

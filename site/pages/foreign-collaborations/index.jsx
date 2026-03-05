@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
@@ -119,82 +119,6 @@ export default function ForeignCollaborationsPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [activeRegion, setActiveRegion] = useState(0);
-  const [showRecaptcha, setShowRecaptcha] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-  const recaptchaRef = useRef(null);
-  const recaptchaWidgetId = useRef(null);
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setShowRecaptcha(!!siteKey);
-    }
-  }, [siteKey]);
-
-  // Load reCAPTCHA script and render widget explicitly
-  useEffect(() => {
-    if (!siteKey) return;
-    if (!showRecaptcha) return;
-    if (!recaptchaRef.current) return;
-
-    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
-    
-    const initRecaptcha = () => {
-      if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && recaptchaWidgetId.current === null) {
-        try {
-          recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-            sitekey: siteKey,
-            callback: (token) => {
-              setRecaptchaToken(token);
-            },
-            'expired-callback': () => {
-              setRecaptchaToken(null);
-            },
-            'error-callback': () => {
-              setRecaptchaToken(null);
-            }
-          });
-        } catch (error) {
-          console.error('[Foreign Collaborations] reCAPTCHA render error:', error);
-        }
-      }
-    };
-
-    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
-      initRecaptcha();
-      return;
-    }
-
-    const callbackName = `recaptchaCallback_fc_${Math.floor(Math.random() * 1000000)}`;
-    
-    window[callbackName] = () => {
-      initRecaptcha();
-      delete window[callbackName];
-    };
-
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
-    script.async = true;
-    script.defer = true;
-    script.onerror = () => {
-      delete window[callbackName];
-    };
-
-    document.body.appendChild(script);
-
-    return () => {
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        try {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        } catch (error) {
-          // Ignore cleanup errors
-        }
-      }
-      if (window[callbackName]) {
-        delete window[callbackName];
-      }
-    };
-  }, [showRecaptcha, siteKey]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -222,17 +146,10 @@ export default function ForeignCollaborationsPage() {
     if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
 
     try {
-      if (showRecaptcha && !recaptchaToken) {
-        throw new Error('Please complete the "I\'m not a robot" verification');
-      }
-
       const response = await fetch('/api/foreign-collaborations/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          recaptchaToken: recaptchaToken || '',
-        }),
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
@@ -240,22 +157,12 @@ export default function ForeignCollaborationsPage() {
       if (response.ok && data.success) {
         setSubmitted(true);
         setFormData({ companyName: "", country: "", contactName: "", email: "", collaborationType: "", message: "" });
-        setRecaptchaToken(null);
-        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        }
         setTimeout(() => setSubmitted(false), 8000);
       } else {
         setError(data.error || 'Something went wrong. Please try again.');
-        if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        }
       }
     } catch (err) {
       setError(err.message || 'Network error. Please check your connection and try again.');
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        window.grecaptcha.reset(recaptchaWidgetId.current);
-      }
     } finally {
       setIsSubmitting(false);
     }
@@ -634,13 +541,6 @@ export default function ForeignCollaborationsPage() {
                     <label>Message</label>
                     <textarea name="message" value={formData.message} onChange={handleChange} rows={4} placeholder="Tell us about your interest..." />
                   </div>
-                  {showRecaptcha && (
-                    <div className="fc-recaptcha-group">
-                      <label>Security Verification *</label>
-                      <div ref={recaptchaRef} className="fc-recaptcha-container"></div>
-                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
-                    </div>
-                  )}
                   <button type="submit" disabled={isSubmitting} className="fc-submit-btn">
                     {isSubmitting ? (
                       <span>Sending...</span>
@@ -1636,39 +1536,6 @@ export default function ForeignCollaborationsPage() {
           box-shadow: 0 0 0 3px rgba(201, 162, 77, 0.1);
         }
 
-        .fc-recaptcha-group {
-          background: #FDFBF7;
-          padding: 20px;
-          border-radius: 8px;
-          border: 1px solid #E0DCD4;
-          margin-bottom: 20px;
-        }
-
-        .fc-recaptcha-group label {
-          display: block;
-          font-size: 12px;
-          font-weight: 700;
-          color: #1A1614;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          margin-bottom: 12px;
-        }
-
-        .fc-recaptcha-container {
-          display: flex;
-          justify-content: center;
-          margin: 12px 0;
-          overflow: hidden;
-          max-width: 100%;
-        }
-
-        .fc-recaptcha-group small {
-          display: block;
-          font-size: 12px;
-          color: #666;
-          text-align: center;
-        }
-
         .fc-submit-btn {
           width: 100%;
           padding: 20px 32px;
@@ -1847,9 +1714,6 @@ export default function ForeignCollaborationsPage() {
           .fc-email-direct a {
             font-size: 15px;
             word-break: break-all;
-          }
-          .fc-recaptcha-group {
-            padding: 14px;
           }
           .fc-phil-card-inner {
             padding: 36px 24px;

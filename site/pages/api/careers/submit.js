@@ -2,7 +2,6 @@ import { IncomingForm } from 'formidable';
 import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
-import { verifyRecaptchaToken } from '@/lib/recaptchaUtils';
 
 let pdfParseModule = null;
 
@@ -32,14 +31,6 @@ function checkRateLimit(ip) {
   recentRequests.push(now);
   rateLimitStore.set(ip, recentRequests);
   return true;
-}
-
-// Validate CAPTCHA
-function validateCaptcha(captchaAnswer, captchaQuestion) {
-  // Simple math CAPTCHA validation
-  const [num1, num2] = captchaQuestion.split('+').map(n => parseInt(n.trim()));
-  const expectedAnswer = num1 + num2;
-  return parseInt(captchaAnswer) === expectedAnswer;
 }
 
 // Check if PDF is password protected using pdf-parse
@@ -469,34 +460,12 @@ export default async function handler(req, res) {
       position: fields.position?.[0] || '',
       experience: fields.experience?.[0] || '',
       coverLetter: fields.coverLetter?.[0] || '',
-      captchaAnswer: fields.captchaAnswer?.[0] || '',
-      captchaQuestion: fields.captchaQuestion?.[0] || '',
-      recaptchaToken: fields.recaptchaToken?.[0] || '',
       ip: clientIP,
     };
 
     // Validate required fields
     if (!formData.name || !formData.email || !formData.phone || !formData.position) {
       return res.status(400).json({ error: 'All required fields must be filled.' });
-    }
-
-    if (process.env.RECAPTCHA_SECRET_KEY) {
-      if (!formData.recaptchaToken) {
-        return res.status(400).json({ error: 'Please complete the "I\'m not a robot" verification.' });
-      }
-      const recaptchaResult = await verifyRecaptchaToken(formData.recaptchaToken);
-      if (!recaptchaResult.success) {
-        return res.status(400).json({ error: 'reCAPTCHA verification failed. Please try again.' });
-      }
-    }
-
-    // Validate CAPTCHA
-    if (!formData.captchaAnswer || !formData.captchaQuestion) {
-      return res.status(400).json({ error: 'CAPTCHA verification is required.' });
-    }
-
-    if (!validateCaptcha(formData.captchaAnswer, formData.captchaQuestion)) {
-      return res.status(400).json({ error: 'CAPTCHA verification failed. Please try again.' });
     }
 
     // Validate resume file

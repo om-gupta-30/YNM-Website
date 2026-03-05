@@ -78,14 +78,18 @@ const socialLinks = [
     isGmail: true,
   },
   {
-    name: "Google Maps",
-    href: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29",
+    name: "Location",
+    isLocation: true,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
         <path d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
       </svg>
     ),
-    color: "#4285F4",
+    color: "#EA4335",
+    locations: [
+      { label: "Office", href: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29" },
+      { label: "Factory", href: "https://maps.app.goo.gl/84mogdQ3ue9tAmig7" },
+    ],
   },
 ];
 
@@ -93,15 +97,25 @@ function FloatingSocialMedia() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
+  const [showLocationDropdown, setShowLocationDropdown] = useState(false);
   const containerRef = useRef(null);
+  const locationRef = useRef(null);
 
-  // Show social icons after page loads - increased delay for better initial load
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 2500);
-
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (locationRef.current && !locationRef.current.contains(e.target)) {
+        setShowLocationDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleSocialClick = (e, social) => {
@@ -162,27 +176,69 @@ function FloatingSocialMedia() {
 
         {/* Social Links */}
         <div className="floating-social-links">
-          {socialLinks.map((social, index) => (
-            <a
-              key={social.name}
-              href={social.href}
-              target={social.isComingSoon || social.isCall ? "_self" : "_blank"}
-              rel={social.isComingSoon || social.isCall ? undefined : "noopener noreferrer"}
-              className="floating-social-link"
-              title={social.name}
-              onClick={(e) => handleSocialClick(e, social)}
-              style={{ 
-                pointerEvents: 'auto', 
-                cursor: 'pointer',
-                animationDelay: `${index * 0.05}s`
-              }}
-              data-social-color={social.color}
-            >
-            <div className="floating-social-icon-wrapper">
-              {social.icon}
-            </div>
-            </a>
-          ))}
+          {socialLinks.map((social, index) =>
+            social.isLocation ? (
+              <div
+                key={social.name}
+                className="floating-location-wrapper"
+                ref={locationRef}
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <button
+                  type="button"
+                  className="floating-social-link"
+                  title="Location"
+                  aria-label="Open location options"
+                  onClick={() => setShowLocationDropdown((prev) => !prev)}
+                  style={{ pointerEvents: "auto", cursor: "pointer" }}
+                  data-social-color={social.color}
+                >
+                  <div className="floating-social-icon-wrapper">
+                    {social.icon}
+                  </div>
+                </button>
+                {showLocationDropdown && (
+                  <div className="floating-location-dropdown">
+                    {social.locations.map((loc) => (
+                      <a
+                        key={loc.label}
+                        href={loc.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="floating-location-option"
+                        onClick={() => {
+                          setShowLocationDropdown(false);
+                          setTimeout(() => setIsExpanded(false), 300);
+                        }}
+                      >
+                        {loc.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <a
+                key={social.name}
+                href={social.href}
+                target={social.isComingSoon || social.isCall ? "_self" : "_blank"}
+                rel={social.isComingSoon || social.isCall ? undefined : "noopener noreferrer"}
+                className="floating-social-link"
+                title={social.name}
+                onClick={(e) => handleSocialClick(e, social)}
+                style={{
+                  pointerEvents: "auto",
+                  cursor: "pointer",
+                  animationDelay: `${index * 0.05}s`,
+                }}
+                data-social-color={social.color}
+              >
+                <div className="floating-social-icon-wrapper">
+                  {social.icon}
+                </div>
+              </a>
+            )
+          )}
         </div>
       </div>
     </>

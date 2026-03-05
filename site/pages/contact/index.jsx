@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,6 +14,9 @@ const companyInfo = {
   name: "YNM Safety Pan Global Trade Pvt Ltd",
   tagline: "Manufacturing & Export Excellence Since 2013",
   address: "Survey, 84P, Gowra Fountain Head, 4th Floor, Suite, 401 A, Patrika Nagar, Madhapur, Hyderabad, Telangana 500081",
+  addressMapsLink: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29",
+  factoryAddress: "Mankhal Industrial Development Area, Malikdanguda, Telangana 501359",
+  factoryMapsLink: "https://maps.app.goo.gl/84mogdQ3ue9tAmig7",
   phone: "+91 96765 75770 / +91 88850 02183",
   email: "sales@ynmsafety.com",
   workingHours: "Monday to Saturday 10 am to 6 pm IST",
@@ -25,7 +28,6 @@ const socialLinks = [
   { name: "Facebook", icon: "facebook", href: "https://www.facebook.com/profile.php?id=61583507530283", color: "#1877F2" },
   { name: "Instagram", icon: "instagram", href: "https://www.instagram.com/ynm.safety/", color: "#E4405F" },
   { name: "WhatsApp", icon: "whatsapp", href: "https://wa.me/918885002183", color: "#25D366" },
-  { name: "Google Maps", icon: "maps", href: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29", color: "#EA4335" },
 ];
 
 export default function ContactPage() {
@@ -41,83 +43,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
-  const [showRecaptcha, setShowRecaptcha] = useState(false);
   const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-  const recaptchaRef = useRef(null);
-  const recaptchaWidgetId = useRef(null);
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setShowRecaptcha(!!siteKey);
-    }
-  }, [siteKey]);
-
-  // Load reCAPTCHA script and render widget explicitly
-  useEffect(() => {
-    if (!siteKey) return;
-    if (!showRecaptcha) return;
-    if (!recaptchaRef.current) return;
-
-    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
-    
-    const initRecaptcha = () => {
-      if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && recaptchaWidgetId.current === null) {
-        try {
-          recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-            sitekey: siteKey,
-            callback: (token) => {
-              setRecaptchaToken(token);
-            },
-            'expired-callback': () => {
-              setRecaptchaToken(null);
-            },
-            'error-callback': () => {
-              setRecaptchaToken(null);
-            }
-          });
-        } catch (error) {
-          console.error('[Contact] reCAPTCHA render error:', error);
-        }
-      }
-    };
-
-    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
-      initRecaptcha();
-      return;
-    }
-
-    const callbackName = `recaptchaCallback_contact_${Math.floor(Math.random() * 1000000)}`;
-    
-    window[callbackName] = () => {
-      initRecaptcha();
-      delete window[callbackName];
-    };
-
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
-    script.async = true;
-    script.defer = true;
-    script.onerror = () => {
-      delete window[callbackName];
-    };
-
-    document.body.appendChild(script);
-
-    return () => {
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        try {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        } catch (error) {
-          // Ignore cleanup errors
-        }
-      }
-      if (window[callbackName]) {
-        delete window[callbackName];
-      }
-    };
-  }, [showRecaptcha, siteKey]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -149,19 +75,12 @@ export default function ContactPage() {
     if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
 
     try {
-      if (showRecaptcha && !recaptchaToken) {
-        throw new Error('Please complete the "I\'m not a robot" verification');
-      }
-
       const response = await fetch('/api/contact/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          recaptchaToken: recaptchaToken || '',
-        }),
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
@@ -173,12 +92,6 @@ export default function ContactPage() {
       // Success!
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
-      setRecaptchaToken(null);
-      
-      // Reset reCAPTCHA
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        window.grecaptcha.reset(recaptchaWidgetId.current);
-      }
       
       // Auto-hide success message after 10 seconds
       setTimeout(() => {
@@ -188,10 +101,6 @@ export default function ContactPage() {
     } catch (err) {
       console.error('Form submission error:', err);
       setError(err.message || 'Failed to send message. Please try again.');
-      // Reset reCAPTCHA on error
-      if (window.grecaptcha && recaptchaWidgetId.current !== null) {
-        window.grecaptcha.reset(recaptchaWidgetId.current);
-      }
     } finally {
       setIsSubmitting(false);
     }
@@ -239,6 +148,12 @@ export default function ContactPage() {
         return (
           <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
             <path d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+          </svg>
+        );
+      case "factory":
+        return (
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path d="M22 22H2V10l7-3v3l7-3v3l6-3v15zM12 9.5l-7 3V20h14v-7.5l-7-3zM10 14h4v4h-4v-4z"/>
           </svg>
         );
       case "twitter":
@@ -438,15 +353,6 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* reCAPTCHA - ONLY on production domains */}
-                  {showRecaptcha && (
-                    <div className="form-group recaptcha-group">
-                      <label>Security Verification *</label>
-                      <div ref={recaptchaRef} className="recaptcha-container"></div>
-                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
-                    </div>
-                  )}
-
                   <button type="submit" className="contact-btn" disabled={isSubmitting}>
                     {isSubmitting ? (
                       <>
@@ -484,6 +390,26 @@ export default function ContactPage() {
                   <div className="detail-content">
                     <h4>Office Address</h4>
                     <p>{companyInfo.address}</p>
+                    <a href={companyInfo.addressMapsLink} target="_blank" rel="noopener noreferrer" className="maps-button">
+                      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                        <path d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+                      </svg>
+                      View on Google Maps
+                    </a>
+                  </div>
+                </div>
+
+                <div className="detail-item">
+                  <div className="detail-icon">🏭</div>
+                  <div className="detail-content">
+                    <h4>Factory Address</h4>
+                    <p>{companyInfo.factoryAddress}</p>
+                    <a href={companyInfo.factoryMapsLink} target="_blank" rel="noopener noreferrer" className="maps-button">
+                      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                        <path d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+                      </svg>
+                      View on Google Maps
+                    </a>
                   </div>
                 </div>
 
@@ -733,21 +659,6 @@ export default function ContactPage() {
           margin-top: 4px;
         }
 
-        .recaptcha-group {
-          background: #F7F3EA;
-          padding: 20px;
-          border-radius: 12px;
-          border: 2px solid #E6D3A3;
-        }
-
-        .recaptcha-container {
-          display: flex;
-          justify-content: center;
-          margin: 12px 0;
-          overflow: hidden;
-          max-width: 100%;
-        }
-
         .contact-btn {
           display: inline-flex;
           align-items: center;
@@ -976,6 +887,35 @@ export default function ContactPage() {
           overflow-wrap: break-word;
         }
 
+        .maps-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          margin-top: 10px;
+          padding: 8px 16px;
+          background: linear-gradient(135deg, #EA4335, #d63629);
+          color: white;
+          border: none;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 600;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 3px 12px rgba(234, 67, 53, 0.3);
+        }
+
+        .maps-button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 5px 16px rgba(234, 67, 53, 0.4);
+          background: linear-gradient(135deg, #d63629, #EA4335);
+        }
+
+        .maps-button svg {
+          width: 14px;
+          height: 14px;
+        }
+
         /* Social Section - Full width centered */
         .social-section {
           background: #fff;
@@ -1174,10 +1114,6 @@ export default function ContactPage() {
             max-width: 100%;
           }
 
-          .recaptcha-group {
-            padding: 14px;
-          }
-          
           .india-map-section {
             padding: 40px 14px 60px;
           }

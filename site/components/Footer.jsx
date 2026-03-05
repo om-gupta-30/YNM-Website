@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { memo, useState } from "react";
+import { memo, useState, useRef, useEffect } from "react";
 
 const quickLinksConfig = [
   { key: "home", href: "/" },
@@ -64,19 +64,35 @@ const socialLinks = [
     ),
   },
   {
-    name: "Google Maps",
-    href: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29",
+    name: "Location",
+    isLocation: true,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
         <path d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
       </svg>
     ),
+    locations: [
+      { label: "Office", href: "https://maps.app.goo.gl/XVTWwaJb5YofQUv29" },
+      { label: "Factory", href: "https://maps.app.goo.gl/84mogdQ3ue9tAmig7" },
+    ],
   },
 ];
 
 function Footer({ footerData: propFooterData }) {
   const footerData = propFooterData || null;
   const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
+  const [showLocationDropdown, setShowLocationDropdown] = useState(false);
+  const locationRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (locationRef.current && !locationRef.current.contains(e.target)) {
+        setShowLocationDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const quickLinksFromT = quickLinksConfig.map(({ key, href }) => ({ 
     label: key === "home" ? "Home" :
@@ -144,21 +160,55 @@ function Footer({ footerData: propFooterData }) {
           
           {/* Social Media Icons */}
           <div className="ft-social">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.href}
-                target={social.isComingSoon ? "_self" : "_blank"}
-                rel={social.isComingSoon ? undefined : "noopener noreferrer"}
-                className={`ft-social-link ${social.name.toLowerCase().replace(' ', '-')}`}
-                title={social.name}
-                aria-label={`Follow YNM Safety on ${social.name}`}
-                onClick={(e) => handleSocialClick(e, social)}
-                style={{ pointerEvents: 'auto', cursor: 'pointer' }}
-              >
-                {social.icon}
-              </a>
-            ))}
+            {socialLinks.map((social) =>
+              social.isLocation ? (
+                <div
+                  key={social.name}
+                  className="ft-location-wrapper"
+                  ref={locationRef}
+                >
+                  <button
+                    type="button"
+                    className="ft-social-link location"
+                    title={social.name}
+                    aria-label="Open location options"
+                    onClick={() => setShowLocationDropdown((prev) => !prev)}
+                  >
+                    {social.icon}
+                  </button>
+                  {showLocationDropdown && (
+                    <div className="ft-location-dropdown">
+                      {social.locations.map((loc) => (
+                        <a
+                          key={loc.label}
+                          href={loc.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ft-location-option"
+                          onClick={() => setShowLocationDropdown(false)}
+                        >
+                          {loc.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target={social.isComingSoon ? "_self" : "_blank"}
+                  rel={social.isComingSoon ? undefined : "noopener noreferrer"}
+                  className={`ft-social-link ${social.name.toLowerCase().replace(' ', '-')}`}
+                  title={social.name}
+                  aria-label={`Follow YNM Safety on ${social.name}`}
+                  onClick={(e) => handleSocialClick(e, social)}
+                  style={{ pointerEvents: 'auto', cursor: 'pointer' }}
+                >
+                  {social.icon}
+                </a>
+              )
+            )}
           </div>
 
           <p className="ft-copyright">
@@ -230,7 +280,8 @@ function Footer({ footerData: propFooterData }) {
                 </div>
               );
             })()}
-            {address && <p className="ft-contact-item">Address: {address}</p>}
+            {address && <p className="ft-contact-item">Office: {address}</p>}
+            <p className="ft-contact-item">Factory: Mankhal Industrial Development Area, Malikdanguda, Telangana 501359</p>
           </div>
           
         </div>

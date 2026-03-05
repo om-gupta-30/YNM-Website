@@ -6304,10 +6304,63 @@ div > canvas:only-child {
   color: #fff;
 }
 
-.ft-social-link.google-maps:hover {
+.ft-social-link.location:hover {
   background: #EA4335;
   border-color: #EA4335;
   color: #fff;
+}
+
+/* Footer Location Dropdown */
+.ft-location-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.ft-location-wrapper .ft-social-link {
+  border: 1px solid rgba(201, 162, 77, 0.3);
+  padding: 0;
+}
+
+.ft-location-dropdown {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2a1a0a;
+  border: 1px solid rgba(201, 162, 77, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  min-width: 120px;
+  animation: ftDropdownFadeIn 0.2s ease;
+}
+
+@keyframes ftDropdownFadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(6px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.ft-location-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  color: var(--antique-gold);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ft-location-option:hover {
+  background: rgba(201, 162, 77, 0.15);
+  color: #fff;
+}
+
+.ft-location-option + .ft-location-option {
+  border-top: 1px solid rgba(201, 162, 77, 0.15);
 }
 
 /* WhatsApp Coming Soon Popup */
@@ -12249,6 +12302,54 @@ img {
   color: #ffffff;
 }
 
+
+/* Floating Location Dropdown */
+.floating-location-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.floating-location-dropdown {
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2a1a0a;
+  border: 1px solid rgba(201, 162, 77, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  min-width: 120px;
+  animation: floatingDropdownFadeIn 0.2s ease;
+}
+
+@keyframes floatingDropdownFadeIn {
+  from { opacity: 0; transform: translateY(-50%) translateX(-6px); }
+  to { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+
+.floating-location-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  color: var(--antique-gold);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.floating-location-option:hover {
+  background: rgba(201, 162, 77, 0.15);
+  color: #fff;
+}
+
+.floating-location-option + .floating-location-option {
+  border-top: 1px solid rgba(201, 162, 77, 0.15);
+}
 
 /* WhatsApp Coming Soon Popup */
 .floating-social-popup {

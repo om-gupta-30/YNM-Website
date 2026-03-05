@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -69,17 +69,6 @@ const openPositions = [
 ];
 
 export default function CareersPage() {
-  // Generate CAPTCHA
-  const generateCaptcha = () => {
-    const num1 = Math.floor(Math.random() * 10) + 1;
-    const num2 = Math.floor(Math.random() * 10) + 1;
-    return { question: `${num1} + ${num2}`, answer: num1 + num2 };
-  };
-
-  // Initialize CAPTCHA with a default to avoid hydration mismatch
-  // Will be regenerated in useEffect on client side
-  const [captcha, setCaptcha] = useState({ question: '0 + 0', answer: 0 });
-  const [captchaInitialized, setCaptchaInitialized] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -88,113 +77,12 @@ export default function CareersPage() {
     experience: "",
     resume: null,
     coverLetter: "",
-    captchaAnswer: "",
   });
   const [fieldErrors, setFieldErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
   const [fileError, setFileError] = useState(null);
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-  const [showRecaptcha, setShowRecaptcha] = useState(false);
-  const recaptchaRef = useRef(null);
-  const recaptchaWidgetId = useRef(null);
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
-  // Initialize CAPTCHA on client side only (fixes hydration error)
-  useEffect(() => {
-    if (!captchaInitialized) {
-      setCaptcha(generateCaptcha());
-      setCaptchaInitialized(true);
-    }
-  }, [captchaInitialized]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setShowRecaptcha(!!siteKey);
-    }
-  }, [siteKey]);
-
-  // Load reCAPTCHA script (only when site key is configured AND on allowed domains)
-  useEffect(() => {
-    if (!siteKey) return;
-    if (!showRecaptcha) return; // Only load on allowed domains
-    // Wait for recaptchaRef to be available
-    if (!recaptchaRef.current) return;
-
-    // Check if reCAPTCHA is already loaded
-    const existingScript = document.querySelector('script[src*="recaptcha/api.js"]');
-    
-    const initRecaptcha = () => {
-      if (window.grecaptcha && window.grecaptcha.render && recaptchaRef.current && !recaptchaWidgetId.current) {
-        try {
-          recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-            sitekey: siteKey,
-            callback: (token) => {
-              setRecaptchaToken(token);
-            },
-            'expired-callback': () => {
-              setRecaptchaToken(null);
-            },
-            'error-callback': () => {
-              setRecaptchaToken(null);
-            }
-          });
-          console.log('[Careers] reCAPTCHA widget rendered successfully');
-        } catch (error) {
-          console.error('[Careers] reCAPTCHA render error:', error);
-        }
-      }
-    };
-
-    // If script already exists and grecaptcha is available
-    if (existingScript && window.grecaptcha && window.grecaptcha.render) {
-      initRecaptcha();
-      return;
-    }
-
-    // Create a unique callback name (using ref to avoid hydration issues)
-    // Use a counter-based approach instead of Date.now() during render
-    const callbackCounter = Math.floor(Math.random() * 1000000);
-    const callbackName = `recaptchaCallback_${callbackCounter}`;
-    
-    // Set up global callback
-    window[callbackName] = () => {
-      console.log('[Careers] reCAPTCHA script loaded, initializing widget...');
-      initRecaptcha();
-      // Clean up callback after use
-      if (window[callbackName]) {
-        delete window[callbackName];
-      }
-    };
-
-    // Load reCAPTCHA v2 script
-    console.log('[Careers] Loading reCAPTCHA script...');
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?onload=${callbackName}&render=explicit`;
-    script.async = true;
-    script.defer = true;
-    script.onerror = () => {
-      console.error('[Careers] Failed to load reCAPTCHA script');
-      delete window[callbackName];
-    };
-
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup
-      if (window.grecaptcha && recaptchaWidgetId.current) {
-        try {
-          window.grecaptcha.reset(recaptchaWidgetId.current);
-        } catch (error) {
-          // Ignore cleanup errors
-        }
-      }
-      if (window[callbackName]) {
-        delete window[callbackName];
-      }
-    };
-  }, [showRecaptcha, siteKey]);
 
   const handleChange = (e) => {
     if (e.target.type === "file") {
@@ -270,20 +158,6 @@ export default function CareersPage() {
     setFieldErrors(errs);
     if (Object.keys(errs).length > 0) { setIsSubmitting(false); return; }
 
-    if (showRecaptcha && !recaptchaToken) {
-      setError('Please complete the "I\'m not a robot" verification.');
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Validate CAPTCHA
-    if (parseInt(formData.captchaAnswer) !== captcha.answer) {
-      setError('CAPTCHA verification failed. Please try again.');
-      setCaptcha(generateCaptcha());
-      setIsSubmitting(false);
-      return;
-    }
-
     // Validate resume file
     if (!formData.resume) {
       setError('Please upload your resume. Only PDF files are accepted.');
@@ -310,9 +184,6 @@ export default function CareersPage() {
       formDataToSend.append('experience', formData.experience);
       formDataToSend.append('coverLetter', formData.coverLetter);
       formDataToSend.append('resume', formData.resume);
-      formDataToSend.append('captchaAnswer', formData.captchaAnswer);
-      formDataToSend.append('captchaQuestion', captcha.question);
-      formDataToSend.append('recaptchaToken', recaptchaToken || '');
 
       const response = await fetch('/api/careers/submit', {
         method: 'POST',
@@ -334,15 +205,8 @@ export default function CareersPage() {
         experience: "", 
         resume: null, 
         coverLetter: "",
-        captchaAnswer: ""
       });
-      setCaptcha(generateCaptcha());
       setFileError(null);
-      setRecaptchaToken(null);
-      // Reset reCAPTCHA
-      if (window.grecaptcha && recaptchaWidgetId.current) {
-        window.grecaptcha.reset(recaptchaWidgetId.current);
-      }
       
       setTimeout(() => {
         setSubmitted(false);
@@ -351,7 +215,6 @@ export default function CareersPage() {
     } catch (err) {
       console.error('Form submission error:', err);
       setError(err.message || 'Failed to submit application. Please try again.');
-      setCaptcha(generateCaptcha());
     } finally {
       setIsSubmitting(false);
     }
@@ -579,45 +442,6 @@ export default function CareersPage() {
                       rows={5}
                       placeholder="Tell us why you'd be a great fit for this role..."
                     />
-                  </div>
-
-                  {/* reCAPTCHA (only on allowed production domains) */}
-                  {showRecaptcha && (
-                    <div className="form-group recaptcha-group">
-                      <label>Security Verification *</label>
-                      <div ref={recaptchaRef} className="recaptcha-container"></div>
-                      <small>Please complete the &quot;I&apos;m not a robot&quot; verification.</small>
-                    </div>
-                  )}
-
-                  {/* CAPTCHA */}
-                  <div className="form-group captcha-group">
-                    <label htmlFor="captchaAnswer">Additional Security Verification *</label>
-                    <div className="captcha-container">
-                      <div className="captcha-question">
-                        <span>What is {captcha.question}?</span>
-                        <button 
-                          type="button" 
-                          className="captcha-refresh"
-                          onClick={() => setCaptcha(generateCaptcha())}
-                          title="Refresh CAPTCHA"
-                        >
-                          🔄
-                        </button>
-                      </div>
-                      <input
-                        type="number"
-                        id="captchaAnswer"
-                        name="captchaAnswer"
-                        value={formData.captchaAnswer}
-                        onChange={handleChange}
-                        required
-                        placeholder="Enter answer"
-                        min="0"
-                        max="100"
-                      />
-                    </div>
-                    <small>Please solve this simple math problem to verify you&apos;re human.</small>
                   </div>
 
                   <button type="submit" className="careers-btn" disabled={isSubmitting}>
@@ -946,73 +770,6 @@ export default function CareersPage() {
           color: #16a34a;
           margin-top: 4px;
           font-weight: 600;
-        }
-
-        .captcha-group {
-          background: #F7F3EA;
-          padding: 20px;
-          border-radius: 12px;
-          border: 2px solid #E6D3A3;
-        }
-
-        .captcha-container {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-        }
-
-        .captcha-question {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          font-size: 18px;
-          font-weight: 700;
-          color: #74060D;
-          padding: 12px 16px;
-          background: white;
-          border-radius: 8px;
-          border: 2px solid #C9A24D;
-        }
-
-        .captcha-question span {
-          flex: 1;
-        }
-
-        .captcha-refresh {
-          background: #C9A24D;
-          border: none;
-          border-radius: 6px;
-          padding: 6px 10px;
-          cursor: pointer;
-          font-size: 16px;
-          transition: all 0.2s ease;
-        }
-
-        .captcha-refresh:hover {
-          background: #E6D3A3;
-          transform: rotate(90deg);
-        }
-
-        .captcha-group input[type="number"] {
-          width: 100%;
-          max-width: 200px;
-        }
-
-        .recaptcha-group {
-          background: #F7F3EA;
-          padding: 20px;
-          border-radius: 12px;
-          border: 2px solid #E6D3A3;
-        }
-
-        .recaptcha-container {
-          display: flex;
-          justify-content: center;
-          margin: 12px 0;
-        }
-
-        .recaptcha-container iframe {
-          border-radius: 4px;
         }
 
         .form-group input:focus,
