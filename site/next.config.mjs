@@ -235,7 +235,7 @@ const nextConfig = {
       },
       // Catch-all: any root URL ending with -manufacturers → /products/slug
       {
-        source: '/:slug(.+-manufacturers)',
+        source: '/:slug([^/]+-manufacturers)',
         destination: '/products/:slug',
         permanent: true,
       },
