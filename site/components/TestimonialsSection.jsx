@@ -68,7 +68,7 @@ export default function TestimonialsSection({ testimonialsData: propTestimonials
                         fill
                         style={{ objectFit: "cover" }}
                         loading="lazy"
-                        onError={(e) => { e.target.style.display = "none"; }}
+                        onError={(e) => { if (e?.target) e.target.style.display = "none"; }}
                       />
                     </div>
 

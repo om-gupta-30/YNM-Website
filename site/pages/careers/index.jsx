@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -213,7 +212,6 @@ export default function CareersPage() {
       }, 10000);
 
     } catch (err) {
-      console.error('Form submission error:', err);
       setError(err.message || 'Failed to submit application. Please try again.');
     } finally {
       setIsSubmitting(false);

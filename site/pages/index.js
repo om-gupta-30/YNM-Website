@@ -166,24 +166,24 @@ const fallbackServicesData = [
 ];
 
 const fallbackBrandsData = [
-  { id: "1", name: "IndianOil", logo: "/assets/brand-logos/indiaoil-png.jpg" },
-  { id: "2", name: "Ramoji Film City", logo: "/assets/brand-logos/ramoji-film-city-logo.png" },
+  { id: "1", name: "IndianOil", logo: "/assets/brand-logos/indiaoil-png.webp" },
+  { id: "2", name: "Ramoji Film City", logo: "/assets/brand-logos/ramoji-film-city-logo.webp" },
   { id: "3", name: "Prestige Group", logo: "/assets/brand-logos/prestige-logo.webp" },
-  { id: "4", name: "Tech Mahindra", logo: "/assets/brand-logos/tech-mahindra-logo.jpg" },
-  { id: "5", name: "GMR", logo: "/assets/brand-logos/gmr-group-logo-pngsource-rk4jm0fn.png" },
-  { id: "6", name: "Tom Tailor", logo: "/assets/brand-logos/tom-tailor-sportswear-logo.png" },
-  { id: "7", name: "NCC Limited", logo: "/assets/brand-logos/ncc-logo.png" },
-  { id: "8", name: "NSL Group", logo: "/assets/brand-logos/nsl-logo.png" },
-  { id: "9", name: "HCL", logo: "/assets/brand-logos/hcl-logo.png" },
-  { id: "10", name: "Alekhya Homes", logo: "/assets/brand-logos/alekhya-homes-2023-logo.png" },
-  { id: "11", name: "GVK EMRI", logo: "/assets/brand-logos/gvk-logo.png" },
-  { id: "12", name: "NTPC", logo: "/assets/brand-logos/ntpc-logo.png" },
-  { id: "13", name: "Power Grid", logo: "/assets/brand-logos/powergrid-logo.png" },
-  { id: "14", name: "Hyundai Glovis", logo: "/assets/brand-logos/hyundai-glovis-logo.png" },
-  { id: "15", name: "NPCI International", logo: "/assets/brand-logos/npci-logo.png" },
-  { id: "16", name: "BSCPL Infrastructure", logo: "/assets/brand-logos/bscpl-logo.png" },
-  { id: "17", name: "AT&T", logo: "/assets/brand-logos/att-logo-transparent.png" },
-  { id: "18", name: "Aparna Constructions", logo: "/assets/brand-logos/aparna-constructions.png" },
+  { id: "4", name: "Tech Mahindra", logo: "/assets/brand-logos/tech-mahindra-logo.webp" },
+  { id: "5", name: "GMR", logo: "/assets/brand-logos/gmr-group-logo-pngsource-rk4jm0fn.webp" },
+  { id: "6", name: "Tom Tailor", logo: "/assets/brand-logos/tom-tailor-sportswear-logo.webp" },
+  { id: "7", name: "NCC Limited", logo: "/assets/brand-logos/ncc-logo.webp" },
+  { id: "8", name: "NSL Group", logo: "/assets/brand-logos/nsl-logo.webp" },
+  { id: "9", name: "HCL", logo: "/assets/brand-logos/hcl-logo.webp" },
+  { id: "10", name: "Alekhya Homes", logo: "/assets/brand-logos/alekhya-homes-2023-logo.webp" },
+  { id: "11", name: "GVK EMRI", logo: "/assets/brand-logos/gvk-logo.webp" },
+  { id: "12", name: "NTPC", logo: "/assets/brand-logos/ntpc-logo.webp" },
+  { id: "13", name: "Power Grid", logo: "/assets/brand-logos/powergrid-logo.webp" },
+  { id: "14", name: "Hyundai Glovis", logo: "/assets/brand-logos/hyundai-glovis-logo.webp" },
+  { id: "15", name: "NPCI International", logo: "/assets/brand-logos/npci-logo.webp" },
+  { id: "16", name: "BSCPL Infrastructure", logo: "/assets/brand-logos/bscpl-logo.webp" },
+  { id: "17", name: "AT&T", logo: "/assets/brand-logos/att-logo-transparent.webp" },
+  { id: "18", name: "Aparna Constructions", logo: "/assets/brand-logos/aparna-constructions.webp" },
 ];
 
 const fallbackTestimonialsData = [
@@ -522,13 +522,6 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
           }}
         />
         
-        {/* Preload LCP image for faster rendering - WebP for better performance */}
-        <link rel="preload" as="image" href="/assets/hero-image.webp" type="image/webp" fetchPriority="high" />
-        
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://flagcdn.com" />
       </Head>
       <Hero heroData={heroData} navLinks={navLinks} />
       <USPSection uspData={uspData} />

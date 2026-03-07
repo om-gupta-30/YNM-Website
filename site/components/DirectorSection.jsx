@@ -56,7 +56,6 @@ export default function DirectorSection({ directorData: propDirectorData }) {
                   }}
                   loading="lazy"
                   onError={(e) => { 
-                    console.error("Image failed to load:", photoSrc);
                     e.target.style.display = "none"; 
                   }}
                 />

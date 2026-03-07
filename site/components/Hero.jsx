@@ -15,6 +15,7 @@ const heroNavConfig = [
   { key: "team", href: "/our-director" },
   { key: "foreignCollaborations", href: "/foreign-collaborations" },
   { key: "investor", href: "/investor-relations" },
+  { key: "partnerWithUs", href: "/partner-with-us" },
   { key: "careers", href: "/careers" },
   { key: "contact", href: "/contact" },
 ];
@@ -37,6 +38,7 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
   const subtitleRef = useRef(null);
   const [currentTagline, setCurrentTagline] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [toast, setToast] = useState(null);
 
   const closeMobileMenu = useCallback(() => setMobileMenuOpen(false), []);
 
@@ -100,15 +102,16 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
                key === "team" ? "Our Director" :
                key === "foreignCollaborations" ? "Foreign Collaborations" :
                key === "investor" ? "Investor Relations" :
+               key === "partnerWithUs" ? "Partner With Us" :
                key === "careers" ? "Careers" :
                key === "contact" ? "Contact Us" : key, 
         href 
       }));
 
-  // Coming soon handler
   const handleComingSoon = (e) => {
     e.preventDefault();
-    alert("🚧 Coming Soon! This feature is under development.");
+    setToast("Coming Soon! This feature is under development.");
+    setTimeout(() => setToast(null), 3000);
   };
 
   // Fast smooth scroll function
@@ -606,6 +609,12 @@ export default function Hero({ heroData: propHeroData, navLinks: propNavLinks })
           <div className="mouse-wheel" />
         </div>
       </section>
+
+      {toast && (
+        <div className="hero-toast" role="status" aria-live="polite">
+          {toast}
+        </div>
+      )}
     </>
   );
 }

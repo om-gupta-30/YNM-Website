@@ -16,18 +16,18 @@ export default function Document() {
         {/* Performance: Preload critical font */}
         <link
           rel="preload"
-          href="/fonts/Montserrat[wght].ttf"
+          href="/fonts/Montserrat.woff2"
           as="font"
-          type="font/ttf"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
         
         {/* Performance: Preload LCP hero image */}
         <link
           rel="preload"
-          href="/assets/hero-image.png"
+          href="/assets/hero-image.webp"
           as="image"
-          type="image/png"
+          type="image/webp"
           fetchPriority="high"
         />
         

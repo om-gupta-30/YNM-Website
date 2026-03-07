@@ -12,6 +12,7 @@ const quickLinksConfig = [
   { key: "team", href: "/our-director" },
   { key: "foreignCollaborations", href: "/foreign-collaborations" },
   { key: "investor", href: "/investor-relations" },
+  { key: "partnerWithUs", href: "/partner-with-us" },
   { key: "careers", href: "/careers" },
   { key: "contact", href: "/contact" },
 ];
@@ -102,6 +103,7 @@ function Footer({ footerData: propFooterData }) {
            key === "team" ? "Our Director" :
            key === "foreignCollaborations" ? "Foreign Collaborations" :
            key === "investor" ? "Investor Relations" :
+           key === "partnerWithUs" ? "Partner With Us" :
            key === "careers" ? "Careers" :
            key === "contact" ? "Contact Us" : key, 
     href 

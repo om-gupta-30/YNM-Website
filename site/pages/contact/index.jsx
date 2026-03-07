@@ -99,7 +99,6 @@ export default function ContactPage() {
       }, 10000);
 
     } catch (err) {
-      console.error('Form submission error:', err);
       setError(err.message || 'Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);

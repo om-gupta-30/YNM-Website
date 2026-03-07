@@ -65,7 +65,7 @@ export default function EmployeesSection({ employeesData: propEmployeesData, hig
                         ...(isDirector && { objectPosition: "center 18%" }),
                       }}
                       loading="lazy"
-                      onError={(e) => { e.target.style.display = "none"; }}
+                      onError={(e) => { if (e?.target) e.target.style.display = "none"; }}
                     />
                   </div>
                   <div className="employee-photo-glow" />

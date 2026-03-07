@@ -24,10 +24,8 @@ const nextConfig = {
   // Packages that Turbopack should not bundle (use native require)
   serverExternalPackages: ['googleapis', 'google-auth-library', 'pdf-parse'],
 
-  // Experimental performance features
   experimental: {
-    // Optimize CSS loading
-    optimizeCss: false, // Keep false to avoid crashing
+    optimizeCss: true,
   },
   
   // Efficient cache lifetimes for static assets (PageSpeed: "Use efficient cache lifetimes")

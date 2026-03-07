@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "ajv": "^8.18.0",
+    "critters": "^0.0.23",
     "eslint": "^8",
     "eslint-config-next": "15.0.7",
     "postcss": "^8",

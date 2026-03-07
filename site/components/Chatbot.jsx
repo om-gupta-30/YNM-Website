@@ -415,7 +415,7 @@ export default function Chatbot() {
         setMessages(prev => [...prev, thankYouMessage]);
       }
     } catch (err) {
-      console.error('Error submitting lead form:', err);
+      // Silently handle lead form errors
     }
     
     setShowLeadForm(false);
@@ -528,7 +528,6 @@ export default function Chatbot() {
       setShowQuickActions(true);
     } catch (err) {
       if (err.name === 'AbortError') return;
-      console.error('Error getting AI response:', err);
       setError(err.message || 'Failed to get response.');
 
       setMessages(prev => [...prev, {
