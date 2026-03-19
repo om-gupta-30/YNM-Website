@@ -68,8 +68,8 @@ export default function Document() {
           dangerouslySetInnerHTML={{
             __html: `
               /* Prevent layout shift before CSS loads */
-              html { scroll-behavior: auto; overflow-x: hidden; }
-              body { margin: 0; overflow-x: hidden; }
+              html { scroll-behavior: auto; overflow-x: hidden; width: 100%; }
+              body { margin: 0; overflow-x: hidden; width: 100%; max-width: 100%; }
               /* Critical hero section styles for faster LCP */
               #hero { position: relative; min-height: 100vh; width: 100%; background: #74060D; }
             `,

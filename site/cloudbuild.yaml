@@ -1,5 +1,9 @@
+# Cloud Build for YNM website - Cloud Run deployment
+# Project: gen-lang-client-0473608308 | Service: ynm-website | Region: asia-south1
+# Build args: Use Secret Manager (if secrets exist) or pass via --substitutions
+
 steps:
-  # Build the Docker image with build arguments
+  # Build the Docker image with build args
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
@@ -10,13 +14,13 @@ steps:
       - '-t'
       - '${_REGION}-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/${_SERVICE_NAME}:$BUILD_ID'
       - '.'
-  
+
   # Push the image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
       - '${_REGION}-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/${_SERVICE_NAME}:$BUILD_ID'
-  
+
   # Deploy to Cloud Run with secrets from Secret Manager
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
@@ -33,15 +37,17 @@ steps:
       - '--allow-unauthenticated'
       - '--port'
       - '3000'
+      - '--project'
+      - '${_PROJECT_ID}'
       - '--set-secrets'
       - 'GOOGLE_SHEET_ID=ynm-website_GOOGLE_SHEET_ID:latest,GOOGLE_SERVICE_ACCOUNT_EMAIL=ynm-website_GOOGLE_SERVICE_ACCOUNT_EMAIL:latest,GOOGLE_PRIVATE_KEY=ynm-website_GOOGLE_PRIVATE_KEY:latest,GOOGLE_GEMINI_API_KEY=ynm-website_GOOGLE_GEMINI_API_KEY:latest,GMAIL_USER=ynm-website_GMAIL_USER:latest,GMAIL_APP_PASSWORD=ynm-website_GMAIL_APP_PASSWORD:latest,HR_EMAIL=ynm-website_HR_EMAIL:latest,CAREERS_NOREPLY_FROM=ynm-website_CAREERS_NOREPLY_FROM:latest,RECAPTCHA_SECRET_KEY=ynm-website_RECAPTCHA_SECRET_KEY:latest,GOOGLE_MAPS_API_KEY=ynm-website_GOOGLE_MAPS_API_KEY:latest'
 
-# Pass real values via: gcloud builds submit --substitutions=_NEXT_PUBLIC_RECAPTCHA_SITE_KEY=xxx,_NEXT_PUBLIC_GA_ID=xxx
 substitutions:
+  _PROJECT_ID: 'gen-lang-client-0473608308'
   _SERVICE_NAME: 'ynm-website'
   _REGION: 'asia-south1'
   _NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ''
-  _NEXT_PUBLIC_GA_ID: ''
+  _NEXT_PUBLIC_GA_ID: 'G-KXRFYK5QTK'
 
 images:
   - '${_REGION}-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/${_SERVICE_NAME}:$BUILD_ID'

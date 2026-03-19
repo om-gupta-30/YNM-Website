@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
+import { trackFormStart, trackAdsConversion } from "@/lib/gtag";
 
 const PlacesAutocomplete = dynamic(() => import("@/components/PlacesAutocomplete"), { ssr: false });
 
@@ -119,6 +120,14 @@ export default function ForeignCollaborationsPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [activeRegion, setActiveRegion] = useState(0);
+  const formStartFired = useRef(false);
+
+  const handleFormFocus = () => {
+    if (!formStartFired.current) {
+      formStartFired.current = true;
+      trackFormStart("foreign_collaborations");
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -155,6 +164,7 @@ export default function ForeignCollaborationsPage() {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        trackAdsConversion("foreign_collaborations");
         setSubmitted(true);
         setFormData({ companyName: "", country: "", contactName: "", email: "", collaborationType: "", message: "" });
         setTimeout(() => setSubmitted(false), 8000);
@@ -491,7 +501,7 @@ export default function ForeignCollaborationsPage() {
                   <p>We&apos;ve received your inquiry and will be in touch soon.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="fc-form">
+                <form onSubmit={handleSubmit} onFocus={handleFormFocus} className="fc-form">
                   {error && (
                     <div style={{ 
                       padding: '12px 16px', 

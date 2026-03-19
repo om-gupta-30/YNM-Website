@@ -426,9 +426,10 @@ img {
 }
 
 /* Prevent text from overflowing */
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, a, span, li, td, th, label {
   overflow-wrap: break-word;
   word-wrap: break-word;
+  word-break: break-word;
 }
 
 /* ========================================
@@ -546,6 +547,57 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 @media (max-width: 480px) {
+  .responsive-container,
+  .site-container,
+  .container-standard,
+  .responsive-container-wide,
+  .container-wide,
+  .container-narrow,
+  .container-full {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ========================================
+   MOBILE OVERFLOW FIXES
+   Prevent text/elements from being cut off on small screens
+   ======================================== */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Flex/grid children can overflow - min-width: 0 allows shrinking */
+  .flex > *, .grid > *, [class*="flex"] > *, [class*="grid"] > *,
+  .flex-1, .flex-grow {
+    min-width: 0;
+  }
+
+  /* Ensure all text wraps - long URLs, emails, etc. */
+  body, .responsive-container, .site-container, .container-standard,
+  .container-wide, .container-narrow, .container-full,
+  [class*="section"], [class*="content"] {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Tables and forms - prevent overflow */
+  table, input, textarea, select, button {
+    max-width: 100%;
+  }
+
+  /* Images and media */
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra small phones (320px) - more padding */
+@media (max-width: 360px) {
   .responsive-container,
   .site-container,
   .container-standard,
@@ -6193,6 +6245,32 @@ div > canvas:only-child {
   opacity: 0.8;
 }
 
+.ft-legal-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ft-legal-link {
+  font-size: clamp(0.5625rem, 0.55rem + 0.1vw, 0.625rem);
+  color: rgba(201, 162, 77, 0.9);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.ft-legal-link:hover {
+  color: #C9A24D;
+}
+
+.ft-legal-sep {
+  color: rgba(201, 162, 77, 0.5);
+  font-size: 0.5rem;
+}
+
 .ft-credit {
   font-size: clamp(0.5625rem, 0.55rem + 0.15vw, 0.625rem);
   color: rgba(255, 255, 255, 0.5);
@@ -6561,6 +6639,10 @@ div > canvas:only-child {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .ft-legal-links {
+    justify-content: center;
   }
 
   .ft-logo-wrap-new {
@@ -14337,6 +14419,93 @@ html {
 
 main, article, section, header, footer, aside {
   max-width: 100%;
+}
+
+/* ========================================
+   LEGAL PAGES (Privacy Policy, Terms & Conditions)
+   ======================================== */
+.legal-page {
+  min-height: 60vh;
+  padding-top: 100px;
+  padding-bottom: 3rem;
+}
+
+.legal-back-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: #C9A24D;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.legal-back-link:hover {
+  color: #E6D3A3;
+}
+
+.legal-title {
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  color: #74060D;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.legal-updated {
+  font-size: 0.8125rem;
+  color: rgba(116, 6, 13, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.legal-intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.legal-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.legal-section {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(116, 6, 13, 0.1);
+}
+
+.legal-section:last-of-type {
+  border-bottom: none;
+}
+
+.legal-section-title {
+  font-size: 1.125rem;
+  color: #74060D;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.legal-section-content {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.legal-contact {
+  margin-top: 2rem;
+  font-size: 0.9375rem;
+  color: #555;
+}
+
+.legal-link {
+  color: #74060D;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.legal-link:hover {
+  text-decoration: underline;
 }
 
 /* ========================================

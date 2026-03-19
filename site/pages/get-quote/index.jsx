@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { trackFormStart, trackAdsConversion } from "@/lib/gtag";
 
 const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 const PlacesAutocomplete = dynamic(() => import("@/components/PlacesAutocomplete"), { ssr: false });
@@ -101,6 +102,14 @@ export default function GetQuotePage() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const formStartFired = useRef(false);
+
+  const handleFormFocus = () => {
+    if (!formStartFired.current) {
+      formStartFired.current = true;
+      trackFormStart("get_quote");
+    }
+  };
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -160,6 +169,7 @@ export default function GetQuotePage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Something went wrong");
 
+      trackAdsConversion("get_quote");
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", company: "", designation: "", country: "", city: "", product: "", quantity: "", unit: "Kg", deliveryLocation: "", urgency: "", projectName: "", specifications: "", message: "" });
       setPdfFile(null);
@@ -210,7 +220,7 @@ export default function GetQuotePage() {
                 <button className="gq-submit-btn" onClick={() => setSubmitted(false)}>Submit Another Request</button>
               </div>
             ) : (
-              <form className="gq-page-form" onSubmit={handleSubmit}>
+              <form className="gq-page-form" onSubmit={handleSubmit} onFocus={handleFormFocus}>
 
                 {/* --- Section 1: Contact Details --- */}
                 <div className="gq-section">

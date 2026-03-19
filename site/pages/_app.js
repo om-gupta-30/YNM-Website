@@ -10,7 +10,7 @@ const FloatingGetQuote = dynamic(() => import("@/components/FloatingGetQuote"), 
 const FloatingSocialMedia = dynamic(() => import("@/components/FloatingSocialMedia"), { ssr: false });
 const Chatbot = dynamic(() => import("@/components/Chatbot"), { ssr: false });
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-KXRFYK5QTK";
 const gtmId = "GTM-55L72C49";
 
 // Fast smooth scroll function (500ms with easeOutQuart)
@@ -106,7 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     />
   );
 
-  const analytics = gaId ? (
+  const analytics = (
     <>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
@@ -127,7 +127,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         `}
       </Script>
     </>
-  ) : null;
+  );
 
   return (
     <>

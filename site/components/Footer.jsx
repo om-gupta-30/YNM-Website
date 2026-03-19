@@ -216,6 +216,11 @@ function Footer({ footerData: propFooterData }) {
           <p className="ft-copyright">
             {copyright}
           </p>
+          <div className="ft-legal-links">
+            <Link href="/privacy-policy" className="ft-legal-link">Privacy Policy</Link>
+            <span className="ft-legal-sep">|</span>
+            <Link href="/terms" className="ft-legal-link">Terms & Conditions</Link>
+          </div>
         </div>
 
         {/* Mascot in Footer - Using transparent background */}

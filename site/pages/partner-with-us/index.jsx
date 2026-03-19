@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { trackFormStart, trackAdsConversion } from "@/lib/gtag";
 
 const partnerTypes = [
   {
@@ -127,6 +128,14 @@ export default function PartnerWithUsPage() {
   const [activeNode, setActiveNode] = useState(null);
   const [autoRotate, setAutoRotate] = useState(true);
   const orbitContainerRef = useRef(null);
+  const formStartFired = useRef(false);
+
+  const handleFormFocus = () => {
+    if (!formStartFired.current) {
+      formStartFired.current = true;
+      trackFormStart("partner_with_us");
+    }
+  };
 
   useEffect(() => {
     if (!autoRotate) return;
@@ -196,6 +205,7 @@ export default function PartnerWithUsPage() {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        trackAdsConversion("partner_with_us");
         setSubmitted(true);
         setFormData({ name: "", company: "", email: "", phone: "", partnerType: "", region: "", message: "" });
         setTimeout(() => setSubmitted(false), 8000);
@@ -564,7 +574,7 @@ export default function PartnerWithUsPage() {
                   <p>Thank you for your interest. Our team will review your application and reach out soon.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="pw-form">
+                <form onSubmit={handleSubmit} onFocus={handleFormFocus} className="pw-form">
                   {error && (
                     <div style={{ padding: "12px 16px", marginBottom: "20px", backgroundColor: "#fee", border: "1px solid #fcc", borderRadius: "8px", color: "#c33", fontSize: "14px" }}>
                       {error}

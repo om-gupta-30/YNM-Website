@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { trackFormStart, trackAdsConversion } from "@/lib/gtag";
 
 const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 
@@ -82,6 +83,14 @@ export default function CareersPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
   const [fileError, setFileError] = useState(null);
+  const formStartFired = useRef(false);
+
+  const handleFormFocus = () => {
+    if (!formStartFired.current) {
+      formStartFired.current = true;
+      trackFormStart("careers");
+    }
+  };
 
   const handleChange = (e) => {
     if (e.target.type === "file") {
@@ -195,6 +204,7 @@ export default function CareersPage() {
         throw new Error(data.error || 'Failed to submit application');
       }
 
+      trackAdsConversion("careers");
       setSubmitted(true);
       setFormData({ 
         name: "", 
@@ -351,7 +361,7 @@ export default function CareersPage() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="application-form">
+                <form onSubmit={handleSubmit} onFocus={handleFormFocus} className="application-form">
                   {error && (
                     <div className="application-error">
                       <span className="error-icon">⚠️</span>

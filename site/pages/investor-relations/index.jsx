@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { trackFormStart, trackAdsConversion } from "@/lib/gtag";
 
 const milestones = [
   { year: "2013", title: "Foundation", desc: "Company established in Hyderabad" },
@@ -82,6 +83,14 @@ export default function InvestorRelationsPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const formStartFired = useRef(false);
+
+  const handleFormFocus = () => {
+    if (!formStartFired.current) {
+      formStartFired.current = true;
+      trackFormStart("investor_relations");
+    }
+  };
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -110,6 +119,7 @@ export default function InvestorRelationsPage() {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        trackAdsConversion("investor_relations");
         setSubmitted(true);
         setFormData({ name: "", organization: "", email: "", investorType: "", message: "" });
         setTimeout(() => setSubmitted(false), 8000);
@@ -506,7 +516,7 @@ export default function InvestorRelationsPage() {
                   <p>We&apos;ve received your message and will be in touch soon.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="ir-form">
+                <form onSubmit={handleSubmit} onFocus={handleFormFocus} className="ir-form">
                   {error && (
                     <div style={{ 
                       padding: '12px 16px', 

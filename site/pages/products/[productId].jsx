@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
 import { getProductById, getAllProducts } from "@/lib/productsCategoriesData";
 
-export default function ProductDetailPage({ serverProduct }) {
+export default function ProductDetailPage({ serverProduct, productId: serverProductId }) {
   const router = useRouter();
   const { productId } = router.query;
   const [activeSpecTab, setActiveSpecTab] = useState("keyFeatures");
@@ -204,9 +204,10 @@ export default function ProductDetailPage({ serverProduct }) {
   const metaTitle = product.meta?.title || `${product.name} - YNM Safety`;
   const metaDescription = product.meta?.description || product.shortDesc || product.desc;
 
-  // Generate canonical URL (using non-www as primary domain)
-  const productSlug = product.slug || product.id;
-  const canonicalUrl = `https://ynmsafety.com/products/${productSlug}`;
+  // Canonical MUST use the actual URL slug (requested path), not product.slug - prevents Google
+  // from selecting wrong canonical when product data could be stale or mismatched
+  const canonicalSlug = serverProductId || productId || product.slug || product.id;
+  const canonicalUrl = `https://ynmsafety.com/products/${canonicalSlug}`;
   const productImageUrl = product.image ? `https://ynmsafety.com${product.image}` : 'https://ynmsafety.com/assets/logo-navbar.jpg';
 
   return (
@@ -5383,6 +5384,7 @@ export async function getServerSideProps({ params }) {
   return {
     props: {
       serverProduct: JSON.parse(JSON.stringify(product)),
+      productId, // Pass URL slug so canonical always matches requested URL
     },
   };
 }

@@ -1,7 +1,8 @@
+# Use GCP mirror to avoid Docker Hub DNS/network issues
 # ===========================================
 # Stage 1: Dependencies
 # ===========================================
-FROM node:20-alpine AS deps
+FROM mirror.gcr.io/library/node:20-alpine AS deps
 WORKDIR /app
 
 # Install dependencies needed for native modules
@@ -16,7 +17,7 @@ RUN npm ci
 # ===========================================
 # Stage 2: Builder
 # ===========================================
-FROM node:20-alpine AS builder
+FROM mirror.gcr.io/library/node:20-alpine AS builder
 WORKDIR /app
 
 # Copy dependencies from deps stage
@@ -41,7 +42,7 @@ RUN npm run build
 # ===========================================
 # Stage 3: Runner (Production)
 # ===========================================
-FROM node:20-alpine AS runner
+FROM mirror.gcr.io/library/node:20-alpine AS runner
 WORKDIR /app
 
 # Set production environment

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import directorData from "@/lib/directorData";
+import { trackFormStart, trackAdsConversion } from "@/lib/gtag";
 
 const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 
@@ -24,6 +25,14 @@ export default function OurDirectorPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const formStartFired = useRef(false);
+
+  const handleFormFocus = () => {
+    if (!formStartFired.current) {
+      formStartFired.current = true;
+      trackFormStart("director_appointment");
+    }
+  };
 
   const handleAppointmentChange = (e) => {
     setAppointmentForm({ ...appointmentForm, [e.target.name]: e.target.value });
@@ -57,6 +66,7 @@ export default function OurDirectorPage() {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        trackAdsConversion("director_appointment");
         setSubmitted(true);
         setAppointmentForm({
           name: "",
@@ -394,7 +404,7 @@ export default function OurDirectorPage() {
                   <p>Thank you for your interest. Our team will contact you shortly to confirm your appointment.</p>
                 </div>
               ) : (
-                <form onSubmit={handleAppointmentSubmit} className="appointment-form">
+                <form onSubmit={handleAppointmentSubmit} onFocus={handleFormFocus} className="appointment-form">
                   {error && (
                     <div style={{ 
                       padding: '12px 16px', 

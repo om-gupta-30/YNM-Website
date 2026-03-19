@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import IndiaPresenceMap from "@/components/IndiaPresenceMap";
+import { trackFormStart, trackAdsConversion } from "@/lib/gtag";
 
 const PhoneInput = dynamic(() => import("@/components/PhoneInput"), { ssr: false });
 
@@ -44,6 +45,14 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
   const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
+  const formStartFired = useRef(false);
+
+  const handleFormFocus = () => {
+    if (!formStartFired.current) {
+      formStartFired.current = true;
+      trackFormStart("contact");
+    }
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -89,7 +98,7 @@ export default function ContactPage() {
         throw new Error(data.error || 'Failed to send message');
       }
 
-      // Success!
+      trackAdsConversion("contact");
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
       
@@ -287,7 +296,7 @@ export default function ContactPage() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="contact-form">
+                <form onSubmit={handleSubmit} onFocus={handleFormFocus} className="contact-form">
                   {error && (
                     <div className="contact-error">
                       <span className="error-icon">⚠️</span>
