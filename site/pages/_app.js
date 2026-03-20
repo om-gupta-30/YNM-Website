@@ -1,8 +1,10 @@
 import "@/styles/globals.css";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Script from "next/script";
+import { GA_ID, ADS_ID, trackPageView, trackPhoneClick, trackWhatsAppClick } from "@/lib/gtag";
 
 // Lazy-load below-the-fold / non-critical UI to reduce initial JS (PageSpeed: unused JS)
 const Mascot = dynamic(() => import("@/components/Mascot"), { ssr: false });
@@ -10,8 +12,7 @@ const FloatingGetQuote = dynamic(() => import("@/components/FloatingGetQuote"), 
 const FloatingSocialMedia = dynamic(() => import("@/components/FloatingSocialMedia"), { ssr: false });
 const Chatbot = dynamic(() => import("@/components/Chatbot"), { ssr: false });
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-KXRFYK5QTK";
-const gtmId = "GTM-55L72C49";
+const gaId = process.env.NEXT_PUBLIC_GA_ID || GA_ID;
 
 // Fast smooth scroll function (500ms with easeOutQuart)
 const smoothScrollTo = (targetY, duration = 500) => {
@@ -38,6 +39,15 @@ const smoothScrollTo = (targetY, duration = 500) => {
 };
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+
+  // SPA route change → push virtual pageview to GA4 + GTM + Google Ads
+  useEffect(() => {
+    const handleRouteChange = (url) => trackPageView(url);
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => router.events.off("routeChangeComplete", handleRouteChange);
+  }, [router.events]);
+
   // Scroll performance optimization + Global anchor handler
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -61,11 +71,26 @@ export default function App({ Component, pageProps }) {
 
     // Global anchor click handler for fast smooth scroll
     const onAnchorClick = (e) => {
-      const target = e.target.closest("a");
-      if (!target) return;
+      const anchor = e.target.closest("a");
+      if (!anchor) return;
 
-      const href = target.getAttribute("href");
+      const href = anchor.getAttribute("href");
       if (!href) return;
+
+      // Track phone call clicks (tel: links)
+      if (href.startsWith("tel:")) {
+        const phone = href.replace("tel:", "").trim();
+        trackPhoneClick(phone);
+        return;
+      }
+
+      // Track WhatsApp clicks (wa.me or api.whatsapp.com)
+      if (href.includes("wa.me/") || href.includes("api.whatsapp.com")) {
+        const match = href.match(/wa\.me\/(\d+)/) || href.match(/phone=(\d+)/);
+        const number = match ? match[1] : href;
+        trackWhatsAppClick(number);
+        return;
+      }
 
       // Handle hash links (but not just "#")
       if (href.startsWith("#") && href.length > 1) {
@@ -92,38 +117,19 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
-  const gtmScript = (
-    <Script
-      id="gtm-script"
-      strategy="lazyOnload"
-      dangerouslySetInnerHTML={{
-        __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${gtmId}');`,
-      }}
-    />
-  );
-
   const analytics = (
     <>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
-      <Script id="google-analytics" strategy="lazyOnload">
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${gaId}');
-          gtag('config', 'AW-17963850555');
-          gtag('event', 'conversion', {
-            'send_to': 'AW-17963850555/uWuFCKznp_sbELu26vVC',
-            'value': 1.0,
-            'currency': 'INR'
-          });
+          gtag('config', '${gaId}', { send_page_view: true });
+          gtag('config', '${ADS_ID}');
         `}
       </Script>
     </>
@@ -135,10 +141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
       </Head>
       
-      {/* Google Tag Manager */}
-      {gtmScript}
-      
-      {/* Google Analytics - Only load if GA_ID is configured */}
+      {/* GA4 + Google Ads (gtag.js) — GTM is loaded in _document.js */}
       {analytics}
       
       <div id="app-wrapper">

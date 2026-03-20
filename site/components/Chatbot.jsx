@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { faqData, productCatalog, contactLinks } from "@/lib/chatbotData";
+import { trackAdsConversion } from "@/lib/gtag";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -406,6 +407,7 @@ export default function Chatbot() {
       });
 
       if (response.ok) {
+        trackAdsConversion("chatbot_lead");
         const thankYouMessage = {
           id: Date.now(),
           text: `Thank you ${leadFormData.name}! We will contact you soon. You can also reach us at sales@ynmsafety.com or +91 96765 75770.`,

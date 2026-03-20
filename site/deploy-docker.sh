@@ -12,6 +12,7 @@ IMAGE="${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${SERVICE_
 
 echo "=== 1/4 Building Docker image (8-10 min) ==="
 docker build \
+  --platform linux/amd64 \
   --build-arg NEXT_PUBLIC_RECAPTCHA_SITE_KEY="${NEXT_PUBLIC_RECAPTCHA_SITE_KEY:-}" \
   --build-arg NEXT_PUBLIC_GA_ID="${NEXT_PUBLIC_GA_ID:-G-KXRFYK5QTK}" \
   -t "$IMAGE" \
