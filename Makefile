@@ -82,8 +82,7 @@ env-check: ## Verify required environment variables are set
 	done; \
 	echo ""; \
 	echo "\033[1mChecking optional variables...\033[0m"; \
-	for var in NEXT_PUBLIC_RECAPTCHA_SITE_KEY RECAPTCHA_SECRET_KEY \
-	           NEXT_PUBLIC_GA_ID NEXT_PUBLIC_GOOGLE_MAPS_API_KEY; do \
+	for var in NEXT_PUBLIC_GA_ID NEXT_PUBLIC_GOOGLE_MAPS_API_KEY; do \
 		val=$$(grep "^$$var=" .env 2>/dev/null | cut -d'=' -f2-); \
 		if [ -z "$$val" ] || [ "$$val" = "" ]; then \
 			echo "  \033[1;33m○ $$var\033[0m (not set — optional)"; \
@@ -132,7 +131,6 @@ images: ## Audit public images (size > 100 KB, bad filenames)
 
 docker-build: ## Build Docker image locally
 	docker build \
-		--build-arg NEXT_PUBLIC_RECAPTCHA_SITE_KEY="$${NEXT_PUBLIC_RECAPTCHA_SITE_KEY}" \
 		--build-arg NEXT_PUBLIC_GA_ID="$${NEXT_PUBLIC_GA_ID}" \
 		-t ynm-website $(SITE_DIR)
 

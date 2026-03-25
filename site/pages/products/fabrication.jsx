@@ -5,6 +5,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
+import { buildFaqPageJsonLd } from "@/lib/faqSchema";
+import { FABRICATION_FAQS } from "@/lib/staticPageFaqs";
+import { FaqAccordion } from "@/components/ui/faq-chat-accordion";
 
 // Fabrication products data - 34 products with photos available
 const fabricationProducts = [
@@ -326,6 +329,9 @@ export default function FabricationPage() {
     ? fabricationProducts 
     : fabricationProducts.filter(p => p.category === activeCategory);
 
+  const fabricationFaqList = FABRICATION_FAQS.slice(0, 5);
+  const fabricationFaqJsonLd = buildFaqPageJsonLd(fabricationFaqList);
+
   return (
     <>
       <Head>
@@ -412,6 +418,14 @@ export default function FabricationPage() {
             })
           }}
         />
+        {fabricationFaqJsonLd ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(fabricationFaqJsonLd),
+            }}
+          />
+        ) : null}
       </Head>
 
       <Navbar />
@@ -1086,32 +1100,15 @@ export default function FabricationPage() {
               <h2>Frequently Asked Questions</h2>
             </div>
             
-            <div className="faq-grid">
-              <div className="faq-item">
-                <h4>What is the minimum order quantity?</h4>
-                <p>MOQ varies by product type. For standard items, MOQ starts from 10 pieces. For custom fabrication, please contact us for specific requirements.</p>
-              </div>
-              <div className="faq-item">
-                <h4>What materials do you work with?</h4>
-                <p>We work with mild steel, stainless steel (304, 316), galvanized steel, aluminum, and various alloys based on project requirements.</p>
-              </div>
-              <div className="faq-item">
-                <h4>Do you provide installation services?</h4>
-                <p>Yes, we offer turnkey solutions including design, fabrication, delivery, and installation with our experienced team.</p>
-              </div>
-              <div className="faq-item">
-                <h4>What is your typical lead time?</h4>
-                <p>Standard products: 15-20 days. Custom fabrication: 25-45 days depending on complexity and quantity.</p>
-              </div>
-              <div className="faq-item">
-                <h4>Do you export internationally?</h4>
-                <p>Yes, we export to 40+ countries with proper documentation, packaging, and logistics support for sea/air freight.</p>
-              </div>
-              <div className="faq-item">
-                <h4>What quality certifications do you have?</h4>
-                <p>We are ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certified. Products are tested as per IS/BS/ASTM standards.</p>
-              </div>
-            </div>
+            <FaqAccordion
+              data={fabricationFaqList.map((item, idx) => ({
+                id: idx + 1,
+                question: item.question,
+                answer: item.answer,
+              }))}
+              className="mx-auto max-w-[700px]"
+              timestamp="Steel & metal fabrication · YNM Safety"
+            />
           </div>
         </section>
 

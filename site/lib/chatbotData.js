@@ -62,7 +62,7 @@ export const faqData = [
   },
   {
     question: "Are you hiring?",
-    answer: "**Yes!** YNM Safety is growing and always looking for talented professionals.\n\n**🏢 Current Open Positions:**\n1. **Production Manager** — Manufacturing (Full-time, Hyderabad)\n2. **Quality Control Engineer** — Quality Assurance (Full-time, Hyderabad)\n3. **Export Coordinator** — International Trade (Full-time, Hyderabad)\n4. **Sales Executive** — Sales & Marketing (Full-time, Hyderabad)\n5. **Warehouse Supervisor** — Operations (Full-time, Hyderabad)\n6. **Accounts Executive** — Finance (Full-time, Hyderabad)\n\n**📝 How to Apply:**\n1. Visit: ynmsafety.com/careers\n2. Select your position & fill in your details\n3. Upload your resume (PDF only, max 5MB)\n4. Complete the math CAPTCHA verification\n5. Our HR team will contact you\n\n**HR Email:** hr@ynmsafety.com\n\n**✨ Why Join YNM:**\n• Growth opportunities & career advancement\n• Global exposure across 50+ countries\n• Quality-focused culture (ISO standards)\n• Collaborative team environment\n• Learning & development programs\n\nJoin our team of 200+ professionals!"
+    answer: "**Yes!** YNM Safety is growing and always looking for talented professionals.\n\n**🏢 Current Open Positions:**\n1. **Production Manager** — Manufacturing (Full-time, Hyderabad)\n2. **Quality Control Engineer** — Quality Assurance (Full-time, Hyderabad)\n3. **Export Coordinator** — International Trade (Full-time, Hyderabad)\n4. **Sales Executive** — Sales & Marketing (Full-time, Hyderabad)\n5. **Warehouse Supervisor** — Operations (Full-time, Hyderabad)\n6. **Accounts Executive** — Finance (Full-time, Hyderabad)\n\n**📝 How to Apply:**\n1. Visit: ynmsafety.com/careers\n2. Select your position & fill in your details\n3. Upload your resume (PDF only, max 5MB)\n4. Submit the form — our HR team will contact you\n\n**HR Email:** hr@ynmsafety.com\n\n**✨ Why Join YNM:**\n• Growth opportunities & career advancement\n• Global exposure across 50+ countries\n• Quality-focused culture (ISO standards)\n• Collaborative team environment\n• Learning & development programs\n\nJoin our team of 200+ professionals!"
   },
   {
     question: "Do you work with foreign companies?",
@@ -114,7 +114,7 @@ export const faqData = [
   },
   {
     question: "Can I book an appointment with the director?",
-    answer: "**Yes!** You can request an appointment with **Mr. Rishuu Jaiin**, Managing Director of YNM Safety.\n\n**How to Book:**\n1. Visit ynmsafety.com/our-director\n2. Scroll to the appointment booking section\n3. Fill in your details:\n   • Full Name\n   • Email\n   • Phone (with country code)\n   • Company/Organization\n   • Purpose of Meeting\n   • Preferred Date & Time\n   • Additional Message\n4. Complete reCAPTCHA verification\n5. Submit your request\n\nOur team will confirm your appointment via email.\n\n**Note:** Appointments are subject to the director's availability."
+    answer: "**Yes!** You can request an appointment with **Mr. Rishuu Jaiin**, Managing Director of YNM Safety.\n\n**How to Book:**\n1. Visit ynmsafety.com/our-director\n2. Scroll to the appointment booking section\n3. Fill in your details:\n   • Full Name\n   • Email\n   • Phone (with country code)\n   • Company/Organization\n   • Purpose of Meeting\n   • Preferred Date & Time\n   • Additional Message\n4. Submit your request\n\nOur team will confirm your appointment via email.\n\n**Note:** Appointments are subject to the director's availability."
   },
   {
     question: "Do you provide product samples?",

@@ -12,21 +12,31 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "clsx": "^2.1.1",
     "formidable": "^3.5.4",
+    "framer-motion": "^12.38.0",
     "googleapis": "^170.1.0",
+    "gsap": "^3.14.2",
+    "lucide-react": "^0.577.0",
     "next": "^15.5.12",
     "nodemailer": "^7.0.12",
     "pdf-parse": "^2.4.5",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
     "ajv": "^8.18.0",
     "critters": "^0.0.23",
     "eslint": "^8",
     "eslint-config-next": "15.0.7",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.9.3"
   },
   "browserslist": [
     "Chrome >= 90",

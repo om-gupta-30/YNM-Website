@@ -7,6 +7,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
 import { getProductById, getAllProducts } from "@/lib/productsCategoriesData";
+import { getProductPageFaqs } from "@/lib/productFaqs";
+import { buildFaqPageJsonLd } from "@/lib/faqSchema";
+import { FaqAccordion } from "@/components/ui/faq-chat-accordion";
 
 export default function ProductDetailPage({ serverProduct, productId: serverProductId }) {
   const router = useRouter();
@@ -203,18 +206,25 @@ export default function ProductDetailPage({ serverProduct, productId: serverProd
   // Use product meta data if available
   const metaTitle = product.meta?.title || `${product.name} - YNM Safety`;
   const metaDescription = product.meta?.description || product.shortDesc || product.desc;
+  const heroHeading = product.meta?.h1 || product.name;
+  const structuredProductName = product.meta?.h1 || product.name;
 
   // Canonical MUST use the actual URL slug (requested path), not product.slug - prevents Google
   // from selecting wrong canonical when product data could be stale or mismatched
   const canonicalSlug = serverProductId || productId || product.slug || product.id;
   const canonicalUrl = `https://ynmsafety.com/products/${canonicalSlug}`;
   const productImageUrl = product.image ? `https://ynmsafety.com${product.image}` : 'https://ynmsafety.com/assets/logo-navbar.jpg';
+  const productFaqs = getProductPageFaqs(canonicalSlug);
+  const faqJsonLd = buildFaqPageJsonLd(productFaqs);
 
   return (
     <>
       <Head>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
+        {product.meta?.keywords ? (
+          <meta name="keywords" content={product.meta.keywords} />
+        ) : null}
         <link rel="canonical" href={canonicalUrl} />
         
         {/* Open Graph Tags */}
@@ -238,7 +248,7 @@ export default function ProductDetailPage({ serverProduct, productId: serverProd
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Product",
-              "name": product.name,
+              "name": structuredProductName,
               "description": metaDescription,
               "image": productImageUrl,
               "brand": {
@@ -297,13 +307,21 @@ export default function ProductDetailPage({ serverProduct, productId: serverProd
                 {
                   "@type": "ListItem",
                   "position": 3,
-                  "name": product.name,
+                  "name": heroHeading,
                   "item": canonicalUrl
                 }
               ]
             })
           }}
         />
+        {faqJsonLd ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(faqJsonLd),
+            }}
+          />
+        ) : null}
       </Head>
 
       <Navbar />
@@ -398,7 +416,7 @@ export default function ProductDetailPage({ serverProduct, productId: serverProd
               )}
             </div>
             <div className="product-hero-content">
-              <h1 className="product-hero-title">{product.name}</h1>
+              <h1 className="product-hero-title">{heroHeading}</h1>
               <p className="product-hero-description">{product.shortDesc || product.desc}</p>
             </div>
           </div>
@@ -1572,6 +1590,29 @@ export default function ProductDetailPage({ serverProduct, productId: serverProd
           </section>
         )}
 
+        {/* FAQ — matches FAQPage JSON-LD in Head (max 5 items) */}
+        {productFaqs.length > 0 && (
+          <section className="product-faq-section" id="product-faq" aria-labelledby="product-faq-title">
+            <div className="product-section-container">
+              <h2 id="product-faq-title" className="product-section-title">
+                Frequently Asked Questions
+              </h2>
+              <p className="product-section-subtitle">
+                Answers about this product from YNM Safety—manufacturing, standards, supply, and support.
+              </p>
+              <FaqAccordion
+                data={productFaqs.slice(0, 5).map((item, idx) => ({
+                  id: idx + 1,
+                  question: item.question,
+                  answer: item.answer,
+                }))}
+                className="mx-auto max-w-[700px]"
+                timestamp={`YNM Safety · ${product.name}`}
+              />
+            </div>
+          </section>
+        )}
+
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
           <section className="related-products-section">
@@ -1587,7 +1628,7 @@ export default function ProductDetailPage({ serverProduct, productId: serverProd
                 {relatedProducts.map((relatedProduct) => (
                   <Link
                     key={relatedProduct.id}
-                    href={`/products/${relatedProduct.id}`}
+                    href={`/products/${relatedProduct.slug || relatedProduct.id}`}
                     className="related-product-card"
                   >
                     <div className="related-product-image">
@@ -4655,6 +4696,13 @@ export default function ProductDetailPage({ serverProduct, productId: serverProd
         .product-cta-btn.secondary:hover {
           background: rgba(255, 255, 255, 0.1);
           border-color: #C9A24D;
+        }
+
+        /* Product FAQ (accordion UI uses Tailwind in components/ui/faq-chat-accordion) */
+        .product-faq-section {
+          padding: 80px 0;
+          background: #fff;
+          border-top: 1px solid rgba(230, 211, 163, 0.6);
         }
 
         /* Related Products Section */

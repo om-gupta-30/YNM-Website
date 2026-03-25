@@ -63,13 +63,12 @@ const nextConfig = {
     ];
 
     return [
-      // HTML pages - Browser cache on, Cloud CDN cache off for instant deploys
+      // HTML pages - Browser cache on (max-age), shared/CDN cache off (private + s-maxage=0)
       {
         source: '/:path((?!_next|assets|fonts|api).*)',
         headers: [
-          // private = no CDN/shared cache (Cloud CDN won't cache), max-age=60 = browser cache 1 min
-          // Ensures custom domain serves latest revision immediately after deploy
-          { key: 'Cache-Control', value: 'private, max-age=60, must-revalidate, stale-while-revalidate=30' },
+          // private + s-maxage=0: proxies/CDN must not treat as publicly cacheable; browser may cache briefly
+          { key: 'Cache-Control', value: 'private, max-age=60, s-maxage=0, must-revalidate, stale-while-revalidate=30' },
           { key: 'Link', value: '</assets/hero-image.webp>; rel=preload; as=image; type=image/webp; fetchpriority=high' },
           // Vary ensures different browsers/encodings get appropriate cached versions
           { key: 'Vary', value: 'Accept-Encoding, Accept' },

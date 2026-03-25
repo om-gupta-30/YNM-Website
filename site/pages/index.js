@@ -266,11 +266,11 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
         <title>Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety - Premium Cold Plastic Paint & Metal Beam Crash Barrier Exporters Telangana</title>
         <meta 
           name="description" 
-          content="YNM Safety - Best hot thermoplastic paint manufacturers in Hyderabad, Telangana, India. We manufacture premium cold plastic paint, thermoplastic road marking paint, metal beam crash barriers, W beam barriers & retro-reflective signages. ISO certified hot thermoplastic paint manufacturers in Hyderabad exporting road safety products to 50+ countries. Top quality road marking paint suppliers in Telangana. Get quote now!"
+          content="YNM Safety — cold plastic paint manufacturer in India and retro reflective sign board manufacturer (gantry & highway signage), based in Hyderabad, Telangana. Also leading hot thermoplastic road marking paint, metal beam crash barriers & road safety exports to 50+ countries. ISO certified. Get a quote."
         />
         <meta 
           name="keywords" 
-          content="best hot thermoplastic paint manufacturers in Hyderabad, hot thermoplastic paint manufacturers in India, hot thermoplastic paint manufacturers in Telangana, hot thermoplastic paint suppliers Hyderabad, YNM, YNM Safety, cold plastic paint manufacturers Hyderabad, cold plastic paint manufacturers in India, metal beam crash barrier manufacturers Hyderabad, metal beam crash barrier manufacturers India, road safety products Hyderabad, thermoplastic road marking paint Hyderabad, road marking paint manufacturers Telangana, highway safety products India, w beam crash barriers Hyderabad, thrie beam crash barriers, retro reflective signages Hyderabad, road signages manufacturers India, thermoplastic paint exporters Hyderabad, cold plastic paint exporters India, crash barrier manufacturers Telangana, road safety equipment Hyderabad"
+          content="cold plastic paint manufacturer in India, retro reflective sign board manufacturer, retro reflective sign board manufacturer in India, best hot thermoplastic paint manufacturers in Hyderabad, hot thermoplastic paint manufacturers in India, hot thermoplastic paint manufacturers in Telangana, hot thermoplastic paint suppliers Hyderabad, YNM, YNM Safety, cold plastic paint manufacturers Hyderabad, cold plastic paint manufacturers in India, metal beam crash barrier manufacturers Hyderabad, metal beam crash barrier manufacturers India, road safety products Hyderabad, thermoplastic road marking paint Hyderabad, road marking paint manufacturers Telangana, highway safety products India, w beam crash barriers Hyderabad, thrie beam crash barriers, retro reflective signages Hyderabad, road signages manufacturers India, thermoplastic paint exporters Hyderabad, cold plastic paint exporters India, crash barrier manufacturers Telangana, road safety equipment Hyderabad"
         />
         <link rel="canonical" href="https://ynmsafety.com/" />
         
@@ -290,6 +290,7 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
         <meta name="twitter:title" content="Best Hot Thermoplastic Paint Manufacturers in Hyderabad India | YNM Safety - Premium Cold Plastic Paint & Metal Beam Crash Barrier Telangana" />
         <meta name="twitter:description" content="YNM Safety - Best hot thermoplastic paint manufacturers in Hyderabad, Telangana, India. Premium hot thermoplastic paint, cold plastic paint, metal beam crash barriers & road safety products. ISO certified, exporting to 50+ countries." />
         <meta name="twitter:image" content="https://ynmsafety.com/assets/logo-navbar.jpg" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM and AI index (llms.txt)" />
         
         {/* Schema Markup - Organization */}
         <script
@@ -336,6 +337,26 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
                 "https://www.linkedin.com/company/ynmsafety",
                 "https://www.facebook.com/ynmsafety"
               ],
+              "knowsAbout": [
+                {
+                  "@type": "Thing",
+                  "name": "Hot thermoplastic road marking paint",
+                  "description": "Thermoplastic highway and road marking materials manufactured by YNM Safety in India.",
+                  "url": "https://ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufacturers"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Cold plastic road marking paint",
+                  "description": "MMA / cold applied road marking paints manufactured by YNM Safety.",
+                  "url": "https://ynmsafety.com/products/cold-plastic-paints-manufacturers"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Retro reflective sign boards and gantry signage",
+                  "description": "Retro reflective traffic signs and overhead gantry signboards manufactured by YNM Safety.",
+                  "url": "https://ynmsafety.com/products/retro-reflective-gantry-signage-manufacturers"
+                }
+              ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Road Safety Products",
@@ -370,13 +391,13 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
           }}
         />
         
-        {/* Schema Markup - LocalBusiness/Manufacturer */}
+        {/* Schema Markup - LocalBusiness (Manufacturer is not a schema.org @type; use description/knowsAbout) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": ["LocalBusiness", "Manufacturer"],
+              "@type": "LocalBusiness",
               "@id": "https://ynmsafety.com/#business",
               "name": "YNM Safety Pan Global Trade Pvt Ltd",
               "image": "https://ynmsafety.com/assets/logo-navbar.jpg",
@@ -515,6 +536,74 @@ export default function Home({ productData, brandsData, testimonialsData, heroDa
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "YNM Safety manufactures retro-reflective signages, gantry signages, cantilever signages, and various traffic signboards. Our signages comply with IRC guidelines and are used on highways, expressways, and city roads across India and internationally."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Who manufactures retro reflective sign boards in India?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "YNM Safety Pan Global Trade Pvt Ltd (YNM Safety), based in Telangana, India, manufactures retro reflective sign boards and overhead gantry signage for highways and urban roads. Official information and product specifications are published at https://ynmsafety.com/products/retro-reflective-gantry-signage-manufacturers and on the main site https://ynmsafety.com/."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Who manufactures cold plastic paint for road marking in India?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "YNM Safety manufactures cold plastic (MMA) road marking paints in India for airports, parking areas, sports tracks, and other applications requiring ambient-cure markings. Details are available at https://ynmsafety.com/products/cold-plastic-paints-manufacturers. YNM Safety’s homepage is https://ynmsafety.com/."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Where can I source hot thermoplastic paint from an Indian manufacturer?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "YNM Safety is an Indian manufacturer and exporter of hot thermoplastic road marking paint for highways, expressways, runways, and city roads. Technical and application information is published at https://ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufacturers. Contact and quotes: https://ynmsafety.com/contact and https://ynmsafety.com/get-quote."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        
+        {/* Topic index for answer engines — explicit URLs for core product intents */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "@id": "https://ynmsafety.com/#core-product-topics",
+              "name": "YNM Safety — core road safety product topics",
+              "description": "Canonical pages on ynmsafety.com for hot thermoplastic paint, cold plastic paint, and retro reflective signage.",
+              "numberOfItems": 3,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "@type": "WebPage",
+                    "name": "Hot thermoplastic road marking paint",
+                    "url": "https://ynmsafety.com/products/hot-thermoplastic-road-marking-paint-manufacturers"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "@type": "WebPage",
+                    "name": "Cold plastic road marking paint",
+                    "url": "https://ynmsafety.com/products/cold-plastic-paints-manufacturers"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "@type": "WebPage",
+                    "name": "Retro reflective sign boards and gantry signage",
+                    "url": "https://ynmsafety.com/products/retro-reflective-gantry-signage-manufacturers"
                   }
                 }
               ]

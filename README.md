@@ -25,7 +25,7 @@ Modern, responsive corporate website for **YNM Safety Pan Global Trade Pvt Ltd**
 - **India Presence Map** — Interactive SVG map with state-level contact details
 - **SEO Optimized** — Schema.org structured data, sitemap, robots.txt, 301 redirects, Google Search Console
 - **Fully Responsive** — Mobile-first design optimized for all screen sizes
-- **Security First** — Gitleaks, GitHub Actions CI/CD, pre-push checks, reCAPTCHA v2
+- **Security First** — Gitleaks, GitHub Actions CI/CD, pre-push checks
 
 ---
 
@@ -74,7 +74,6 @@ YNM-website/
     │   ├── directorData.js        # Director profile & ventures
     │   ├── employeesData.js       # Team member profiles
     │   ├── googleSheets.js        # Google Sheets API client
-    │   ├── recaptchaUtils.js      # reCAPTCHA v2 verification
     │   ├── translations.js        # Multi-language translations
     │   ├── imageLoader.js         # Custom image loader
     │   ├── indiaContacts.js       # State-wise contact data
@@ -119,7 +118,6 @@ YNM-website/
 | Google Places API | — | Country/city autocomplete |
 | Nodemailer | 7.x | Email services (Gmail SMTP) |
 | Google Analytics | GA4 + GTM | Analytics & conversion tracking |
-| reCAPTCHA | v2 | Bot protection on all forms |
 | pdf-parse | 2.x | Resume PDF parsing |
 | Docker | Multi-stage | Containerized deployment |
 
@@ -211,8 +209,6 @@ make setup
 | Variable | Description |
 |----------|-------------|
 | `NEXT_PUBLIC_GA_ID` | Google Analytics 4 Measurement ID (`G-XXXXXXXXXX`) |
-| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA v2 site key |
-| `RECAPTCHA_SECRET_KEY` | reCAPTCHA v2 secret key |
 | `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Google Maps/Places API key (for autocomplete) |
 
 ### Google Sheets Setup
@@ -305,7 +301,6 @@ Runs [Gitleaks](https://github.com/gitleaks/gitleaks) to detect accidentally com
 - **Pre-push Script** — Comprehensive security checks (`./pre-push-check.sh`)
 - **GitHub Actions** — Lint, build, security checks, Docker build on every push/PR
 - **Docker** — Non-root user in production container, multi-stage build
-- **reCAPTCHA v2** — Bot protection on all 6 public forms
 - **Rate Limiting** — Client-side sliding window + server-side per-IP rate limits on chatbot
 
 ### Before Pushing

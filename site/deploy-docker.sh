@@ -13,7 +13,6 @@ IMAGE="${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${SERVICE_
 echo "=== 1/4 Building Docker image (8-10 min) ==="
 docker build \
   --platform linux/amd64 \
-  --build-arg NEXT_PUBLIC_RECAPTCHA_SITE_KEY="${NEXT_PUBLIC_RECAPTCHA_SITE_KEY:-}" \
   --build-arg NEXT_PUBLIC_GA_ID="${NEXT_PUBLIC_GA_ID:-G-KXRFYK5QTK}" \
   -t "$IMAGE" \
   .
@@ -32,6 +31,6 @@ gcloud run deploy "$SERVICE_NAME" \
   --allow-unauthenticated \
   --port 3000 \
   --project "$PROJECT_ID" \
-  --set-secrets "GOOGLE_SHEET_ID=ynm-website_GOOGLE_SHEET_ID:latest,GOOGLE_SERVICE_ACCOUNT_EMAIL=ynm-website_GOOGLE_SERVICE_ACCOUNT_EMAIL:latest,GOOGLE_PRIVATE_KEY=ynm-website_GOOGLE_PRIVATE_KEY:latest,GOOGLE_GEMINI_API_KEY=ynm-website_GOOGLE_GEMINI_API_KEY:latest,GMAIL_USER=ynm-website_GMAIL_USER:latest,GMAIL_APP_PASSWORD=ynm-website_GMAIL_APP_PASSWORD:latest,HR_EMAIL=ynm-website_HR_EMAIL:latest,CAREERS_NOREPLY_FROM=ynm-website_CAREERS_NOREPLY_FROM:latest,RECAPTCHA_SECRET_KEY=ynm-website_RECAPTCHA_SECRET_KEY:latest,GOOGLE_MAPS_API_KEY=ynm-website_GOOGLE_MAPS_API_KEY:latest"
+  --set-secrets "GOOGLE_SHEET_ID=ynm-website_GOOGLE_SHEET_ID:latest,GOOGLE_SERVICE_ACCOUNT_EMAIL=ynm-website_GOOGLE_SERVICE_ACCOUNT_EMAIL:latest,GOOGLE_PRIVATE_KEY=ynm-website_GOOGLE_PRIVATE_KEY:latest,GOOGLE_GEMINI_API_KEY=ynm-website_GOOGLE_GEMINI_API_KEY:latest,GMAIL_USER=ynm-website_GMAIL_USER:latest,GMAIL_APP_PASSWORD=ynm-website_GMAIL_APP_PASSWORD:latest,HR_EMAIL=ynm-website_HR_EMAIL:latest,CAREERS_NOREPLY_FROM=ynm-website_CAREERS_NOREPLY_FROM:latest,GOOGLE_MAPS_API_KEY=ynm-website_GOOGLE_MAPS_API_KEY:latest"
 
 echo "=== Done. Service: https://ynm-website-pakkgz6r2q-el.a.run.app ==="

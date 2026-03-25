@@ -5,6 +5,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Flag from "@/components/Flag";
+import { buildFaqPageJsonLd } from "@/lib/faqSchema";
+import { ROAD_SAFETY_FURNITURE_FAQS } from "@/lib/staticPageFaqs";
+import { FaqAccordion } from "@/components/ui/faq-chat-accordion";
 
 const roadSafetyProducts = [
   // Road Studs
@@ -204,6 +207,9 @@ export default function RoadSafetyFurnituresPage() {
     ? roadSafetyProducts
     : roadSafetyProducts.filter(p => p.category === activeCategory);
 
+  const roadSafetyFaqList = ROAD_SAFETY_FURNITURE_FAQS.slice(0, 5);
+  const roadSafetyFaqJsonLd = buildFaqPageJsonLd(roadSafetyFaqList);
+
   return (
     <>
       <Head>
@@ -257,6 +263,14 @@ export default function RoadSafetyFurnituresPage() {
             })
           }}
         />
+        {roadSafetyFaqJsonLd ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(roadSafetyFaqJsonLd),
+            }}
+          />
+        ) : null}
       </Head>
 
       <Navbar />
@@ -614,32 +628,15 @@ export default function RoadSafetyFurnituresPage() {
               <h2>Frequently Asked Questions</h2>
             </div>
 
-            <div className="faq-grid">
-              <div className="faq-item">
-                <h4>What types of road studs do you manufacture?</h4>
-                <p>We manufacture three types of road studs: Twin Shank, ABS, and Aluminium. We also offer solar-powered variants in five types including circular and square aluminium models.</p>
-              </div>
-              <div className="faq-item">
-                <h4>Are your products IRC and MoRTH compliant?</h4>
-                <p>Yes, all our road safety furniture products are manufactured as per IRC (Indian Roads Congress) and MoRTH (Ministry of Road Transport and Highways) specifications.</p>
-              </div>
-              <div className="faq-item">
-                <h4>What is the minimum order quantity?</h4>
-                <p>MOQ varies by product. Standard items like road studs start from 100 pieces. For large orders like water barricades, please contact us for specific quantities.</p>
-              </div>
-              <div className="faq-item">
-                <h4>Do you provide installation support?</h4>
-                <p>Yes, we offer installation guidance and on-site support for large orders. We also provide installation manuals and technical assistance.</p>
-              </div>
-              <div className="faq-item">
-                <h4>What is the warranty on solar studs?</h4>
-                <p>Our solar road studs come with a standard 2-year warranty covering LED and solar panel performance under normal usage conditions.</p>
-              </div>
-              <div className="faq-item">
-                <h4>Do you export road safety furniture internationally?</h4>
-                <p>Yes, we export to 50+ countries with proper documentation, quality certifications, and logistics support for sea and air freight.</p>
-              </div>
-            </div>
+            <FaqAccordion
+              data={roadSafetyFaqList.map((item, idx) => ({
+                id: idx + 1,
+                question: item.question,
+                answer: item.answer,
+              }))}
+              className="mx-auto max-w-[700px]"
+              timestamp="Road safety furniture · YNM Safety"
+            />
           </div>
         </section>
 

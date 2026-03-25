@@ -17,6 +17,9 @@
  */
 
 export const GA_ID = "G-KXRFYK5QTK";
+/** Same ID used by gtag.js in _app.js (env overrides default). */
+export const RESOLVED_GA_ID =
+  (typeof process !== "undefined" && process.env.NEXT_PUBLIC_GA_ID) || GA_ID;
 export const ADS_ID = "AW-17963850555";
 const ADS_CONVERSION_SEND_TO = "AW-17963850555/uWuFCKznp_sbELu26vVC";
 
@@ -35,7 +38,7 @@ export function trackPageView(url) {
   });
 
   if (!window.gtag) return;
-  window.gtag("config", GA_ID, { page_path: url });
+  window.gtag("config", RESOLVED_GA_ID, { page_path: url });
   window.gtag("config", ADS_ID, { page_path: url });
 }
 

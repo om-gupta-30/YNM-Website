@@ -452,7 +452,7 @@ export const productsData = {
             id: "p3",
             slug: "cold-plastic-paints-manufacturers",
             name: "Cold Plastic Paints",
-            shortDesc: "High-performance cold plastic paints manufacture delivering durable, high-visibility road marking paints for global traffic safety applications.",
+            shortDesc: "Cold plastic paint manufacturer in India: YNM Safety supplies MMA road marking paint from Hyderabad for airports, highways, parking areas and sports tracks—MoRTH/IRC aligned, exported worldwide.",
             desc: "YNM Safety manufactures premium cold plastic paints engineered for long-lasting performance and superior visibility for highways, urban roads, and industrial zones.",
             image: "/assets/ynm-safety-cold-plastic-racetrack.png",
             heroImage: "/assets/ynm-safety-cold-plastic-racetrack.png",
@@ -460,14 +460,16 @@ export const productsData = {
             
             // SEO Meta Information
             meta: {
-              title: "Cold Plastic Paints Manufacturers | Road Marking Paints | YNM Safety",
-              description: "YNM Safety cold plastic paints manufacturers high-performance road marking paints and cold plastic paints for durable traffic markings worldwide, compliant with international standards.",
+              title: "Cold Plastic Paint Manufacturer in India | MMA Road Marking | YNM Safety",
+              description: "YNM Safety: cold plastic paint manufacturer in India (Hyderabad). MMA road marking paint for airports, highways & parking. MoRTH/IRC compliant, ISO certified—export worldwide.",
+              h1: "Cold Plastic Paint Manufacturer in India",
+              keywords: "cold plastic paint manufacturer in India, cold plastic road marking paint manufacturer, MMA road marking paint India, cold applied road marking paint, cold plastic paint Hyderabad, YNM Safety",
               slug: "/cold-plastic-paints-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is one of the trusted cold plastic paints manufacturers, offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our YNM Safety cold plastic paints are widely used for highways, expressways, urban roads, parking areas, and industrial zones across global markets.\n\nAs YNM Safety manufactures premium cold plastic paints, our products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal for projects requiring precise application without heating, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with international traffic safety standards and are suitable for government, EPC, and private infrastructure projects worldwide.",
-            detailedDescription: "YNM Safety is one of the trusted cold plastic paints manufacturers, offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our YNM Safety cold plastic paints are widely used for highways, expressways, urban roads, parking areas, and industrial zones across global markets.\n\nAs YNM Safety manufactures premium cold plastic paints, our products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal for projects requiring precise application without heating, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with international traffic safety standards and are suitable for government, EPC, and private infrastructure projects worldwide.",
+            overview: "As a cold plastic paint manufacturer in India, YNM Safety produces MMA cold plastic road marking paint at our Hyderabad facility for domestic projects and export. We are trusted cold plastic paints manufacturers offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our cold plastic paints are widely used for highways, expressways, urban roads, parking areas, airports, sports tracks, and industrial zones worldwide.\n\nOur products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal where precise application without heating is required, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with MoRTH, IRC and international traffic safety standards and suit government, EPC, and private infrastructure projects.",
+            detailedDescription: "As a cold plastic paint manufacturer in India, YNM Safety produces MMA cold plastic road marking paint at our Hyderabad facility for domestic projects and export. We are trusted cold plastic paints manufacturers offering advanced road marking paints engineered for long-lasting performance and superior visibility. Our cold plastic paints are widely used for highways, expressways, urban roads, parking areas, airports, sports tracks, and industrial zones worldwide.\n\nOur products deliver excellent adhesion, rapid curing, and resistance to heavy traffic loads. Cold plastic paints are ideal where precise application without heating is required, ensuring safety, efficiency, and consistent quality.\n\nOur road marking paints comply with MoRTH, IRC and international traffic safety standards and suit government, EPC, and private infrastructure projects.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [
@@ -6049,7 +6051,7 @@ export const productsData = {
             id: "sg5",
             slug: "retro-reflective-gantry-signage-manufacturers",
             name: "Retro Reflective Gantry Signage",
-            shortDesc: "High-visibility retro reflective gantry signage manufacturers for highways, expressways & advanced traffic guidance systems.",
+            shortDesc: "Retro reflective sign board manufacturer in India: YNM Safety fabricates gantry and overhead highway signage with certified retro reflective sheeting—MoRTH/IRC compliant, supplied across India and for export.",
             desc: "Premium retro reflective gantry signage for highways and expressways. Excellent long-distance visibility and weather-resistant overhead signboard solutions.",
             image: "/assets/ynm-safety-signages.png",
             heroImage: "/assets/ynm-safety-signages.png",
@@ -6057,14 +6059,16 @@ export const productsData = {
             
             // SEO Meta Information
             meta: {
-              title: "Retro Reflective Gantry Signage Manufacturers | YNM Safety",
-              description: "Retro reflective gantry signage manufacturers delivering high-visibility overhead road sign solutions. YNM Safety manufactures gantry signboards for highways, expressways & urban traffic safety.",
+              title: "Retro Reflective Sign Board Manufacturer in India | Gantry Signage | YNM Safety",
+              description: "Retro reflective sign board manufacturer in India. YNM Safety builds gantry & highway sign boards—certified sheeting, MoRTH/IRC compliant, Hyderabad factory, export.",
+              h1: "Retro Reflective Sign Board Manufacturer in India",
+              keywords: "retro reflective sign board manufacturer, retro reflective sign board manufacturer in India, retro reflective signage manufacturers India, highway gantry signage manufacturer, overhead road sign boards India, YNM Safety",
               slug: "/retro-reflective-gantry-signage-manufacturers"
             },
             
             // Product Overview
-            overview: "YNM Safety is one of the trusted retro reflective gantry signage manufacturers, offering premium-quality overhead signboard solutions for modern road infrastructure. We manufacture retro reflective gantry signages designed for long-distance visibility, lane guidance, and effective traffic communication on highways, expressways, flyovers, and major junctions.\n\nOur retro reflective gantry signboards are manufactured using high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures. YNM Safety manufactures gantry signages that provide excellent day and night visibility, weather resistance, and long service life.\n\nAs experienced gantry signage manufacturers, YNM Safety follows strict quality control processes and manufactures products compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
-            detailedDescription: "YNM Safety is one of the trusted retro reflective gantry signage manufacturers, offering premium-quality overhead signboard solutions for modern road infrastructure. We manufacture retro reflective gantry signages designed for long-distance visibility, lane guidance, and effective traffic communication on highways, expressways, flyovers, and major junctions.\n\nOur retro reflective gantry signboards are manufactured using high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures. YNM Safety manufactures gantry signages that provide excellent day and night visibility, weather resistance, and long service life.\n\nAs experienced gantry signage manufacturers, YNM Safety follows strict quality control processes and manufactures products compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
+            overview: "YNM Safety is a retro reflective sign board manufacturer in India, fabricating gantry and overhead highway sign boards from our Hyderabad works for projects across India and export markets. We are also trusted retro reflective gantry signage manufacturers, delivering premium overhead signboard solutions for highways, expressways, flyovers, and major junctions.\n\nOur sign boards use high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures for strong day and night visibility, weather resistance, and long service life.\n\nYNM Safety follows strict quality control and builds signage compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
+            detailedDescription: "YNM Safety is a retro reflective sign board manufacturer in India, fabricating gantry and overhead highway sign boards from our Hyderabad works for projects across India and export markets. We are also trusted retro reflective gantry signage manufacturers, delivering premium overhead signboard solutions for highways, expressways, flyovers, and major junctions.\n\nOur sign boards use high-grade aluminium sheets, certified retro reflective sheeting, and robust gantry structures for strong day and night visibility, weather resistance, and long service life.\n\nYNM Safety follows strict quality control and builds signage compliant with MoRTH, IRC, IS, and ASTM standards for national and international road safety projects.",
             
             // Overview Technical Points (displayed below overview paragraph)
             overviewPoints: [

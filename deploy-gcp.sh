@@ -22,10 +22,8 @@ if [ "$PROJECT_ID" = "your-gcp-project-id" ]; then
     exit 1
 fi
 
-# Public env vars: set in GCP Cloud Run or export before running this script.
-# Do not commit real values. Use: export NEXT_PUBLIC_RECAPTCHA_SITE_KEY=... NEXT_PUBLIC_GA_ID=...
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY="${NEXT_PUBLIC_RECAPTCHA_SITE_KEY:-}"
-NEXT_PUBLIC_GA_ID="${NEXT_PUBLIC_GA_ID:-}"
+# Public env vars baked into the client at Docker build time (must match cloudbuild default).
+NEXT_PUBLIC_GA_ID="${NEXT_PUBLIC_GA_ID:-G-KXRFYK5QTK}"
 
 echo -e "${GREEN}Deploying YNM Safety Website to GCP Cloud Run${NC}"
 echo "=================================================="
@@ -44,7 +42,7 @@ gcloud builds submit . \
   --config=cloudbuild.yaml \
   --region=${REGION} \
   --project=${PROJECT_ID} \
-  --substitutions=_SERVICE_NAME=${SERVICE_NAME},_REGION=${REGION},_NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${NEXT_PUBLIC_RECAPTCHA_SITE_KEY},_NEXT_PUBLIC_GA_ID=${NEXT_PUBLIC_GA_ID}
+  --substitutions=_SERVICE_NAME=${SERVICE_NAME},_REGION=${REGION},_NEXT_PUBLIC_GA_ID=${NEXT_PUBLIC_GA_ID}
 
 echo ""
 echo -e "${GREEN}✅ Deployment complete!${NC}"
@@ -52,5 +50,4 @@ echo ""
 echo "Service URL: https://${SERVICE_NAME}-822693677008.${REGION}.run.app"
 echo ""
 echo -e "${YELLOW}Note:${NC} If you're using a custom domain (ynmsafety.com),"
-echo "make sure to add it to your reCAPTCHA allowed domains at:"
-echo "https://www.google.com/recaptcha/admin"
+echo "ensure DNS and Cloud Run domain mapping are configured."

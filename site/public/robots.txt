@@ -1,4 +1,6 @@
 # robots.txt - YNM Safety
+# Machine-readable site summary for LLMs / answer engines: https://ynmsafety.com/llms.txt
+
 User-agent: *
 Allow: /
 

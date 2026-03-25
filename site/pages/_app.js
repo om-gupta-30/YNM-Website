@@ -4,15 +4,13 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Script from "next/script";
-import { GA_ID, ADS_ID, trackPageView, trackPhoneClick, trackWhatsAppClick } from "@/lib/gtag";
+import { RESOLVED_GA_ID, ADS_ID, trackPageView, trackPhoneClick, trackWhatsAppClick } from "@/lib/gtag";
 
 // Lazy-load below-the-fold / non-critical UI to reduce initial JS (PageSpeed: unused JS)
 const Mascot = dynamic(() => import("@/components/Mascot"), { ssr: false });
 const FloatingGetQuote = dynamic(() => import("@/components/FloatingGetQuote"), { ssr: false });
 const FloatingSocialMedia = dynamic(() => import("@/components/FloatingSocialMedia"), { ssr: false });
 const Chatbot = dynamic(() => import("@/components/Chatbot"), { ssr: false });
-
-const gaId = process.env.NEXT_PUBLIC_GA_ID || GA_ID;
 
 // Fast smooth scroll function (500ms with easeOutQuart)
 const smoothScrollTo = (targetY, duration = 500) => {
@@ -120,7 +118,7 @@ export default function App({ Component, pageProps }) {
   const analytics = (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${RESOLVED_GA_ID}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -128,7 +126,7 @@ export default function App({ Component, pageProps }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${gaId}', { send_page_view: true });
+          gtag('config', '${RESOLVED_GA_ID}', { send_page_view: true });
           gtag('config', '${ADS_ID}');
         `}
       </Script>
